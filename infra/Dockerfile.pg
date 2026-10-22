@@ -1,0 +1,31 @@
+# PostgreSQL 12.5 (đúng phiên bản bài báo) + pg_hint_plan + pg_bao, build native cho ARM64 (Apple Silicon)
+FROM debian:bookworm-slim
+ARG DEBIAN_FRONTEND=noninteractive
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+      build-essential libreadline-dev zlib1g-dev bison flex pkg-config \
+      wget ca-certificates git sudo locales tmux python3 \
+ && rm -rf /var/lib/apt/lists/*
+
+RUN wget -q https://ftp.postgresql.org/pub/source/v12.5/postgresql-12.5.tar.gz \
+ && tar xzf postgresql-12.5.tar.gz && cd postgresql-12.5 \
+ && ./configure --prefix=/usr/local/pgsql \
+ && make -j"$(nproc)" && make install && make -C contrib install \
+ && cd .. && rm -rf postgresql-12.5*
+ENV PATH=/usr/local/pgsql/bin:$PATH
+
+RUN git clone --depth 1 --branch PG12 https://github.com/ossc-db/pg_hint_plan.git /tmp/pg_hint_plan \
+ && make -C /tmp/pg_hint_plan USE_PGXS=1 install && rm -rf /tmp/pg_hint_plan
+
+COPY lqo_ml_perspective/bao/pg_extension /tmp/pg_bao
+RUN make -C /tmp/pg_bao USE_PGXS=1 install && rm -rf /tmp/pg_bao
+
+RUN useradd -m -s /bin/bash postgres \
+ && echo 'postgres:postgres' | chpasswd && usermod -aG sudo postgres \
+ && mkdir -p /pgdata && chown postgres:postgres /pgdata
+COPY infra/start.sh /usr/local/bin/start.sh
+RUN chmod +x /usr/local/bin/start.sh
+
+USER postgres
+ENV PGDATA=/pgdata
+CMD ["/usr/local/bin/start.sh"]

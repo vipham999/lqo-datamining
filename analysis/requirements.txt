@@ -1,0 +1,11 @@
+# Môi trường phân tích trên máy Mac (Phần C)
+pandas
+numpy
+scipy
+scikit-learn
+mlxtend
+zss
+matplotlib
+seaborn
+psycopg2-binary
+jupyter

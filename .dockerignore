@@ -1,0 +1,5 @@
+# Chỉ gửi vào Docker build context những file thật sự cần
+*
+!infra/start.sh
+!infra/requirements.bao.txt
+!lqo_ml_perspective/bao/pg_extension
