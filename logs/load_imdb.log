@@ -1,0 +1,499 @@
++ DB=imdbload
++ bash /app/lqo/balsa/load-postgres/load_job_postgres.sh /data/imdb imdbload
++ DATA_DIR=/data/imdb
++ DBNAME=imdbload
++ createdb imdbload
++++ dirname /app/lqo/balsa/load-postgres/load_job_postgres.sh
+++ cd /app/lqo/balsa/load-postgres
+++ pwd
++ DIR=/app/lqo/balsa/load-postgres
++ psql imdbload -f /app/lqo/balsa/load-postgres/schema.sql
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
++ psql imdbload -f /app/lqo/balsa/load-postgres/fkindexes.sql
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
+CREATE INDEX
++ pushd /data/imdb
+/data/imdb /
++ psql imdbload -c '\copy name from '\''/data/imdb/name.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy char_name from '\''/data/imdb/char_name.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy comp_cast_type from '\''/data/imdb/comp_cast_type.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy company_name from '\''/data/imdb/company_name.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy company_type from '\''/data/imdb/company_type.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy info_type from '\''/data/imdb/info_type.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy kind_type from '\''/data/imdb/kind_type.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy role_type from '\''/data/imdb/role_type.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy aka_name from '\''/data/imdb/aka_name.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy aka_title from '\''/data/imdb/aka_title.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy keyword from '\''/data/imdb/keyword.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy link_type from '\''/data/imdb/link_type.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy title from '\''/data/imdb/title.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy cast_info from '\''/data/imdb/cast_info.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy complete_cast from '\''/data/imdb/complete_cast.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy movie_companies from '\''/data/imdb/movie_companies.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy movie_keyword from '\''/data/imdb/movie_keyword.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy movie_link from '\''/data/imdb/movie_link.csv'\'' escape '\''\'\'' csv header'
++ wait
++ psql imdbload -c '\copy person_info from '\''/data/imdb/person_info.csv'\'' escape '\''\'\'' csv header'
++ psql imdbload -c '\copy movie_info from '\''/data/imdb/movie_info.csv'\'' escape '\''\'\'' csv header'
+COPY 4
++ psql imdbload -c '\copy movie_info_idx from '\''/data/imdb/movie_info_idx.csv'\'' escape '\''\'\'' csv header'
+COPY 4
+COPY 7
+COPY 18
+COPY 113
+COPY 12
+COPY 29997
+COPY 134170
+COPY 234997
+COPY 135086
+COPY 361472
+COPY 901343
+COPY 1380035
+COPY 3140339
+COPY 4167491
+COPY 2528312
+COPY 2609129
+COPY 2963664
+COPY 4523930
+COPY 14835720
+COPY 36244344
+/
++ popd
++ psql imdbload -f /app/lqo/balsa/load-postgres/add_fks.sql
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
+ALTER TABLE
++ psql imdbload -c 'ANALYZE VERBOSE;'
+INFO:  analyzing "public.cast_info"
+INFO:  "cast_info": scanned 30000 of 252687 pages, containing 4301404 live rows and 0 dead rows; 30000 rows in sample, 36230296 estimated total rows
+INFO:  analyzing "public.aka_title"
+INFO:  "aka_title": scanned 6192 of 6192 pages, containing 361472 live rows and 0 dead rows; 30000 rows in sample, 361472 estimated total rows
+INFO:  analyzing "public.char_name"
+INFO:  "char_name": scanned 30000 of 36448 pages, containing 2584786 live rows and 0 dead rows; 30000 rows in sample, 3140343 estimated total rows
+INFO:  analyzing "public.complete_cast"
+INFO:  "complete_cast": scanned 731 of 731 pages, containing 135086 live rows and 0 dead rows; 30000 rows in sample, 135086 estimated total rows
+INFO:  analyzing "public.company_name"
+INFO:  "company_name": scanned 2995 of 2995 pages, containing 234997 live rows and 0 dead rows; 30000 rows in sample, 234997 estimated total rows
+INFO:  analyzing "public.company_type"
+INFO:  "company_type": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "public.link_type"
+INFO:  "link_type": scanned 1 of 1 pages, containing 18 live rows and 0 dead rows; 18 rows in sample, 18 estimated total rows
+INFO:  analyzing "pg_catalog.pg_type"
+INFO:  "pg_type": scanned 11 of 11 pages, containing 460 live rows and 0 dead rows; 460 rows in sample, 460 estimated total rows
+INFO:  analyzing "public.info_type"
+INFO:  "info_type": scanned 1 of 1 pages, containing 113 live rows and 0 dead rows; 113 rows in sample, 113 estimated total rows
+INFO:  analyzing "public.kind_type"
+INFO:  "kind_type": scanned 1 of 1 pages, containing 7 live rows and 0 dead rows; 7 rows in sample, 7 estimated total rows
+INFO:  analyzing "public.aka_name"
+INFO:  "aka_name": scanned 11396 of 11396 pages, containing 901343 live rows and 0 dead rows; 30000 rows in sample, 901343 estimated total rows
+INFO:  analyzing "public.comp_cast_type"
+INFO:  "comp_cast_type": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "public.movie_companies"
+INFO:  "movie_companies": scanned 18790 of 18790 pages, containing 2609129 live rows and 0 dead rows; 30000 rows in sample, 2609129 estimated total rows
+INFO:  analyzing "public.keyword"
+INFO:  "keyword": scanned 949 of 949 pages, containing 134170 live rows and 0 dead rows; 30000 rows in sample, 134170 estimated total rows
+INFO:  analyzing "public.movie_link"
+INFO:  "movie_link": scanned 163 of 163 pages, containing 29997 live rows and 0 dead rows; 29997 rows in sample, 29997 estimated total rows
+INFO:  analyzing "public.movie_info"
+INFO:  "movie_info": scanned 30000 of 161993 pages, containing 2733855 live rows and 0 dead rows; 30000 rows in sample, 14762179 estimated total rows
+INFO:  analyzing "pg_catalog.pg_foreign_server"
+INFO:  "pg_foreign_server": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "public.name"
+INFO:  "name": scanned 30000 of 55613 pages, containing 2248118 live rows and 0 dead rows; 30000 rows in sample, 4167486 estimated total rows
+INFO:  analyzing "public.movie_info_idx"
+INFO:  "movie_info_idx": scanned 7935 of 7935 pages, containing 1380035 live rows and 0 dead rows; 30000 rows in sample, 1380035 estimated total rows
+INFO:  analyzing "pg_catalog.pg_authid"
+INFO:  "pg_authid": scanned 1 of 1 pages, containing 9 live rows and 0 dead rows; 9 rows in sample, 9 estimated total rows
+INFO:  analyzing "public.person_info"
+INFO:  "person_info": scanned 30000 of 51051 pages, containing 1739510 live rows and 0 dead rows; 30000 rows in sample, 2960124 estimated total rows
+INFO:  analyzing "public.title"
+INFO:  "title": scanned 30000 of 35998 pages, containing 2107075 live rows and 0 dead rows; 30000 rows in sample, 2528350 estimated total rows
+INFO:  analyzing "public.role_type"
+INFO:  "role_type": scanned 1 of 1 pages, containing 12 live rows and 0 dead rows; 12 rows in sample, 12 estimated total rows
+INFO:  analyzing "pg_catalog.pg_statistic_ext_data"
+INFO:  "pg_statistic_ext_data": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "public.movie_keyword"
+INFO:  "movie_keyword": scanned 24454 of 24454 pages, containing 4523930 live rows and 0 dead rows; 30000 rows in sample, 4523930 estimated total rows
+INFO:  analyzing "pg_catalog.pg_user_mapping"
+INFO:  "pg_user_mapping": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_subscription"
+INFO:  "pg_subscription": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_attribute"
+INFO:  "pg_attribute": scanned 61 of 61 pages, containing 3325 live rows and 0 dead rows; 3325 rows in sample, 3325 estimated total rows
+INFO:  analyzing "pg_catalog.pg_proc"
+INFO:  "pg_proc": scanned 79 of 79 pages, containing 2960 live rows and 0 dead rows; 2960 rows in sample, 2960 estimated total rows
+INFO:  analyzing "pg_catalog.pg_class"
+INFO:  "pg_class": scanned 13 of 13 pages, containing 486 live rows and 4 dead rows; 486 rows in sample, 486 estimated total rows
+INFO:  analyzing "pg_catalog.pg_attrdef"
+INFO:  "pg_attrdef": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_constraint"
+INFO:  "pg_constraint": scanned 2 of 2 pages, containing 42 live rows and 0 dead rows; 42 rows in sample, 42 estimated total rows
+INFO:  analyzing "pg_catalog.pg_inherits"
+INFO:  "pg_inherits": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_index"
+INFO:  "pg_index": scanned 5 of 5 pages, containing 217 live rows and 0 dead rows; 217 rows in sample, 217 estimated total rows
+INFO:  analyzing "pg_catalog.pg_operator"
+INFO:  "pg_operator": scanned 14 of 14 pages, containing 770 live rows and 0 dead rows; 770 rows in sample, 770 estimated total rows
+INFO:  analyzing "pg_catalog.pg_opfamily"
+INFO:  "pg_opfamily": scanned 2 of 2 pages, containing 107 live rows and 0 dead rows; 107 rows in sample, 107 estimated total rows
+INFO:  analyzing "pg_catalog.pg_opclass"
+INFO:  "pg_opclass": scanned 2 of 2 pages, containing 128 live rows and 0 dead rows; 128 rows in sample, 128 estimated total rows
+INFO:  analyzing "pg_catalog.pg_am"
+INFO:  "pg_am": scanned 1 of 1 pages, containing 7 live rows and 0 dead rows; 7 rows in sample, 7 estimated total rows
+INFO:  analyzing "pg_catalog.pg_amop"
+INFO:  "pg_amop": scanned 6 of 6 pages, containing 715 live rows and 0 dead rows; 715 rows in sample, 715 estimated total rows
+INFO:  analyzing "pg_catalog.pg_amproc"
+INFO:  "pg_amproc": scanned 3 of 3 pages, containing 447 live rows and 0 dead rows; 447 rows in sample, 447 estimated total rows
+INFO:  analyzing "pg_catalog.pg_language"
+INFO:  "pg_language": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "pg_catalog.pg_largeobject_metadata"
+INFO:  "pg_largeobject_metadata": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_aggregate"
+INFO:  "pg_aggregate": scanned 2 of 2 pages, containing 136 live rows and 0 dead rows; 136 rows in sample, 136 estimated total rows
+INFO:  analyzing "pg_catalog.pg_largeobject"
+INFO:  "pg_largeobject": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_statistic_ext"
+INFO:  "pg_statistic_ext": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_rewrite"
+INFO:  "pg_rewrite": scanned 12 of 12 pages, containing 126 live rows and 0 dead rows; 126 rows in sample, 126 estimated total rows
+INFO:  analyzing "pg_catalog.pg_trigger"
+INFO:  "pg_trigger": scanned 2 of 2 pages, containing 76 live rows and 0 dead rows; 76 rows in sample, 76 estimated total rows
+INFO:  analyzing "pg_catalog.pg_event_trigger"
+INFO:  "pg_event_trigger": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_description"
+INFO:  "pg_description": scanned 35 of 35 pages, containing 4003 live rows and 0 dead rows; 4003 rows in sample, 4003 estimated total rows
+INFO:  analyzing "pg_catalog.pg_cast"
+INFO:  "pg_cast": scanned 2 of 2 pages, containing 216 live rows and 0 dead rows; 216 rows in sample, 216 estimated total rows
+INFO:  analyzing "pg_catalog.pg_enum"
+INFO:  "pg_enum": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_namespace"
+INFO:  "pg_namespace": scanned 1 of 1 pages, containing 6 live rows and 0 dead rows; 6 rows in sample, 6 estimated total rows
+INFO:  analyzing "pg_catalog.pg_conversion"
+INFO:  "pg_conversion": scanned 3 of 3 pages, containing 132 live rows and 0 dead rows; 132 rows in sample, 132 estimated total rows
+INFO:  analyzing "pg_catalog.pg_depend"
+INFO:  "pg_depend": scanned 59 of 59 pages, containing 7912 live rows and 0 dead rows; 7912 rows in sample, 7912 estimated total rows
+INFO:  analyzing "pg_catalog.pg_database"
+INFO:  "pg_database": scanned 1 of 1 pages, containing 4 live rows and 1 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "pg_catalog.pg_db_role_setting"
+INFO:  "pg_db_role_setting": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_tablespace"
+INFO:  "pg_tablespace": scanned 1 of 1 pages, containing 2 live rows and 0 dead rows; 2 rows in sample, 2 estimated total rows
+INFO:  analyzing "pg_catalog.pg_pltemplate"
+INFO:  "pg_pltemplate": scanned 1 of 1 pages, containing 8 live rows and 0 dead rows; 8 rows in sample, 8 estimated total rows
+INFO:  analyzing "pg_catalog.pg_auth_members"
+INFO:  "pg_auth_members": scanned 1 of 1 pages, containing 3 live rows and 0 dead rows; 3 rows in sample, 3 estimated total rows
+INFO:  analyzing "pg_catalog.pg_shdepend"
+INFO:  "pg_shdepend": scanned 1 of 1 pages, containing 9 live rows and 0 dead rows; 9 rows in sample, 9 estimated total rows
+INFO:  analyzing "pg_catalog.pg_shdescription"
+INFO:  "pg_shdescription": scanned 1 of 1 pages, containing 3 live rows and 0 dead rows; 3 rows in sample, 3 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_config"
+INFO:  "pg_ts_config": scanned 1 of 1 pages, containing 22 live rows and 0 dead rows; 22 rows in sample, 22 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_config_map"
+INFO:  "pg_ts_config_map": scanned 3 of 3 pages, containing 418 live rows and 0 dead rows; 418 rows in sample, 418 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_dict"
+INFO:  "pg_ts_dict": scanned 1 of 1 pages, containing 22 live rows and 0 dead rows; 22 rows in sample, 22 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_parser"
+INFO:  "pg_ts_parser": scanned 1 of 1 pages, containing 1 live rows and 0 dead rows; 1 rows in sample, 1 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_template"
+INFO:  "pg_ts_template": scanned 1 of 1 pages, containing 5 live rows and 0 dead rows; 5 rows in sample, 5 estimated total rows
+INFO:  analyzing "pg_catalog.pg_extension"
+INFO:  "pg_extension": scanned 1 of 1 pages, containing 1 live rows and 0 dead rows; 1 rows in sample, 1 estimated total rows
+INFO:  analyzing "pg_catalog.pg_foreign_data_wrapper"
+INFO:  "pg_foreign_data_wrapper": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_foreign_table"
+INFO:  "pg_foreign_table": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_policy"
+INFO:  "pg_policy": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_replication_origin"
+INFO:  "pg_replication_origin": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_default_acl"
+INFO:  "pg_default_acl": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_init_privs"
+INFO:  "pg_init_privs": scanned 2 of 2 pages, containing 171 live rows and 0 dead rows; 171 rows in sample, 171 estimated total rows
+INFO:  analyzing "pg_catalog.pg_seclabel"
+INFO:  "pg_seclabel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_shseclabel"
+INFO:  "pg_shseclabel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_collation"
+INFO:  "pg_collation": scanned 1 of 1 pages, containing 5 live rows and 0 dead rows; 5 rows in sample, 5 estimated total rows
+INFO:  analyzing "pg_catalog.pg_partitioned_table"
+INFO:  "pg_partitioned_table": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_range"
+INFO:  "pg_range": scanned 1 of 1 pages, containing 6 live rows and 0 dead rows; 6 rows in sample, 6 estimated total rows
+INFO:  analyzing "pg_catalog.pg_transform"
+INFO:  "pg_transform": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_sequence"
+INFO:  "pg_sequence": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_publication"
+INFO:  "pg_publication": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_publication_rel"
+INFO:  "pg_publication_rel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_subscription_rel"
+INFO:  "pg_subscription_rel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "information_schema.sql_packages"
+INFO:  "sql_packages": scanned 1 of 1 pages, containing 10 live rows and 0 dead rows; 10 rows in sample, 10 estimated total rows
+INFO:  analyzing "information_schema.sql_features"
+INFO:  "sql_features": scanned 8 of 8 pages, containing 716 live rows and 0 dead rows; 716 rows in sample, 716 estimated total rows
+INFO:  analyzing "information_schema.sql_implementation_info"
+INFO:  "sql_implementation_info": scanned 1 of 1 pages, containing 12 live rows and 0 dead rows; 12 rows in sample, 12 estimated total rows
+INFO:  analyzing "information_schema.sql_parts"
+INFO:  "sql_parts": scanned 1 of 1 pages, containing 9 live rows and 0 dead rows; 9 rows in sample, 9 estimated total rows
+INFO:  analyzing "information_schema.sql_languages"
+INFO:  "sql_languages": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "information_schema.sql_sizing"
+INFO:  "sql_sizing": scanned 1 of 1 pages, containing 23 live rows and 0 dead rows; 23 rows in sample, 23 estimated total rows
+INFO:  analyzing "information_schema.sql_sizing_profiles"
+INFO:  "sql_sizing_profiles": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+ANALYZE
++ psql -d imdbload -c 'CREATE INDEX IF NOT EXISTS cc_subject_id ON complete_cast(subject_id);'
+CREATE INDEX
++ psql -d imdbload -c 'CREATE INDEX IF NOT EXISTS cc_status_id  ON complete_cast(status_id);'
+CREATE INDEX
++ psql -d imdbload -c 'ANALYZE VERBOSE;'
+INFO:  analyzing "public.cast_info"
+INFO:  "cast_info": scanned 30000 of 252687 pages, containing 4303151 live rows and 0 dead rows; 30000 rows in sample, 36245011 estimated total rows
+INFO:  analyzing "public.aka_title"
+INFO:  "aka_title": scanned 6192 of 6192 pages, containing 361472 live rows and 0 dead rows; 30000 rows in sample, 361472 estimated total rows
+INFO:  analyzing "public.char_name"
+INFO:  "char_name": scanned 30000 of 36448 pages, containing 2584784 live rows and 0 dead rows; 30000 rows in sample, 3140340 estimated total rows
+INFO:  analyzing "public.complete_cast"
+INFO:  "complete_cast": scanned 731 of 731 pages, containing 135086 live rows and 0 dead rows; 30000 rows in sample, 135086 estimated total rows
+INFO:  analyzing "public.company_name"
+INFO:  "company_name": scanned 2995 of 2995 pages, containing 234997 live rows and 0 dead rows; 30000 rows in sample, 234997 estimated total rows
+INFO:  analyzing "public.company_type"
+INFO:  "company_type": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "public.link_type"
+INFO:  "link_type": scanned 1 of 1 pages, containing 18 live rows and 0 dead rows; 18 rows in sample, 18 estimated total rows
+INFO:  analyzing "pg_catalog.pg_type"
+INFO:  "pg_type": scanned 11 of 11 pages, containing 460 live rows and 0 dead rows; 460 rows in sample, 460 estimated total rows
+INFO:  analyzing "public.info_type"
+INFO:  "info_type": scanned 1 of 1 pages, containing 113 live rows and 0 dead rows; 113 rows in sample, 113 estimated total rows
+INFO:  analyzing "public.kind_type"
+INFO:  "kind_type": scanned 1 of 1 pages, containing 7 live rows and 0 dead rows; 7 rows in sample, 7 estimated total rows
+INFO:  analyzing "public.aka_name"
+INFO:  "aka_name": scanned 11396 of 11396 pages, containing 901343 live rows and 0 dead rows; 30000 rows in sample, 901343 estimated total rows
+INFO:  analyzing "public.comp_cast_type"
+INFO:  "comp_cast_type": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "public.movie_companies"
+INFO:  "movie_companies": scanned 18790 of 18790 pages, containing 2609129 live rows and 0 dead rows; 30000 rows in sample, 2609129 estimated total rows
+INFO:  analyzing "public.keyword"
+INFO:  "keyword": scanned 949 of 949 pages, containing 134170 live rows and 0 dead rows; 30000 rows in sample, 134170 estimated total rows
+INFO:  analyzing "public.movie_link"
+INFO:  "movie_link": scanned 163 of 163 pages, containing 29997 live rows and 0 dead rows; 29997 rows in sample, 29997 estimated total rows
+INFO:  analyzing "public.movie_info"
+INFO:  "movie_info": scanned 30000 of 161993 pages, containing 2740423 live rows and 0 dead rows; 30000 rows in sample, 14797645 estimated total rows
+INFO:  analyzing "pg_catalog.pg_foreign_server"
+INFO:  "pg_foreign_server": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "public.name"
+INFO:  "name": scanned 30000 of 55613 pages, containing 2248005 live rows and 0 dead rows; 30000 rows in sample, 4167277 estimated total rows
+INFO:  analyzing "public.movie_info_idx"
+INFO:  "movie_info_idx": scanned 7935 of 7935 pages, containing 1380035 live rows and 0 dead rows; 30000 rows in sample, 1380035 estimated total rows
+INFO:  analyzing "pg_catalog.pg_authid"
+INFO:  "pg_authid": scanned 1 of 1 pages, containing 9 live rows and 0 dead rows; 9 rows in sample, 9 estimated total rows
+INFO:  analyzing "public.person_info"
+INFO:  "person_info": scanned 30000 of 51051 pages, containing 1741914 live rows and 0 dead rows; 30000 rows in sample, 2964215 estimated total rows
+INFO:  analyzing "public.title"
+INFO:  "title": scanned 30000 of 35998 pages, containing 2107205 live rows and 0 dead rows; 30000 rows in sample, 2528506 estimated total rows
+INFO:  analyzing "public.role_type"
+INFO:  "role_type": scanned 1 of 1 pages, containing 12 live rows and 0 dead rows; 12 rows in sample, 12 estimated total rows
+INFO:  analyzing "pg_catalog.pg_statistic_ext_data"
+INFO:  "pg_statistic_ext_data": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "public.movie_keyword"
+INFO:  "movie_keyword": scanned 24454 of 24454 pages, containing 4523930 live rows and 0 dead rows; 30000 rows in sample, 4523930 estimated total rows
+INFO:  analyzing "pg_catalog.pg_user_mapping"
+INFO:  "pg_user_mapping": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_subscription"
+INFO:  "pg_subscription": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_attribute"
+INFO:  "pg_attribute": scanned 61 of 61 pages, containing 3327 live rows and 0 dead rows; 3327 rows in sample, 3327 estimated total rows
+INFO:  analyzing "pg_catalog.pg_proc"
+INFO:  "pg_proc": scanned 79 of 79 pages, containing 2960 live rows and 0 dead rows; 2960 rows in sample, 2960 estimated total rows
+INFO:  analyzing "pg_catalog.pg_class"
+INFO:  "pg_class": scanned 13 of 13 pages, containing 488 live rows and 4 dead rows; 488 rows in sample, 488 estimated total rows
+INFO:  analyzing "pg_catalog.pg_attrdef"
+INFO:  "pg_attrdef": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_constraint"
+INFO:  "pg_constraint": scanned 2 of 2 pages, containing 42 live rows and 0 dead rows; 42 rows in sample, 42 estimated total rows
+INFO:  analyzing "pg_catalog.pg_inherits"
+INFO:  "pg_inherits": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_index"
+INFO:  "pg_index": scanned 5 of 5 pages, containing 219 live rows and 0 dead rows; 219 rows in sample, 219 estimated total rows
+INFO:  analyzing "pg_catalog.pg_operator"
+INFO:  "pg_operator": scanned 14 of 14 pages, containing 770 live rows and 0 dead rows; 770 rows in sample, 770 estimated total rows
+INFO:  analyzing "pg_catalog.pg_opfamily"
+INFO:  "pg_opfamily": scanned 2 of 2 pages, containing 107 live rows and 0 dead rows; 107 rows in sample, 107 estimated total rows
+INFO:  analyzing "pg_catalog.pg_opclass"
+INFO:  "pg_opclass": scanned 2 of 2 pages, containing 128 live rows and 0 dead rows; 128 rows in sample, 128 estimated total rows
+INFO:  analyzing "pg_catalog.pg_am"
+INFO:  "pg_am": scanned 1 of 1 pages, containing 7 live rows and 0 dead rows; 7 rows in sample, 7 estimated total rows
+INFO:  analyzing "pg_catalog.pg_amop"
+INFO:  "pg_amop": scanned 6 of 6 pages, containing 715 live rows and 0 dead rows; 715 rows in sample, 715 estimated total rows
+INFO:  analyzing "pg_catalog.pg_amproc"
+INFO:  "pg_amproc": scanned 3 of 3 pages, containing 447 live rows and 0 dead rows; 447 rows in sample, 447 estimated total rows
+INFO:  analyzing "pg_catalog.pg_language"
+INFO:  "pg_language": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "pg_catalog.pg_largeobject_metadata"
+INFO:  "pg_largeobject_metadata": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_aggregate"
+INFO:  "pg_aggregate": scanned 2 of 2 pages, containing 136 live rows and 0 dead rows; 136 rows in sample, 136 estimated total rows
+INFO:  analyzing "pg_catalog.pg_largeobject"
+INFO:  "pg_largeobject": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_statistic_ext"
+INFO:  "pg_statistic_ext": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_rewrite"
+INFO:  "pg_rewrite": scanned 12 of 12 pages, containing 126 live rows and 0 dead rows; 126 rows in sample, 126 estimated total rows
+INFO:  analyzing "pg_catalog.pg_trigger"
+INFO:  "pg_trigger": scanned 2 of 2 pages, containing 76 live rows and 0 dead rows; 76 rows in sample, 76 estimated total rows
+INFO:  analyzing "pg_catalog.pg_event_trigger"
+INFO:  "pg_event_trigger": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_description"
+INFO:  "pg_description": scanned 35 of 35 pages, containing 4003 live rows and 0 dead rows; 4003 rows in sample, 4003 estimated total rows
+INFO:  analyzing "pg_catalog.pg_cast"
+INFO:  "pg_cast": scanned 2 of 2 pages, containing 216 live rows and 0 dead rows; 216 rows in sample, 216 estimated total rows
+INFO:  analyzing "pg_catalog.pg_enum"
+INFO:  "pg_enum": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_namespace"
+INFO:  "pg_namespace": scanned 1 of 1 pages, containing 6 live rows and 0 dead rows; 6 rows in sample, 6 estimated total rows
+INFO:  analyzing "pg_catalog.pg_conversion"
+INFO:  "pg_conversion": scanned 3 of 3 pages, containing 132 live rows and 0 dead rows; 132 rows in sample, 132 estimated total rows
+INFO:  analyzing "pg_catalog.pg_depend"
+INFO:  "pg_depend": scanned 59 of 59 pages, containing 7914 live rows and 0 dead rows; 7914 rows in sample, 7914 estimated total rows
+INFO:  analyzing "pg_catalog.pg_database"
+INFO:  "pg_database": scanned 1 of 1 pages, containing 4 live rows and 1 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "pg_catalog.pg_db_role_setting"
+INFO:  "pg_db_role_setting": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_tablespace"
+INFO:  "pg_tablespace": scanned 1 of 1 pages, containing 2 live rows and 0 dead rows; 2 rows in sample, 2 estimated total rows
+INFO:  analyzing "pg_catalog.pg_pltemplate"
+INFO:  "pg_pltemplate": scanned 1 of 1 pages, containing 8 live rows and 0 dead rows; 8 rows in sample, 8 estimated total rows
+INFO:  analyzing "pg_catalog.pg_auth_members"
+INFO:  "pg_auth_members": scanned 1 of 1 pages, containing 3 live rows and 0 dead rows; 3 rows in sample, 3 estimated total rows
+INFO:  analyzing "pg_catalog.pg_shdepend"
+INFO:  "pg_shdepend": scanned 1 of 1 pages, containing 9 live rows and 0 dead rows; 9 rows in sample, 9 estimated total rows
+INFO:  analyzing "pg_catalog.pg_shdescription"
+INFO:  "pg_shdescription": scanned 1 of 1 pages, containing 3 live rows and 0 dead rows; 3 rows in sample, 3 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_config"
+INFO:  "pg_ts_config": scanned 1 of 1 pages, containing 22 live rows and 0 dead rows; 22 rows in sample, 22 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_config_map"
+INFO:  "pg_ts_config_map": scanned 3 of 3 pages, containing 418 live rows and 0 dead rows; 418 rows in sample, 418 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_dict"
+INFO:  "pg_ts_dict": scanned 1 of 1 pages, containing 22 live rows and 0 dead rows; 22 rows in sample, 22 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_parser"
+INFO:  "pg_ts_parser": scanned 1 of 1 pages, containing 1 live rows and 0 dead rows; 1 rows in sample, 1 estimated total rows
+INFO:  analyzing "pg_catalog.pg_ts_template"
+INFO:  "pg_ts_template": scanned 1 of 1 pages, containing 5 live rows and 0 dead rows; 5 rows in sample, 5 estimated total rows
+INFO:  analyzing "pg_catalog.pg_extension"
+INFO:  "pg_extension": scanned 1 of 1 pages, containing 1 live rows and 0 dead rows; 1 rows in sample, 1 estimated total rows
+INFO:  analyzing "pg_catalog.pg_foreign_data_wrapper"
+INFO:  "pg_foreign_data_wrapper": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_foreign_table"
+INFO:  "pg_foreign_table": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_policy"
+INFO:  "pg_policy": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_replication_origin"
+INFO:  "pg_replication_origin": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_default_acl"
+INFO:  "pg_default_acl": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_init_privs"
+INFO:  "pg_init_privs": scanned 2 of 2 pages, containing 171 live rows and 0 dead rows; 171 rows in sample, 171 estimated total rows
+INFO:  analyzing "pg_catalog.pg_seclabel"
+INFO:  "pg_seclabel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_shseclabel"
+INFO:  "pg_shseclabel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_collation"
+INFO:  "pg_collation": scanned 1 of 1 pages, containing 5 live rows and 0 dead rows; 5 rows in sample, 5 estimated total rows
+INFO:  analyzing "pg_catalog.pg_partitioned_table"
+INFO:  "pg_partitioned_table": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_range"
+INFO:  "pg_range": scanned 1 of 1 pages, containing 6 live rows and 0 dead rows; 6 rows in sample, 6 estimated total rows
+INFO:  analyzing "pg_catalog.pg_transform"
+INFO:  "pg_transform": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_sequence"
+INFO:  "pg_sequence": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_publication"
+INFO:  "pg_publication": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_publication_rel"
+INFO:  "pg_publication_rel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "pg_catalog.pg_subscription_rel"
+INFO:  "pg_subscription_rel": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+INFO:  analyzing "information_schema.sql_packages"
+INFO:  "sql_packages": scanned 1 of 1 pages, containing 10 live rows and 0 dead rows; 10 rows in sample, 10 estimated total rows
+INFO:  analyzing "information_schema.sql_features"
+INFO:  "sql_features": scanned 8 of 8 pages, containing 716 live rows and 0 dead rows; 716 rows in sample, 716 estimated total rows
+INFO:  analyzing "information_schema.sql_implementation_info"
+INFO:  "sql_implementation_info": scanned 1 of 1 pages, containing 12 live rows and 0 dead rows; 12 rows in sample, 12 estimated total rows
+INFO:  analyzing "information_schema.sql_parts"
+INFO:  "sql_parts": scanned 1 of 1 pages, containing 9 live rows and 0 dead rows; 9 rows in sample, 9 estimated total rows
+INFO:  analyzing "information_schema.sql_languages"
+INFO:  "sql_languages": scanned 1 of 1 pages, containing 4 live rows and 0 dead rows; 4 rows in sample, 4 estimated total rows
+INFO:  analyzing "information_schema.sql_sizing"
+INFO:  "sql_sizing": scanned 1 of 1 pages, containing 23 live rows and 0 dead rows; 23 rows in sample, 23 estimated total rows
+INFO:  analyzing "information_schema.sql_sizing_profiles"
+INFO:  "sql_sizing_profiles": scanned 0 of 0 pages, containing 0 live rows and 0 dead rows; 0 rows in sample, 0 estimated total rows
+ANALYZE
++ psql -d imdbload -c 'SELECT pg_size_pretty(pg_database_size('\''imdbload'\'')) AS db_size;'
+ db_size 
+---------
+ 12 GB
+(1 row)
+
+EXIT=0

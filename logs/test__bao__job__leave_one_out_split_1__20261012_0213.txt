@@ -1,0 +1,99 @@
+(no hint), 0, 2026-10-12 05:58:19.696390, queries/job__leave_one_out_split_1/test/10b.sql, 130.899, 1565.308, Bao
+(no hint), 1, 2026-10-12 05:58:19.697946, queries/job__leave_one_out_split_1/test/10b.sql, 63.622, 252.615, Bao
+(no hint), 2, 2026-10-12 05:58:19.698134, queries/job__leave_one_out_split_1/test/10b.sql, 50.513, 213.954, Bao
+(no hint), 0, 2026-10-12 05:58:20.371123, queries/job__leave_one_out_split_1/test/11b.sql, 63.905, 139.777, Bao
+(no hint), 1, 2026-10-12 05:58:20.371426, queries/job__leave_one_out_split_1/test/11b.sql, 47.331, 21.472, Bao
+(no hint), 2, 2026-10-12 05:58:20.371496, queries/job__leave_one_out_split_1/test/11b.sql, 52.627, 19.795, Bao
+(no hint), 0, 2026-10-12 05:58:29.634242, queries/job__leave_one_out_split_1/test/12c.sql, 63.175, 6455.232, Bao
+(no hint), 1, 2026-10-12 05:58:29.635328, queries/job__leave_one_out_split_1/test/12c.sql, 81.634, 1592.969, Bao
+(no hint), 2, 2026-10-12 05:58:29.635455, queries/job__leave_one_out_split_1/test/12c.sql, 73.832, 567.559, Bao
+(no hint), 0, 2026-10-12 05:58:32.414778, queries/job__leave_one_out_split_1/test/13b.sql, 66.698, 1102.554, Bao
+(no hint), 1, 2026-10-12 05:58:32.417028, queries/job__leave_one_out_split_1/test/13b.sql, 79.512, 533.423, Bao
+(no hint), 2, 2026-10-12 05:58:32.417248, queries/job__leave_one_out_split_1/test/13b.sql, 53.02, 435.506, Bao
+(no hint), 0, 2026-10-12 05:58:34.142219, queries/job__leave_one_out_split_1/test/14a.sql, 61.818, 769.397, Bao
+(no hint), 1, 2026-10-12 05:58:34.142886, queries/job__leave_one_out_split_1/test/14a.sql, 48.934, 209.994, Bao
+(no hint), 2, 2026-10-12 05:58:34.143194, queries/job__leave_one_out_split_1/test/14a.sql, 51.037, 252.716, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 0, 2026-10-12 05:58:34.923100, queries/job__leave_one_out_split_1/test/15b.sql, 89.487, 145.355, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 1, 2026-10-12 05:58:34.923717, queries/job__leave_one_out_split_1/test/15b.sql, 62.883, 28.761, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 2, 2026-10-12 05:58:34.923902, queries/job__leave_one_out_split_1/test/15b.sql, 57.348, 18.817, Bao
+(no hint), 0, 2026-10-12 05:58:49.616987, queries/job__leave_one_out_split_1/test/16c.sql, 57.217, 11508.127, Bao
+(no hint), 1, 2026-10-12 05:58:49.618085, queries/job__leave_one_out_split_1/test/16c.sql, 72.176, 1615.391, Bao
+(no hint), 2, 2026-10-12 05:58:49.618258, queries/job__leave_one_out_split_1/test/16c.sql, 50.183, 1069.255, Bao
+SET enable_nestloop TO off; , 0, 2026-10-12 05:59:14.781086, queries/job__leave_one_out_split_1/test/17c.sql, 60.824, 12866.412, Bao
+SET enable_nestloop TO off; , 1, 2026-10-12 05:59:14.783512, queries/job__leave_one_out_split_1/test/17c.sql, 73.285, 5534.883, Bao
+SET enable_nestloop TO off; , 2, 2026-10-12 05:59:14.783739, queries/job__leave_one_out_split_1/test/17c.sql, 108.689, 5992.937, Bao
+(no hint), 0, 2026-10-12 05:59:16.450253, queries/job__leave_one_out_split_1/test/18b.sql, 72.46, 891.862, Bao
+(no hint), 1, 2026-10-12 05:59:16.450636, queries/job__leave_one_out_split_1/test/18b.sql, 58.544, 141.9, Bao
+(no hint), 2, 2026-10-12 05:59:16.452193, queries/job__leave_one_out_split_1/test/18b.sql, 47.449, 108.479, Bao
+(no hint), 0, 2026-10-12 05:59:18.996112, queries/job__leave_one_out_split_1/test/19a.sql, 87.572, 1036.939, Bao
+(no hint), 1, 2026-10-12 05:59:18.997340, queries/job__leave_one_out_split_1/test/19a.sql, 162.989, 317.846, Bao
+(no hint), 2, 2026-10-12 05:59:18.997571, queries/job__leave_one_out_split_1/test/19a.sql, 84.543, 280.717, Bao
+(no hint), 0, 2026-10-12 05:59:19.742547, queries/job__leave_one_out_split_1/test/1c.sql, 56.902, 194.544, Bao
+(no hint), 1, 2026-10-12 05:59:19.743286, queries/job__leave_one_out_split_1/test/1c.sql, 49.679, 58.411, Bao
+(no hint), 2, 2026-10-12 05:59:19.743434, queries/job__leave_one_out_split_1/test/1c.sql, 46.662, 56.626, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 0, 2026-10-12 05:59:35.222966, queries/job__leave_one_out_split_1/test/20c.sql, 75.628, 9719.988, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 1, 2026-10-12 05:59:35.224146, queries/job__leave_one_out_split_1/test/20c.sql, 82.019, 2638.367, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 2, 2026-10-12 05:59:35.224287, queries/job__leave_one_out_split_1/test/20c.sql, 72.501, 2389.624, Bao
+(no hint), 0, 2026-10-12 05:59:36.084330, queries/job__leave_one_out_split_1/test/21c.sql, 105.921, 98.78, Bao
+(no hint), 1, 2026-10-12 05:59:36.084772, queries/job__leave_one_out_split_1/test/21c.sql, 61.187, 43.447, Bao
+(no hint), 2, 2026-10-12 05:59:36.084934, queries/job__leave_one_out_split_1/test/21c.sql, 77.633, 41.788, Bao
+(no hint), 0, 2026-10-12 05:59:37.864686, queries/job__leave_one_out_split_1/test/22b.sql, 170.015, 513.453, Bao
+(no hint), 1, 2026-10-12 05:59:37.865226, queries/job__leave_one_out_split_1/test/22b.sql, 103.655, 176.132, Bao
+(no hint), 2, 2026-10-12 05:59:37.865415, queries/job__leave_one_out_split_1/test/22b.sql, 96.349, 166.645, Bao
+(no hint), 0, 2026-10-12 05:59:38.932721, queries/job__leave_one_out_split_1/test/23b.sql, 123.019, 149.476, Bao
+(no hint), 1, 2026-10-12 05:59:38.933405, queries/job__leave_one_out_split_1/test/23b.sql, 105.258, 29.002, Bao
+(no hint), 2, 2026-10-12 05:59:38.933636, queries/job__leave_one_out_split_1/test/23b.sql, 105.03, 28.887, Bao
+SET enable_mergejoin TO off; , 0, 2026-10-12 05:59:43.515093, queries/job__leave_one_out_split_1/test/24a.sql, 196.848, 2233.437, Bao
+SET enable_mergejoin TO off; , 1, 2026-10-12 05:59:43.516516, queries/job__leave_one_out_split_1/test/24a.sql, 218.692, 465.177, Bao
+SET enable_mergejoin TO off; , 2, 2026-10-12 05:59:43.516705, queries/job__leave_one_out_split_1/test/24a.sql, 184.342, 435.306, Bao
+(no hint), 0, 2026-10-12 06:00:31.427495, queries/job__leave_one_out_split_1/test/25a.sql, 84.104, 35317.882, Bao
+(no hint), 1, 2026-10-12 06:00:31.428898, queries/job__leave_one_out_split_1/test/25a.sql, 97.586, 7247.802, Bao
+(no hint), 2, 2026-10-12 06:00:31.429048, queries/job__leave_one_out_split_1/test/25a.sql, 77.1, 4450.031, Bao
+(no hint), 0, 2026-10-12 06:00:41.544293, queries/job__leave_one_out_split_1/test/26c.sql, 195.063, 5486.013, Bao
+(no hint), 1, 2026-10-12 06:00:41.545916, queries/job__leave_one_out_split_1/test/26c.sql, 211.222, 1511.814, Bao
+(no hint), 2, 2026-10-12 06:00:41.546140, queries/job__leave_one_out_split_1/test/26c.sql, 252.065, 1610.042, Bao
+(no hint), 0, 2026-10-12 06:00:42.913266, queries/job__leave_one_out_split_1/test/27c.sql, 205.126, 63.374, Bao
+(no hint), 1, 2026-10-12 06:00:42.913734, queries/job__leave_one_out_split_1/test/27c.sql, 168.345, 11.66, Bao
+(no hint), 2, 2026-10-12 06:00:42.913937, queries/job__leave_one_out_split_1/test/27c.sql, 167.395, 8.585, Bao
+(no hint), 0, 2026-10-12 06:00:46.743958, queries/job__leave_one_out_split_1/test/28a.sql, 359.001, 1549.057, Bao
+(no hint), 1, 2026-10-12 06:00:46.745185, queries/job__leave_one_out_split_1/test/28a.sql, 207.893, 359.189, Bao
+(no hint), 2, 2026-10-12 06:00:46.745382, queries/job__leave_one_out_split_1/test/28a.sql, 201.88, 323.317, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 0, 2026-10-12 06:00:49.610934, queries/job__leave_one_out_split_1/test/29b.sql, 312.242, 896.895, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 1, 2026-10-12 06:00:49.611347, queries/job__leave_one_out_split_1/test/29b.sql, 274.539, 82.125, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 2, 2026-10-12 06:00:49.611562, queries/job__leave_one_out_split_1/test/29b.sql, 264.754, 64.762, Bao
+(no hint), 0, 2026-10-12 06:00:54.460865, queries/job__leave_one_out_split_1/test/2a.sql, 52.03, 3453.795, Bao
+(no hint), 1, 2026-10-12 06:00:54.462153, queries/job__leave_one_out_split_1/test/2a.sql, 58.941, 620.559, Bao
+(no hint), 2, 2026-10-12 06:00:54.462352, queries/job__leave_one_out_split_1/test/2a.sql, 43.15, 322.26, Bao
+(no hint), 0, 2026-10-12 06:01:24.485752, queries/job__leave_one_out_split_1/test/30a.sql, 182.418, 14974.948, Bao
+(no hint), 1, 2026-10-12 06:01:24.490932, queries/job__leave_one_out_split_1/test/30a.sql, 190.566, 7272.563, Bao
+(no hint), 2, 2026-10-12 06:01:24.491300, queries/job__leave_one_out_split_1/test/30a.sql, 195.428, 6334.033, Bao
+(no hint), 0, 2026-10-12 06:01:26.201209, queries/job__leave_one_out_split_1/test/31b.sql, 219.564, 243.203, Bao
+(no hint), 1, 2026-10-12 06:01:26.201605, queries/job__leave_one_out_split_1/test/31b.sql, 133.803, 89.859, Bao
+(no hint), 2, 2026-10-12 06:01:26.201746, queries/job__leave_one_out_split_1/test/31b.sql, 131.016, 78.108, Bao
+(no hint), 0, 2026-10-12 06:01:27.583514, queries/job__leave_one_out_split_1/test/32b.sql, 94.987, 771.378, Bao
+(no hint), 1, 2026-10-12 06:01:27.584223, queries/job__leave_one_out_split_1/test/32b.sql, 51.465, 73.845, Bao
+(no hint), 2, 2026-10-12 06:01:27.584535, queries/job__leave_one_out_split_1/test/32b.sql, 42.521, 67.913, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 0, 2026-10-12 06:01:29.333541, queries/job__leave_one_out_split_1/test/33c.sql, 203.11, 223.377, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 1, 2026-10-12 06:01:29.334334, queries/job__leave_one_out_split_1/test/33c.sql, 210.993, 70.144, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 2, 2026-10-12 06:01:29.334720, queries/job__leave_one_out_split_1/test/33c.sql, 195.908, 60.227, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 0, 2026-10-12 06:01:30.518562, queries/job__leave_one_out_split_1/test/3b.sql, 46.528, 647.27, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 1, 2026-10-12 06:01:30.519209, queries/job__leave_one_out_split_1/test/3b.sql, 47.757, 70.738, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 2, 2026-10-12 06:01:30.519438, queries/job__leave_one_out_split_1/test/3b.sql, 43.28, 60.072, Bao
+(no hint), 0, 2026-10-12 06:01:31.183588, queries/job__leave_one_out_split_1/test/4a.sql, 50.098, 144.914, Bao
+(no hint), 1, 2026-10-12 06:01:31.183949, queries/job__leave_one_out_split_1/test/4a.sql, 43.095, 61.498, Bao
+(no hint), 2, 2026-10-12 06:01:31.184275, queries/job__leave_one_out_split_1/test/4a.sql, 42.794, 59.831, Bao
+(no hint), 0, 2026-10-12 06:01:32.397618, queries/job__leave_one_out_split_1/test/5a.sql, 43.287, 578.785, Bao
+(no hint), 1, 2026-10-12 06:01:32.398277, queries/job__leave_one_out_split_1/test/5a.sql, 48.539, 92.955, Bao
+(no hint), 2, 2026-10-12 06:01:32.398526, queries/job__leave_one_out_split_1/test/5a.sql, 86.504, 89.535, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 0, 2026-10-12 06:01:33.832175, queries/job__leave_one_out_split_1/test/6b.sql, 48.91, 632.34, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 1, 2026-10-12 06:01:33.832590, queries/job__leave_one_out_split_1/test/6b.sql, 45.332, 137.834, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 2, 2026-10-12 06:01:33.832930, queries/job__leave_one_out_split_1/test/6b.sql, 44.889, 196.361, Bao
+(no hint), 0, 2026-10-12 06:01:54.533682, queries/job__leave_one_out_split_1/test/7c.sql, 62.726, 13170.055, Bao
+(no hint), 1, 2026-10-12 06:01:54.540093, queries/job__leave_one_out_split_1/test/7c.sql, 107.541, 4505.634, Bao
+(no hint), 2, 2026-10-12 06:01:54.540889, queries/job__leave_one_out_split_1/test/7c.sql, 77.55, 2261.805, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 0, 2026-10-12 06:02:13.260474, queries/job__leave_one_out_split_1/test/8c.sql, 73.362, 9036.647, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 1, 2026-10-12 06:02:13.262109, queries/job__leave_one_out_split_1/test/8c.sql, 79.186, 4622.147, Bao
+SET enable_mergejoin TO off; SET enable_indexscan TO off; , 2, 2026-10-12 06:02:13.262356, queries/job__leave_one_out_split_1/test/8c.sql, 88.124, 4359.207, Bao
+(no hint), 0, 2026-10-12 06:02:17.253405, queries/job__leave_one_out_split_1/test/9c.sql, 93.317, 2172.775, Bao
+(no hint), 1, 2026-10-12 06:02:17.254298, queries/job__leave_one_out_split_1/test/9c.sql, 73.492, 929.045, Bao
+(no hint), 2, 2026-10-12 06:02:17.254632, queries/job__leave_one_out_split_1/test/9c.sql, 56.299, 299.051, Bao

@@ -1,0 +1,50 @@
+# Tên container và IP giống repo gốc (pg_bao = 10.5.0.5, bao_server = 10.5.0.6)
+# để bao/run_queries.py và bao/run_test_queries.py chạy được mà không phải sửa.
+services:
+  postgres:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.pg
+    image: pg_lqo_arm64
+    container_name: pg_bao
+    volumes:
+      - ../lqo_ml_perspective:/app/lqo
+      - ../infra:/app/infra
+      - ../lqo_ml_perspective/data/imdb:/data/imdb:ro
+      - ../scripts:/app/scripts
+      - ../logs:/app/logs
+      - pgdata:/pgdata
+    ports:
+      - "5432:5432"
+    shm_size: 4gb
+    networks:
+      net:
+        ipv4_address: 10.5.0.5
+
+  bao:
+    build:
+      context: ..
+      dockerfile: infra/Dockerfile.bao
+    image: bao_server_arm64
+    container_name: bao_server
+    tty: true
+    volumes:
+      - ../lqo_ml_perspective/bao:/app/bao
+      - ../lqo_ml_perspective/data:/app/data
+      - ../scripts:/app/scripts
+      - ../logs:/app/logs
+    shm_size: 2gb
+    networks:
+      net:
+        ipv4_address: 10.5.0.6
+
+volumes:
+  pgdata:
+
+networks:
+  net:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.5.0.0/16
+          gateway: 10.5.0.1
