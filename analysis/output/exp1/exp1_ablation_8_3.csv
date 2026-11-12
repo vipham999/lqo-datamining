@@ -1,0 +1,3 @@
+ablation,split,T/H/Th,speedup,trung_vị
+8.3 IMDB 50% (model train trên IMDB đầy đủ),Bao_job__leave_one_out_split_1_imdb50_20261109_2159,2/4/27,2.2972359200581094,0.4994783190974141
+8.3 IMDB 50% (model train trên IMDB đầy đủ),Bao_job__random_split_1_imdb50_20261109_2159,0/3/19,0.780741039796996,0.4271589787615523

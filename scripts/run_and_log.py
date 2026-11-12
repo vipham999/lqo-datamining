@@ -53,8 +53,12 @@ def run_query(args, sql, setup):
             out.append({"run": i, "planning_ms": r["Planning Time"], "execution_ms": r["Execution Time"],
                         "timeout": False, "plan": r["Plan"]})
         except psycopg2.errors.QueryCanceled:
-            out.append({"run": i, "planning_ms": None, "execution_ms": float(args.timeout_ms),
-                        "timeout": True, "plan": None})
+            # Đã timeout một lần thì các lần sau gần như chắc chắn cũng timeout: ghi timeout cho mọi lần
+            # còn lại và dừng, giống run_test_queries.py của tác giả (một lần >180 s → cả 3 lần là timeout).
+            # Tiết kiệm tới 2 × timeout_ms cho mỗi cặp (câu, hint set) bị timeout.
+            out += [{"run": j, "planning_ms": None, "execution_ms": float(args.timeout_ms),
+                     "timeout": True, "plan": None, "skipped": j > i} for j in range(i, args.runs)]
+            break
     conn.close()
     return out
 

@@ -9,6 +9,7 @@ import streamlit as st
 from sklearn.tree import export_graphviz
 
 import core
+import group_results
 
 st.set_page_config(page_title="Phân loại plan truy vấn", layout="wide")
 TEXT_MUTED = "#52514e"
@@ -55,8 +56,83 @@ st.sidebar.markdown(f"**{len(df)} câu truy vấn** · {df.template.nunique()} t
 st.sidebar.caption("Bài báo: Lehmann, Sulimov, Stockinger. *Is Your Learned Query Optimizer Behaving As You Expect?* "
                    "PVLDB 17(7), 2024.")
 
-tab1, tab2, tab3, tab4, tab5 = st.tabs(["1. Kết quả bài báo", "2. Dữ liệu & nhãn", "3. Phân loại plan",
-                                        "4. Giải thích (data mining)", "5. Xem một câu truy vấn"])
+tab0, tab1, tab_e1, tab_e2, tab2, tab3, tab4, tab5 = st.tabs(
+    ["0. CSDL IMDB", "1. Kết quả bài báo", "Nhóm: Thí nghiệm 1", "Nhóm: Thí nghiệm 2", "2. Dữ liệu & nhãn",
+     "3. Phân loại plan", "4. Giải thích (data mining)", "5. Xem một câu truy vấn"])
+
+# ---------------------------------------------------------------- Kết quả của nhóm (Mục 4 báo cáo)
+with tab_e1:
+    group_results.render_exp1()
+with tab_e2:
+    group_results.render_exp2()
+
+# ---------------------------------------------------------------- 0. CSDL IMDB
+with tab0:
+    st.header("Cơ sở dữ liệu IMDB (benchmark JOB)")
+    db = core.load_imdb()
+    if db is None:
+        st.warning("Chưa có analysis/output/app/imdb_db.json. Chạy `python app/prepare_data.py --db` "
+                   "(cần container pg_bao).")
+    else:
+        tables = pd.DataFrame([{"bảng": t["name"], "nhóm": core.TABLE_INFO.get(t["name"], ("", ""))[0],
+                                "ý nghĩa": core.TABLE_INFO.get(t["name"], ("", ""))[1], "số dòng": t["rows"],
+                                "dung lượng (MB)": t["bytes"] / 2**20, "số cột": len(t["columns"]),
+                                "số câu JOB dùng": t["so_cau_job"]} for t in db["tables"]])
+        st.markdown(
+            "- **Dữ liệu gốc:** snapshot IMDB dạng CSV (`imdb.tgz`, công bố cùng benchmark JOB – Leis et al., VLDB 2015).\n"
+            "- **Lưu trữ:** nạp vào **PostgreSQL 12.5** thành các **bảng quan hệ** (kèm index), "
+            "chạy trong Docker container `pg_bao`, database `imdbload`.\n"
+            "- **Input của thực nghiệm:** 113 câu SQL của JOB chạy trên CSDL này; mỗi câu nối 4–17 bảng.")
+        m = st.columns(4)
+        m[0].metric("Số bảng", len(tables))
+        m[1].metric("Tổng số dòng", f"{tables['số dòng'].sum() / 1e6:,.1f} triệu")
+        m[2].metric("Dung lượng (kèm index)", f"{db['bytes'] / 2**30:,.1f} GB")
+        m[3].metric("Phiên bản", db["version"].split(" on ")[0])
+
+        st.subheader("Các bảng")
+        gscale = alt.Scale(domain=core.TABLE_GROUPS, range=core.PALETTE[:len(core.TABLE_GROUPS)])
+        y = alt.Y("bảng:N", sort="-x", title=None)
+        st.altair_chart(alt.Chart(tables).mark_bar(cornerRadiusEnd=4, height=16).encode(
+            y=y, x=alt.X("số dòng:Q", title="Số dòng (thang log)", scale=alt.Scale(type="log")),
+            color=alt.Color("nhóm:N", scale=gscale, title="Nhóm bảng"),
+            tooltip=["bảng", "nhóm", "ý nghĩa", alt.Tooltip("số dòng:Q", format=","),
+                     alt.Tooltip("dung lượng (MB):Q", format=",.0f"), "số câu JOB dùng"]
+        ).properties(height=22 * len(tables)), use_container_width=True)
+        st.dataframe(tables.style.format({"số dòng": "{:,}", "dung lượng (MB)": "{:,.0f}"}),
+                     hide_index=True, use_container_width=True)
+
+        st.subheader("Quan hệ giữa các bảng")
+        st.markdown("Đọc từ trái sang phải: **phim/người** → **bảng nối và bảng thông tin** → **bảng tra cứu**. "
+                    "Mỗi đường là một khóa ngoại trỏ tới cột `id` của bảng kia; nhãn ghi cột khóa ngoại và "
+                    "số câu JOB (trên 113) dùng phép nối đó, đường càng đậm càng nhiều câu dùng.")
+        st.markdown(" ".join(f'<span style="background:{c};color:white;border-radius:6px;padding:2px 10px;'
+                             f'margin-right:6px">{g}</span>'
+                             for g, c in zip(core.TABLE_GROUPS, core.PALETTE)), unsafe_allow_html=True)
+        show_bridge = st.checkbox("Hiện cả cạnh bắc cầu (vd `movie_keyword.movie_id = movie_info.movie_id`)", False,
+                                  help="Các câu JOB thường viết thêm điều kiện nối trực tiếp giữa hai bảng cùng trỏ "
+                                       "tới title. Chúng làm optimizer có nhiều thứ tự nối hơn, nhưng làm sơ đồ rối.")
+        st.graphviz_chart(core.schema_dot(db, show_bridge), use_container_width=True)
+
+        st.subheader("Xem một bảng")
+        name = st.selectbox("Bảng", [t["name"] for t in db["tables"]])
+        t = next(t for t in db["tables"] if t["name"] == name)
+        st.markdown(f"**{name}** – {core.TABLE_INFO.get(name, ('', ''))[1]} · {t['rows']:,} dòng · "
+                    f"{t['bytes'] / 2**20:,.0f} MB · được {t['so_cau_job']}/113 câu JOB sử dụng")
+        left, right = st.columns([1, 3])
+        left.dataframe(pd.DataFrame(t["columns"]).rename(columns={"name": "cột", "type": "kiểu"}),
+                       hide_index=True, use_container_width=True)
+        right.dataframe(pd.DataFrame(t["sample"]), hide_index=True, use_container_width=True)
+        right.caption("5 dòng đầu của bảng (chuỗi dài bị cắt ở 60 ký tự).")
+
+        st.subheader("Ví dụ: The Matrix (1999) nằm trong các bảng như thế nào")
+        st.caption("Mọi bảng `movie_*` và `cast_info` nối với `title` qua `movie_id`.")
+        ex = db["example"]
+        st.dataframe(pd.DataFrame(ex["title"]), hide_index=True, use_container_width=True)
+        c1, c2 = st.columns(2)
+        for col, key in ((c1, "cast_info"), (c2, "movie_info_idx"), (c1, "movie_info"),
+                         (c2, "movie_companies"), (c1, "movie_keyword")):
+            col.markdown(f"**{key}**")
+            col.dataframe(pd.DataFrame(ex[key]), hide_index=True, use_container_width=True)
 
 # ---------------------------------------------------------------- 1. Kết quả bài báo
 with tab1:
