@@ -2,3 +2,4 @@
 analysis/.venv/
 __pycache__/
 .DS_Store
+kaggle/*.log
