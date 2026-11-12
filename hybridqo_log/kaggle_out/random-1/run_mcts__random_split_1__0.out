@@ -1,0 +1,2122 @@
+91
+Iterating over epochs...:   0%|          | 0/11 [00:00<?, ?it/s]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 11c...:   0%|          | 0/91 [00:00<?, ?it/s][A/tmp/lqo_ml_perspective/hybrid_qo/mcts.py:57: RuntimeWarning: overflow encountered in scalar power
+  return e**x*config.max_time_out
+/tmp/lqo_ml_perspective/hybrid_qo/mcts.py:359: UserWarning: Using a target size (torch.Size([1])) that is different to the input size (torch.Size([1, 1])). This will likely lead to incorrect results due to broadcasting. Please ensure they have the same size.
+  loss_value = loss_function(input=input, target=target)
+
+Iterating over training query 11c...:   1%|          | 1/91 [00:02<03:56,  2.63s/it][A
+Iterating over training query 16b...:   1%|          | 1/91 [00:02<03:56,  2.63s/it][A
+Iterating over training query 16b...:   2%|▏         | 2/91 [04:44<4:07:51, 167.09s/it][A
+Iterating over training query 09a...:   2%|▏         | 2/91 [04:44<4:07:51, 167.09s/it][A
+Iterating over training query 09a...:   3%|▎         | 3/91 [04:50<2:16:48, 93.27s/it] [A
+Iterating over training query 26c...:   3%|▎         | 3/91 [04:50<2:16:48, 93.27s/it][A
+Iterating over training query 26c...:   4%|▍         | 4/91 [06:03<2:03:50, 85.41s/it][A
+Iterating over training query 03b...:   4%|▍         | 4/91 [06:03<2:03:50, 85.41s/it][A
+Iterating over training query 03b...:   5%|▌         | 5/91 [06:05<1:19:04, 55.17s/it][A
+Iterating over training query 10a...:   5%|▌         | 5/91 [06:05<1:19:04, 55.17s/it][A
+Iterating over training query 10a...:   7%|▋         | 6/91 [06:11<54:44, 38.65s/it]  [A
+Iterating over training query 14c...:   7%|▋         | 6/91 [06:11<54:44, 38.65s/it][A
+Iterating over training query 14c...:   8%|▊         | 7/91 [06:20<40:35, 29.00s/it][A
+Iterating over training query 12b...:   8%|▊         | 7/91 [06:20<40:35, 29.00s/it][A
+Iterating over training query 12b...:   9%|▉         | 8/91 [06:22<28:09, 20.36s/it][A
+Iterating over training query 14a...:   9%|▉         | 8/91 [06:22<28:09, 20.36s/it][A
+Iterating over training query 14a...:  10%|▉         | 9/91 [06:25<20:29, 14.99s/it][A
+Iterating over training query 17a...:  10%|▉         | 9/91 [06:25<20:29, 14.99s/it][A
+Iterating over training query 17a...:  11%|█         | 10/91 [08:45<1:11:57, 53.30s/it][A
+Iterating over training query 02d...:  11%|█         | 10/91 [08:45<1:11:57, 53.30s/it][A
+Iterating over training query 02d...:  12%|█▏        | 11/91 [08:53<52:36, 39.45s/it]  [A
+Iterating over training query 15d...:  12%|█▏        | 11/91 [08:53<52:36, 39.45s/it][A
+Iterating over training query 15d...:  13%|█▎        | 12/91 [09:05<41:03, 31.19s/it][A
+Iterating over training query 33b...:  13%|█▎        | 12/91 [09:05<41:03, 31.19s/it][A
+Iterating over training query 33b...:  14%|█▍        | 13/91 [09:08<29:21, 22.58s/it][A
+Iterating over training query 22a...:  14%|█▍        | 13/91 [09:08<29:21, 22.58s/it][A
+Iterating over training query 22a...:  15%|█▌        | 14/91 [09:13<22:26, 17.48s/it][A
+Iterating over training query 07c...:  15%|█▌        | 14/91 [09:13<22:26, 17.48s/it][A
+Iterating over training query 07c...:  16%|█▋        | 15/91 [09:58<32:23, 25.57s/it][A
+Iterating over training query 31a...:  16%|█▋        | 15/91 [09:58<32:23, 25.57s/it][A
+Iterating over training query 31a...:  18%|█▊        | 16/91 [10:02<23:50, 19.07s/it][A
+Iterating over training query 28c...:  18%|█▊        | 16/91 [10:02<23:50, 19.07s/it][A
+Iterating over training query 28c...:  19%|█▊        | 17/91 [10:32<27:40, 22.44s/it][A
+Iterating over training query 30a...:  19%|█▊        | 17/91 [10:32<27:40, 22.44s/it][A
+Iterating over training query 30a...:  20%|█▉        | 18/91 [10:47<24:46, 20.37s/it][A
+Iterating over training query 01b...:  20%|█▉        | 18/91 [10:47<24:46, 20.37s/it][A
+Iterating over training query 01b...:  21%|██        | 19/91 [10:49<17:45, 14.79s/it][A
+Iterating over training query 31b...:  21%|██        | 19/91 [10:49<17:45, 14.79s/it][A
+Iterating over training query 31b...:  22%|██▏       | 20/91 [11:00<15:58, 13.50s/it][A
+Iterating over training query 29b...:  22%|██▏       | 20/91 [11:00<15:58, 13.50s/it][A
+Iterating over training query 29b...:  23%|██▎       | 21/91 [11:13<15:45, 13.50s/it][A
+Iterating over training query 19d...:  23%|██▎       | 21/91 [11:13<15:45, 13.50s/it][A
+Iterating over training query 19d...:  24%|██▍       | 22/91 [17:22<2:18:05, 120.08s/it][A
+Iterating over training query 12a...:  24%|██▍       | 22/91 [17:22<2:18:05, 120.08s/it][A
+Iterating over training query 12a...:  25%|██▌       | 23/91 [17:25<1:36:24, 85.06s/it] [A
+Iterating over training query 18a...:  25%|██▌       | 23/91 [17:25<1:36:24, 85.06s/it][A
+Iterating over training query 18a...:  26%|██▋       | 24/91 [18:13<1:22:32, 73.92s/it][A
+Iterating over training query 20c...:  26%|██▋       | 24/91 [18:13<1:22:32, 73.92s/it][A
+Iterating over training query 20c...:  27%|██▋       | 25/91 [18:26<1:01:04, 55.52s/it][A
+Iterating over training query 16c...:  27%|██▋       | 25/91 [18:26<1:01:04, 55.52s/it][A
+Iterating over training query 16c...:  29%|██▊       | 26/91 [18:47<49:06, 45.34s/it]  [A
+Iterating over training query 27c...:  29%|██▊       | 26/91 [18:47<49:06, 45.34s/it][A
+Iterating over training query 27c...:  30%|██▉       | 27/91 [18:50<34:38, 32.48s/it][A
+Iterating over training query 06d...:  30%|██▉       | 27/91 [18:50<34:38, 32.48s/it][A
+Iterating over training query 06d...:  31%|███       | 28/91 [19:43<40:38, 38.70s/it][A
+Iterating over training query 05a...:  31%|███       | 28/91 [19:43<40:38, 38.70s/it][A
+Iterating over training query 05a...:  32%|███▏      | 29/91 [19:46<28:55, 28.00s/it][A
+Iterating over training query 02a...:  32%|███▏      | 29/91 [19:46<28:55, 28.00s/it][A
+Iterating over training query 02a...:  33%|███▎      | 30/91 [19:53<21:59, 21.63s/it][A
+Iterating over training query 17d...:  33%|███▎      | 30/91 [19:53<21:59, 21.63s/it][A
+Iterating over training query 17d...:  34%|███▍      | 31/91 [21:04<36:24, 36.41s/it][A
+Iterating over training query 09b...:  34%|███▍      | 31/91 [21:04<36:24, 36.41s/it][A
+Iterating over training query 09b...:  35%|███▌      | 32/91 [21:09<26:37, 27.08s/it][A
+Iterating over training query 26b...:  35%|███▌      | 32/91 [21:09<26:37, 27.08s/it][A
+Iterating over training query 26b...:  36%|███▋      | 33/91 [21:12<19:02, 19.70s/it][A
+Iterating over training query 24a...:  36%|███▋      | 33/91 [21:12<19:02, 19.70s/it][A
+Iterating over training query 24a...:  37%|███▋      | 34/91 [21:16<14:23, 15.14s/it][A
+Iterating over training query 13a...:  37%|███▋      | 34/91 [21:16<14:23, 15.14s/it][A
+Iterating over training query 13a...:  38%|███▊      | 35/91 [21:39<16:13, 17.38s/it][A
+Iterating over training query 06b...:  38%|███▊      | 35/91 [21:39<16:13, 17.38s/it][A
+Iterating over training query 06b...:  40%|███▉      | 36/91 [21:41<11:49, 12.90s/it][A
+Iterating over training query 01a...:  40%|███▉      | 36/91 [21:41<11:49, 12.90s/it][A
+Iterating over training query 01a...:  41%|████      | 37/91 [21:45<09:18, 10.34s/it][A
+Iterating over training query 16a...:  41%|████      | 37/91 [21:45<09:18, 10.34s/it][A
+Iterating over training query 16a...:  42%|████▏     | 38/91 [21:48<06:59,  7.91s/it][A
+Iterating over training query 03a...:  42%|████▏     | 38/91 [21:48<06:59,  7.91s/it][A
+Iterating over training query 03a...:  43%|████▎     | 39/91 [21:50<05:16,  6.10s/it][A
+Iterating over training query 30c...:  43%|████▎     | 39/91 [21:50<05:16,  6.10s/it][A
+Iterating over training query 30c...:  44%|████▍     | 40/91 [22:52<19:29, 22.93s/it][A
+Iterating over training query 13c...:  44%|████▍     | 40/91 [22:52<19:29, 22.93s/it][A
+Iterating over training query 13c...:  45%|████▌     | 41/91 [23:02<15:50, 19.01s/it][A
+Iterating over training query 18c...:  45%|████▌     | 41/91 [23:02<15:50, 19.01s/it][A
+Iterating over training query 18c...:  46%|████▌     | 42/91 [23:59<24:49, 30.39s/it][A
+Iterating over training query 08d...:  46%|████▌     | 42/91 [23:59<24:49, 30.39s/it][A
+Iterating over training query 08d...:  47%|████▋     | 43/91 [24:36<26:04, 32.60s/it][A
+Iterating over training query 10b...:  47%|████▋     | 43/91 [24:36<26:04, 32.60s/it][A
+Iterating over training query 10b...:  48%|████▊     | 44/91 [24:41<19:01, 24.29s/it][A
+Iterating over training query 07b...:  48%|████▊     | 44/91 [24:41<19:01, 24.29s/it][A
+Iterating over training query 07b...:  49%|████▉     | 45/91 [24:44<13:42, 17.88s/it][A
+Iterating over training query 23c...:  49%|████▉     | 45/91 [24:44<13:42, 17.88s/it][A
+Iterating over training query 23c...:  51%|█████     | 46/91 [24:51<11:00, 14.67s/it][A
+Iterating over training query 13d...:  51%|█████     | 46/91 [24:51<11:00, 14.67s/it][A
+Iterating over training query 13d...:  52%|█████▏    | 47/91 [25:26<15:11, 20.72s/it][A
+Iterating over training query 27a...:  52%|█████▏    | 47/91 [25:26<15:11, 20.72s/it][A
+Iterating over training query 27a...:  53%|█████▎    | 48/91 [25:28<10:44, 15.00s/it][A
+Iterating over training query 26a...:  53%|█████▎    | 48/91 [25:28<10:44, 15.00s/it][A
+Iterating over training query 26a...:  54%|█████▍    | 49/91 [25:36<08:58, 12.83s/it][A
+Iterating over training query 22c...:  54%|█████▍    | 49/91 [25:36<08:58, 12.83s/it][A
+Iterating over training query 22c...:  55%|█████▍    | 50/91 [26:09<13:02, 19.10s/it][A
+Iterating over training query 17f...:  55%|█████▍    | 50/91 [26:09<13:02, 19.10s/it][A
+Iterating over training query 17f...:  56%|█████▌    | 51/91 [28:00<30:57, 46.45s/it][A
+Iterating over training query 28a...:  56%|█████▌    | 51/91 [28:00<30:57, 46.45s/it][A
+Iterating over training query 28a...:  57%|█████▋    | 52/91 [29:24<37:32, 57.75s/it][A
+Iterating over training query 13b...:  57%|█████▋    | 52/91 [29:24<37:32, 57.75s/it][A
+Iterating over training query 13b...:  58%|█████▊    | 53/91 [29:34<27:31, 43.47s/it][A
+Iterating over training query 19a...:  58%|█████▊    | 53/91 [29:34<27:31, 43.47s/it][A
+Iterating over training query 19a...:  59%|█████▉    | 54/91 [29:40<19:50, 32.17s/it][A
+Iterating over training query 32a...:  59%|█████▉    | 54/91 [29:40<19:50, 32.17s/it][A
+Iterating over training query 32a...:  60%|██████    | 55/91 [29:40<13:34, 22.63s/it][A
+Iterating over training query 19c...:  60%|██████    | 55/91 [29:40<13:34, 22.63s/it][A
+Iterating over training query 19c...:  62%|██████▏   | 56/91 [29:51<11:05, 19.01s/it][A
+Iterating over training query 22b...:  62%|██████▏   | 56/91 [29:51<11:05, 19.01s/it][A
+Iterating over training query 22b...:  63%|██████▎   | 57/91 [29:54<08:07, 14.33s/it][A
+Iterating over training query 15c...:  63%|██████▎   | 57/91 [29:54<08:07, 14.33s/it][A
+Iterating over training query 15c...:  64%|██████▎   | 58/91 [30:02<06:50, 12.45s/it][A
+Iterating over training query 33c...:  64%|██████▎   | 58/91 [30:02<06:50, 12.45s/it][A
+Iterating over training query 33c...:  65%|██████▍   | 59/91 [30:05<05:06,  9.58s/it][A
+Iterating over training query 14b...:  65%|██████▍   | 59/91 [30:05<05:06,  9.58s/it][A
+Iterating over training query 14b...:  66%|██████▌   | 60/91 [30:06<03:41,  7.15s/it][A
+Iterating over training query 24b...:  66%|██████▌   | 60/91 [30:06<03:41,  7.15s/it][A
+Iterating over training query 24b...:  67%|██████▋   | 61/91 [30:08<02:47,  5.58s/it][A
+Iterating over training query 30b...:  67%|██████▋   | 61/91 [30:08<02:47,  5.58s/it][A
+Iterating over training query 30b...:  68%|██████▊   | 62/91 [30:14<02:46,  5.73s/it][A
+Iterating over training query 08a...:  68%|██████▊   | 62/91 [30:14<02:46,  5.73s/it][A
+Iterating over training query 08a...:  69%|██████▉   | 63/91 [30:28<03:46,  8.08s/it][A
+Iterating over training query 16d...:  69%|██████▉   | 63/91 [30:28<03:46,  8.08s/it][A
+Iterating over training query 16d...:  70%|███████   | 64/91 [30:46<04:57, 11.01s/it][A
+Iterating over training query 23b...:  70%|███████   | 64/91 [30:46<04:57, 11.01s/it][A
+Iterating over training query 23b...:  71%|███████▏  | 65/91 [30:48<03:36,  8.32s/it][A
+Iterating over training query 11b...:  71%|███████▏  | 65/91 [30:48<03:36,  8.32s/it][A
+Iterating over training query 11b...:  73%|███████▎  | 66/91 [30:49<02:31,  6.08s/it][A
+Iterating over training query 21c...:  73%|███████▎  | 66/91 [30:49<02:31,  6.08s/it][A
+Iterating over training query 21c...:  74%|███████▎  | 67/91 [30:50<01:51,  4.67s/it][A
+Iterating over training query 25a...:  74%|███████▎  | 67/91 [30:50<01:51,  4.67s/it][A
+Iterating over training query 25a...:  75%|███████▍  | 68/91 [31:19<04:38, 12.09s/it][A
+Iterating over training query 29a...:  75%|███████▍  | 68/91 [31:19<04:38, 12.09s/it][A
+Iterating over training query 29a...:  76%|███████▌  | 69/91 [31:35<04:46, 13.03s/it][A
+Iterating over training query 17c...:  76%|███████▌  | 69/91 [31:35<04:46, 13.03s/it][A
+Iterating over training query 17c...:  77%|███████▋  | 70/91 [32:44<10:26, 29.84s/it][A
+Iterating over training query 25b...:  77%|███████▋  | 70/91 [32:44<10:26, 29.84s/it][A
+Iterating over training query 25b...:  78%|███████▊  | 71/91 [32:48<07:25, 22.30s/it][A
+Iterating over training query 22d...:  78%|███████▊  | 71/91 [32:48<07:25, 22.30s/it][A
+Iterating over training query 22d...:  79%|███████▉  | 72/91 [33:00<06:01, 19.02s/it][A
+Iterating over training query 06f...:  79%|███████▉  | 72/91 [33:00<06:01, 19.02s/it][A
+Iterating over training query 06f...:  80%|████████  | 73/91 [33:54<08:52, 29.58s/it][A
+Iterating over training query 04a...:  80%|████████  | 73/91 [33:54<08:52, 29.58s/it][A
+Iterating over training query 04a...:  81%|████████▏ | 74/91 [33:55<05:59, 21.12s/it][A
+Iterating over training query 20b...:  81%|████████▏ | 74/91 [33:55<05:59, 21.12s/it][A
+Iterating over training query 20b...:  82%|████████▏ | 75/91 [34:17<05:37, 21.12s/it][A
+Iterating over training query 02b...:  82%|████████▏ | 75/91 [34:17<05:37, 21.12s/it][A
+Iterating over training query 02b...:  84%|████████▎ | 76/91 [34:24<04:13, 16.88s/it][A
+Iterating over training query 05b...:  84%|████████▎ | 76/91 [34:24<04:13, 16.88s/it][A
+Iterating over training query 05b...:  85%|████████▍ | 77/91 [34:27<02:57, 12.70s/it][A
+Iterating over training query 03c...:  85%|████████▍ | 77/91 [34:27<02:57, 12.70s/it][A
+Iterating over training query 03c...:  86%|████████▌ | 78/91 [34:30<02:09,  9.97s/it][A
+Iterating over training query 15b...:  86%|████████▌ | 78/91 [34:30<02:09,  9.97s/it][A
+Iterating over training query 15b...:  87%|████████▋ | 79/91 [34:31<01:26,  7.22s/it][A
+Iterating over training query 21b...:  87%|████████▋ | 79/91 [34:31<01:26,  7.22s/it][A
+Iterating over training query 21b...:  88%|████████▊ | 80/91 [34:32<01:00,  5.48s/it][A
+Iterating over training query 12c...:  88%|████████▊ | 80/91 [34:32<01:00,  5.48s/it][A
+Iterating over training query 12c...:  89%|████████▉ | 81/91 [34:43<01:11,  7.14s/it][A
+Iterating over training query 09d...:  89%|████████▉ | 81/91 [34:43<01:11,  7.14s/it][A
+Iterating over training query 09d...:  90%|█████████ | 82/91 [35:42<03:22, 22.46s/it][A
+Iterating over training query 27b...:  90%|█████████ | 82/91 [35:42<03:22, 22.46s/it][A
+Iterating over training query 27b...:  91%|█████████ | 83/91 [35:43<02:09, 16.22s/it][A
+Iterating over training query 19b...:  91%|█████████ | 83/91 [35:43<02:09, 16.22s/it][A
+Iterating over training query 19b...:  92%|█████████▏| 84/91 [35:46<01:26, 12.30s/it][A
+Iterating over training query 23a...:  92%|█████████▏| 84/91 [35:46<01:26, 12.30s/it][A
+Iterating over training query 23a...:  93%|█████████▎| 85/91 [35:52<01:02, 10.34s/it][A
+Iterating over training query 31c...:  93%|█████████▎| 85/91 [35:52<01:02, 10.34s/it][A
+Iterating over training query 31c...:  95%|█████████▍| 86/91 [35:58<00:44,  8.92s/it][A
+Iterating over training query 29c...:  95%|█████████▍| 86/91 [35:58<00:44,  8.92s/it][A
+Iterating over training query 29c...:  96%|█████████▌| 87/91 [36:11<00:41, 10.31s/it][A
+Iterating over training query 10c...:  96%|█████████▌| 87/91 [36:11<00:41, 10.31s/it][A
+Iterating over training query 10c...:  97%|█████████▋| 88/91 [37:11<01:15, 25.17s/it][A
+Iterating over training query 01d...:  97%|█████████▋| 88/91 [37:11<01:15, 25.17s/it][A
+Iterating over training query 01d...:  98%|█████████▊| 89/91 [37:13<00:36, 18.20s/it][A
+Iterating over training query 07a...:  98%|█████████▊| 89/91 [37:13<00:36, 18.20s/it][A
+Iterating over training query 07a...:  99%|█████████▉| 90/91 [37:31<00:18, 18.00s/it][A
+Iterating over training query 11a...:  99%|█████████▉| 90/91 [37:31<00:18, 18.00s/it][A
+Iterating over training query 11a...: 100%|██████████| 91/91 [37:32<00:00, 13.01s/it][A
+                                                                                     [A
+Iterating over test queries...:   0%|          | 0/22 [00:00<?, ?it/s][A
+Iterating over test query 01c...:   0%|          | 0/22 [00:00<?, ?it/s][A
+Iterating over test query 01c...:   5%|▍         | 1/22 [00:02<00:44,  2.12s/it][A
+Iterating over test query 02c...:   5%|▍         | 1/22 [00:02<00:44,  2.12s/it][A
+Iterating over test query 02c...:   9%|▉         | 2/22 [00:08<01:35,  4.76s/it][A
+Iterating over test query 04b...:   9%|▉         | 2/22 [00:08<01:35,  4.76s/it][A
+Iterating over test query 04b...:  14%|█▎        | 3/22 [00:10<01:03,  3.32s/it][A
+Iterating over test query 04c...:  14%|█▎        | 3/22 [00:10<01:03,  3.32s/it][A
+Iterating over test query 04c...:  18%|█▊        | 4/22 [00:11<00:47,  2.67s/it][A
+Iterating over test query 05c...:  18%|█▊        | 4/22 [00:11<00:47,  2.67s/it][A
+Iterating over test query 05c...:  23%|██▎       | 5/22 [00:15<00:53,  3.13s/it][A
+Iterating over test query 06a...:  23%|██▎       | 5/22 [00:15<00:53,  3.13s/it][A
+Iterating over test query 06a...:  27%|██▋       | 6/22 [00:16<00:36,  2.30s/it][A
+Iterating over test query 06c...:  27%|██▋       | 6/22 [00:16<00:36,  2.30s/it][A
+Iterating over test query 06c...:  32%|███▏      | 7/22 [00:17<00:26,  1.74s/it][A
+Iterating over test query 06e...:  32%|███▏      | 7/22 [00:17<00:26,  1.74s/it][A
+Iterating over test query 06e...:  36%|███▋      | 8/22 [00:17<00:19,  1.40s/it][A
+Iterating over test query 08b...:  36%|███▋      | 8/22 [00:17<00:19,  1.40s/it][A
+Iterating over test query 08b...:  41%|████      | 9/22 [00:21<00:26,  2.07s/it][A
+Iterating over test query 08c...:  41%|████      | 9/22 [00:21<00:26,  2.07s/it][A
+Iterating over test query 08c...:  45%|████▌     | 10/22 [01:36<04:53, 24.50s/it][A
+Iterating over test query 09c...:  45%|████▌     | 10/22 [01:36<04:53, 24.50s/it][A
+Iterating over test query 09c...:  50%|█████     | 11/22 [01:44<03:35, 19.61s/it][A
+Iterating over test query 11d...:  50%|█████     | 11/22 [01:44<03:35, 19.61s/it][A
+Iterating over test query 11d...:  55%|█████▍    | 12/22 [01:47<02:23, 14.39s/it][A
+Iterating over test query 15a...:  55%|█████▍    | 12/22 [01:47<02:23, 14.39s/it][A
+Iterating over test query 15a...:  59%|█████▉    | 13/22 [01:53<01:46, 11.88s/it][A
+Iterating over test query 17b...:  59%|█████▉    | 13/22 [01:53<01:46, 11.88s/it][A
+Iterating over test query 17b...:  64%|██████▎   | 14/22 [03:05<04:00, 30.10s/it][A
+Iterating over test query 17e...:  64%|██████▎   | 14/22 [03:05<04:00, 30.10s/it][A
+Iterating over test query 17e...:  68%|██████▊   | 15/22 [05:24<07:20, 62.96s/it][A
+Iterating over test query 18b...:  68%|██████▊   | 15/22 [05:24<07:20, 62.96s/it][A
+Iterating over test query 18b...:  73%|███████▎  | 16/22 [05:27<04:29, 44.95s/it][A
+Iterating over test query 20a...:  73%|███████▎  | 16/22 [05:27<04:29, 44.95s/it][A
+Iterating over test query 20a...:  77%|███████▋  | 17/22 [05:55<03:18, 39.69s/it][A
+Iterating over test query 21a...:  77%|███████▋  | 17/22 [05:55<03:18, 39.69s/it][A
+Iterating over test query 21a...:  82%|████████▏ | 18/22 [05:56<01:53, 28.28s/it][A
+Iterating over test query 25c...:  82%|████████▏ | 18/22 [05:56<01:53, 28.28s/it][A
+Iterating over test query 25c...:  86%|████████▋ | 19/22 [07:18<02:13, 44.38s/it][A
+Iterating over test query 28b...:  86%|████████▋ | 19/22 [07:18<02:13, 44.38s/it][A
+Iterating over test query 28b...:  91%|█████████ | 20/22 [07:25<01:06, 33.01s/it][A
+Iterating over test query 32b...:  91%|█████████ | 20/22 [07:25<01:06, 33.01s/it][A
+Iterating over test query 32b...:  95%|█████████▌| 21/22 [07:27<00:23, 23.64s/it][A
+Iterating over test query 33a...:  95%|█████████▌| 21/22 [07:27<00:23, 23.64s/it][A
+Iterating over test query 33a...: 100%|██████████| 22/22 [07:30<00:00, 17.56s/it][AIterating over test query 33a...: 100%|██████████| 22/22 [07:30<00:00, 20.47s/it]
+Iterating over epochs...:   9%|▉         | 1/11 [45:02<7:30:28, 2702.89s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 17f...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 17f...:   1%|          | 1/91 [01:50<2:45:25, 110.28s/it][A
+Iterating over training query 07b...:   1%|          | 1/91 [01:50<2:45:25, 110.28s/it][A
+Iterating over training query 07b...:   2%|▏         | 2/91 [01:53<1:09:57, 47.16s/it] [A
+Iterating over training query 09a...:   2%|▏         | 2/91 [01:53<1:09:57, 47.16s/it][A
+Iterating over training query 09a...:   3%|▎         | 3/91 [01:58<41:21, 28.20s/it]  [A
+Iterating over training query 16c...:   3%|▎         | 3/91 [01:58<41:21, 28.20s/it][A
+Iterating over training query 16c...:   4%|▍         | 4/91 [02:21<37:44, 26.03s/it][A
+Iterating over training query 26b...:   4%|▍         | 4/91 [02:21<37:44, 26.03s/it][A
+Iterating over training query 26b...:   5%|▌         | 5/91 [02:24<25:12, 17.58s/it][A
+Iterating over training query 27a...:   5%|▌         | 5/91 [02:24<25:12, 17.58s/it][A
+Iterating over training query 27a...:   7%|▋         | 6/91 [02:26<17:20, 12.24s/it][A
+Iterating over training query 23b...:   7%|▋         | 6/91 [02:26<17:20, 12.24s/it][A
+Iterating over training query 23b...:   8%|▊         | 7/91 [02:27<12:16,  8.76s/it][A
+Iterating over training query 33b...:   8%|▊         | 7/91 [02:27<12:16,  8.76s/it][A
+Iterating over training query 33b...:   9%|▉         | 8/91 [02:30<09:29,  6.86s/it][A
+Iterating over training query 16d...:   9%|▉         | 8/91 [02:30<09:29,  6.86s/it][A
+Iterating over training query 16d...:  10%|▉         | 9/91 [02:47<13:43, 10.04s/it][A
+Iterating over training query 06b...:  10%|▉         | 9/91 [02:47<13:43, 10.04s/it][A
+Iterating over training query 06b...:  11%|█         | 10/91 [02:50<10:30,  7.78s/it][A
+Iterating over training query 19d...:  11%|█         | 10/91 [02:50<10:30,  7.78s/it][A
+Iterating over training query 19d...:  12%|█▏        | 11/91 [05:02<1:01:17, 45.96s/it][A
+Iterating over training query 23c...:  12%|█▏        | 11/91 [05:02<1:01:17, 45.96s/it][A
+Iterating over training query 23c...:  13%|█▎        | 12/91 [05:10<45:04, 34.23s/it]  [A
+Iterating over training query 01a...:  13%|█▎        | 12/91 [05:10<45:04, 34.23s/it][A
+Iterating over training query 01a...:  14%|█▍        | 13/91 [05:12<31:52, 24.52s/it][A
+Iterating over training query 29c...:  14%|█▍        | 13/91 [05:12<31:52, 24.52s/it][A
+Iterating over training query 29c...:  15%|█▌        | 14/91 [05:25<27:06, 21.12s/it][A
+Iterating over training query 14b...:  15%|█▌        | 14/91 [05:25<27:06, 21.12s/it][A
+Iterating over training query 14b...:  16%|█▋        | 15/91 [05:27<19:21, 15.28s/it][A
+Iterating over training query 17d...:  16%|█▋        | 15/91 [05:27<19:21, 15.28s/it][A
+Iterating over training query 17d...:  18%|█▊        | 16/91 [06:39<40:33, 32.45s/it][A
+Iterating over training query 30a...:  18%|█▊        | 16/91 [06:39<40:33, 32.45s/it][A
+Iterating over training query 30a...:  19%|█▊        | 17/91 [06:55<33:40, 27.31s/it][A
+Iterating over training query 13c...:  19%|█▊        | 17/91 [06:55<33:40, 27.31s/it][A
+Iterating over training query 13c...:  20%|█▉        | 18/91 [07:05<26:55, 22.14s/it][A
+Iterating over training query 13d...:  20%|█▉        | 18/91 [07:05<26:55, 22.14s/it][A
+Iterating over training query 13d...:  21%|██        | 19/91 [07:40<31:15, 26.04s/it][A
+Iterating over training query 03a...:  21%|██        | 19/91 [07:40<31:15, 26.04s/it][A
+Iterating over training query 03a...:  22%|██▏       | 20/91 [07:42<22:16, 18.82s/it][A
+Iterating over training query 18a...:  22%|██▏       | 20/91 [07:42<22:16, 18.82s/it][A
+Iterating over training query 18a...:  23%|██▎       | 21/91 [08:31<32:33, 27.91s/it][A
+Iterating over training query 28c...:  23%|██▎       | 21/91 [08:31<32:33, 27.91s/it][A
+Iterating over training query 28c...:  24%|██▍       | 22/91 [09:01<32:47, 28.52s/it][A
+Iterating over training query 23a...:  24%|██▍       | 22/91 [09:01<32:47, 28.52s/it][A
+Iterating over training query 23a...:  25%|██▌       | 23/91 [09:07<24:40, 21.77s/it][A
+Iterating over training query 27b...:  25%|██▌       | 23/91 [09:07<24:40, 21.77s/it][A
+Iterating over training query 27b...:  26%|██▋       | 24/91 [09:09<17:34, 15.74s/it][A
+Iterating over training query 17a...:  26%|██▋       | 24/91 [09:09<17:34, 15.74s/it][A
+Iterating over training query 17a...:  27%|██▋       | 25/91 [11:28<58:13, 52.93s/it][A
+Iterating over training query 22a...:  27%|██▋       | 25/91 [11:28<58:13, 52.93s/it][A
+Iterating over training query 22a...:  29%|██▊       | 26/91 [11:34<42:02, 38.81s/it][A
+Iterating over training query 02d...:  29%|██▊       | 26/91 [11:34<42:02, 38.81s/it][A
+Iterating over training query 02d...:  30%|██▉       | 27/91 [11:43<31:41, 29.70s/it][A
+Iterating over training query 22c...:  30%|██▉       | 27/91 [11:43<31:41, 29.70s/it][A
+Iterating over training query 22c...:  31%|███       | 28/91 [12:11<30:47, 29.33s/it][A
+Iterating over training query 20b...:  31%|███       | 28/91 [12:11<30:47, 29.33s/it][A
+Iterating over training query 20b...:  32%|███▏      | 29/91 [12:32<27:51, 26.96s/it][A
+Iterating over training query 19c...:  32%|███▏      | 29/91 [12:32<27:51, 26.96s/it][A
+Iterating over training query 19c...:  33%|███▎      | 30/91 [12:43<22:22, 22.01s/it][A
+Iterating over training query 05a...:  33%|███▎      | 30/91 [12:43<22:22, 22.01s/it][A
+Iterating over training query 05a...:  34%|███▍      | 31/91 [12:46<16:25, 16.43s/it][A
+Iterating over training query 27c...:  34%|███▍      | 31/91 [12:46<16:25, 16.43s/it][A
+Iterating over training query 27c...:  35%|███▌      | 32/91 [12:49<12:05, 12.30s/it][A
+Iterating over training query 07c...:  35%|███▌      | 32/91 [12:49<12:05, 12.30s/it][A
+Iterating over training query 07c...:  36%|███▋      | 33/91 [13:33<21:05, 21.82s/it][A
+Iterating over training query 15b...:  36%|███▋      | 33/91 [13:33<21:05, 21.82s/it][A
+Iterating over training query 15b...:  37%|███▋      | 34/91 [13:34<14:47, 15.57s/it][A
+Iterating over training query 13a...:  37%|███▋      | 34/91 [13:34<14:47, 15.57s/it][A
+Iterating over training query 13a...:  38%|███▊      | 35/91 [13:57<16:33, 17.74s/it][A
+Iterating over training query 01d...:  38%|███▊      | 35/91 [13:57<16:33, 17.74s/it][A
+Iterating over training query 01d...:  40%|███▉      | 36/91 [13:59<11:58, 13.06s/it][A
+Iterating over training query 01b...:  40%|███▉      | 36/91 [13:59<11:58, 13.06s/it][A
+Iterating over training query 01b...:  41%|████      | 37/91 [14:01<08:48,  9.79s/it][A
+Iterating over training query 31b...:  41%|████      | 37/91 [14:01<08:48,  9.79s/it][A
+Iterating over training query 31b...:  42%|████▏     | 38/91 [14:04<06:54,  7.82s/it][A
+Iterating over training query 19a...:  42%|████▏     | 38/91 [14:04<06:54,  7.82s/it][A
+Iterating over training query 19a...:  43%|████▎     | 39/91 [14:10<06:17,  7.27s/it][A
+Iterating over training query 08d...:  43%|████▎     | 39/91 [14:10<06:17,  7.27s/it][A
+Iterating over training query 08d...:  44%|████▍     | 40/91 [14:47<13:34, 15.97s/it][A
+Iterating over training query 12b...:  44%|████▍     | 40/91 [14:47<13:34, 15.97s/it][A
+Iterating over training query 12b...:  45%|████▌     | 41/91 [14:49<09:52, 11.84s/it][A
+Iterating over training query 11b...:  45%|████▌     | 41/91 [14:49<09:52, 11.84s/it][A
+Iterating over training query 11b...:  46%|████▌     | 42/91 [14:50<07:01,  8.60s/it][A
+Iterating over training query 15d...:  46%|████▌     | 42/91 [14:50<07:01,  8.60s/it][A
+Iterating over training query 15d...:  47%|████▋     | 43/91 [15:01<07:24,  9.26s/it][A
+Iterating over training query 31c...:  47%|████▋     | 43/91 [15:01<07:24,  9.26s/it][A
+Iterating over training query 31c...:  48%|████▊     | 44/91 [15:07<06:28,  8.27s/it][A
+Iterating over training query 06f...:  48%|████▊     | 44/91 [15:07<06:28,  8.27s/it][A
+Iterating over training query 06f...:  49%|████▉     | 45/91 [16:01<16:53, 22.03s/it][A
+Iterating over training query 09b...:  49%|████▉     | 45/91 [16:01<16:53, 22.03s/it][A
+Iterating over training query 09b...:  51%|█████     | 46/91 [16:06<12:50, 17.12s/it][A
+Iterating over training query 30c...:  51%|█████     | 46/91 [16:06<12:50, 17.12s/it][A
+Iterating over training query 30c...:  52%|█████▏    | 47/91 [17:08<22:20, 30.46s/it][A
+Iterating over training query 06d...:  52%|█████▏    | 47/91 [17:08<22:20, 30.46s/it][A
+Iterating over training query 06d...:  53%|█████▎    | 48/91 [18:01<26:45, 37.35s/it][A
+Iterating over training query 21b...:  53%|█████▎    | 48/91 [18:01<26:45, 37.35s/it][A
+Iterating over training query 21b...:  54%|█████▍    | 49/91 [18:03<18:37, 26.62s/it][A
+Iterating over training query 20c...:  54%|█████▍    | 49/91 [18:03<18:37, 26.62s/it][A
+Iterating over training query 20c...:  55%|█████▍    | 50/91 [18:15<15:13, 22.29s/it][A
+Iterating over training query 19b...:  55%|█████▍    | 50/91 [18:15<15:13, 22.29s/it][A
+Iterating over training query 19b...:  56%|█████▌    | 51/91 [18:19<11:04, 16.62s/it][A
+Iterating over training query 26a...:  56%|█████▌    | 51/91 [18:19<11:04, 16.62s/it][A
+Iterating over training query 26a...:  57%|█████▋    | 52/91 [18:27<09:07, 14.05s/it][A
+Iterating over training query 22b...:  57%|█████▋    | 52/91 [18:27<09:07, 14.05s/it][A
+Iterating over training query 22b...:  58%|█████▊    | 53/91 [18:30<06:55, 10.93s/it][A
+Iterating over training query 03c...:  58%|█████▊    | 53/91 [18:30<06:55, 10.93s/it][A
+Iterating over training query 03c...:  59%|█████▉    | 54/91 [18:34<05:25,  8.80s/it][A
+Iterating over training query 14a...:  59%|█████▉    | 54/91 [18:34<05:25,  8.80s/it][A
+Iterating over training query 14a...:  60%|██████    | 55/91 [18:38<04:21,  7.26s/it][A
+Iterating over training query 04a...:  60%|██████    | 55/91 [18:38<04:21,  7.26s/it][A
+Iterating over training query 04a...:  62%|██████▏   | 56/91 [18:39<03:15,  5.60s/it][A
+Iterating over training query 18c...:  62%|██████▏   | 56/91 [18:39<03:15,  5.60s/it][A
+Iterating over training query 18c...:  63%|██████▎   | 57/91 [19:51<14:20, 25.31s/it][A
+Iterating over training query 03b...:  63%|██████▎   | 57/91 [19:51<14:20, 25.31s/it][A
+Iterating over training query 03b...:  64%|██████▎   | 58/91 [19:52<10:00, 18.20s/it][A
+Iterating over training query 09d...:  64%|██████▎   | 58/91 [19:52<10:00, 18.20s/it][A
+Iterating over training query 09d...:  65%|██████▍   | 59/91 [20:50<15:58, 29.96s/it][A
+Iterating over training query 05b...:  65%|██████▍   | 59/91 [20:50<15:58, 29.96s/it][A
+Iterating over training query 05b...:  66%|██████▌   | 60/91 [20:53<11:21, 21.99s/it][A
+Iterating over training query 12c...:  66%|██████▌   | 60/91 [20:53<11:21, 21.99s/it][A
+Iterating over training query 12c...:  67%|██████▋   | 61/91 [21:04<09:20, 18.68s/it][A
+Iterating over training query 13b...:  67%|██████▋   | 61/91 [21:04<09:20, 18.68s/it][A
+Iterating over training query 13b...:  68%|██████▊   | 62/91 [21:15<07:50, 16.21s/it][A
+Iterating over training query 11a...:  68%|██████▊   | 62/91 [21:15<07:50, 16.21s/it][A
+Iterating over training query 11a...:  69%|██████▉   | 63/91 [21:16<05:31, 11.85s/it][A
+Iterating over training query 16b...:  69%|██████▉   | 63/91 [21:16<05:31, 11.85s/it][A
+Iterating over training query 16b...:  70%|███████   | 64/91 [25:33<38:24, 85.35s/it][A
+Iterating over training query 25a...:  70%|███████   | 64/91 [25:33<38:24, 85.35s/it][A
+Iterating over training query 25a...:  71%|███████▏  | 65/91 [26:03<29:49, 68.84s/it][A
+Iterating over training query 29a...:  71%|███████▏  | 65/91 [26:03<29:49, 68.84s/it][A
+Iterating over training query 29a...:  73%|███████▎  | 66/91 [26:15<21:30, 51.61s/it][A
+Iterating over training query 30b...:  73%|███████▎  | 66/91 [26:15<21:30, 51.61s/it][A
+Iterating over training query 30b...:  74%|███████▎  | 67/91 [26:21<15:11, 37.98s/it][A
+Iterating over training query 33c...:  74%|███████▎  | 67/91 [26:21<15:11, 37.98s/it][A
+Iterating over training query 33c...:  75%|███████▍  | 68/91 [26:24<10:30, 27.42s/it][A
+Iterating over training query 12a...:  75%|███████▍  | 68/91 [26:24<10:30, 27.42s/it][A
+Iterating over training query 12a...:  76%|███████▌  | 69/91 [26:27<07:26, 20.31s/it][A
+Iterating over training query 25b...:  76%|███████▌  | 69/91 [26:27<07:26, 20.31s/it][A
+Iterating over training query 25b...:  77%|███████▋  | 70/91 [26:32<05:25, 15.49s/it][A
+Iterating over training query 14c...:  77%|███████▋  | 70/91 [26:32<05:25, 15.49s/it][A
+Iterating over training query 14c...:  78%|███████▊  | 71/91 [26:39<04:17, 12.89s/it][A
+Iterating over training query 02b...:  78%|███████▊  | 71/91 [26:39<04:17, 12.89s/it][A
+Iterating over training query 02b...:  79%|███████▉  | 72/91 [26:46<03:32, 11.19s/it][A
+Iterating over training query 24a...:  79%|███████▉  | 72/91 [26:46<03:32, 11.19s/it][A
+Iterating over training query 24a...:  80%|████████  | 73/91 [26:50<02:46,  9.26s/it][A
+Iterating over training query 15c...:  80%|████████  | 73/91 [26:50<02:46,  9.26s/it][A
+Iterating over training query 15c...:  81%|████████▏ | 74/91 [26:59<02:33,  9.04s/it][A
+Iterating over training query 29b...:  81%|████████▏ | 74/91 [26:59<02:33,  9.04s/it][A
+Iterating over training query 29b...:  82%|████████▏ | 75/91 [27:13<02:49, 10.58s/it][A
+Iterating over training query 08a...:  82%|████████▏ | 75/91 [27:13<02:49, 10.58s/it][A
+Iterating over training query 08a...:  84%|████████▎ | 76/91 [27:27<02:52, 11.53s/it][A
+Iterating over training query 10c...:  84%|████████▎ | 76/91 [27:27<02:52, 11.53s/it][A
+Iterating over training query 10c...:  85%|████████▍ | 77/91 [28:25<05:58, 25.62s/it][A
+Iterating over training query 17c...:  85%|████████▍ | 77/91 [28:25<05:58, 25.62s/it][A
+Iterating over training query 17c...:  86%|████████▌ | 78/91 [29:35<08:23, 38.72s/it][A
+Iterating over training query 28a...:  86%|████████▌ | 78/91 [29:35<08:23, 38.72s/it][A
+Iterating over training query 28a...:  87%|████████▋ | 79/91 [30:58<10:24, 52.03s/it][A
+Iterating over training query 10b...:  87%|████████▋ | 79/91 [30:58<10:24, 52.03s/it][A
+Iterating over training query 10b...:  88%|████████▊ | 80/91 [31:03<06:58, 38.02s/it][A
+Iterating over training query 07a...:  88%|████████▊ | 80/91 [31:03<06:58, 38.02s/it][A
+Iterating over training query 07a...:  89%|████████▉ | 81/91 [31:14<04:57, 29.78s/it][A
+Iterating over training query 11c...:  89%|████████▉ | 81/91 [31:14<04:57, 29.78s/it][A
+Iterating over training query 11c...:  90%|█████████ | 82/91 [31:17<03:15, 21.78s/it][A
+Iterating over training query 24b...:  90%|█████████ | 82/91 [31:17<03:15, 21.78s/it][A
+Iterating over training query 24b...:  91%|█████████ | 83/91 [31:19<02:06, 15.87s/it][A
+Iterating over training query 16a...:  91%|█████████ | 83/91 [31:19<02:06, 15.87s/it][A
+Iterating over training query 16a...:  92%|█████████▏| 84/91 [31:22<01:23, 11.93s/it][A
+Iterating over training query 26c...:  92%|█████████▏| 84/91 [31:22<01:23, 11.93s/it][A
+Iterating over training query 26c...:  93%|█████████▎| 85/91 [32:22<02:39, 26.51s/it][A
+Iterating over training query 31a...:  93%|█████████▎| 85/91 [32:22<02:39, 26.51s/it][A
+Iterating over training query 31a...:  95%|█████████▍| 86/91 [32:26<01:38, 19.80s/it][A
+Iterating over training query 22d...:  95%|█████████▍| 86/91 [32:26<01:38, 19.80s/it][A
+Iterating over training query 22d...:  96%|█████████▌| 87/91 [32:38<01:09, 17.28s/it][A
+Iterating over training query 21c...:  96%|█████████▌| 87/91 [32:38<01:09, 17.28s/it][A
+Iterating over training query 21c...:  97%|█████████▋| 88/91 [32:40<00:37, 12.66s/it][A
+Iterating over training query 32a...:  97%|█████████▋| 88/91 [32:40<00:37, 12.66s/it][A
+Iterating over training query 32a...:  98%|█████████▊| 89/91 [32:40<00:18,  9.10s/it][A
+Iterating over training query 02a...:  98%|█████████▊| 89/91 [32:40<00:18,  9.10s/it][A
+Iterating over training query 02a...:  99%|█████████▉| 90/91 [32:48<00:08,  8.59s/it][A
+Iterating over training query 10a...:  99%|█████████▉| 90/91 [32:48<00:08,  8.59s/it][A
+Iterating over training query 10a...: 100%|██████████| 91/91 [32:55<00:00,  8.07s/it][A
+                                                                                     [AIterating over epochs...:  18%|█▊        | 2/11 [1:17:58<5:41:13, 2274.79s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 07a...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 07a...:   1%|          | 1/91 [00:09<14:52,  9.91s/it][A
+Iterating over training query 22a...:   1%|          | 1/91 [00:09<14:52,  9.91s/it][A
+Iterating over training query 22a...:   2%|▏         | 2/91 [00:16<11:53,  8.02s/it][A
+Iterating over training query 19a...:   2%|▏         | 2/91 [00:16<11:53,  8.02s/it][A
+Iterating over training query 19a...:   3%|▎         | 3/91 [00:22<10:30,  7.16s/it][A
+Iterating over training query 17a...:   3%|▎         | 3/91 [00:22<10:30,  7.16s/it][A
+Iterating over training query 17a...:   4%|▍         | 4/91 [02:42<1:26:31, 59.67s/it][A
+Iterating over training query 07b...:   4%|▍         | 4/91 [02:42<1:26:31, 59.67s/it][A
+Iterating over training query 07b...:   5%|▌         | 5/91 [02:46<56:23, 39.35s/it]  [A
+Iterating over training query 20b...:   5%|▌         | 5/91 [02:46<56:23, 39.35s/it][A
+Iterating over training query 20b...:   7%|▋         | 6/91 [03:07<47:08, 33.28s/it][A
+Iterating over training query 25b...:   7%|▋         | 6/91 [03:07<47:08, 33.28s/it][A
+Iterating over training query 25b...:   8%|▊         | 7/91 [03:12<33:19, 23.81s/it][A
+Iterating over training query 23b...:   8%|▊         | 7/91 [03:12<33:19, 23.81s/it][A
+Iterating over training query 23b...:   9%|▉         | 8/91 [03:13<23:18, 16.85s/it][A
+Iterating over training query 14c...:   9%|▉         | 8/91 [03:13<23:18, 16.85s/it][A
+Iterating over training query 14c...:  10%|▉         | 9/91 [03:20<18:48, 13.76s/it][A
+Iterating over training query 19d...:  10%|▉         | 9/91 [03:20<18:48, 13.76s/it][A
+Iterating over training query 19d...:  11%|█         | 10/91 [05:33<1:08:01, 50.39s/it][A
+Iterating over training query 05b...:  11%|█         | 10/91 [05:33<1:08:01, 50.39s/it][A
+Iterating over training query 05b...:  12%|█▏        | 11/91 [05:36<48:02, 36.03s/it]  [A
+Iterating over training query 02b...:  12%|█▏        | 11/91 [05:36<48:02, 36.03s/it][A
+Iterating over training query 02b...:  13%|█▎        | 12/91 [05:43<35:52, 27.25s/it][A
+Iterating over training query 06b...:  13%|█▎        | 12/91 [05:43<35:52, 27.25s/it][A
+Iterating over training query 06b...:  14%|█▍        | 13/91 [05:47<25:53, 19.92s/it][A
+Iterating over training query 11c...:  14%|█▍        | 13/91 [05:47<25:53, 19.92s/it][A
+Iterating over training query 11c...:  15%|█▌        | 14/91 [05:50<19:03, 14.85s/it][A
+Iterating over training query 18a...:  15%|█▌        | 14/91 [05:50<19:03, 14.85s/it][A
+Iterating over training query 18a...:  16%|█▋        | 15/91 [06:39<32:05, 25.33s/it][A
+Iterating over training query 30c...:  16%|█▋        | 15/91 [06:39<32:05, 25.33s/it][A
+Iterating over training query 30c...:  18%|█▊        | 16/91 [07:41<45:15, 36.20s/it][A
+Iterating over training query 27b...:  18%|█▊        | 16/91 [07:41<45:15, 36.20s/it][A
+Iterating over training query 27b...:  19%|█▊        | 17/91 [07:43<31:55, 25.89s/it][A
+Iterating over training query 21c...:  19%|█▊        | 17/91 [07:43<31:55, 25.89s/it][A
+Iterating over training query 21c...:  20%|█▉        | 18/91 [07:44<22:41, 18.65s/it][A
+Iterating over training query 06f...:  20%|█▉        | 18/91 [07:44<22:41, 18.65s/it][A
+Iterating over training query 06f...:  21%|██        | 19/91 [08:39<35:15, 29.39s/it][A
+Iterating over training query 05a...:  21%|██        | 19/91 [08:39<35:15, 29.39s/it][A
+Iterating over training query 05a...:  22%|██▏       | 20/91 [08:43<25:38, 21.67s/it][A
+Iterating over training query 10b...:  22%|██▏       | 20/91 [08:43<25:38, 21.67s/it][A
+Iterating over training query 10b...:  23%|██▎       | 21/91 [08:48<19:34, 16.78s/it][A
+Iterating over training query 22d...:  23%|██▎       | 21/91 [08:48<19:34, 16.78s/it][A
+Iterating over training query 22d...:  24%|██▍       | 22/91 [08:59<17:23, 15.12s/it][A
+Iterating over training query 06d...:  24%|██▍       | 22/91 [08:59<17:23, 15.12s/it][A
+Iterating over training query 06d...:  25%|██▌       | 23/91 [09:53<30:12, 26.66s/it][A
+Iterating over training query 20c...:  25%|██▌       | 23/91 [09:53<30:12, 26.66s/it][A
+Iterating over training query 20c...:  26%|██▋       | 24/91 [10:05<24:58, 22.37s/it][A
+Iterating over training query 33b...:  26%|██▋       | 24/91 [10:05<24:58, 22.37s/it][A
+Iterating over training query 33b...:  27%|██▋       | 25/91 [10:08<18:12, 16.55s/it][A
+Iterating over training query 10a...:  27%|██▋       | 25/91 [10:08<18:12, 16.55s/it][A
+Iterating over training query 10a...:  29%|██▊       | 26/91 [10:15<14:46, 13.63s/it][A
+Iterating over training query 32a...:  29%|██▊       | 26/91 [10:15<14:46, 13.63s/it][A
+Iterating over training query 32a...:  30%|██▉       | 27/91 [10:16<10:29,  9.83s/it][A
+Iterating over training query 30b...:  30%|██▉       | 27/91 [10:16<10:29,  9.83s/it][A
+Iterating over training query 30b...:  31%|███       | 28/91 [10:22<09:13,  8.78s/it][A
+Iterating over training query 14a...:  31%|███       | 28/91 [10:22<09:13,  8.78s/it][A
+Iterating over training query 14a...:  32%|███▏      | 29/91 [10:26<07:33,  7.31s/it][A
+Iterating over training query 11a...:  32%|███▏      | 29/91 [10:26<07:33,  7.31s/it][A
+Iterating over training query 11a...:  33%|███▎      | 30/91 [10:28<05:44,  5.65s/it][A
+Iterating over training query 23c...:  33%|███▎      | 30/91 [10:28<05:44,  5.65s/it][A
+Iterating over training query 23c...:  34%|███▍      | 31/91 [10:36<06:27,  6.47s/it][A
+Iterating over training query 12a...:  34%|███▍      | 31/91 [10:36<06:27,  6.47s/it][A
+Iterating over training query 12a...:  35%|███▌      | 32/91 [10:40<05:35,  5.68s/it][A
+Iterating over training query 02d...:  35%|███▌      | 32/91 [10:40<05:35,  5.68s/it][A
+Iterating over training query 02d...:  36%|███▋      | 33/91 [10:49<06:22,  6.60s/it][A
+Iterating over training query 18c...:  36%|███▋      | 33/91 [10:49<06:22,  6.60s/it][A
+Iterating over training query 18c...:  37%|███▋      | 34/91 [11:46<20:44, 21.83s/it][A
+Iterating over training query 17d...:  37%|███▋      | 34/91 [11:46<20:44, 21.83s/it][A
+Iterating over training query 17d...:  38%|███▊      | 35/91 [12:58<34:23, 36.85s/it][A
+Iterating over training query 16b...:  38%|███▊      | 35/91 [12:58<34:23, 36.85s/it][A
+Iterating over training query 16b...:  40%|███▉      | 36/91 [17:16<1:34:39, 103.26s/it][A
+Iterating over training query 24a...:  40%|███▉      | 36/91 [17:16<1:34:39, 103.26s/it][A
+Iterating over training query 24a...:  41%|████      | 37/91 [17:21<1:06:26, 73.83s/it] [A
+Iterating over training query 19b...:  41%|████      | 37/91 [17:21<1:06:26, 73.83s/it][A
+Iterating over training query 19b...:  42%|████▏     | 38/91 [17:25<46:36, 52.76s/it]  [A
+Iterating over training query 14b...:  42%|████▏     | 38/91 [17:25<46:36, 52.76s/it][A
+Iterating over training query 14b...:  43%|████▎     | 39/91 [17:27<32:34, 37.59s/it][A
+Iterating over training query 10c...:  43%|████▎     | 39/91 [17:27<32:34, 37.59s/it][A
+Iterating over training query 10c...:  44%|████▍     | 40/91 [18:27<37:32, 44.17s/it][A
+Iterating over training query 25a...:  44%|████▍     | 40/91 [18:27<37:32, 44.17s/it][A
+Iterating over training query 25a...:  45%|████▌     | 41/91 [18:57<33:18, 39.97s/it][A
+Iterating over training query 08d...:  45%|████▌     | 41/91 [18:57<33:18, 39.97s/it][A
+Iterating over training query 08d...:  46%|████▌     | 42/91 [19:33<31:37, 38.72s/it][A
+Iterating over training query 22c...:  46%|████▌     | 42/91 [19:33<31:37, 38.72s/it][A
+Iterating over training query 22c...:  47%|████▋     | 43/91 [20:02<28:36, 35.75s/it][A
+Iterating over training query 31c...:  47%|████▋     | 43/91 [20:02<28:36, 35.75s/it][A
+Iterating over training query 31c...:  48%|████▊     | 44/91 [20:08<21:04, 26.91s/it][A
+Iterating over training query 26a...:  48%|████▊     | 44/91 [20:08<21:04, 26.91s/it][A
+Iterating over training query 26a...:  49%|████▉     | 45/91 [20:16<16:20, 21.33s/it][A
+Iterating over training query 29b...:  49%|████▉     | 45/91 [20:16<16:20, 21.33s/it][A
+Iterating over training query 29b...:  51%|█████     | 46/91 [20:31<14:25, 19.24s/it][A
+Iterating over training query 28a...:  51%|█████     | 46/91 [20:31<14:25, 19.24s/it][A
+Iterating over training query 28a...:  52%|█████▏    | 47/91 [21:53<28:07, 38.34s/it][A
+Iterating over training query 17f...:  52%|█████▏    | 47/91 [21:53<28:07, 38.34s/it][A
+Iterating over training query 17f...:  53%|█████▎    | 48/91 [23:44<43:06, 60.15s/it][A
+Iterating over training query 17c...:  53%|█████▎    | 48/91 [23:44<43:06, 60.15s/it][A
+Iterating over training query 17c...:  54%|█████▍    | 49/91 [24:54<44:04, 62.97s/it][A
+Iterating over training query 31b...:  54%|█████▍    | 49/91 [24:54<44:04, 62.97s/it][A
+Iterating over training query 31b...:  55%|█████▍    | 50/91 [24:58<30:53, 45.20s/it][A
+Iterating over training query 02a...:  55%|█████▍    | 50/91 [24:58<30:53, 45.20s/it][A
+Iterating over training query 02a...:  56%|█████▌    | 51/91 [25:05<22:36, 33.90s/it][A
+Iterating over training query 29a...:  56%|█████▌    | 51/91 [25:05<22:36, 33.90s/it][A
+Iterating over training query 29a...:  57%|█████▋    | 52/91 [25:21<18:31, 28.50s/it][A
+Iterating over training query 23a...:  57%|█████▋    | 52/91 [25:21<18:31, 28.50s/it][A
+Iterating over training query 23a...:  58%|█████▊    | 53/91 [25:28<13:51, 21.88s/it][A
+Iterating over training query 03c...:  58%|█████▊    | 53/91 [25:28<13:51, 21.88s/it][A
+Iterating over training query 03c...:  59%|█████▉    | 54/91 [25:32<10:12, 16.55s/it][A
+Iterating over training query 29c...:  59%|█████▉    | 54/91 [25:32<10:12, 16.55s/it][A
+Iterating over training query 29c...:  60%|██████    | 55/91 [25:43<08:58, 14.97s/it][A
+Iterating over training query 27a...:  60%|██████    | 55/91 [25:43<08:58, 14.97s/it][A
+Iterating over training query 27a...:  62%|██████▏   | 56/91 [25:45<06:29, 11.14s/it][A
+Iterating over training query 19c...:  62%|██████▏   | 56/91 [25:45<06:29, 11.14s/it][A
+Iterating over training query 19c...:  63%|██████▎   | 57/91 [25:55<06:02, 10.65s/it][A
+Iterating over training query 04a...:  63%|██████▎   | 57/91 [25:55<06:02, 10.65s/it][A
+Iterating over training query 04a...:  64%|██████▎   | 58/91 [25:57<04:26,  8.09s/it][A
+Iterating over training query 12b...:  64%|██████▎   | 58/91 [25:57<04:26,  8.09s/it][A
+Iterating over training query 12b...:  65%|██████▍   | 59/91 [25:59<03:26,  6.45s/it][A
+Iterating over training query 16d...:  65%|██████▍   | 59/91 [25:59<03:26,  6.45s/it][A
+Iterating over training query 16d...:  66%|██████▌   | 60/91 [26:17<05:05,  9.84s/it][A
+Iterating over training query 30a...:  66%|██████▌   | 60/91 [26:17<05:05,  9.84s/it][A
+Iterating over training query 30a...:  67%|██████▋   | 61/91 [26:33<05:49, 11.66s/it][A
+Iterating over training query 21b...:  67%|██████▋   | 61/91 [26:33<05:49, 11.66s/it][A
+Iterating over training query 21b...:  68%|██████▊   | 62/91 [26:35<04:13,  8.76s/it][A
+Iterating over training query 26b...:  68%|██████▊   | 62/91 [26:35<04:13,  8.76s/it][A
+Iterating over training query 26b...:  69%|██████▉   | 63/91 [26:38<03:16,  7.03s/it][A
+Iterating over training query 13a...:  69%|██████▉   | 63/91 [26:38<03:16,  7.03s/it][A
+Iterating over training query 13a...:  70%|███████   | 64/91 [27:02<05:29, 12.19s/it][A
+Iterating over training query 33c...:  70%|███████   | 64/91 [27:02<05:29, 12.19s/it][A
+Iterating over training query 33c...:  71%|███████▏  | 65/91 [27:06<04:06,  9.48s/it][A
+Iterating over training query 22b...:  71%|███████▏  | 65/91 [27:06<04:06,  9.48s/it][A
+Iterating over training query 22b...:  73%|███████▎  | 66/91 [27:09<03:15,  7.83s/it][A
+Iterating over training query 15b...:  73%|███████▎  | 66/91 [27:09<03:15,  7.83s/it][A
+Iterating over training query 15b...:  74%|███████▎  | 67/91 [27:11<02:22,  5.92s/it][A
+Iterating over training query 13b...:  74%|███████▎  | 67/91 [27:11<02:22,  5.92s/it][A
+Iterating over training query 13b...:  75%|███████▍  | 68/91 [27:22<02:49,  7.39s/it][A
+Iterating over training query 28c...:  75%|███████▍  | 68/91 [27:22<02:49,  7.39s/it][A
+Iterating over training query 28c...:  76%|███████▌  | 69/91 [27:52<05:11, 14.18s/it][A
+Iterating over training query 09b...:  76%|███████▌  | 69/91 [27:52<05:11, 14.18s/it][A
+Iterating over training query 09b...:  77%|███████▋  | 70/91 [27:58<04:06, 11.73s/it][A
+Iterating over training query 13d...:  77%|███████▋  | 70/91 [27:58<04:06, 11.73s/it][A
+Iterating over training query 13d...:  78%|███████▊  | 71/91 [28:34<06:18, 18.94s/it][A
+Iterating over training query 16a...:  78%|███████▊  | 71/91 [28:34<06:18, 18.94s/it][A
+Iterating over training query 16a...:  79%|███████▉  | 72/91 [28:36<04:28, 14.13s/it][A
+Iterating over training query 26c...:  79%|███████▉  | 72/91 [28:36<04:28, 14.13s/it][A
+Iterating over training query 26c...:  80%|████████  | 73/91 [29:38<08:32, 28.46s/it][A
+Iterating over training query 01b...:  80%|████████  | 73/91 [29:38<08:32, 28.46s/it][A
+Iterating over training query 01b...:  81%|████████▏ | 74/91 [29:41<05:51, 20.70s/it][A
+Iterating over training query 09a...:  81%|████████▏ | 74/91 [29:41<05:51, 20.70s/it][A
+Iterating over training query 09a...:  82%|████████▏ | 75/91 [29:47<04:21, 16.33s/it][A
+Iterating over training query 15c...:  82%|████████▏ | 75/91 [29:47<04:21, 16.33s/it][A
+Iterating over training query 15c...:  84%|████████▎ | 76/91 [29:56<03:30, 14.06s/it][A
+Iterating over training query 27c...:  84%|████████▎ | 76/91 [29:56<03:30, 14.06s/it][A
+Iterating over training query 27c...:  85%|████████▍ | 77/91 [29:59<02:30, 10.72s/it][A
+Iterating over training query 13c...:  85%|████████▍ | 77/91 [29:59<02:30, 10.72s/it][A
+Iterating over training query 13c...:  86%|████████▌ | 78/91 [30:09<02:18, 10.64s/it][A
+Iterating over training query 09d...:  86%|████████▌ | 78/91 [30:09<02:18, 10.64s/it][A
+Iterating over training query 09d...:  87%|████████▋ | 79/91 [31:08<05:01, 25.13s/it][A
+Iterating over training query 24b...:  87%|████████▋ | 79/91 [31:08<05:01, 25.13s/it][A
+Iterating over training query 24b...:  88%|████████▊ | 80/91 [31:10<03:21, 18.28s/it][A
+Iterating over training query 31a...:  88%|████████▊ | 80/91 [31:10<03:21, 18.28s/it][A
+Iterating over training query 31a...:  89%|████████▉ | 81/91 [31:15<02:20, 14.05s/it][A
+Iterating over training query 12c...:  89%|████████▉ | 81/91 [31:15<02:20, 14.05s/it][A
+Iterating over training query 12c...:  90%|█████████ | 82/91 [31:26<01:59, 13.25s/it][A
+Iterating over training query 08a...:  90%|█████████ | 82/91 [31:26<01:59, 13.25s/it][A
+Iterating over training query 08a...:  91%|█████████ | 83/91 [31:40<01:47, 13.49s/it][A
+Iterating over training query 11b...:  91%|█████████ | 83/91 [31:40<01:47, 13.49s/it][A
+Iterating over training query 11b...:  92%|█████████▏| 84/91 [31:42<01:09,  9.87s/it][A
+Iterating over training query 03a...:  92%|█████████▏| 84/91 [31:42<01:09,  9.87s/it][A
+Iterating over training query 03a...:  93%|█████████▎| 85/91 [31:44<00:46,  7.68s/it][A
+Iterating over training query 03b...:  93%|█████████▎| 85/91 [31:44<00:46,  7.68s/it][A
+Iterating over training query 03b...:  95%|█████████▍| 86/91 [31:46<00:29,  5.97s/it][A
+Iterating over training query 07c...:  95%|█████████▍| 86/91 [31:46<00:29,  5.97s/it][A
+Iterating over training query 07c...:  96%|█████████▌| 87/91 [32:31<01:10, 17.72s/it][A
+Iterating over training query 01d...:  96%|█████████▌| 87/91 [32:31<01:10, 17.72s/it][A
+Iterating over training query 01d...:  97%|█████████▋| 88/91 [32:34<00:39, 13.22s/it][A
+Iterating over training query 16c...:  97%|█████████▋| 88/91 [32:34<00:39, 13.22s/it][A
+Iterating over training query 16c...:  98%|█████████▊| 89/91 [32:56<00:31, 15.88s/it][A
+Iterating over training query 01a...:  98%|█████████▊| 89/91 [32:56<00:31, 15.88s/it][A
+Iterating over training query 01a...:  99%|█████████▉| 90/91 [32:59<00:11, 11.91s/it][A
+Iterating over training query 15d...:  99%|█████████▉| 90/91 [32:59<00:11, 11.91s/it][A
+Iterating over training query 15d...: 100%|██████████| 91/91 [33:10<00:00, 11.86s/it][A
+                                                                                     [AIterating over epochs...:  27%|██▋       | 3/11 [1:51:08<4:46:01, 2145.15s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 22b...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 22b...:   1%|          | 1/91 [00:04<06:13,  4.15s/it][A
+Iterating over training query 02d...:   1%|          | 1/91 [00:04<06:13,  4.15s/it][A
+Iterating over training query 02d...:   2%|▏         | 2/91 [00:12<10:14,  6.91s/it][A
+Iterating over training query 02b...:   2%|▏         | 2/91 [00:12<10:14,  6.91s/it][A
+Iterating over training query 02b...:   3%|▎         | 3/91 [00:20<10:31,  7.17s/it][A
+Iterating over training query 01a...:   3%|▎         | 3/91 [00:20<10:31,  7.17s/it][A
+Iterating over training query 01a...:   4%|▍         | 4/91 [00:23<07:49,  5.39s/it][A
+Iterating over training query 31b...:   4%|▍         | 4/91 [00:23<07:49,  5.39s/it][A
+Iterating over training query 31b...:   5%|▌         | 5/91 [00:26<06:43,  4.69s/it][A
+Iterating over training query 10a...:   5%|▌         | 5/91 [00:26<06:43,  4.69s/it][A
+Iterating over training query 10a...:   7%|▋         | 6/91 [00:33<07:48,  5.52s/it][A
+Iterating over training query 19d...:   7%|▋         | 6/91 [00:33<07:48,  5.52s/it][A
+Iterating over training query 19d...:   8%|▊         | 7/91 [02:47<1:06:13, 47.30s/it][A
+Iterating over training query 22d...:   8%|▊         | 7/91 [02:47<1:06:13, 47.30s/it][A
+Iterating over training query 22d...:   9%|▉         | 8/91 [02:58<49:41, 35.93s/it]  [A
+Iterating over training query 18c...:   9%|▉         | 8/91 [02:58<49:41, 35.93s/it][A
+Iterating over training query 18c...:  10%|▉         | 9/91 [03:56<58:27, 42.78s/it][A
+Iterating over training query 07b...:  10%|▉         | 9/91 [03:56<58:27, 42.78s/it][A
+Iterating over training query 07b...:  11%|█         | 10/91 [03:59<41:23, 30.66s/it][A
+Iterating over training query 28a...:  11%|█         | 10/91 [03:59<41:23, 30.66s/it][A
+Iterating over training query 28a...:  12%|█▏        | 11/91 [05:24<1:02:49, 47.12s/it][A
+Iterating over training query 20c...:  12%|█▏        | 11/91 [05:24<1:02:49, 47.12s/it][A
+Iterating over training query 20c...:  13%|█▎        | 12/91 [05:37<48:18, 36.69s/it]  [A
+Iterating over training query 17f...:  13%|█▎        | 12/91 [05:37<48:18, 36.69s/it][A
+Iterating over training query 17f...:  14%|█▍        | 13/91 [07:29<1:17:37, 59.72s/it][A
+Iterating over training query 27c...:  14%|█▍        | 13/91 [07:29<1:17:37, 59.72s/it][A
+Iterating over training query 27c...:  15%|█▌        | 14/91 [07:32<54:38, 42.58s/it]  [A
+Iterating over training query 15d...:  15%|█▌        | 14/91 [07:32<54:38, 42.58s/it][A
+Iterating over training query 15d...:  16%|█▋        | 15/91 [07:43<41:49, 33.03s/it][A
+Iterating over training query 33b...:  16%|█▋        | 15/91 [07:43<41:49, 33.03s/it][A
+Iterating over training query 33b...:  18%|█▊        | 16/91 [07:46<29:49, 23.85s/it][A
+Iterating over training query 01b...:  18%|█▊        | 16/91 [07:46<29:49, 23.85s/it][A
+Iterating over training query 01b...:  19%|█▊        | 17/91 [07:48<21:31, 17.45s/it][A
+Iterating over training query 25a...:  19%|█▊        | 17/91 [07:48<21:31, 17.45s/it][A
+Iterating over training query 25a...:  20%|█▉        | 18/91 [08:20<26:15, 21.58s/it][A
+Iterating over training query 26b...:  20%|█▉        | 18/91 [08:20<26:15, 21.58s/it][A
+Iterating over training query 26b...:  21%|██        | 19/91 [08:23<19:12, 16.01s/it][A
+Iterating over training query 13b...:  21%|██        | 19/91 [08:23<19:12, 16.01s/it][A
+Iterating over training query 13b...:  22%|██▏       | 20/91 [08:34<17:08, 14.49s/it][A
+Iterating over training query 14a...:  22%|██▏       | 20/91 [08:34<17:08, 14.49s/it][A
+Iterating over training query 14a...:  23%|██▎       | 21/91 [08:38<13:14, 11.34s/it][A
+Iterating over training query 03b...:  23%|██▎       | 21/91 [08:38<13:14, 11.34s/it][A
+Iterating over training query 03b...:  24%|██▍       | 22/91 [08:40<09:49,  8.54s/it][A
+Iterating over training query 11a...:  24%|██▍       | 22/91 [08:40<09:49,  8.54s/it][A
+Iterating over training query 11a...:  25%|██▌       | 23/91 [08:41<07:24,  6.54s/it][A
+Iterating over training query 09b...:  25%|██▌       | 23/91 [08:41<07:24,  6.54s/it][A
+Iterating over training query 09b...:  26%|██▋       | 24/91 [08:48<07:08,  6.40s/it][A
+Iterating over training query 26a...:  26%|██▋       | 24/91 [08:48<07:08,  6.40s/it][A
+Iterating over training query 26a...:  27%|██▋       | 25/91 [08:56<07:41,  6.99s/it][A
+Iterating over training query 10c...:  27%|██▋       | 25/91 [08:56<07:41,  6.99s/it][A
+Iterating over training query 10c...:  29%|██▊       | 26/91 [09:55<24:31, 22.64s/it][A
+Iterating over training query 25b...:  29%|██▊       | 26/91 [09:55<24:31, 22.64s/it][A
+Iterating over training query 25b...:  30%|██▉       | 27/91 [10:00<18:20, 17.20s/it][A
+Iterating over training query 10b...:  30%|██▉       | 27/91 [10:00<18:20, 17.20s/it][A
+Iterating over training query 10b...:  31%|███       | 28/91 [10:05<14:22, 13.68s/it][A
+Iterating over training query 12a...:  31%|███       | 28/91 [10:05<14:22, 13.68s/it][A
+Iterating over training query 12a...:  32%|███▏      | 29/91 [10:09<11:08, 10.79s/it][A
+Iterating over training query 11b...:  32%|███▏      | 29/91 [10:09<11:08, 10.79s/it][A
+Iterating over training query 11b...:  33%|███▎      | 30/91 [10:11<08:06,  7.98s/it][A
+Iterating over training query 28c...:  33%|███▎      | 30/91 [10:11<08:06,  7.98s/it][A
+Iterating over training query 28c...:  34%|███▍      | 31/91 [10:41<14:41, 14.69s/it][A
+Iterating over training query 27b...:  34%|███▍      | 31/91 [10:41<14:41, 14.69s/it][A
+Iterating over training query 27b...:  35%|███▌      | 32/91 [10:43<10:42, 10.89s/it][A
+Iterating over training query 14b...:  35%|███▌      | 32/91 [10:43<10:42, 10.89s/it][A
+Iterating over training query 14b...:  36%|███▋      | 33/91 [10:45<08:00,  8.28s/it][A
+Iterating over training query 12b...:  36%|███▋      | 33/91 [10:45<08:00,  8.28s/it][A
+Iterating over training query 12b...:  37%|███▋      | 34/91 [10:48<06:15,  6.59s/it][A
+Iterating over training query 19b...:  37%|███▋      | 34/91 [10:48<06:15,  6.59s/it][A
+Iterating over training query 19b...:  38%|███▊      | 35/91 [10:51<05:19,  5.70s/it][A
+Iterating over training query 24a...:  38%|███▊      | 35/91 [10:51<05:19,  5.70s/it][A
+Iterating over training query 24a...:  40%|███▉      | 36/91 [10:56<05:02,  5.49s/it][A
+Iterating over training query 07a...:  40%|███▉      | 36/91 [10:56<05:02,  5.49s/it][A
+Iterating over training query 07a...:  41%|████      | 37/91 [11:07<06:17,  6.98s/it][A
+Iterating over training query 05b...:  41%|████      | 37/91 [11:07<06:17,  6.98s/it][A
+Iterating over training query 05b...:  42%|████▏     | 38/91 [11:11<05:17,  5.99s/it][A
+Iterating over training query 27a...:  42%|████▏     | 38/91 [11:11<05:17,  5.99s/it][A
+Iterating over training query 27a...:  43%|████▎     | 39/91 [11:13<04:11,  4.84s/it][A
+Iterating over training query 29b...:  43%|████▎     | 39/91 [11:13<04:11,  4.84s/it][A
+Iterating over training query 29b...:  44%|████▍     | 40/91 [11:16<03:36,  4.25s/it][A
+Iterating over training query 23a...:  44%|████▍     | 40/91 [11:16<03:36,  4.25s/it][A
+Iterating over training query 23a...:  45%|████▌     | 41/91 [11:22<04:04,  4.88s/it][A
+Iterating over training query 20b...:  45%|████▌     | 41/91 [11:22<04:04,  4.88s/it][A
+Iterating over training query 20b...:  46%|████▌     | 42/91 [11:44<08:09, 10.00s/it][A
+Iterating over training query 17d...:  46%|████▌     | 42/91 [11:44<08:09, 10.00s/it][A
+Iterating over training query 17d...:  47%|████▋     | 43/91 [12:56<23:00, 28.75s/it][A
+Iterating over training query 30c...:  47%|████▋     | 43/91 [12:56<23:00, 28.75s/it][A
+Iterating over training query 30c...:  48%|████▊     | 44/91 [13:59<30:23, 38.80s/it][A
+Iterating over training query 07c...:  48%|████▊     | 44/91 [13:59<30:23, 38.80s/it][A
+Iterating over training query 07c...:  49%|████▉     | 45/91 [14:43<31:01, 40.47s/it][A
+Iterating over training query 29a...:  49%|████▉     | 45/91 [14:43<31:01, 40.47s/it][A
+Iterating over training query 29a...:  51%|█████     | 46/91 [14:55<23:57, 31.94s/it][A
+Iterating over training query 12c...:  51%|█████     | 46/91 [14:55<23:57, 31.94s/it][A
+Iterating over training query 12c...:  52%|█████▏    | 47/91 [15:07<18:56, 25.84s/it][A
+Iterating over training query 23b...:  52%|█████▏    | 47/91 [15:07<18:56, 25.84s/it][A
+Iterating over training query 23b...:  53%|█████▎    | 48/91 [15:09<13:26, 18.75s/it][A
+Iterating over training query 06d...:  53%|█████▎    | 48/91 [15:09<13:26, 18.75s/it][A
+Iterating over training query 06d...:  54%|█████▍    | 49/91 [16:03<20:36, 29.44s/it][A
+Iterating over training query 13d...:  54%|█████▍    | 49/91 [16:03<20:36, 29.44s/it][A
+Iterating over training query 13d...:  55%|█████▍    | 50/91 [16:39<21:31, 31.49s/it][A
+Iterating over training query 30a...:  55%|█████▍    | 50/91 [16:39<21:31, 31.49s/it][A
+Iterating over training query 30a...:  56%|█████▌    | 51/91 [16:55<17:51, 26.80s/it][A
+Iterating over training query 14c...:  56%|█████▌    | 51/91 [16:55<17:51, 26.80s/it][A
+Iterating over training query 14c...:  57%|█████▋    | 52/91 [17:02<13:35, 20.91s/it][A
+Iterating over training query 19c...:  57%|█████▋    | 52/91 [17:03<13:35, 20.91s/it][A
+Iterating over training query 19c...:  58%|█████▊    | 53/91 [17:12<11:04, 17.48s/it][A
+Iterating over training query 01d...:  58%|█████▊    | 53/91 [17:12<11:04, 17.48s/it][A
+Iterating over training query 01d...:  59%|█████▉    | 54/91 [17:15<08:01, 13.01s/it][A
+Iterating over training query 16d...:  59%|█████▉    | 54/91 [17:15<08:01, 13.01s/it][A
+Iterating over training query 16d...:  60%|██████    | 55/91 [17:32<08:40, 14.46s/it][A
+Iterating over training query 09a...:  60%|██████    | 55/91 [17:32<08:40, 14.46s/it][A
+Iterating over training query 09a...:  62%|██████▏   | 56/91 [17:39<06:58, 11.97s/it][A
+Iterating over training query 31c...:  62%|██████▏   | 56/91 [17:39<06:58, 11.97s/it][A
+Iterating over training query 31c...:  63%|██████▎   | 57/91 [17:45<05:48, 10.25s/it][A
+Iterating over training query 18a...:  63%|██████▎   | 57/91 [17:45<05:48, 10.25s/it][A
+Iterating over training query 18a...:  64%|██████▎   | 58/91 [18:35<12:10, 22.13s/it][A
+Iterating over training query 22a...:  64%|██████▎   | 58/91 [18:35<12:10, 22.13s/it][A
+Iterating over training query 22a...:  65%|██████▍   | 59/91 [18:41<09:15, 17.36s/it][A
+Iterating over training query 06b...:  65%|██████▍   | 59/91 [18:41<09:15, 17.36s/it][A
+Iterating over training query 06b...:  66%|██████▌   | 60/91 [18:44<06:47, 13.13s/it][A
+Iterating over training query 23c...:  66%|██████▌   | 60/91 [18:44<06:47, 13.13s/it][A
+Iterating over training query 23c...:  67%|██████▋   | 61/91 [18:52<05:48, 11.62s/it][A
+Iterating over training query 32a...:  67%|██████▋   | 61/91 [18:52<05:48, 11.62s/it][A
+Iterating over training query 32a...:  68%|██████▊   | 62/91 [18:53<04:04,  8.42s/it][A
+Iterating over training query 15c...:  68%|██████▊   | 62/91 [18:53<04:04,  8.42s/it][A
+Iterating over training query 15c...:  69%|██████▉   | 63/91 [19:02<03:58,  8.52s/it][A
+Iterating over training query 11c...:  69%|██████▉   | 63/91 [19:02<03:58,  8.52s/it][A
+Iterating over training query 11c...:  70%|███████   | 64/91 [19:05<03:07,  6.94s/it][A
+Iterating over training query 02a...:  70%|███████   | 64/91 [19:05<03:07,  6.94s/it][A
+Iterating over training query 02a...:  71%|███████▏  | 65/91 [19:13<03:05,  7.14s/it][A
+Iterating over training query 16b...:  71%|███████▏  | 65/91 [19:13<03:05,  7.14s/it][A
+Iterating over training query 16b...:  73%|███████▎  | 66/91 [23:29<34:07, 81.91s/it][A
+Iterating over training query 26c...:  73%|███████▎  | 66/91 [23:29<34:07, 81.91s/it][A
+Iterating over training query 26c...:  74%|███████▎  | 67/91 [24:29<30:10, 75.43s/it][A
+Iterating over training query 03a...:  74%|███████▎  | 67/91 [24:29<30:10, 75.43s/it][A
+Iterating over training query 03a...:  75%|███████▍  | 68/91 [24:32<20:32, 53.58s/it][A
+Iterating over training query 09d...:  75%|███████▍  | 68/91 [24:32<20:32, 53.58s/it][A
+Iterating over training query 09d...:  76%|███████▌  | 69/91 [25:31<20:13, 55.17s/it][A
+Iterating over training query 31a...:  76%|███████▌  | 69/91 [25:31<20:13, 55.17s/it][A
+Iterating over training query 31a...:  77%|███████▋  | 70/91 [25:35<13:57, 39.86s/it][A
+Iterating over training query 21c...:  77%|███████▋  | 70/91 [25:35<13:57, 39.86s/it][A
+Iterating over training query 21c...:  78%|███████▊  | 71/91 [25:37<09:30, 28.52s/it][A
+Iterating over training query 17c...:  78%|███████▊  | 71/91 [25:37<09:30, 28.52s/it][A
+Iterating over training query 17c...:  79%|███████▉  | 72/91 [26:46<12:53, 40.69s/it][A
+Iterating over training query 24b...:  79%|███████▉  | 72/91 [26:46<12:53, 40.69s/it][A
+Iterating over training query 24b...:  80%|████████  | 73/91 [26:49<08:48, 29.34s/it][A
+Iterating over training query 16c...:  80%|████████  | 73/91 [26:49<08:48, 29.34s/it][A
+Iterating over training query 16c...:  81%|████████▏ | 74/91 [27:11<07:41, 27.16s/it][A
+Iterating over training query 30b...:  81%|████████▏ | 74/91 [27:11<07:41, 27.16s/it][A
+Iterating over training query 30b...:  82%|████████▏ | 75/91 [27:18<05:35, 20.98s/it][A
+Iterating over training query 21b...:  82%|████████▏ | 75/91 [27:18<05:35, 20.98s/it][A
+Iterating over training query 21b...:  84%|████████▎ | 76/91 [27:20<03:48, 15.24s/it][A
+Iterating over training query 08d...:  84%|████████▎ | 76/91 [27:20<03:48, 15.24s/it][A
+Iterating over training query 08d...:  85%|████████▍ | 77/91 [27:57<05:07, 21.98s/it][A
+Iterating over training query 17a...:  85%|████████▍ | 77/91 [27:57<05:07, 21.98s/it][A
+Iterating over training query 17a...:  86%|████████▌ | 78/91 [30:17<12:25, 57.31s/it][A
+Iterating over training query 05a...:  86%|████████▌ | 78/91 [30:17<12:25, 57.31s/it][A
+Iterating over training query 05a...:  87%|████████▋ | 79/91 [30:21<08:15, 41.27s/it][A
+Iterating over training query 22c...:  87%|████████▋ | 79/91 [30:21<08:15, 41.27s/it][A
+Iterating over training query 22c...:  88%|████████▊ | 80/91 [30:50<06:53, 37.55s/it][A
+Iterating over training query 16a...:  88%|████████▊ | 80/91 [30:50<06:53, 37.55s/it][A
+Iterating over training query 16a...:  89%|████████▉ | 81/91 [30:53<04:31, 27.14s/it][A
+Iterating over training query 13a...:  89%|████████▉ | 81/91 [30:53<04:31, 27.14s/it][A
+Iterating over training query 13a...:  90%|█████████ | 82/91 [31:17<03:57, 26.34s/it][A
+Iterating over training query 15b...:  90%|█████████ | 82/91 [31:17<03:57, 26.34s/it][A
+Iterating over training query 15b...:  91%|█████████ | 83/91 [31:18<02:30, 18.87s/it][A
+Iterating over training query 33c...:  91%|█████████ | 83/91 [31:18<02:30, 18.87s/it][A
+Iterating over training query 33c...:  92%|█████████▏| 84/91 [31:22<01:38, 14.11s/it][A
+Iterating over training query 29c...:  92%|█████████▏| 84/91 [31:22<01:38, 14.11s/it][A
+Iterating over training query 29c...:  93%|█████████▎| 85/91 [31:28<01:11, 11.96s/it][A
+Iterating over training query 04a...:  93%|█████████▎| 85/91 [31:28<01:11, 11.96s/it][A
+Iterating over training query 04a...:  95%|█████████▍| 86/91 [31:31<00:45,  9.01s/it][A
+Iterating over training query 19a...:  95%|█████████▍| 86/91 [31:31<00:45,  9.01s/it][A
+Iterating over training query 19a...:  96%|█████████▌| 87/91 [31:37<00:33,  8.26s/it][A
+Iterating over training query 13c...:  96%|█████████▌| 87/91 [31:37<00:33,  8.26s/it][A
+Iterating over training query 13c...:  97%|█████████▋| 88/91 [31:47<00:26,  8.89s/it][A
+Iterating over training query 06f...:  97%|█████████▋| 88/91 [31:47<00:26,  8.89s/it][A
+Iterating over training query 06f...:  98%|█████████▊| 89/91 [32:42<00:45, 22.64s/it][A
+Iterating over training query 08a...:  98%|█████████▊| 89/91 [32:42<00:45, 22.64s/it][A
+Iterating over training query 08a...:  99%|█████████▉| 90/91 [32:56<00:20, 20.05s/it][A
+Iterating over training query 03c...:  99%|█████████▉| 90/91 [32:56<00:20, 20.05s/it][A
+Iterating over training query 03c...: 100%|██████████| 91/91 [33:00<00:00, 15.33s/it][A
+                                                                                     [AIterating over epochs...:  36%|███▋      | 4/11 [2:24:09<4:02:42, 2080.34s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 14b...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 14b...:   1%|          | 1/91 [00:02<03:51,  2.58s/it][A
+Iterating over training query 20b...:   1%|          | 1/91 [00:02<03:51,  2.58s/it][A
+Iterating over training query 20b...:   2%|▏         | 2/91 [00:24<20:33, 13.86s/it][A
+Iterating over training query 27b...:   2%|▏         | 2/91 [00:24<20:33, 13.86s/it][A
+Iterating over training query 27b...:   3%|▎         | 3/91 [00:26<12:24,  8.46s/it][A
+Iterating over training query 33c...:   3%|▎         | 3/91 [00:26<12:24,  8.46s/it][A
+Iterating over training query 33c...:   4%|▍         | 4/91 [00:29<09:09,  6.32s/it][A
+Iterating over training query 26b...:   4%|▍         | 4/91 [00:29<09:09,  6.32s/it][A
+Iterating over training query 26b...:   5%|▌         | 5/91 [00:32<07:17,  5.08s/it][A
+Iterating over training query 19b...:   5%|▌         | 5/91 [00:32<07:17,  5.08s/it][A
+Iterating over training query 19b...:   7%|▋         | 6/91 [00:35<06:28,  4.58s/it][A
+Iterating over training query 22d...:   7%|▋         | 6/91 [00:35<06:28,  4.58s/it][A
+Iterating over training query 22d...:   8%|▊         | 7/91 [00:47<09:48,  7.00s/it][A
+Iterating over training query 22c...:   8%|▊         | 7/91 [00:47<09:48,  7.00s/it][A
+Iterating over training query 22c...:   9%|▉         | 8/91 [01:16<19:18, 13.96s/it][A
+Iterating over training query 28a...:   9%|▉         | 8/91 [01:16<19:18, 13.96s/it][A
+Iterating over training query 28a...:  10%|▉         | 9/91 [02:40<48:51, 35.75s/it][A
+Iterating over training query 29a...:  10%|▉         | 9/91 [02:40<48:51, 35.75s/it][A
+Iterating over training query 29a...:  11%|█         | 10/91 [02:48<36:48, 27.27s/it][A
+Iterating over training query 07b...:  11%|█         | 10/91 [02:48<36:48, 27.27s/it][A
+Iterating over training query 07b...:  12%|█▏        | 11/91 [02:52<26:45, 20.06s/it][A
+Iterating over training query 18c...:  12%|█▏        | 11/91 [02:52<26:45, 20.06s/it][A
+Iterating over training query 18c...:  13%|█▎        | 12/91 [03:52<42:19, 32.14s/it][A
+Iterating over training query 16a...:  13%|█▎        | 12/91 [03:52<42:19, 32.14s/it][A
+Iterating over training query 16a...:  14%|█▍        | 13/91 [03:55<30:18, 23.31s/it][A
+Iterating over training query 22b...:  14%|█▍        | 13/91 [03:55<30:18, 23.31s/it][A
+Iterating over training query 22b...:  15%|█▌        | 14/91 [03:59<22:32, 17.57s/it][A
+Iterating over training query 25a...:  15%|█▌        | 14/91 [03:59<22:32, 17.57s/it][A
+Iterating over training query 25a...:  16%|█▋        | 15/91 [04:29<27:10, 21.46s/it][A
+Iterating over training query 33b...:  16%|█▋        | 15/91 [04:29<27:10, 21.46s/it][A
+Iterating over training query 33b...:  18%|█▊        | 16/91 [04:32<19:50, 15.87s/it][A
+Iterating over training query 05a...:  18%|█▊        | 16/91 [04:32<19:50, 15.87s/it][A
+Iterating over training query 05a...:  19%|█▊        | 17/91 [04:36<15:07, 12.27s/it][A
+Iterating over training query 14c...:  19%|█▊        | 17/91 [04:36<15:07, 12.27s/it][A
+Iterating over training query 14c...:  20%|█▉        | 18/91 [04:44<13:11, 10.84s/it][A
+Iterating over training query 12b...:  20%|█▉        | 18/91 [04:44<13:11, 10.84s/it][A
+Iterating over training query 12b...:  21%|██        | 19/91 [04:46<10:01,  8.36s/it][A
+Iterating over training query 06f...:  21%|██        | 19/91 [04:46<10:01,  8.36s/it][A
+Iterating over training query 06f...:  22%|██▏       | 20/91 [05:44<27:15, 23.03s/it][A
+Iterating over training query 30b...:  22%|██▏       | 20/91 [05:44<27:15, 23.03s/it][A
+Iterating over training query 30b...:  23%|██▎       | 21/91 [05:50<21:05, 18.07s/it][A
+Iterating over training query 18a...:  23%|██▎       | 21/91 [05:50<21:05, 18.07s/it][A
+Iterating over training query 18a...:  24%|██▍       | 22/91 [06:46<33:44, 29.34s/it][A
+Iterating over training query 15c...:  24%|██▍       | 22/91 [06:46<33:44, 29.34s/it][A
+Iterating over training query 15c...:  25%|██▌       | 23/91 [06:55<26:17, 23.20s/it][A
+Iterating over training query 05b...:  25%|██▌       | 23/91 [06:55<26:17, 23.20s/it][A
+Iterating over training query 05b...:  26%|██▋       | 24/91 [06:58<19:24, 17.38s/it][A
+Iterating over training query 10c...:  26%|██▋       | 24/91 [06:58<19:24, 17.38s/it][A
+Iterating over training query 10c...:  27%|██▋       | 25/91 [08:00<33:46, 30.70s/it][A
+Iterating over training query 27a...:  27%|██▋       | 25/91 [08:00<33:46, 30.70s/it][A
+Iterating over training query 27a...:  29%|██▊       | 26/91 [08:03<24:03, 22.20s/it][A
+Iterating over training query 20c...:  29%|██▊       | 26/91 [08:03<24:03, 22.20s/it][A
+Iterating over training query 20c...:  30%|██▉       | 27/91 [08:16<20:45, 19.47s/it][A
+Iterating over training query 08d...:  30%|██▉       | 27/91 [08:16<20:45, 19.47s/it][A
+Iterating over training query 08d...:  31%|███       | 28/91 [08:53<26:13, 24.97s/it][A
+Iterating over training query 01a...:  31%|███       | 28/91 [08:53<26:13, 24.97s/it][A
+Iterating over training query 01a...:  32%|███▏      | 29/91 [08:56<18:52, 18.27s/it][A
+Iterating over training query 11a...:  32%|███▏      | 29/91 [08:56<18:52, 18.27s/it][A
+Iterating over training query 11a...:  33%|███▎      | 30/91 [08:58<13:38, 13.42s/it][A
+Iterating over training query 14a...:  33%|███▎      | 30/91 [08:58<13:38, 13.42s/it][A
+Iterating over training query 14a...:  34%|███▍      | 31/91 [09:02<10:35, 10.59s/it][A
+Iterating over training query 02a...:  34%|███▍      | 31/91 [09:02<10:35, 10.59s/it][A
+Iterating over training query 02a...:  35%|███▌      | 32/91 [09:10<09:36,  9.78s/it][A
+Iterating over training query 12c...:  35%|███▌      | 32/91 [09:10<09:36,  9.78s/it][A
+Iterating over training query 12c...:  36%|███▋      | 33/91 [09:22<10:04, 10.42s/it][A
+Iterating over training query 04a...:  36%|███▋      | 33/91 [09:22<10:04, 10.42s/it][A
+Iterating over training query 04a...:  37%|███▋      | 34/91 [09:24<07:34,  7.97s/it][A
+Iterating over training query 10a...:  37%|███▋      | 34/91 [09:24<07:34,  7.97s/it][A
+Iterating over training query 10a...:  38%|███▊      | 35/91 [09:32<07:16,  7.79s/it][A
+Iterating over training query 21b...:  38%|███▊      | 35/91 [09:32<07:16,  7.79s/it][A
+Iterating over training query 21b...:  40%|███▉      | 36/91 [09:34<05:34,  6.09s/it][A
+Iterating over training query 03b...:  40%|███▉      | 36/91 [09:34<05:34,  6.09s/it][A
+Iterating over training query 03b...:  41%|████      | 37/91 [09:36<04:23,  4.88s/it][A
+Iterating over training query 03c...:  41%|████      | 37/91 [09:36<04:23,  4.88s/it][A
+Iterating over training query 03c...:  42%|████▏     | 38/91 [09:40<04:09,  4.71s/it][A
+Iterating over training query 19a...:  42%|████▏     | 38/91 [09:40<04:09,  4.71s/it][A
+Iterating over training query 19a...:  43%|████▎     | 39/91 [09:47<04:33,  5.26s/it][A
+Iterating over training query 09b...:  43%|████▎     | 39/91 [09:47<04:33,  5.26s/it][A
+Iterating over training query 09b...:  44%|████▍     | 40/91 [09:53<04:45,  5.61s/it][A
+Iterating over training query 02d...:  44%|████▍     | 40/91 [09:53<04:45,  5.61s/it][A
+Iterating over training query 02d...:  45%|████▌     | 41/91 [10:02<05:33,  6.66s/it][A
+Iterating over training query 31b...:  45%|████▌     | 41/91 [10:02<05:33,  6.66s/it][A
+Iterating over training query 31b...:  46%|████▌     | 42/91 [10:06<04:40,  5.72s/it][A
+Iterating over training query 26a...:  46%|████▌     | 42/91 [10:06<04:40,  5.72s/it][A
+Iterating over training query 26a...:  47%|████▋     | 43/91 [10:15<05:19,  6.66s/it][A
+Iterating over training query 07a...:  47%|████▋     | 43/91 [10:15<05:19,  6.66s/it][A
+Iterating over training query 07a...:  48%|████▊     | 44/91 [10:25<06:13,  7.94s/it][A
+Iterating over training query 24b...:  48%|████▊     | 44/91 [10:25<06:13,  7.94s/it][A
+Iterating over training query 24b...:  49%|████▉     | 45/91 [10:28<04:47,  6.25s/it][A
+Iterating over training query 30c...:  49%|████▉     | 45/91 [10:28<04:47,  6.25s/it][A
+Iterating over training query 30c...:  51%|█████     | 46/91 [11:32<17:37, 23.51s/it][A
+Iterating over training query 16d...:  51%|█████     | 46/91 [11:32<17:37, 23.51s/it][A
+Iterating over training query 16d...:  52%|█████▏    | 47/91 [11:50<16:07, 21.98s/it][A
+Iterating over training query 01d...:  52%|█████▏    | 47/91 [11:50<16:07, 21.98s/it][A
+Iterating over training query 01d...:  53%|█████▎    | 48/91 [11:53<11:36, 16.20s/it][A
+Iterating over training query 13b...:  53%|█████▎    | 48/91 [11:53<11:36, 16.20s/it][A
+Iterating over training query 13b...:  54%|█████▍    | 49/91 [12:04<10:20, 14.78s/it][A
+Iterating over training query 03a...:  54%|█████▍    | 49/91 [12:04<10:20, 14.78s/it][A
+Iterating over training query 03a...:  55%|█████▍    | 50/91 [12:07<07:39, 11.22s/it][A
+Iterating over training query 21c...:  55%|█████▍    | 50/91 [12:07<07:39, 11.22s/it][A
+Iterating over training query 21c...:  56%|█████▌    | 51/91 [12:09<05:38,  8.46s/it][A
+Iterating over training query 25b...:  56%|█████▌    | 51/91 [12:09<05:38,  8.46s/it][A
+Iterating over training query 25b...:  57%|█████▋    | 52/91 [12:14<04:45,  7.31s/it][A
+Iterating over training query 28c...:  57%|█████▋    | 52/91 [12:14<04:45,  7.31s/it][A
+Iterating over training query 28c...:  58%|█████▊    | 53/91 [12:45<09:06, 14.39s/it][A
+Iterating over training query 27c...:  58%|█████▊    | 53/91 [12:45<09:06, 14.39s/it][A
+Iterating over training query 27c...:  59%|█████▉    | 54/91 [12:47<06:44, 10.93s/it][A
+Iterating over training query 24a...:  59%|█████▉    | 54/91 [12:47<06:44, 10.93s/it][A
+Iterating over training query 24a...:  60%|██████    | 55/91 [12:53<05:33,  9.27s/it][A
+Iterating over training query 11c...:  60%|██████    | 55/91 [12:53<05:33,  9.27s/it][A
+Iterating over training query 11c...:  62%|██████▏   | 56/91 [12:56<04:20,  7.44s/it][A
+Iterating over training query 09d...:  62%|██████▏   | 56/91 [12:56<04:20,  7.44s/it][A
+Iterating over training query 09d...:  63%|██████▎   | 57/91 [13:55<13:02, 23.03s/it][A
+Iterating over training query 17a...:  63%|██████▎   | 57/91 [13:55<13:02, 23.03s/it][A
+Iterating over training query 17a...:  64%|██████▎   | 58/91 [16:20<32:40, 59.41s/it][A
+Iterating over training query 17d...:  64%|██████▎   | 58/91 [16:20<32:40, 59.41s/it][A
+Iterating over training query 17d...:  65%|██████▍   | 59/91 [17:36<34:19, 64.35s/it][A
+Iterating over training query 13c...:  65%|██████▍   | 59/91 [17:36<34:19, 64.35s/it][A
+Iterating over training query 13c...:  66%|██████▌   | 60/91 [17:47<24:58, 48.33s/it][A
+Iterating over training query 19d...:  66%|██████▌   | 60/91 [17:47<24:58, 48.33s/it][A
+Iterating over training query 19d...:  67%|██████▋   | 61/91 [20:03<37:25, 74.85s/it][A
+Iterating over training query 23a...:  67%|██████▋   | 61/91 [20:03<37:25, 74.85s/it][A
+Iterating over training query 23a...:  68%|██████▊   | 62/91 [20:10<26:17, 54.41s/it][A
+Iterating over training query 10b...:  68%|██████▊   | 62/91 [20:10<26:17, 54.41s/it][A
+Iterating over training query 10b...:  69%|██████▉   | 63/91 [20:16<18:34, 39.81s/it][A
+Iterating over training query 06b...:  69%|██████▉   | 63/91 [20:16<18:34, 39.81s/it][A
+Iterating over training query 06b...:  70%|███████   | 64/91 [20:19<13:00, 28.91s/it][A
+Iterating over training query 01b...:  70%|███████   | 64/91 [20:19<13:00, 28.91s/it][A
+Iterating over training query 01b...:  71%|███████▏  | 65/91 [20:22<09:07, 21.04s/it][A
+Iterating over training query 15d...:  71%|███████▏  | 65/91 [20:22<09:07, 21.04s/it][A
+Iterating over training query 15d...:  73%|███████▎  | 66/91 [20:33<07:34, 18.19s/it][A
+Iterating over training query 26c...:  73%|███████▎  | 66/91 [20:33<07:34, 18.19s/it][A
+Iterating over training query 26c...:  74%|███████▎  | 67/91 [21:36<12:36, 31.51s/it][A
+Iterating over training query 13d...:  74%|███████▎  | 67/91 [21:36<12:36, 31.51s/it][A
+Iterating over training query 13d...:  75%|███████▍  | 68/91 [22:14<12:49, 33.45s/it][A
+Iterating over training query 29b...:  75%|███████▍  | 68/91 [22:14<12:49, 33.45s/it][A
+Iterating over training query 29b...:  76%|███████▌  | 69/91 [22:21<09:24, 25.66s/it][A
+Iterating over training query 30a...:  76%|███████▌  | 69/91 [22:21<09:24, 25.66s/it][A
+Iterating over training query 30a...:  77%|███████▋  | 70/91 [22:39<08:06, 23.16s/it][A
+Iterating over training query 19c...:  77%|███████▋  | 70/91 [22:39<08:06, 23.16s/it][A
+Iterating over training query 19c...:  78%|███████▊  | 71/91 [22:49<06:23, 19.16s/it][A
+Iterating over training query 06d...:  78%|███████▊  | 71/91 [22:49<06:23, 19.16s/it][A
+Iterating over training query 06d...:  79%|███████▉  | 72/91 [23:46<09:42, 30.66s/it][A
+Iterating over training query 31c...:  79%|███████▉  | 72/91 [23:46<09:42, 30.66s/it][A
+Iterating over training query 31c...:  80%|████████  | 73/91 [23:53<07:02, 23.46s/it][A
+Iterating over training query 32a...:  80%|████████  | 73/91 [23:53<07:02, 23.46s/it][A
+Iterating over training query 32a...:  81%|████████▏ | 74/91 [23:54<04:44, 16.74s/it][A
+Iterating over training query 15b...:  81%|████████▏ | 74/91 [23:54<04:44, 16.74s/it][A
+Iterating over training query 15b...:  82%|████████▏ | 75/91 [23:55<03:14, 12.18s/it][A
+Iterating over training query 07c...:  82%|████████▏ | 75/91 [23:55<03:14, 12.18s/it][A
+Iterating over training query 07c...:  84%|████████▎ | 76/91 [24:41<05:32, 22.14s/it][A
+Iterating over training query 12a...:  84%|████████▎ | 76/91 [24:41<05:32, 22.14s/it][A
+Iterating over training query 12a...:  85%|████████▍ | 77/91 [24:45<03:55, 16.80s/it][A
+Iterating over training query 31a...:  85%|████████▍ | 77/91 [24:45<03:55, 16.80s/it][A
+Iterating over training query 31a...:  86%|████████▌ | 78/91 [24:50<02:50, 13.09s/it][A
+Iterating over training query 09a...:  86%|████████▌ | 78/91 [24:50<02:50, 13.09s/it][A
+Iterating over training query 09a...:  87%|████████▋ | 79/91 [24:56<02:12, 11.06s/it][A
+Iterating over training query 29c...:  87%|████████▋ | 79/91 [24:56<02:12, 11.06s/it][A
+Iterating over training query 29c...:  88%|████████▊ | 80/91 [25:08<02:03, 11.24s/it][A
+Iterating over training query 16c...:  88%|████████▊ | 80/91 [25:08<02:03, 11.24s/it][A
+Iterating over training query 16c...:  89%|████████▉ | 81/91 [25:31<02:27, 14.78s/it][A
+Iterating over training query 16b...:  89%|████████▉ | 81/91 [25:31<02:27, 14.78s/it][A
+Iterating over training query 16b...:  90%|█████████ | 82/91 [29:54<13:25, 89.48s/it][A
+Iterating over training query 08a...:  90%|█████████ | 82/91 [29:54<13:25, 89.48s/it][A
+Iterating over training query 08a...:  91%|█████████ | 83/91 [30:09<08:57, 67.14s/it][A
+Iterating over training query 22a...:  91%|█████████ | 83/91 [30:09<08:57, 67.14s/it][A
+Iterating over training query 22a...:  92%|█████████▏| 84/91 [30:16<05:42, 49.00s/it][A
+Iterating over training query 17c...:  92%|█████████▏| 84/91 [30:16<05:42, 49.00s/it][A
+Iterating over training query 17c...:  93%|█████████▎| 85/91 [31:29<05:36, 56.10s/it][A
+Iterating over training query 17f...:  93%|█████████▎| 85/91 [31:29<05:36, 56.10s/it][A
+Iterating over training query 17f...:  95%|█████████▍| 86/91 [33:24<06:09, 73.86s/it][A
+Iterating over training query 11b...:  95%|█████████▍| 86/91 [33:24<06:09, 73.86s/it][A
+Iterating over training query 11b...:  96%|█████████▌| 87/91 [33:26<03:28, 52.17s/it][A
+Iterating over training query 02b...:  96%|█████████▌| 87/91 [33:26<03:28, 52.17s/it][A
+Iterating over training query 02b...:  97%|█████████▋| 88/91 [33:33<01:56, 38.88s/it][A
+Iterating over training query 13a...:  97%|█████████▋| 88/91 [33:33<01:56, 38.88s/it][A
+Iterating over training query 13a...:  98%|█████████▊| 89/91 [33:59<01:09, 34.75s/it][A
+Iterating over training query 23b...:  98%|█████████▊| 89/91 [33:59<01:09, 34.75s/it][A
+Iterating over training query 23b...:  99%|█████████▉| 90/91 [34:01<00:24, 25.00s/it][A
+Iterating over training query 23c...:  99%|█████████▉| 90/91 [34:01<00:24, 25.00s/it][A
+Iterating over training query 23c...: 100%|██████████| 91/91 [34:09<00:00, 20.05s/it][A
+                                                                                     [AIterating over epochs...:  45%|████▌     | 5/11 [2:58:19<3:26:55, 2069.33s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 12a...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 12a...:   1%|          | 1/91 [00:04<06:38,  4.43s/it][A
+Iterating over training query 20b...:   1%|          | 1/91 [00:04<06:38,  4.43s/it][A
+Iterating over training query 20b...:   2%|▏         | 2/91 [00:27<23:09, 15.62s/it][A
+Iterating over training query 25b...:   2%|▏         | 2/91 [00:27<23:09, 15.62s/it][A
+Iterating over training query 25b...:   3%|▎         | 3/91 [00:32<15:41, 10.70s/it][A
+Iterating over training query 09d...:   3%|▎         | 3/91 [00:32<15:41, 10.70s/it][A
+Iterating over training query 09d...:   4%|▍         | 4/91 [01:33<44:18, 30.56s/it][A
+Iterating over training query 02d...:   4%|▍         | 4/91 [01:33<44:18, 30.56s/it][A
+Iterating over training query 02d...:   5%|▌         | 5/91 [01:43<32:59, 23.01s/it][A
+Iterating over training query 16c...:   5%|▌         | 5/91 [01:43<32:59, 23.01s/it][A
+Iterating over training query 16c...:   7%|▋         | 6/91 [02:06<32:33, 22.98s/it][A
+Iterating over training query 03b...:   7%|▋         | 6/91 [02:06<32:33, 22.98s/it][A
+Iterating over training query 03b...:   8%|▊         | 7/91 [02:08<22:37, 16.16s/it][A
+Iterating over training query 14a...:   8%|▊         | 7/91 [02:08<22:37, 16.16s/it][A
+Iterating over training query 14a...:   9%|▉         | 8/91 [02:12<17:06, 12.37s/it][A
+Iterating over training query 30b...:   9%|▉         | 8/91 [02:12<17:06, 12.37s/it][A
+Iterating over training query 30b...:  10%|▉         | 9/91 [02:19<14:28, 10.59s/it][A
+Iterating over training query 13b...:  10%|▉         | 9/91 [02:19<14:28, 10.59s/it][A
+Iterating over training query 13b...:  11%|█         | 10/91 [02:30<14:40, 10.86s/it][A
+Iterating over training query 29b...:  11%|█         | 10/91 [02:30<14:40, 10.86s/it][A
+Iterating over training query 29b...:  12%|█▏        | 11/91 [02:33<11:15,  8.44s/it][A
+Iterating over training query 13c...:  12%|█▏        | 11/91 [02:33<11:15,  8.44s/it][A
+Iterating over training query 13c...:  13%|█▎        | 12/91 [02:45<12:25,  9.44s/it][A
+Iterating over training query 28a...:  13%|█▎        | 12/91 [02:45<12:25,  9.44s/it][A
+Iterating over training query 28a...:  14%|█▍        | 13/91 [04:10<41:57, 32.27s/it][A
+Iterating over training query 15c...:  14%|█▍        | 13/91 [04:10<41:57, 32.27s/it][A
+Iterating over training query 15c...:  15%|█▌        | 14/91 [04:19<32:24, 25.26s/it][A
+Iterating over training query 27b...:  15%|█▌        | 14/91 [04:19<32:24, 25.26s/it][A
+Iterating over training query 27b...:  16%|█▋        | 15/91 [04:21<23:10, 18.29s/it][A
+Iterating over training query 08a...:  16%|█▋        | 15/91 [04:21<23:10, 18.29s/it][A
+Iterating over training query 08a...:  18%|█▊        | 16/91 [04:36<21:31, 17.21s/it][A
+Iterating over training query 11b...:  18%|█▊        | 16/91 [04:36<21:31, 17.21s/it][A
+Iterating over training query 11b...:  19%|█▊        | 17/91 [04:37<15:25, 12.51s/it][A
+Iterating over training query 29c...:  19%|█▊        | 17/91 [04:37<15:25, 12.51s/it][A
+Iterating over training query 29c...:  20%|█▉        | 18/91 [04:41<11:58,  9.85s/it][A
+Iterating over training query 31b...:  20%|█▉        | 18/91 [04:41<11:58,  9.85s/it][A
+Iterating over training query 31b...:  21%|██        | 19/91 [04:44<09:30,  7.93s/it][A
+Iterating over training query 17f...:  21%|██        | 19/91 [04:44<09:30,  7.93s/it][A
+Iterating over training query 17f...:  22%|██▏       | 20/91 [06:42<48:15, 40.78s/it][A
+Iterating over training query 30a...:  22%|██▏       | 20/91 [06:42<48:15, 40.78s/it][A
+Iterating over training query 30a...:  23%|██▎       | 21/91 [06:58<39:06, 33.52s/it][A
+Iterating over training query 16b...:  23%|██▎       | 21/91 [06:58<39:06, 33.52s/it][A
+Iterating over training query 16b...:  24%|██▍       | 22/91 [11:24<1:58:46, 103.29s/it][A
+Iterating over training query 09a...:  24%|██▍       | 22/91 [11:24<1:58:46, 103.29s/it][A
+Iterating over training query 09a...:  25%|██▌       | 23/91 [11:31<1:24:05, 74.20s/it] [A
+Iterating over training query 19d...:  25%|██▌       | 23/91 [11:31<1:24:05, 74.20s/it][A
+Iterating over training query 19d...:  26%|██▋       | 24/91 [13:46<1:43:18, 92.52s/it][A
+Iterating over training query 10c...:  26%|██▋       | 24/91 [13:46<1:43:18, 92.52s/it][A
+Iterating over training query 10c...:  27%|██▋       | 25/91 [14:48<1:31:37, 83.29s/it][A
+Iterating over training query 01d...:  27%|██▋       | 25/91 [14:48<1:31:37, 83.29s/it][A
+Iterating over training query 01d...:  29%|██▊       | 26/91 [14:51<1:04:05, 59.16s/it][A
+Iterating over training query 26c...:  29%|██▊       | 26/91 [14:51<1:04:05, 59.16s/it][A
+Iterating over training query 26c...:  30%|██▉       | 27/91 [15:52<1:04:00, 60.00s/it][A
+Iterating over training query 05b...:  30%|██▉       | 27/91 [15:52<1:04:00, 60.00s/it][A
+Iterating over training query 05b...:  31%|███       | 28/91 [15:56<45:15, 43.10s/it]  [A
+Iterating over training query 04a...:  31%|███       | 28/91 [15:56<45:15, 43.10s/it][A
+Iterating over training query 04a...:  32%|███▏      | 29/91 [15:58<31:50, 30.82s/it][A
+Iterating over training query 05a...:  32%|███▏      | 29/91 [15:58<31:50, 30.82s/it][A
+Iterating over training query 05a...:  33%|███▎      | 30/91 [16:02<23:06, 22.74s/it][A
+Iterating over training query 01b...:  33%|███▎      | 30/91 [16:02<23:06, 22.74s/it][A
+Iterating over training query 01b...:  34%|███▍      | 31/91 [16:05<16:44, 16.74s/it][A
+Iterating over training query 29a...:  34%|███▍      | 31/91 [16:05<16:44, 16.74s/it][A
+Iterating over training query 29a...:  35%|███▌      | 32/91 [16:09<12:42, 12.93s/it][A
+Iterating over training query 19c...:  35%|███▌      | 32/91 [16:09<12:42, 12.93s/it][A
+Iterating over training query 19c...:  36%|███▋      | 33/91 [16:19<11:31, 11.93s/it][A
+Iterating over training query 31a...:  36%|███▋      | 33/91 [16:19<11:31, 11.93s/it][A
+Iterating over training query 31a...:  37%|███▋      | 34/91 [16:23<09:08,  9.63s/it][A
+Iterating over training query 11c...:  37%|███▋      | 34/91 [16:23<09:08,  9.63s/it][A
+Iterating over training query 11c...:  38%|███▊      | 35/91 [16:26<07:11,  7.70s/it][A
+Iterating over training query 24b...:  38%|███▊      | 35/91 [16:26<07:11,  7.70s/it][A
+Iterating over training query 24b...:  40%|███▉      | 36/91 [16:28<05:36,  6.12s/it][A
+Iterating over training query 23c...:  40%|███▉      | 36/91 [16:28<05:36,  6.12s/it][A
+Iterating over training query 23c...:  41%|████      | 37/91 [16:36<05:59,  6.65s/it][A
+Iterating over training query 06d...:  41%|████      | 37/91 [16:36<05:59,  6.65s/it][A
+Iterating over training query 06d...:  42%|████▏     | 38/91 [17:32<18:48, 21.29s/it][A
+Iterating over training query 26a...:  42%|████▏     | 38/91 [17:32<18:48, 21.29s/it][A
+Iterating over training query 26a...:  43%|████▎     | 39/91 [17:40<15:04, 17.39s/it][A
+Iterating over training query 19a...:  43%|████▎     | 39/91 [17:40<15:04, 17.39s/it][A
+Iterating over training query 19a...:  44%|████▍     | 40/91 [17:47<11:58, 14.09s/it][A
+Iterating over training query 07a...:  44%|████▍     | 40/91 [17:47<11:58, 14.09s/it][A
+Iterating over training query 07a...:  45%|████▌     | 41/91 [17:57<10:52, 13.05s/it][A
+Iterating over training query 30c...:  45%|████▌     | 41/91 [17:57<10:52, 13.05s/it][A
+Iterating over training query 30c...:  46%|████▌     | 42/91 [19:00<22:58, 28.13s/it][A
+Iterating over training query 17d...:  46%|████▌     | 42/91 [19:00<22:58, 28.13s/it][A
+Iterating over training query 17d...:  47%|████▋     | 43/91 [20:13<33:15, 41.57s/it][A
+Iterating over training query 21c...:  47%|████▋     | 43/91 [20:13<33:15, 41.57s/it][A
+Iterating over training query 21c...:  48%|████▊     | 44/91 [20:16<23:17, 29.74s/it][A
+Iterating over training query 11a...:  48%|████▊     | 44/91 [20:16<23:17, 29.74s/it][A
+Iterating over training query 11a...:  49%|████▉     | 45/91 [20:17<16:21, 21.34s/it][A
+Iterating over training query 06b...:  49%|████▉     | 45/91 [20:17<16:21, 21.34s/it][A
+Iterating over training query 06b...:  51%|█████     | 46/91 [20:21<11:57, 15.94s/it][A
+Iterating over training query 10a...:  51%|█████     | 46/91 [20:21<11:57, 15.94s/it][A
+Iterating over training query 10a...:  52%|█████▏    | 47/91 [20:28<09:45, 13.31s/it][A
+Iterating over training query 21b...:  52%|█████▏    | 47/91 [20:28<09:45, 13.31s/it][A
+Iterating over training query 21b...:  53%|█████▎    | 48/91 [20:30<07:07,  9.94s/it][A
+Iterating over training query 22c...:  53%|█████▎    | 48/91 [20:30<07:07,  9.94s/it][A
+Iterating over training query 22c...:  54%|█████▍    | 49/91 [20:59<10:59, 15.70s/it][A
+Iterating over training query 28c...:  54%|█████▍    | 49/91 [20:59<10:59, 15.70s/it][A
+Iterating over training query 28c...:  55%|█████▍    | 50/91 [21:29<13:45, 20.12s/it][A
+Iterating over training query 27a...:  55%|█████▍    | 50/91 [21:29<13:45, 20.12s/it][A
+Iterating over training query 27a...:  56%|█████▌    | 51/91 [21:31<09:48, 14.71s/it][A
+Iterating over training query 17a...:  56%|█████▌    | 51/91 [21:31<09:48, 14.71s/it][A
+Iterating over training query 17a...:  57%|█████▋    | 52/91 [23:53<34:17, 52.74s/it][A
+Iterating over training query 13a...:  57%|█████▋    | 52/91 [23:53<34:17, 52.74s/it][A
+Iterating over training query 13a...:  58%|█████▊    | 53/91 [24:17<27:52, 44.00s/it][A
+Iterating over training query 09b...:  58%|█████▊    | 53/91 [24:17<27:52, 44.00s/it][A
+Iterating over training query 09b...:  59%|█████▉    | 54/91 [24:23<20:09, 32.70s/it][A
+Iterating over training query 20c...:  59%|█████▉    | 54/91 [24:23<20:09, 32.70s/it][A
+Iterating over training query 20c...:  60%|██████    | 55/91 [24:35<15:58, 26.62s/it][A
+Iterating over training query 16a...:  60%|██████    | 55/91 [24:35<15:58, 26.62s/it][A
+Iterating over training query 16a...:  62%|██████▏   | 56/91 [24:38<11:23, 19.52s/it][A
+Iterating over training query 19b...:  62%|██████▏   | 56/91 [24:38<11:23, 19.52s/it][A
+Iterating over training query 19b...:  63%|██████▎   | 57/91 [24:42<08:22, 14.78s/it][A
+Iterating over training query 14c...:  63%|██████▎   | 57/91 [24:42<08:22, 14.78s/it][A
+Iterating over training query 14c...:  64%|██████▎   | 58/91 [24:49<06:53, 12.52s/it][A
+Iterating over training query 07c...:  64%|██████▎   | 58/91 [24:49<06:53, 12.52s/it][A
+Iterating over training query 07c...:  65%|██████▍   | 59/91 [25:35<11:56, 22.39s/it][A
+Iterating over training query 22a...:  65%|██████▍   | 59/91 [25:35<11:56, 22.39s/it][A
+Iterating over training query 22a...:  66%|██████▌   | 60/91 [25:41<09:05, 17.60s/it][A
+Iterating over training query 24a...:  66%|██████▌   | 60/91 [25:41<09:05, 17.60s/it][A
+Iterating over training query 24a...:  67%|██████▋   | 61/91 [25:46<06:55, 13.86s/it][A
+Iterating over training query 23b...:  67%|██████▋   | 61/91 [25:46<06:55, 13.86s/it][A
+Iterating over training query 23b...:  68%|██████▊   | 62/91 [25:48<05:00, 10.35s/it][A
+Iterating over training query 33b...:  68%|██████▊   | 62/91 [25:48<05:00, 10.35s/it][A
+Iterating over training query 33b...:  69%|██████▉   | 63/91 [25:52<03:49,  8.20s/it][A
+Iterating over training query 16d...:  69%|██████▉   | 63/91 [25:52<03:49,  8.20s/it][A
+Iterating over training query 16d...:  70%|███████   | 64/91 [26:09<04:57, 11.03s/it][A
+Iterating over training query 06f...:  70%|███████   | 64/91 [26:09<04:57, 11.03s/it][A
+Iterating over training query 06f...:  71%|███████▏  | 65/91 [27:04<10:31, 24.30s/it][A
+Iterating over training query 23a...:  71%|███████▏  | 65/91 [27:04<10:31, 24.30s/it][A
+Iterating over training query 23a...:  73%|███████▎  | 66/91 [27:11<07:55, 19.04s/it][A
+Iterating over training query 32a...:  73%|███████▎  | 66/91 [27:11<07:55, 19.04s/it][A
+Iterating over training query 32a...:  74%|███████▎  | 67/91 [27:12<05:27, 13.63s/it][A
+Iterating over training query 25a...:  74%|███████▎  | 67/91 [27:12<05:27, 13.63s/it][A
+Iterating over training query 25a...:  75%|███████▍  | 68/91 [27:43<07:14, 18.88s/it][A
+Iterating over training query 07b...:  75%|███████▍  | 68/91 [27:43<07:14, 18.88s/it][A
+Iterating over training query 07b...:  76%|███████▌  | 69/91 [27:47<05:15, 14.34s/it][A
+Iterating over training query 15b...:  76%|███████▌  | 69/91 [27:47<05:15, 14.34s/it][A
+Iterating over training query 15b...:  77%|███████▋  | 70/91 [27:48<03:39, 10.43s/it][A
+Iterating over training query 26b...:  77%|███████▋  | 70/91 [27:48<03:39, 10.43s/it][A
+Iterating over training query 26b...:  78%|███████▊  | 71/91 [27:52<02:45,  8.29s/it][A
+Iterating over training query 12b...:  78%|███████▊  | 71/91 [27:52<02:45,  8.29s/it][A
+Iterating over training query 12b...:  79%|███████▉  | 72/91 [27:54<02:04,  6.57s/it][A
+Iterating over training query 33c...:  79%|███████▉  | 72/91 [27:54<02:04,  6.57s/it][A
+Iterating over training query 33c...:  80%|████████  | 73/91 [27:57<01:40,  5.56s/it][A
+Iterating over training query 10b...:  80%|████████  | 73/91 [27:57<01:40,  5.56s/it][A
+Iterating over training query 10b...:  81%|████████▏ | 74/91 [28:03<01:34,  5.57s/it][A
+Iterating over training query 03a...:  81%|████████▏ | 74/91 [28:03<01:34,  5.57s/it][A
+Iterating over training query 03a...:  82%|████████▏ | 75/91 [28:06<01:14,  4.65s/it][A
+Iterating over training query 22d...:  82%|████████▏ | 75/91 [28:06<01:14,  4.65s/it][A
+Iterating over training query 22d...:  84%|████████▎ | 76/91 [28:17<01:41,  6.76s/it][A
+Iterating over training query 17c...:  84%|████████▎ | 76/91 [28:17<01:41,  6.76s/it][A
+Iterating over training query 17c...:  85%|████████▍ | 77/91 [29:28<06:01, 25.83s/it][A
+Iterating over training query 03c...:  85%|████████▍ | 77/91 [29:28<06:01, 25.83s/it][A
+Iterating over training query 03c...:  86%|████████▌ | 78/91 [29:32<04:11, 19.35s/it][A
+Iterating over training query 02b...:  86%|████████▌ | 78/91 [29:32<04:11, 19.35s/it][A
+Iterating over training query 02b...:  87%|████████▋ | 79/91 [29:40<03:11, 15.92s/it][A
+Iterating over training query 12c...:  87%|████████▋ | 79/91 [29:40<03:11, 15.92s/it][A
+Iterating over training query 12c...:  88%|████████▊ | 80/91 [29:51<02:40, 14.60s/it][A
+Iterating over training query 18c...:  88%|████████▊ | 80/91 [29:51<02:40, 14.60s/it][A
+Iterating over training query 18c...:  89%|████████▉ | 81/91 [30:50<04:37, 27.71s/it][A
+Iterating over training query 22b...:  89%|████████▉ | 81/91 [30:50<04:37, 27.71s/it][A
+Iterating over training query 22b...:  90%|█████████ | 82/91 [30:54<03:05, 20.60s/it][A
+Iterating over training query 08d...:  90%|█████████ | 82/91 [30:54<03:05, 20.60s/it][A
+Iterating over training query 08d...:  91%|█████████ | 83/91 [31:32<03:26, 25.82s/it][A
+Iterating over training query 01a...:  91%|█████████ | 83/91 [31:32<03:26, 25.82s/it][A
+Iterating over training query 01a...:  92%|█████████▏| 84/91 [31:34<02:12, 18.90s/it][A
+Iterating over training query 15d...:  92%|█████████▏| 84/91 [31:34<02:12, 18.90s/it][A
+Iterating over training query 15d...:  93%|█████████▎| 85/91 [31:45<01:39, 16.57s/it][A
+Iterating over training query 02a...:  93%|█████████▎| 85/91 [31:45<01:39, 16.57s/it][A
+Iterating over training query 02a...:  95%|█████████▍| 86/91 [31:53<01:09, 13.87s/it][A
+Iterating over training query 27c...:  95%|█████████▍| 86/91 [31:53<01:09, 13.87s/it][A
+Iterating over training query 27c...:  96%|█████████▌| 87/91 [31:56<00:42, 10.59s/it][A
+Iterating over training query 14b...:  96%|█████████▌| 87/91 [31:56<00:42, 10.59s/it][A
+Iterating over training query 14b...:  97%|█████████▋| 88/91 [31:58<00:24,  8.07s/it][A
+Iterating over training query 13d...:  97%|█████████▋| 88/91 [31:58<00:24,  8.07s/it][A
+Iterating over training query 13d...:  98%|█████████▊| 89/91 [32:34<00:32, 16.46s/it][A
+Iterating over training query 31c...:  98%|█████████▊| 89/91 [32:34<00:32, 16.46s/it][A
+Iterating over training query 31c...:  99%|█████████▉| 90/91 [32:40<00:13, 13.37s/it][A
+Iterating over training query 18a...:  99%|█████████▉| 90/91 [32:40<00:13, 13.37s/it][A
+Iterating over training query 18a...: 100%|██████████| 91/91 [33:30<00:00, 24.25s/it][A
+                                                                                     [AIterating over epochs...:  55%|█████▍    | 6/11 [3:31:50<2:50:46, 2049.32s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 29c...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 29c...:   1%|          | 1/91 [00:07<11:31,  7.69s/it][A
+Iterating over training query 15b...:   1%|          | 1/91 [00:07<11:31,  7.69s/it][A
+Iterating over training query 15b...:   2%|▏         | 2/91 [00:09<06:03,  4.08s/it][A
+Iterating over training query 09a...:   2%|▏         | 2/91 [00:09<06:03,  4.08s/it][A
+Iterating over training query 09a...:   3%|▎         | 3/91 [00:15<07:29,  5.11s/it][A
+Iterating over training query 10b...:   3%|▎         | 3/91 [00:15<07:29,  5.11s/it][A
+Iterating over training query 10b...:   4%|▍         | 4/91 [00:21<07:44,  5.33s/it][A
+Iterating over training query 12a...:   4%|▍         | 4/91 [00:21<07:44,  5.33s/it][A
+Iterating over training query 12a...:   5%|▌         | 5/91 [00:25<07:06,  4.96s/it][A
+Iterating over training query 03b...:   5%|▌         | 5/91 [00:25<07:06,  4.96s/it][A
+Iterating over training query 03b...:   7%|▋         | 6/91 [00:27<05:43,  4.04s/it][A
+Iterating over training query 17f...:   7%|▋         | 6/91 [00:27<05:43,  4.04s/it][A
+Iterating over training query 17f...:   8%|▊         | 7/91 [02:20<55:31, 39.66s/it][A
+Iterating over training query 21b...:   8%|▊         | 7/91 [02:20<55:31, 39.66s/it][A
+Iterating over training query 21b...:   9%|▉         | 8/91 [02:22<38:17, 27.68s/it][A
+Iterating over training query 32a...:   9%|▉         | 8/91 [02:22<38:17, 27.68s/it][A
+Iterating over training query 32a...:  10%|▉         | 9/91 [02:23<26:29, 19.39s/it][A
+Iterating over training query 33c...:  10%|▉         | 9/91 [02:23<26:29, 19.39s/it][A
+Iterating over training query 33c...:  11%|█         | 10/91 [02:27<19:25, 14.38s/it][A
+Iterating over training query 22d...:  11%|█         | 10/91 [02:27<19:25, 14.38s/it][A
+Iterating over training query 22d...:  12%|█▏        | 11/91 [02:39<18:11, 13.64s/it][A
+Iterating over training query 18c...:  12%|█▏        | 11/91 [02:39<18:11, 13.64s/it][A
+Iterating over training query 18c...:  13%|█▎        | 12/91 [03:36<35:40, 27.09s/it][A
+Iterating over training query 06d...:  13%|█▎        | 12/91 [03:36<35:40, 27.09s/it][A
+Iterating over training query 06d...:  14%|█▍        | 13/91 [04:31<46:08, 35.50s/it][A
+Iterating over training query 24b...:  14%|█▍        | 13/91 [04:31<46:08, 35.50s/it][A
+Iterating over training query 24b...:  15%|█▌        | 14/91 [04:34<32:41, 25.47s/it][A
+Iterating over training query 15d...:  15%|█▌        | 14/91 [04:34<32:41, 25.47s/it][A
+Iterating over training query 15d...:  16%|█▋        | 15/91 [04:45<26:45, 21.13s/it][A
+Iterating over training query 04a...:  16%|█▋        | 15/91 [04:45<26:45, 21.13s/it][A
+Iterating over training query 04a...:  18%|█▊        | 16/91 [04:47<19:21, 15.48s/it][A
+Iterating over training query 02d...:  18%|█▊        | 16/91 [04:47<19:21, 15.48s/it][A
+Iterating over training query 02d...:  19%|█▊        | 17/91 [04:56<16:42, 13.54s/it][A
+Iterating over training query 22a...:  19%|█▊        | 17/91 [04:56<16:42, 13.54s/it][A
+Iterating over training query 22a...:  20%|█▉        | 18/91 [05:03<13:56, 11.46s/it][A
+Iterating over training query 17c...:  20%|█▉        | 18/91 [05:03<13:56, 11.46s/it][A
+Iterating over training query 17c...:  21%|██        | 19/91 [06:13<35:01, 29.18s/it][A
+Iterating over training query 11a...:  21%|██        | 19/91 [06:13<35:01, 29.18s/it][A
+Iterating over training query 11a...:  22%|██▏       | 20/91 [06:15<24:46, 20.94s/it][A
+Iterating over training query 25b...:  22%|██▏       | 20/91 [06:15<24:46, 20.94s/it][A
+Iterating over training query 25b...:  23%|██▎       | 21/91 [06:20<18:43, 16.05s/it][A
+Iterating over training query 26a...:  23%|██▎       | 21/91 [06:20<18:43, 16.05s/it][A
+Iterating over training query 26a...:  24%|██▍       | 22/91 [06:29<16:05, 13.99s/it][A
+Iterating over training query 17a...:  24%|██▍       | 22/91 [06:29<16:05, 13.99s/it][A
+Iterating over training query 17a...:  25%|██▌       | 23/91 [08:51<59:25, 52.44s/it][A
+Iterating over training query 19b...:  25%|██▌       | 23/91 [08:51<59:25, 52.44s/it][A
+Iterating over training query 19b...:  26%|██▋       | 24/91 [08:55<42:16, 37.86s/it][A
+Iterating over training query 27c...:  26%|██▋       | 24/91 [08:55<42:16, 37.86s/it][A
+Iterating over training query 27c...:  27%|██▋       | 25/91 [08:57<30:03, 27.32s/it][A
+Iterating over training query 13d...:  27%|██▋       | 25/91 [08:57<30:03, 27.32s/it][A
+Iterating over training query 13d...:  29%|██▊       | 26/91 [09:33<32:20, 29.85s/it][A
+Iterating over training query 21c...:  29%|██▊       | 26/91 [09:33<32:20, 29.85s/it][A
+Iterating over training query 21c...:  30%|██▉       | 27/91 [09:35<22:57, 21.52s/it][A
+Iterating over training query 16d...:  30%|██▉       | 27/91 [09:35<22:57, 21.52s/it][A
+Iterating over training query 16d...:  31%|███       | 28/91 [09:53<21:26, 20.43s/it][A
+Iterating over training query 29b...:  31%|███       | 28/91 [09:53<21:26, 20.43s/it][A
+Iterating over training query 29b...:  32%|███▏      | 29/91 [10:00<16:58, 16.43s/it][A
+Iterating over training query 05a...:  32%|███▏      | 29/91 [10:00<16:58, 16.43s/it][A
+Iterating over training query 05a...:  33%|███▎      | 30/91 [10:04<12:48, 12.60s/it][A
+Iterating over training query 30a...:  33%|███▎      | 30/91 [10:04<12:48, 12.60s/it][A
+Iterating over training query 30a...:  34%|███▍      | 31/91 [10:20<13:33, 13.55s/it][A
+Iterating over training query 13c...:  34%|███▍      | 31/91 [10:20<13:33, 13.55s/it][A
+Iterating over training query 13c...:  35%|███▌      | 32/91 [10:30<12:24, 12.62s/it][A
+Iterating over training query 02b...:  35%|███▌      | 32/91 [10:30<12:24, 12.62s/it][A
+Iterating over training query 02b...:  36%|███▋      | 33/91 [10:38<10:41, 11.06s/it][A
+Iterating over training query 16b...:  36%|███▋      | 33/91 [10:38<10:41, 11.06s/it][A
+Iterating over training query 16b...:  37%|███▋      | 34/91 [14:54<1:20:31, 84.77s/it][A
+Iterating over training query 09b...:  37%|███▋      | 34/91 [14:54<1:20:31, 84.77s/it][A
+Iterating over training query 09b...:  38%|███▊      | 35/91 [15:00<57:06, 61.19s/it]  [A
+Iterating over training query 19a...:  38%|███▊      | 35/91 [15:00<57:06, 61.19s/it][A
+Iterating over training query 19a...:  40%|███▉      | 36/91 [15:07<41:04, 44.80s/it][A
+Iterating over training query 23c...:  40%|███▉      | 36/91 [15:07<41:04, 44.80s/it][A
+Iterating over training query 23c...:  41%|████      | 37/91 [15:15<30:23, 33.76s/it][A
+Iterating over training query 16a...:  41%|████      | 37/91 [15:15<30:23, 33.76s/it][A
+Iterating over training query 16a...:  42%|████▏     | 38/91 [15:18<21:39, 24.52s/it][A
+Iterating over training query 11b...:  42%|████▏     | 38/91 [15:18<21:39, 24.52s/it][A
+Iterating over training query 11b...:  43%|████▎     | 39/91 [15:19<15:13, 17.57s/it][A
+Iterating over training query 19c...:  43%|████▎     | 39/91 [15:19<15:13, 17.57s/it][A
+Iterating over training query 19c...:  44%|████▍     | 40/91 [15:29<12:53, 15.17s/it][A
+Iterating over training query 28a...:  44%|████▍     | 40/91 [15:29<12:53, 15.17s/it][A
+Iterating over training query 28a...:  45%|████▌     | 41/91 [16:53<29:50, 35.81s/it][A
+Iterating over training query 23b...:  45%|████▌     | 41/91 [16:53<29:50, 35.81s/it][A
+Iterating over training query 23b...:  46%|████▌     | 42/91 [16:55<20:59, 25.70s/it][A
+Iterating over training query 10c...:  46%|████▌     | 42/91 [16:55<20:59, 25.70s/it][A
+Iterating over training query 10c...:  47%|████▋     | 43/91 [17:55<28:44, 35.93s/it][A
+Iterating over training query 02a...:  47%|████▋     | 43/91 [17:55<28:44, 35.93s/it][A
+Iterating over training query 02a...:  48%|████▊     | 44/91 [18:02<21:30, 27.45s/it][A
+Iterating over training query 01b...:  48%|████▊     | 44/91 [18:02<21:30, 27.45s/it][A
+Iterating over training query 01b...:  49%|████▉     | 45/91 [18:05<15:20, 20.00s/it][A
+Iterating over training query 26b...:  49%|████▉     | 45/91 [18:05<15:20, 20.00s/it][A
+Iterating over training query 26b...:  51%|█████     | 46/91 [18:08<11:12, 14.94s/it][A
+Iterating over training query 08a...:  51%|█████     | 46/91 [18:08<11:12, 14.94s/it][A
+Iterating over training query 08a...:  52%|█████▏    | 47/91 [18:22<10:47, 14.72s/it][A
+Iterating over training query 03a...:  52%|█████▏    | 47/91 [18:22<10:47, 14.72s/it][A
+Iterating over training query 03a...:  53%|█████▎    | 48/91 [18:25<07:57, 11.11s/it][A
+Iterating over training query 33b...:  53%|█████▎    | 48/91 [18:25<07:57, 11.11s/it][A
+Iterating over training query 33b...:  54%|█████▍    | 49/91 [18:28<06:01,  8.62s/it][A
+Iterating over training query 22b...:  54%|█████▍    | 49/91 [18:28<06:01,  8.62s/it][A
+Iterating over training query 22b...:  55%|█████▍    | 50/91 [18:32<04:55,  7.21s/it][A
+Iterating over training query 31a...:  55%|█████▍    | 50/91 [18:32<04:55,  7.21s/it][A
+Iterating over training query 31a...:  56%|█████▌    | 51/91 [18:36<04:13,  6.33s/it][A
+Iterating over training query 26c...:  56%|█████▌    | 51/91 [18:36<04:13,  6.33s/it][A
+Iterating over training query 26c...:  57%|█████▋    | 52/91 [19:37<14:47, 22.77s/it][A
+Iterating over training query 09d...:  57%|█████▋    | 52/91 [19:37<14:47, 22.77s/it][A
+Iterating over training query 09d...:  58%|█████▊    | 53/91 [20:35<21:09, 33.40s/it][A
+Iterating over training query 27b...:  58%|█████▊    | 53/91 [20:35<21:09, 33.40s/it][A
+Iterating over training query 27b...:  59%|█████▉    | 54/91 [20:37<14:45, 23.94s/it][A
+Iterating over training query 27a...:  59%|█████▉    | 54/91 [20:37<14:45, 23.94s/it][A
+Iterating over training query 27a...:  60%|██████    | 55/91 [20:40<10:27, 17.43s/it][A
+Iterating over training query 14c...:  60%|██████    | 55/91 [20:40<10:27, 17.43s/it][A
+Iterating over training query 14c...:  62%|██████▏   | 56/91 [20:47<08:27, 14.50s/it][A
+Iterating over training query 30b...:  62%|██████▏   | 56/91 [20:47<08:27, 14.50s/it][A
+Iterating over training query 30b...:  63%|██████▎   | 57/91 [20:54<06:50, 12.08s/it][A
+Iterating over training query 07a...:  63%|██████▎   | 57/91 [20:54<06:50, 12.08s/it][A
+Iterating over training query 07a...:  64%|██████▎   | 58/91 [21:04<06:21, 11.55s/it][A
+Iterating over training query 30c...:  64%|██████▎   | 58/91 [21:04<06:21, 11.55s/it][A
+Iterating over training query 30c...:  65%|██████▍   | 59/91 [22:07<14:20, 26.88s/it][A
+Iterating over training query 10a...:  65%|██████▍   | 59/91 [22:07<14:20, 26.88s/it][A
+Iterating over training query 10a...:  66%|██████▌   | 60/91 [22:14<10:51, 21.02s/it][A
+Iterating over training query 31c...:  66%|██████▌   | 60/91 [22:14<10:51, 21.02s/it][A
+Iterating over training query 31c...:  67%|██████▋   | 61/91 [22:20<08:20, 16.67s/it][A
+Iterating over training query 14a...:  67%|██████▋   | 61/91 [22:20<08:20, 16.67s/it][A
+Iterating over training query 14a...:  68%|██████▊   | 62/91 [22:25<06:13, 12.89s/it][A
+Iterating over training query 31b...:  68%|██████▊   | 62/91 [22:25<06:13, 12.89s/it][A
+Iterating over training query 31b...:  69%|██████▉   | 63/91 [22:28<04:40, 10.03s/it][A
+Iterating over training query 13b...:  69%|██████▉   | 63/91 [22:28<04:40, 10.03s/it][A
+Iterating over training query 13b...:  70%|███████   | 64/91 [22:39<04:39, 10.35s/it][A
+Iterating over training query 20b...:  70%|███████   | 64/91 [22:39<04:39, 10.35s/it][A
+Iterating over training query 20b...:  71%|███████▏  | 65/91 [23:02<06:05, 14.06s/it][A
+Iterating over training query 01d...:  71%|███████▏  | 65/91 [23:02<06:05, 14.06s/it][A
+Iterating over training query 01d...:  73%|███████▎  | 66/91 [23:04<04:25, 10.63s/it][A
+Iterating over training query 28c...:  73%|███████▎  | 66/91 [23:04<04:25, 10.63s/it][A
+Iterating over training query 28c...:  74%|███████▎  | 67/91 [23:34<06:33, 16.39s/it][A
+Iterating over training query 20c...:  74%|███████▎  | 67/91 [23:34<06:33, 16.39s/it][A
+Iterating over training query 20c...:  75%|███████▍  | 68/91 [23:47<05:51, 15.27s/it][A
+Iterating over training query 15c...:  75%|███████▍  | 68/91 [23:47<05:51, 15.27s/it][A
+Iterating over training query 15c...:  76%|███████▌  | 69/91 [23:56<04:55, 13.42s/it][A
+Iterating over training query 23a...:  76%|███████▌  | 69/91 [23:56<04:55, 13.42s/it][A
+Iterating over training query 23a...:  77%|███████▋  | 70/91 [24:02<03:58, 11.34s/it][A
+Iterating over training query 24a...:  77%|███████▋  | 70/91 [24:02<03:58, 11.34s/it][A
+Iterating over training query 24a...:  78%|███████▊  | 71/91 [24:07<03:09,  9.46s/it][A
+Iterating over training query 07b...:  78%|███████▊  | 71/91 [24:07<03:09,  9.46s/it][A
+Iterating over training query 07b...:  79%|███████▉  | 72/91 [24:11<02:26,  7.70s/it][A
+Iterating over training query 29a...:  79%|███████▉  | 72/91 [24:11<02:26,  7.70s/it][A
+Iterating over training query 29a...:  80%|████████  | 73/91 [24:15<01:58,  6.59s/it][A
+Iterating over training query 06f...:  80%|████████  | 73/91 [24:15<01:58,  6.59s/it][A
+Iterating over training query 06f...:  81%|████████▏ | 74/91 [25:10<06:00, 21.21s/it][A
+Iterating over training query 22c...:  81%|████████▏ | 74/91 [25:10<06:00, 21.21s/it][A
+Iterating over training query 22c...:  82%|████████▏ | 75/91 [25:40<06:17, 23.61s/it][A
+Iterating over training query 18a...:  82%|████████▏ | 75/91 [25:40<06:17, 23.61s/it][A
+Iterating over training query 18a...:  84%|████████▎ | 76/91 [26:41<08:45, 35.02s/it][A
+Iterating over training query 17d...:  84%|████████▎ | 76/91 [26:41<08:45, 35.02s/it][A
+Iterating over training query 17d...:  85%|████████▍ | 77/91 [27:53<10:46, 46.17s/it][A
+Iterating over training query 01a...:  85%|████████▍ | 77/91 [27:53<10:46, 46.17s/it][A
+Iterating over training query 01a...:  86%|████████▌ | 78/91 [27:56<07:10, 33.14s/it][A
+Iterating over training query 25a...:  86%|████████▌ | 78/91 [27:56<07:10, 33.14s/it][A
+Iterating over training query 25a...:  87%|████████▋ | 79/91 [28:26<06:26, 32.18s/it][A
+Iterating over training query 14b...:  87%|████████▋ | 79/91 [28:26<06:26, 32.18s/it][A
+Iterating over training query 14b...:  88%|████████▊ | 80/91 [28:28<04:15, 23.21s/it][A
+Iterating over training query 03c...:  88%|████████▊ | 80/91 [28:28<04:15, 23.21s/it][A
+Iterating over training query 03c...:  89%|████████▉ | 81/91 [28:33<02:55, 17.50s/it][A
+Iterating over training query 11c...:  89%|████████▉ | 81/91 [28:33<02:55, 17.50s/it][A
+Iterating over training query 11c...:  90%|█████████ | 82/91 [28:36<01:59, 13.26s/it][A
+Iterating over training query 13a...:  90%|█████████ | 82/91 [28:36<01:59, 13.26s/it][A
+Iterating over training query 13a...:  91%|█████████ | 83/91 [29:01<02:14, 16.76s/it][A
+Iterating over training query 05b...:  91%|█████████ | 83/91 [29:01<02:14, 16.76s/it][A
+Iterating over training query 05b...:  92%|█████████▏| 84/91 [29:04<01:29, 12.82s/it][A
+Iterating over training query 12b...:  92%|█████████▏| 84/91 [29:04<01:29, 12.82s/it][A
+Iterating over training query 12b...:  93%|█████████▎| 85/91 [29:07<00:58,  9.81s/it][A
+Iterating over training query 12c...:  93%|█████████▎| 85/91 [29:07<00:58,  9.81s/it][A
+Iterating over training query 12c...:  95%|█████████▍| 86/91 [29:19<00:52, 10.43s/it][A
+Iterating over training query 08d...:  95%|█████████▍| 86/91 [29:19<00:52, 10.43s/it][A
+Iterating over training query 08d...:  96%|█████████▌| 87/91 [29:57<01:14, 18.58s/it][A
+Iterating over training query 19d...:  96%|█████████▌| 87/91 [29:57<01:14, 18.58s/it][A
+Iterating over training query 19d...:  97%|█████████▋| 88/91 [32:10<02:39, 53.09s/it][A
+Iterating over training query 06b...:  97%|█████████▋| 88/91 [32:10<02:39, 53.09s/it][A
+Iterating over training query 06b...:  98%|█████████▊| 89/91 [32:13<01:16, 38.11s/it][A
+Iterating over training query 07c...:  98%|█████████▊| 89/91 [32:13<01:16, 38.11s/it][A
+Iterating over training query 07c...:  99%|█████████▉| 90/91 [32:58<00:40, 40.13s/it][A
+Iterating over training query 16c...:  99%|█████████▉| 90/91 [32:58<00:40, 40.13s/it][A
+Iterating over training query 16c...: 100%|██████████| 91/91 [33:22<00:00, 35.14s/it][A
+                                                                                     [AIterating over epochs...:  64%|██████▎   | 7/11 [4:05:12<2:15:35, 2033.96s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 09d...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 09d...:   1%|          | 1/91 [00:58<1:27:43, 58.48s/it][A
+Iterating over training query 03b...:   1%|          | 1/91 [00:58<1:27:43, 58.48s/it][A
+Iterating over training query 03b...:   2%|▏         | 2/91 [01:00<37:33, 25.32s/it]  [A
+Iterating over training query 10a...:   2%|▏         | 2/91 [01:00<37:33, 25.32s/it][A
+Iterating over training query 10a...:   3%|▎         | 3/91 [01:07<25:01, 17.07s/it][A
+Iterating over training query 27a...:   3%|▎         | 3/91 [01:07<25:01, 17.07s/it][A
+Iterating over training query 27a...:   4%|▍         | 4/91 [01:10<16:17, 11.23s/it][A
+Iterating over training query 31b...:   4%|▍         | 4/91 [01:10<16:17, 11.23s/it][A
+Iterating over training query 31b...:   5%|▌         | 5/91 [01:13<12:06,  8.45s/it][A
+Iterating over training query 08a...:   5%|▌         | 5/91 [01:13<12:06,  8.45s/it][A
+Iterating over training query 08a...:   7%|▋         | 6/91 [01:28<14:53, 10.51s/it][A
+Iterating over training query 31c...:   7%|▋         | 6/91 [01:28<14:53, 10.51s/it][A
+Iterating over training query 31c...:   8%|▊         | 7/91 [01:34<12:57,  9.26s/it][A
+Iterating over training query 15b...:   8%|▊         | 7/91 [01:34<12:57,  9.26s/it][A
+Iterating over training query 15b...:   9%|▉         | 8/91 [01:36<09:20,  6.75s/it][A
+Iterating over training query 09a...:   9%|▉         | 8/91 [01:36<09:20,  6.75s/it][A
+Iterating over training query 09a...:  10%|▉         | 9/91 [01:43<09:21,  6.84s/it][A
+Iterating over training query 33b...:  10%|▉         | 9/91 [01:43<09:21,  6.84s/it][A
+Iterating over training query 33b...:  11%|█         | 10/91 [01:46<07:36,  5.63s/it][A
+Iterating over training query 17a...:  11%|█         | 10/91 [01:46<07:36,  5.63s/it][A
+Iterating over training query 17a...:  12%|█▏        | 11/91 [04:09<1:03:53, 47.92s/it][A
+Iterating over training query 29b...:  12%|█▏        | 11/91 [04:09<1:03:53, 47.92s/it][A
+Iterating over training query 29b...:  13%|█▎        | 12/91 [04:12<45:05, 34.24s/it]  [A
+Iterating over training query 30c...:  13%|█▎        | 12/91 [04:12<45:05, 34.24s/it][A
+Iterating over training query 30c...:  14%|█▍        | 13/91 [05:17<56:19, 43.33s/it][A
+Iterating over training query 14c...:  14%|█▍        | 13/91 [05:17<56:19, 43.33s/it][A
+Iterating over training query 14c...:  15%|█▌        | 14/91 [05:24<41:35, 32.41s/it][A
+Iterating over training query 26c...:  15%|█▌        | 14/91 [05:24<41:35, 32.41s/it][A
+Iterating over training query 26c...:  16%|█▋        | 15/91 [06:25<52:12, 41.21s/it][A
+Iterating over training query 13c...:  16%|█▋        | 15/91 [06:25<52:12, 41.21s/it][A
+Iterating over training query 13c...:  18%|█▊        | 16/91 [06:36<40:03, 32.05s/it][A
+Iterating over training query 30b...:  18%|█▊        | 16/91 [06:36<40:03, 32.05s/it][A
+Iterating over training query 30b...:  19%|█▊        | 17/91 [06:43<30:06, 24.42s/it][A
+Iterating over training query 20c...:  19%|█▊        | 17/91 [06:43<30:06, 24.42s/it][A
+Iterating over training query 20c...:  20%|█▉        | 18/91 [06:56<25:24, 20.88s/it][A
+Iterating over training query 29a...:  20%|█▉        | 18/91 [06:56<25:24, 20.88s/it][A
+Iterating over training query 29a...:  21%|██        | 19/91 [07:07<21:37, 18.02s/it][A
+Iterating over training query 07c...:  21%|██        | 19/91 [07:07<21:37, 18.02s/it][A
+Iterating over training query 07c...:  22%|██▏       | 20/91 [07:51<30:40, 25.93s/it][A
+Iterating over training query 27c...:  22%|██▏       | 20/91 [07:51<30:40, 25.93s/it][A
+Iterating over training query 27c...:  23%|██▎       | 21/91 [07:54<22:15, 19.07s/it][A
+Iterating over training query 16c...:  23%|██▎       | 21/91 [07:54<22:15, 19.07s/it][A
+Iterating over training query 16c...:  24%|██▍       | 22/91 [08:17<23:05, 20.08s/it][A
+Iterating over training query 02b...:  24%|██▍       | 22/91 [08:17<23:05, 20.08s/it][A
+Iterating over training query 02b...:  25%|██▌       | 23/91 [08:24<18:25, 16.25s/it][A
+Iterating over training query 07b...:  25%|██▌       | 23/91 [08:24<18:25, 16.25s/it][A
+Iterating over training query 07b...:  26%|██▋       | 24/91 [08:28<13:58, 12.52s/it][A
+Iterating over training query 25b...:  26%|██▋       | 24/91 [08:28<13:58, 12.52s/it][A
+Iterating over training query 25b...:  27%|██▋       | 25/91 [08:32<11:07, 10.12s/it][A
+Iterating over training query 23a...:  27%|██▋       | 25/91 [08:32<11:07, 10.12s/it][A
+Iterating over training query 23a...:  29%|██▊       | 26/91 [08:39<09:43,  8.98s/it][A
+Iterating over training query 32a...:  29%|██▊       | 26/91 [08:39<09:43,  8.98s/it][A
+Iterating over training query 32a...:  30%|██▉       | 27/91 [08:40<07:04,  6.63s/it][A
+Iterating over training query 06d...:  30%|██▉       | 27/91 [08:40<07:04,  6.63s/it][A
+Iterating over training query 06d...:  31%|███       | 28/91 [09:34<21:53, 20.85s/it][A
+Iterating over training query 19b...:  31%|███       | 28/91 [09:34<21:53, 20.85s/it][A
+Iterating over training query 19b...:  32%|███▏      | 29/91 [09:38<16:17, 15.77s/it][A
+Iterating over training query 11c...:  32%|███▏      | 29/91 [09:38<16:17, 15.77s/it][A
+Iterating over training query 11c...:  33%|███▎      | 30/91 [09:41<12:09, 11.96s/it][A
+Iterating over training query 25a...:  33%|███▎      | 30/91 [09:41<12:09, 11.96s/it][A
+Iterating over training query 25a...:  34%|███▍      | 31/91 [10:12<17:37, 17.63s/it][A
+Iterating over training query 01a...:  34%|███▍      | 31/91 [10:12<17:37, 17.63s/it][A
+Iterating over training query 01a...:  35%|███▌      | 32/91 [10:15<12:56, 13.16s/it][A
+Iterating over training query 26a...:  35%|███▌      | 32/91 [10:15<12:56, 13.16s/it][A
+Iterating over training query 26a...:  36%|███▋      | 33/91 [10:23<11:25, 11.82s/it][A
+Iterating over training query 23c...:  36%|███▋      | 33/91 [10:23<11:25, 11.82s/it][A
+Iterating over training query 23c...:  37%|███▋      | 34/91 [10:31<10:08, 10.68s/it][A
+Iterating over training query 12c...:  37%|███▋      | 34/91 [10:31<10:08, 10.68s/it][A
+Iterating over training query 12c...:  38%|███▊      | 35/91 [10:43<10:11, 10.91s/it][A
+Iterating over training query 11b...:  38%|███▊      | 35/91 [10:43<10:11, 10.91s/it][A
+Iterating over training query 11b...:  40%|███▉      | 36/91 [10:44<07:24,  8.08s/it][A
+Iterating over training query 28c...:  40%|███▉      | 36/91 [10:44<07:24,  8.08s/it][A
+Iterating over training query 28c...:  41%|████      | 37/91 [11:14<13:09, 14.62s/it][A
+Iterating over training query 21c...:  41%|████      | 37/91 [11:14<13:09, 14.62s/it][A
+Iterating over training query 21c...:  42%|████▏     | 38/91 [11:16<09:36, 10.88s/it][A
+Iterating over training query 13b...:  42%|████▏     | 38/91 [11:16<09:36, 10.88s/it][A
+Iterating over training query 13b...:  43%|████▎     | 39/91 [11:27<09:23, 10.84s/it][A
+Iterating over training query 02d...:  43%|████▎     | 39/91 [11:27<09:23, 10.84s/it][A
+Iterating over training query 02d...:  44%|████▍     | 40/91 [11:36<08:42, 10.25s/it][A
+Iterating over training query 18a...:  44%|████▍     | 40/91 [11:36<08:42, 10.25s/it][A
+Iterating over training query 18a...:  45%|████▌     | 41/91 [12:26<18:24, 22.08s/it][A
+Iterating over training query 28a...:  45%|████▌     | 41/91 [12:26<18:24, 22.08s/it][A
+Iterating over training query 28a...:  46%|████▌     | 42/91 [13:48<32:55, 40.31s/it][A
+Iterating over training query 24b...:  46%|████▌     | 42/91 [13:48<32:55, 40.31s/it][A
+Iterating over training query 24b...:  47%|████▋     | 43/91 [13:51<23:07, 28.90s/it][A
+Iterating over training query 05a...:  47%|████▋     | 43/91 [13:51<23:07, 28.90s/it][A
+Iterating over training query 05a...:  48%|████▊     | 44/91 [13:54<16:43, 21.34s/it][A
+Iterating over training query 17d...:  48%|████▊     | 44/91 [13:54<16:43, 21.34s/it][A
+Iterating over training query 17d...:  49%|████▉     | 45/91 [15:07<28:07, 36.69s/it][A
+Iterating over training query 17f...:  49%|████▉     | 45/91 [15:07<28:07, 36.69s/it][A
+Iterating over training query 17f...:  51%|█████     | 46/91 [16:59<44:27, 59.28s/it][A
+Iterating over training query 26b...:  51%|█████     | 46/91 [16:59<44:27, 59.28s/it][A
+Iterating over training query 26b...:  52%|█████▏    | 47/91 [17:02<31:08, 42.47s/it][A
+Iterating over training query 07a...:  52%|█████▏    | 47/91 [17:02<31:08, 42.47s/it][A
+Iterating over training query 07a...:  53%|█████▎    | 48/91 [17:12<23:32, 32.85s/it][A
+Iterating over training query 06f...:  53%|█████▎    | 48/91 [17:12<23:32, 32.85s/it][A
+Iterating over training query 06f...:  54%|█████▍    | 49/91 [18:09<27:58, 39.98s/it][A
+Iterating over training query 13a...:  54%|█████▍    | 49/91 [18:09<27:58, 39.98s/it][A
+Iterating over training query 13a...:  55%|█████▍    | 50/91 [18:33<24:01, 35.17s/it][A
+Iterating over training query 04a...:  55%|█████▍    | 50/91 [18:33<24:01, 35.17s/it][A
+Iterating over training query 04a...:  56%|█████▌    | 51/91 [18:35<16:50, 25.27s/it][A
+Iterating over training query 01d...:  56%|█████▌    | 51/91 [18:35<16:50, 25.27s/it][A
+Iterating over training query 01d...:  57%|█████▋    | 52/91 [18:38<12:01, 18.50s/it][A
+Iterating over training query 13d...:  57%|█████▋    | 52/91 [18:38<12:01, 18.50s/it][A
+Iterating over training query 13d...:  58%|█████▊    | 53/91 [19:14<15:07, 23.88s/it][A
+Iterating over training query 16a...:  58%|█████▊    | 53/91 [19:14<15:07, 23.88s/it][A
+Iterating over training query 16a...:  59%|█████▉    | 54/91 [19:17<10:49, 17.56s/it][A
+Iterating over training query 12b...:  59%|█████▉    | 54/91 [19:17<10:49, 17.56s/it][A
+Iterating over training query 12b...:  60%|██████    | 55/91 [19:20<07:54, 13.17s/it][A
+Iterating over training query 21b...:  60%|██████    | 55/91 [19:20<07:54, 13.17s/it][A
+Iterating over training query 21b...:  62%|██████▏   | 56/91 [19:22<05:44,  9.84s/it][A
+Iterating over training query 14b...:  62%|██████▏   | 56/91 [19:22<05:44,  9.84s/it][A
+Iterating over training query 14b...:  63%|██████▎   | 57/91 [19:24<04:15,  7.51s/it][A
+Iterating over training query 16d...:  63%|██████▎   | 57/91 [19:24<04:15,  7.51s/it][A
+Iterating over training query 16d...:  64%|██████▎   | 58/91 [19:42<05:50, 10.63s/it][A
+Iterating over training query 29c...:  64%|██████▎   | 58/91 [19:42<05:50, 10.63s/it][A
+Iterating over training query 29c...:  65%|██████▍   | 59/91 [19:50<05:14,  9.83s/it][A
+Iterating over training query 22b...:  65%|██████▍   | 59/91 [19:50<05:14,  9.83s/it][A
+Iterating over training query 22b...:  66%|██████▌   | 60/91 [19:54<04:11,  8.11s/it][A
+Iterating over training query 12a...:  66%|██████▌   | 60/91 [19:54<04:11,  8.11s/it][A
+Iterating over training query 12a...:  67%|██████▋   | 61/91 [19:58<03:28,  6.95s/it][A
+Iterating over training query 18c...:  67%|██████▋   | 61/91 [19:58<03:28,  6.95s/it][A
+Iterating over training query 18c...:  68%|██████▊   | 62/91 [20:57<10:48, 22.38s/it][A
+Iterating over training query 23b...:  68%|██████▊   | 62/91 [20:57<10:48, 22.38s/it][A
+Iterating over training query 23b...:  69%|██████▉   | 63/91 [20:59<07:36, 16.30s/it][A
+Iterating over training query 22d...:  69%|██████▉   | 63/91 [20:59<07:36, 16.30s/it][A
+Iterating over training query 22d...:  70%|███████   | 64/91 [21:11<06:43, 14.93s/it][A
+Iterating over training query 22a...:  70%|███████   | 64/91 [21:11<06:43, 14.93s/it][A
+Iterating over training query 22a...:  71%|███████▏  | 65/91 [21:17<05:23, 12.43s/it][A
+Iterating over training query 08d...:  71%|███████▏  | 65/91 [21:17<05:23, 12.43s/it][A
+Iterating over training query 08d...:  73%|███████▎  | 66/91 [21:54<08:15, 19.84s/it][A
+Iterating over training query 15c...:  73%|███████▎  | 66/91 [21:54<08:15, 19.84s/it][A
+Iterating over training query 15c...:  74%|███████▎  | 67/91 [22:03<06:37, 16.55s/it][A
+Iterating over training query 31a...:  74%|███████▎  | 67/91 [22:03<06:37, 16.55s/it][A
+Iterating over training query 31a...:  75%|███████▍  | 68/91 [22:08<04:57, 12.92s/it][A
+Iterating over training query 02a...:  75%|███████▍  | 68/91 [22:08<04:57, 12.92s/it][A
+Iterating over training query 02a...:  76%|███████▌  | 69/91 [22:15<04:08, 11.31s/it][A
+Iterating over training query 03a...:  76%|███████▌  | 69/91 [22:15<04:08, 11.31s/it][A
+Iterating over training query 03a...:  77%|███████▋  | 70/91 [22:18<03:03,  8.73s/it][A
+Iterating over training query 01b...:  77%|███████▋  | 70/91 [22:18<03:03,  8.73s/it][A
+Iterating over training query 01b...:  78%|███████▊  | 71/91 [22:21<02:18,  6.90s/it][A
+Iterating over training query 22c...:  78%|███████▊  | 71/91 [22:21<02:18,  6.90s/it][A
+Iterating over training query 22c...:  79%|███████▉  | 72/91 [22:50<04:18, 13.59s/it][A
+Iterating over training query 16b...:  79%|███████▉  | 72/91 [22:50<04:18, 13.59s/it][A
+Iterating over training query 16b...:  80%|████████  | 73/91 [27:09<26:13, 87.41s/it][A
+Iterating over training query 09b...:  80%|████████  | 73/91 [27:09<26:13, 87.41s/it][A
+Iterating over training query 09b...:  81%|████████▏ | 74/91 [27:16<17:51, 63.05s/it][A
+Iterating over training query 19a...:  81%|████████▏ | 74/91 [27:16<17:51, 63.05s/it][A
+Iterating over training query 19a...:  82%|████████▏ | 75/91 [27:22<12:17, 46.10s/it][A
+Iterating over training query 19c...:  82%|████████▏ | 75/91 [27:22<12:17, 46.10s/it][A
+Iterating over training query 19c...:  84%|████████▎ | 76/91 [27:32<08:47, 35.15s/it][A
+Iterating over training query 03c...:  84%|████████▎ | 76/91 [27:32<08:47, 35.15s/it][A
+Iterating over training query 03c...:  85%|████████▍ | 77/91 [27:36<06:02, 25.88s/it][A
+Iterating over training query 20b...:  85%|████████▍ | 77/91 [27:36<06:02, 25.88s/it][A
+Iterating over training query 20b...:  86%|████████▌ | 78/91 [27:58<05:21, 24.73s/it][A
+Iterating over training query 11a...:  86%|████████▌ | 78/91 [27:58<05:21, 24.73s/it][A
+Iterating over training query 11a...:  87%|████████▋ | 79/91 [28:00<03:34, 17.90s/it][A
+Iterating over training query 10b...:  87%|████████▋ | 79/91 [28:00<03:34, 17.90s/it][A
+Iterating over training query 10b...:  88%|████████▊ | 80/91 [28:06<02:36, 14.26s/it][A
+Iterating over training query 19d...:  88%|████████▊ | 80/91 [28:06<02:36, 14.26s/it][A
+Iterating over training query 19d...:  89%|████████▉ | 81/91 [30:20<08:20, 50.09s/it][A
+Iterating over training query 30a...:  89%|████████▉ | 81/91 [30:20<08:20, 50.09s/it][A
+Iterating over training query 30a...:  90%|█████████ | 82/91 [30:36<06:00, 40.02s/it][A
+Iterating over training query 17c...:  90%|█████████ | 82/91 [30:36<06:00, 40.02s/it][A
+Iterating over training query 17c...:  91%|█████████ | 83/91 [31:48<06:36, 49.50s/it][A
+Iterating over training query 15d...:  91%|█████████ | 83/91 [31:48<06:36, 49.50s/it][A
+Iterating over training query 15d...:  92%|█████████▏| 84/91 [31:59<04:26, 38.02s/it][A
+Iterating over training query 33c...:  92%|█████████▏| 84/91 [31:59<04:26, 38.02s/it][A
+Iterating over training query 33c...:  93%|█████████▎| 85/91 [32:02<02:45, 27.56s/it][A
+Iterating over training query 24a...:  93%|█████████▎| 85/91 [32:02<02:45, 27.56s/it][A
+Iterating over training query 24a...:  95%|█████████▍| 86/91 [32:07<01:44, 20.80s/it][A
+Iterating over training query 05b...:  95%|█████████▍| 86/91 [32:07<01:44, 20.80s/it][A
+Iterating over training query 05b...:  96%|█████████▌| 87/91 [32:11<01:02, 15.69s/it][A
+Iterating over training query 10c...:  96%|█████████▌| 87/91 [32:11<01:02, 15.69s/it][A
+Iterating over training query 10c...:  97%|█████████▋| 88/91 [33:11<01:27, 29.17s/it][A
+Iterating over training query 06b...:  97%|█████████▋| 88/91 [33:11<01:27, 29.17s/it][A
+Iterating over training query 06b...:  98%|█████████▊| 89/91 [33:15<00:42, 21.40s/it][A
+Iterating over training query 14a...:  98%|█████████▊| 89/91 [33:15<00:42, 21.40s/it][A
+Iterating over training query 14a...:  99%|█████████▉| 90/91 [33:19<00:16, 16.21s/it][A
+Iterating over training query 27b...:  99%|█████████▉| 90/91 [33:19<00:16, 16.21s/it][A
+Iterating over training query 27b...: 100%|██████████| 91/91 [33:21<00:00, 12.01s/it][A
+                                                                                     [AIterating over epochs...:  73%|███████▎  | 8/11 [4:38:34<1:41:10, 2023.64s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 01d...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 01d...:   1%|          | 1/91 [00:02<03:44,  2.49s/it][A
+Iterating over training query 30b...:   1%|          | 1/91 [00:02<03:44,  2.49s/it][A
+Iterating over training query 30b...:   2%|▏         | 2/91 [00:09<07:23,  4.98s/it][A
+Iterating over training query 21b...:   2%|▏         | 2/91 [00:09<07:23,  4.98s/it][A
+Iterating over training query 21b...:   3%|▎         | 3/91 [00:11<05:12,  3.55s/it][A
+Iterating over training query 18a...:   3%|▎         | 3/91 [00:11<05:12,  3.55s/it][A
+Iterating over training query 18a...:   4%|▍         | 4/91 [01:01<32:04, 22.12s/it][A
+Iterating over training query 14c...:   4%|▍         | 4/91 [01:01<32:04, 22.12s/it][A
+Iterating over training query 14c...:   5%|▌         | 5/91 [01:08<24:00, 16.75s/it][A
+Iterating over training query 17d...:   5%|▌         | 5/91 [01:08<24:00, 16.75s/it][A
+Iterating over training query 17d...:   7%|▋         | 6/91 [02:20<50:09, 35.40s/it][A
+Iterating over training query 19c...:   7%|▋         | 6/91 [02:20<50:09, 35.40s/it][A
+Iterating over training query 19c...:   8%|▊         | 7/91 [02:29<37:41, 26.93s/it][A
+Iterating over training query 03a...:   8%|▊         | 7/91 [02:29<37:41, 26.93s/it][A
+Iterating over training query 03a...:   9%|▉         | 8/91 [02:32<26:27, 19.13s/it][A
+Iterating over training query 32a...:   9%|▉         | 8/91 [02:32<26:27, 19.13s/it][A
+Iterating over training query 32a...:  10%|▉         | 9/91 [02:33<18:31, 13.56s/it][A
+Iterating over training query 18c...:  10%|▉         | 9/91 [02:33<18:31, 13.56s/it][A
+Iterating over training query 18c...:  11%|█         | 10/91 [03:31<36:47, 27.25s/it][A
+Iterating over training query 05a...:  11%|█         | 10/91 [03:31<36:47, 27.25s/it][A
+Iterating over training query 05a...:  12%|█▏        | 11/91 [03:35<26:44, 20.06s/it][A
+Iterating over training query 28c...:  12%|█▏        | 11/91 [03:35<26:44, 20.06s/it][A
+Iterating over training query 28c...:  13%|█▎        | 12/91 [04:05<30:26, 23.12s/it][A
+Iterating over training query 31a...:  13%|█▎        | 12/91 [04:05<30:26, 23.12s/it][A
+Iterating over training query 31a...:  14%|█▍        | 13/91 [04:09<22:33, 17.36s/it][A
+Iterating over training query 10a...:  14%|█▍        | 13/91 [04:09<22:33, 17.36s/it][A
+Iterating over training query 10a...:  15%|█▌        | 14/91 [04:16<18:19, 14.28s/it][A
+Iterating over training query 01a...:  15%|█▌        | 14/91 [04:16<18:19, 14.28s/it][A
+Iterating over training query 01a...:  16%|█▋        | 15/91 [04:19<13:40, 10.80s/it][A
+Iterating over training query 25b...:  16%|█▋        | 15/91 [04:19<13:40, 10.80s/it][A
+Iterating over training query 25b...:  18%|█▊        | 16/91 [04:24<11:13,  8.98s/it][A
+Iterating over training query 09d...:  18%|█▊        | 16/91 [04:24<11:13,  8.98s/it][A
+Iterating over training query 09d...:  19%|█▊        | 17/91 [05:22<29:23, 23.83s/it][A
+Iterating over training query 14a...:  19%|█▊        | 17/91 [05:22<29:23, 23.83s/it][A
+Iterating over training query 14a...:  20%|█▉        | 18/91 [05:26<21:46, 17.90s/it][A
+Iterating over training query 29c...:  20%|█▉        | 18/91 [05:26<21:46, 17.90s/it][A
+Iterating over training query 29c...:  21%|██        | 19/91 [05:30<16:20, 13.62s/it][A
+Iterating over training query 13d...:  21%|██        | 19/91 [05:30<16:20, 13.62s/it][A
+Iterating over training query 13d...:  22%|██▏       | 20/91 [06:06<24:03, 20.34s/it][A
+Iterating over training query 14b...:  22%|██▏       | 20/91 [06:06<24:03, 20.34s/it][A
+Iterating over training query 14b...:  23%|██▎       | 21/91 [06:08<17:23, 14.91s/it][A
+Iterating over training query 12b...:  23%|██▎       | 21/91 [06:08<17:23, 14.91s/it][A
+Iterating over training query 12b...:  24%|██▍       | 22/91 [06:11<12:56, 11.26s/it][A
+Iterating over training query 05b...:  24%|██▍       | 22/91 [06:11<12:56, 11.26s/it][A
+Iterating over training query 05b...:  25%|██▌       | 23/91 [06:15<10:12,  9.00s/it][A
+Iterating over training query 03c...:  25%|██▌       | 23/91 [06:15<10:12,  9.00s/it][A
+Iterating over training query 03c...:  26%|██▋       | 24/91 [06:19<08:26,  7.56s/it][A
+Iterating over training query 27b...:  26%|██▋       | 24/91 [06:19<08:26,  7.56s/it][A
+Iterating over training query 27b...:  27%|██▋       | 25/91 [06:21<06:30,  5.91s/it][A
+Iterating over training query 24a...:  27%|██▋       | 25/91 [06:21<06:30,  5.91s/it][A
+Iterating over training query 24a...:  29%|██▊       | 26/91 [06:26<06:13,  5.74s/it][A
+Iterating over training query 33b...:  29%|██▊       | 26/91 [06:26<06:13,  5.74s/it][A
+Iterating over training query 33b...:  30%|██▉       | 27/91 [06:29<05:08,  4.82s/it][A
+Iterating over training query 17c...:  30%|██▉       | 27/91 [06:29<05:08,  4.82s/it][A
+Iterating over training query 17c...:  31%|███       | 28/91 [07:40<25:52, 24.64s/it][A
+Iterating over training query 13a...:  31%|███       | 28/91 [07:40<25:52, 24.64s/it][A
+Iterating over training query 13a...:  32%|███▏      | 29/91 [08:03<25:03, 24.24s/it][A
+Iterating over training query 02b...:  32%|███▏      | 29/91 [08:03<25:03, 24.24s/it][A
+Iterating over training query 02b...:  33%|███▎      | 30/91 [08:11<19:34, 19.25s/it][A
+Iterating over training query 16c...:  33%|███▎      | 30/91 [08:11<19:34, 19.25s/it][A
+Iterating over training query 16c...:  34%|███▍      | 31/91 [08:33<20:15, 20.26s/it][A
+Iterating over training query 19b...:  34%|███▍      | 31/91 [08:33<20:15, 20.26s/it][A
+Iterating over training query 19b...:  35%|███▌      | 32/91 [08:37<14:59, 15.25s/it][A
+Iterating over training query 23a...:  35%|███▌      | 32/91 [08:37<14:59, 15.25s/it][A
+Iterating over training query 23a...:  36%|███▋      | 33/91 [08:44<12:16, 12.70s/it][A
+Iterating over training query 16a...:  36%|███▋      | 33/91 [08:44<12:16, 12.70s/it][A
+Iterating over training query 16a...:  37%|███▋      | 34/91 [08:46<09:15,  9.74s/it][A
+Iterating over training query 09b...:  37%|███▋      | 34/91 [08:46<09:15,  9.74s/it][A
+Iterating over training query 09b...:  38%|███▊      | 35/91 [08:53<08:05,  8.67s/it][A
+Iterating over training query 16b...:  38%|███▊      | 35/91 [08:53<08:05,  8.67s/it][A
+Iterating over training query 16b...:  40%|███▉      | 36/91 [13:14<1:17:21, 84.39s/it][A
+Iterating over training query 06b...:  40%|███▉      | 36/91 [13:14<1:17:21, 84.39s/it][A
+Iterating over training query 06b...:  41%|████      | 37/91 [13:17<54:04, 60.09s/it]  [A
+Iterating over training query 27a...:  41%|████      | 37/91 [13:17<54:04, 60.09s/it][A
+Iterating over training query 27a...:  42%|████▏     | 38/91 [13:19<37:47, 42.79s/it][A
+Iterating over training query 20b...:  42%|████▏     | 38/91 [13:19<37:47, 42.79s/it][A
+Iterating over training query 20b...:  43%|████▎     | 39/91 [13:42<31:50, 36.75s/it][A
+Iterating over training query 07b...:  43%|████▎     | 39/91 [13:42<31:50, 36.75s/it][A
+Iterating over training query 07b...:  44%|████▍     | 40/91 [13:46<22:45, 26.78s/it][A
+Iterating over training query 27c...:  44%|████▍     | 40/91 [13:46<22:45, 26.78s/it][A
+Iterating over training query 27c...:  45%|████▌     | 41/91 [13:49<16:22, 19.64s/it][A
+Iterating over training query 26b...:  45%|████▌     | 41/91 [13:49<16:22, 19.64s/it][A
+Iterating over training query 26b...:  46%|████▌     | 42/91 [13:52<12:03, 14.76s/it][A
+Iterating over training query 26c...:  46%|████▌     | 42/91 [13:52<12:03, 14.76s/it][A
+Iterating over training query 26c...:  47%|████▋     | 43/91 [14:53<23:01, 28.77s/it][A
+Iterating over training query 15b...:  47%|████▋     | 43/91 [14:53<23:01, 28.77s/it][A
+Iterating over training query 15b...:  48%|████▊     | 44/91 [14:55<16:08, 20.60s/it][A
+Iterating over training query 12c...:  48%|████▊     | 44/91 [14:55<16:08, 20.60s/it][A
+Iterating over training query 12c...:  49%|████▉     | 45/91 [15:07<13:42, 17.88s/it][A
+Iterating over training query 30a...:  49%|████▉     | 45/91 [15:07<13:42, 17.88s/it][A
+Iterating over training query 30a...:  51%|█████     | 46/91 [15:23<13:01, 17.36s/it][A
+Iterating over training query 10b...:  51%|█████     | 46/91 [15:23<13:01, 17.36s/it][A
+Iterating over training query 10b...:  52%|█████▏    | 47/91 [15:28<10:08, 13.84s/it][A
+Iterating over training query 31b...:  52%|█████▏    | 47/91 [15:28<10:08, 13.84s/it][A
+Iterating over training query 31b...:  53%|█████▎    | 48/91 [15:32<07:42, 10.75s/it][A
+Iterating over training query 01b...:  53%|█████▎    | 48/91 [15:32<07:42, 10.75s/it][A
+Iterating over training query 01b...:  54%|█████▍    | 49/91 [15:34<05:49,  8.31s/it][A
+Iterating over training query 15c...:  54%|█████▍    | 49/91 [15:34<05:49,  8.31s/it][A
+Iterating over training query 15c...:  55%|█████▍    | 50/91 [15:43<05:46,  8.46s/it][A
+Iterating over training query 07a...:  55%|█████▍    | 50/91 [15:43<05:46,  8.46s/it][A
+Iterating over training query 07a...:  56%|█████▌    | 51/91 [15:54<06:08,  9.22s/it][A
+Iterating over training query 02d...:  56%|█████▌    | 51/91 [15:54<06:08,  9.22s/it][A
+Iterating over training query 02d...:  57%|█████▋    | 52/91 [16:03<05:56,  9.14s/it][A
+Iterating over training query 11a...:  57%|█████▋    | 52/91 [16:03<05:56,  9.14s/it][A
+Iterating over training query 11a...:  58%|█████▊    | 53/91 [16:05<04:27,  7.05s/it][A
+Iterating over training query 15d...:  58%|█████▊    | 53/91 [16:05<04:27,  7.05s/it][A
+Iterating over training query 15d...:  59%|█████▉    | 54/91 [16:16<05:03,  8.20s/it][A
+Iterating over training query 06d...:  59%|█████▉    | 54/91 [16:16<05:03,  8.20s/it][A
+Iterating over training query 06d...:  60%|██████    | 55/91 [17:12<13:25, 22.38s/it][A
+Iterating over training query 03b...:  60%|██████    | 55/91 [17:12<13:25, 22.38s/it][A
+Iterating over training query 03b...:  62%|██████▏   | 56/91 [17:14<09:32, 16.34s/it][A
+Iterating over training query 28a...:  62%|██████▏   | 56/91 [17:14<09:32, 16.34s/it][A
+Iterating over training query 28a...:  63%|██████▎   | 57/91 [18:37<20:38, 36.44s/it][A
+Iterating over training query 29b...:  63%|██████▎   | 57/91 [18:37<20:38, 36.44s/it][A
+Iterating over training query 29b...:  64%|██████▎   | 58/91 [18:45<15:14, 27.72s/it][A
+Iterating over training query 19d...:  64%|██████▎   | 58/91 [18:45<15:14, 27.72s/it][A
+Iterating over training query 19d...:  65%|██████▍   | 59/91 [20:58<31:37, 59.31s/it][A
+Iterating over training query 11c...:  65%|██████▍   | 59/91 [20:58<31:37, 59.31s/it][A
+Iterating over training query 11c...:  66%|██████▌   | 60/91 [21:01<21:59, 42.58s/it][A
+Iterating over training query 07c...:  66%|██████▌   | 60/91 [21:01<21:59, 42.58s/it][A
+Iterating over training query 07c...:  67%|██████▋   | 61/91 [21:47<21:45, 43.51s/it][A
+Iterating over training query 17f...:  67%|██████▋   | 61/91 [21:47<21:45, 43.51s/it][A
+Iterating over training query 17f...:  68%|██████▊   | 62/91 [23:40<31:03, 64.27s/it][A
+Iterating over training query 17a...:  68%|██████▊   | 62/91 [23:40<31:03, 64.27s/it][A
+Iterating over training query 17a...:  69%|██████▉   | 63/91 [26:02<40:58, 87.82s/it][A
+Iterating over training query 06f...:  69%|██████▉   | 63/91 [26:02<40:58, 87.82s/it][A
+Iterating over training query 06f...:  70%|███████   | 64/91 [26:59<35:21, 78.58s/it][A
+Iterating over training query 22d...:  70%|███████   | 64/91 [26:59<35:21, 78.58s/it][A
+Iterating over training query 22d...:  71%|███████▏  | 65/91 [27:12<25:24, 58.64s/it][A
+Iterating over training query 23b...:  71%|███████▏  | 65/91 [27:12<25:24, 58.64s/it][A
+Iterating over training query 23b...:  73%|███████▎  | 66/91 [27:14<17:23, 41.73s/it][A
+Iterating over training query 02a...:  73%|███████▎  | 66/91 [27:14<17:23, 41.73s/it][A
+Iterating over training query 02a...:  74%|███████▎  | 67/91 [27:21<12:35, 31.46s/it][A
+Iterating over training query 22a...:  74%|███████▎  | 67/91 [27:21<12:35, 31.46s/it][A
+Iterating over training query 22a...:  75%|███████▍  | 68/91 [27:28<09:12, 24.01s/it][A
+Iterating over training query 09a...:  75%|███████▍  | 68/91 [27:28<09:12, 24.01s/it][A
+Iterating over training query 09a...:  76%|███████▌  | 69/91 [27:34<06:49, 18.62s/it][A
+Iterating over training query 12a...:  76%|███████▌  | 69/91 [27:34<06:49, 18.62s/it][A
+Iterating over training query 12a...:  77%|███████▋  | 70/91 [27:38<05:00, 14.33s/it][A
+Iterating over training query 08d...:  77%|███████▋  | 70/91 [27:38<05:00, 14.33s/it][A
+Iterating over training query 08d...:  78%|███████▊  | 71/91 [28:16<07:06, 21.31s/it][A
+Iterating over training query 10c...:  78%|███████▊  | 71/91 [28:16<07:06, 21.31s/it][A
+Iterating over training query 10c...:  79%|███████▉  | 72/91 [29:15<10:22, 32.77s/it][A
+Iterating over training query 22c...:  79%|███████▉  | 72/91 [29:15<10:22, 32.77s/it][A
+Iterating over training query 22c...:  80%|████████  | 73/91 [29:45<09:30, 31.72s/it][A
+Iterating over training query 24b...:  80%|████████  | 73/91 [29:45<09:30, 31.72s/it][A
+Iterating over training query 24b...:  81%|████████▏ | 74/91 [29:47<06:29, 22.90s/it][A
+Iterating over training query 31c...:  81%|████████▏ | 74/91 [29:47<06:29, 22.90s/it][A
+Iterating over training query 31c...:  82%|████████▏ | 75/91 [29:53<04:45, 17.86s/it][A
+Iterating over training query 08a...:  82%|████████▏ | 75/91 [29:53<04:45, 17.86s/it][A
+Iterating over training query 08a...:  84%|████████▎ | 76/91 [30:08<04:13, 16.88s/it][A
+Iterating over training query 16d...:  84%|████████▎ | 76/91 [30:08<04:13, 16.88s/it][A
+Iterating over training query 16d...:  85%|████████▍ | 77/91 [30:26<04:01, 17.22s/it][A
+Iterating over training query 29a...:  85%|████████▍ | 77/91 [30:26<04:01, 17.22s/it][A
+Iterating over training query 29a...:  86%|████████▌ | 78/91 [30:34<03:07, 14.43s/it][A
+Iterating over training query 13b...:  86%|████████▌ | 78/91 [30:34<03:07, 14.43s/it][A
+Iterating over training query 13b...:  87%|████████▋ | 79/91 [30:45<02:40, 13.40s/it][A
+Iterating over training query 23c...:  87%|████████▋ | 79/91 [30:45<02:40, 13.40s/it][A
+Iterating over training query 23c...:  88%|████████▊ | 80/91 [30:53<02:10, 11.83s/it][A
+Iterating over training query 13c...:  88%|████████▊ | 80/91 [30:53<02:10, 11.83s/it][A
+Iterating over training query 13c...:  89%|████████▉ | 81/91 [31:04<01:55, 11.59s/it][A
+Iterating over training query 04a...:  89%|████████▉ | 81/91 [31:04<01:55, 11.59s/it][A
+Iterating over training query 04a...:  90%|█████████ | 82/91 [31:06<01:18,  8.73s/it][A
+Iterating over training query 33c...:  90%|█████████ | 82/91 [31:06<01:18,  8.73s/it][A
+Iterating over training query 33c...:  91%|█████████ | 83/91 [31:09<00:56,  7.05s/it][A
+Iterating over training query 30c...:  91%|█████████ | 83/91 [31:09<00:56,  7.05s/it][A
+Iterating over training query 30c...:  92%|█████████▏| 84/91 [32:12<02:47, 23.88s/it][A
+Iterating over training query 20c...:  92%|█████████▏| 84/91 [32:12<02:47, 23.88s/it][A
+Iterating over training query 20c...:  93%|█████████▎| 85/91 [32:25<02:03, 20.56s/it][A
+Iterating over training query 11b...:  93%|█████████▎| 85/91 [32:25<02:03, 20.56s/it][A
+Iterating over training query 11b...:  95%|█████████▍| 86/91 [32:26<01:14, 14.84s/it][A
+Iterating over training query 19a...:  95%|█████████▍| 86/91 [32:26<01:14, 14.84s/it][A
+Iterating over training query 19a...:  96%|█████████▌| 87/91 [32:33<00:49, 12.38s/it][A
+Iterating over training query 26a...:  96%|█████████▌| 87/91 [32:33<00:49, 12.38s/it][A
+Iterating over training query 26a...:  97%|█████████▋| 88/91 [32:41<00:33, 11.16s/it][A
+Iterating over training query 22b...:  97%|█████████▋| 88/91 [32:41<00:33, 11.16s/it][A
+Iterating over training query 22b...:  98%|█████████▊| 89/91 [32:46<00:18,  9.11s/it][A
+Iterating over training query 21c...:  98%|█████████▊| 89/91 [32:46<00:18,  9.11s/it][A
+Iterating over training query 21c...:  99%|█████████▉| 90/91 [32:48<00:07,  7.02s/it][A
+Iterating over training query 25a...:  99%|█████████▉| 90/91 [32:48<00:07,  7.02s/it][A
+Iterating over training query 25a...: 100%|██████████| 91/91 [33:18<00:00, 13.90s/it][A
+                                                                                     [AIterating over epochs...:  82%|████████▏ | 9/11 [5:11:52<1:07:11, 2015.74s/it]
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 23a...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 23a...:   1%|          | 1/91 [00:06<09:47,  6.53s/it][A
+Iterating over training query 29a...:   1%|          | 1/91 [00:06<09:47,  6.53s/it][A
+Iterating over training query 29a...:   2%|▏         | 2/91 [00:10<07:37,  5.14s/it][A
+Iterating over training query 25a...:   2%|▏         | 2/91 [00:10<07:37,  5.14s/it][A
+Iterating over training query 25a...:   3%|▎         | 3/91 [00:41<24:25, 16.65s/it][A
+Iterating over training query 14a...:   3%|▎         | 3/91 [00:41<24:25, 16.65s/it][A
+Iterating over training query 14a...:   4%|▍         | 4/91 [00:44<16:50, 11.62s/it][A
+Iterating over training query 01b...:   4%|▍         | 4/91 [00:44<16:50, 11.62s/it][A
+Iterating over training query 01b...:   5%|▌         | 5/91 [00:47<12:03,  8.41s/it][A
+Iterating over training query 05a...:   5%|▌         | 5/91 [00:47<12:03,  8.41s/it][A
+Iterating over training query 05a...:   7%|▋         | 6/91 [00:51<09:44,  6.88s/it][A
+Iterating over training query 30c...:   7%|▋         | 6/91 [00:51<09:44,  6.88s/it][A
+Iterating over training query 30c...:   8%|▊         | 7/91 [01:54<35:17, 25.20s/it][A
+Iterating over training query 22b...:   8%|▊         | 7/91 [01:54<35:17, 25.20s/it][A
+Iterating over training query 22b...:   9%|▉         | 8/91 [01:58<25:35, 18.50s/it][A
+Iterating over training query 07c...:   9%|▉         | 8/91 [01:58<25:35, 18.50s/it][A
+Iterating over training query 07c...:  10%|▉         | 9/91 [02:43<36:33, 26.75s/it][A
+Iterating over training query 02b...:  10%|▉         | 9/91 [02:43<36:33, 26.75s/it][A
+Iterating over training query 02b...:  11%|█         | 10/91 [02:51<28:10, 20.88s/it][A
+Iterating over training query 12b...:  11%|█         | 10/91 [02:51<28:10, 20.88s/it][A
+Iterating over training query 12b...:  12%|█▏        | 11/91 [02:54<20:25, 15.32s/it][A
+Iterating over training query 23c...:  12%|█▏        | 11/91 [02:54<20:25, 15.32s/it][A
+Iterating over training query 23c...:  13%|█▎        | 12/91 [03:02<17:19, 13.16s/it][A
+Iterating over training query 13b...:  13%|█▎        | 12/91 [03:02<17:19, 13.16s/it][A
+Iterating over training query 13b...:  14%|█▍        | 13/91 [03:13<16:11, 12.45s/it][A
+Iterating over training query 28a...:  14%|█▍        | 13/91 [03:13<16:11, 12.45s/it][A
+Iterating over training query 28a...:  15%|█▌        | 14/91 [04:36<43:21, 33.78s/it][A
+Iterating over training query 27c...:  15%|█▌        | 14/91 [04:36<43:21, 33.78s/it][A
+Iterating over training query 27c...:  16%|█▋        | 15/91 [04:39<31:10, 24.62s/it][A
+Iterating over training query 23b...:  16%|█▋        | 15/91 [04:39<31:10, 24.62s/it][A
+Iterating over training query 23b...:  18%|█▊        | 16/91 [04:41<22:18, 17.84s/it][A
+Iterating over training query 01d...:  18%|█▊        | 16/91 [04:41<22:18, 17.84s/it][A
+Iterating over training query 01d...:  19%|█▊        | 17/91 [04:44<16:22, 13.28s/it][A
+Iterating over training query 14c...:  19%|█▊        | 17/91 [04:44<16:22, 13.28s/it][A
+Iterating over training query 14c...:  20%|█▉        | 18/91 [04:51<13:57, 11.47s/it][A
+Iterating over training query 09a...:  20%|█▉        | 18/91 [04:51<13:57, 11.47s/it][A
+Iterating over training query 09a...:  21%|██        | 19/91 [04:57<11:50,  9.87s/it][A
+Iterating over training query 21b...:  21%|██        | 19/91 [04:57<11:50,  9.87s/it][A
+Iterating over training query 21b...:  22%|██▏       | 20/91 [04:59<08:58,  7.58s/it][A
+Iterating over training query 20b...:  22%|██▏       | 20/91 [04:59<08:58,  7.58s/it][A
+Iterating over training query 20b...:  23%|██▎       | 21/91 [05:21<13:51, 11.88s/it][A
+Iterating over training query 14b...:  23%|██▎       | 21/91 [05:21<13:51, 11.88s/it][A
+Iterating over training query 14b...:  24%|██▍       | 22/91 [05:24<10:20,  8.99s/it][A
+Iterating over training query 06d...:  24%|██▍       | 22/91 [05:24<10:20,  8.99s/it][A
+Iterating over training query 06d...:  25%|██▌       | 23/91 [06:19<26:04, 23.01s/it][A
+Iterating over training query 04a...:  25%|██▌       | 23/91 [06:19<26:04, 23.01s/it][A
+Iterating over training query 04a...:  26%|██▋       | 24/91 [06:21<18:43, 16.76s/it][A
+Iterating over training query 15d...:  26%|██▋       | 24/91 [06:21<18:43, 16.76s/it][A
+Iterating over training query 15d...:  27%|██▋       | 25/91 [06:33<16:38, 15.12s/it][A
+Iterating over training query 19c...:  27%|██▋       | 25/91 [06:33<16:38, 15.12s/it][A
+Iterating over training query 19c...:  29%|██▊       | 26/91 [06:43<14:48, 13.67s/it][A
+Iterating over training query 15b...:  29%|██▊       | 26/91 [06:43<14:48, 13.67s/it][A
+Iterating over training query 15b...:  30%|██▉       | 27/91 [06:45<10:41, 10.03s/it][A
+Iterating over training query 09b...:  30%|██▉       | 27/91 [06:45<10:41, 10.03s/it][A
+Iterating over training query 09b...:  31%|███       | 28/91 [06:51<09:23,  8.95s/it][A
+Iterating over training query 10c...:  31%|███       | 28/91 [06:51<09:23,  8.95s/it][A
+Iterating over training query 10c...:  32%|███▏      | 29/91 [07:51<24:59, 24.19s/it][A
+Iterating over training query 24a...:  32%|███▏      | 29/91 [07:51<24:59, 24.19s/it][A
+Iterating over training query 24a...:  33%|███▎      | 30/91 [07:56<18:48, 18.50s/it][A
+Iterating over training query 33b...:  33%|███▎      | 30/91 [07:56<18:48, 18.50s/it][A
+Iterating over training query 33b...:  34%|███▍      | 31/91 [07:59<13:48, 13.81s/it][A
+Iterating over training query 29c...:  34%|███▍      | 31/91 [07:59<13:48, 13.81s/it][A
+Iterating over training query 29c...:  35%|███▌      | 32/91 [08:06<11:34, 11.77s/it][A
+Iterating over training query 07b...:  35%|███▌      | 32/91 [08:06<11:34, 11.77s/it][A
+Iterating over training query 07b...:  36%|███▋      | 33/91 [08:09<08:59,  9.29s/it][A
+Iterating over training query 27b...:  36%|███▋      | 33/91 [08:09<08:59,  9.29s/it][A
+Iterating over training query 27b...:  37%|███▋      | 34/91 [08:12<06:49,  7.18s/it][A
+Iterating over training query 33c...:  37%|███▋      | 34/91 [08:12<06:49,  7.18s/it][A
+Iterating over training query 33c...:  38%|███▊      | 35/91 [08:15<05:30,  5.90s/it][A
+Iterating over training query 05b...:  38%|███▊      | 35/91 [08:15<05:30,  5.90s/it][A
+Iterating over training query 05b...:  40%|███▉      | 36/91 [08:18<04:46,  5.21s/it][A
+Iterating over training query 24b...:  40%|███▉      | 36/91 [08:18<04:46,  5.21s/it][A
+Iterating over training query 24b...:  41%|████      | 37/91 [08:21<03:57,  4.39s/it][A
+Iterating over training query 03a...:  41%|████      | 37/91 [08:21<03:57,  4.39s/it][A
+Iterating over training query 03a...:  42%|████▏     | 38/91 [08:23<03:26,  3.89s/it][A
+Iterating over training query 08a...:  42%|████▏     | 38/91 [08:23<03:26,  3.89s/it][A
+Iterating over training query 08a...:  43%|████▎     | 39/91 [08:38<06:06,  7.05s/it][A
+Iterating over training query 19b...:  43%|████▎     | 39/91 [08:38<06:06,  7.05s/it][A
+Iterating over training query 19b...:  44%|████▍     | 40/91 [08:41<05:08,  6.05s/it][A
+Iterating over training query 02a...:  44%|████▍     | 40/91 [08:41<05:08,  6.05s/it][A
+Iterating over training query 02a...:  45%|████▌     | 41/91 [08:49<05:28,  6.57s/it][A
+Iterating over training query 17d...:  45%|████▌     | 41/91 [08:49<05:28,  6.57s/it][A
+Iterating over training query 17d...:  46%|████▌     | 42/91 [10:03<21:43, 26.61s/it][A
+Iterating over training query 03b...:  46%|████▌     | 42/91 [10:03<21:43, 26.61s/it][A
+Iterating over training query 03b...:  47%|████▋     | 43/91 [10:05<15:25, 19.29s/it][A
+Iterating over training query 27a...:  47%|████▋     | 43/91 [10:05<15:25, 19.29s/it][A
+Iterating over training query 27a...:  48%|████▊     | 44/91 [10:07<11:06, 14.18s/it][A
+Iterating over training query 10b...:  48%|████▊     | 44/91 [10:07<11:06, 14.18s/it][A
+Iterating over training query 10b...:  49%|████▉     | 45/91 [10:13<08:56, 11.66s/it][A
+Iterating over training query 22a...:  49%|████▉     | 45/91 [10:13<08:56, 11.66s/it][A
+Iterating over training query 22a...:  51%|█████     | 46/91 [10:19<07:35, 10.13s/it][A
+Iterating over training query 31c...:  51%|█████     | 46/91 [10:19<07:35, 10.13s/it][A
+Iterating over training query 31c...:  52%|█████▏    | 47/91 [10:26<06:38,  9.05s/it][A
+Iterating over training query 19a...:  52%|█████▏    | 47/91 [10:26<06:38,  9.05s/it][A
+Iterating over training query 19a...:  53%|█████▎    | 48/91 [10:32<05:53,  8.23s/it][A
+Iterating over training query 31b...:  53%|█████▎    | 48/91 [10:32<05:53,  8.23s/it][A
+Iterating over training query 31b...:  54%|█████▍    | 49/91 [10:36<04:49,  6.89s/it][A
+Iterating over training query 26c...:  54%|█████▍    | 49/91 [10:36<04:49,  6.89s/it][A
+Iterating over training query 26c...:  55%|█████▍    | 50/91 [11:38<15:55, 23.30s/it][A
+Iterating over training query 15c...:  55%|█████▍    | 50/91 [11:38<15:55, 23.30s/it][A
+Iterating over training query 15c...:  56%|█████▌    | 51/91 [11:47<12:41, 19.03s/it][A
+Iterating over training query 10a...:  56%|█████▌    | 51/91 [11:47<12:41, 19.03s/it][A
+Iterating over training query 10a...:  57%|█████▋    | 52/91 [11:54<10:02, 15.44s/it][A
+Iterating over training query 18c...:  57%|█████▋    | 52/91 [11:54<10:02, 15.44s/it][A
+Iterating over training query 18c...:  58%|█████▊    | 53/91 [12:54<18:19, 28.93s/it][A
+Iterating over training query 12a...:  58%|█████▊    | 53/91 [12:54<18:19, 28.93s/it][A
+Iterating over training query 12a...:  59%|█████▉    | 54/91 [12:58<13:14, 21.47s/it][A
+Iterating over training query 25b...:  59%|█████▉    | 54/91 [12:58<13:14, 21.47s/it][A
+Iterating over training query 25b...:  60%|██████    | 55/91 [13:03<09:50, 16.40s/it][A
+Iterating over training query 29b...:  60%|██████    | 55/91 [13:03<09:50, 16.40s/it][A
+Iterating over training query 29b...:  62%|██████▏   | 56/91 [13:06<07:13, 12.38s/it][A
+Iterating over training query 20c...:  62%|██████▏   | 56/91 [13:06<07:13, 12.38s/it][A
+Iterating over training query 20c...:  63%|██████▎   | 57/91 [13:18<07:02, 12.42s/it][A
+Iterating over training query 13a...:  63%|██████▎   | 57/91 [13:18<07:02, 12.42s/it][A
+Iterating over training query 13a...:  64%|██████▎   | 58/91 [13:42<08:45, 15.92s/it][A
+Iterating over training query 30b...:  64%|██████▎   | 58/91 [13:42<08:45, 15.92s/it][A
+Iterating over training query 30b...:  65%|██████▍   | 59/91 [13:49<06:58, 13.07s/it][A
+Iterating over training query 30a...:  65%|██████▍   | 59/91 [13:49<06:58, 13.07s/it][A
+Iterating over training query 30a...:  66%|██████▌   | 60/91 [14:05<07:11, 13.93s/it][A
+Iterating over training query 17a...:  66%|██████▌   | 60/91 [14:05<07:11, 13.93s/it][A
+Iterating over training query 17a...:  67%|██████▋   | 61/91 [16:26<26:01, 52.04s/it][A
+Iterating over training query 17f...:  67%|██████▋   | 61/91 [16:26<26:01, 52.04s/it][A
+Iterating over training query 17f...:  68%|██████▊   | 62/91 [18:18<33:51, 70.07s/it][A
+Iterating over training query 32a...:  68%|██████▊   | 62/91 [18:18<33:51, 70.07s/it][A
+Iterating over training query 32a...:  69%|██████▉   | 63/91 [18:19<23:05, 49.47s/it][A
+Iterating over training query 22c...:  69%|██████▉   | 63/91 [18:19<23:05, 49.47s/it][A
+Iterating over training query 22c...:  70%|███████   | 64/91 [18:48<19:31, 43.38s/it][A
+Iterating over training query 11a...:  70%|███████   | 64/91 [18:48<19:31, 43.38s/it][A
+Iterating over training query 11a...:  71%|███████▏  | 65/91 [18:50<13:25, 30.97s/it][A
+Iterating over training query 11c...:  71%|███████▏  | 65/91 [18:50<13:25, 30.97s/it][A
+Iterating over training query 11c...:  73%|███████▎  | 66/91 [18:54<09:29, 22.76s/it][A
+Iterating over training query 22d...:  73%|███████▎  | 66/91 [18:54<09:29, 22.76s/it][A
+Iterating over training query 22d...:  74%|███████▎  | 67/91 [19:07<07:51, 19.66s/it][A
+Iterating over training query 19d...:  74%|███████▎  | 67/91 [19:07<07:51, 19.66s/it][A
+Iterating over training query 19d...:  75%|███████▍  | 68/91 [21:20<20:39, 53.90s/it][A
+Iterating over training query 26a...:  75%|███████▍  | 68/91 [21:20<20:39, 53.90s/it][A
+Iterating over training query 26a...:  76%|███████▌  | 69/91 [21:29<14:46, 40.30s/it][A
+Iterating over training query 09d...:  76%|███████▌  | 69/91 [21:29<14:46, 40.30s/it][A
+Iterating over training query 09d...:  77%|███████▋  | 70/91 [22:27<15:59, 45.71s/it][A
+Iterating over training query 26b...:  77%|███████▋  | 70/91 [22:27<15:59, 45.71s/it][A
+Iterating over training query 26b...:  78%|███████▊  | 71/91 [22:30<10:58, 32.93s/it][A
+Iterating over training query 03c...:  78%|███████▊  | 71/91 [22:30<10:58, 32.93s/it][A
+Iterating over training query 03c...:  79%|███████▉  | 72/91 [22:34<07:41, 24.28s/it][A
+Iterating over training query 16d...:  79%|███████▉  | 72/91 [22:34<07:41, 24.28s/it][A
+Iterating over training query 16d...:  80%|████████  | 73/91 [22:52<06:42, 22.37s/it][A
+Iterating over training query 16c...:  80%|████████  | 73/91 [22:52<06:42, 22.37s/it][A
+Iterating over training query 16c...:  81%|████████▏ | 74/91 [23:16<06:26, 22.71s/it][A
+Iterating over training query 01a...:  81%|████████▏ | 74/91 [23:16<06:26, 22.71s/it][A
+Iterating over training query 01a...:  82%|████████▏ | 75/91 [23:18<04:27, 16.69s/it][A
+Iterating over training query 18a...:  82%|████████▏ | 75/91 [23:18<04:27, 16.69s/it][A
+Iterating over training query 18a...:  84%|████████▎ | 76/91 [24:09<06:40, 26.71s/it][A
+Iterating over training query 06f...:  84%|████████▎ | 76/91 [24:09<06:40, 26.71s/it][A
+Iterating over training query 06f...:  85%|████████▍ | 77/91 [25:04<08:16, 35.48s/it][A
+Iterating over training query 17c...:  85%|████████▍ | 77/91 [25:04<08:16, 35.48s/it][A
+Iterating over training query 17c...:  86%|████████▌ | 78/91 [26:16<10:00, 46.22s/it][A
+Iterating over training query 31a...:  86%|████████▌ | 78/91 [26:16<10:00, 46.22s/it][A
+Iterating over training query 31a...:  87%|████████▋ | 79/91 [26:20<06:43, 33.65s/it][A
+Iterating over training query 16a...:  87%|████████▋ | 79/91 [26:20<06:43, 33.65s/it][A
+Iterating over training query 16a...:  88%|████████▊ | 80/91 [26:23<04:28, 24.45s/it][A
+Iterating over training query 08d...:  88%|████████▊ | 80/91 [26:23<04:28, 24.45s/it][A
+Iterating over training query 08d...:  89%|████████▉ | 81/91 [27:00<04:41, 28.20s/it][A
+Iterating over training query 13c...:  89%|████████▉ | 81/91 [27:00<04:41, 28.20s/it][A
+Iterating over training query 13c...:  90%|█████████ | 82/91 [27:11<03:26, 22.96s/it][A
+Iterating over training query 13d...:  90%|█████████ | 82/91 [27:11<03:26, 22.96s/it][A
+Iterating over training query 13d...:  91%|█████████ | 83/91 [27:47<03:35, 26.97s/it][A
+Iterating over training query 06b...:  91%|█████████ | 83/91 [27:47<03:35, 26.97s/it][A
+Iterating over training query 06b...:  92%|█████████▏| 84/91 [27:51<02:19, 19.94s/it][A
+Iterating over training query 12c...:  92%|█████████▏| 84/91 [27:51<02:19, 19.94s/it][A
+Iterating over training query 12c...:  93%|█████████▎| 85/91 [28:02<01:44, 17.49s/it][A
+Iterating over training query 28c...:  93%|█████████▎| 85/91 [28:02<01:44, 17.49s/it][A
+Iterating over training query 28c...:  95%|█████████▍| 86/91 [28:33<01:47, 21.54s/it][A
+Iterating over training query 02d...:  95%|█████████▍| 86/91 [28:33<01:47, 21.54s/it][A
+Iterating over training query 02d...:  96%|█████████▌| 87/91 [28:43<01:12, 18.07s/it][A
+Iterating over training query 21c...:  96%|█████████▌| 87/91 [28:43<01:12, 18.07s/it][A
+Iterating over training query 21c...:  97%|█████████▋| 88/91 [28:46<00:40, 13.39s/it][A
+Iterating over training query 16b...:  97%|█████████▋| 88/91 [28:46<00:40, 13.39s/it][A
+Iterating over training query 16b...:  98%|█████████▊| 89/91 [33:27<03:07, 93.74s/it][A
+Iterating over training query 11b...:  98%|█████████▊| 89/91 [33:27<03:07, 93.74s/it][A
+Iterating over training query 11b...:  99%|█████████▉| 90/91 [33:29<01:06, 66.13s/it][A
+Iterating over training query 07a...:  99%|█████████▉| 90/91 [33:29<01:06, 66.13s/it][A
+Iterating over training query 07a...: 100%|██████████| 91/91 [33:41<00:00, 49.94s/it][A
+                                                                                     [AIterating over epochs...:  91%|█████████ | 10/11 [5:45:33<33:37, 2017.50s/it] 
+Iterating over training queries...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 22d...:   0%|          | 0/91 [00:00<?, ?it/s][A
+Iterating over training query 22d...:   1%|          | 1/91 [00:12<19:08, 12.76s/it][A
+Iterating over training query 14b...:   1%|          | 1/91 [00:12<19:08, 12.76s/it][A
+Iterating over training query 14b...:   2%|▏         | 2/91 [00:15<09:55,  6.69s/it][A
+Iterating over training query 29a...:   2%|▏         | 2/91 [00:15<09:55,  6.69s/it][A
+Iterating over training query 29a...:   3%|▎         | 3/91 [00:24<11:25,  7.79s/it][A
+Iterating over training query 27c...:   3%|▎         | 3/91 [00:24<11:25,  7.79s/it][A
+Iterating over training query 27c...:   4%|▍         | 4/91 [00:27<08:30,  5.87s/it][A
+Iterating over training query 12b...:   4%|▍         | 4/91 [00:27<08:30,  5.87s/it][A
+Iterating over training query 12b...:   5%|▌         | 5/91 [00:30<06:55,  4.83s/it][A
+Iterating over training query 06b...:   5%|▌         | 5/91 [00:30<06:55,  4.83s/it][A
+Iterating over training query 06b...:   7%|▋         | 6/91 [00:33<06:12,  4.38s/it][A
+Iterating over training query 28a...:   7%|▋         | 6/91 [00:33<06:12,  4.38s/it][A
+Iterating over training query 28a...:   8%|▊         | 7/91 [01:59<43:21, 30.97s/it][A
+Iterating over training query 12a...:   8%|▊         | 7/91 [01:59<43:21, 30.97s/it][A
+Iterating over training query 12a...:   9%|▉         | 8/91 [02:04<31:18, 22.64s/it][A
+Iterating over training query 22b...:   9%|▉         | 8/91 [02:04<31:18, 22.64s/it][A
+Iterating over training query 22b...:  10%|▉         | 9/91 [02:08<23:08, 16.93s/it][A
+Iterating over training query 02a...:  10%|▉         | 9/91 [02:08<23:08, 16.93s/it][A
+Iterating over training query 02a...:  11%|█         | 10/91 [02:16<19:08, 14.18s/it][A
+Iterating over training query 03b...:  11%|█         | 10/91 [02:16<19:08, 14.18s/it][A
+Iterating over training query 03b...:  12%|█▏        | 11/91 [02:18<14:02, 10.53s/it][A
+Iterating over training query 24a...:  12%|█▏        | 11/91 [02:18<14:02, 10.53s/it][A
+Iterating over training query 24a...:  13%|█▎        | 12/91 [02:24<11:51,  9.01s/it][A
+Iterating over training query 27a...:  13%|█▎        | 12/91 [02:24<11:51,  9.01s/it][A
+Iterating over training query 27a...:  14%|█▍        | 13/91 [02:27<09:11,  7.07s/it][A
+Iterating over training query 04a...:  14%|█▍        | 13/91 [02:27<09:11,  7.07s/it][A
+Iterating over training query 04a...:  15%|█▌        | 14/91 [02:29<07:09,  5.58s/it][A
+Iterating over training query 19c...:  15%|█▌        | 14/91 [02:29<07:09,  5.58s/it][A
+Iterating over training query 19c...:  16%|█▋        | 15/91 [02:39<08:50,  6.98s/it][A
+Iterating over training query 13b...:  16%|█▋        | 15/91 [02:39<08:50,  6.98s/it][A
+Iterating over training query 13b...:  18%|█▊        | 16/91 [02:50<10:27,  8.36s/it][A
+Iterating over training query 17c...:  18%|█▊        | 16/91 [02:50<10:27,  8.36s/it][A
+Iterating over training query 17c...:  19%|█▊        | 17/91 [04:06<35:22, 28.68s/it][A
+Iterating over training query 23a...:  19%|█▊        | 17/91 [04:06<35:22, 28.68s/it][A
+Iterating over training query 23a...:  20%|█▉        | 18/91 [04:13<27:00, 22.19s/it][A
+Iterating over training query 10a...:  20%|█▉        | 18/91 [04:13<27:00, 22.19s/it][A
+Iterating over training query 10a...:  21%|██        | 19/91 [04:21<21:17, 17.75s/it][A
+Iterating over training query 15c...:  21%|██        | 19/91 [04:21<21:17, 17.75s/it][A
+Iterating over training query 15c...:  22%|██▏       | 20/91 [04:30<17:58, 15.19s/it][A
+Iterating over training query 33b...:  22%|██▏       | 20/91 [04:30<17:58, 15.19s/it][A
+Iterating over training query 33b...:  23%|██▎       | 21/91 [04:33<13:26, 11.52s/it][A
+Iterating over training query 26b...:  23%|██▎       | 21/91 [04:33<13:26, 11.52s/it][A
+Iterating over training query 26b...:  24%|██▍       | 22/91 [04:36<10:19,  8.98s/it][A
+Iterating over training query 23c...:  24%|██▍       | 22/91 [04:36<10:19,  8.98s/it][A
+Iterating over training query 23c...:  25%|██▌       | 23/91 [04:45<09:59,  8.82s/it][A
+Iterating over training query 03a...:  25%|██▌       | 23/91 [04:45<09:59,  8.82s/it][A
+Iterating over training query 03a...:  26%|██▋       | 24/91 [04:47<07:50,  7.02s/it][A
+Iterating over training query 31c...:  26%|██▋       | 24/91 [04:47<07:50,  7.02s/it][A
+Iterating over training query 31c...:  27%|██▋       | 25/91 [04:54<07:43,  7.02s/it][A
+Iterating over training query 11a...:  27%|██▋       | 25/91 [04:54<07:43,  7.02s/it][A
+Iterating over training query 11a...:  29%|██▊       | 26/91 [04:56<05:58,  5.52s/it][A
+Iterating over training query 01d...:  29%|██▊       | 26/91 [04:56<05:58,  5.52s/it][A
+Iterating over training query 01d...:  30%|██▉       | 27/91 [04:59<04:58,  4.66s/it][A
+Iterating over training query 32a...:  30%|██▉       | 27/91 [04:59<04:58,  4.66s/it][A
+Iterating over training query 32a...:  31%|███       | 28/91 [05:00<03:44,  3.56s/it][A
+Iterating over training query 15d...:  31%|███       | 28/91 [05:00<03:44,  3.56s/it][A
+Iterating over training query 15d...:  32%|███▏      | 29/91 [05:11<06:01,  5.82s/it][A
+Iterating over training query 22a...:  32%|███▏      | 29/91 [05:11<06:01,  5.82s/it][A
+Iterating over training query 22a...:  33%|███▎      | 30/91 [05:18<06:05,  6.00s/it][A
+Iterating over training query 16d...:  33%|███▎      | 30/91 [05:18<06:05,  6.00s/it][A
+Iterating over training query 16d...:  34%|███▍      | 31/91 [05:36<09:37,  9.62s/it][A
+Iterating over training query 25a...:  34%|███▍      | 31/91 [05:36<09:37,  9.62s/it][A
+Iterating over training query 25a...:  35%|███▌      | 32/91 [06:08<16:06, 16.38s/it][A
+Iterating over training query 27b...:  35%|███▌      | 32/91 [06:08<16:06, 16.38s/it][A
+Iterating over training query 27b...:  36%|███▋      | 33/91 [06:10<11:46, 12.17s/it][A
+Iterating over training query 10b...:  36%|███▋      | 33/91 [06:10<11:46, 12.17s/it][A
+Iterating over training query 10b...:  37%|███▋      | 34/91 [06:16<09:42, 10.21s/it][A
+Iterating over training query 13d...:  37%|███▋      | 34/91 [06:16<09:42, 10.21s/it][A
+Iterating over training query 13d...:  38%|███▊      | 35/91 [06:54<17:25, 18.67s/it][A
+Iterating over training query 19a...:  38%|███▊      | 35/91 [06:54<17:25, 18.67s/it][A
+Iterating over training query 19a...:  40%|███▉      | 36/91 [07:01<13:50, 15.09s/it][A
+Iterating over training query 22c...:  40%|███▉      | 36/91 [07:01<13:50, 15.09s/it][A
+Iterating over training query 22c...:  41%|████      | 37/91 [07:31<17:31, 19.47s/it][A
+Iterating over training query 16a...:  41%|████      | 37/91 [07:31<17:31, 19.47s/it][A
+Iterating over training query 16a...:  42%|████▏     | 38/91 [07:34<12:52, 14.58s/it][A
+Iterating over training query 16b...:  42%|████▏     | 38/91 [07:34<12:52, 14.58s/it][A
+Iterating over training query 16b...:  43%|████▎     | 39/91 [12:02<1:18:34, 90.67s/it][A
+Iterating over training query 06f...:  43%|████▎     | 39/91 [12:02<1:18:34, 90.67s/it][A
+Iterating over training query 06f...:  44%|████▍     | 40/91 [12:59<1:08:23, 80.47s/it][A
+Iterating over training query 02d...:  44%|████▍     | 40/91 [12:59<1:08:23, 80.47s/it][A
+Iterating over training query 02d...:  45%|████▌     | 41/91 [13:08<49:17, 59.14s/it]  [A
+Iterating over training query 11b...:  45%|████▌     | 41/91 [13:08<49:17, 59.14s/it][A
+Iterating over training query 11b...:  46%|████▌     | 42/91 [13:10<34:16, 41.97s/it][A
+Iterating over training query 01a...:  46%|████▌     | 42/91 [13:10<34:16, 41.97s/it][A
+Iterating over training query 01a...:  47%|████▋     | 43/91 [13:13<24:12, 30.27s/it][A
+Iterating over training query 05b...:  47%|████▋     | 43/91 [13:13<24:12, 30.27s/it][A
+Iterating over training query 05b...:  48%|████▊     | 44/91 [13:17<17:28, 22.31s/it][A
+Iterating over training query 23b...:  48%|████▊     | 44/91 [13:17<17:28, 22.31s/it][A
+Iterating over training query 23b...:  49%|████▉     | 45/91 [13:19<12:32, 16.36s/it][A
+Iterating over training query 17f...:  49%|████▉     | 45/91 [13:19<12:32, 16.36s/it][A
+Iterating over training query 17f...:  51%|█████     | 46/91 [15:12<34:05, 45.44s/it][A
+Iterating over training query 21b...:  51%|█████     | 46/91 [15:12<34:05, 45.44s/it][A
+Iterating over training query 21b...:  52%|█████▏    | 47/91 [15:15<23:48, 32.48s/it][A
+Iterating over training query 33c...:  52%|█████▏    | 47/91 [15:15<23:48, 32.48s/it][A
+Iterating over training query 33c...:  53%|█████▎    | 48/91 [15:18<16:59, 23.70s/it][A
+Iterating over training query 11c...:  53%|█████▎    | 48/91 [15:18<16:59, 23.70s/it][A
+Iterating over training query 11c...:  54%|█████▍    | 49/91 [15:21<12:20, 17.64s/it][A
+Iterating over training query 19b...:  54%|█████▍    | 49/91 [15:21<12:20, 17.64s/it][A
+Iterating over training query 19b...:  55%|█████▍    | 50/91 [15:25<09:11, 13.46s/it][A
+Iterating over training query 12c...:  55%|█████▍    | 50/91 [15:25<09:11, 13.46s/it][A
+Iterating over training query 12c...:  56%|█████▌    | 51/91 [15:37<08:43, 13.09s/it][A
+Iterating over training query 10c...:  56%|█████▌    | 51/91 [15:37<08:43, 13.09s/it][A
+Iterating over training query 10c...:  57%|█████▋    | 52/91 [16:40<18:09, 27.94s/it][A
+Iterating over training query 05a...:  57%|█████▋    | 52/91 [16:40<18:09, 27.94s/it][A
+Iterating over training query 05a...:  58%|█████▊    | 53/91 [16:44<13:06, 20.70s/it][A
+Iterating over training query 21c...:  58%|█████▊    | 53/91 [16:44<13:06, 20.70s/it][A
+Iterating over training query 21c...:  59%|█████▉    | 54/91 [16:46<09:21, 15.18s/it][A
+Iterating over training query 17d...:  59%|█████▉    | 54/91 [16:46<09:21, 15.18s/it][A
+Iterating over training query 17d...:  60%|██████    | 55/91 [18:02<20:07, 33.54s/it][A
+Iterating over training query 16c...:  60%|██████    | 55/91 [18:02<20:07, 33.54s/it][A
+Iterating over training query 16c...:  62%|██████▏   | 56/91 [18:26<17:50, 30.58s/it][A
+Iterating over training query 30a...:  62%|██████▏   | 56/91 [18:26<17:50, 30.58s/it][A
+Iterating over training query 30a...:  63%|██████▎   | 57/91 [18:43<14:58, 26.42s/it][A
+Iterating over training query 07a...:  63%|██████▎   | 57/91 [18:43<14:58, 26.42s/it][A
+Iterating over training query 07a...:  64%|██████▎   | 58/91 [18:54<12:03, 21.93s/it][A
+Iterating over training query 08a...:  64%|██████▎   | 58/91 [18:54<12:03, 21.93s/it][A
+Iterating over training query 08a...:  65%|██████▍   | 59/91 [19:09<10:37, 19.91s/it][A
+Iterating over training query 02b...:  65%|██████▍   | 59/91 [19:09<10:37, 19.91s/it][A
+Iterating over training query 02b...:  66%|██████▌   | 60/91 [19:18<08:29, 16.44s/it][A
+Iterating over training query 15b...:  66%|██████▌   | 60/91 [19:18<08:29, 16.44s/it][A
+Iterating over training query 15b...:  67%|██████▋   | 61/91 [19:19<05:57, 11.92s/it][A
+Iterating over training query 07c...:  67%|██████▋   | 61/91 [19:19<05:57, 11.92s/it][A
+Iterating over training query 07c...:  68%|██████▊   | 62/91 [20:05<10:42, 22.14s/it][A
+Iterating over training query 26c...:  68%|██████▊   | 62/91 [20:05<10:42, 22.14s/it][A
+Iterating over training query 26c...:  69%|██████▉   | 63/91 [21:11<16:23, 35.12s/it][A
+Iterating over training query 09d...:  69%|██████▉   | 63/91 [21:11<16:23, 35.12s/it][A
+Iterating over training query 09d...:  70%|███████   | 64/91 [22:12<19:17, 42.88s/it][A
+Iterating over training query 25b...:  70%|███████   | 64/91 [22:12<19:17, 42.88s/it][A
+Iterating over training query 25b...:  71%|███████▏  | 65/91 [22:17<13:39, 31.53s/it][A
+Iterating over training query 30c...:  71%|███████▏  | 65/91 [22:17<13:39, 31.53s/it][A
+Iterating over training query 30c...:  73%|███████▎  | 66/91 [23:23<17:31, 42.07s/it][A
+Iterating over training query 20c...:  73%|███████▎  | 66/91 [23:23<17:31, 42.07s/it][A
+Iterating over training query 20c...:  74%|███████▎  | 67/91 [23:37<13:23, 33.49s/it][A
+Iterating over training query 03c...:  74%|███████▎  | 67/91 [23:37<13:23, 33.49s/it][A
+Iterating over training query 03c...:  75%|███████▍  | 68/91 [23:40<09:24, 24.56s/it][A
+Iterating over training query 09a...:  75%|███████▍  | 68/91 [23:40<09:24, 24.56s/it][A
+Iterating over training query 09a...:  76%|███████▌  | 69/91 [23:46<06:55, 18.87s/it][A
+Iterating over training query 18a...:  76%|███████▌  | 69/91 [23:46<06:55, 18.87s/it][A
+Iterating over training query 18a...:  77%|███████▋  | 70/91 [24:39<10:09, 29.00s/it][A
+Iterating over training query 08d...:  77%|███████▋  | 70/91 [24:39<10:09, 29.00s/it][A
+Iterating over training query 08d...:  78%|███████▊  | 71/91 [25:16<10:31, 31.57s/it][A
+Iterating over training query 26a...:  78%|███████▊  | 71/91 [25:16<10:31, 31.57s/it][A
+Iterating over training query 26a...:  79%|███████▉  | 72/91 [25:24<07:44, 24.44s/it][A
+Iterating over training query 13c...:  79%|███████▉  | 72/91 [25:24<07:44, 24.44s/it][A
+Iterating over training query 13c...:  80%|████████  | 73/91 [25:35<06:04, 20.25s/it][A
+Iterating over training query 20b...:  80%|████████  | 73/91 [25:35<06:04, 20.25s/it][A
+Iterating over training query 20b...:  81%|████████▏ | 74/91 [25:57<05:56, 20.97s/it][A
+Iterating over training query 17a...:  81%|████████▏ | 74/91 [25:57<05:56, 20.97s/it][A
+Iterating over training query 17a...:  82%|████████▏ | 75/91 [28:24<15:37, 58.60s/it][A
+Iterating over training query 29b...:  82%|████████▏ | 75/91 [28:24<15:37, 58.60s/it][A
+Iterating over training query 29b...:  84%|████████▎ | 76/91 [28:26<10:23, 41.59s/it][A
+Iterating over training query 14c...:  84%|████████▎ | 76/91 [28:26<10:23, 41.59s/it][A
+Iterating over training query 14c...:  85%|████████▍ | 77/91 [28:33<07:19, 31.38s/it][A
+Iterating over training query 18c...:  85%|████████▍ | 77/91 [28:33<07:19, 31.38s/it][A
+Iterating over training query 18c...:  86%|████████▌ | 78/91 [29:35<08:45, 40.42s/it][A
+Iterating over training query 31b...:  86%|████████▌ | 78/91 [29:35<08:45, 40.42s/it][A
+Iterating over training query 31b...:  87%|████████▋ | 79/91 [29:37<05:49, 29.09s/it][A
+Iterating over training query 29c...:  87%|████████▋ | 79/91 [29:37<05:49, 29.09s/it][A
+Iterating over training query 29c...:  88%|████████▊ | 80/91 [29:44<04:07, 22.52s/it][A
+Iterating over training query 07b...:  88%|████████▊ | 80/91 [29:44<04:07, 22.52s/it][A
+Iterating over training query 07b...:  89%|████████▉ | 81/91 [29:47<02:46, 16.66s/it][A
+Iterating over training query 13a...:  89%|████████▉ | 81/91 [29:47<02:46, 16.66s/it][A
+Iterating over training query 13a...:  90%|█████████ | 82/91 [30:12<02:51, 19.02s/it][A
+Iterating over training query 24b...:  90%|█████████ | 82/91 [30:12<02:51, 19.02s/it][A
+Iterating over training query 24b...:  91%|█████████ | 83/91 [30:13<01:50, 13.76s/it][A
+Iterating over training query 30b...:  91%|█████████ | 83/91 [30:13<01:50, 13.76s/it][A
+Iterating over training query 30b...:  92%|█████████▏| 84/91 [30:19<01:19, 11.36s/it][A
+Iterating over training query 28c...:  92%|█████████▏| 84/91 [30:19<01:19, 11.36s/it][A
+Iterating over training query 28c...:  93%|█████████▎| 85/91 [30:49<01:41, 16.89s/it][A
+Iterating over training query 01b...:  93%|█████████▎| 85/91 [30:49<01:41, 16.89s/it][A
+Iterating over training query 01b...:  95%|█████████▍| 86/91 [30:51<01:01, 12.35s/it][A
+Iterating over training query 31a...:  95%|█████████▍| 86/91 [30:51<01:01, 12.35s/it][A
+Iterating over training query 31a...:  96%|█████████▌| 87/91 [30:54<00:38,  9.70s/it][A
+Iterating over training query 09b...:  96%|█████████▌| 87/91 [30:54<00:38,  9.70s/it][A
+Iterating over training query 09b...:  97%|█████████▋| 88/91 [31:00<00:25,  8.62s/it][A
+Iterating over training query 14a...:  97%|█████████▋| 88/91 [31:00<00:25,  8.62s/it][A
+Iterating over training query 14a...:  98%|█████████▊| 89/91 [31:04<00:13,  7.00s/it][A
+Iterating over training query 19d...:  98%|█████████▊| 89/91 [31:04<00:13,  7.00s/it][A
+Iterating over training query 19d...:  99%|█████████▉| 90/91 [33:22<00:46, 46.46s/it][A
+Iterating over training query 06d...:  99%|█████████▉| 90/91 [33:22<00:46, 46.46s/it][A
+Iterating over training query 06d...: 100%|██████████| 91/91 [34:19<00:00, 49.67s/it][A
+                                                                                     [A
+Iterating over test queries...:   0%|          | 0/22 [00:00<?, ?it/s][A
+Iterating over test query 01c...:   0%|          | 0/22 [00:00<?, ?it/s][A
+Iterating over test query 01c...:   5%|▍         | 1/22 [00:01<00:38,  1.82s/it][A
+Iterating over test query 02c...:   5%|▍         | 1/22 [00:01<00:38,  1.82s/it][A
+Iterating over test query 02c...:   9%|▉         | 2/22 [00:08<01:33,  4.70s/it][A
+Iterating over test query 04b...:   9%|▉         | 2/22 [00:08<01:33,  4.70s/it][A
+Iterating over test query 04b...:  14%|█▎        | 3/22 [00:09<00:59,  3.14s/it][A
+Iterating over test query 04c...:  14%|█▎        | 3/22 [00:09<00:59,  3.14s/it][A
+Iterating over test query 04c...:  18%|█▊        | 4/22 [00:11<00:44,  2.47s/it][A
+Iterating over test query 05c...:  18%|█▊        | 4/22 [00:11<00:44,  2.47s/it][A
+Iterating over test query 05c...:  23%|██▎       | 5/22 [00:15<00:50,  2.97s/it][A
+Iterating over test query 06a...:  23%|██▎       | 5/22 [00:15<00:50,  2.97s/it][A
+Iterating over test query 06a...:  27%|██▋       | 6/22 [00:15<00:33,  2.07s/it][A
+Iterating over test query 06c...:  27%|██▋       | 6/22 [00:15<00:33,  2.07s/it][A
+Iterating over test query 06c...:  32%|███▏      | 7/22 [00:16<00:24,  1.66s/it][A
+Iterating over test query 06e...:  32%|███▏      | 7/22 [00:16<00:24,  1.66s/it][A
+Iterating over test query 06e...:  36%|███▋      | 8/22 [00:16<00:17,  1.23s/it][A
+Iterating over test query 08b...:  36%|███▋      | 8/22 [00:16<00:17,  1.23s/it][A
+Iterating over test query 08b...:  41%|████      | 9/22 [00:19<00:24,  1.88s/it][A
+Iterating over test query 08c...:  41%|████      | 9/22 [00:19<00:24,  1.88s/it][A
+Iterating over test query 08c...:  45%|████▌     | 10/22 [01:35<04:56, 24.70s/it][A
+Iterating over test query 09c...:  45%|████▌     | 10/22 [01:35<04:56, 24.70s/it][A
+Iterating over test query 09c...:  50%|█████     | 11/22 [01:44<03:37, 19.77s/it][A
+Iterating over test query 11d...:  50%|█████     | 11/22 [01:44<03:37, 19.77s/it][A
+Iterating over test query 11d...:  55%|█████▍    | 12/22 [01:46<02:24, 14.41s/it][A
+Iterating over test query 15a...:  55%|█████▍    | 12/22 [01:46<02:24, 14.41s/it][A
+Iterating over test query 15a...:  59%|█████▉    | 13/22 [01:52<01:46, 11.84s/it][A
+Iterating over test query 17b...:  59%|█████▉    | 13/22 [01:52<01:46, 11.84s/it][A
+Iterating over test query 17b...:  64%|██████▎   | 14/22 [03:13<04:21, 32.68s/it][A
+Iterating over test query 17e...:  64%|██████▎   | 14/22 [03:13<04:21, 32.68s/it][A
+Iterating over test query 17e...:  68%|██████▊   | 15/22 [05:37<07:44, 66.39s/it][A
+Iterating over test query 18b...:  68%|██████▊   | 15/22 [05:37<07:44, 66.39s/it][A
+Iterating over test query 18b...:  73%|███████▎  | 16/22 [05:40<04:43, 47.27s/it][A
+Iterating over test query 20a...:  73%|███████▎  | 16/22 [05:40<04:43, 47.27s/it][A
+Iterating over test query 20a...:  77%|███████▋  | 17/22 [06:09<03:28, 41.62s/it][A
+Iterating over test query 21a...:  77%|███████▋  | 17/22 [06:09<03:28, 41.62s/it][A
+Iterating over test query 21a...:  82%|████████▏ | 18/22 [06:10<01:58, 29.52s/it][A
+Iterating over test query 25c...:  82%|████████▏ | 18/22 [06:10<01:58, 29.52s/it][A
+Iterating over test query 25c...:  86%|████████▋ | 19/22 [07:35<02:18, 46.10s/it][A
+Iterating over test query 28b...:  86%|████████▋ | 19/22 [07:35<02:18, 46.10s/it][A
+Iterating over test query 28b...:  91%|█████████ | 20/22 [07:41<01:08, 34.04s/it][A
+Iterating over test query 32b...:  91%|█████████ | 20/22 [07:41<01:08, 34.04s/it][A
+Iterating over test query 32b...:  95%|█████████▌| 21/22 [07:42<00:24, 24.25s/it][A
+Iterating over test query 33a...:  95%|█████████▌| 21/22 [07:42<00:24, 24.25s/it][A
+Iterating over test query 33a...: 100%|██████████| 22/22 [07:44<00:00, 17.72s/it][AIterating over test query 33a...: 100%|██████████| 22/22 [07:44<00:00, 21.14s/it]
+Iterating over epochs...: 100%|██████████| 11/11 [6:27:38<00:00, 2172.74s/it]Iterating over epochs...: 100%|██████████| 11/11 [6:27:38<00:00, 2114.42s/it]

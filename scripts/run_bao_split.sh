@@ -23,7 +23,14 @@ echo "$SPLIT,train_seconds,$((T1 - T0))" >> /app/logs/bao_training_times.csv
 cp -r bao_server/bao_default_model "/app/logs/model__bao__${SPLIT}__${STAMP}"
 
 echo "== [$SPLIT] Test (lấy lần chạy thứ 3 khi phân tích)"
-bash /app/scripts/start_bao_server.sh   # nạp lại model vừa train
+N=$(wc -l < /app/logs/bao_server.log)
+bash /app/scripts/start_bao_server.sh   # nạp lại model vừa train, mất khoảng 15 s
+for _ in $(seq 90); do
+  tail -n +"$((N + 1))" /app/logs/bao_server.log | grep -q "Accepted new model" && break
+  sleep 1
+done
+tail -n +"$((N + 1))" /app/logs/bao_server.log | grep -q "Accepted new model" \
+  || { echo "Bao server chưa nạp model, xem: tail /app/logs/bao_server.log"; exit 1; }
 python3 run_test_queries.py --use_bao --database_name "$DB" --query_dir "queries/$SPLIT/test" \
   --output_file "/app/logs/test__bao__${SPLIT}__${STAMP}.txt"
 echo "== Xong. Thời gian train: $((T1 - T0)) giây"

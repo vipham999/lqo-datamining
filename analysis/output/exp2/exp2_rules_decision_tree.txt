@@ -1,0 +1,36 @@
+Cây quyết định (độ sâu ≤ 4) train trên toàn bộ JOB (113 câu)
+
+|--- plan_nodes <= 25.50
+|   |--- plan_n_indexonlyscan <= 0.50
+|   |   |--- plan_total_cost <= 11217.01
+|   |   |   |--- plan_nodes <= 17.50
+|   |   |   |   |--- class: default
+|   |   |   |--- plan_nodes >  17.50
+|   |   |   |   |--- class: default
+|   |   |--- plan_total_cost >  11217.01
+|   |   |   |--- sql_len <= 511.50
+|   |   |   |   |--- class: default
+|   |   |   |--- sql_len >  511.50
+|   |   |   |   |--- class: default
+|   |--- plan_n_indexonlyscan >  0.50
+|   |   |--- sql_n_filter_preds <= 3.50
+|   |   |   |--- sql_len <= 506.50
+|   |   |   |   |--- class: no_nestloop
+|   |   |   |--- sql_len >  506.50
+|   |   |   |   |--- class: no_nestloop
+|   |   |--- sql_n_filter_preds >  3.50
+|   |   |   |--- plan_n_nestloop <= 6.50
+|   |   |   |   |--- class: no_hashjoin
+|   |   |   |--- plan_n_nestloop >  6.50
+|   |   |   |   |--- class: default
+|--- plan_nodes >  25.50
+|   |--- plan_n_mergejoin <= 0.50
+|   |   |--- plan_n_indexscan <= 6.50
+|   |   |   |--- class: no_hashjoin
+|   |   |--- plan_n_indexscan >  6.50
+|   |   |   |--- class: no_indexscan
+|   |--- plan_n_mergejoin >  0.50
+|   |   |--- sql_len <= 1308.50
+|   |   |   |--- class: no_hashjoin
+|   |   |--- sql_len >  1308.50
+|   |   |   |--- class: no_mergejoin

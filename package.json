@@ -1,0 +1,12 @@
+{
+  "name": "lqo-datamining",
+  "version": "1.0.0",
+  "description": "Hướng dẫn chạy lại thực nghiệm của bài báo (Lehmann, Sulimov, Stockinger, PVLDB 2024) trên **MacBook Pro M1 Pro (8 core, 16 GB RAM, ARM64, không có GPU NVIDIA)**, rồi thêm phần **data mining** để so sánh plan cũ (PostgreSQL) với plan mới (LQO).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

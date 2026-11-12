@@ -1,0 +1,2 @@
+phương_pháp,số_câu,thắng,hòa,thua,PG_workload_s,LQO_workload_s,speedup_workload,speedup_trung_vị,speedup_max,speedup_min,p_wilcoxon,p_sign_test
+Bao_job__base_query_split_3_fair,26,7,2,17,89.74789200000001,47.135871,1.9040253228798936,0.7054758823730891,2.281327410132396,0.17723050689487177,0.8028007447719574,0.06391465663909912

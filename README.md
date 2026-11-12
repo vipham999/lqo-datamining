@@ -181,11 +181,11 @@ Image `pg_lqo_arm64` đã được build sẵn. Nếu cần build lại: `docker
 
 | Tham số | Bài báo | Ở đây |
 |---|---|---|
-| `shared_buffers` | 32 GB | 3 GB |
-| `work_mem` | 4 GB | 128 MB |
-| `temp_buffers` | 32 GB | 256 MB |
-| `effective_cache_size` | 32 GB | 8 GB |
-| `max_worker_processes` | 8 | 6 |
+| `shared_buffers` | 32 GB | 4 GB |
+| `work_mem` | 4 GB | 256 MB |
+| `temp_buffers` | 32 GB | 32 GB |
+| `effective_cache_size` | 32 GB | 32 GB |
+| `max_worker_processes` | 8 | 8 |
 | `geqo` | on (Bao) / off | on, tắt theo phiên khi cần |
 | `autovacuum` | off | off |
 | bitmap/tid scan | on | on |
@@ -399,6 +399,7 @@ giải thích bằng data mining, và hiển thị kết quả của bài báo.
 ```bash
 ~/.venvs/lqo_app/bin/python app/prepare_data.py            # EXPLAIN, vài giây
 ~/.venvs/lqo_app/bin/python app/prepare_data.py --analyze  # EXPLAIN ANALYZE để có q-error, ~30 phút
+~/.venvs/lqo_app/bin/python app/prepare_data.py --db       # chỉ chụp thông tin CSDL IMDB cho tab "0. CSDL IMDB"
 ```
 
 Kết quả nằm ở `analysis/output/app/` (`dataset_a.csv`, `default_plans.json`). Sau bước này ứng dụng chạy không cần Docker.
@@ -440,13 +441,14 @@ cd ~/Desktop/lqo-datamining/app && ~/.venvs/lqo_app/bin/streamlit run streamlit_
 - [x] `docker compose build bao`, tải IMDB, chạy `load_imdb.sh`
 
 **Tuần 2 – Tái lập**
-- [x] Baseline PostgreSQL (6.1): `logs/test__postgres__job__20261011_1743.txt`, 112/113 câu chạy được (25c timeout).
-  So với log tác giả: trung vị từng câu 0.81× (M1 nhanh hơn), Spearman 0.965, nhưng tổng workload 2.95× do vài câu
-  (18a, 18c, 06d, 23c, 08a, 25c) có plan nested loop nặng; đổi `work_mem`/`effective_cache_size` không làm plan thay đổi
-- [ ] Bao trên LOO-1, RND-1, BQ-1 (6.2) và so với log của tác giả (6.3)
+- [x] Baseline PostgreSQL (6.1), đo lại công bằng ngày 08/11 (cache nóng, cùng phiên với Bao):
+  `logs/test__postgres__job__fair_20261108_2004__20261108_1315.txt`, 113/113 câu, tổng 248 s.
+  Baseline cũ ngày 11/10 (cache lạnh, 25c timeout) không hợp lệ và đã xóa.
+- [x] Bao trên đủ 9 split JOB (6.2, 6.3): 28/28/177 thắng/hòa/thua, 467,9 s → 432,1 s (1,08×);
+  bài báo 9/34/190 (0,83×). Kết quả: `analysis/output/c1_Bao_job__*_fair*_summary.csv`
 
 **Tuần 3 – Ablation và log plan**
-- [ ] 8.4, 8.5, 8.6; tùy chọn 8.3, 8.7
+- [x] 8.4, 8.5 (`analysis/output/ablation_interleaved_20261108_2319_tomtat.txt`), 8.3 (`analysis/output/c1_Bao_*_imdb50_*`); chưa làm 8.6, 8.7
 - [ ] `run_and_log.py` cho JOB × 6 hint set (Phần B)
 
 **Tuần 4 – Data mining trên JOB**

@@ -1,0 +1,2 @@
+phương_pháp,số_câu,thắng,hòa,thua,PG_workload_s,LQO_workload_s,speedup_workload,speedup_trung_vị,speedup_max,speedup_min,p_wilcoxon,p_sign_test
+Bao_job__random_split_1_imdb50_20261109_2159,22,0,3,19,12.287614000000003,15.738399,0.780741039796996,0.4271589787615523,1.0266791709605032,0.08898749792859642,1.430511474609375e-06,3.814697265625e-06

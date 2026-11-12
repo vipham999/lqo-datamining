@@ -1,0 +1,802 @@
+== 2026-11-12 00:30:06 Làm nóng imdbload
+== pg_prewarm imdbload
+NOTICE:  extension "pg_prewarm" already exists, skipping
+12 GB
+== Chạy mỗi câu JOB một lần
+10a: 6 s
+10b: 1 s
+10c: 16 s
+11a: 0 s
+11b: 0 s
+11c: 0 s
+11d: 0 s
+12a: 1 s
+12b: 0 s
+12c: 4 s
+13a: 2 s
+13b: 1 s
+13c: 0 s
+13d: 4 s
+14a: 1 s
+14b: 0 s
+14c: 0 s
+15a: 1 s
+15b: 0 s
+15c: 3 s
+15d: 0 s
+16a: 1 s
+16b: 49 s
+16c: 3 s
+16d: 1 s
+17a: 14 s
+17b: 15 s
+17c: 10 s
+17d: 9 s
+17e: 15 s
+17f: 12 s
+18a: 23 s
+18b: 2 s
+18c: 17 s
+19a: 2 s
+19b: 1 s
+19c: 2 s
+19d: 14 s
+1a: 0 s
+1b: 0 s
+1c: 0 s
+1d: 0 s
+20a: 19 s
+20b: 8 s
+20c: 1 s
+21a: 0 s
+21b: 1 s
+21c: 0 s
+22a: 2 s
+22b: 0 s
+22c: 3 s
+22d: 2 s
+23a: 2 s
+23b: 0 s
+23c: 2 s
+24a: 1 s
+24b: 0 s
+25a: 21 s
+25b: 0 s
+25c: 30 s
+26a: 23 s
+26b: 1 s
+26c: 2 s
+27a: 0 s
+27b: 0 s
+27c: 1 s
+28a: 1 s
+28b: 1 s
+28c: 1 s
+29a: 1 s
+29b: 0 s
+29c: 0 s
+2a: 3 s
+2b: 0 s
+2c: 1 s
+2d: 2 s
+30a: 10 s
+30b: 1 s
+30c: 20 s
+31a: 1 s
+31b: 0 s
+31c: 0 s
+32a: 0 s
+32b: 1 s
+33a: 0 s
+33b: 0 s
+33c: 0 s
+3a: 0 s
+3b: 1 s
+3c: 0 s
+4a: 1 s
+4b: 0 s
+4c: 0 s
+5a: 0 s
+5b: 1 s
+5c: 0 s
+6a: 0 s
+6b: 1 s
+6c: 0 s
+6d: 25 s
+6e: 0 s
+6f: 10 s
+7a: 6 s
+7b: 0 s
+7c: 10 s
+8a: 8 s
+8b: 0 s
+8c: 8 s
+8d: 3 s
+9a: 0 s
+9b: 0 s
+9c: 1 s
+9d: 7 s
+== Xong làm nóng sau 474 s
+== 2026-11-12 00:39:05 EXPLAIN plan mặc định (đặc trưng + thời gian EXPLAIN)
+113 câu → /app/logs/exp2_explain_job.jsonl
+== 2026-11-12 00:39:10 Chạy 6 phương án
+113 truy vấn × 6 hint set × 3 lần chạy → /app/logs/exp2_hintsets_job.jsonl
+   10a default            2.5s
+   10a no_nestloop       22.1s
+   10a no_hashjoin        2.0s
+   10a no_mergejoin       1.6s
+   10a no_seqscan         1.4s
+   10a no_indexscan       3.5s
+   10b default            0.8s
+   10b no_nestloop       32.2s
+   10b no_hashjoin        1.7s
+   10b no_mergejoin       1.9s
+   10b no_seqscan         0.6s
+   10b no_indexscan       0.9s
+   10c default           27.5s
+   10c no_nestloop       66.0s
+   10c no_hashjoin      142.8s
+   10c no_mergejoin      20.3s
+   10c no_seqscan        50.2s
+   10c no_indexscan      16.7s
+   11a default            1.0s
+   11a no_nestloop        0.8s
+   11a no_hashjoin        0.2s
+   11a no_mergejoin       0.1s
+   11a no_seqscan         0.2s
+   11a no_indexscan       0.2s
+   11b default            0.1s
+   11b no_nestloop        1.1s
+   11b no_hashjoin        0.1s
+   11b no_mergejoin       0.1s
+   11b no_seqscan         0.1s
+   11b no_indexscan       0.1s
+   11c default            1.4s
+   11c no_nestloop        0.8s
+   11c no_hashjoin        0.3s
+   11c no_mergejoin       0.3s
+   11c no_seqscan         0.3s
+   11c no_indexscan       0.4s
+   11d default            0.3s
+   11d no_nestloop        0.5s
+   11d no_hashjoin        0.3s
+   11d no_mergejoin       0.3s
+   11d no_seqscan         0.3s
+   11d no_indexscan       0.4s
+   12a default            2.2s
+   12a no_nestloop        8.7s
+   12a no_hashjoin        0.5s
+   12a no_mergejoin       0.4s
+   12a no_seqscan         0.7s
+   12a no_indexscan       0.6s
+   12b default            0.2s
+   12b no_nestloop        5.8s
+   12b no_hashjoin        0.0s
+   12b no_mergejoin       0.2s
+   12b no_seqscan         0.0s
+   12b no_indexscan       0.2s
+   12c default            4.7s
+   12c no_nestloop        6.5s
+   12c no_hashjoin        5.0s
+   12c no_mergejoin       3.3s
+   12c no_seqscan         7.2s
+   12c no_indexscan       7.2s
+   13a default            4.2s
+   13a no_nestloop        8.4s
+   13a no_hashjoin        8.7s
+   13a no_mergejoin       5.8s
+   13a no_seqscan        10.8s
+   13a no_indexscan      15.6s
+   13b default            1.7s
+   13b no_nestloop        9.5s
+   13b no_hashjoin        2.9s
+   13b no_mergejoin       1.2s
+   13b no_seqscan         2.2s
+   13b no_indexscan       1.6s
+   13c default            1.2s
+   13c no_nestloop        8.4s
+   13c no_hashjoin        3.1s
+   13c no_mergejoin       1.2s
+   13c no_seqscan         2.0s
+   13c no_indexscan       1.5s
+   13d default            7.5s
+   13d no_nestloop       16.9s
+   13d no_hashjoin       15.2s
+   13d no_mergejoin       8.1s
+   13d no_seqscan        15.8s
+   13d no_indexscan      15.6s
+   14a default            2.1s
+   14a no_nestloop        6.0s
+   14a no_hashjoin        0.7s
+   14a no_mergejoin       0.6s
+   14a no_seqscan         0.7s
+   14a no_indexscan       0.7s
+   14b default            0.3s
+   14b no_nestloop        7.1s
+   14b no_hashjoin        0.5s
+   14b no_mergejoin       0.3s
+   14b no_seqscan         0.3s
+   14b no_indexscan       0.3s
+   14c default            1.9s
+   14c no_nestloop        5.6s
+   14c no_hashjoin        1.3s
+   14c no_mergejoin       1.0s
+   14c no_seqscan         1.2s
+   14c no_indexscan       1.7s
+   15a default            1.2s
+   15a no_nestloop        7.4s
+   15a no_hashjoin        0.9s
+   15a no_mergejoin       0.6s
+   15a no_seqscan         1.4s
+   15a no_indexscan       1.0s
+   15b default            0.1s
+   15b no_nestloop       10.3s
+   15b no_hashjoin        0.2s
+   15b no_mergejoin       0.1s
+   15b no_seqscan         0.3s
+   15b no_indexscan       0.1s
+   15c default            3.5s
+   15c no_nestloop       10.3s
+   15c no_hashjoin        2.4s
+   15c no_mergejoin       1.1s
+   15c no_seqscan         1.2s
+   15c no_indexscan       1.0s
+   15d default            1.0s
+   15d no_nestloop        6.9s
+   15d no_hashjoin        1.2s
+   15d no_mergejoin       1.1s
+   15d no_seqscan         0.9s
+   15d no_indexscan       1.0s
+   16a default            1.2s
+   16a no_nestloop       29.9s
+   16a no_hashjoin        0.9s
+   16a no_mergejoin       0.4s
+   16a no_seqscan         0.5s
+   16a no_indexscan       0.4s
+   16b default          117.3s
+   16b no_nestloop       62.3s
+   16b no_hashjoin       79.0s
+   16b no_mergejoin      76.0s
+   16b no_seqscan        51.2s
+   16b no_indexscan      65.4s
+   16c default            5.3s
+   16c no_nestloop       23.5s
+   16c no_hashjoin        5.4s
+   16c no_mergejoin       3.7s
+   16c no_seqscan         3.6s
+   16c no_indexscan       4.7s
+   16d default            3.0s
+   16d no_nestloop       21.1s
+   16d no_hashjoin        4.3s
+   16d no_mergejoin       2.8s
+   16d no_seqscan         3.4s
+   16d no_indexscan       5.0s
+   17a default           30.7s
+   17a no_nestloop       19.1s
+   17a no_hashjoin       29.3s
+   17a no_mergejoin      24.5s
+   17a no_seqscan        30.0s
+   17a no_indexscan      39.9s
+   17b default           32.3s
+   17b no_nestloop       21.4s
+   17b no_hashjoin       25.3s
+   17b no_mergejoin      20.4s
+   17b no_seqscan        21.8s
+   17b no_indexscan      23.2s
+   17c default           19.4s
+   17c no_nestloop       17.1s
+   17c no_hashjoin       22.5s
+   17c no_mergejoin      18.0s
+   17c no_seqscan        19.9s
+   17c no_indexscan      23.8s
+   17d default           20.4s
+   17d no_nestloop       18.6s
+   17d no_hashjoin       26.3s
+   17d no_mergejoin      22.6s
+   17d no_seqscan        19.4s
+   17d no_indexscan      24.5s
+   17e default           34.3s
+   17e no_nestloop       22.8s
+   17e no_hashjoin       27.4s
+   17e no_mergejoin      24.9s
+   17e no_seqscan        27.9s
+   17e no_indexscan      37.1s
+   17f default           32.5s
+   17f no_nestloop       20.6s
+   17f no_hashjoin       34.4s
+   17f no_mergejoin      25.9s
+   17f no_seqscan        29.4s
+   17f no_indexscan      35.8s
+   18a default           37.5s
+   18a no_nestloop       27.7s
+   18a no_hashjoin       37.5s
+   18a no_mergejoin      12.2s
+   18a no_seqscan        31.5s
+   18a no_indexscan      19.4s
+   18b default            0.8s
+   18b no_nestloop       22.7s
+   18b no_hashjoin        0.9s
+   18b no_mergejoin       0.3s
+   18b no_seqscan         0.6s
+   18b no_indexscan       0.3s
+   18c default           33.4s
+   18c no_nestloop       13.5s
+   18c no_hashjoin       57.6s
+   18c no_mergejoin      16.4s
+   18c no_seqscan        26.6s
+   18c no_indexscan      12.6s
+   19a default            2.6s
+   19a no_nestloop       25.4s
+   19a no_hashjoin        1.0s
+   19a no_mergejoin       0.6s
+   19a no_seqscan         2.2s
+   19a no_indexscan       0.6s
+   19b default            0.6s
+   19b no_nestloop       12.8s
+   19b no_hashjoin        0.3s
+   19b no_mergejoin       0.3s
+   19b no_seqscan         1.5s
+   19b no_indexscan       0.3s
+   19c default            1.4s
+   19c no_nestloop        9.9s
+   19c no_hashjoin        0.8s
+   19c no_mergejoin       0.9s
+   19c no_seqscan         5.1s
+   19c no_indexscan       1.1s
+   19d default            9.8s
+   19d no_nestloop       23.3s
+   19d no_hashjoin       33.3s
+   19d no_mergejoin      10.8s
+   19d no_seqscan        31.0s
+   19d no_indexscan     101.4s
+    1a default            0.5s
+    1a no_nestloop        1.8s
+    1a no_hashjoin        0.0s
+    1a no_mergejoin       0.2s
+    1a no_seqscan         0.0s
+    1a no_indexscan       0.2s
+    1b default            0.3s
+    1b no_nestloop        0.8s
+    1b no_hashjoin        0.0s
+    1b no_mergejoin       0.2s
+    1b no_seqscan         0.0s
+    1b no_indexscan       0.2s
+    1c default            0.2s
+    1c no_nestloop        0.8s
+    1c no_hashjoin        0.0s
+    1c no_mergejoin       0.2s
+    1c no_seqscan         0.0s
+    1c no_indexscan       0.2s
+    1d default            0.2s
+    1d no_nestloop        0.8s
+    1d no_hashjoin        0.0s
+    1d no_mergejoin       0.2s
+    1d no_seqscan         0.0s
+    1d no_indexscan       0.2s
+   20a default           13.0s
+   20a no_nestloop       13.8s
+   20a no_hashjoin        9.1s
+   20a no_mergejoin       4.7s
+   20a no_seqscan         5.3s
+   20a no_indexscan       6.6s
+   20b default            6.4s
+   20b no_nestloop       10.7s
+   20b no_hashjoin        5.0s
+   20b no_mergejoin       4.4s
+   20b no_seqscan         3.8s
+   20b no_indexscan       5.6s
+   20c default            2.8s
+   20c no_nestloop       15.2s
+   20c no_hashjoin        3.1s
+   20c no_mergejoin       2.4s
+   20c no_seqscan         2.1s
+   20c no_indexscan       2.9s
+   21a default            0.3s
+   21a no_nestloop        2.0s
+   21a no_hashjoin        0.2s
+   21a no_mergejoin       0.1s
+   21a no_seqscan         0.2s
+   21a no_indexscan       0.2s
+   21b default            0.1s
+   21b no_nestloop        0.6s
+   21b no_hashjoin        0.1s
+   21b no_mergejoin       0.1s
+   21b no_seqscan         0.1s
+   21b no_indexscan       0.2s
+   21c default            0.2s
+   21c no_nestloop        0.7s
+   21c no_hashjoin        0.1s
+   21c no_mergejoin       0.1s
+   21c no_seqscan         0.1s
+   21c no_indexscan       0.2s
+   22a default            3.0s
+   22a no_nestloop        7.8s
+   22a no_hashjoin        1.1s
+   22a no_mergejoin       0.8s
+   22a no_seqscan         1.3s
+   22a no_indexscan       1.4s
+   22b default            0.6s
+   22b no_nestloop        4.9s
+   22b no_hashjoin        0.7s
+   22b no_mergejoin       0.6s
+   22b no_seqscan         0.7s
+   22b no_indexscan       0.8s
+   22c default            4.5s
+   22c no_nestloop        7.9s
+   22c no_hashjoin        3.9s
+   22c no_mergejoin       3.4s
+   22c no_seqscan         3.8s
+   22c no_indexscan       4.1s
+   22d default            2.6s
+   22d no_nestloop        8.2s
+   22d no_hashjoin        2.1s
+   22d no_mergejoin       1.6s
+   22d no_seqscan         1.6s
+   22d no_indexscan       2.0s
+   23a default            0.9s
+   23a no_nestloop        3.3s
+   23a no_hashjoin        0.5s
+   23a no_mergejoin       0.6s
+   23a no_seqscan         0.7s
+   23a no_indexscan       0.6s
+   23b default            0.2s
+   23b no_nestloop        5.3s
+   23b no_hashjoin        0.2s
+   23b no_mergejoin       0.1s
+   23b no_seqscan         0.2s
+   23b no_indexscan       0.2s
+   23c default            1.5s
+   23c no_nestloop        4.8s
+   23c no_hashjoin        0.9s
+   23c no_mergejoin       0.8s
+   23c no_seqscan         0.6s
+   23c no_indexscan       0.8s
+   24a default            1.5s
+   24a no_nestloop       20.3s
+   24a no_hashjoin        1.2s
+   24a no_mergejoin       0.8s
+   24a no_seqscan         0.8s
+   24a no_indexscan       0.8s
+   24b default            0.2s
+   24b no_nestloop       16.1s
+   24b no_hashjoin        0.2s
+   24b no_mergejoin       0.1s
+   24b no_seqscan         0.4s
+   24b no_indexscan       0.1s
+   25a default           19.2s
+   25a no_nestloop       17.2s
+   25a no_hashjoin        9.6s
+   25a no_mergejoin       5.6s
+   25a no_seqscan         4.6s
+   25a no_indexscan       5.3s
+   25b default            1.0s
+   25b no_nestloop       20.0s
+   25b no_hashjoin        0.9s
+   25b no_mergejoin       0.6s
+   25b no_seqscan         0.7s
+   25b no_indexscan       0.7s
+   25c default           50.2s
+   25c no_nestloop       21.2s
+   25c no_hashjoin       30.8s
+   25c no_mergejoin      20.9s
+   25c no_seqscan        18.5s
+   25c no_indexscan      20.6s
+   26a default           30.6s
+   26a no_nestloop       20.4s
+   26a no_hashjoin      101.0s
+   26a no_mergejoin      14.2s
+   26a no_seqscan        94.3s
+   26a no_indexscan       3.9s
+   26b default            0.3s
+   26b no_nestloop       19.3s
+   26b no_hashjoin        0.5s
+   26b no_mergejoin       0.3s
+   26b no_seqscan         0.4s
+   26b no_indexscan       0.5s
+   26c default            4.9s
+   26c no_nestloop       14.4s
+   26c no_hashjoin        3.6s
+   26c no_mergejoin       2.3s
+   26c no_seqscan        14.9s
+   26c no_indexscan      12.8s
+   27a default            0.2s
+   27a no_nestloop        1.3s
+   27a no_hashjoin        0.1s
+   27a no_mergejoin       0.1s
+   27a no_seqscan         0.2s
+   27a no_indexscan       0.3s
+   27b default            0.1s
+   27b no_nestloop        0.6s
+   27b no_hashjoin        0.1s
+   27b no_mergejoin       0.2s
+   27b no_seqscan         0.1s
+   27b no_indexscan       0.2s
+   27c default            0.1s
+   27c no_nestloop        0.9s
+   27c no_hashjoin        0.1s
+   27c no_mergejoin       0.1s
+   27c no_seqscan         0.2s
+   27c no_indexscan       0.3s
+   28a default            5.5s
+   28a no_nestloop        9.6s
+   28a no_hashjoin        1.4s
+   28a no_mergejoin       3.7s
+   28a no_seqscan         1.1s
+   28a no_indexscan      10.2s
+   28b default            1.0s
+   28b no_nestloop        5.7s
+   28b no_hashjoin        1.6s
+   28b no_mergejoin       1.1s
+   28b no_seqscan         1.4s
+   28b no_indexscan       2.7s
+   28c default            0.9s
+   28c no_nestloop        6.7s
+   28c no_hashjoin        4.9s
+   28c no_mergejoin       2.1s
+   28c no_seqscan         1.9s
+   28c no_indexscan       9.2s
+   29a default            1.1s
+   29a no_nestloop       39.9s
+   29a no_hashjoin        0.2s
+   29a no_mergejoin       0.2s
+   29a no_seqscan         0.3s
+   29a no_indexscan       0.3s
+   29b default            0.4s
+   29b no_nestloop       14.3s
+   29b no_hashjoin        0.6s
+   29b no_mergejoin       0.5s
+   29b no_seqscan         0.8s
+   29b no_indexscan       0.2s
+   29c default            0.5s
+   29c no_nestloop       15.4s
+   29c no_hashjoin        0.6s
+   29c no_mergejoin       1.7s
+   29c no_seqscan         0.8s
+   29c no_indexscan       0.4s
+    2a default            2.0s
+    2a no_nestloop        1.8s
+    2a no_hashjoin        0.9s
+    2a no_mergejoin       0.9s
+    2a no_seqscan         0.9s
+    2a no_indexscan       1.1s
+    2b default            0.9s
+    2b no_nestloop        1.5s
+    2b no_hashjoin        1.0s
+    2b no_mergejoin       0.9s
+    2b no_seqscan         0.9s
+    2b no_indexscan       1.2s
+    2c default            0.9s
+    2c no_nestloop        1.0s
+    2c no_hashjoin        0.8s
+    2c no_mergejoin       0.9s
+    2c no_seqscan         0.9s
+    2c no_indexscan       1.1s
+    2d default            1.7s
+    2d no_nestloop        1.8s
+    2d no_hashjoin        1.1s
+    2d no_mergejoin       1.1s
+    2d no_seqscan         1.3s
+    2d no_indexscan       1.6s
+   30a default           20.4s
+   30a no_nestloop       20.8s
+   30a no_hashjoin       22.5s
+   30a no_mergejoin      11.0s
+   30a no_seqscan        21.9s
+   30a no_indexscan       8.2s
+   30b default            1.2s
+   30b no_nestloop       14.7s
+   30b no_hashjoin        1.2s
+   30b no_mergejoin       0.9s
+   30b no_seqscan         0.9s
+   30b no_indexscan       0.9s
+   30c default           13.8s
+   30c no_nestloop       11.4s
+   30c no_hashjoin        7.5s
+   30c no_mergejoin      13.3s
+   30c no_seqscan        13.7s
+   30c no_indexscan      26.4s
+   31a default            0.8s
+   31a no_nestloop       15.9s
+   31a no_hashjoin        0.7s
+   31a no_mergejoin       0.4s
+   31a no_seqscan        18.0s
+   31a no_indexscan      17.4s
+   31b default            0.3s
+   31b no_nestloop       11.2s
+   31b no_hashjoin        0.3s
+   31b no_mergejoin       0.2s
+   31b no_seqscan         1.2s
+   31b no_indexscan       0.9s
+   31c default            0.9s
+   31c no_nestloop       26.0s
+   31c no_hashjoin        1.3s
+   31c no_mergejoin       0.6s
+   31c no_seqscan        46.0s
+   31c no_indexscan      50.5s
+   32a default            0.1s
+   32a no_nestloop        0.6s
+   32a no_hashjoin        0.0s
+   32a no_mergejoin       0.0s
+   32a no_seqscan         0.1s
+   32a no_indexscan       0.0s
+   32b default            0.6s
+   32b no_nestloop        1.3s
+   32b no_hashjoin        0.2s
+   32b no_mergejoin       0.2s
+   32b no_seqscan         0.3s
+   32b no_indexscan       0.3s
+   33a default            0.3s
+   33a no_nestloop        2.7s
+   33a no_hashjoin        0.2s
+   33a no_mergejoin       0.2s
+   33a no_seqscan         0.2s
+   33a no_indexscan       0.4s
+   33b default            0.2s
+   33b no_nestloop        2.2s
+   33b no_hashjoin        0.2s
+   33b no_mergejoin       0.1s
+   33b no_seqscan         0.2s
+   33b no_indexscan       0.1s
+   33c default            0.2s
+   33c no_nestloop        2.5s
+   33c no_hashjoin        0.3s
+   33c no_mergejoin       0.1s
+   33c no_seqscan         0.4s
+   33c no_indexscan       0.3s
+    3a default            0.9s
+    3a no_nestloop        5.4s
+    3a no_hashjoin        0.4s
+    3a no_mergejoin       0.3s
+    3a no_seqscan         0.4s
+    3a no_indexscan       0.3s
+    3b default            0.2s
+    3b no_nestloop        2.8s
+    3b no_hashjoin        0.2s
+    3b no_mergejoin       0.2s
+    3b no_seqscan         0.2s
+    3b no_indexscan       0.2s
+    3c default            0.8s
+    3c no_nestloop        6.2s
+    3c no_hashjoin        0.6s
+    3c no_mergejoin       0.5s
+    3c no_seqscan         0.6s
+    3c no_indexscan       0.6s
+    4a default            0.3s
+    4a no_nestloop        1.5s
+    4a no_hashjoin        0.2s
+    4a no_mergejoin       0.2s
+    4a no_seqscan         0.3s
+    4a no_indexscan       0.3s
+    4b default            0.1s
+    4b no_nestloop        1.0s
+    4b no_hashjoin        0.1s
+    4b no_mergejoin       0.1s
+    4b no_seqscan         0.2s
+    4b no_indexscan       0.1s
+    4c default            0.2s
+    4c no_nestloop        1.4s
+    4c no_hashjoin        0.3s
+    4c no_mergejoin       0.2s
+    4c no_seqscan         0.3s
+    4c no_indexscan       0.3s
+    5a default            0.3s
+    5a no_nestloop        0.3s
+    5a no_hashjoin        0.3s
+    5a no_mergejoin       0.2s
+    5a no_seqscan         0.5s
+    5a no_indexscan       0.3s
+    5b default            0.2s
+    5b no_nestloop        0.3s
+    5b no_hashjoin        0.2s
+    5b no_mergejoin       0.2s
+    5b no_seqscan         0.3s
+    5b no_indexscan       0.2s
+    5c default            0.4s
+    5c no_nestloop        4.2s
+    5c no_hashjoin        0.5s
+    5c no_mergejoin       0.4s
+    5c no_seqscan         0.4s
+    5c no_indexscan       0.8s
+    6a default            0.2s
+    6a no_nestloop       12.2s
+    6a no_hashjoin        0.1s
+    6a no_mergejoin       0.1s
+    6a no_seqscan         0.1s
+    6a no_indexscan       0.1s
+    6b default            0.8s
+    6b no_nestloop       12.1s
+    6b no_hashjoin        0.7s
+    6b no_mergejoin       0.4s
+    6b no_seqscan         0.5s
+    6b no_indexscan       0.5s
+    6c default            0.0s
+    6c no_nestloop       12.0s
+    6c no_hashjoin        0.0s
+    6c no_mergejoin       0.0s
+    6c no_seqscan         0.1s
+    6c no_indexscan       0.0s
+    6d default           25.5s
+    6d no_nestloop       12.4s
+    6d no_hashjoin       17.9s
+    6d no_mergejoin      15.9s
+    6d no_seqscan        25.9s
+    6d no_indexscan      24.9s
+    6e default            0.1s
+    6e no_nestloop       14.3s
+    6e no_hashjoin        0.1s
+    6e no_mergejoin       0.0s
+    6e no_seqscan         0.1s
+    6e no_indexscan       0.0s
+    6f default           15.8s
+    6f no_nestloop       16.8s
+    6f no_hashjoin       18.0s
+    6f no_mergejoin      15.9s
+    6f no_seqscan        18.0s
+    6f no_indexscan      20.5s
+    7a default            3.8s
+    7a no_nestloop       18.7s
+    7a no_hashjoin        2.9s
+    7a no_mergejoin       2.2s
+    7a no_seqscan         1.9s
+    7a no_indexscan       3.9s
+    7b default            0.9s
+    7b no_nestloop       11.2s
+    7b no_hashjoin        0.9s
+    7b no_mergejoin       0.5s
+    7b no_seqscan         0.5s
+    7b no_indexscan       0.6s
+    7c default            8.9s
+    7c no_nestloop       33.0s
+    7c no_hashjoin        9.4s
+    7c no_mergejoin       6.3s
+    7c no_seqscan         5.5s
+    7c no_indexscan       3.1s
+    8a default            3.3s
+    8a no_nestloop        3.4s
+    8a no_hashjoin        2.0s
+    8a no_mergejoin       1.7s
+    8a no_seqscan         2.8s
+    8a no_indexscan       2.0s
+    8b default            0.3s
+    8b no_nestloop        4.1s
+    8b no_hashjoin        0.3s
+    8b no_mergejoin       0.3s
+    8b no_seqscan         0.3s
+    8b no_indexscan       0.3s
+    8c default            8.7s
+    8c no_nestloop        9.8s
+    8c no_hashjoin       15.5s
+    8c no_mergejoin       8.4s
+    8c no_seqscan        11.2s
+    8c no_indexscan       8.2s
+    8d default            4.8s
+    8d no_nestloop       13.1s
+    8d no_hashjoin       11.2s
+    8d no_mergejoin       4.8s
+    8d no_seqscan         7.5s
+    8d no_indexscan       4.6s
+    9a default            0.6s
+    9a no_nestloop        9.4s
+    9a no_hashjoin        0.8s
+    9a no_mergejoin       0.5s
+    9a no_seqscan         1.5s
+    9a no_indexscan       0.5s
+    9b default            0.5s
+    9b no_nestloop        6.3s
+    9b no_hashjoin        0.7s
+    9b no_mergejoin       0.5s
+    9b no_seqscan         1.4s
+    9b no_indexscan       0.5s
+    9c default            1.6s
+    9c no_nestloop        8.3s
+    9c no_hashjoin        0.9s
+    9c no_mergejoin       0.9s
+    9c no_seqscan         5.0s
+    9c no_indexscan       1.4s
+    9d default            6.2s
+    9d no_nestloop        9.0s
+    9d no_hashjoin       10.0s
+    9d no_mergejoin       5.6s
+    9d no_seqscan         8.3s
+    9d no_indexscan       5.7s
+== 2026-11-12 02:01:26 Xong
