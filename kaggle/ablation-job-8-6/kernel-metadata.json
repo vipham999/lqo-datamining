@@ -1,0 +1,13 @@
+{
+  "id": "vipham999/ablation-job-8-6",
+  "title": "ablation-job-8-6",
+  "code_file": "ablation-job-8-6.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}
