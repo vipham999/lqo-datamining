@@ -1,0 +1,89 @@
+[{"stream_name":"stderr","time":11.168150919,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.168332622,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.168339041,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.168341941,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":12.136949281,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":12.136993393,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":12.136999376,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":12.137003726,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.681570683,"data":"4\n"}
+,{"stream_name":"stdout","time":13.681623081,"data":"               total        used        free      shared  buff/cache   available\n"}
+,{"stream_name":"stdout","time":13.681627275,"data":"Mem:              31           1          26           0           4          30\n"}
+,{"stream_name":"stdout","time":13.681630204,"data":"Filesystem      Size  Used Avail Use% Mounted on\n"}
+,{"stream_name":"stdout","time":13.681632887,"data":"overlay         8.0T  7.1T  967G  89% /\n"}
+,{"stream_name":"stdout","time":13.681635666,"data":"/dev/loop2       20G  132K   20G   1% /kaggle/working\n"}
+,{"stream_name":"stdout","time":197.563494343,"data":"postgres (PostgreSQL) 12.5\n"}
+,{"stream_name":"stdout","time":197.563540635,"data":"pg_bao OK\n"}
+,{"stream_name":"stdout","time":205.817323876,"data":"waiting for server to start.... done\n"}
+,{"stream_name":"stdout","time":205.817368306,"data":"server started\n"}
+,{"stream_name":"stdout","time":205.817394963,"data":"geqo|on\n"}
+,{"stream_name":"stdout","time":205.817401805,"data":"shared_buffers|1048576\n"}
+,{"stream_name":"stdout","time":205.817406518,"data":"shared_preload_libraries|pg_bao\n"}
+,{"stream_name":"stdout","time":205.817412024,"data":"work_mem|524288\n"}
+,{"stream_name":"stdout","time":1276.937484966,"data":"Đang nạp, khoảng 30–45 phút; log ở /tmp/load.log ...\n"}
+,{"stream_name":"stdout","time":1276.94075034,"data":"06:55  đã nạp 12/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.9407735,"data":"06:56  đã nạp 15/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.94077735,"data":"06:57  đã nạp 18/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940780487,"data":"06:58  đã nạp 19/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940783632,"data":"06:59  đã nạp 19/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940786688,"data":"07:00  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940789753,"data":"07:01  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940792913,"data":"07:02  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940796244,"data":"07:03  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940799186,"data":"07:04  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940802235,"data":"07:05  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940805489,"data":"07:06  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940822908,"data":"07:07  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1276.940825606,"data":"07:08  đã nạp 21/21 bảng, đang: tạo khóa ngoại\n"}
+,{"stream_name":"stdout","time":1276.940828382,"data":"07:09  đã nạp 21/21 bảng, đang: tạo khóa ngoại\n"}
+,{"stream_name":"stdout","time":1276.940830791,"data":"07:10  đã nạp 21/21 bảng, đang: ANALYZE (bước cuối)\n"}
+,{"stream_name":"stdout","time":1276.940833634,"data":"Đủ 21 bảng, số dòng khớp.\n"}
+,{"stream_name":"stderr","time":1276.941647948,"data":"NOTICE:  database \"imdbload\" does not exist, skipping\n"}
+,{"stream_name":"stderr","time":1276.941662753,"data":"\n"}
+,{"stream_name":"stderr","time":1276.941665442,"data":"NOTICE:  database \"imdbload\" does not exist, skipping\n"}
+,{"stream_name":"stdout","time":1298.204352314,"data":"torch 1.13.1+cpu | sklearn 1.1.3\n"}
+,{"stream_name":"stdout","time":1299.866925967,"data":"Split base_query_split_1: 94 câu train, 19 câu test → log ở /kaggle/working/bao_logs\n"}
+,{"stream_name":"stdout","time":1632.397416539,"data":"Đã làm nóng: chạy mỗi câu JOB một lần trong 284 giây\n"}
+,{"stream_name":"stdout","time":7889.47987558,"data":"== Xóa kinh nghiệm và model cũ\n"}
+,{"stream_name":"stdout","time":7889.487854596,"data":"== Train trên queries/job__base_query_split_1/train (tối đa 8 giờ); tiến độ: tail -f /kaggle/working/bao_logs/train_console.log\n"}
+,{"stream_name":"stdout","time":7889.487889919,"data":"[19/19]\tRetraining done\n"}
+,{"stream_name":"stdout","time":7889.48789457,"data":"== Server đã nạp model mới 19 lần (mong đợi khoảng 19)\n"}
+,{"stream_name":"stdout","time":7889.487898386,"data":"== Train xong sau 104 phút\n"}
+,{"stream_name":"stdout","time":8106.4085015,"data":"== Baseline PostgreSQL trên queries/job__base_query_split_1/test (3 lần/câu)\n"}
+,{"stream_name":"stdout","time":8106.408555887,"data":"== Nạp model vào Bao server\n"}
+,{"stream_name":"stdout","time":8106.408562741,"data":"== Bao trên queries/job__base_query_split_1/test (3 lần/câu)\n"}
+,{"stream_name":"stdout","time":8106.408568833,"data":"== Xong test\n"}
+,{"stream_name":"stdout","time":8109.708913299,"data":"Split base_query_split_1: 19 câu test\n"}
+,{"stream_name":"stdout","time":8109.708980042,"data":"Thắng/Hòa/Thua (±10%): 0/4/15\n"}
+,{"stream_name":"stdout","time":8109.708985313,"data":"PostgreSQL 23.8 s → Bao 35.9 s; speedup tổng 0.66×, trung vị 0.63\n"}
+,{"stream_name":"stdout","time":8109.708989592,"data":"Thời gian train: job__base_query_split_1,train_seconds,6250\n"}
+,{"stream_name":"stdout","time":8109.708993102,"data":"         PG_ms   Bao_ms  speedup\n"}
+,{"stream_name":"stdout","time":8109.708996259,"data":"query                           \n"}
+,{"stream_name":"stdout","time":8109.708999411,"data":"7a      946.23  6279.01     0.15\n"}
+,{"stream_name":"stdout","time":8109.709002279,"data":"15b      38.41   214.43     0.18\n"}
+,{"stream_name":"stdout","time":8109.709005314,"data":"24b     106.56   524.71     0.20\n"}
+,{"stream_name":"stdout","time":8109.709008315,"data":"15d     869.87  2361.60     0.37\n"}
+,{"stream_name":"stdout","time":8109.70901147,"data":"31b     208.38   520.57     0.40\n"}
+,{"stream_name":"stdout","time":8109.709014566,"data":"15a     476.95   928.23     0.51\n"}
+,{"stream_name":"stdout","time":8109.709078585,"data":"31a     323.12   610.02     0.53\n"}
+,{"stream_name":"stdout","time":8109.709101906,"data":"7b      352.48   632.84     0.56\n"}
+,{"stream_name":"stdout","time":8109.709112472,"data":"25b     314.02   542.37     0.58\n"}
+,{"stream_name":"stdout","time":8109.709145211,"data":"31c     487.30   779.09     0.63\n"}
+,{"stream_name":"stdout","time":8109.709148105,"data":"24a     781.07  1188.38     0.66\n"}
+,{"stream_name":"stdout","time":8109.709150448,"data":"2c      575.98   838.70     0.69\n"}
+,{"stream_name":"stdout","time":8109.709153152,"data":"15c     684.44   940.79     0.73\n"}
+,{"stream_name":"stdout","time":8109.709155448,"data":"2b      699.06   836.55     0.84\n"}
+,{"stream_name":"stdout","time":8109.70915785,"data":"25c    7985.86  9552.54     0.84\n"}
+,{"stream_name":"stdout","time":8109.709160159,"data":"2a      723.94   804.24     0.90\n"}
+,{"stream_name":"stdout","time":8109.709168723,"data":"7c     3957.56  4199.67     0.94\n"}
+,{"stream_name":"stdout","time":8109.709171102,"data":"2d      881.61   918.49     0.96\n"}
+,{"stream_name":"stdout","time":8109.709173417,"data":"25a    3385.07  3202.62     1.06\n"}
+,{"stream_name":"stderr","time":8115.871755683,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":8115.871820669,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":8116.407276063,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":8116.407321046,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":8119.209314116,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":8119.312462989,"data":"[NbConvertApp] Writing 26407 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":8122.974682691,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":8124.435670553,"data":"[NbConvertApp] Writing 343281 bytes to __results__.html\n"}
+]

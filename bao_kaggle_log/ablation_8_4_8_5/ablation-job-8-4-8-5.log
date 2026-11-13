@@ -1,0 +1,173 @@
+[{"stream_name":"stderr","time":10.487589426,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":10.487762639,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":10.487771662,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":10.487776316,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":11.534420887,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":11.534473229,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":11.53449827,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":11.534503236,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":13.004692961,"data":"4\n"}
+,{"stream_name":"stdout","time":13.004744127,"data":"               total        used        free      shared  buff/cache   available\n"}
+,{"stream_name":"stdout","time":13.004749704,"data":"Mem:              31           1          26           0           4          30\n"}
+,{"stream_name":"stdout","time":13.004754079,"data":"Filesystem      Size  Used Avail Use% Mounted on\n"}
+,{"stream_name":"stdout","time":13.004758439,"data":"overlay         8.0T  7.1T  967G  89% /\n"}
+,{"stream_name":"stdout","time":13.004762419,"data":"/dev/loop2       20G  132K   20G   1% /kaggle/working\n"}
+,{"stream_name":"stdout","time":210.057262303,"data":"postgres (PostgreSQL) 12.5\n"}
+,{"stream_name":"stdout","time":210.057333803,"data":"pg_bao OK\n"}
+,{"stream_name":"stdout","time":218.558539738,"data":"waiting for server to start.... done\n"}
+,{"stream_name":"stdout","time":218.558585545,"data":"server started\n"}
+,{"stream_name":"stdout","time":218.55859226,"data":"geqo|on\n"}
+,{"stream_name":"stdout","time":218.558597384,"data":"shared_buffers|1048576\n"}
+,{"stream_name":"stdout","time":218.55861019,"data":"shared_preload_libraries|pg_bao\n"}
+,{"stream_name":"stdout","time":218.558617469,"data":"work_mem|524288\n"}
+,{"stream_name":"stdout","time":1489.256449022,"data":"Đang nạp, khoảng 30–45 phút; log ở /tmp/load.log ...\n"}
+,{"stream_name":"stdout","time":1489.260459586,"data":"09:33  đã nạp 11/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260481343,"data":"09:34  đã nạp 13/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260493395,"data":"09:35  đã nạp 18/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260498264,"data":"09:36  đã nạp 19/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260501744,"data":"09:37  đã nạp 19/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260505132,"data":"09:38  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260508664,"data":"09:39  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260530383,"data":"09:40  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260536389,"data":"09:41  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260542467,"data":"09:42  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260548272,"data":"09:43  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260553372,"data":"09:44  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260576381,"data":"09:45  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260581788,"data":"09:46  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1489.260585867,"data":"09:47  đã nạp 21/21 bảng, đang: tạo khóa ngoại\n"}
+,{"stream_name":"stdout","time":1489.260590495,"data":"09:48  đã nạp 21/21 bảng, đang: tạo khóa ngoại\n"}
+,{"stream_name":"stdout","time":1489.260594721,"data":"09:49  đã nạp 21/21 bảng, đang: ANALYZE (bước cuối)\n"}
+,{"stream_name":"stdout","time":1489.26059853,"data":"Đủ 21 bảng, số dòng khớp.\n"}
+,{"stream_name":"stderr","time":1489.26070082,"data":"NOTICE:  database \"imdbload\" does not exist, skipping\n"}
+,{"stream_name":"stderr","time":1489.260713172,"data":"\n"}
+,{"stream_name":"stderr","time":1489.26071714,"data":"NOTICE:  database \"imdbload\" does not exist, skipping\n"}
+,{"stream_name":"stdout","time":1513.024004199,"data":"torch 1.13.1+cpu | sklearn 1.1.3\n"}
+,{"stream_name":"stdout","time":1513.043914666,"data":"Writing /tmp/ablation_interleaved.py\n"}
+,{"stream_name":"stdout","time":1833.513166862,"data":"Đã làm nóng: chạy mỗi câu JOB một lần trong 279 giây\n"}
+,{"stream_name":"stdout","time":4067.95481142,"data":"113 câu, cấu hình: ['default', 'no_geqo', 'no_bitmap_tidscan']\n"}
+,{"stream_name":"stdout","time":4067.956186183,"data":"[1/113] 10a.sql  default=606ms  no_geqo=612ms  no_bitmap_tidscan=606ms\n"}
+,{"stream_name":"stdout","time":4067.956214295,"data":"[2/113] 10b.sql  no_geqo=432ms  no_bitmap_tidscan=441ms  default=449ms\n"}
+,{"stream_name":"stdout","time":4067.956220403,"data":"[3/113] 10c.sql  no_bitmap_tidscan=10920ms  default=11299ms  no_geqo=13335ms\n"}
+,{"stream_name":"stdout","time":4067.95622541,"data":"[4/113] 11a.sql  default=92ms  no_geqo=93ms  no_bitmap_tidscan=72ms\n"}
+,{"stream_name":"stdout","time":4067.956230815,"data":"[5/113] 11b.sql  no_geqo=46ms  no_bitmap_tidscan=37ms  default=46ms\n"}
+,{"stream_name":"stdout","time":4067.95623665,"data":"[6/113] 11c.sql  no_bitmap_tidscan=193ms  default=216ms  no_geqo=203ms\n"}
+,{"stream_name":"stdout","time":4067.956242535,"data":"[7/113] 11d.sql  default=201ms  no_geqo=195ms  no_bitmap_tidscan=154ms\n"}
+,{"stream_name":"stdout","time":4067.956247476,"data":"[8/113] 12a.sql  no_geqo=306ms  no_bitmap_tidscan=303ms  default=321ms\n"}
+,{"stream_name":"stdout","time":4067.956252597,"data":"[9/113] 12b.sql  no_bitmap_tidscan=152ms  default=150ms  no_geqo=152ms\n"}
+,{"stream_name":"stdout","time":4067.956257309,"data":"[10/113] 12c.sql  default=1006ms  no_geqo=1020ms  no_bitmap_tidscan=1048ms\n"}
+,{"stream_name":"stdout","time":4067.956262508,"data":"[11/113] 13a.sql  no_geqo=2262ms  no_bitmap_tidscan=2264ms  default=2257ms\n"}
+,{"stream_name":"stdout","time":4067.956267752,"data":"[12/113] 13b.sql  no_bitmap_tidscan=974ms  default=986ms  no_geqo=971ms\n"}
+,{"stream_name":"stdout","time":4067.956273024,"data":"[13/113] 13c.sql  default=929ms  no_geqo=993ms  no_bitmap_tidscan=934ms\n"}
+,{"stream_name":"stdout","time":4067.956279351,"data":"[14/113] 13d.sql  no_geqo=3329ms  no_bitmap_tidscan=3319ms  default=3314ms\n"}
+,{"stream_name":"stdout","time":4067.956284282,"data":"[15/113] 14a.sql  no_bitmap_tidscan=302ms  default=294ms  no_geqo=276ms\n"}
+,{"stream_name":"stdout","time":4067.956289402,"data":"[16/113] 14b.sql  default=129ms  no_geqo=105ms  no_bitmap_tidscan=96ms\n"}
+,{"stream_name":"stdout","time":4067.956294709,"data":"[17/113] 14c.sql  no_geqo=612ms  no_bitmap_tidscan=529ms  default=654ms\n"}
+,{"stream_name":"stdout","time":4067.956299963,"data":"[18/113] 15a.sql  no_bitmap_tidscan=514ms  default=527ms  no_geqo=507ms\n"}
+,{"stream_name":"stdout","time":4067.956359851,"data":"[19/113] 15b.sql  default=41ms  no_geqo=48ms  no_bitmap_tidscan=41ms\n"}
+,{"stream_name":"stdout","time":4067.956368219,"data":"[20/113] 15c.sql  no_geqo=679ms  no_bitmap_tidscan=1117ms  default=672ms\n"}
+,{"stream_name":"stdout","time":4067.956372656,"data":"[21/113] 15d.sql  no_bitmap_tidscan=1287ms  default=969ms  no_geqo=991ms\n"}
+,{"stream_name":"stdout","time":4067.956376739,"data":"[22/113] 16a.sql  default=170ms  no_geqo=204ms  no_bitmap_tidscan=194ms\n"}
+,{"stream_name":"stdout","time":4067.956380983,"data":"[23/113] 16b.sql  no_geqo=25642ms  no_bitmap_tidscan=26631ms  default=25979ms\n"}
+,{"stream_name":"stdout","time":4067.956384915,"data":"[24/113] 16c.sql  no_bitmap_tidscan=1990ms  default=1977ms  no_geqo=1956ms\n"}
+,{"stream_name":"stdout","time":4067.956389662,"data":"[25/113] 16d.sql  default=1713ms  no_geqo=1607ms  no_bitmap_tidscan=1530ms\n"}
+,{"stream_name":"stdout","time":4067.956394178,"data":"[26/113] 17a.sql  no_geqo=13784ms  no_bitmap_tidscan=15017ms  default=13707ms\n"}
+,{"stream_name":"stdout","time":4067.956398538,"data":"[27/113] 17b.sql  no_bitmap_tidscan=8107ms  default=7758ms  no_geqo=9023ms\n"}
+,{"stream_name":"stdout","time":4067.956412083,"data":"[28/113] 17c.sql  default=7250ms  no_geqo=7941ms  no_bitmap_tidscan=7899ms\n"}
+,{"stream_name":"stdout","time":4067.956429507,"data":"[29/113] 17d.sql  no_geqo=8882ms  no_bitmap_tidscan=8618ms  default=7687ms\n"}
+,{"stream_name":"stdout","time":4067.95643374,"data":"[30/113] 17e.sql  no_bitmap_tidscan=13265ms  default=13566ms  no_geqo=13438ms\n"}
+,{"stream_name":"stdout","time":4067.956437699,"data":"[31/113] 17f.sql  default=11591ms  no_geqo=14876ms  no_bitmap_tidscan=11264ms\n"}
+,{"stream_name":"stdout","time":4067.956442426,"data":"[32/113] 18a.sql  no_geqo=5035ms  no_bitmap_tidscan=4997ms  default=5009ms\n"}
+,{"stream_name":"stdout","time":4067.956446005,"data":"[33/113] 18b.sql  no_bitmap_tidscan=270ms  default=268ms  no_geqo=283ms\n"}
+,{"stream_name":"stdout","time":4067.956449748,"data":"[34/113] 18c.sql  default=5840ms  no_geqo=5957ms  no_bitmap_tidscan=5854ms\n"}
+,{"stream_name":"stdout","time":4067.956453752,"data":"[35/113] 19a.sql  no_geqo=495ms  no_bitmap_tidscan=499ms  default=514ms\n"}
+,{"stream_name":"stdout","time":4067.956457733,"data":"[36/113] 19b.sql  no_bitmap_tidscan=262ms  default=263ms  no_geqo=253ms\n"}
+,{"stream_name":"stdout","time":4067.956461761,"data":"[37/113] 19c.sql  default=803ms  no_geqo=825ms  no_bitmap_tidscan=822ms\n"}
+,{"stream_name":"stdout","time":4067.956465542,"data":"[38/113] 19d.sql  no_geqo=12475ms  no_bitmap_tidscan=12198ms  default=12181ms\n"}
+,{"stream_name":"stdout","time":4067.956470162,"data":"[39/113] 1a.sql  no_bitmap_tidscan=161ms  default=150ms  no_geqo=161ms\n"}
+,{"stream_name":"stdout","time":4067.956474383,"data":"[40/113] 1b.sql  default=146ms  no_geqo=149ms  no_bitmap_tidscan=142ms\n"}
+,{"stream_name":"stdout","time":4067.956489065,"data":"[41/113] 1c.sql  no_geqo=158ms  no_bitmap_tidscan=157ms  default=153ms\n"}
+,{"stream_name":"stdout","time":4067.956493107,"data":"[42/113] 1d.sql  no_bitmap_tidscan=152ms  default=141ms  no_geqo=146ms\n"}
+,{"stream_name":"stdout","time":4067.956497826,"data":"[43/113] 20a.sql  default=2976ms  no_geqo=3047ms  no_bitmap_tidscan=2788ms\n"}
+,{"stream_name":"stdout","time":4067.956503026,"data":"[44/113] 20b.sql  no_geqo=2224ms  no_bitmap_tidscan=1975ms  default=2313ms\n"}
+,{"stream_name":"stdout","time":4067.956507768,"data":"[45/113] 20c.sql  no_bitmap_tidscan=1290ms  default=1163ms  no_geqo=1131ms\n"}
+,{"stream_name":"stdout","time":4067.956512354,"data":"[46/113] 21a.sql  default=106ms  no_geqo=94ms  no_bitmap_tidscan=88ms\n"}
+,{"stream_name":"stdout","time":4067.956521896,"data":"[47/113] 21b.sql  no_geqo=101ms  no_bitmap_tidscan=83ms  default=101ms\n"}
+,{"stream_name":"stdout","time":4067.95652646,"data":"[48/113] 21c.sql  no_bitmap_tidscan=88ms  default=109ms  no_geqo=97ms\n"}
+,{"stream_name":"stdout","time":4067.956530496,"data":"[49/113] 22a.sql  default=578ms  no_geqo=474ms  no_bitmap_tidscan=496ms\n"}
+,{"stream_name":"stdout","time":4067.956535052,"data":"[50/113] 22b.sql  no_geqo=320ms  no_bitmap_tidscan=261ms  default=291ms\n"}
+,{"stream_name":"stdout","time":4067.956539539,"data":"[51/113] 22c.sql  no_bitmap_tidscan=2464ms  default=2582ms  no_geqo=2483ms\n"}
+,{"stream_name":"stdout","time":4067.956543001,"data":"[52/113] 22d.sql  default=1048ms  no_geqo=1099ms  no_bitmap_tidscan=1090ms\n"}
+,{"stream_name":"stdout","time":4067.956547179,"data":"[53/113] 23a.sql  no_geqo=544ms  no_bitmap_tidscan=584ms  default=567ms\n"}
+,{"stream_name":"stdout","time":4067.956551551,"data":"[54/113] 23b.sql  no_bitmap_tidscan=89ms  default=105ms  no_geqo=92ms\n"}
+,{"stream_name":"stdout","time":4067.956556253,"data":"[55/113] 23c.sql  default=734ms  no_geqo=704ms  no_bitmap_tidscan=687ms\n"}
+,{"stream_name":"stdout","time":4067.956560694,"data":"[56/113] 24a.sql  no_geqo=680ms  no_bitmap_tidscan=271ms  default=710ms\n"}
+,{"stream_name":"stdout","time":4067.956564807,"data":"[57/113] 24b.sql  no_bitmap_tidscan=106ms  default=125ms  no_geqo=481ms\n"}
+,{"stream_name":"stdout","time":4067.956568534,"data":"[58/113] 25a.sql  default=3010ms  no_geqo=3204ms  no_bitmap_tidscan=2636ms\n"}
+,{"stream_name":"stdout","time":4067.956572471,"data":"[59/113] 25b.sql  no_geqo=369ms  no_bitmap_tidscan=289ms  default=337ms\n"}
+,{"stream_name":"stdout","time":4067.956576042,"data":"[60/113] 25c.sql  no_bitmap_tidscan=7851ms  default=8340ms  no_geqo=8054ms\n"}
+,{"stream_name":"stdout","time":4067.956580011,"data":"[61/113] 26a.sql  default=1721ms  no_geqo=1773ms  no_bitmap_tidscan=1749ms\n"}
+,{"stream_name":"stdout","time":4067.956584853,"data":"[62/113] 26b.sql  no_geqo=185ms  no_bitmap_tidscan=318ms  default=313ms\n"}
+,{"stream_name":"stdout","time":4067.95658946,"data":"[63/113] 26c.sql  no_bitmap_tidscan=2438ms  default=2278ms  no_geqo=5859ms\n"}
+,{"stream_name":"stdout","time":4067.95659327,"data":"[64/113] 27a.sql  default=90ms  no_geqo=123ms  no_bitmap_tidscan=233ms\n"}
+,{"stream_name":"stdout","time":4067.956597341,"data":"[65/113] 27b.sql  no_geqo=120ms  no_bitmap_tidscan=105ms  default=92ms\n"}
+,{"stream_name":"stdout","time":4067.956601485,"data":"[66/113] 27c.sql  no_bitmap_tidscan=122ms  default=92ms  no_geqo=135ms\n"}
+,{"stream_name":"stdout","time":4067.956605852,"data":"[67/113] 28a.sql  default=5633ms  no_geqo=1349ms  no_bitmap_tidscan=922ms\n"}
+,{"stream_name":"stdout","time":4067.956609924,"data":"[68/113] 28b.sql  no_geqo=843ms  no_bitmap_tidscan=3862ms  default=514ms\n"}
+,{"stream_name":"stdout","time":4067.956613616,"data":"[69/113] 28c.sql  no_bitmap_tidscan=1068ms  default=2438ms  no_geqo=1706ms\n"}
+,{"stream_name":"stdout","time":4067.956617476,"data":"[70/113] 29a.sql  default=169ms  no_geqo=4930ms  no_bitmap_tidscan=210ms\n"}
+,{"stream_name":"stdout","time":4067.956621507,"data":"[71/113] 29b.sql  no_geqo=5052ms  no_bitmap_tidscan=152ms  default=144ms\n"}
+,{"stream_name":"stdout","time":4067.956625164,"data":"[72/113] 29c.sql  no_bitmap_tidscan=506ms  default=1361ms  no_geqo=10732ms\n"}
+,{"stream_name":"stdout","time":4067.95662907,"data":"[73/113] 2a.sql  default=715ms  no_geqo=691ms  no_bitmap_tidscan=606ms\n"}
+,{"stream_name":"stdout","time":4067.956632774,"data":"[74/113] 2b.sql  no_geqo=677ms  no_bitmap_tidscan=602ms  default=728ms\n"}
+,{"stream_name":"stdout","time":4067.956636656,"data":"[75/113] 2c.sql  no_bitmap_tidscan=679ms  default=644ms  no_geqo=583ms\n"}
+,{"stream_name":"stdout","time":4067.956648256,"data":"[76/113] 2d.sql  default=767ms  no_geqo=805ms  no_bitmap_tidscan=824ms\n"}
+,{"stream_name":"stdout","time":4067.956652143,"data":"[77/113] 30a.sql  no_geqo=3259ms  no_bitmap_tidscan=2956ms  default=1543ms\n"}
+,{"stream_name":"stdout","time":4067.956656143,"data":"[78/113] 30b.sql  no_bitmap_tidscan=443ms  default=498ms  no_geqo=552ms\n"}
+,{"stream_name":"stdout","time":4067.956660139,"data":"[79/113] 30c.sql  default=3102ms  no_geqo=3095ms  no_bitmap_tidscan=3207ms\n"}
+,{"stream_name":"stdout","time":4067.956664544,"data":"[80/113] 31a.sql  no_geqo=337ms  no_bitmap_tidscan=337ms  default=338ms\n"}
+,{"stream_name":"stdout","time":4067.95666899,"data":"[81/113] 31b.sql  no_bitmap_tidscan=225ms  default=221ms  no_geqo=211ms\n"}
+,{"stream_name":"stdout","time":4067.956672922,"data":"[82/113] 31c.sql  default=559ms  no_geqo=493ms  no_bitmap_tidscan=510ms\n"}
+,{"stream_name":"stdout","time":4067.956677179,"data":"[83/113] 32a.sql  no_geqo=17ms  no_bitmap_tidscan=14ms  default=15ms\n"}
+,{"stream_name":"stdout","time":4067.956683268,"data":"[84/113] 32b.sql  no_bitmap_tidscan=129ms  default=127ms  no_geqo=138ms\n"}
+,{"stream_name":"stdout","time":4067.956687236,"data":"[85/113] 33a.sql  default=139ms  no_geqo=475ms  no_bitmap_tidscan=143ms\n"}
+,{"stream_name":"stdout","time":4067.956691433,"data":"[86/113] 33b.sql  no_geqo=406ms  no_bitmap_tidscan=149ms  default=136ms\n"}
+,{"stream_name":"stdout","time":4067.956695623,"data":"[87/113] 33c.sql  no_bitmap_tidscan=115ms  default=120ms  no_geqo=316ms\n"}
+,{"stream_name":"stdout","time":4067.956711883,"data":"[88/113] 3a.sql  default=189ms  no_geqo=178ms  no_bitmap_tidscan=143ms\n"}
+,{"stream_name":"stdout","time":4067.95671612,"data":"[89/113] 3b.sql  no_geqo=111ms  no_bitmap_tidscan=108ms  default=112ms\n"}
+,{"stream_name":"stdout","time":4067.956720105,"data":"[90/113] 3c.sql  no_bitmap_tidscan=324ms  default=311ms  no_geqo=332ms\n"}
+,{"stream_name":"stdout","time":4067.956723985,"data":"[91/113] 4a.sql  default=100ms  no_geqo=107ms  no_bitmap_tidscan=113ms\n"}
+,{"stream_name":"stdout","time":4067.956728399,"data":"[92/113] 4b.sql  no_geqo=76ms  no_bitmap_tidscan=110ms  default=76ms\n"}
+,{"stream_name":"stdout","time":4067.956732352,"data":"[93/113] 4c.sql  no_bitmap_tidscan=132ms  default=117ms  no_geqo=170ms\n"}
+,{"stream_name":"stdout","time":4067.956747509,"data":"[94/113] 5a.sql  default=255ms  no_geqo=253ms  no_bitmap_tidscan=262ms\n"}
+,{"stream_name":"stdout","time":4067.956751593,"data":"[95/113] 5b.sql  no_geqo=265ms  no_bitmap_tidscan=246ms  default=241ms\n"}
+,{"stream_name":"stdout","time":4067.956755368,"data":"[96/113] 5c.sql  no_bitmap_tidscan=331ms  default=330ms  no_geqo=332ms\n"}
+,{"stream_name":"stdout","time":4067.956759298,"data":"[97/113] 6a.sql  default=26ms  no_geqo=25ms  no_bitmap_tidscan=27ms\n"}
+,{"stream_name":"stdout","time":4067.956763464,"data":"[98/113] 6b.sql  no_geqo=245ms  no_bitmap_tidscan=188ms  default=212ms\n"}
+,{"stream_name":"stdout","time":4067.956767198,"data":"[99/113] 6c.sql  no_bitmap_tidscan=16ms  default=14ms  no_geqo=16ms\n"}
+,{"stream_name":"stdout","time":4067.956771145,"data":"[100/113] 6d.sql  default=6324ms  no_geqo=5710ms  no_bitmap_tidscan=6434ms\n"}
+,{"stream_name":"stdout","time":4067.956775077,"data":"[101/113] 6e.sql  no_geqo=27ms  no_bitmap_tidscan=22ms  default=31ms\n"}
+,{"stream_name":"stdout","time":4067.956778736,"data":"[102/113] 6f.sql  no_bitmap_tidscan=5818ms  default=5552ms  no_geqo=5437ms\n"}
+,{"stream_name":"stdout","time":4067.956783026,"data":"[103/113] 7a.sql  default=966ms  no_geqo=952ms  no_bitmap_tidscan=913ms\n"}
+,{"stream_name":"stdout","time":4067.956786739,"data":"[104/113] 7b.sql  no_geqo=243ms  no_bitmap_tidscan=263ms  default=325ms\n"}
+,{"stream_name":"stdout","time":4067.956795656,"data":"[105/113] 7c.sql  no_bitmap_tidscan=2330ms  default=3872ms  no_geqo=3825ms\n"}
+,{"stream_name":"stdout","time":4067.956799701,"data":"[106/113] 8a.sql  default=1419ms  no_geqo=1370ms  no_bitmap_tidscan=1409ms\n"}
+,{"stream_name":"stdout","time":4067.956803296,"data":"[107/113] 8b.sql  no_geqo=286ms  no_bitmap_tidscan=289ms  default=283ms\n"}
+,{"stream_name":"stdout","time":4067.956806971,"data":"[108/113] 8c.sql  no_bitmap_tidscan=7254ms  default=7542ms  no_geqo=7688ms\n"}
+,{"stream_name":"stdout","time":4067.956810862,"data":"[109/113] 8d.sql  default=3394ms  no_geqo=3423ms  no_bitmap_tidscan=3440ms\n"}
+,{"stream_name":"stdout","time":4067.956815108,"data":"[110/113] 9a.sql  no_geqo=496ms  no_bitmap_tidscan=489ms  default=487ms\n"}
+,{"stream_name":"stdout","time":4067.956819385,"data":"[111/113] 9b.sql  no_bitmap_tidscan=496ms  default=488ms  no_geqo=475ms\n"}
+,{"stream_name":"stdout","time":4067.956834456,"data":"[112/113] 9c.sql  default=918ms  no_geqo=771ms  no_bitmap_tidscan=793ms\n"}
+,{"stream_name":"stdout","time":4067.956838836,"data":"[113/113] 9d.sql  no_geqo=5089ms  no_bitmap_tidscan=5241ms  default=5149ms\n"}
+,{"stream_name":"stdout","time":4067.956842944,"data":"Xong: ['/kaggle/working/ablation_logs/test__postgres__job__default__kaggle.txt', '/kaggle/working/ablation_logs/test__postgres__job__no_geqo__kaggle.txt', '/kaggle/working/ablation_logs/test__postgres__job__no_bitmap_tidscan__kaggle.txt']\n"}
+,{"stream_name":"stdout","time":4070.682098117,"data":"no_geqo: tổng 230.4 s → 258.4 s; chậm đi \u003e2×: 9 câu (26c, 33c, 33b, 33a, 24b, 29c, 29a, 29b); nhanh lên \u003e2×: 1 câu\n"}
+,{"stream_name":"stdout","time":4070.68215044,"data":"no_bitmap_tidscan: tổng 230.4 s → 228.3 s; chậm đi \u003e2×: 2 câu (27a, 28b); nhanh lên \u003e2×: 4 câu\n"}
+,{"stream_name":"stderr","time":4076.689990053,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":4076.690071716,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":4077.155858258,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":4077.155896461,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":4079.528484665,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":4079.628759404,"data":"[NbConvertApp] Writing 32537 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":4083.232248129,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":4084.508875706,"data":"[NbConvertApp] Writing 340801 bytes to __results__.html\n"}
+]

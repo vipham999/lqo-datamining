@@ -1,0 +1,1788 @@
+Found 91 queries in queries/job__random_split_3/train and its subdirectories.
+Using Bao: True
+Running against DB: imdbload
+Executing queries using PG optimizer for initial training
+x, 0, 0, 2026-11-13 09:17:19.829026, queries/job__random_split_3/train/2d.sql, 2.205, 600.963, PG
+x, 0, 1, 2026-11-13 09:17:20.457128, queries/job__random_split_3/train/2d.sql, 2.109, 620.78, PG
+x, 0, 2, 2026-11-13 09:17:21.982588, queries/job__random_split_3/train/2d.sql, 96.193, 563.58, PG
+x, 1, 0, 2026-11-13 09:17:22.057705, queries/job__random_split_3/train/11a.sql, 5.713, 63.482, PG
+x, 1, 1, 2026-11-13 09:17:22.131617, queries/job__random_split_3/train/11a.sql, 5.825, 61.978, PG
+x, 1, 2, 2026-11-13 09:17:22.673231, queries/job__random_split_3/train/11a.sql, 101.014, 53.233, PG
+x, 2, 0, 2026-11-13 09:17:26.211995, queries/job__random_split_3/train/18a.sql, 4.036, 3528.631, PG
+x, 2, 1, 2026-11-13 09:17:29.709881, queries/job__random_split_3/train/18a.sql, 5.735, 3485.063, PG
+x, 2, 2, 2026-11-13 09:17:36.730381, queries/job__random_split_3/train/18a.sql, 100.297, 3390.198, PG
+x, 3, 0, 2026-11-13 09:17:43.035587, queries/job__random_split_3/train/17b.sql, 4.322, 6293.731, PG
+x, 3, 1, 2026-11-13 09:17:49.364616, queries/job__random_split_3/train/17b.sql, 4.299, 6319.792, PG
+x, 3, 2, 2026-11-13 09:18:02.631139, queries/job__random_split_3/train/17b.sql, 101.75, 6163.492, PG
+x, 4, 0, 2026-11-13 09:18:02.742527, queries/job__random_split_3/train/33b.sql, 61.196, 40.343, PG
+x, 4, 1, 2026-11-13 09:18:02.852863, queries/job__random_split_3/train/33b.sql, 64.635, 37.83, PG
+x, 4, 2, 2026-11-13 09:18:03.676155, queries/job__random_split_3/train/33b.sql, 154.828, 33.018, PG
+x, 5, 0, 2026-11-13 09:18:03.986247, queries/job__random_split_3/train/31a.sql, 42.32, 261.345, PG
+x, 5, 1, 2026-11-13 09:18:04.311469, queries/job__random_split_3/train/31a.sql, 43.275, 274.737, PG
+x, 5, 2, 2026-11-13 09:18:05.454193, queries/job__random_split_3/train/31a.sql, 136.451, 215.268, PG
+x, 6, 0, 2026-11-13 09:18:06.400578, queries/job__random_split_3/train/7a.sql, 5.916, 933.461, PG
+x, 6, 1, 2026-11-13 09:18:07.331787, queries/job__random_split_3/train/7a.sql, 6.459, 918.223, PG
+x, 6, 2, 2026-11-13 09:18:09.413989, queries/job__random_split_3/train/7a.sql, 101.368, 782.142, PG
+x, 7, 0, 2026-11-13 09:18:10.972252, queries/job__random_split_3/train/13a.sql, 8.154, 1543.489, PG
+x, 7, 1, 2026-11-13 09:18:12.484705, queries/job__random_split_3/train/13a.sql, 8.249, 1497.859, PG
+x, 7, 2, 2026-11-13 09:18:15.749519, queries/job__random_split_3/train/13a.sql, 103.231, 1505.861, PG
+x, 8, 0, 2026-11-13 09:18:15.846299, queries/job__random_split_3/train/21b.sql, 12.043, 78.299, PG
+x, 8, 1, 2026-11-13 09:18:16.076067, queries/job__random_split_3/train/21b.sql, 74.539, 124.013, PG
+x, 8, 2, 2026-11-13 09:18:18.506124, queries/job__random_split_3/train/21b.sql, 104.48, 63.909, PG
+x, 9, 0, 2026-11-13 09:18:18.587099, queries/job__random_split_3/train/11a.sql, 6.86, 67.971, PG
+x, 9, 1, 2026-11-13 09:18:18.672521, queries/job__random_split_3/train/11a.sql, 6.725, 72.375, PG
+x, 9, 2, 2026-11-13 09:18:19.210326, queries/job__random_split_3/train/11a.sql, 99.381, 53.482, PG
+x, 10, 0, 2026-11-13 09:18:30.072088, queries/job__random_split_3/train/17a.sql, 4.143, 10851.399, PG
+x, 10, 1, 2026-11-13 09:18:41.128378, queries/job__random_split_3/train/17a.sql, 4.344, 11046.057, PG
+x, 10, 2, 2026-11-13 09:19:02.896322, queries/job__random_split_3/train/17a.sql, 98.661, 10776.467, PG
+x, 11, 0, 2026-11-13 09:19:02.983432, queries/job__random_split_3/train/24b.sql, 52.899, 27.281, PG
+x, 11, 1, 2026-11-13 09:19:03.071258, queries/job__random_split_3/train/24b.sql, 57.256, 23.013, PG
+x, 11, 2, 2026-11-13 09:19:03.832116, queries/job__random_split_3/train/24b.sql, 148.888, 23.08, PG
+x, 12, 0, 2026-11-13 09:19:03.904067, queries/job__random_split_3/train/11a.sql, 6.283, 60.385, PG
+x, 12, 1, 2026-11-13 09:19:03.975529, queries/job__random_split_3/train/11a.sql, 5.673, 60.153, PG
+x, 12, 2, 2026-11-13 09:19:04.532512, queries/job__random_split_3/train/11a.sql, 105.494, 54.091, PG
+x, 13, 0, 2026-11-13 09:19:05.891711, queries/job__random_split_3/train/16d.sql, 6.431, 1346.797, PG
+x, 13, 1, 2026-11-13 09:19:07.257900, queries/job__random_split_3/train/16d.sql, 6.538, 1353.756, PG
+x, 13, 2, 2026-11-13 09:19:10.145405, queries/job__random_split_3/train/16d.sql, 103.903, 1183.112, PG
+x, 14, 0, 2026-11-13 09:19:10.573596, queries/job__random_split_3/train/30b.sql, 51.87, 370.021, PG
+x, 14, 1, 2026-11-13 09:19:11.010607, queries/job__random_split_3/train/30b.sql, 50.828, 380.006, PG
+x, 14, 2, 2026-11-13 09:19:12.405531, queries/job__random_split_3/train/30b.sql, 144.291, 336.013, PG
+x, 15, 0, 2026-11-13 09:19:17.044620, queries/job__random_split_3/train/26c.sql, 51.384, 4581.523, PG
+x, 15, 1, 2026-11-13 09:19:21.547193, queries/job__random_split_3/train/26c.sql, 50.3, 4445.76, PG
+x, 15, 2, 2026-11-13 09:19:30.328140, queries/job__random_split_3/train/26c.sql, 144.417, 4070.48, PG
+x, 16, 0, 2026-11-13 09:19:36.702974, queries/job__random_split_3/train/17b.sql, 4.265, 6365.261, PG
+x, 16, 1, 2026-11-13 09:19:42.908393, queries/job__random_split_3/train/17b.sql, 4.198, 6195.961, PG
+x, 16, 2, 2026-11-13 09:19:55.156302, queries/job__random_split_3/train/17b.sql, 100.102, 5820.777, PG
+x, 17, 0, 2026-11-13 09:19:55.420609, queries/job__random_split_3/train/29a.sql, 84.595, 172.828, PG
+x, 17, 1, 2026-11-13 09:19:55.675563, queries/job__random_split_3/train/29a.sql, 84.054, 164.449, PG
+x, 17, 2, 2026-11-13 09:19:56.851620, queries/job__random_split_3/train/29a.sql, 177.347, 121.287, PG
+x, 18, 0, 2026-11-13 09:19:57.017933, queries/job__random_split_3/train/5a.sql, 2.087, 158.714, PG
+x, 18, 1, 2026-11-13 09:19:57.174681, queries/job__random_split_3/train/5a.sql, 2.205, 148.981, PG
+x, 18, 2, 2026-11-13 09:19:57.865034, queries/job__random_split_3/train/5a.sql, 96.167, 144.345, PG
+x, 19, 0, 2026-11-13 09:19:58.279864, queries/job__random_split_3/train/10a.sql, 3.531, 405.576, PG
+x, 19, 1, 2026-11-13 09:19:58.720185, queries/job__random_split_3/train/10a.sql, 3.598, 430.682, PG
+x, 19, 2, 2026-11-13 09:19:59.876100, queries/job__random_split_3/train/10a.sql, 98.327, 389.34, PG
+x, 20, 0, 2026-11-13 09:20:00.051318, queries/job__random_split_3/train/5a.sql, 2.088, 167.217, PG
+x, 20, 1, 2026-11-13 09:20:00.207011, queries/job__random_split_3/train/5a.sql, 2.132, 148.504, PG
+x, 20, 2, 2026-11-13 09:20:00.897869, queries/job__random_split_3/train/5a.sql, 97.012, 144.758, PG
+x, 21, 0, 2026-11-13 09:20:01.287963, queries/job__random_split_3/train/31c.sql, 43.618, 340.198, PG
+x, 21, 1, 2026-11-13 09:20:01.712240, queries/job__random_split_3/train/31c.sql, 42.415, 375.514, PG
+x, 21, 2, 2026-11-13 09:20:03.005106, queries/job__random_split_3/train/31c.sql, 133.656, 322.091, PG
+x, 22, 0, 2026-11-13 09:20:03.121494, queries/job__random_split_3/train/1a.sql, 2.133, 108.576, PG
+x, 22, 1, 2026-11-13 09:20:03.230169, queries/job__random_split_3/train/1a.sql, 2.338, 100.43, PG
+x, 22, 2, 2026-11-13 09:20:03.800356, queries/job__random_split_3/train/1a.sql, 97.436, 95.563, PG
+x, 23, 0, 2026-11-13 09:20:04.323544, queries/job__random_split_3/train/15c.sql, 12.065, 505.056, PG
+x, 23, 1, 2026-11-13 09:20:04.831561, queries/job__random_split_3/train/15c.sql, 19.641, 478.848, PG
+x, 23, 2, 2026-11-13 09:20:06.186830, queries/job__random_split_3/train/15c.sql, 105.697, 439.439, PG
+x, 24, 0, 2026-11-13 09:20:08.361446, queries/job__random_split_3/train/8d.sql, 4.004, 2163.886, PG
+x, 24, 1, 2026-11-13 09:20:10.475872, queries/job__random_split_3/train/8d.sql, 4.191, 2102.914, PG
+x, 24, 2, 2026-11-13 09:20:14.852598, queries/job__random_split_3/train/8d.sql, 98.718, 2136.904, PG
+==========================================================================================
+Iteration over chunk 1/19...
+[2026-11-13 09:20:14.852839]	[1/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.6785418093204498
+Epoch 15 training loss: 0.062014929950237274
+Epoch 30 training loss: 0.03127710334956646
+Epoch 45 training loss: 0.017814720049500465
+Epoch 60 training loss: 0.004860537010245025
+Stopped training from convergence condition at epoch 74
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:20:18.524706]	[1/19]	Retraining done.
+0, 0, 0, 2026-11-13 09:20:19.340435, queries/job__random_split_3/train/1a.sql, 119.098, 484.91, Bao
+0, 0, 1, 2026-11-13 09:20:20.140396, queries/job__random_split_3/train/1a.sql, 110.534, 488.818, Bao
+0, 0, 2, 2026-11-13 09:20:21.455547, queries/job__random_split_3/train/1a.sql, 102.884, 478.188, Bao
+0, 1, 0, 2026-11-13 09:20:22.441738, queries/job__random_split_3/train/13b.sql, 133.888, 628.929, Bao
+0, 1, 1, 2026-11-13 09:20:23.439377, queries/job__random_split_3/train/13b.sql, 136.248, 635.216, Bao
+0, 1, 2, 2026-11-13 09:20:25.121479, queries/job__random_split_3/train/13b.sql, 130.54, 619.544, Bao
+0, 2, 0, 2026-11-13 09:20:26.110832, queries/job__random_split_3/train/13b.sql, 133.327, 631.326, Bao
+0, 2, 1, 2026-11-13 09:20:27.978266, queries/job__random_split_3/train/13b.sql, 133.445, 1500.121, Bao
+0, 2, 2, 2026-11-13 09:20:32.059603, queries/job__random_split_3/train/13b.sql, 325.066, 1322.175, Bao
+0, 3, 0, 2026-11-13 09:20:38.325565, queries/job__random_split_3/train/6b.sql, 268.899, 5464.924, Bao
+0, 3, 1, 2026-11-13 09:20:45.135860, queries/job__random_split_3/train/6b.sql, 238.211, 6059.217, Bao
+0, 3, 2, 2026-11-13 09:20:52.431329, queries/job__random_split_3/train/6b.sql, 247.177, 2776.369, Bao
+0, 4, 0, 2026-11-13 09:20:57.303557, queries/job__random_split_3/train/29b.sql, 459.417, 3826.259, Bao
+0, 4, 1, 2026-11-13 09:21:01.940580, queries/job__random_split_3/train/29b.sql, 467.585, 3622.796, Bao
+0, 4, 2, 2026-11-13 09:21:10.388590, queries/job__random_split_3/train/29b.sql, 440.676, 3515.212, Bao
+0, 5, 0, 2026-11-13 09:21:10.872480, queries/job__random_split_3/train/5a.sql, 113.796, 155.418, Bao
+0, 5, 1, 2026-11-13 09:21:11.347625, queries/job__random_split_3/train/5a.sql, 112.663, 154.901, Bao
+0, 5, 2, 2026-11-13 09:21:12.181188, queries/job__random_split_3/train/5a.sql, 104.161, 147.251, Bao
+0, 6, 0, 2026-11-13 09:21:14.120294, queries/job__random_split_3/train/33a.sql, 392.214, 968.977, Bao
+0, 6, 1, 2026-11-13 09:21:15.920537, queries/job__random_split_3/train/33a.sql, 383.842, 964.207, Bao
+0, 6, 2, 2026-11-13 09:21:18.685302, queries/job__random_split_3/train/33a.sql, 352.792, 927.765, Bao
+0, 7, 0, 2026-11-13 09:21:22.950758, queries/job__random_split_3/train/25c.sql, 143.591, 3882.648, Bao
+0, 7, 1, 2026-11-13 09:21:27.251287, queries/job__random_split_3/train/25c.sql, 145.93, 3912.112, Bao
+0, 7, 2, 2026-11-13 09:21:35.280819, queries/job__random_split_3/train/25c.sql, 139.711, 3849.616, Bao
+0, 8, 0, 2026-11-13 09:21:38.129267, queries/job__random_split_3/train/9a.sql, 134.874, 2487.674, Bao
+0, 8, 1, 2026-11-13 09:21:41.001704, queries/job__random_split_3/train/9a.sql, 128.381, 2517.742, Bao
+0, 8, 2, 2026-11-13 09:21:46.388138, queries/job__random_split_3/train/9a.sql, 119.638, 2505.823, Bao
+0, 9, 0, 2026-11-13 09:21:49.939809, queries/job__random_split_3/train/20a.sql, 157.778, 3142.611, Bao
+0, 9, 1, 2026-11-13 09:21:53.468683, queries/job__random_split_3/train/20a.sql, 154.487, 3121.479, Bao
+0, 9, 2, 2026-11-13 09:21:59.864879, queries/job__random_split_3/train/20a.sql, 153.054, 3321.242, Bao
+0, 10, 0, 2026-11-13 09:22:02.270482, queries/job__random_split_3/train/27a.sql, 314.922, 1681.861, Bao
+0, 10, 1, 2026-11-13 09:22:04.637543, queries/job__random_split_3/train/27a.sql, 313.334, 1648.033, Bao
+0, 10, 2, 2026-11-13 09:22:08.799271, queries/job__random_split_3/train/27a.sql, 301.042, 1633.469, Bao
+0, 11, 0, 2026-11-13 09:22:10.924129, queries/job__random_split_3/train/5c.sql, 110.104, 1789.511, Bao
+0, 11, 1, 2026-11-13 09:22:13.023505, queries/job__random_split_3/train/5c.sql, 108.601, 1779.512, Bao
+0, 11, 2, 2026-11-13 09:22:17.002501, queries/job__random_split_3/train/5c.sql, 107.755, 1764.02, Bao
+0, 12, 0, 2026-11-13 09:22:17.971139, queries/job__random_split_3/train/2b.sql, 110.671, 647.965, Bao
+0, 12, 1, 2026-11-13 09:22:19.054786, queries/job__random_split_3/train/2b.sql, 108.622, 768.979, Bao
+0, 12, 2, 2026-11-13 09:22:20.804300, queries/job__random_split_3/train/2b.sql, 103.061, 768.847, Bao
+0, 13, 0, 2026-11-13 09:22:23.873218, queries/job__random_split_3/train/6c.sql, 111.695, 2751.652, Bao
+0, 13, 1, 2026-11-13 09:22:26.969541, queries/job__random_split_3/train/6c.sql, 113.274, 2770.776, Bao
+0, 13, 2, 2026-11-13 09:22:32.154488, queries/job__random_split_3/train/6c.sql, 103.752, 2671.193, Bao
+0, 14, 0, 2026-11-13 09:22:34.867831, queries/job__random_split_3/train/28b.sql, 367.021, 1882.824, Bao
+0, 14, 1, 2026-11-13 09:22:37.549558, queries/job__random_split_3/train/28b.sql, 364.983, 1858.556, Bao
+0, 14, 2, 2026-11-13 09:22:42.229551, queries/job__random_split_3/train/28b.sql, 355.468, 1805.473, Bao
+0, 15, 0, 2026-11-13 09:22:43.003072, queries/job__random_split_3/train/32a.sql, 113.172, 450.584, Bao
+0, 15, 1, 2026-11-13 09:22:43.781385, queries/job__random_split_3/train/32a.sql, 112.933, 451.904, Bao
+0, 15, 2, 2026-11-13 09:22:45.012462, queries/job__random_split_3/train/32a.sql, 124.256, 435.051, Bao
+0, 16, 0, 2026-11-13 09:22:46.844782, queries/job__random_split_3/train/12a.sql, 123.964, 1491.302, Bao
+0, 16, 1, 2026-11-13 09:22:48.635307, queries/job__random_split_3/train/12a.sql, 123.173, 1441.616, Bao
+0, 16, 2, 2026-11-13 09:22:51.863943, queries/job__random_split_3/train/12a.sql, 118.821, 1410.215, Bao
+0, 17, 0, 2026-11-13 09:22:56.362690, queries/job__random_split_3/train/17b.sql, 120.958, 4164.859, Bao
+0, 17, 1, 2026-11-13 09:23:00.850647, queries/job__random_split_3/train/17b.sql, 118.281, 4155.894, Bao
+0, 17, 2, 2026-11-13 09:23:08.234286, queries/job__random_split_3/train/17b.sql, 110.386, 4061.073, Bao
+0, 18, 0, 2026-11-13 09:23:11.563514, queries/job__random_split_3/train/18b.sql, 120.51, 2992.694, Bao
+0, 18, 1, 2026-11-13 09:23:14.946127, queries/job__random_split_3/train/18b.sql, 119.966, 3047.508, Bao
+0, 18, 2, 2026-11-13 09:23:21.274802, queries/job__random_split_3/train/18b.sql, 112.374, 2913.654, Bao
+0, 19, 0, 2026-11-13 09:23:23.458713, queries/job__random_split_3/train/13a.sql, 139.197, 1815.318, Bao
+0, 19, 1, 2026-11-13 09:23:25.682883, queries/job__random_split_3/train/13a.sql, 133.675, 1859.397, Bao
+0, 19, 2, 2026-11-13 09:23:29.389348, queries/job__random_split_3/train/13a.sql, 127.748, 1820.335, Bao
+0, 20, 0, 2026-11-13 09:23:32.612807, queries/job__random_split_3/train/17c.sql, 117.801, 2891.955, Bao
+0, 20, 1, 2026-11-13 09:23:35.910620, queries/job__random_split_3/train/17c.sql, 133.275, 2946.903, Bao
+0, 20, 2, 2026-11-13 09:23:41.319809, queries/job__random_split_3/train/17c.sql, 112.131, 2848.742, Bao
+0, 21, 0, 2026-11-13 09:23:43.747509, queries/job__random_split_3/train/14a.sql, 120.485, 2086.539, Bao
+0, 21, 1, 2026-11-13 09:23:46.223422, queries/job__random_split_3/train/14a.sql, 124.698, 2135.215, Bao
+0, 21, 2, 2026-11-13 09:23:50.689732, queries/job__random_split_3/train/14a.sql, 115.933, 2068.928, Bao
+0, 22, 0, 2026-11-13 09:23:54.119546, queries/job__random_split_3/train/18a.sql, 120.662, 3097.146, Bao
+0, 22, 1, 2026-11-13 09:23:57.532331, queries/job__random_split_3/train/18a.sql, 126.077, 3045.611, Bao
+0, 22, 2, 2026-11-13 09:24:03.881854, queries/job__random_split_3/train/18a.sql, 113.694, 3145.912, Bao
+0, 23, 0, 2026-11-13 09:24:04.689806, queries/job__random_split_3/train/2c.sql, 111.529, 485.749, Bao
+0, 23, 1, 2026-11-13 09:24:05.465461, queries/job__random_split_3/train/2c.sql, 107.951, 460.455, Bao
+0, 23, 2, 2026-11-13 09:24:06.675562, queries/job__random_split_3/train/2c.sql, 104.938, 451.471, Bao
+0, 24, 0, 2026-11-13 09:24:07.408360, queries/job__random_split_3/train/1d.sql, 113.237, 411.848, Bao
+0, 24, 1, 2026-11-13 09:24:08.147282, queries/job__random_split_3/train/1d.sql, 111.448, 420.004, Bao
+0, 24, 2, 2026-11-13 09:24:09.337190, queries/job__random_split_3/train/1d.sql, 103.242, 412.645, Bao
+==========================================================================================
+Iteration over chunk 2/19...
+[2026-11-13 09:24:09.337418]	[2/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.5480746552348137
+Epoch 15 training loss: 0.07057227939367294
+Epoch 30 training loss: 0.027464962098747492
+Epoch 45 training loss: 0.010288305464200675
+Epoch 60 training loss: 0.009407006786204875
+Stopped training from convergence condition at epoch 60
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:24:13.950013]	[2/19]	Retraining done.
+1, 0, 0, 2026-11-13 09:24:14.377854, queries/job__random_split_3/train/1d.sql, 110.033, 105.311, Bao
+1, 0, 1, 2026-11-13 09:24:14.848758, queries/job__random_split_3/train/1d.sql, 114.367, 91.967, Bao
+1, 0, 2, 2026-11-13 09:24:15.421699, queries/job__random_split_3/train/1d.sql, 105.499, 90.104, Bao
+1, 1, 0, 2026-11-13 09:24:30.702221, queries/job__random_split_3/train/17a.sql, 174.561, 14770.041, Bao
+1, 1, 1, 2026-11-13 09:24:45.665906, queries/job__random_split_3/train/17a.sql, 125.174, 14621.077, Bao
+1, 1, 2, 2026-11-13 09:25:13.889843, queries/job__random_split_3/train/17a.sql, 112.798, 14015.061, Bao
+1, 2, 0, 2026-11-13 09:25:25.412350, queries/job__random_split_3/train/17f.sql, 119.109, 11178.69, Bao
+1, 2, 1, 2026-11-13 09:25:37.037867, queries/job__random_split_3/train/17f.sql, 121.623, 11287.004, Bao
+1, 2, 2, 2026-11-13 09:26:00.379323, queries/job__random_split_3/train/17f.sql, 115.592, 12143.268, Bao
+1, 3, 0, 2026-11-13 09:26:00.910648, queries/job__random_split_3/train/8b.sql, 122.921, 180.074, Bao
+1, 3, 1, 2026-11-13 09:26:01.423312, queries/job__random_split_3/train/8b.sql, 119.723, 173.934, Bao
+1, 3, 2, 2026-11-13 09:26:02.221657, queries/job__random_split_3/train/8b.sql, 113.82, 171.734, Bao
+1, 4, 0, 2026-11-13 09:26:03.148067, queries/job__random_split_3/train/2d.sql, 111.044, 605.318, Bao
+1, 4, 1, 2026-11-13 09:26:04.068296, queries/job__random_split_3/train/2d.sql, 113.237, 600.922, Bao
+1, 4, 2, 2026-11-13 09:26:05.609641, queries/job__random_split_3/train/2d.sql, 105.217, 544.156, Bao
+1, 5, 0, 2026-11-13 09:26:12.548817, queries/job__random_split_3/train/29c.sql, 453.416, 5935.758, Bao
+1, 5, 1, 2026-11-13 09:26:19.570838, queries/job__random_split_3/train/29c.sql, 453.383, 6016.791, Bao
+1, 5, 2, 2026-11-13 09:26:32.716978, queries/job__random_split_3/train/29c.sql, 446.971, 5855.994, Bao
+1, 6, 0, 2026-11-13 09:26:33.804850, queries/job__random_split_3/train/15d.sql, 151.254, 688.112, Bao
+1, 6, 1, 2026-11-13 09:26:34.867199, queries/job__random_split_3/train/15d.sql, 150.232, 658.575, Bao
+1, 6, 2, 2026-11-13 09:26:36.649507, queries/job__random_split_3/train/15d.sql, 142.537, 593.828, Bao
+1, 7, 0, 2026-11-13 09:26:37.481693, queries/job__random_split_3/train/33a.sql, 357.837, 22.656, Bao
+1, 7, 1, 2026-11-13 09:26:38.307470, queries/job__random_split_3/train/33a.sql, 356.555, 17.165, Bao
+1, 7, 2, 2026-11-13 09:26:39.486110, queries/job__random_split_3/train/33a.sql, 346.372, 11.323, Bao
+1, 8, 0, 2026-11-13 09:26:40.352733, queries/job__random_split_3/train/15c.sql, 146.84, 475.576, Bao
+1, 8, 1, 2026-11-13 09:26:41.213360, queries/job__random_split_3/train/15c.sql, 149.545, 465.0, Bao
+1, 8, 2, 2026-11-13 09:26:42.653259, queries/job__random_split_3/train/15c.sql, 142.2, 437.915, Bao
+1, 9, 0, 2026-11-13 09:26:45.623255, queries/job__random_split_3/train/20a.sql, 155.283, 2562.31, Bao
+1, 9, 1, 2026-11-13 09:26:48.339437, queries/job__random_split_3/train/20a.sql, 157.74, 2310.617, Bao
+1, 9, 2, 2026-11-13 09:26:53.150787, queries/job__random_split_3/train/20a.sql, 144.799, 2089.916, Bao
+1, 10, 0, 2026-11-13 09:26:57.290437, queries/job__random_split_3/train/9d.sql, 125.918, 3789.434, Bao
+1, 10, 1, 2026-11-13 09:27:01.127428, queries/job__random_split_3/train/9d.sql, 129.442, 3481.826, Bao
+1, 10, 2, 2026-11-13 09:27:08.395237, queries/job__random_split_3/train/9d.sql, 120.263, 3423.222, Bao
+1, 11, 0, 2026-11-13 09:27:09.323633, queries/job__random_split_3/train/2d.sql, 116.691, 603.113, Bao
+1, 11, 1, 2026-11-13 09:27:10.223339, queries/job__random_split_3/train/2d.sql, 110.188, 580.415, Bao
+1, 11, 2, 2026-11-13 09:27:11.737093, queries/job__random_split_3/train/2d.sql, 103.33, 536.522, Bao
+1, 12, 0, 2026-11-13 09:27:12.527597, queries/job__random_split_3/train/27a.sql, 310.579, 68.982, Bao
+1, 12, 1, 2026-11-13 09:27:13.309764, queries/job__random_split_3/train/27a.sql, 313.295, 65.301, Bao
+1, 12, 2, 2026-11-13 09:27:14.486760, queries/job__random_split_3/train/27a.sql, 301.562, 58.133, Bao
+1, 13, 0, 2026-11-13 09:27:15.246998, queries/job__random_split_3/train/31b.sql, 272.485, 117.839, Bao
+1, 13, 1, 2026-11-13 09:27:16.002858, queries/job__random_split_3/train/31b.sql, 272.221, 115.923, Bao
+1, 13, 2, 2026-11-13 09:27:17.181527, queries/job__random_split_3/train/31b.sql, 264.304, 104.481, Bao
+1, 14, 0, 2026-11-13 09:27:17.523038, queries/job__random_split_3/train/6a.sql, 109.425, 29.115, Bao
+1, 14, 1, 2026-11-13 09:27:17.864494, queries/job__random_split_3/train/6a.sql, 111.351, 28.243, Bao
+1, 14, 2, 2026-11-13 09:27:18.328031, queries/job__random_split_3/train/6a.sql, 103.678, 18.165, Bao
+1, 15, 0, 2026-11-13 09:27:18.770828, queries/job__random_split_3/train/4a.sql, 112.299, 122.58, Bao
+1, 15, 1, 2026-11-13 09:27:19.195756, queries/job__random_split_3/train/4a.sql, 112.271, 101.714, Bao
+1, 15, 2, 2026-11-13 09:27:19.789522, queries/job__random_split_3/train/4a.sql, 104.832, 75.873, Bao
+1, 16, 0, 2026-11-13 09:27:28.009828, queries/job__random_split_3/train/17b.sql, 158.497, 7724.356, Bao
+1, 16, 1, 2026-11-13 09:27:35.979279, queries/job__random_split_3/train/17b.sql, 117.711, 7642.551, Bao
+1, 16, 2, 2026-11-13 09:27:51.119821, queries/job__random_split_3/train/17b.sql, 113.322, 7285.323, Bao
+1, 17, 0, 2026-11-13 09:27:51.536614, queries/job__random_split_3/train/11a.sql, 128.029, 63.728, Bao
+1, 17, 1, 2026-11-13 09:27:51.942643, queries/job__random_split_3/train/11a.sql, 126.231, 62.343, Bao
+1, 17, 2, 2026-11-13 09:27:52.516785, queries/job__random_split_3/train/11a.sql, 116.142, 52.34, Bao
+1, 18, 0, 2026-11-13 09:27:53.123191, queries/job__random_split_3/train/19b.sql, 183.459, 149.641, Bao
+1, 18, 1, 2026-11-13 09:27:53.731498, queries/job__random_split_3/train/19b.sql, 183.832, 150.299, Bao
+1, 18, 2, 2026-11-13 09:27:54.678926, queries/job__random_split_3/train/19b.sql, 178.343, 138.817, Bao
+1, 19, 0, 2026-11-13 09:28:06.218644, queries/job__random_split_3/train/17f.sql, 116.929, 11211.734, Bao
+1, 19, 1, 2026-11-13 09:28:17.893399, queries/job__random_split_3/train/17f.sql, 124.643, 11334.419, Bao
+1, 19, 2, 2026-11-13 09:28:39.893852, queries/job__random_split_3/train/17f.sql, 115.72, 11008.136, Bao
+1, 20, 0, 2026-11-13 09:28:54.954312, queries/job__random_split_3/train/17a.sql, 123.301, 14716.824, Bao
+1, 20, 1, 2026-11-13 09:29:09.980323, queries/job__random_split_3/train/17a.sql, 120.797, 14682.971, Bao
+1, 20, 2, 2026-11-13 09:29:38.485514, queries/job__random_split_3/train/17a.sql, 114.991, 14060.606, Bao
+1, 21, 0, 2026-11-13 09:29:39.001961, queries/job__random_split_3/train/8b.sql, 121.416, 177.581, Bao
+1, 21, 1, 2026-11-13 09:29:39.516230, queries/job__random_split_3/train/8b.sql, 120.931, 175.015, Bao
+1, 21, 2, 2026-11-13 09:29:40.294936, queries/job__random_split_3/train/8b.sql, 112.633, 162.814, Bao
+1, 22, 0, 2026-11-13 09:29:43.275756, queries/job__random_split_3/train/6e.sql, 111.211, 2666.528, Bao
+1, 22, 1, 2026-11-13 09:29:46.307853, queries/job__random_split_3/train/6e.sql, 113.068, 2713.597, Bao
+1, 22, 2, 2026-11-13 09:29:51.390141, queries/job__random_split_3/train/6e.sql, 106.175, 2645.176, Bao
+1, 23, 0, 2026-11-13 09:29:51.996708, queries/job__random_split_3/train/19b.sql, 185.56, 140.91, Bao
+1, 23, 1, 2026-11-13 09:29:52.605618, queries/job__random_split_3/train/19b.sql, 184.006, 147.268, Bao
+1, 23, 2, 2026-11-13 09:29:53.519784, queries/job__random_split_3/train/19b.sql, 171.758, 135.89, Bao
+1, 24, 0, 2026-11-13 09:29:54.737362, queries/job__random_split_3/train/30b.sql, 315.634, 478.401, Bao
+1, 24, 1, 2026-11-13 09:29:55.898478, queries/job__random_split_3/train/30b.sql, 320.845, 434.566, Bao
+1, 24, 2, 2026-11-13 09:29:57.741240, queries/job__random_split_3/train/30b.sql, 308.179, 391.775, Bao
+==========================================================================================
+Iteration over chunk 3/19...
+[2026-11-13 09:29:57.741433]	[3/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.3189720302820206
+Epoch 15 training loss: 0.022687639854848386
+Epoch 30 training loss: 0.010820001643151046
+Epoch 45 training loss: 0.007814193610101938
+Stopped training from convergence condition at epoch 49
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:30:04.178196]	[3/19]	Retraining done.
+2, 0, 0, 2026-11-13 09:30:05.881797, queries/job__random_split_3/train/20c.sql, 171.909, 1275.382, Bao
+2, 0, 1, 2026-11-13 09:30:07.381851, queries/job__random_split_3/train/20c.sql, 157.381, 1098.18, Bao
+2, 0, 2, 2026-11-13 09:30:09.926541, queries/job__random_split_3/train/20c.sql, 148.334, 913.127, Bao
+2, 1, 0, 2026-11-13 09:30:13.209827, queries/job__random_split_3/train/7c.sql, 128.3, 2934.731, Bao
+2, 1, 1, 2026-11-13 09:30:16.347209, queries/job__random_split_3/train/7c.sql, 125.234, 2788.406, Bao
+2, 1, 2, 2026-11-13 09:30:21.919415, queries/job__random_split_3/train/7c.sql, 119.579, 2659.485, Bao
+2, 2, 0, 2026-11-13 09:30:22.780855, queries/job__random_split_3/train/23a.sql, 228.889, 314.463, Bao
+2, 2, 1, 2026-11-13 09:30:23.621890, queries/job__random_split_3/train/23a.sql, 223.817, 291.935, Bao
+2, 2, 2, 2026-11-13 09:30:24.972610, queries/job__random_split_3/train/23a.sql, 243.733, 289.767, Bao
+2, 3, 0, 2026-11-13 09:30:30.211238, queries/job__random_split_3/train/17f.sql, 119.636, 4907.159, Bao
+2, 3, 1, 2026-11-13 09:30:34.743419, queries/job__random_split_3/train/17f.sql, 118.88, 4193.899, Bao
+2, 3, 2, 2026-11-13 09:30:42.541883, queries/job__random_split_3/train/17f.sql, 113.416, 4159.611, Bao
+2, 4, 0, 2026-11-13 09:30:49.168078, queries/job__random_split_3/train/17d.sql, 118.428, 6291.825, Bao
+2, 4, 1, 2026-11-13 09:30:59.207748, queries/job__random_split_3/train/17d.sql, 119.613, 9703.174, Bao
+2, 4, 2, 2026-11-13 09:31:16.757834, queries/job__random_split_3/train/17d.sql, 113.25, 6136.659, Bao
+2, 5, 0, 2026-11-13 09:31:17.731761, queries/job__random_split_3/train/27b.sql, 327.111, 84.338, Bao
+2, 5, 1, 2026-11-13 09:31:18.650095, queries/job__random_split_3/train/27b.sql, 360.01, 80.382, Bao
+2, 5, 2, 2026-11-13 09:31:19.864003, queries/job__random_split_3/train/27b.sql, 304.521, 73.025, Bao
+2, 6, 0, 2026-11-13 09:31:25.274298, queries/job__random_split_3/train/17e.sql, 127.356, 5067.348, Bao
+2, 6, 1, 2026-11-13 09:31:30.343955, queries/job__random_split_3/train/17e.sql, 120.878, 4702.886, Bao
+2, 6, 2, 2026-11-13 09:31:39.121679, queries/job__random_split_3/train/17e.sql, 110.932, 4589.761, Bao
+2, 7, 0, 2026-11-13 09:31:40.316060, queries/job__random_split_3/train/29a.sql, 453.545, 189.193, Bao
+2, 7, 1, 2026-11-13 09:31:41.502095, queries/job__random_split_3/train/29a.sql, 469.404, 171.554, Bao
+2, 7, 2, 2026-11-13 09:31:43.236798, queries/job__random_split_3/train/29a.sql, 441.803, 121.897, Bao
+2, 8, 0, 2026-11-13 09:31:45.555139, queries/job__random_split_3/train/7a.sql, 126.945, 1959.209, Bao
+2, 8, 1, 2026-11-13 09:31:46.788851, queries/job__random_split_3/train/7a.sql, 136.35, 870.434, Bao
+2, 8, 2, 2026-11-13 09:31:48.942747, queries/job__random_split_3/train/7a.sql, 117.721, 843.319, Bao
+2, 9, 0, 2026-11-13 09:31:50.462068, queries/job__random_split_3/train/20c.sql, 157.734, 1108.69, Bao
+2, 9, 1, 2026-11-13 09:31:52.077901, queries/job__random_split_3/train/20c.sql, 158.054, 1065.054, Bao
+2, 9, 2, 2026-11-13 09:31:54.618021, queries/job__random_split_3/train/20c.sql, 151.587, 927.39, Bao
+2, 10, 0, 2026-11-13 09:31:58.724090, queries/job__random_split_3/train/17a.sql, 117.841, 3774.448, Bao
+2, 10, 1, 2026-11-13 09:32:02.781125, queries/job__random_split_3/train/17a.sql, 117.511, 3726.061, Bao
+2, 10, 2, 2026-11-13 09:32:09.808510, queries/job__random_split_3/train/17a.sql, 112.838, 3672.966, Bao
+2, 11, 0, 2026-11-13 09:32:13.650246, queries/job__random_split_3/train/9d.sql, 130.205, 3484.974, Bao
+2, 11, 1, 2026-11-13 09:32:17.527217, queries/job__random_split_3/train/9d.sql, 130.675, 3519.283, Bao
+2, 11, 2, 2026-11-13 09:32:24.741219, queries/job__random_split_3/train/9d.sql, 123.57, 3426.074, Bao
+2, 12, 0, 2026-11-13 09:32:28.007686, queries/job__random_split_3/train/25a.sql, 152.068, 2870.158, Bao
+2, 12, 1, 2026-11-13 09:32:30.867571, queries/job__random_split_3/train/25a.sql, 145.191, 2474.549, Bao
+2, 12, 2, 2026-11-13 09:32:36.154620, queries/job__random_split_3/train/25a.sql, 137.85, 2258.678, Bao
+2, 13, 0, 2026-11-13 09:32:37.107944, queries/job__random_split_3/train/13b.sql, 135.995, 583.572, Bao
+2, 13, 1, 2026-11-13 09:32:38.080754, queries/job__random_split_3/train/13b.sql, 138.316, 604.229, Bao
+2, 13, 2, 2026-11-13 09:32:39.736102, queries/job__random_split_3/train/13b.sql, 129.229, 594.971, Bao
+2, 14, 0, 2026-11-13 09:32:40.294094, queries/job__random_split_3/train/12a.sql, 123.793, 212.02, Bao
+2, 14, 1, 2026-11-13 09:32:40.851248, queries/job__random_split_3/train/12a.sql, 123.215, 207.957, Bao
+2, 14, 2, 2026-11-13 09:32:41.719849, queries/job__random_split_3/train/12a.sql, 118.626, 197.776, Bao
+2, 15, 0, 2026-11-13 09:32:42.340080, queries/job__random_split_3/train/14a.sql, 120.862, 279.092, Bao
+2, 15, 1, 2026-11-13 09:32:42.943790, queries/job__random_split_3/train/14a.sql, 123.435, 263.168, Bao
+2, 15, 2, 2026-11-13 09:32:43.884509, queries/job__random_split_3/train/14a.sql, 118.182, 214.034, Bao
+2, 16, 0, 2026-11-13 09:32:44.667574, queries/job__random_split_3/train/2c.sql, 111.126, 462.42, Bao
+2, 16, 1, 2026-11-13 09:32:45.460134, queries/job__random_split_3/train/2c.sql, 108.812, 476.928, Bao
+2, 16, 2, 2026-11-13 09:32:46.714553, queries/job__random_split_3/train/2c.sql, 103.264, 422.58, Bao
+2, 17, 0, 2026-11-13 09:32:47.142095, queries/job__random_split_3/train/4c.sql, 110.539, 108.977, Bao
+2, 17, 1, 2026-11-13 09:32:47.571686, queries/job__random_split_3/train/4c.sql, 112.238, 109.527, Bao
+2, 17, 2, 2026-11-13 09:32:48.181670, queries/job__random_split_3/train/4c.sql, 101.796, 87.243, Bao
+2, 18, 0, 2026-11-13 09:32:48.637356, queries/job__random_split_3/train/21b.sql, 146.947, 62.422, Bao
+2, 18, 1, 2026-11-13 09:32:49.097242, queries/job__random_split_3/train/21b.sql, 148.675, 63.364, Bao
+2, 18, 2, 2026-11-13 09:32:49.751733, queries/job__random_split_3/train/21b.sql, 139.457, 55.931, Bao
+2, 19, 0, 2026-11-13 09:32:50.187080, queries/job__random_split_3/train/12b.sql, 124.661, 90.278, Bao
+2, 19, 1, 2026-11-13 09:32:50.638514, queries/job__random_split_3/train/12b.sql, 137.705, 94.939, Bao
+2, 19, 2, 2026-11-13 09:32:51.254645, queries/job__random_split_3/train/12b.sql, 115.734, 90.862, Bao
+2, 20, 0, 2026-11-13 09:32:54.832086, queries/job__random_split_3/train/20a.sql, 152.754, 3174.806, Bao
+2, 20, 1, 2026-11-13 09:32:58.358885, queries/job__random_split_3/train/20a.sql, 158.007, 3112.985, Bao
+2, 20, 2, 2026-11-13 09:33:04.410235, queries/job__random_split_3/train/20a.sql, 151.226, 3145.053, Bao
+2, 21, 0, 2026-11-13 09:33:08.245047, queries/job__random_split_3/train/9d.sql, 129.494, 3483.112, Bao
+2, 21, 1, 2026-11-13 09:33:12.029087, queries/job__random_split_3/train/9d.sql, 127.295, 3436.802, Bao
+2, 21, 2, 2026-11-13 09:33:19.291094, queries/job__random_split_3/train/9d.sql, 123.06, 3407.003, Bao
+2, 22, 0, 2026-11-13 09:33:26.468479, queries/job__random_split_3/train/25c.sql, 149.183, 6785.007, Bao
+2, 22, 1, 2026-11-13 09:33:33.540474, queries/job__random_split_3/train/25c.sql, 151.083, 6677.977, Bao
+2, 22, 2, 2026-11-13 09:33:46.892777, queries/job__random_split_3/train/25c.sql, 139.454, 6259.832, Bao
+2, 23, 0, 2026-11-13 09:33:47.544367, queries/job__random_split_3/train/9a.sql, 134.056, 288.672, Bao
+2, 23, 1, 2026-11-13 09:33:48.189545, queries/job__random_split_3/train/9a.sql, 129.414, 292.973, Bao
+2, 23, 2, 2026-11-13 09:33:49.226623, queries/job__random_split_3/train/9a.sql, 122.527, 275.652, Bao
+2, 24, 0, 2026-11-13 09:33:49.554595, queries/job__random_split_3/train/6c.sql, 112.899, 11.016, Bao
+2, 24, 1, 2026-11-13 09:33:49.885173, queries/job__random_split_3/train/6c.sql, 109.995, 11.841, Bao
+2, 24, 2, 2026-11-13 09:33:50.329620, queries/job__random_split_3/train/6c.sql, 106.599, 8.903, Bao
+==========================================================================================
+Iteration over chunk 4/19...
+[2026-11-13 09:33:50.329851]	[4/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.318330280482769
+Epoch 15 training loss: 0.03409688227943012
+Epoch 30 training loss: 0.014750849322548934
+Epoch 45 training loss: 0.012725713230403406
+Epoch 60 training loss: 0.0032178634511572973
+Epoch 75 training loss: 0.002684275553162609
+Stopped training from convergence condition at epoch 79
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:33:59.651376]	[4/19]	Retraining done.
+3, 0, 0, 2026-11-13 09:34:08.097791, queries/job__random_split_3/train/10c.sql, 115.053, 8120.206, Bao
+3, 0, 1, 2026-11-13 09:34:16.206761, queries/job__random_split_3/train/10c.sql, 116.489, 7779.148, Bao
+3, 0, 2, 2026-11-13 09:34:31.791952, queries/job__random_split_3/train/10c.sql, 111.519, 7753.681, Bao
+3, 1, 0, 2026-11-13 09:34:32.816815, queries/job__random_split_3/train/32b.sql, 123.62, 681.802, Bao
+3, 1, 1, 2026-11-13 09:34:34.144517, queries/job__random_split_3/train/32b.sql, 114.019, 1001.825, Bao
+3, 1, 2, 2026-11-13 09:34:36.016483, queries/job__random_split_3/train/32b.sql, 108.536, 676.822, Bao
+3, 2, 0, 2026-11-13 09:34:36.769383, queries/job__random_split_3/train/31b.sql, 273.973, 108.404, Bao
+3, 2, 1, 2026-11-13 09:34:37.513863, queries/job__random_split_3/train/31b.sql, 272.768, 108.373, Bao
+3, 2, 2, 2026-11-13 09:34:38.708433, queries/job__random_split_3/train/31b.sql, 268.759, 112.536, Bao
+3, 3, 0, 2026-11-13 09:34:47.270968, queries/job__random_split_3/train/25c.sql, 146.289, 8176.664, Bao
+3, 3, 1, 2026-11-13 09:34:55.783129, queries/job__random_split_3/train/25c.sql, 147.144, 8110.047, Bao
+3, 3, 2, 2026-11-13 09:35:12.374498, queries/job__random_split_3/train/25c.sql, 144.112, 7877.708, Bao
+3, 4, 0, 2026-11-13 09:35:16.905489, queries/job__random_split_3/train/17f.sql, 122.469, 4182.86, Bao
+3, 4, 1, 2026-11-13 09:35:21.347338, queries/job__random_split_3/train/17f.sql, 121.904, 4104.825, Bao
+3, 4, 2, 2026-11-13 09:35:29.119092, queries/job__random_split_3/train/17f.sql, 113.573, 4118.778, Bao
+3, 5, 0, 2026-11-13 09:35:30.179847, queries/job__random_split_3/train/2d.sql, 110.689, 740.243, Bao
+3, 5, 1, 2026-11-13 09:35:31.259721, queries/job__random_split_3/train/2d.sql, 110.011, 760.875, Bao
+3, 5, 2, 2026-11-13 09:35:33.000022, queries/job__random_split_3/train/2d.sql, 105.74, 755.55, Bao
+3, 6, 0, 2026-11-13 09:35:33.447964, queries/job__random_split_3/train/14b.sql, 123.478, 106.765, Bao
+3, 6, 1, 2026-11-13 09:35:33.895298, queries/job__random_split_3/train/14b.sql, 121.747, 105.362, Bao
+3, 6, 2, 2026-11-13 09:35:34.562988, queries/job__random_split_3/train/14b.sql, 118.159, 80.11, Bao
+3, 7, 0, 2026-11-13 09:35:35.464859, queries/job__random_split_3/train/22b.sql, 217.905, 366.268, Bao
+3, 7, 1, 2026-11-13 09:35:36.381857, queries/job__random_split_3/train/22b.sql, 224.391, 372.549, Bao
+3, 7, 2, 2026-11-13 09:35:37.797415, queries/job__random_split_3/train/22b.sql, 215.004, 324.683, Bao
+3, 8, 0, 2026-11-13 09:35:38.646427, queries/job__random_split_3/train/23a.sql, 226.241, 293.553, Bao
+3, 8, 1, 2026-11-13 09:35:39.496160, queries/job__random_split_3/train/23a.sql, 222.894, 308.71, Bao
+3, 8, 2, 2026-11-13 09:35:40.819067, queries/job__random_split_3/train/23a.sql, 219.723, 295.906, Bao
+3, 9, 0, 2026-11-13 09:35:46.288811, queries/job__random_split_3/train/8c.sql, 115.178, 5135.197, Bao
+3, 9, 1, 2026-11-13 09:35:51.535352, queries/job__random_split_3/train/8c.sql, 115.275, 4911.448, Bao
+3, 9, 2, 2026-11-13 09:36:00.614479, queries/job__random_split_3/train/8c.sql, 107.727, 4614.913, Bao
+3, 10, 0, 2026-11-13 09:36:00.960712, queries/job__random_split_3/train/6e.sql, 111.107, 28.606, Bao
+3, 10, 1, 2026-11-13 09:36:01.308474, queries/job__random_split_3/train/6e.sql, 113.328, 28.299, Bao
+3, 10, 2, 2026-11-13 09:36:01.770590, queries/job__random_split_3/train/6e.sql, 102.727, 15.726, Bao
+3, 11, 0, 2026-11-13 09:36:06.689192, queries/job__random_split_3/train/17e.sql, 115.7, 4588.565, Bao
+3, 11, 1, 2026-11-13 09:36:11.640345, queries/job__random_split_3/train/17e.sql, 118.019, 4617.625, Bao
+3, 11, 2, 2026-11-13 09:36:20.244249, queries/job__random_split_3/train/17e.sql, 109.612, 4600.549, Bao
+3, 12, 0, 2026-11-13 09:36:21.016868, queries/job__random_split_3/train/24b.sql, 325.571, 24.847, Bao
+3, 12, 1, 2026-11-13 09:36:21.786344, queries/job__random_split_3/train/24b.sql, 325.814, 25.329, Bao
+3, 12, 2, 2026-11-13 09:36:22.886996, queries/job__random_split_3/train/24b.sql, 314.716, 21.36, Bao
+3, 13, 0, 2026-11-13 09:36:23.394584, queries/job__random_split_3/train/16a.sql, 123.938, 162.114, Bao
+3, 13, 1, 2026-11-13 09:36:23.905364, queries/job__random_split_3/train/16a.sql, 127.818, 165.242, Bao
+3, 13, 2, 2026-11-13 09:36:24.695143, queries/job__random_split_3/train/16a.sql, 129.936, 138.026, Bao
+3, 14, 0, 2026-11-13 09:36:32.427302, queries/job__random_split_3/train/7c.sql, 124.025, 7388.467, Bao
+3, 14, 1, 2026-11-13 09:36:39.651129, queries/job__random_split_3/train/7c.sql, 127.896, 6878.081, Bao
+3, 14, 2, 2026-11-13 09:36:52.929660, queries/job__random_split_3/train/7c.sql, 121.596, 6712.522, Bao
+3, 15, 0, 2026-11-13 09:36:53.275601, queries/job__random_split_3/train/6e.sql, 113.868, 28.03, Bao
+3, 15, 1, 2026-11-13 09:36:53.620709, queries/job__random_split_3/train/6e.sql, 110.678, 28.49, Bao
+3, 15, 2, 2026-11-13 09:36:54.089229, queries/job__random_split_3/train/6e.sql, 106.379, 17.01, Bao
+3, 16, 0, 2026-11-13 09:36:54.856931, queries/job__random_split_3/train/19a.sql, 186.266, 285.883, Bao
+3, 16, 1, 2026-11-13 09:36:55.599398, queries/job__random_split_3/train/19a.sql, 178.127, 288.003, Bao
+3, 16, 2, 2026-11-13 09:36:56.790436, queries/job__random_split_3/train/19a.sql, 173.558, 269.743, Bao
+3, 17, 0, 2026-11-13 09:36:57.878836, queries/job__random_split_3/train/2d.sql, 108.63, 776.233, Bao
+3, 17, 1, 2026-11-13 09:36:58.932810, queries/job__random_split_3/train/2d.sql, 111.072, 737.224, Bao
+3, 17, 2, 2026-11-13 09:37:00.676155, queries/job__random_split_3/train/2d.sql, 106.427, 754.214, Bao
+3, 18, 0, 2026-11-13 09:37:02.093796, queries/job__random_split_3/train/29c.sql, 451.151, 416.945, Bao
+3, 18, 1, 2026-11-13 09:37:03.515127, queries/job__random_split_3/train/29c.sql, 452.498, 421.632, Bao
+3, 18, 2, 2026-11-13 09:37:05.725606, queries/job__random_split_3/train/29c.sql, 439.469, 351.848, Bao
+3, 19, 0, 2026-11-13 09:37:06.148346, queries/job__random_split_3/train/15b.sql, 148.714, 23.529, Bao
+3, 19, 1, 2026-11-13 09:37:06.568127, queries/job__random_split_3/train/15b.sql, 149.587, 23.247, Bao
+3, 19, 2, 2026-11-13 09:37:07.159944, queries/job__random_split_3/train/15b.sql, 143.071, 21.394, Bao
+3, 20, 0, 2026-11-13 09:37:07.743745, queries/job__random_split_3/train/3c.sql, 107.695, 274.346, Bao
+3, 20, 1, 2026-11-13 09:37:08.337209, queries/job__random_split_3/train/3c.sql, 106.388, 282.692, Bao
+3, 20, 2, 2026-11-13 09:37:09.237211, queries/job__random_split_3/train/3c.sql, 103.155, 212.822, Bao
+3, 21, 0, 2026-11-13 09:37:14.278985, queries/job__random_split_3/train/26c.sql, 310.289, 4330.099, Bao
+3, 21, 1, 2026-11-13 09:37:19.375536, queries/job__random_split_3/train/26c.sql, 344.438, 4352.188, Bao
+3, 21, 2, 2026-11-13 09:37:28.717794, queries/job__random_split_3/train/26c.sql, 305.029, 4076.163, Bao
+3, 22, 0, 2026-11-13 09:37:29.164329, queries/job__random_split_3/train/4a.sql, 112.795, 118.542, Bao
+3, 22, 1, 2026-11-13 09:37:29.602508, queries/job__random_split_3/train/4a.sql, 112.265, 114.917, Bao
+3, 22, 2, 2026-11-13 09:37:30.223842, queries/job__random_split_3/train/4a.sql, 102.246, 94.121, Bao
+3, 23, 0, 2026-11-13 09:37:38.746038, queries/job__random_split_3/train/25c.sql, 144.893, 8138.942, Bao
+3, 23, 1, 2026-11-13 09:37:47.370217, queries/job__random_split_3/train/25c.sql, 146.561, 8232.967, Bao
+3, 23, 2, 2026-11-13 09:38:03.991751, queries/job__random_split_3/train/25c.sql, 139.149, 8115.905, Bao
+3, 24, 0, 2026-11-13 09:38:04.793282, queries/job__random_split_3/train/10a.sql, 121.087, 444.991, Bao
+3, 24, 1, 2026-11-13 09:38:05.545093, queries/job__random_split_3/train/10a.sql, 120.191, 414.128, Bao
+3, 24, 2, 2026-11-13 09:38:06.738313, queries/job__random_split_3/train/10a.sql, 111.535, 387.559, Bao
+==========================================================================================
+Iteration over chunk 5/19...
+[2026-11-13 09:38:06.738523]	[5/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.1376943876966834
+Epoch 15 training loss: 0.030117209418676794
+Epoch 30 training loss: 0.0201850954326801
+Epoch 45 training loss: 0.006710219488013536
+Epoch 60 training loss: 0.0035043040988966823
+Stopped training from convergence condition at epoch 61
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:38:15.304541]	[5/19]	Retraining done.
+4, 0, 0, 2026-11-13 09:38:22.846058, queries/job__random_split_3/train/19d.sql, 178.987, 7083.864, Bao
+4, 0, 1, 2026-11-13 09:38:30.348072, queries/job__random_split_3/train/19d.sql, 184.861, 7037.063, Bao
+4, 0, 2, 2026-11-13 09:38:44.615022, queries/job__random_split_3/train/19d.sql, 177.091, 7005.469, Bao
+4, 1, 0, 2026-11-13 09:38:48.371797, queries/job__random_split_3/train/10c.sql, 117.331, 3427.158, Bao
+4, 1, 1, 2026-11-13 09:38:52.029526, queries/job__random_split_3/train/10c.sql, 119.094, 3327.409, Bao
+4, 1, 2, 2026-11-13 09:38:58.902231, queries/job__random_split_3/train/10c.sql, 110.583, 3278.893, Bao
+4, 2, 0, 2026-11-13 09:39:00.206021, queries/job__random_split_3/train/8a.sql, 119.784, 966.719, Bao
+4, 2, 1, 2026-11-13 09:39:01.524820, queries/job__random_split_3/train/8a.sql, 118.43, 986.572, Bao
+4, 2, 2, 2026-11-13 09:39:03.842341, queries/job__random_split_3/train/8a.sql, 115.05, 915.726, Bao
+4, 3, 0, 2026-11-13 09:39:04.201121, queries/job__random_split_3/train/6e.sql, 113.908, 29.771, Bao
+4, 3, 1, 2026-11-13 09:39:04.571320, queries/job__random_split_3/train/6e.sql, 116.029, 28.603, Bao
+4, 3, 2, 2026-11-13 09:39:05.048763, queries/job__random_split_3/train/6e.sql, 105.147, 16.808, Bao
+4, 4, 0, 2026-11-13 09:39:05.562241, queries/job__random_split_3/train/5c.sql, 109.917, 199.501, Bao
+4, 4, 1, 2026-11-13 09:39:06.078984, queries/job__random_split_3/train/5c.sql, 109.801, 198.353, Bao
+4, 4, 2, 2026-11-13 09:39:06.892772, queries/job__random_split_3/train/5c.sql, 104.609, 193.416, Bao
+4, 5, 0, 2026-11-13 09:39:07.642607, queries/job__random_split_3/train/19a.sql, 181.536, 293.81, Bao
+4, 5, 1, 2026-11-13 09:39:08.381439, queries/job__random_split_3/train/19a.sql, 176.372, 286.315, Bao
+4, 5, 2, 2026-11-13 09:39:09.563425, queries/job__random_split_3/train/19a.sql, 172.509, 278.593, Bao
+4, 6, 0, 2026-11-13 09:39:10.010183, queries/job__random_split_3/train/12b.sql, 128.656, 95.251, Bao
+4, 6, 1, 2026-11-13 09:39:10.447781, queries/job__random_split_3/train/12b.sql, 124.312, 93.198, Bao
+4, 6, 2, 2026-11-13 09:39:11.065377, queries/job__random_split_3/train/12b.sql, 118.389, 89.129, Bao
+4, 7, 0, 2026-11-13 09:39:11.407688, queries/job__random_split_3/train/6e.sql, 110.182, 27.89, Bao
+4, 7, 1, 2026-11-13 09:39:11.750136, queries/job__random_split_3/train/6e.sql, 109.209, 27.401, Bao
+4, 7, 2, 2026-11-13 09:39:12.212179, queries/job__random_split_3/train/6e.sql, 103.996, 15.934, Bao
+4, 8, 0, 2026-11-13 09:39:17.817565, queries/job__random_split_3/train/8c.sql, 115.788, 5283.217, Bao
+4, 8, 1, 2026-11-13 09:39:23.321324, queries/job__random_split_3/train/8c.sql, 118.721, 5172.115, Bao
+4, 8, 2, 2026-11-13 09:39:33.167603, queries/job__random_split_3/train/8c.sql, 112.414, 5174.358, Bao
+4, 9, 0, 2026-11-13 09:39:35.020113, queries/job__random_split_3/train/13a.sql, 135.389, 1485.967, Bao
+4, 9, 1, 2026-11-13 09:39:36.841537, queries/job__random_split_3/train/13a.sql, 134.468, 1457.364, Bao
+4, 9, 2, 2026-11-13 09:39:40.033122, queries/job__random_split_3/train/13a.sql, 127.366, 1455.827, Bao
+4, 10, 0, 2026-11-13 09:39:41.114972, queries/job__random_split_3/train/24a.sql, 322.627, 342.626, Bao
+4, 10, 1, 2026-11-13 09:39:42.186502, queries/job__random_split_3/train/24a.sql, 322.516, 328.971, Bao
+4, 10, 2, 2026-11-13 09:39:43.825203, queries/job__random_split_3/train/24a.sql, 317.663, 237.97, Bao
+4, 11, 0, 2026-11-13 09:39:44.889171, queries/job__random_split_3/train/12c.sql, 123.081, 719.918, Bao
+4, 11, 1, 2026-11-13 09:39:45.926042, queries/job__random_split_3/train/12c.sql, 126.379, 686.372, Bao
+4, 11, 2, 2026-11-13 09:39:47.719848, queries/job__random_split_3/train/12c.sql, 119.355, 657.647, Bao
+4, 12, 0, 2026-11-13 09:39:48.318656, queries/job__random_split_3/train/3c.sql, 112.315, 281.27, Bao
+4, 12, 1, 2026-11-13 09:39:48.905981, queries/job__random_split_3/train/3c.sql, 108.074, 274.773, Bao
+4, 12, 2, 2026-11-13 09:39:49.822178, queries/job__random_split_3/train/3c.sql, 104.269, 219.276, Bao
+4, 13, 0, 2026-11-13 09:39:50.415187, queries/job__random_split_3/train/3c.sql, 107.363, 277.96, Bao
+4, 13, 1, 2026-11-13 09:39:50.998632, queries/job__random_split_3/train/3c.sql, 108.278, 270.321, Bao
+4, 13, 2, 2026-11-13 09:39:51.899072, queries/job__random_split_3/train/3c.sql, 103.402, 210.346, Bao
+4, 14, 0, 2026-11-13 09:39:52.906980, queries/job__random_split_3/train/14c.sql, 122.295, 670.341, Bao
+4, 14, 1, 2026-11-13 09:39:53.923734, queries/job__random_split_3/train/14c.sql, 124.624, 674.933, Bao
+4, 14, 2, 2026-11-13 09:39:55.647818, queries/job__random_split_3/train/14c.sql, 116.102, 586.225, Bao
+4, 15, 0, 2026-11-13 09:39:56.594733, queries/job__random_split_3/train/23c.sql, 222.483, 400.979, Bao
+4, 15, 1, 2026-11-13 09:39:57.541266, queries/job__random_split_3/train/23c.sql, 227.262, 396.127, Bao
+4, 15, 2, 2026-11-13 09:39:59.050487, queries/job__random_split_3/train/23c.sql, 219.409, 375.129, Bao
+4, 16, 0, 2026-11-13 09:39:59.784741, queries/job__random_split_3/train/27a.sql, 311.43, 17.258, Bao
+4, 16, 1, 2026-11-13 09:40:00.512638, queries/job__random_split_3/train/27a.sql, 311.089, 15.737, Bao
+4, 16, 2, 2026-11-13 09:40:01.551703, queries/job__random_split_3/train/27a.sql, 303.469, 12.834, Bao
+4, 17, 0, 2026-11-13 09:40:06.105291, queries/job__random_split_3/train/17f.sql, 117.103, 4219.239, Bao
+4, 17, 1, 2026-11-13 09:40:10.573174, queries/job__random_split_3/train/17f.sql, 120.551, 4131.768, Bao
+4, 17, 2, 2026-11-13 09:40:18.372883, queries/job__random_split_3/train/17f.sql, 112.26, 4142.369, Bao
+4, 18, 0, 2026-11-13 09:40:18.718498, queries/job__random_split_3/train/6e.sql, 113.411, 27.225, Bao
+4, 18, 1, 2026-11-13 09:40:19.068179, queries/job__random_split_3/train/6e.sql, 112.064, 27.979, Bao
+4, 18, 2, 2026-11-13 09:40:19.536013, queries/job__random_split_3/train/6e.sql, 103.746, 16.524, Bao
+4, 19, 0, 2026-11-13 09:40:19.988062, queries/job__random_split_3/train/21b.sql, 145.476, 64.681, Bao
+4, 19, 1, 2026-11-13 09:40:20.442637, queries/job__random_split_3/train/21b.sql, 150.434, 62.428, Bao
+4, 19, 2, 2026-11-13 09:40:21.106160, queries/job__random_split_3/train/21b.sql, 143.52, 55.514, Bao
+4, 20, 0, 2026-11-13 09:40:32.156790, queries/job__random_split_3/train/17a.sql, 116.554, 10723.189, Bao
+4, 20, 1, 2026-11-13 09:40:43.265690, queries/job__random_split_3/train/17a.sql, 119.581, 10772.029, Bao
+4, 20, 2, 2026-11-13 09:41:04.816434, queries/job__random_split_3/train/17a.sql, 113.161, 10778.992, Bao
+4, 21, 0, 2026-11-13 09:41:11.863803, queries/job__random_split_3/train/26c.sql, 309.603, 6327.027, Bao
+4, 21, 1, 2026-11-13 09:41:17.987636, queries/job__random_split_3/train/26c.sql, 741.962, 4777.661, Bao
+4, 21, 2, 2026-11-13 09:41:31.188413, queries/job__random_split_3/train/26c.sql, 699.857, 4961.859, Bao
+4, 22, 0, 2026-11-13 09:41:32.200598, queries/job__random_split_3/train/33a.sql, 383.88, 20.221, Bao
+4, 22, 1, 2026-11-13 09:41:33.208013, queries/job__random_split_3/train/33a.sql, 390.761, 17.87, Bao
+4, 22, 2, 2026-11-13 09:41:34.430566, queries/job__random_split_3/train/33a.sql, 349.75, 12.374, Bao
+4, 23, 0, 2026-11-13 09:41:36.172765, queries/job__random_split_3/train/16d.sql, 133.416, 1330.65, Bao
+4, 23, 1, 2026-11-13 09:41:37.803140, queries/job__random_split_3/train/16d.sql, 130.073, 1278.334, Bao
+4, 23, 2, 2026-11-13 09:41:40.678635, queries/job__random_split_3/train/16d.sql, 121.693, 1155.418, Bao
+4, 24, 0, 2026-11-13 09:41:41.376675, queries/job__random_split_3/train/19b.sql, 217.578, 146.573, Bao
+4, 24, 1, 2026-11-13 09:41:41.978702, queries/job__random_split_3/train/19b.sql, 180.891, 149.099, Bao
+4, 24, 2, 2026-11-13 09:41:42.912840, queries/job__random_split_3/train/19b.sql, 170.893, 141.781, Bao
+==========================================================================================
+Iteration over chunk 6/19...
+[2026-11-13 09:41:42.913077]	[6/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.24807072766125202
+Epoch 15 training loss: 0.031368438713252546
+Epoch 30 training loss: 0.01913165543228388
+Epoch 45 training loss: 0.010584112396463752
+Epoch 60 training loss: 0.0022333888104185463
+Stopped training from convergence condition at epoch 66
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:41:54.317967]	[6/19]	Retraining done.
+5, 0, 0, 2026-11-13 09:41:57.643752, queries/job__random_split_3/train/9d.sql, 141.916, 2953.825, Bao
+5, 0, 1, 2026-11-13 09:42:00.925469, queries/job__random_split_3/train/9d.sql, 128.995, 2923.296, Bao
+5, 0, 2, 2026-11-13 09:42:07.223657, queries/job__random_split_3/train/9d.sql, 121.45, 2932.545, Bao
+5, 1, 0, 2026-11-13 09:42:08.344313, queries/job__random_split_3/train/30b.sql, 320.255, 387.505, Bao
+5, 1, 1, 2026-11-13 09:42:09.454660, queries/job__random_split_3/train/30b.sql, 313.504, 386.975, Bao
+5, 1, 2, 2026-11-13 09:42:11.202806, queries/job__random_split_3/train/30b.sql, 307.225, 333.391, Bao
+5, 2, 0, 2026-11-13 09:42:12.106808, queries/job__random_split_3/train/22b.sql, 223.451, 363.717, Bao
+5, 2, 1, 2026-11-13 09:42:13.017602, queries/job__random_split_3/train/22b.sql, 225.067, 365.815, Bao
+5, 2, 2, 2026-11-13 09:42:14.464320, queries/job__random_split_3/train/22b.sql, 214.175, 344.748, Bao
+5, 3, 0, 2026-11-13 09:42:15.132656, queries/job__random_split_3/train/25b.sql, 148.477, 277.512, Bao
+5, 3, 1, 2026-11-13 09:42:15.987146, queries/job__random_split_3/train/25b.sql, 191.269, 284.056, Bao
+5, 3, 2, 2026-11-13 09:42:17.027442, queries/job__random_split_3/train/25b.sql, 136.304, 244.185, Bao
+5, 4, 0, 2026-11-13 09:42:17.887621, queries/job__random_split_3/train/14c.sql, 122.608, 516.571, Bao
+5, 4, 1, 2026-11-13 09:42:18.718428, queries/job__random_split_3/train/14c.sql, 121.386, 488.12, Bao
+5, 4, 2, 2026-11-13 09:42:20.102086, queries/job__random_split_3/train/14c.sql, 117.633, 414.787, Bao
+5, 5, 0, 2026-11-13 09:42:24.788008, queries/job__random_split_3/train/17b.sql, 119.428, 4351.969, Bao
+5, 5, 1, 2026-11-13 09:42:29.339185, queries/job__random_split_3/train/17b.sql, 118.252, 4220.289, Bao
+5, 5, 2, 2026-11-13 09:42:36.792648, queries/job__random_split_3/train/17b.sql, 108.716, 4216.277, Bao
+5, 6, 0, 2026-11-13 09:42:37.217097, queries/job__random_split_3/train/1a.sql, 112.927, 98.071, Bao
+5, 6, 1, 2026-11-13 09:42:37.639603, queries/job__random_split_3/train/1a.sql, 109.53, 98.829, Bao
+5, 6, 2, 2026-11-13 09:42:38.227117, queries/job__random_split_3/train/1a.sql, 102.549, 97.754, Bao
+5, 7, 0, 2026-11-13 09:42:39.397393, queries/job__random_split_3/train/29a.sql, 449.147, 176.159, Bao
+5, 7, 1, 2026-11-13 09:42:40.539454, queries/job__random_split_3/train/29a.sql, 446.132, 160.66, Bao
+5, 7, 2, 2026-11-13 09:42:42.351537, queries/job__random_split_3/train/29a.sql, 440.667, 120.825, Bao
+5, 8, 0, 2026-11-13 09:42:46.992220, queries/job__random_split_3/train/17b.sql, 123.874, 4302.776, Bao
+5, 8, 1, 2026-11-13 09:42:51.637773, queries/job__random_split_3/train/17b.sql, 120.122, 4308.279, Bao
+5, 8, 2, 2026-11-13 09:42:58.987722, queries/job__random_split_3/train/17b.sql, 114.081, 4060.302, Bao
+5, 9, 0, 2026-11-13 09:43:03.504947, queries/job__random_split_3/train/17b.sql, 118.546, 4184.552, Bao
+5, 9, 1, 2026-11-13 09:43:08.135232, queries/job__random_split_3/train/17b.sql, 118.405, 4295.475, Bao
+5, 9, 2, 2026-11-13 09:43:15.402093, queries/job__random_split_3/train/17b.sql, 114.603, 3991.102, Bao
+5, 10, 0, 2026-11-13 09:43:16.453596, queries/job__random_split_3/train/12c.sql, 128.198, 701.554, Bao
+5, 10, 1, 2026-11-13 09:43:17.498694, queries/job__random_split_3/train/12c.sql, 126.623, 695.885, Bao
+5, 10, 2, 2026-11-13 09:43:19.274684, queries/job__random_split_3/train/12c.sql, 119.283, 641.267, Bao
+5, 11, 0, 2026-11-13 09:43:20.058346, queries/job__random_split_3/train/2c.sql, 112.405, 464.514, Bao
+5, 11, 1, 2026-11-13 09:43:20.833504, queries/job__random_split_3/train/2c.sql, 111.74, 455.049, Bao
+5, 11, 2, 2026-11-13 09:43:22.047005, queries/job__random_split_3/train/2c.sql, 104.179, 452.493, Bao
+5, 12, 0, 2026-11-13 09:43:26.525656, queries/job__random_split_3/train/17b.sql, 117.412, 4148.232, Bao
+5, 12, 1, 2026-11-13 09:43:31.125277, queries/job__random_split_3/train/17b.sql, 119.8, 4265.147, Bao
+5, 12, 2, 2026-11-13 09:43:38.467449, queries/job__random_split_3/train/17b.sql, 115.215, 4059.316, Bao
+5, 13, 0, 2026-11-13 09:43:39.094728, queries/job__random_split_3/train/7b.sql, 129.301, 278.636, Bao
+5, 13, 1, 2026-11-13 09:43:39.754096, queries/job__random_split_3/train/7b.sql, 123.78, 310.661, Bao
+5, 13, 2, 2026-11-13 09:43:40.736832, queries/job__random_split_3/train/7b.sql, 117.297, 216.995, Bao
+5, 14, 0, 2026-11-13 09:43:41.062140, queries/job__random_split_3/train/6c.sql, 111.298, 10.509, Bao
+5, 14, 1, 2026-11-13 09:43:41.389528, queries/job__random_split_3/train/6c.sql, 109.443, 11.786, Bao
+5, 14, 2, 2026-11-13 09:43:41.832656, queries/job__random_split_3/train/6c.sql, 102.828, 10.012, Bao
+5, 15, 0, 2026-11-13 09:43:42.897474, queries/job__random_split_3/train/12c.sql, 124.579, 688.702, Bao
+5, 15, 1, 2026-11-13 09:43:43.928161, queries/job__random_split_3/train/12c.sql, 125.915, 684.437, Bao
+5, 15, 2, 2026-11-13 09:43:45.728307, queries/job__random_split_3/train/12c.sql, 115.169, 659.831, Bao
+5, 16, 0, 2026-11-13 09:43:48.959808, queries/job__random_split_3/train/17c.sql, 118.178, 2896.975, Bao
+5, 16, 1, 2026-11-13 09:43:52.181779, queries/job__random_split_3/train/17c.sql, 117.122, 2890.008, Bao
+5, 16, 2, 2026-11-13 09:43:57.643224, queries/job__random_split_3/train/17c.sql, 113.349, 2820.284, Bao
+5, 17, 0, 2026-11-13 09:44:02.642330, queries/job__random_split_3/train/30c.sql, 315.615, 4267.076, Bao
+5, 17, 1, 2026-11-13 09:44:07.502028, queries/job__random_split_3/train/30c.sql, 317.796, 4125.171, Bao
+5, 17, 2, 2026-11-13 09:44:16.486634, queries/job__random_split_3/train/30c.sql, 304.381, 4084.454, Bao
+5, 18, 0, 2026-11-13 09:44:20.495292, queries/job__random_split_3/train/17a.sql, 118.716, 3673.415, Bao
+5, 18, 1, 2026-11-13 09:44:24.572402, queries/job__random_split_3/train/17a.sql, 121.191, 3740.596, Bao
+5, 18, 2, 2026-11-13 09:44:31.499005, queries/job__random_split_3/train/17a.sql, 113.029, 3625.02, Bao
+5, 19, 0, 2026-11-13 09:44:33.173881, queries/job__random_split_3/train/15a.sql, 150.809, 1276.705, Bao
+5, 19, 1, 2026-11-13 09:44:34.853552, queries/job__random_split_3/train/15a.sql, 150.827, 1282.561, Bao
+5, 19, 2, 2026-11-13 09:44:37.795364, queries/job__random_split_3/train/15a.sql, 139.663, 1234.536, Bao
+5, 20, 0, 2026-11-13 09:44:38.307172, queries/job__random_split_3/train/8b.sql, 118.174, 176.326, Bao
+5, 20, 1, 2026-11-13 09:44:38.813630, queries/job__random_split_3/train/8b.sql, 118.485, 173.902, Bao
+5, 20, 2, 2026-11-13 09:44:39.607156, queries/job__random_split_3/train/8b.sql, 111.226, 171.019, Bao
+5, 21, 0, 2026-11-13 09:44:40.410481, queries/job__random_split_3/train/27b.sql, 314.62, 81.095, Bao
+5, 21, 1, 2026-11-13 09:44:41.213300, queries/job__random_split_3/train/27b.sql, 310.277, 83.497, Bao
+5, 21, 2, 2026-11-13 09:44:42.377875, queries/job__random_split_3/train/27b.sql, 302.771, 72.302, Bao
+5, 22, 0, 2026-11-13 09:44:43.320641, queries/job__random_split_3/train/23c.sql, 222.419, 400.265, Bao
+5, 22, 1, 2026-11-13 09:44:44.273194, queries/job__random_split_3/train/23c.sql, 226.651, 402.867, Bao
+5, 22, 2, 2026-11-13 09:44:45.793301, queries/job__random_split_3/train/23c.sql, 217.68, 379.73, Bao
+5, 23, 0, 2026-11-13 09:44:46.191612, queries/job__random_split_3/train/4b.sql, 114.768, 71.241, Bao
+5, 23, 1, 2026-11-13 09:44:46.584387, queries/job__random_split_3/train/4b.sql, 111.595, 69.499, Bao
+5, 23, 2, 2026-11-13 09:44:47.139658, queries/job__random_split_3/train/4b.sql, 103.553, 67.85, Bao
+5, 24, 0, 2026-11-13 09:44:47.605567, queries/job__random_split_3/train/5a.sql, 111.779, 148.981, Bao
+5, 24, 1, 2026-11-13 09:44:48.074893, queries/job__random_split_3/train/5a.sql, 113.151, 149.381, Bao
+5, 24, 2, 2026-11-13 09:44:48.792037, queries/job__random_split_3/train/5a.sql, 103.976, 145.587, Bao
+==========================================================================================
+Iteration over chunk 7/19...
+[2026-11-13 09:44:48.792245]	[7/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.12126641077074138
+Epoch 15 training loss: 0.023333680731329052
+Stopped training from convergence condition at epoch 26
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:44:54.584233]	[7/19]	Retraining done.
+6, 0, 0, 2026-11-13 09:44:56.541429, queries/job__random_split_3/train/16c.sql, 127.734, 1610.813, Bao
+6, 0, 1, 2026-11-13 09:44:58.580109, queries/job__random_split_3/train/16c.sql, 128.059, 1686.973, Bao
+6, 0, 2, 2026-11-13 09:45:02.106226, queries/job__random_split_3/train/16c.sql, 120.679, 1497.093, Bao
+6, 1, 0, 2026-11-13 09:45:03.059175, queries/job__random_split_3/train/13b.sql, 136.131, 587.561, Bao
+6, 1, 1, 2026-11-13 09:45:04.055174, queries/job__random_split_3/train/13b.sql, 138.322, 628.289, Bao
+6, 1, 2, 2026-11-13 09:45:05.807177, queries/job__random_split_3/train/13b.sql, 129.486, 631.259, Bao
+6, 2, 0, 2026-11-13 09:45:06.580499, queries/job__random_split_3/train/22b.sql, 222.214, 232.67, Bao
+6, 2, 1, 2026-11-13 09:45:07.352082, queries/job__random_split_3/train/22b.sql, 220.054, 235.446, Bao
+6, 2, 2, 2026-11-13 09:45:08.605077, queries/job__random_split_3/train/22b.sql, 213.984, 188.189, Bao
+6, 3, 0, 2026-11-13 09:45:09.062499, queries/job__random_split_3/train/21b.sql, 146.22, 65.387, Bao
+6, 3, 1, 2026-11-13 09:45:09.519257, queries/job__random_split_3/train/21b.sql, 149.206, 62.897, Bao
+6, 3, 2, 2026-11-13 09:45:10.197159, queries/job__random_split_3/train/21b.sql, 141.051, 56.425, Bao
+6, 4, 0, 2026-11-13 09:45:10.824099, queries/job__random_split_3/train/23b.sql, 227.379, 70.114, Bao
+6, 4, 1, 2026-11-13 09:45:11.441369, queries/job__random_split_3/train/23b.sql, 227.962, 65.149, Bao
+6, 4, 2, 2026-11-13 09:45:12.311066, queries/job__random_split_3/train/23b.sql, 214.905, 41.416, Bao
+6, 5, 0, 2026-11-13 09:45:13.154798, queries/job__random_split_3/train/33a.sql, 355.635, 39.284, Bao
+6, 5, 1, 2026-11-13 09:45:13.998622, queries/job__random_split_3/train/33a.sql, 355.7, 38.494, Bao
+6, 5, 2, 2026-11-13 09:45:15.242752, queries/job__random_split_3/train/33a.sql, 346.195, 36.803, Bao
+6, 6, 0, 2026-11-13 09:45:16.162406, queries/job__random_split_3/train/31a.sql, 279.386, 269.714, Bao
+6, 6, 1, 2026-11-13 09:45:17.068562, queries/job__random_split_3/train/31a.sql, 282.029, 255.246, Bao
+6, 6, 2, 2026-11-13 09:45:18.453820, queries/job__random_split_3/train/31a.sql, 267.047, 213.675, Bao
+6, 7, 0, 2026-11-13 09:45:19.280728, queries/job__random_split_3/train/9c.sql, 125.053, 478.581, Bao
+6, 7, 1, 2026-11-13 09:45:20.101834, queries/job__random_split_3/train/9c.sql, 126.858, 475.682, Bao
+6, 7, 2, 2026-11-13 09:45:21.478581, queries/job__random_split_3/train/9c.sql, 121.654, 451.857, Bao
+6, 8, 0, 2026-11-13 09:45:22.467867, queries/job__random_split_3/train/13b.sql, 137.04, 624.733, Bao
+6, 8, 1, 2026-11-13 09:45:23.385621, queries/job__random_split_3/train/13b.sql, 137.644, 547.684, Bao
+6, 8, 2, 2026-11-13 09:45:25.112941, queries/job__random_split_3/train/13b.sql, 132.625, 627.87, Bao
+6, 9, 0, 2026-11-13 09:45:26.612000, queries/job__random_split_3/train/20c.sql, 155.503, 1089.452, Bao
+6, 9, 1, 2026-11-13 09:45:28.084491, queries/job__random_split_3/train/20c.sql, 162.493, 1060.233, Bao
+6, 9, 2, 2026-11-13 09:45:30.538595, queries/job__random_split_3/train/20c.sql, 149.905, 886.926, Bao
+6, 10, 0, 2026-11-13 09:45:30.954718, queries/job__random_split_3/train/1a.sql, 110.168, 99.761, Bao
+6, 10, 1, 2026-11-13 09:45:31.375479, queries/job__random_split_3/train/1a.sql, 108.657, 99.728, Bao
+6, 10, 2, 2026-11-13 09:45:31.963199, queries/job__random_split_3/train/1a.sql, 104.588, 97.286, Bao
+6, 11, 0, 2026-11-13 09:45:32.291438, queries/job__random_split_3/train/6c.sql, 110.298, 11.609, Bao
+6, 11, 1, 2026-11-13 09:45:32.620697, queries/job__random_split_3/train/6c.sql, 113.399, 10.942, Bao
+6, 11, 2, 2026-11-13 09:45:33.062058, queries/job__random_split_3/train/6c.sql, 102.945, 8.844, Bao
+6, 12, 0, 2026-11-13 09:45:39.651611, queries/job__random_split_3/train/17d.sql, 117.653, 6258.334, Bao
+6, 12, 1, 2026-11-13 09:45:46.109903, queries/job__random_split_3/train/17d.sql, 119.37, 6125.694, Bao
+6, 12, 2, 2026-11-13 09:45:58.271697, queries/job__random_split_3/train/17d.sql, 111.603, 5846.201, Bao
+6, 13, 0, 2026-11-13 09:46:00.279591, queries/job__random_split_3/train/16c.sql, 127.646, 1656.16, Bao
+6, 13, 1, 2026-11-13 09:46:02.315517, queries/job__random_split_3/train/16c.sql, 125.556, 1690.918, Bao
+6, 13, 2, 2026-11-13 09:46:05.995556, queries/job__random_split_3/train/16c.sql, 123.999, 1465.08, Bao
+6, 14, 0, 2026-11-13 09:46:08.221045, queries/job__random_split_3/train/22c.sql, 226.892, 1680.895, Bao
+6, 14, 1, 2026-11-13 09:46:10.419380, queries/job__random_split_3/train/22c.sql, 221.571, 1657.47, Bao
+6, 14, 2, 2026-11-13 09:46:14.482993, queries/job__random_split_3/train/22c.sql, 216.246, 1620.724, Bao
+6, 15, 0, 2026-11-13 09:46:14.940538, queries/job__random_split_3/train/21b.sql, 150.932, 62.968, Bao
+6, 15, 1, 2026-11-13 09:46:15.397197, queries/job__random_split_3/train/21b.sql, 147.793, 63.956, Bao
+6, 15, 2, 2026-11-13 09:46:16.052601, queries/job__random_split_3/train/21b.sql, 142.001, 55.892, Bao
+6, 16, 0, 2026-11-13 09:46:19.914157, queries/job__random_split_3/train/18a.sql, 117.251, 3534.267, Bao
+6, 16, 1, 2026-11-13 09:46:23.657074, queries/job__random_split_3/train/18a.sql, 119.508, 3405.502, Bao
+6, 16, 2, 2026-11-13 09:46:30.683528, queries/job__random_split_3/train/18a.sql, 114.671, 3395.593, Bao
+6, 17, 0, 2026-11-13 09:46:37.206528, queries/job__random_split_3/train/17d.sql, 122.772, 6182.44, Bao
+6, 17, 1, 2026-11-13 09:46:43.738059, queries/job__random_split_3/train/17d.sql, 119.811, 6198.326, Bao
+6, 17, 2, 2026-11-13 09:46:56.109535, queries/job__random_split_3/train/17d.sql, 111.952, 5893.178, Bao
+6, 18, 0, 2026-11-13 09:46:57.443194, queries/job__random_split_3/train/8a.sql, 118.11, 1003.497, Bao
+6, 18, 1, 2026-11-13 09:46:58.772940, queries/job__random_split_3/train/8a.sql, 118.014, 993.273, Bao
+6, 18, 2, 2026-11-13 09:47:01.160764, queries/job__random_split_3/train/8a.sql, 116.115, 950.449, Bao
+6, 19, 0, 2026-11-13 09:47:03.434093, queries/job__random_split_3/train/22c.sql, 251.814, 1700.636, Bao
+6, 19, 1, 2026-11-13 09:47:05.687882, queries/job__random_split_3/train/22c.sql, 221.093, 1712.788, Bao
+6, 19, 2, 2026-11-13 09:47:09.737709, queries/job__random_split_3/train/22c.sql, 216.574, 1610.423, Bao
+6, 20, 0, 2026-11-13 09:47:10.067830, queries/job__random_split_3/train/6c.sql, 109.357, 12.488, Bao
+6, 20, 1, 2026-11-13 09:47:10.397413, queries/job__random_split_3/train/6c.sql, 111.27, 10.831, Bao
+6, 20, 2, 2026-11-13 09:47:10.840470, queries/job__random_split_3/train/6c.sql, 103.995, 8.833, Bao
+6, 21, 0, 2026-11-13 09:47:11.574211, queries/job__random_split_3/train/27a.sql, 311.291, 16.527, Bao
+6, 21, 1, 2026-11-13 09:47:12.306602, queries/job__random_split_3/train/27a.sql, 310.3, 15.383, Bao
+6, 21, 2, 2026-11-13 09:47:13.358961, queries/job__random_split_3/train/27a.sql, 303.771, 13.941, Bao
+6, 22, 0, 2026-11-13 09:47:13.911738, queries/job__random_split_3/train/12a.sql, 122.812, 209.438, Bao
+6, 22, 1, 2026-11-13 09:47:14.501721, queries/job__random_split_3/train/12a.sql, 125.027, 234.331, Bao
+6, 22, 2, 2026-11-13 09:47:15.351890, queries/job__random_split_3/train/12a.sql, 117.201, 191.776, Bao
+6, 23, 0, 2026-11-13 09:47:19.178382, queries/job__random_split_3/train/9d.sql, 126.498, 3477.707, Bao
+6, 23, 1, 2026-11-13 09:47:22.977636, queries/job__random_split_3/train/9d.sql, 132.512, 3444.292, Bao
+6, 23, 2, 2026-11-13 09:47:30.172685, queries/job__random_split_3/train/9d.sql, 120.657, 3360.537, Bao
+6, 24, 0, 2026-11-13 09:47:30.525574, queries/job__random_split_3/train/6a.sql, 111.407, 27.585, Bao
+6, 24, 1, 2026-11-13 09:47:30.873514, queries/job__random_split_3/train/6a.sql, 109.979, 29.589, Bao
+6, 24, 2, 2026-11-13 09:47:31.343561, queries/job__random_split_3/train/6a.sql, 104.421, 17.595, Bao
+==========================================================================================
+Iteration over chunk 8/19...
+[2026-11-13 09:47:31.343803]	[8/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.17787676820388207
+Epoch 15 training loss: 0.020041773167367164
+Epoch 30 training loss: 0.006496652262285352
+Stopped training from convergence condition at epoch 44
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:47:41.034407]	[8/19]	Retraining done.
+7, 0, 0, 2026-11-13 09:47:41.681453, queries/job__random_split_3/train/9a.sql, 131.545, 289.578, Bao
+7, 0, 1, 2026-11-13 09:47:42.325126, queries/job__random_split_3/train/9a.sql, 130.637, 287.725, Bao
+7, 0, 2, 2026-11-13 09:47:43.382290, queries/job__random_split_3/train/9a.sql, 121.999, 284.669, Bao
+7, 1, 0, 2026-11-13 09:47:44.791499, queries/job__random_split_3/train/8a.sql, 116.864, 1074.167, Bao
+7, 1, 1, 2026-11-13 09:47:46.140494, queries/job__random_split_3/train/8a.sql, 119.43, 1015.256, Bao
+7, 1, 2, 2026-11-13 09:47:48.533834, queries/job__random_split_3/train/8a.sql, 113.048, 947.096, Bao
+7, 2, 0, 2026-11-13 09:47:49.042748, queries/job__random_split_3/train/6b.sql, 108.978, 193.953, Bao
+7, 2, 1, 2026-11-13 09:47:49.551664, queries/job__random_split_3/train/6b.sql, 109.077, 192.72, Bao
+7, 2, 2, 2026-11-13 09:47:50.329978, queries/job__random_split_3/train/6b.sql, 106.11, 162.557, Bao
+7, 3, 0, 2026-11-13 09:47:51.457822, queries/job__random_split_3/train/15d.sql, 149.848, 732.771, Bao
+7, 3, 1, 2026-11-13 09:47:52.494825, queries/job__random_split_3/train/15d.sql, 148.621, 645.574, Bao
+7, 3, 2, 2026-11-13 09:47:54.270341, queries/job__random_split_3/train/15d.sql, 144.497, 607.473, Bao
+7, 4, 0, 2026-11-13 09:47:55.390037, queries/job__random_split_3/train/24a.sql, 350.198, 352.54, Bao
+7, 4, 1, 2026-11-13 09:47:56.506998, queries/job__random_split_3/train/24a.sql, 324.096, 369.957, Bao
+7, 4, 2, 2026-11-13 09:47:58.152371, queries/job__random_split_3/train/24a.sql, 321.282, 245.287, Bao
+7, 5, 0, 2026-11-13 09:48:02.229247, queries/job__random_split_3/train/17a.sql, 120.714, 3744.205, Bao
+7, 5, 1, 2026-11-13 09:48:06.379851, queries/job__random_split_3/train/17a.sql, 134.108, 3795.096, Bao
+7, 5, 2, 2026-11-13 09:48:13.374031, queries/job__random_split_3/train/17a.sql, 114.225, 3669.706, Bao
+7, 6, 0, 2026-11-13 09:48:14.899276, queries/job__random_split_3/train/20c.sql, 157.361, 1113.151, Bao
+7, 6, 1, 2026-11-13 09:48:16.394118, queries/job__random_split_3/train/20c.sql, 160.21, 1084.019, Bao
+7, 6, 2, 2026-11-13 09:48:18.846269, queries/job__random_split_3/train/20c.sql, 147.231, 892.914, Bao
+7, 7, 0, 2026-11-13 09:48:19.288844, queries/job__random_split_3/train/12b.sql, 126.768, 92.295, Bao
+7, 7, 1, 2026-11-13 09:48:19.726151, queries/job__random_split_3/train/12b.sql, 124.573, 92.484, Bao
+7, 7, 2, 2026-11-13 09:48:20.341791, queries/job__random_split_3/train/12b.sql, 119.429, 88.495, Bao
+7, 8, 0, 2026-11-13 09:48:23.135879, queries/job__random_split_3/train/20a.sql, 156.984, 2384.367, Bao
+7, 8, 1, 2026-11-13 09:48:25.848815, queries/job__random_split_3/train/20a.sql, 158.532, 2299.703, Bao
+7, 8, 2, 2026-11-13 09:48:30.681101, queries/job__random_split_3/train/20a.sql, 148.943, 2099.214, Bao
+7, 9, 0, 2026-11-13 09:48:31.511522, queries/job__random_split_3/train/9c.sql, 126.647, 480.781, Bao
+7, 9, 1, 2026-11-13 09:48:32.325762, queries/job__random_split_3/train/9c.sql, 126.475, 466.325, Bao
+7, 9, 2, 2026-11-13 09:48:33.709322, queries/job__random_split_3/train/9c.sql, 121.942, 454.988, Bao
+7, 10, 0, 2026-11-13 09:48:38.269432, queries/job__random_split_3/train/17f.sql, 117.344, 4227.661, Bao
+7, 10, 1, 2026-11-13 09:48:42.725223, queries/job__random_split_3/train/17f.sql, 118.762, 4124.465, Bao
+7, 10, 2, 2026-11-13 09:48:50.452703, queries/job__random_split_3/train/17f.sql, 113.377, 4080.399, Bao
+7, 11, 0, 2026-11-13 09:48:50.852043, queries/job__random_split_3/train/4b.sql, 114.124, 71.869, Bao
+7, 11, 1, 2026-11-13 09:48:51.249624, queries/job__random_split_3/train/4b.sql, 112.494, 70.593, Bao
+7, 11, 2, 2026-11-13 09:48:51.810093, queries/job__random_split_3/train/4b.sql, 102.418, 67.428, Bao
+7, 12, 0, 2026-11-13 09:48:52.655469, queries/job__random_split_3/train/23a.sql, 225.748, 297.293, Bao
+7, 12, 1, 2026-11-13 09:48:53.491558, queries/job__random_split_3/train/23a.sql, 222.439, 291.678, Bao
+7, 12, 2, 2026-11-13 09:48:54.852997, queries/job__random_split_3/train/23a.sql, 223.895, 299.356, Bao
+7, 13, 0, 2026-11-13 09:48:55.313472, queries/job__random_split_3/train/21b.sql, 150.649, 64.238, Bao
+7, 13, 1, 2026-11-13 09:48:55.768189, queries/job__random_split_3/train/21b.sql, 149.242, 64.199, Bao
+7, 13, 2, 2026-11-13 09:48:56.418446, queries/job__random_split_3/train/21b.sql, 141.845, 55.105, Bao
+7, 14, 0, 2026-11-13 09:48:59.366811, queries/job__random_split_3/train/8d.sql, 117.472, 2617.869, Bao
+7, 14, 1, 2026-11-13 09:49:01.868852, queries/job__random_split_3/train/8d.sql, 117.031, 2167.083, Bao
+7, 14, 2, 2026-11-13 09:49:06.623552, queries/job__random_split_3/train/8d.sql, 115.012, 2203.032, Bao
+7, 15, 0, 2026-11-13 09:49:09.914850, queries/job__random_split_3/train/9d.sql, 127.652, 2940.198, Bao
+7, 15, 1, 2026-11-13 09:49:13.204955, queries/job__random_split_3/train/9d.sql, 131.528, 2932.086, Bao
+7, 15, 2, 2026-11-13 09:49:19.384651, queries/job__random_split_3/train/9d.sql, 125.502, 2889.386, Bao
+7, 16, 0, 2026-11-13 09:49:20.124060, queries/job__random_split_3/train/27a.sql, 315.292, 15.839, Bao
+7, 16, 1, 2026-11-13 09:49:20.853085, queries/job__random_split_3/train/27a.sql, 309.706, 15.133, Bao
+7, 16, 2, 2026-11-13 09:49:21.906670, queries/job__random_split_3/train/27a.sql, 303.484, 13.79, Bao
+7, 17, 0, 2026-11-13 09:49:22.337026, queries/job__random_split_3/train/32b.sql, 111.169, 109.652, Bao
+7, 17, 1, 2026-11-13 09:49:22.767968, queries/job__random_split_3/train/32b.sql, 113.147, 111.194, Bao
+7, 17, 2, 2026-11-13 09:49:23.385512, queries/job__random_split_3/train/32b.sql, 105.183, 87.87, Bao
+7, 18, 0, 2026-11-13 09:49:24.289289, queries/job__random_split_3/train/15c.sql, 148.231, 509.2, Bao
+7, 18, 1, 2026-11-13 09:49:25.191174, queries/job__random_split_3/train/15c.sql, 177.134, 479.247, Bao
+7, 18, 2, 2026-11-13 09:49:26.649259, queries/job__random_split_3/train/15c.sql, 141.251, 448.57, Bao
+7, 19, 0, 2026-11-13 09:49:27.400192, queries/job__random_split_3/train/19a.sql, 179.875, 291.999, Bao
+7, 19, 1, 2026-11-13 09:49:28.152813, queries/job__random_split_3/train/19a.sql, 181.903, 290.885, Bao
+7, 19, 2, 2026-11-13 09:49:29.363301, queries/job__random_split_3/train/19a.sql, 174.083, 281.125, Bao
+7, 20, 0, 2026-11-13 09:49:29.996848, queries/job__random_split_3/train/9a.sql, 124.343, 283.692, Bao
+7, 20, 1, 2026-11-13 09:49:30.637973, queries/job__random_split_3/train/9a.sql, 129.12, 287.976, Bao
+7, 20, 2, 2026-11-13 09:49:31.681751, queries/job__random_split_3/train/9a.sql, 120.336, 277.581, Bao
+7, 21, 0, 2026-11-13 09:49:32.855854, queries/job__random_split_3/train/28b.sql, 361.837, 353.681, Bao
+7, 21, 1, 2026-11-13 09:49:34.033442, queries/job__random_split_3/train/28b.sql, 363.441, 352.607, Bao
+7, 21, 2, 2026-11-13 09:49:35.890259, queries/job__random_split_3/train/28b.sql, 354.535, 296.892, Bao
+7, 22, 0, 2026-11-13 09:49:40.917312, queries/job__random_split_3/train/26c.sql, 305.004, 4322.265, Bao
+7, 22, 1, 2026-11-13 09:49:45.787871, queries/job__random_split_3/train/26c.sql, 309.867, 4155.894, Bao
+7, 22, 2, 2026-11-13 09:49:54.897330, queries/job__random_split_3/train/26c.sql, 302.115, 4075.939, Bao
+7, 23, 0, 2026-11-13 09:49:55.377887, queries/job__random_split_3/train/3a.sql, 111.518, 158.481, Bao
+7, 23, 1, 2026-11-13 09:49:55.847083, queries/job__random_split_3/train/3a.sql, 112.796, 148.498, Bao
+7, 23, 2, 2026-11-13 09:49:56.534824, queries/job__random_split_3/train/3a.sql, 102.32, 116.713, Bao
+7, 24, 0, 2026-11-13 09:49:56.967272, queries/job__random_split_3/train/12b.sql, 126.333, 88.05, Bao
+7, 24, 1, 2026-11-13 09:49:57.406259, queries/job__random_split_3/train/12b.sql, 125.682, 91.856, Bao
+7, 24, 2, 2026-11-13 09:49:58.023943, queries/job__random_split_3/train/12b.sql, 117.565, 87.061, Bao
+==========================================================================================
+Iteration over chunk 9/19...
+[2026-11-13 09:49:58.024109]	[9/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.17769508461157482
+Epoch 15 training loss: 0.02357364452133576
+Epoch 30 training loss: 0.010980305401608348
+Stopped training from convergence condition at epoch 38
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:50:07.741796]	[9/19]	Retraining done.
+8, 0, 0, 2026-11-13 09:50:08.785040, queries/job__random_split_3/train/29a.sql, 448.311, 52.521, Bao
+8, 0, 1, 2026-11-13 09:50:09.837745, queries/job__random_split_3/train/29a.sql, 447.563, 55.06, Bao
+8, 0, 2, 2026-11-13 09:50:11.379033, queries/job__random_split_3/train/29a.sql, 441.476, 47.272, Bao
+8, 1, 0, 2026-11-13 09:50:12.146338, queries/job__random_split_3/train/24b.sql, 319.925, 27.232, Bao
+8, 1, 1, 2026-11-13 09:50:12.920895, queries/job__random_split_3/train/24b.sql, 324.364, 30.375, Bao
+8, 1, 2, 2026-11-13 09:50:14.040571, queries/job__random_split_3/train/24b.sql, 318.744, 21.799, Bao
+8, 2, 0, 2026-11-13 09:50:14.572073, queries/job__random_split_3/train/6b.sql, 114.296, 190.725, Bao
+8, 2, 1, 2026-11-13 09:50:15.080127, queries/job__random_split_3/train/6b.sql, 108.552, 196.859, Bao
+8, 2, 2, 2026-11-13 09:50:15.857090, queries/job__random_split_3/train/6b.sql, 102.648, 166.415, Bao
+8, 3, 0, 2026-11-13 09:50:16.754831, queries/job__random_split_3/train/15c.sql, 146.624, 503.665, Bao
+8, 3, 1, 2026-11-13 09:50:17.621850, queries/job__random_split_3/train/15c.sql, 149.438, 473.689, Bao
+8, 3, 2, 2026-11-13 09:50:19.079017, queries/job__random_split_3/train/15c.sql, 145.588, 446.561, Bao
+8, 4, 0, 2026-11-13 09:50:21.657964, queries/job__random_split_3/train/8d.sql, 118.588, 2249.339, Bao
+8, 4, 1, 2026-11-13 09:50:24.259144, queries/job__random_split_3/train/8d.sql, 122.336, 2262.488, Bao
+8, 4, 2, 2026-11-13 09:50:28.761214, queries/job__random_split_3/train/8d.sql, 112.719, 2136.357, Bao
+8, 5, 0, 2026-11-13 09:50:30.615236, queries/job__random_split_3/train/13a.sql, 131.641, 1490.306, Bao
+8, 5, 1, 2026-11-13 09:50:32.446170, queries/job__random_split_3/train/13a.sql, 134.099, 1464.527, Bao
+8, 5, 2, 2026-11-13 09:50:35.779446, queries/job__random_split_3/train/13a.sql, 133.607, 1497.875, Bao
+8, 6, 0, 2026-11-13 09:50:36.299664, queries/job__random_split_3/train/16a.sql, 125.943, 168.91, Bao
+8, 6, 1, 2026-11-13 09:50:36.803641, queries/job__random_split_3/train/16a.sql, 125.157, 161.307, Bao
+8, 6, 2, 2026-11-13 09:50:37.563159, queries/job__random_split_3/train/16a.sql, 118.792, 132.583, Bao
+8, 7, 0, 2026-11-13 09:50:38.587689, queries/job__random_split_3/train/29b.sql, 457.162, 20.047, Bao
+8, 7, 1, 2026-11-13 09:50:39.611657, queries/job__random_split_3/train/29b.sql, 455.497, 20.553, Bao
+8, 7, 2, 2026-11-13 09:50:41.086497, queries/job__random_split_3/train/29b.sql, 440.746, 13.855, Bao
+8, 8, 0, 2026-11-13 09:50:41.978565, queries/job__random_split_3/train/31a.sql, 272.787, 256.303, Bao
+8, 8, 1, 2026-11-13 09:50:42.870622, queries/job__random_split_3/train/31a.sql, 282.598, 248.679, Bao
+8, 8, 2, 2026-11-13 09:50:44.231054, queries/job__random_split_3/train/31a.sql, 266.435, 220.246, Bao
+8, 9, 0, 2026-11-13 09:50:47.523534, queries/job__random_split_3/train/17c.sql, 132.898, 2939.863, Bao
+8, 9, 1, 2026-11-13 09:50:50.758186, queries/job__random_split_3/train/17c.sql, 115.332, 2903.939, Bao
+8, 9, 2, 2026-11-13 09:50:56.236456, queries/job__random_split_3/train/17c.sql, 113.569, 2891.669, Bao
+8, 10, 0, 2026-11-13 09:50:56.686132, queries/job__random_split_3/train/14b.sql, 124.422, 106.124, Bao
+8, 10, 1, 2026-11-13 09:50:57.143821, queries/job__random_split_3/train/14b.sql, 122.809, 109.916, Bao
+8, 10, 2, 2026-11-13 09:50:57.788335, queries/job__random_split_3/train/14b.sql, 114.399, 84.233, Bao
+8, 11, 0, 2026-11-13 09:50:59.093294, queries/job__random_split_3/train/7a.sql, 124.004, 956.218, Bao
+8, 11, 1, 2026-11-13 09:51:00.371149, queries/job__random_split_3/train/7a.sql, 125.12, 930.193, Bao
+8, 11, 2, 2026-11-13 09:51:02.469433, queries/job__random_split_3/train/7a.sql, 118.984, 732.657, Bao
+8, 12, 0, 2026-11-13 09:51:05.854667, queries/job__random_split_3/train/17d.sql, 117.803, 3055.668, Bao
+8, 12, 1, 2026-11-13 09:51:09.222103, queries/job__random_split_3/train/17d.sql, 119.652, 3035.032, Bao
+8, 12, 2, 2026-11-13 09:51:15.060995, queries/job__random_split_3/train/17d.sql, 114.235, 3112.537, Bao
+8, 13, 0, 2026-11-13 09:51:16.087100, queries/job__random_split_3/train/29b.sql, 453.34, 21.079, Bao
+8, 13, 1, 2026-11-13 09:51:17.108362, queries/job__random_split_3/train/29b.sql, 455.178, 20.639, Bao
+8, 13, 2, 2026-11-13 09:51:18.583012, queries/job__random_split_3/train/29b.sql, 443.926, 14.084, Bao
+8, 14, 0, 2026-11-13 09:51:19.371319, queries/job__random_split_3/train/2b.sql, 110.323, 475.063, Bao
+8, 14, 1, 2026-11-13 09:51:20.162130, queries/job__random_split_3/train/2b.sql, 110.036, 469.824, Bao
+8, 14, 2, 2026-11-13 09:51:21.449668, queries/job__random_split_3/train/2b.sql, 103.977, 421.011, Bao
+8, 15, 0, 2026-11-13 09:51:21.901902, queries/job__random_split_3/train/21b.sql, 147.298, 62.354, Bao
+8, 15, 1, 2026-11-13 09:51:22.360627, queries/job__random_split_3/train/21b.sql, 147.268, 64.15, Bao
+8, 15, 2, 2026-11-13 09:51:23.009553, queries/job__random_split_3/train/21b.sql, 141.078, 54.658, Bao
+8, 16, 0, 2026-11-13 09:51:24.051140, queries/job__random_split_3/train/29a.sql, 449.922, 52.194, Bao
+8, 16, 1, 2026-11-13 09:51:25.130710, queries/job__random_split_3/train/29a.sql, 478.298, 53.313, Bao
+8, 16, 2, 2026-11-13 09:51:26.667529, queries/job__random_split_3/train/29a.sql, 443.539, 46.74, Bao
+8, 17, 0, 2026-11-13 09:51:27.350999, queries/job__random_split_3/train/25b.sql, 148.666, 292.895, Bao
+8, 17, 1, 2026-11-13 09:51:28.011598, queries/job__random_split_3/train/25b.sql, 144.339, 273.439, Bao
+8, 17, 2, 2026-11-13 09:51:29.069352, queries/job__random_split_3/train/25b.sql, 139.546, 250.47, Bao
+8, 18, 0, 2026-11-13 09:51:29.578002, queries/job__random_split_3/train/8b.sql, 120.307, 175.842, Bao
+8, 18, 1, 2026-11-13 09:51:30.084210, queries/job__random_split_3/train/8b.sql, 116.742, 175.296, Bao
+8, 18, 2, 2026-11-13 09:51:30.872808, queries/job__random_split_3/train/8b.sql, 110.303, 171.646, Bao
+8, 19, 0, 2026-11-13 09:51:32.538214, queries/job__random_split_3/train/16d.sql, 124.519, 1311.532, Bao
+8, 19, 1, 2026-11-13 09:51:34.223211, queries/job__random_split_3/train/16d.sql, 125.416, 1341.183, Bao
+8, 19, 2, 2026-11-13 09:51:37.013990, queries/job__random_split_3/train/16d.sql, 121.415, 1082.788, Bao
+8, 20, 0, 2026-11-13 09:51:37.442693, queries/job__random_split_3/train/32b.sql, 112.81, 110.007, Bao
+8, 20, 1, 2026-11-13 09:51:37.870249, queries/job__random_split_3/train/32b.sql, 112.159, 109.639, Bao
+8, 20, 2, 2026-11-13 09:51:38.484896, queries/job__random_split_3/train/32b.sql, 105.429, 87.306, Bao
+8, 21, 0, 2026-11-13 09:51:41.734547, queries/job__random_split_3/train/17c.sql, 115.429, 2920.706, Bao
+8, 21, 1, 2026-11-13 09:51:45.002715, queries/job__random_split_3/train/17c.sql, 117.775, 2931.909, Bao
+8, 21, 2, 2026-11-13 09:51:50.558631, queries/job__random_split_3/train/17c.sql, 112.193, 2977.969, Bao
+8, 22, 0, 2026-11-13 09:51:52.022229, queries/job__random_split_3/train/20c.sql, 154.427, 1059.704, Bao
+8, 22, 1, 2026-11-13 09:51:53.498117, queries/job__random_split_3/train/20c.sql, 160.894, 1064.129, Bao
+8, 22, 2, 2026-11-13 09:51:55.986673, queries/job__random_split_3/train/20c.sql, 148.411, 898.813, Bao
+8, 23, 0, 2026-11-13 09:51:56.892887, queries/job__random_split_3/train/31a.sql, 278.379, 256.907, Bao
+8, 23, 1, 2026-11-13 09:51:57.805306, queries/job__random_split_3/train/31a.sql, 271.785, 267.039, Bao
+8, 23, 2, 2026-11-13 09:51:59.184114, queries/job__random_split_3/train/31a.sql, 269.346, 216.707, Bao
+8, 24, 0, 2026-11-13 09:51:59.927640, queries/job__random_split_3/train/19a.sql, 182.79, 288.576, Bao
+8, 24, 1, 2026-11-13 09:52:00.669672, queries/job__random_split_3/train/19a.sql, 180.141, 287.806, Bao
+8, 24, 2, 2026-11-13 09:52:01.855293, queries/job__random_split_3/train/19a.sql, 176.417, 270.33, Bao
+==========================================================================================
+Iteration over chunk 10/19...
+[2026-11-13 09:52:01.855530]	[10/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.15229259349871427
+Epoch 15 training loss: 0.02910036960383877
+Epoch 30 training loss: 0.007134593848604709
+Stopped training from convergence condition at epoch 43
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:52:13.616655]	[10/19]	Retraining done.
+9, 0, 0, 2026-11-13 09:52:14.218455, queries/job__random_split_3/train/19b.sql, 179.383, 148.711, Bao
+9, 0, 1, 2026-11-13 09:52:14.838121, queries/job__random_split_3/train/19b.sql, 198.291, 149.367, Bao
+9, 0, 2, 2026-11-13 09:52:15.744195, queries/job__random_split_3/train/19b.sql, 171.189, 136.162, Bao
+9, 1, 0, 2026-11-13 09:52:16.212376, queries/job__random_split_3/train/3a.sql, 109.616, 156.341, Bao
+9, 1, 1, 2026-11-13 09:52:16.689329, queries/job__random_split_3/train/3a.sql, 111.804, 158.796, Bao
+9, 1, 2, 2026-11-13 09:52:17.382450, queries/job__random_split_3/train/3a.sql, 105.248, 115.315, Bao
+9, 2, 0, 2026-11-13 09:52:18.718932, queries/job__random_split_3/train/12c.sql, 125.067, 994.415, Bao
+9, 2, 1, 2026-11-13 09:52:20.041107, queries/job__random_split_3/train/12c.sql, 122.951, 981.499, Bao
+9, 2, 2, 2026-11-13 09:52:22.378930, queries/job__random_split_3/train/12c.sql, 120.058, 937.902, Bao
+9, 3, 0, 2026-11-13 09:52:23.228285, queries/job__random_split_3/train/23a.sql, 227.757, 300.877, Bao
+9, 3, 1, 2026-11-13 09:52:24.080207, queries/job__random_split_3/train/23a.sql, 231.305, 299.422, Bao
+9, 3, 2, 2026-11-13 09:52:25.447819, queries/job__random_split_3/train/23a.sql, 222.284, 291.9, Bao
+9, 4, 0, 2026-11-13 09:52:28.804034, queries/job__random_split_3/train/9d.sql, 128.911, 3005.116, Bao
+9, 4, 1, 2026-11-13 09:52:32.031575, queries/job__random_split_3/train/9d.sql, 128.957, 2871.345, Bao
+9, 4, 2, 2026-11-13 09:52:38.167976, queries/job__random_split_3/train/9d.sql, 121.753, 2884.23, Bao
+9, 5, 0, 2026-11-13 09:52:41.422891, queries/job__random_split_3/train/9d.sql, 129.489, 2901.796, Bao
+9, 5, 1, 2026-11-13 09:52:44.752825, queries/job__random_split_3/train/9d.sql, 125.33, 2983.986, Bao
+9, 5, 2, 2026-11-13 09:52:50.885042, queries/job__random_split_3/train/9d.sql, 119.151, 2895.232, Bao
+9, 6, 0, 2026-11-13 09:52:52.213164, queries/job__random_split_3/train/12c.sql, 125.868, 980.444, Bao
+9, 6, 1, 2026-11-13 09:52:53.534782, queries/job__random_split_3/train/12c.sql, 125.292, 974.043, Bao
+9, 6, 2, 2026-11-13 09:52:55.923308, queries/job__random_split_3/train/12c.sql, 118.503, 930.085, Bao
+9, 7, 0, 2026-11-13 09:53:00.004874, queries/job__random_split_3/train/17a.sql, 121.001, 3743.062, Bao
+9, 7, 1, 2026-11-13 09:53:04.058864, queries/job__random_split_3/train/17a.sql, 119.444, 3719.692, Bao
+9, 7, 2, 2026-11-13 09:53:10.983005, queries/job__random_split_3/train/17a.sql, 114.755, 3603.069, Bao
+9, 8, 0, 2026-11-13 09:53:22.353066, queries/job__random_split_3/train/17f.sql, 121.27, 11034.064, Bao
+9, 8, 1, 2026-11-13 09:53:33.897552, queries/job__random_split_3/train/17f.sql, 124.148, 11200.212, Bao
+9, 8, 2, 2026-11-13 09:53:55.913516, queries/job__random_split_3/train/17f.sql, 114.516, 10830.248, Bao
+9, 9, 0, 2026-11-13 09:53:57.252397, queries/job__random_split_3/train/8a.sql, 118.808, 1002.201, Bao
+9, 9, 1, 2026-11-13 09:53:58.576776, queries/job__random_split_3/train/8a.sql, 118.776, 988.312, Bao
+9, 9, 2, 2026-11-13 09:54:00.947341, queries/job__random_split_3/train/8a.sql, 113.999, 937.596, Bao
+9, 10, 0, 2026-11-13 09:54:06.503053, queries/job__random_split_3/train/6f.sql, 112.984, 5231.192, Bao
+9, 10, 1, 2026-11-13 09:54:11.471816, queries/job__random_split_3/train/6f.sql, 113.617, 4640.763, Bao
+9, 10, 2, 2026-11-13 09:54:20.823795, queries/job__random_split_3/train/6f.sql, 104.149, 4450.267, Bao
+9, 11, 0, 2026-11-13 09:54:25.838018, queries/job__random_split_3/train/6f.sql, 112.404, 4691.414, Bao
+9, 11, 1, 2026-11-13 09:54:30.829903, queries/job__random_split_3/train/6f.sql, 111.526, 4669.805, Bao
+9, 11, 2, 2026-11-13 09:54:40.167222, queries/job__random_split_3/train/6f.sql, 104.905, 4401.604, Bao
+9, 12, 0, 2026-11-13 09:54:40.584871, queries/job__random_split_3/train/1d.sql, 112.43, 95.301, Bao
+9, 12, 1, 2026-11-13 09:54:41.000020, queries/job__random_split_3/train/1d.sql, 113.052, 91.178, Bao
+9, 12, 2, 2026-11-13 09:54:41.583127, queries/job__random_split_3/train/1d.sql, 106.632, 88.611, Bao
+9, 13, 0, 2026-11-13 09:54:42.493886, queries/job__random_split_3/train/15c.sql, 154.58, 509.232, Bao
+9, 13, 1, 2026-11-13 09:54:43.368802, queries/job__random_split_3/train/15c.sql, 149.086, 471.935, Bao
+9, 13, 2, 2026-11-13 09:54:44.839719, queries/job__random_split_3/train/15c.sql, 144.231, 434.554, Bao
+9, 14, 0, 2026-11-13 09:54:45.358816, queries/job__random_split_3/train/5c.sql, 110.033, 199.501, Bao
+9, 14, 1, 2026-11-13 09:54:45.872484, queries/job__random_split_3/train/5c.sql, 108.52, 198.575, Bao
+9, 14, 2, 2026-11-13 09:54:46.679847, queries/job__random_split_3/train/5c.sql, 105.615, 188.53, Bao
+9, 15, 0, 2026-11-13 09:54:47.011139, queries/job__random_split_3/train/32a.sql, 111.894, 10.927, Bao
+9, 15, 1, 2026-11-13 09:54:47.340357, queries/job__random_split_3/train/32a.sql, 111.059, 9.788, Bao
+9, 15, 2, 2026-11-13 09:54:47.790947, queries/job__random_split_3/train/32a.sql, 107.999, 9.025, Bao
+9, 16, 0, 2026-11-13 09:54:49.194081, queries/job__random_split_3/train/29c.sql, 449.29, 410.868, Bao
+9, 16, 1, 2026-11-13 09:54:50.597329, queries/job__random_split_3/train/29c.sql, 448.411, 413.249, Bao
+9, 16, 2, 2026-11-13 09:54:52.806988, queries/job__random_split_3/train/29c.sql, 442.488, 363.878, Bao
+9, 17, 0, 2026-11-13 09:54:53.627261, queries/job__random_split_3/train/9c.sql, 127.637, 473.285, Bao
+9, 17, 1, 2026-11-13 09:54:54.490535, queries/job__random_split_3/train/9c.sql, 125.705, 515.979, Bao
+9, 17, 2, 2026-11-13 09:54:55.860532, queries/job__random_split_3/train/9c.sql, 118.101, 456.585, Bao
+9, 18, 0, 2026-11-13 09:54:57.017074, queries/job__random_split_3/train/30b.sql, 321.833, 423.264, Bao
+9, 18, 1, 2026-11-13 09:54:58.167343, queries/job__random_split_3/train/30b.sql, 316.827, 421.797, Bao
+9, 18, 2, 2026-11-13 09:55:00.016850, queries/job__random_split_3/train/30b.sql, 308.195, 399.019, Bao
+9, 19, 0, 2026-11-13 09:55:00.759943, queries/job__random_split_3/train/10a.sql, 121.097, 406.796, Bao
+9, 19, 1, 2026-11-13 09:55:01.512996, queries/job__random_split_3/train/10a.sql, 121.388, 414.746, Bao
+9, 19, 2, 2026-11-13 09:55:02.720659, queries/job__random_split_3/train/10a.sql, 110.1, 393.116, Bao
+9, 20, 0, 2026-11-13 09:55:03.183198, queries/job__random_split_3/train/5b.sql, 113.344, 141.61, Bao
+9, 20, 1, 2026-11-13 09:55:03.645695, queries/job__random_split_3/train/5b.sql, 116.368, 139.866, Bao
+9, 20, 2, 2026-11-13 09:55:04.360426, queries/job__random_split_3/train/5b.sql, 104.492, 152.931, Bao
+9, 21, 0, 2026-11-13 09:55:05.097695, queries/job__random_split_3/train/19a.sql, 187.121, 272.856, Bao
+9, 21, 1, 2026-11-13 09:55:05.843884, queries/job__random_split_3/train/19a.sql, 178.301, 289.378, Bao
+9, 21, 2, 2026-11-13 09:55:07.049952, queries/job__random_split_3/train/19a.sql, 175.255, 277.348, Bao
+9, 22, 0, 2026-11-13 09:55:10.377240, queries/job__random_split_3/train/30c.sql, 313.759, 2599.507, Bao
+9, 22, 1, 2026-11-13 09:55:13.605783, queries/job__random_split_3/train/30c.sql, 311.256, 2496.631, Bao
+9, 22, 2, 2026-11-13 09:55:19.420638, queries/job__random_split_3/train/30c.sql, 306.512, 2304.985, Bao
+9, 23, 0, 2026-11-13 09:55:19.928249, queries/job__random_split_3/train/8b.sql, 120.255, 167.003, Bao
+9, 23, 1, 2026-11-13 09:55:20.436865, queries/job__random_split_3/train/8b.sql, 118.232, 177.278, Bao
+9, 23, 2, 2026-11-13 09:55:21.233223, queries/job__random_split_3/train/8b.sql, 112.417, 172.373, Bao
+9, 24, 0, 2026-11-13 09:55:22.020840, queries/job__random_split_3/train/15a.sql, 145.35, 396.087, Bao
+9, 24, 1, 2026-11-13 09:55:22.807653, queries/job__random_split_3/train/15a.sql, 152.769, 389.152, Bao
+9, 24, 2, 2026-11-13 09:55:24.105126, queries/job__random_split_3/train/15a.sql, 141.811, 369.461, Bao
+==========================================================================================
+Iteration over chunk 11/19...
+[2026-11-13 09:55:24.105322]	[11/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.136333539047175
+Epoch 15 training loss: 0.020692776526427932
+Epoch 30 training loss: 0.006518391135614365
+Epoch 45 training loss: 0.003661102388933715
+Stopped training from convergence condition at epoch 56
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:55:40.013530]	[11/19]	Retraining done.
+10, 0, 0, 2026-11-13 09:55:40.488250, queries/job__random_split_3/train/14b.sql, 127.514, 129.552, Bao
+10, 0, 1, 2026-11-13 09:55:40.962217, queries/job__random_split_3/train/14b.sql, 122.93, 127.593, Bao
+10, 0, 2, 2026-11-13 09:55:41.644213, queries/job__random_split_3/train/14b.sql, 115.216, 99.427, Bao
+10, 1, 0, 2026-11-13 09:55:42.285342, queries/job__random_split_3/train/14a.sql, 120.23, 306.947, Bao
+10, 1, 1, 2026-11-13 09:55:42.928071, queries/job__random_split_3/train/14a.sql, 120.171, 306.662, Bao
+10, 1, 2, 2026-11-13 09:55:43.947479, queries/job__random_split_3/train/14a.sql, 115.254, 250.012, Bao
+10, 2, 0, 2026-11-13 09:55:44.700990, queries/job__random_split_3/train/27a.sql, 313.805, 14.974, Bao
+10, 2, 1, 2026-11-13 09:55:45.425439, queries/job__random_split_3/train/27a.sql, 307.877, 15.489, Bao
+10, 2, 2, 2026-11-13 09:55:46.472158, queries/job__random_split_3/train/27a.sql, 304.845, 12.584, Bao
+10, 3, 0, 2026-11-13 09:55:50.985277, queries/job__random_split_3/train/17f.sql, 115.63, 4188.125, Bao
+10, 3, 1, 2026-11-13 09:55:55.445158, queries/job__random_split_3/train/17f.sql, 120.95, 4126.268, Bao
+10, 3, 2, 2026-11-13 09:56:03.208883, queries/job__random_split_3/train/17f.sql, 111.869, 4116.057, Bao
+10, 4, 0, 2026-11-13 09:56:04.649741, queries/job__random_split_3/train/29c.sql, 450.208, 434.595, Bao
+10, 4, 1, 2026-11-13 09:56:06.054488, queries/job__random_split_3/train/29c.sql, 450.963, 411.548, Bao
+10, 4, 2, 2026-11-13 09:56:08.254133, queries/job__random_split_3/train/29c.sql, 445.919, 358.317, Bao
+10, 5, 0, 2026-11-13 09:56:08.684498, queries/job__random_split_3/train/32b.sql, 111.658, 110.986, Bao
+10, 5, 1, 2026-11-13 09:56:09.120248, queries/job__random_split_3/train/32b.sql, 109.364, 115.096, Bao
+10, 5, 2, 2026-11-13 09:56:09.744441, queries/job__random_split_3/train/32b.sql, 105.823, 91.189, Bao
+10, 6, 0, 2026-11-13 09:56:13.598597, queries/job__random_split_3/train/16d.sql, 125.599, 3502.49, Bao
+10, 6, 1, 2026-11-13 09:56:17.466991, queries/job__random_split_3/train/16d.sql, 125.782, 3516.558, Bao
+10, 6, 2, 2026-11-13 09:56:24.009714, queries/job__random_split_3/train/16d.sql, 120.239, 3428.343, Bao
+10, 7, 0, 2026-11-13 09:56:24.814261, queries/job__random_split_3/train/2c.sql, 120.409, 456.646, Bao
+10, 7, 1, 2026-11-13 09:56:25.586440, queries/job__random_split_3/train/2c.sql, 111.389, 453.658, Bao
+10, 7, 2, 2026-11-13 09:56:26.852216, queries/job__random_split_3/train/2c.sql, 104.762, 410.098, Bao
+10, 8, 0, 2026-11-13 09:56:31.353082, queries/job__random_split_3/train/17f.sql, 118.301, 4163.191, Bao
+10, 8, 1, 2026-11-13 09:56:35.861334, queries/job__random_split_3/train/17f.sql, 119.022, 4174.302, Bao
+10, 8, 2, 2026-11-13 09:56:43.579304, queries/job__random_split_3/train/17f.sql, 112.086, 4093.705, Bao
+10, 9, 0, 2026-11-13 09:56:44.675821, queries/job__random_split_3/train/24a.sql, 325.446, 335.95, Bao
+10, 9, 1, 2026-11-13 09:56:45.744301, queries/job__random_split_3/train/24a.sql, 323.962, 325.73, Bao
+10, 9, 2, 2026-11-13 09:56:47.394879, queries/job__random_split_3/train/24a.sql, 317.467, 246.86, Bao
+10, 10, 0, 2026-11-13 09:56:48.040299, queries/job__random_split_3/train/7b.sql, 123.8, 297.712, Bao
+10, 10, 1, 2026-11-13 09:56:48.692107, queries/job__random_split_3/train/7b.sql, 126.975, 304.207, Bao
+10, 10, 2, 2026-11-13 09:56:49.637413, queries/job__random_split_3/train/7b.sql, 117.444, 197.003, Bao
+10, 11, 0, 2026-11-13 09:56:49.983256, queries/job__random_split_3/train/6a.sql, 110.387, 29.665, Bao
+10, 11, 1, 2026-11-13 09:56:50.325147, queries/job__random_split_3/train/6a.sql, 109.838, 26.527, Bao
+10, 11, 2, 2026-11-13 09:56:50.784711, queries/job__random_split_3/train/6a.sql, 103.601, 16.509, Bao
+10, 12, 0, 2026-11-13 09:56:51.969505, queries/job__random_split_3/train/13b.sql, 133.944, 817.922, Bao
+10, 12, 1, 2026-11-13 09:56:53.117762, queries/job__random_split_3/train/13b.sql, 132.395, 785.081, Bao
+10, 12, 2, 2026-11-13 09:56:55.214801, queries/job__random_split_3/train/13b.sql, 132.648, 823.506, Bao
+10, 13, 0, 2026-11-13 09:56:55.670192, queries/job__random_split_3/train/21b.sql, 147.676, 64.707, Bao
+10, 13, 1, 2026-11-13 09:56:56.122057, queries/job__random_split_3/train/21b.sql, 145.937, 63.415, Bao
+10, 13, 2, 2026-11-13 09:56:56.778463, queries/job__random_split_3/train/21b.sql, 138.745, 56.13, Bao
+10, 14, 0, 2026-11-13 09:57:00.602166, queries/job__random_split_3/train/18a.sql, 115.846, 3497.506, Bao
+10, 14, 1, 2026-11-13 09:57:04.407409, queries/job__random_split_3/train/18a.sql, 118.404, 3476.091, Bao
+10, 14, 2, 2026-11-13 09:57:11.335597, queries/job__random_split_3/train/18a.sql, 111.468, 3375.139, Bao
+10, 15, 0, 2026-11-13 09:57:12.097848, queries/job__random_split_3/train/10a.sql, 120.111, 421.42, Bao
+10, 15, 1, 2026-11-13 09:57:12.856995, queries/job__random_split_3/train/10a.sql, 120.197, 420.039, Bao
+10, 15, 2, 2026-11-13 09:57:14.060865, queries/job__random_split_3/train/10a.sql, 113.843, 380.291, Bao
+10, 16, 0, 2026-11-13 09:57:14.514307, queries/job__random_split_3/train/4a.sql, 117.444, 97.049, Bao
+10, 16, 1, 2026-11-13 09:57:14.931547, queries/job__random_split_3/train/4a.sql, 111.945, 96.129, Bao
+10, 16, 2, 2026-11-13 09:57:15.521732, queries/job__random_split_3/train/4a.sql, 106.543, 77.914, Bao
+10, 17, 0, 2026-11-13 09:57:16.295972, queries/job__random_split_3/train/2c.sql, 110.054, 459.358, Bao
+10, 17, 1, 2026-11-13 09:57:17.050826, queries/job__random_split_3/train/2c.sql, 110.24, 440.862, Bao
+10, 17, 2, 2026-11-13 09:57:18.316257, queries/job__random_split_3/train/2c.sql, 104.63, 424.45, Bao
+10, 18, 0, 2026-11-13 09:57:23.221257, queries/job__random_split_3/train/17e.sql, 117.316, 4574.456, Bao
+10, 18, 1, 2026-11-13 09:57:28.127668, queries/job__random_split_3/train/17e.sql, 118.271, 4572.684, Bao
+10, 18, 2, 2026-11-13 09:57:36.734515, queries/job__random_split_3/train/17e.sql, 114.163, 4700.39, Bao
+10, 19, 0, 2026-11-13 09:57:37.581815, queries/job__random_split_3/train/33b.sql, 355.418, 39.402, Bao
+10, 19, 1, 2026-11-13 09:57:38.427029, queries/job__random_split_3/train/33b.sql, 353.155, 38.558, Bao
+10, 19, 2, 2026-11-13 09:57:39.643650, queries/job__random_split_3/train/33b.sql, 345.681, 33.163, Bao
+10, 20, 0, 2026-11-13 09:57:40.378594, queries/job__random_split_3/train/27a.sql, 311.315, 15.157, Bao
+10, 20, 1, 2026-11-13 09:57:41.113164, queries/job__random_split_3/train/27a.sql, 311.594, 15.437, Bao
+10, 20, 2, 2026-11-13 09:57:42.172687, queries/job__random_split_3/train/27a.sql, 304.867, 13.884, Bao
+10, 21, 0, 2026-11-13 09:57:42.631228, queries/job__random_split_3/train/21b.sql, 151.699, 65.276, Bao
+10, 21, 1, 2026-11-13 09:57:43.088806, queries/job__random_split_3/train/21b.sql, 148.584, 64.105, Bao
+10, 21, 2, 2026-11-13 09:57:43.752686, queries/job__random_split_3/train/21b.sql, 142.567, 56.097, Bao
+10, 22, 0, 2026-11-13 09:57:44.531573, queries/job__random_split_3/train/10a.sql, 118.496, 445.758, Bao
+10, 22, 1, 2026-11-13 09:57:45.279117, queries/job__random_split_3/train/10a.sql, 116.574, 415.773, Bao
+10, 22, 2, 2026-11-13 09:57:46.465269, queries/job__random_split_3/train/10a.sql, 110.357, 388.267, Bao
+10, 23, 0, 2026-11-13 09:57:47.497014, queries/job__random_split_3/train/12c.sql, 127.434, 683.667, Bao
+10, 23, 1, 2026-11-13 09:57:48.518248, queries/job__random_split_3/train/12c.sql, 127.731, 671.94, Bao
+10, 23, 2, 2026-11-13 09:57:50.308530, queries/job__random_split_3/train/12c.sql, 117.159, 655.506, Bao
+10, 24, 0, 2026-11-13 09:57:54.408359, queries/job__random_split_3/train/6f.sql, 111.104, 3783.153, Bao
+10, 24, 1, 2026-11-13 09:57:58.451255, queries/job__random_split_3/train/6f.sql, 117.144, 3720.978, Bao
+10, 24, 2, 2026-11-13 09:58:05.831901, queries/job__random_split_3/train/6f.sql, 106.193, 4020.331, Bao
+==========================================================================================
+Iteration over chunk 12/19...
+[2026-11-13 09:58:05.832347]	[12/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.31335154587500974
+Epoch 15 training loss: 0.02644582264321415
+Epoch 30 training loss: 0.00525968174425591
+Stopped training from convergence condition at epoch 43
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 09:58:19.948007]	[12/19]	Retraining done.
+11, 0, 0, 2026-11-13 09:58:20.585469, queries/job__random_split_3/train/7b.sql, 125.375, 292.63, Bao
+11, 0, 1, 2026-11-13 09:58:21.212419, queries/job__random_split_3/train/7b.sql, 126.437, 283.153, Bao
+11, 0, 2, 2026-11-13 09:58:22.189823, queries/job__random_split_3/train/7b.sql, 118.005, 220.624, Bao
+11, 1, 0, 2026-11-13 09:58:27.325355, queries/job__random_split_3/train/26c.sql, 311.406, 4417.965, Bao
+11, 1, 1, 2026-11-13 09:58:32.351011, queries/job__random_split_3/train/26c.sql, 310.144, 4309.114, Bao
+11, 1, 2, 2026-11-13 09:58:41.505971, queries/job__random_split_3/train/26c.sql, 300.793, 4048.478, Bao
+11, 2, 0, 2026-11-13 09:58:42.027081, queries/job__random_split_3/train/5c.sql, 109.945, 201.565, Bao
+11, 2, 1, 2026-11-13 09:58:42.547713, queries/job__random_split_3/train/5c.sql, 109.214, 199.038, Bao
+11, 2, 2, 2026-11-13 09:58:43.366060, queries/job__random_split_3/train/5c.sql, 105.835, 196.436, Bao
+11, 3, 0, 2026-11-13 09:58:44.442363, queries/job__random_split_3/train/29a.sql, 451.16, 52.01, Bao
+11, 3, 1, 2026-11-13 09:58:45.486296, queries/job__random_split_3/train/29a.sql, 448.77, 53.725, Bao
+11, 3, 2, 2026-11-13 09:58:47.029186, queries/job__random_split_3/train/29a.sql, 444.629, 48.017, Bao
+11, 4, 0, 2026-11-13 09:58:47.449334, queries/job__random_split_3/train/15b.sql, 152.039, 23.196, Bao
+11, 4, 1, 2026-11-13 09:58:47.862434, queries/job__random_split_3/train/15b.sql, 150.298, 22.354, Bao
+11, 4, 2, 2026-11-13 09:58:48.457043, queries/job__random_split_3/train/15b.sql, 144.662, 21.163, Bao
+11, 5, 0, 2026-11-13 09:58:49.480647, queries/job__random_split_3/train/14c.sql, 121.674, 684.088, Bao
+11, 5, 1, 2026-11-13 09:58:50.488869, queries/job__random_split_3/train/14c.sql, 121.298, 665.337, Bao
+11, 5, 2, 2026-11-13 09:58:52.154230, queries/job__random_split_3/train/14c.sql, 116.745, 568.296, Bao
+11, 6, 0, 2026-11-13 09:58:52.759319, queries/job__random_split_3/train/19b.sql, 179.063, 144.33, Bao
+11, 6, 1, 2026-11-13 09:58:53.347874, queries/job__random_split_3/train/19b.sql, 173.962, 144.091, Bao
+11, 6, 2, 2026-11-13 09:58:54.262823, queries/job__random_split_3/train/19b.sql, 174.473, 137.892, Bao
+11, 7, 0, 2026-11-13 09:58:55.510248, queries/job__random_split_3/train/7a.sql, 145.261, 878.281, Bao
+11, 7, 1, 2026-11-13 09:58:56.719697, queries/job__random_split_3/train/7a.sql, 124.111, 863.257, Bao
+11, 7, 2, 2026-11-13 09:58:58.891022, queries/job__random_split_3/train/7a.sql, 119.693, 845.08, Bao
+11, 8, 0, 2026-11-13 09:58:59.342537, queries/job__random_split_3/train/4c.sql, 111.004, 129.682, Bao
+11, 8, 1, 2026-11-13 09:58:59.799067, queries/job__random_split_3/train/4c.sql, 110.657, 131.814, Bao
+11, 8, 2, 2026-11-13 09:59:00.444660, queries/job__random_split_3/train/4c.sql, 104.707, 106.897, Bao
+11, 9, 0, 2026-11-13 09:59:00.775833, queries/job__random_split_3/train/6c.sql, 111.334, 11.904, Bao
+11, 9, 1, 2026-11-13 09:59:01.101725, queries/job__random_split_3/train/6c.sql, 110.464, 10.974, Bao
+11, 9, 2, 2026-11-13 09:59:01.539670, queries/job__random_split_3/train/6c.sql, 102.569, 10.354, Bao
+11, 10, 0, 2026-11-13 09:59:02.748609, queries/job__random_split_3/train/7a.sql, 122.332, 861.155, Bao
+11, 10, 1, 2026-11-13 09:59:03.943342, queries/job__random_split_3/train/7a.sql, 123.516, 847.348, Bao
+11, 10, 2, 2026-11-13 09:59:06.146837, queries/job__random_split_3/train/7a.sql, 117.775, 835.442, Bao
+11, 11, 0, 2026-11-13 09:59:21.374333, queries/job__random_split_3/train/17a.sql, 119.429, 14892.202, Bao
+11, 11, 1, 2026-11-13 09:59:36.591332, queries/job__random_split_3/train/17a.sql, 119.309, 14874.11, Bao
+11, 11, 2, 2026-11-13 10:00:05.786578, queries/job__random_split_3/train/17a.sql, 114.862, 14499.146, Bao
+11, 12, 0, 2026-11-13 10:00:13.581025, queries/job__random_split_3/train/17d.sql, 119.271, 7452.513, Bao
+11, 12, 1, 2026-11-13 10:00:21.386254, queries/job__random_split_3/train/17d.sql, 122.632, 7462.365, Bao
+11, 12, 2, 2026-11-13 10:00:36.021820, queries/job__random_split_3/train/17d.sql, 113.843, 7033.927, Bao
+11, 13, 0, 2026-11-13 10:00:36.683748, queries/job__random_split_3/train/14a.sql, 125.826, 313.997, Bao
+11, 13, 1, 2026-11-13 10:00:37.342845, queries/job__random_split_3/train/14a.sql, 121.969, 315.072, Bao
+11, 13, 2, 2026-11-13 10:00:38.364635, queries/job__random_split_3/train/14a.sql, 114.646, 265.711, Bao
+11, 14, 0, 2026-11-13 10:00:38.808690, queries/job__random_split_3/train/4a.sql, 112.489, 116.817, Bao
+11, 14, 1, 2026-11-13 10:00:39.250511, queries/job__random_split_3/train/4a.sql, 111.107, 116.882, Bao
+11, 14, 2, 2026-11-13 10:00:39.877387, queries/job__random_split_3/train/4a.sql, 104.534, 94.818, Bao
+11, 15, 0, 2026-11-13 10:00:43.940677, queries/job__random_split_3/train/6f.sql, 110.623, 3744.406, Bao
+11, 15, 1, 2026-11-13 10:00:47.991817, queries/job__random_split_3/train/6f.sql, 110.016, 3735.052, Bao
+11, 15, 2, 2026-11-13 10:00:55.039960, queries/job__random_split_3/train/6f.sql, 104.68, 3774.364, Bao
+11, 16, 0, 2026-11-13 10:00:56.859256, queries/job__random_split_3/train/20c.sql, 157.042, 1404.234, Bao
+11, 16, 1, 2026-11-13 10:00:58.649034, queries/job__random_split_3/train/20c.sql, 159.739, 1377.668, Bao
+11, 16, 2, 2026-11-13 10:01:01.705015, queries/job__random_split_3/train/20c.sql, 150.424, 1172.711, Bao
+11, 17, 0, 2026-11-13 10:01:02.478443, queries/job__random_split_3/train/2b.sql, 110.145, 454.967, Bao
+11, 17, 1, 2026-11-13 10:01:03.295827, queries/job__random_split_3/train/2b.sql, 109.053, 500.257, Bao
+11, 17, 2, 2026-11-13 10:01:04.637481, queries/job__random_split_3/train/2b.sql, 104.461, 471.367, Bao
+11, 18, 0, 2026-11-13 10:01:05.552312, queries/job__random_split_3/train/15c.sql, 150.793, 517.761, Bao
+11, 18, 1, 2026-11-13 10:01:06.440281, queries/job__random_split_3/train/15c.sql, 152.523, 488.016, Bao
+11, 18, 2, 2026-11-13 10:01:07.892501, queries/job__random_split_3/train/15c.sql, 142.201, 441.823, Bao
+11, 19, 0, 2026-11-13 10:01:09.401399, queries/job__random_split_3/train/8a.sql, 118.799, 1172.859, Bao
+11, 19, 1, 2026-11-13 10:01:10.913430, queries/job__random_split_3/train/8a.sql, 123.876, 1167.581, Bao
+11, 19, 2, 2026-11-13 10:01:13.587652, queries/job__random_split_3/train/8a.sql, 114.151, 1097.401, Bao
+11, 20, 0, 2026-11-13 10:01:13.920306, queries/job__random_split_3/train/6c.sql, 115.876, 11.058, Bao
+11, 20, 1, 2026-11-13 10:01:14.258792, queries/job__random_split_3/train/6c.sql, 111.623, 12.149, Bao
+11, 20, 2, 2026-11-13 10:01:14.722603, queries/job__random_split_3/train/6c.sql, 105.714, 8.749, Bao
+11, 21, 0, 2026-11-13 10:01:15.370526, queries/job__random_split_3/train/9a.sql, 127.32, 298.582, Bao
+11, 21, 1, 2026-11-13 10:01:16.009784, queries/job__random_split_3/train/9a.sql, 126.113, 288.644, Bao
+11, 21, 2, 2026-11-13 10:01:17.052021, queries/job__random_split_3/train/9a.sql, 120.289, 279.468, Bao
+11, 22, 0, 2026-11-13 10:01:17.521491, queries/job__random_split_3/train/5a.sql, 111.322, 148.623, Bao
+11, 22, 1, 2026-11-13 10:01:17.989836, queries/job__random_split_3/train/5a.sql, 108.81, 151.883, Bao
+11, 22, 2, 2026-11-13 10:01:18.714290, queries/job__random_split_3/train/5a.sql, 104.403, 146.533, Bao
+11, 23, 0, 2026-11-13 10:01:22.787501, queries/job__random_split_3/train/6f.sql, 109.082, 3756.967, Bao
+11, 23, 1, 2026-11-13 10:01:26.929230, queries/job__random_split_3/train/6f.sql, 117.245, 3816.22, Bao
+11, 23, 2, 2026-11-13 10:01:33.995035, queries/job__random_split_3/train/6f.sql, 107.468, 3719.739, Bao
+11, 24, 0, 2026-11-13 10:01:34.431239, queries/job__random_split_3/train/11a.sql, 128.022, 64.322, Bao
+11, 24, 1, 2026-11-13 10:01:34.843445, queries/job__random_split_3/train/11a.sql, 125.679, 61.399, Bao
+11, 24, 2, 2026-11-13 10:01:35.414518, queries/job__random_split_3/train/11a.sql, 119.026, 51.438, Bao
+==========================================================================================
+Iteration over chunk 13/19...
+[2026-11-13 10:01:35.414729]	[13/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.14708245004571618
+Epoch 15 training loss: 0.01970029185204545
+Epoch 30 training loss: 0.006920264246651814
+Stopped training from convergence condition at epoch 35
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 10:01:47.503330]	[13/19]	Retraining done.
+12, 0, 0, 2026-11-13 10:01:48.347803, queries/job__random_split_3/train/33b.sql, 358.886, 38.462, Bao
+12, 0, 1, 2026-11-13 10:01:49.192215, queries/job__random_split_3/train/33b.sql, 353.341, 39.361, Bao
+12, 0, 2, 2026-11-13 10:01:50.407140, queries/job__random_split_3/train/33b.sql, 342.555, 33.33, Bao
+12, 1, 0, 2026-11-13 10:01:50.830750, queries/job__random_split_3/train/1a.sql, 110.404, 102.17, Bao
+12, 1, 1, 2026-11-13 10:01:51.249132, queries/job__random_split_3/train/1a.sql, 108.938, 99.612, Bao
+12, 1, 2, 2026-11-13 10:01:51.836516, queries/job__random_split_3/train/1a.sql, 102.758, 96.213, Bao
+12, 2, 0, 2026-11-13 10:01:53.165584, queries/job__random_split_3/train/8a.sql, 114.288, 999.261, Bao
+12, 2, 1, 2026-11-13 10:01:54.533979, queries/job__random_split_3/train/8a.sql, 119.321, 1035.8, Bao
+12, 2, 2, 2026-11-13 10:01:56.870574, queries/job__random_split_3/train/8a.sql, 111.96, 931.669, Bao
+12, 3, 0, 2026-11-13 10:01:57.335485, queries/job__random_split_3/train/5a.sql, 112.66, 148.104, Bao
+12, 3, 1, 2026-11-13 10:01:57.796237, queries/job__random_split_3/train/5a.sql, 109.738, 147.282, Bao
+12, 3, 2, 2026-11-13 10:01:58.516863, queries/job__random_split_3/train/5a.sql, 106.633, 145.401, Bao
+12, 4, 0, 2026-11-13 10:01:58.841407, queries/job__random_split_3/train/6c.sql, 108.968, 10.582, Bao
+12, 4, 1, 2026-11-13 10:01:59.171239, queries/job__random_split_3/train/6c.sql, 111.712, 11.839, Bao
+12, 4, 2, 2026-11-13 10:01:59.607319, queries/job__random_split_3/train/6c.sql, 103.035, 9.06, Bao
+12, 5, 0, 2026-11-13 10:02:00.075720, queries/job__random_split_3/train/5a.sql, 111.265, 148.489, Bao
+12, 5, 1, 2026-11-13 10:02:00.546396, queries/job__random_split_3/train/5a.sql, 111.597, 149.265, Bao
+12, 5, 2, 2026-11-13 10:02:01.270383, queries/job__random_split_3/train/5a.sql, 103.307, 146.314, Bao
+12, 6, 0, 2026-11-13 10:02:10.625531, queries/job__random_split_3/train/17f.sql, 117.032, 9027.351, Bao
+12, 6, 1, 2026-11-13 10:02:19.749671, queries/job__random_split_3/train/17f.sql, 122.647, 8776.735, Bao
+12, 6, 2, 2026-11-13 10:02:36.714063, queries/job__random_split_3/train/17f.sql, 113.634, 8326.398, Bao
+12, 7, 0, 2026-11-13 10:02:37.116932, queries/job__random_split_3/train/4b.sql, 113.94, 72.582, Bao
+12, 7, 1, 2026-11-13 10:02:37.512787, queries/job__random_split_3/train/4b.sql, 115.793, 68.637, Bao
+12, 7, 2, 2026-11-13 10:02:38.068036, queries/job__random_split_3/train/4b.sql, 103.805, 68.106, Bao
+12, 8, 0, 2026-11-13 10:02:38.738203, queries/job__random_split_3/train/14a.sql, 121.263, 325.54, Bao
+12, 8, 1, 2026-11-13 10:02:39.391543, queries/job__random_split_3/train/14a.sql, 124.011, 306.608, Bao
+12, 8, 2, 2026-11-13 10:02:40.417721, queries/job__random_split_3/train/14a.sql, 114.411, 263.954, Bao
+12, 9, 0, 2026-11-13 10:02:40.757057, queries/job__random_split_3/train/6e.sql, 108.841, 27.819, Bao
+12, 9, 1, 2026-11-13 10:02:41.100678, queries/job__random_split_3/train/6e.sql, 109.989, 27.986, Bao
+12, 9, 2, 2026-11-13 10:02:41.571095, queries/job__random_split_3/train/6e.sql, 103.846, 16.803, Bao
+12, 10, 0, 2026-11-13 10:02:41.901330, queries/job__random_split_3/train/6c.sql, 111.404, 10.752, Bao
+12, 10, 1, 2026-11-13 10:02:42.232327, queries/job__random_split_3/train/6c.sql, 110.335, 11.562, Bao
+12, 10, 2, 2026-11-13 10:02:42.670889, queries/job__random_split_3/train/6c.sql, 102.416, 10.251, Bao
+12, 11, 0, 2026-11-13 10:02:49.291266, queries/job__random_split_3/train/17b.sql, 118.128, 6288.959, Bao
+12, 11, 1, 2026-11-13 10:02:56.006703, queries/job__random_split_3/train/17b.sql, 119.534, 6381.355, Bao
+12, 11, 2, 2026-11-13 10:03:08.408496, queries/job__random_split_3/train/17b.sql, 113.752, 5893.746, Bao
+12, 12, 0, 2026-11-13 10:03:08.872343, queries/job__random_split_3/train/5b.sql, 109.525, 143.742, Bao
+12, 12, 1, 2026-11-13 10:03:09.336101, queries/job__random_split_3/train/5b.sql, 113.296, 144.105, Bao
+12, 12, 2, 2026-11-13 10:03:10.052208, queries/job__random_split_3/train/5b.sql, 107.235, 139.25, Bao
+12, 13, 0, 2026-11-13 10:03:10.925358, queries/job__random_split_3/train/23a.sql, 231.735, 311.836, Bao
+12, 13, 1, 2026-11-13 10:03:11.774994, queries/job__random_split_3/train/23a.sql, 229.72, 294.655, Bao
+12, 13, 2, 2026-11-13 10:03:13.121617, queries/job__random_split_3/train/23a.sql, 221.481, 296.097, Bao
+12, 14, 0, 2026-11-13 10:03:13.885395, queries/job__random_split_3/train/19a.sql, 184.924, 293.402, Bao
+12, 14, 1, 2026-11-13 10:03:14.648220, queries/job__random_split_3/train/19a.sql, 180.781, 283.539, Bao
+12, 14, 2, 2026-11-13 10:03:15.840573, queries/job__random_split_3/train/19a.sql, 171.947, 270.907, Bao
+12, 15, 0, 2026-11-13 10:03:16.273633, queries/job__random_split_3/train/4c.sql, 111.574, 110.642, Bao
+12, 15, 1, 2026-11-13 10:03:16.703009, queries/job__random_split_3/train/4c.sql, 111.895, 108.214, Bao
+12, 15, 2, 2026-11-13 10:03:17.307953, queries/job__random_split_3/train/4c.sql, 104.379, 82.678, Bao
+12, 16, 0, 2026-11-13 10:03:23.871270, queries/job__random_split_3/train/17b.sql, 116.903, 6235.862, Bao
+12, 16, 1, 2026-11-13 10:03:30.475016, queries/job__random_split_3/train/17b.sql, 116.41, 6272.014, Bao
+12, 16, 2, 2026-11-13 10:03:43.144061, queries/job__random_split_3/train/17b.sql, 112.609, 6090.713, Bao
+12, 17, 0, 2026-11-13 10:03:43.561117, queries/job__random_split_3/train/11a.sql, 125.112, 62.577, Bao
+12, 17, 1, 2026-11-13 10:03:43.970749, queries/job__random_split_3/train/11a.sql, 125.966, 62.163, Bao
+12, 17, 2, 2026-11-13 10:03:44.575067, queries/job__random_split_3/train/11a.sql, 119.9, 53.902, Bao
+12, 18, 0, 2026-11-13 10:03:46.594997, queries/job__random_split_3/train/16c.sql, 126.013, 1665.639, Bao
+12, 18, 1, 2026-11-13 10:03:48.596131, queries/job__random_split_3/train/16c.sql, 128.42, 1651.087, Bao
+12, 18, 2, 2026-11-13 10:03:52.100838, queries/job__random_split_3/train/16c.sql, 117.968, 1478.158, Bao
+12, 19, 0, 2026-11-13 10:04:29.054431, queries/job__random_split_3/train/19d.sql, 186.625, 36473.39, Bao
+12, 19, 1, 2026-11-13 10:04:56.683431, queries/job__random_split_3/train/19d.sql, 183.89, 27156.63, Bao
+12, 19, 2, 2026-11-13 10:05:50.460984, queries/job__random_split_3/train/19d.sql, 180.29, 27058.262, Bao
+12, 20, 0, 2026-11-13 10:05:50.793697, queries/job__random_split_3/train/6c.sql, 111.588, 12.583, Bao
+12, 20, 1, 2026-11-13 10:05:51.124970, queries/job__random_split_3/train/6c.sql, 110.831, 11.237, Bao
+12, 20, 2, 2026-11-13 10:05:51.570251, queries/job__random_split_3/train/6c.sql, 103.561, 10.502, Bao
+12, 21, 0, 2026-11-13 10:05:54.180295, queries/job__random_split_3/train/8d.sql, 121.969, 2275.012, Bao
+12, 21, 1, 2026-11-13 10:05:56.772818, queries/job__random_split_3/train/8d.sql, 119.255, 2230.103, Bao
+12, 21, 2, 2026-11-13 10:06:01.401828, queries/job__random_split_3/train/8d.sql, 112.206, 2269.536, Bao
+12, 22, 0, 2026-11-13 10:06:05.408477, queries/job__random_split_3/train/18a.sql, 119.41, 3672.44, Bao
+12, 22, 1, 2026-11-13 10:06:09.676822, queries/job__random_split_3/train/18a.sql, 122.829, 3927.273, Bao
+12, 22, 2, 2026-11-13 10:06:16.746357, queries/job__random_split_3/train/18a.sql, 115.775, 3407.501, Bao
+12, 23, 0, 2026-11-13 10:06:17.666993, queries/job__random_split_3/train/2d.sql, 112.186, 600.503, Bao
+12, 23, 1, 2026-11-13 10:06:18.600962, queries/job__random_split_3/train/2d.sql, 113.897, 608.116, Bao
+12, 23, 2, 2026-11-13 10:06:20.171809, queries/job__random_split_3/train/2d.sql, 103.961, 551.966, Bao
+12, 24, 0, 2026-11-13 10:06:21.695663, queries/job__random_split_3/train/20c.sql, 159.251, 1110.883, Bao
+12, 24, 1, 2026-11-13 10:06:23.176894, queries/job__random_split_3/train/20c.sql, 153.913, 1072.222, Bao
+12, 24, 2, 2026-11-13 10:06:25.700396, queries/job__random_split_3/train/20c.sql, 150.703, 894.751, Bao
+==========================================================================================
+Iteration over chunk 14/19...
+[2026-11-13 10:06:25.700602]	[14/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.09773917157541621
+Epoch 15 training loss: 0.00684192061254924
+Epoch 30 training loss: 0.0036746743505566633
+Epoch 45 training loss: 0.0013200039181604304
+Stopped training from convergence condition at epoch 49
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 10:06:42.554566]	[14/19]	Retraining done.
+13, 0, 0, 2026-11-13 10:06:43.382856, queries/job__random_split_3/train/9c.sql, 127.15, 479.23, Bao
+13, 0, 1, 2026-11-13 10:06:44.201946, queries/job__random_split_3/train/9c.sql, 125.188, 472.235, Bao
+13, 0, 2, 2026-11-13 10:06:45.593168, queries/job__random_split_3/train/9c.sql, 117.426, 446.263, Bao
+13, 1, 0, 2026-11-13 10:06:49.933636, queries/job__random_split_3/train/25c.sql, 147.009, 3953.534, Bao
+13, 1, 1, 2026-11-13 10:06:54.200699, queries/job__random_split_3/train/25c.sql, 149.267, 3877.666, Bao
+13, 1, 2, 2026-11-13 10:07:02.210720, queries/job__random_split_3/train/25c.sql, 139.518, 3814.378, Bao
+13, 2, 0, 2026-11-13 10:07:02.716485, queries/job__random_split_3/train/8b.sql, 121.135, 170.38, Bao
+13, 2, 1, 2026-11-13 10:07:03.227503, queries/job__random_split_3/train/8b.sql, 118.947, 179.676, Bao
+13, 2, 2, 2026-11-13 10:07:04.017573, queries/job__random_split_3/train/8b.sql, 112.672, 168.595, Bao
+13, 3, 0, 2026-11-13 10:07:04.514585, queries/job__random_split_3/train/14b.sql, 127.073, 124.293, Bao
+13, 3, 1, 2026-11-13 10:07:04.981457, queries/job__random_split_3/train/14b.sql, 124.139, 122.802, Bao
+13, 3, 2, 2026-11-13 10:07:05.660303, queries/job__random_split_3/train/14b.sql, 115.941, 98.73, Bao
+13, 4, 0, 2026-11-13 10:07:06.294280, queries/job__random_split_3/train/9a.sql, 124.641, 290.44, Bao
+13, 4, 1, 2026-11-13 10:07:06.930350, queries/job__random_split_3/train/9a.sql, 124.969, 290.93, Bao
+13, 4, 2, 2026-11-13 10:07:07.972581, queries/job__random_split_3/train/9a.sql, 118.62, 278.992, Bao
+13, 5, 0, 2026-11-13 10:07:08.487807, queries/job__random_split_3/train/16a.sql, 129.429, 161.386, Bao
+13, 5, 1, 2026-11-13 10:07:08.993725, queries/job__random_split_3/train/16a.sql, 124.66, 163.068, Bao
+13, 5, 2, 2026-11-13 10:07:09.762688, queries/job__random_split_3/train/16a.sql, 116.388, 138.144, Bao
+13, 6, 0, 2026-11-13 10:07:12.268317, queries/job__random_split_3/train/8d.sql, 118.244, 2175.862, Bao
+13, 6, 1, 2026-11-13 10:07:14.864946, queries/job__random_split_3/train/8d.sql, 116.801, 2265.357, Bao
+13, 6, 2, 2026-11-13 10:07:19.448629, queries/job__random_split_3/train/8d.sql, 112.841, 2211.972, Bao
+13, 7, 0, 2026-11-13 10:07:24.015614, queries/job__random_split_3/train/17f.sql, 115.735, 4239.373, Bao
+13, 7, 1, 2026-11-13 10:07:28.500530, queries/job__random_split_3/train/17f.sql, 120.582, 4123.98, Bao
+13, 7, 2, 2026-11-13 10:07:36.392227, queries/job__random_split_3/train/17f.sql, 112.792, 4216.053, Bao
+13, 8, 0, 2026-11-13 10:07:37.040797, queries/job__random_split_3/train/14a.sql, 125.349, 303.772, Bao
+13, 8, 1, 2026-11-13 10:07:37.703690, queries/job__random_split_3/train/14a.sql, 123.2, 317.615, Bao
+13, 8, 2, 2026-11-13 10:07:38.720321, queries/job__random_split_3/train/14a.sql, 115.729, 253.149, Bao
+13, 9, 0, 2026-11-13 10:07:39.625165, queries/job__random_split_3/train/22b.sql, 221.96, 363.602, Bao
+13, 9, 1, 2026-11-13 10:07:40.533905, queries/job__random_split_3/train/22b.sql, 222.959, 365.609, Bao
+13, 9, 2, 2026-11-13 10:07:41.962276, queries/job__random_split_3/train/22b.sql, 216.775, 328.041, Bao
+13, 10, 0, 2026-11-13 10:07:42.780593, queries/job__random_split_3/train/33a.sql, 353.546, 17.269, Bao
+13, 10, 1, 2026-11-13 10:07:43.601886, queries/job__random_split_3/train/33a.sql, 353.841, 16.14, Bao
+13, 10, 2, 2026-11-13 10:07:44.795548, queries/job__random_split_3/train/33a.sql, 356.655, 12.4, Bao
+13, 11, 0, 2026-11-13 10:07:45.403171, queries/job__random_split_3/train/19b.sql, 179.167, 148.039, Bao
+13, 11, 1, 2026-11-13 10:07:45.998656, queries/job__random_split_3/train/19b.sql, 179.918, 139.499, Bao
+13, 11, 2, 2026-11-13 10:07:46.915172, queries/job__random_split_3/train/19b.sql, 172.285, 136.933, Bao
+13, 12, 0, 2026-11-13 10:07:48.319382, queries/job__random_split_3/train/29c.sql, 451.57, 408.93, Bao
+13, 12, 1, 2026-11-13 10:07:49.726619, queries/job__random_split_3/train/29c.sql, 448.816, 414.069, Bao
+13, 12, 2, 2026-11-13 10:07:51.918981, queries/job__random_split_3/train/29c.sql, 441.98, 357.886, Bao
+13, 13, 0, 2026-11-13 10:07:55.314254, queries/job__random_split_3/train/25a.sql, 144.194, 3012.353, Bao
+13, 13, 1, 2026-11-13 10:07:58.638358, queries/job__random_split_3/train/25a.sql, 145.67, 2939.95, Bao
+13, 13, 2, 2026-11-13 10:08:04.801821, queries/job__random_split_3/train/25a.sql, 139.694, 2724.511, Bao
+13, 14, 0, 2026-11-13 10:08:07.481621, queries/job__random_split_3/train/20b.sql, 158.142, 2265.886, Bao
+13, 14, 1, 2026-11-13 10:08:10.182781, queries/job__random_split_3/train/20b.sql, 158.844, 2288.381, Bao
+13, 14, 2, 2026-11-13 10:08:15.140436, queries/job__random_split_3/train/20b.sql, 153.666, 2158.96, Bao
+13, 15, 0, 2026-11-13 10:08:16.327686, queries/job__random_split_3/train/28b.sql, 365.901, 360.629, Bao
+13, 15, 1, 2026-11-13 10:08:17.508174, queries/job__random_split_3/train/28b.sql, 362.769, 356.199, Bao
+13, 15, 2, 2026-11-13 10:08:19.383441, queries/job__random_split_3/train/28b.sql, 357.681, 326.21, Bao
+13, 16, 0, 2026-11-13 10:08:24.409035, queries/job__random_split_3/train/17e.sql, 117.668, 4695.973, Bao
+13, 16, 1, 2026-11-13 10:08:29.271172, queries/job__random_split_3/train/17e.sql, 117.144, 4530.512, Bao
+13, 16, 2, 2026-11-13 10:08:37.904943, queries/job__random_split_3/train/17e.sql, 111.452, 4636.925, Bao
+13, 17, 0, 2026-11-13 10:08:38.241146, queries/job__random_split_3/train/32a.sql, 112.133, 10.941, Bao
+13, 17, 1, 2026-11-13 10:08:38.568875, queries/job__random_split_3/train/32a.sql, 109.064, 9.862, Bao
+13, 17, 2, 2026-11-13 10:08:39.009226, queries/job__random_split_3/train/32a.sql, 103.69, 9.896, Bao
+13, 18, 0, 2026-11-13 10:08:39.761487, queries/job__random_split_3/train/10a.sql, 116.004, 420.254, Bao
+13, 18, 1, 2026-11-13 10:08:40.510148, queries/job__random_split_3/train/10a.sql, 121.397, 410.245, Bao
+13, 18, 2, 2026-11-13 10:08:41.709123, queries/job__random_split_3/train/10a.sql, 110.012, 383.564, Bao
+13, 19, 0, 2026-11-13 10:08:43.038026, queries/job__random_split_3/train/8a.sql, 116.707, 1000.615, Bao
+13, 19, 1, 2026-11-13 10:08:44.373382, queries/job__random_split_3/train/8a.sql, 119.126, 1002.437, Bao
+13, 19, 2, 2026-11-13 10:08:46.775081, queries/job__random_split_3/train/8a.sql, 111.936, 952.854, Bao
+13, 20, 0, 2026-11-13 10:08:51.087241, queries/job__random_split_3/train/25c.sql, 146.84, 3922.994, Bao
+13, 20, 1, 2026-11-13 10:08:55.367668, queries/job__random_split_3/train/25c.sql, 150.96, 3885.852, Bao
+13, 20, 2, 2026-11-13 10:09:03.399379, queries/job__random_split_3/train/25c.sql, 138.865, 3844.796, Bao
+13, 21, 0, 2026-11-13 10:09:03.831783, queries/job__random_split_3/train/32b.sql, 114.397, 110.491, Bao
+13, 21, 1, 2026-11-13 10:09:04.269616, queries/job__random_split_3/train/32b.sql, 111.144, 117.241, Bao
+13, 21, 2, 2026-11-13 10:09:04.916359, queries/job__random_split_3/train/32b.sql, 105.379, 88.388, Bao
+13, 22, 0, 2026-11-13 10:09:05.756442, queries/job__random_split_3/train/33b.sql, 352.283, 38.372, Bao
+13, 22, 1, 2026-11-13 10:09:06.605386, queries/job__random_split_3/train/33b.sql, 352.231, 40.937, Bao
+13, 22, 2, 2026-11-13 10:09:07.824308, queries/job__random_split_3/train/33b.sql, 347.89, 34.425, Bao
+13, 23, 0, 2026-11-13 10:09:08.730212, queries/job__random_split_3/train/31a.sql, 272.514, 262.879, Bao
+13, 23, 1, 2026-11-13 10:09:09.630047, queries/job__random_split_3/train/31a.sql, 274.61, 258.581, Bao
+13, 23, 2, 2026-11-13 10:09:11.011138, queries/job__random_split_3/train/31a.sql, 269.684, 210.933, Bao
+13, 24, 0, 2026-11-13 10:09:11.415751, queries/job__random_split_3/train/1d.sql, 109.609, 92.537, Bao
+13, 24, 1, 2026-11-13 10:09:11.824553, queries/job__random_split_3/train/1d.sql, 111.416, 91.093, Bao
+13, 24, 2, 2026-11-13 10:09:12.400892, queries/job__random_split_3/train/1d.sql, 104.078, 89.049, Bao
+==========================================================================================
+Iteration over chunk 15/19...
+[2026-11-13 10:09:12.401087]	[15/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.08997066342271864
+Epoch 15 training loss: 0.007782467054009127
+Epoch 30 training loss: 0.002813694271026179
+Stopped training from convergence condition at epoch 42
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 10:09:28.770581]	[15/19]	Retraining done.
+14, 0, 0, 2026-11-13 10:09:29.760863, queries/job__random_split_3/train/12c.sql, 123.996, 647.181, Bao
+14, 0, 1, 2026-11-13 10:09:30.799668, queries/job__random_split_3/train/12c.sql, 124.75, 689.702, Bao
+14, 0, 2, 2026-11-13 10:09:32.603769, queries/job__random_split_3/train/12c.sql, 117.15, 673.898, Bao
+14, 1, 0, 2026-11-13 10:09:35.960162, queries/job__random_split_3/train/30c.sql, 316.486, 2630.122, Bao
+14, 1, 1, 2026-11-13 10:09:39.261265, queries/job__random_split_3/train/30c.sql, 318.959, 2572.613, Bao
+14, 1, 2, 2026-11-13 10:09:45.229544, queries/job__random_split_3/train/30c.sql, 313.381, 2340.337, Bao
+14, 2, 0, 2026-11-13 10:09:45.656033, queries/job__random_split_3/train/1a.sql, 112.65, 101.402, Bao
+14, 2, 1, 2026-11-13 10:09:46.076165, queries/job__random_split_3/train/1a.sql, 113.015, 99.649, Bao
+14, 2, 2, 2026-11-13 10:09:46.658795, queries/job__random_split_3/train/1a.sql, 103.028, 92.224, Bao
+14, 3, 0, 2026-11-13 10:09:47.269675, queries/job__random_split_3/train/19b.sql, 183.835, 152.801, Bao
+14, 3, 1, 2026-11-13 10:09:47.875048, queries/job__random_split_3/train/19b.sql, 180.018, 149.775, Bao
+14, 3, 2, 2026-11-13 10:09:48.790874, queries/job__random_split_3/train/19b.sql, 172.846, 138.179, Bao
+14, 4, 0, 2026-11-13 10:09:49.310286, queries/job__random_split_3/train/6b.sql, 114.033, 200.786, Bao
+14, 4, 1, 2026-11-13 10:09:49.825848, queries/job__random_split_3/train/6b.sql, 109.047, 201.707, Bao
+14, 4, 2, 2026-11-13 10:09:50.601320, queries/job__random_split_3/train/6b.sql, 104.121, 165.026, Bao
+14, 5, 0, 2026-11-13 10:09:51.033768, queries/job__random_split_3/train/32b.sql, 112.776, 110.156, Bao
+14, 5, 1, 2026-11-13 10:09:51.466354, queries/job__random_split_3/train/32b.sql, 110.921, 110.049, Bao
+14, 5, 2, 2026-11-13 10:09:52.079345, queries/job__random_split_3/train/32b.sql, 104.217, 85.757, Bao
+14, 6, 0, 2026-11-13 10:09:52.827706, queries/job__random_split_3/train/19a.sql, 180.946, 295.892, Bao
+14, 6, 1, 2026-11-13 10:09:53.576369, queries/job__random_split_3/train/19a.sql, 181.123, 289.476, Bao
+14, 6, 2, 2026-11-13 10:09:54.814648, queries/job__random_split_3/train/19a.sql, 182.103, 277.898, Bao
+14, 7, 0, 2026-11-13 10:09:55.423013, queries/job__random_split_3/train/19b.sql, 183.585, 147.278, Bao
+14, 7, 1, 2026-11-13 10:09:56.031582, queries/job__random_split_3/train/19b.sql, 180.708, 150.323, Bao
+14, 7, 2, 2026-11-13 10:09:56.943084, queries/job__random_split_3/train/19b.sql, 172.202, 134.414, Bao
+14, 8, 0, 2026-11-13 10:09:57.415467, queries/job__random_split_3/train/21a.sql, 152.246, 76.294, Bao
+14, 8, 1, 2026-11-13 10:09:57.882212, queries/job__random_split_3/train/21a.sql, 148.441, 75.039, Bao
+14, 8, 2, 2026-11-13 10:09:58.563375, queries/job__random_split_3/train/21a.sql, 145.038, 66.347, Bao
+14, 9, 0, 2026-11-13 10:10:00.042141, queries/job__random_split_3/train/20c.sql, 156.694, 1072.312, Bao
+14, 9, 1, 2026-11-13 10:10:01.570629, queries/job__random_split_3/train/20c.sql, 156.346, 1121.984, Bao
+14, 9, 2, 2026-11-13 10:10:04.048788, queries/job__random_split_3/train/20c.sql, 145.787, 915.652, Bao
+14, 10, 0, 2026-11-13 10:10:04.585652, queries/job__random_split_3/train/18b.sql, 118.742, 180.462, Bao
+14, 10, 1, 2026-11-13 10:10:05.121440, queries/job__random_split_3/train/18b.sql, 116.615, 201.155, Bao
+14, 10, 2, 2026-11-13 10:10:05.936886, queries/job__random_split_3/train/18b.sql, 111.01, 176.177, Bao
+14, 11, 0, 2026-11-13 10:10:06.788451, queries/job__random_split_3/train/14c.sql, 122.911, 513.45, Bao
+14, 11, 1, 2026-11-13 10:10:07.639184, queries/job__random_split_3/train/14c.sql, 122.016, 509.532, Bao
+14, 11, 2, 2026-11-13 10:10:09.322970, queries/job__random_split_3/train/14c.sql, 204.552, 439.2, Bao
+14, 12, 0, 2026-11-13 10:10:09.779377, queries/job__random_split_3/train/21b.sql, 149.436, 64.259, Bao
+14, 12, 1, 2026-11-13 10:10:10.245198, queries/job__random_split_3/train/21b.sql, 152.024, 63.63, Bao
+14, 12, 2, 2026-11-13 10:10:10.891014, queries/job__random_split_3/train/21b.sql, 140.402, 54.568, Bao
+14, 13, 0, 2026-11-13 10:10:11.402537, queries/job__random_split_3/train/8b.sql, 122.117, 177.072, Bao
+14, 13, 1, 2026-11-13 10:10:11.907081, queries/job__random_split_3/train/8b.sql, 114.936, 175.628, Bao
+14, 13, 2, 2026-11-13 10:10:12.700826, queries/job__random_split_3/train/8b.sql, 112.133, 169.355, Bao
+14, 14, 0, 2026-11-13 10:10:13.593464, queries/job__random_split_3/train/31a.sql, 278.069, 245.311, Bao
+14, 14, 1, 2026-11-13 10:10:14.515411, queries/job__random_split_3/train/31a.sql, 273.208, 281.981, Bao
+14, 14, 2, 2026-11-13 10:10:15.878678, queries/job__random_split_3/train/31a.sql, 265.09, 212.368, Bao
+14, 15, 0, 2026-11-13 10:10:16.520699, queries/job__random_split_3/train/7b.sql, 123.974, 301.88, Bao
+14, 15, 1, 2026-11-13 10:10:17.184216, queries/job__random_split_3/train/7b.sql, 133.578, 312.966, Bao
+14, 15, 2, 2026-11-13 10:10:18.135703, queries/job__random_split_3/train/7b.sql, 120.029, 205.661, Bao
+14, 16, 0, 2026-11-13 10:10:18.914646, queries/job__random_split_3/train/2b.sql, 109.608, 463.853, Bao
+14, 16, 1, 2026-11-13 10:10:19.707366, queries/job__random_split_3/train/2b.sql, 108.847, 475.095, Bao
+14, 16, 2, 2026-11-13 10:10:21.012355, queries/job__random_split_3/train/2b.sql, 103.739, 436.937, Bao
+14, 17, 0, 2026-11-13 10:10:21.759084, queries/job__random_split_3/train/19a.sql, 181.479, 290.803, Bao
+14, 17, 1, 2026-11-13 10:10:22.498368, queries/job__random_split_3/train/19a.sql, 183.475, 278.688, Bao
+14, 17, 2, 2026-11-13 10:10:23.686341, queries/job__random_split_3/train/19a.sql, 172.651, 276.554, Bao
+14, 18, 0, 2026-11-13 10:10:28.856508, queries/job__random_split_3/train/26c.sql, 310.145, 4430.277, Bao
+14, 18, 1, 2026-11-13 10:10:33.840829, queries/job__random_split_3/train/26c.sql, 307.957, 4273.309, Bao
+14, 18, 2, 2026-11-13 10:10:42.917443, queries/job__random_split_3/train/26c.sql, 299.407, 4119.529, Bao
+14, 19, 0, 2026-11-13 10:10:43.678397, queries/job__random_split_3/train/10a.sql, 119.723, 418.493, Bao
+14, 19, 1, 2026-11-13 10:10:44.481461, queries/job__random_split_3/train/10a.sql, 119.316, 460.358, Bao
+14, 19, 2, 2026-11-13 10:10:45.682890, queries/job__random_split_3/train/10a.sql, 110.952, 383.395, Bao
+14, 20, 0, 2026-11-13 10:10:46.215447, queries/job__random_split_3/train/18b.sql, 119.297, 201.817, Bao
+14, 20, 1, 2026-11-13 10:10:46.748788, queries/job__random_split_3/train/18b.sql, 117.551, 200.101, Bao
+14, 20, 2, 2026-11-13 10:10:47.564857, queries/job__random_split_3/train/18b.sql, 113.28, 175.574, Bao
+14, 21, 0, 2026-11-13 10:10:48.481897, queries/job__random_split_3/train/22b.sql, 224.431, 373.452, Bao
+14, 21, 1, 2026-11-13 10:10:49.401985, queries/job__random_split_3/train/22b.sql, 224.493, 376.17, Bao
+14, 21, 2, 2026-11-13 10:10:50.813125, queries/job__random_split_3/train/22b.sql, 211.128, 330.296, Bao
+14, 22, 0, 2026-11-13 10:10:52.000370, queries/job__random_split_3/train/28b.sql, 360.869, 369.917, Bao
+14, 22, 1, 2026-11-13 10:10:53.190237, queries/job__random_split_3/train/28b.sql, 364.02, 369.209, Bao
+14, 22, 2, 2026-11-13 10:10:55.087977, queries/job__random_split_3/train/28b.sql, 359.308, 330.397, Bao
+14, 23, 0, 2026-11-13 10:10:56.183971, queries/job__random_split_3/train/30b.sql, 314.851, 373.135, Bao
+14, 23, 1, 2026-11-13 10:10:57.287524, queries/job__random_split_3/train/30b.sql, 314.63, 377.751, Bao
+14, 23, 2, 2026-11-13 10:10:59.029065, queries/job__random_split_3/train/30b.sql, 309.719, 341.857, Bao
+14, 24, 0, 2026-11-13 10:10:59.649689, queries/job__random_split_3/train/23b.sql, 225.491, 70.902, Bao
+14, 24, 1, 2026-11-13 10:11:00.271981, queries/job__random_split_3/train/23b.sql, 226.212, 69.885, Bao
+14, 24, 2, 2026-11-13 10:11:01.157292, queries/job__random_split_3/train/23b.sql, 222.369, 41.143, Bao
+==========================================================================================
+Iteration over chunk 16/19...
+[2026-11-13 10:11:01.157502]	[16/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.12313356779515744
+Epoch 15 training loss: 0.010679370565339923
+Epoch 30 training loss: 0.002646879486273974
+Epoch 45 training loss: 0.0018058849486988038
+Stopped training from convergence condition at epoch 56
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 10:11:23.129287]	[16/19]	Retraining done.
+15, 0, 0, 2026-11-13 10:11:25.641142, queries/job__random_split_3/train/22c.sql, 223.313, 1971.193, Bao
+15, 0, 1, 2026-11-13 10:11:28.123334, queries/job__random_split_3/train/22c.sql, 224.654, 1940.113, Bao
+15, 0, 2, 2026-11-13 10:11:32.665808, queries/job__random_split_3/train/22c.sql, 213.233, 1863.062, Bao
+15, 1, 0, 2026-11-13 10:11:36.861581, queries/job__random_split_3/train/17a.sql, 119.107, 3860.644, Bao
+15, 1, 1, 2026-11-13 10:11:40.940769, queries/job__random_split_3/train/17a.sql, 122.449, 3737.637, Bao
+15, 1, 2, 2026-11-13 10:11:47.988871, queries/job__random_split_3/train/17a.sql, 113.322, 3718.621, Bao
+15, 2, 0, 2026-11-13 10:11:48.945975, queries/job__random_split_3/train/23c.sql, 233.729, 399.482, Bao
+15, 2, 1, 2026-11-13 10:11:49.893508, queries/job__random_split_3/train/23c.sql, 230.568, 398.064, Bao
+15, 2, 2, 2026-11-13 10:11:51.412856, queries/job__random_split_3/train/23c.sql, 217.351, 379.276, Bao
+15, 3, 0, 2026-11-13 10:11:52.048216, queries/job__random_split_3/train/7b.sql, 125.521, 292.483, Bao
+15, 3, 1, 2026-11-13 10:11:52.699994, queries/job__random_split_3/train/7b.sql, 126.968, 305.189, Bao
+15, 3, 2, 2026-11-13 10:11:53.683148, queries/job__random_split_3/train/7b.sql, 118.313, 218.231, Bao
+15, 4, 0, 2026-11-13 10:11:54.117530, queries/job__random_split_3/train/4c.sql, 112.704, 110.759, Bao
+15, 4, 1, 2026-11-13 10:11:54.573264, queries/job__random_split_3/train/4c.sql, 114.083, 108.445, Bao
+15, 4, 2, 2026-11-13 10:11:55.178350, queries/job__random_split_3/train/4c.sql, 102.587, 85.691, Bao
+15, 5, 0, 2026-11-13 10:11:56.274514, queries/job__random_split_3/train/15d.sql, 147.486, 704.851, Bao
+15, 5, 1, 2026-11-13 10:11:57.316499, queries/job__random_split_3/train/15d.sql, 149.551, 647.97, Bao
+15, 5, 2, 2026-11-13 10:11:59.082517, queries/job__random_split_3/train/15d.sql, 146.484, 589.294, Bao
+15, 6, 0, 2026-11-13 10:12:00.935853, queries/job__random_split_3/train/13a.sql, 132.776, 1492.792, Bao
+15, 6, 1, 2026-11-13 10:12:02.804811, queries/job__random_split_3/train/13a.sql, 140.828, 1494.695, Bao
+15, 6, 2, 2026-11-13 10:12:06.124449, queries/job__random_split_3/train/13a.sql, 148.85, 1475.701, Bao
+15, 7, 0, 2026-11-13 10:12:09.027787, queries/job__random_split_3/train/25a.sql, 145.078, 2519.598, Bao
+15, 7, 1, 2026-11-13 10:12:11.878277, queries/job__random_split_3/train/25a.sql, 148.126, 2459.739, Bao
+15, 7, 2, 2026-11-13 10:12:17.086794, queries/job__random_split_3/train/25a.sql, 138.931, 2212.493, Bao
+15, 8, 0, 2026-11-13 10:12:17.848237, queries/job__random_split_3/train/2c.sql, 112.769, 441.343, Bao
+15, 8, 1, 2026-11-13 10:12:18.622883, queries/job__random_split_3/train/2c.sql, 109.515, 457.273, Bao
+15, 8, 2, 2026-11-13 10:12:19.868157, queries/job__random_split_3/train/2c.sql, 106.497, 417.063, Bao
+15, 9, 0, 2026-11-13 10:12:20.282573, queries/job__random_split_3/train/1a.sql, 111.323, 99.33, Bao
+15, 9, 1, 2026-11-13 10:12:20.696986, queries/job__random_split_3/train/1a.sql, 108.681, 95.994, Bao
+15, 9, 2, 2026-11-13 10:12:21.281304, queries/job__random_split_3/train/1a.sql, 103.044, 97.454, Bao
+15, 10, 0, 2026-11-13 10:12:21.743736, queries/job__random_split_3/train/5b.sql, 110.408, 144.693, Bao
+15, 10, 1, 2026-11-13 10:12:22.203426, queries/job__random_split_3/train/5b.sql, 109.799, 145.499, Bao
+15, 10, 2, 2026-11-13 10:12:22.903259, queries/job__random_split_3/train/5b.sql, 102.811, 138.231, Bao
+15, 11, 0, 2026-11-13 10:12:23.380366, queries/job__random_split_3/train/3a.sql, 112.092, 159.39, Bao
+15, 11, 1, 2026-11-13 10:12:23.849620, queries/job__random_split_3/train/3a.sql, 107.036, 158.093, Bao
+15, 11, 2, 2026-11-13 10:12:24.564893, queries/job__random_split_3/train/3a.sql, 108.24, 116.326, Bao
+15, 12, 0, 2026-11-13 10:12:25.463835, queries/job__random_split_3/train/31a.sql, 274.145, 251.968, Bao
+15, 12, 1, 2026-11-13 10:12:26.369139, queries/job__random_split_3/train/31a.sql, 272.892, 265.25, Bao
+15, 12, 2, 2026-11-13 10:12:27.749195, queries/job__random_split_3/train/31a.sql, 264.208, 217.88, Bao
+15, 13, 0, 2026-11-13 10:12:32.529117, queries/job__random_split_3/train/17b.sql, 117.831, 4448.179, Bao
+15, 13, 1, 2026-11-13 10:12:37.046156, queries/job__random_split_3/train/17b.sql, 118.572, 4189.838, Bao
+15, 13, 2, 2026-11-13 10:12:44.473350, queries/job__random_split_3/train/17b.sql, 113.103, 4118.199, Bao
+15, 14, 0, 2026-11-13 10:12:46.199130, queries/job__random_split_3/train/16d.sql, 124.108, 1376.856, Bao
+15, 14, 1, 2026-11-13 10:12:47.871657, queries/job__random_split_3/train/16d.sql, 126.794, 1325.608, Bao
+15, 14, 2, 2026-11-13 10:12:50.751617, queries/job__random_split_3/train/16d.sql, 121.791, 1137.051, Bao
+15, 15, 0, 2026-11-13 10:12:51.161138, queries/job__random_split_3/train/11a.sql, 124.939, 64.752, Bao
+15, 15, 1, 2026-11-13 10:12:51.566321, queries/job__random_split_3/train/11a.sql, 124.486, 61.683, Bao
+15, 15, 2, 2026-11-13 10:12:52.142856, queries/job__random_split_3/train/11a.sql, 115.547, 54.542, Bao
+15, 16, 0, 2026-11-13 10:12:55.587169, queries/job__random_split_3/train/17d.sql, 118.185, 3115.24, Bao
+15, 16, 1, 2026-11-13 10:12:59.016458, queries/job__random_split_3/train/17d.sql, 118.909, 3097.958, Bao
+15, 16, 2, 2026-11-13 10:13:04.831017, queries/job__random_split_3/train/17d.sql, 116.167, 3112.069, Bao
+15, 17, 0, 2026-11-13 10:13:05.793438, queries/job__random_split_3/train/23c.sql, 223.609, 412.563, Bao
+15, 17, 1, 2026-11-13 10:13:06.749315, queries/job__random_split_3/train/23c.sql, 231.344, 403.102, Bao
+15, 17, 2, 2026-11-13 10:13:08.297542, queries/job__random_split_3/train/23c.sql, 219.592, 403.433, Bao
+15, 18, 0, 2026-11-13 10:13:08.814594, queries/job__random_split_3/train/6b.sql, 109.749, 201.388, Bao
+15, 18, 1, 2026-11-13 10:13:09.324476, queries/job__random_split_3/train/6b.sql, 108.716, 199.049, Bao
+15, 18, 2, 2026-11-13 10:13:10.108639, queries/job__random_split_3/train/6b.sql, 106.036, 167.729, Bao
+15, 19, 0, 2026-11-13 10:13:11.156114, queries/job__random_split_3/train/12c.sql, 124.449, 702.456, Bao
+15, 19, 1, 2026-11-13 10:13:12.197288, queries/job__random_split_3/train/12c.sql, 125.63, 694.17, Bao
+15, 19, 2, 2026-11-13 10:13:13.985640, queries/job__random_split_3/train/12c.sql, 118.557, 662.48, Bao
+15, 20, 0, 2026-11-13 10:13:14.483228, queries/job__random_split_3/train/21a.sql, 149.682, 74.656, Bao
+15, 20, 1, 2026-11-13 10:13:14.944536, queries/job__random_split_3/train/21a.sql, 145.848, 73.734, Bao
+15, 20, 2, 2026-11-13 10:13:15.620084, queries/job__random_split_3/train/21a.sql, 142.644, 66.223, Bao
+15, 21, 0, 2026-11-13 10:13:16.394968, queries/job__random_split_3/train/2c.sql, 111.137, 462.156, Bao
+15, 21, 1, 2026-11-13 10:13:17.171388, queries/job__random_split_3/train/2c.sql, 109.891, 461.912, Bao
+15, 21, 2, 2026-11-13 10:13:18.424202, queries/job__random_split_3/train/2c.sql, 103.981, 414.534, Bao
+15, 22, 0, 2026-11-13 10:13:20.426351, queries/job__random_split_3/train/16c.sql, 127.356, 1653.159, Bao
+15, 22, 1, 2026-11-13 10:13:22.455898, queries/job__random_split_3/train/16c.sql, 154.953, 1651.861, Bao
+15, 22, 2, 2026-11-13 10:13:26.046448, queries/job__random_split_3/train/16c.sql, 124.205, 1529.28, Bao
+15, 23, 0, 2026-11-13 10:13:27.028796, queries/job__random_split_3/train/31c.sql, 273.19, 338.397, Bao
+15, 23, 1, 2026-11-13 10:13:27.997687, queries/job__random_split_3/train/31c.sql, 277.189, 323.626, Bao
+15, 23, 2, 2026-11-13 10:13:29.525368, queries/job__random_split_3/train/31c.sql, 264.131, 300.325, Bao
+15, 24, 0, 2026-11-13 10:13:30.597498, queries/job__random_split_3/train/24a.sql, 322.074, 332.553, Bao
+15, 24, 1, 2026-11-13 10:13:31.691423, queries/job__random_split_3/train/24a.sql, 324.946, 349.564, Bao
+15, 24, 2, 2026-11-13 10:13:33.333491, queries/job__random_split_3/train/24a.sql, 316.007, 249.108, Bao
+==========================================================================================
+Iteration over chunk 17/19...
+[2026-11-13 10:13:33.333667]	[17/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.08383293208424691
+Epoch 15 training loss: 0.008741335175862466
+Epoch 30 training loss: 0.002725010065154897
+Epoch 45 training loss: 0.002390911964337445
+Stopped training from convergence condition at epoch 50
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 10:13:54.677797]	[17/19]	Retraining done.
+16, 0, 0, 2026-11-13 10:13:58.183838, queries/job__random_split_3/train/17d.sql, 119.161, 3173.427, Bao
+16, 0, 1, 2026-11-13 10:14:01.586071, queries/job__random_split_3/train/17d.sql, 118.53, 3068.188, Bao
+16, 0, 2, 2026-11-13 10:14:07.427849, queries/job__random_split_3/train/17d.sql, 114.746, 3071.403, Bao
+16, 1, 0, 2026-11-13 10:14:08.530562, queries/job__random_split_3/train/30b.sql, 317.953, 372.848, Bao
+16, 1, 1, 2026-11-13 10:14:10.062688, queries/job__random_split_3/train/30b.sql, 311.682, 591.74, Bao
+16, 1, 2, 2026-11-13 10:14:11.799819, queries/job__random_split_3/train/30b.sql, 307.206, 334.732, Bao
+16, 2, 0, 2026-11-13 10:14:12.553773, queries/job__random_split_3/train/10a.sql, 117.4, 417.502, Bao
+16, 2, 1, 2026-11-13 10:14:13.306717, queries/job__random_split_3/train/10a.sql, 117.569, 419.433, Bao
+16, 2, 2, 2026-11-13 10:14:14.524295, queries/job__random_split_3/train/10a.sql, 111.17, 421.488, Bao
+16, 3, 0, 2026-11-13 10:14:14.998664, queries/job__random_split_3/train/3a.sql, 109.629, 157.357, Bao
+16, 3, 1, 2026-11-13 10:14:15.469127, queries/job__random_split_3/train/3a.sql, 108.8, 158.018, Bao
+16, 3, 2, 2026-11-13 10:14:16.165809, queries/job__random_split_3/train/3a.sql, 103.417, 117.128, Bao
+16, 4, 0, 2026-11-13 10:14:16.588443, queries/job__random_split_3/train/4a.sql, 109.99, 99.127, Bao
+16, 4, 1, 2026-11-13 10:14:17.008675, queries/job__random_split_3/train/4a.sql, 111.501, 96.528, Bao
+16, 4, 2, 2026-11-13 10:14:17.606087, queries/job__random_split_3/train/4a.sql, 104.775, 75.522, Bao
+16, 5, 0, 2026-11-13 10:14:18.256819, queries/job__random_split_3/train/14a.sql, 121.822, 312.038, Bao
+16, 5, 1, 2026-11-13 10:14:18.913717, queries/job__random_split_3/train/14a.sql, 123.766, 315.896, Bao
+16, 5, 2, 2026-11-13 10:14:19.940854, queries/job__random_split_3/train/14a.sql, 115.852, 257.541, Bao
+16, 6, 0, 2026-11-13 10:14:20.396039, queries/job__random_split_3/train/21b.sql, 148.346, 62.71, Bao
+16, 6, 1, 2026-11-13 10:14:20.853041, queries/job__random_split_3/train/21b.sql, 150.97, 62.302, Bao
+16, 6, 2, 2026-11-13 10:14:21.502137, queries/job__random_split_3/train/21b.sql, 140.668, 55.047, Bao
+16, 7, 0, 2026-11-13 10:14:22.011445, queries/job__random_split_3/train/16a.sql, 125.832, 165.256, Bao
+16, 7, 1, 2026-11-13 10:14:22.521479, queries/job__random_split_3/train/16a.sql, 125.943, 162.804, Bao
+16, 7, 2, 2026-11-13 10:14:23.289306, queries/job__random_split_3/train/16a.sql, 119.979, 136.117, Bao
+16, 8, 0, 2026-11-13 10:14:25.864448, queries/job__random_split_3/train/8d.sql, 118.998, 2242.887, Bao
+16, 8, 1, 2026-11-13 10:14:28.363671, queries/job__random_split_3/train/8d.sql, 118.603, 2167.253, Bao
+16, 8, 2, 2026-11-13 10:14:32.858461, queries/job__random_split_3/train/8d.sql, 112.68, 2171.672, Bao
+16, 9, 0, 2026-11-13 10:14:33.599739, queries/job__random_split_3/train/25b.sql, 149.918, 340.786, Bao
+16, 9, 1, 2026-11-13 10:14:34.338158, queries/job__random_split_3/train/25b.sql, 144.787, 352.168, Bao
+16, 9, 2, 2026-11-13 10:14:35.521224, queries/job__random_split_3/train/25b.sql, 139.625, 309.346, Bao
+16, 10, 0, 2026-11-13 10:14:36.072974, queries/job__random_split_3/train/12a.sql, 123.968, 211.066, Bao
+16, 10, 1, 2026-11-13 10:14:36.625548, queries/job__random_split_3/train/12a.sql, 123.862, 207.521, Bao
+16, 10, 2, 2026-11-13 10:14:37.488094, queries/job__random_split_3/train/12a.sql, 119.632, 196.958, Bao
+16, 11, 0, 2026-11-13 10:14:40.864434, queries/job__random_split_3/train/17d.sql, 116.806, 3043.81, Bao
+16, 11, 1, 2026-11-13 10:14:44.271313, queries/job__random_split_3/train/17d.sql, 117.129, 3075.363, Bao
+16, 11, 2, 2026-11-13 10:14:50.020433, queries/job__random_split_3/train/17d.sql, 110.124, 3011.255, Bao
+16, 12, 0, 2026-11-13 10:14:50.530564, queries/job__random_split_3/train/6b.sql, 112.09, 192.163, Bao
+16, 12, 1, 2026-11-13 10:14:51.041683, queries/job__random_split_3/train/6b.sql, 110.251, 191.883, Bao
+16, 12, 2, 2026-11-13 10:14:51.815402, queries/job__random_split_3/train/6b.sql, 102.961, 167.71, Bao
+16, 13, 0, 2026-11-13 10:14:52.677452, queries/job__random_split_3/train/23a.sql, 224.318, 315.181, Bao
+16, 13, 1, 2026-11-13 10:14:53.521203, queries/job__random_split_3/train/23a.sql, 221.774, 295.533, Bao
+16, 13, 2, 2026-11-13 10:14:54.853400, queries/job__random_split_3/train/23a.sql, 221.04, 289.742, Bao
+16, 14, 0, 2026-11-13 10:14:55.282246, queries/job__random_split_3/train/4c.sql, 111.774, 106.814, Bao
+16, 14, 1, 2026-11-13 10:14:55.713325, queries/job__random_split_3/train/4c.sql, 111.806, 107.404, Bao
+16, 14, 2, 2026-11-13 10:14:56.317591, queries/job__random_split_3/train/4c.sql, 103.017, 83.702, Bao
+16, 15, 0, 2026-11-13 10:15:00.594100, queries/job__random_split_3/train/30c.sql, 315.136, 3550.813, Bao
+16, 15, 1, 2026-11-13 10:15:04.893179, queries/job__random_split_3/train/30c.sql, 318.579, 3569.121, Bao
+16, 15, 2, 2026-11-13 10:15:12.610401, queries/job__random_split_3/train/30c.sql, 305.982, 3254.584, Bao
+16, 16, 0, 2026-11-13 10:15:13.441361, queries/job__random_split_3/train/9c.sql, 129.009, 474.026, Bao
+16, 16, 1, 2026-11-13 10:15:14.275962, queries/job__random_split_3/train/9c.sql, 126.846, 484.251, Bao
+16, 16, 2, 2026-11-13 10:15:15.670112, queries/job__random_split_3/train/9c.sql, 121.572, 439.106, Bao
+16, 17, 0, 2026-11-13 10:15:16.689267, queries/job__random_split_3/train/29b.sql, 449.699, 19.653, Bao
+16, 17, 1, 2026-11-13 10:15:17.699874, queries/job__random_split_3/train/29b.sql, 446.261, 20.733, Bao
+16, 17, 2, 2026-11-13 10:15:19.180041, queries/job__random_split_3/train/29b.sql, 445.712, 14.373, Bao
+16, 18, 0, 2026-11-13 10:15:24.497308, queries/job__random_split_3/train/8c.sql, 115.978, 4978.472, Bao
+16, 18, 1, 2026-11-13 10:15:29.473794, queries/job__random_split_3/train/8c.sql, 116.046, 4637.987, Bao
+16, 18, 2, 2026-11-13 10:15:38.565389, queries/job__random_split_3/train/8c.sql, 109.786, 4698.023, Bao
+16, 19, 0, 2026-11-13 10:15:39.880008, queries/job__random_split_3/train/7a.sql, 123.596, 973.799, Bao
+16, 19, 1, 2026-11-13 10:15:41.169783, queries/job__random_split_3/train/7a.sql, 125.115, 947.077, Bao
+16, 19, 2, 2026-11-13 10:15:43.291128, queries/job__random_split_3/train/7a.sql, 117.211, 735.454, Bao
+16, 20, 0, 2026-11-13 10:15:44.729233, queries/job__random_split_3/train/29c.sql, 452.935, 436.704, Bao
+16, 20, 1, 2026-11-13 10:15:46.135054, queries/job__random_split_3/train/29c.sql, 452.391, 410.636, Bao
+16, 20, 2, 2026-11-13 10:15:48.335011, queries/job__random_split_3/train/29c.sql, 446.301, 360.158, Bao
+16, 21, 0, 2026-11-13 10:15:48.772389, queries/job__random_split_3/train/32b.sql, 112.459, 113.655, Bao
+16, 21, 1, 2026-11-13 10:15:49.201754, queries/job__random_split_3/train/32b.sql, 109.459, 112.99, Bao
+16, 21, 2, 2026-11-13 10:15:49.815972, queries/job__random_split_3/train/32b.sql, 104.588, 87.45, Bao
+16, 22, 0, 2026-11-13 10:15:50.589551, queries/job__random_split_3/train/24b.sql, 325.555, 28.603, Bao
+16, 22, 1, 2026-11-13 10:15:51.365835, queries/job__random_split_3/train/24b.sql, 326.558, 31.469, Bao
+16, 22, 2, 2026-11-13 10:15:52.491555, queries/job__random_split_3/train/24b.sql, 318.5, 28.387, Bao
+16, 23, 0, 2026-11-13 10:15:53.011514, queries/job__random_split_3/train/5c.sql, 110.616, 198.435, Bao
+16, 23, 1, 2026-11-13 10:15:53.526802, queries/job__random_split_3/train/5c.sql, 110.239, 198.638, Bao
+16, 23, 2, 2026-11-13 10:15:54.362114, queries/job__random_split_3/train/5c.sql, 105.838, 213.041, Bao
+16, 24, 0, 2026-11-13 10:15:59.469110, queries/job__random_split_3/train/26c.sql, 321.436, 4381.299, Bao
+16, 24, 1, 2026-11-13 10:16:04.634855, queries/job__random_split_3/train/26c.sql, 346.567, 4418.038, Bao
+16, 24, 2, 2026-11-13 10:16:14.059862, queries/job__random_split_3/train/26c.sql, 302.309, 4203.002, Bao
+==========================================================================================
+Iteration over chunk 18/19...
+[2026-11-13 10:16:14.060141]	[18/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.14052029191676912
+Epoch 15 training loss: 0.015559561663018218
+Epoch 30 training loss: 0.007408404610408792
+Epoch 45 training loss: 0.0030367104998982415
+Epoch 60 training loss: 0.0016099039569561337
+Stopped training from convergence condition at epoch 70
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 10:16:41.963361]	[18/19]	Retraining done.
+17, 0, 0, 2026-11-13 10:16:43.253993, queries/job__random_split_3/train/7a.sql, 132.069, 928.542, Bao
+17, 0, 1, 2026-11-13 10:16:44.510248, queries/job__random_split_3/train/7a.sql, 126.442, 906.065, Bao
+17, 0, 2, 2026-11-13 10:16:46.660690, queries/job__random_split_3/train/7a.sql, 119.191, 839.484, Bao
+17, 1, 0, 2026-11-13 10:16:48.202244, queries/job__random_split_3/train/33b.sql, 356.877, 733.076, Bao
+17, 1, 1, 2026-11-13 10:16:49.725089, queries/job__random_split_3/train/33b.sql, 353.498, 717.57, Bao
+17, 1, 2, 2026-11-13 10:16:52.185399, queries/job__random_split_3/train/33b.sql, 346.572, 700.551, Bao
+17, 2, 0, 2026-11-13 10:16:53.162725, queries/job__random_split_3/train/23c.sql, 228.327, 417.263, Bao
+17, 2, 1, 2026-11-13 10:16:54.116742, queries/job__random_split_3/train/23c.sql, 223.293, 401.05, Bao
+17, 2, 2, 2026-11-13 10:16:55.668396, queries/job__random_split_3/train/23c.sql, 214.496, 400.953, Bao
+17, 3, 0, 2026-11-13 10:17:00.602852, queries/job__random_split_3/train/17e.sql, 118.345, 4600.28, Bao
+17, 3, 1, 2026-11-13 10:17:05.596514, queries/job__random_split_3/train/17e.sql, 120.637, 4659.871, Bao
+17, 3, 2, 2026-11-13 10:17:14.237725, queries/job__random_split_3/train/17e.sql, 109.845, 4533.001, Bao
+17, 4, 0, 2026-11-13 10:17:17.683785, queries/job__random_split_3/train/17d.sql, 139.263, 3084.62, Bao
+17, 4, 1, 2026-11-13 10:17:21.109104, queries/job__random_split_3/train/17d.sql, 119.319, 3090.526, Bao
+17, 4, 2, 2026-11-13 10:17:26.911173, queries/job__random_split_3/train/17d.sql, 117.481, 3084.537, Bao
+17, 5, 0, 2026-11-13 10:17:27.797373, queries/job__random_split_3/train/2d.sql, 110.652, 567.857, Bao
+17, 5, 1, 2026-11-13 10:17:28.699082, queries/job__random_split_3/train/2d.sql, 109.787, 585.792, Bao
+17, 5, 2, 2026-11-13 10:17:30.196339, queries/job__random_split_3/train/2d.sql, 102.498, 533.67, Bao
+17, 6, 0, 2026-11-13 10:17:30.780210, queries/job__random_split_3/train/3c.sql, 108.737, 273.299, Bao
+17, 6, 1, 2026-11-13 10:17:31.362213, queries/job__random_split_3/train/3c.sql, 107.75, 270.943, Bao
+17, 6, 2, 2026-11-13 10:17:32.248711, queries/job__random_split_3/train/3c.sql, 103.432, 220.006, Bao
+17, 7, 0, 2026-11-13 10:17:32.901424, queries/job__random_split_3/train/25b.sql, 143.532, 268.379, Bao
+17, 7, 1, 2026-11-13 10:17:33.562713, queries/job__random_split_3/train/25b.sql, 145.783, 271.719, Bao
+17, 7, 2, 2026-11-13 10:17:34.612023, queries/job__random_split_3/train/25b.sql, 137.036, 243.15, Bao
+17, 8, 0, 2026-11-13 10:17:35.383612, queries/job__random_split_3/train/2c.sql, 108.49, 457.783, Bao
+17, 8, 1, 2026-11-13 10:17:36.139476, queries/job__random_split_3/train/2c.sql, 108.958, 441.622, Bao
+17, 8, 2, 2026-11-13 10:17:37.363343, queries/job__random_split_3/train/2c.sql, 102.215, 405.859, Bao
+17, 9, 0, 2026-11-13 10:17:41.811019, queries/job__random_split_3/train/17f.sql, 115.087, 4123.212, Bao
+17, 9, 1, 2026-11-13 10:17:46.322389, queries/job__random_split_3/train/17f.sql, 117.5, 4181.76, Bao
+17, 9, 2, 2026-11-13 10:17:54.013118, queries/job__random_split_3/train/17f.sql, 112.941, 4058.343, Bao
+17, 10, 0, 2026-11-13 10:17:55.882494, queries/job__random_split_3/train/13a.sql, 137.251, 1471.755, Bao
+17, 10, 1, 2026-11-13 10:17:57.730291, queries/job__random_split_3/train/13a.sql, 136.372, 1480.562, Bao
+17, 10, 2, 2026-11-13 10:18:01.015735, queries/job__random_split_3/train/13a.sql, 129.744, 1445.042, Bao
+17, 11, 0, 2026-11-13 10:18:01.554001, queries/job__random_split_3/train/18b.sql, 117.575, 202.373, Bao
+17, 11, 1, 2026-11-13 10:18:02.063115, queries/job__random_split_3/train/18b.sql, 115.537, 181.588, Bao
+17, 11, 2, 2026-11-13 10:18:02.873354, queries/job__random_split_3/train/18b.sql, 110.674, 179.451, Bao
+17, 12, 0, 2026-11-13 10:18:07.388958, queries/job__random_split_3/train/17f.sql, 117.293, 4183.883, Bao
+17, 12, 1, 2026-11-13 10:18:12.389443, queries/job__random_split_3/train/17f.sql, 117.807, 4668.899, Bao
+17, 12, 2, 2026-11-13 10:18:20.169659, queries/job__random_split_3/train/17f.sql, 110.867, 4092.763, Bao
+17, 13, 0, 2026-11-13 10:18:26.043805, queries/job__random_split_3/train/19d.sql, 186.709, 5407.337, Bao
+17, 13, 1, 2026-11-13 10:18:31.728942, queries/job__random_split_3/train/19d.sql, 183.333, 5223.573, Bao
+17, 13, 2, 2026-11-13 10:18:42.142674, queries/job__random_split_3/train/19d.sql, 177.644, 5111.28, Bao
+17, 14, 0, 2026-11-13 10:18:47.182361, queries/job__random_split_3/train/26c.sql, 311.3, 4323.586, Bao
+17, 14, 1, 2026-11-13 10:18:52.218112, queries/job__random_split_3/train/26c.sql, 315.344, 4318.556, Bao
+17, 14, 2, 2026-11-13 10:19:01.574686, queries/job__random_split_3/train/26c.sql, 301.542, 4150.062, Bao
+17, 15, 0, 2026-11-13 10:19:02.385520, queries/job__random_split_3/train/15a.sql, 153.322, 409.215, Bao
+17, 15, 1, 2026-11-13 10:19:03.175575, queries/job__random_split_3/train/15a.sql, 149.903, 393.461, Bao
+17, 15, 2, 2026-11-13 10:19:04.533203, queries/job__random_split_3/train/15a.sql, 142.601, 426.698, Bao
+17, 16, 0, 2026-11-13 10:19:07.768605, queries/job__random_split_3/train/17c.sql, 118.729, 2903.678, Bao
+17, 16, 1, 2026-11-13 10:19:11.152744, queries/job__random_split_3/train/17c.sql, 147.758, 3020.285, Bao
+17, 16, 2, 2026-11-13 10:19:16.633778, queries/job__random_split_3/train/17c.sql, 113.277, 2893.122, Bao
+17, 17, 0, 2026-11-13 10:19:17.638771, queries/job__random_split_3/train/31c.sql, 282.758, 344.048, Bao
+17, 17, 1, 2026-11-13 10:19:18.631565, queries/job__random_split_3/train/31c.sql, 271.683, 351.818, Bao
+17, 17, 2, 2026-11-13 10:19:20.205343, queries/job__random_split_3/train/31c.sql, 266.232, 319.197, Bao
+17, 18, 0, 2026-11-13 10:19:20.844045, queries/job__random_split_3/train/32a.sql, 113.58, 314.621, Bao
+17, 18, 1, 2026-11-13 10:19:21.467514, queries/job__random_split_3/train/32a.sql, 110.393, 303.145, Bao
+17, 18, 2, 2026-11-13 10:19:22.469378, queries/job__random_split_3/train/32a.sql, 103.846, 300.389, Bao
+17, 19, 0, 2026-11-13 10:19:22.901628, queries/job__random_split_3/train/12b.sql, 125.753, 89.757, Bao
+17, 19, 1, 2026-11-13 10:19:23.336977, queries/job__random_split_3/train/12b.sql, 124.182, 90.815, Bao
+17, 19, 2, 2026-11-13 10:19:23.955957, queries/job__random_split_3/train/12b.sql, 117.235, 91.619, Bao
+17, 20, 0, 2026-11-13 10:19:24.655788, queries/job__random_split_3/train/21a.sql, 149.816, 278.192, Bao
+17, 20, 1, 2026-11-13 10:19:25.318285, queries/job__random_split_3/train/21a.sql, 149.064, 270.205, Bao
+17, 20, 2, 2026-11-13 10:19:26.430561, queries/job__random_split_3/train/21a.sql, 140.266, 310.739, Bao
+17, 21, 0, 2026-11-13 10:19:31.455445, queries/job__random_split_3/train/26c.sql, 306.873, 4320.648, Bao
+17, 21, 1, 2026-11-13 10:19:36.636971, queries/job__random_split_3/train/26c.sql, 312.927, 4464.199, Bao
+17, 21, 2, 2026-11-13 10:19:46.007962, queries/job__random_split_3/train/26c.sql, 303.432, 4172.273, Bao
+17, 22, 0, 2026-11-13 10:19:46.727508, queries/job__random_split_3/train/21a.sql, 154.669, 315.712, Bao
+17, 22, 1, 2026-11-13 10:19:47.401979, queries/job__random_split_3/train/21a.sql, 148.218, 283.979, Bao
+17, 22, 2, 2026-11-13 10:19:48.547279, queries/job__random_split_3/train/21a.sql, 141.3, 291.537, Bao
+17, 23, 0, 2026-11-13 10:19:50.265164, queries/job__random_split_3/train/16d.sql, 126.449, 1368.89, Bao
+17, 23, 1, 2026-11-13 10:19:51.937304, queries/job__random_split_3/train/16d.sql, 124.822, 1325.774, Bao
+17, 23, 2, 2026-11-13 10:19:54.859096, queries/job__random_split_3/train/16d.sql, 122.469, 1180.013, Bao
+17, 24, 0, 2026-11-13 10:19:55.528581, queries/job__random_split_3/train/21b.sql, 147.041, 278.517, Bao
+17, 24, 1, 2026-11-13 10:19:56.230477, queries/job__random_split_3/train/21b.sql, 148.59, 309.338, Bao
+17, 24, 2, 2026-11-13 10:19:57.333320, queries/job__random_split_3/train/21b.sql, 139.433, 277.349, Bao
+==========================================================================================
+Iteration over chunk 19/19...
+[2026-11-13 10:19:57.333504]	[19/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.1284711022550861
+Epoch 15 training loss: 0.012717543852825959
+Epoch 30 training loss: 0.002832600144514193
+Epoch 45 training loss: 0.0012582201234181412
+Stopped training from convergence condition at epoch 54
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 10:20:23.165666]	[19/19]	Retraining done.
+18, 0, 0, 2026-11-13 10:20:23.836560, queries/job__random_split_3/train/7b.sql, 131.724, 316.049, Bao
+18, 0, 1, 2026-11-13 10:20:24.509730, queries/job__random_split_3/train/7b.sql, 128.173, 321.203, Bao
+18, 0, 2, 2026-11-13 10:20:25.495590, queries/job__random_split_3/train/7b.sql, 119.16, 220.246, Bao
+18, 1, 0, 2026-11-13 10:20:26.547018, queries/job__random_split_3/train/29a.sql, 452.134, 52.899, Bao
+18, 1, 1, 2026-11-13 10:20:27.593639, queries/job__random_split_3/train/29a.sql, 449.926, 52.654, Bao
+18, 1, 2, 2026-11-13 10:20:29.126714, queries/job__random_split_3/train/29a.sql, 440.217, 45.733, Bao
+18, 2, 0, 2026-11-13 10:20:30.121435, queries/job__random_split_3/train/31c.sql, 276.063, 346.201, Bao
+18, 2, 1, 2026-11-13 10:20:31.128481, queries/job__random_split_3/train/31c.sql, 283.267, 347.211, Bao
+18, 2, 2, 2026-11-13 10:20:32.672048, queries/job__random_split_3/train/31c.sql, 263.728, 297.728, Bao
+18, 3, 0, 2026-11-13 10:20:33.195251, queries/job__random_split_3/train/6b.sql, 111.122, 204.901, Bao
+18, 3, 1, 2026-11-13 10:20:33.709690, queries/job__random_split_3/train/6b.sql, 109.853, 204.513, Bao
+18, 3, 2, 2026-11-13 10:20:34.516100, queries/job__random_split_3/train/6b.sql, 103.023, 176.41, Bao
+18, 4, 0, 2026-11-13 10:20:35.115243, queries/job__random_split_3/train/3c.sql, 110.222, 277.353, Bao
+18, 4, 1, 2026-11-13 10:20:35.708634, queries/job__random_split_3/train/3c.sql, 108.129, 283.304, Bao
+18, 4, 2, 2026-11-13 10:20:36.634971, queries/job__random_split_3/train/3c.sql, 104.992, 217.131, Bao
+18, 5, 0, 2026-11-13 10:20:39.475308, queries/job__random_split_3/train/20a.sql, 156.059, 2434.536, Bao
+18, 5, 1, 2026-11-13 10:20:42.197318, queries/job__random_split_3/train/20a.sql, 164.246, 2295.297, Bao
+18, 5, 2, 2026-11-13 10:20:47.159669, queries/job__random_split_3/train/20a.sql, 150.617, 2145.083, Bao
+18, 6, 0, 2026-11-13 10:20:47.912494, queries/job__random_split_3/train/10a.sql, 122.205, 413.502, Bao
+18, 6, 1, 2026-11-13 10:20:48.656047, queries/job__random_split_3/train/10a.sql, 117.158, 413.691, Bao
+18, 6, 2, 2026-11-13 10:20:49.877720, queries/job__random_split_3/train/10a.sql, 111.664, 394.452, Bao
+18, 7, 0, 2026-11-13 10:20:50.303935, queries/job__random_split_3/train/1c.sql, 122.315, 97.857, Bao
+18, 7, 1, 2026-11-13 10:20:50.719190, queries/job__random_split_3/train/1c.sql, 109.99, 98.479, Bao
+18, 7, 2, 2026-11-13 10:20:51.302769, queries/job__random_split_3/train/1c.sql, 103.36, 94.012, Bao
+18, 8, 0, 2026-11-13 10:20:51.784493, queries/job__random_split_3/train/3a.sql, 109.263, 165.846, Bao
+18, 8, 1, 2026-11-13 10:20:52.255950, queries/job__random_split_3/train/3a.sql, 107.269, 163.303, Bao
+18, 8, 2, 2026-11-13 10:20:52.961462, queries/job__random_split_3/train/3a.sql, 104.717, 121.415, Bao
+18, 9, 0, 2026-11-13 10:20:53.484878, queries/job__random_split_3/train/6b.sql, 110.271, 208.665, Bao
+18, 9, 1, 2026-11-13 10:20:54.000685, queries/job__random_split_3/train/6b.sql, 112.098, 196.552, Bao
+18, 9, 2, 2026-11-13 10:20:54.833335, queries/job__random_split_3/train/6b.sql, 115.653, 176.77, Bao
+18, 10, 0, 2026-11-13 10:20:59.972580, queries/job__random_split_3/train/8c.sql, 115.725, 4803.63, Bao
+18, 10, 1, 2026-11-13 10:21:05.036708, queries/job__random_split_3/train/8c.sql, 116.044, 4726.154, Bao
+18, 10, 2, 2026-11-13 10:21:14.167554, queries/job__random_split_3/train/8c.sql, 110.103, 4636.344, Bao
+18, 11, 0, 2026-11-13 10:21:14.648667, queries/job__random_split_3/train/21b.sql, 159.656, 64.485, Bao
+18, 11, 1, 2026-11-13 10:21:15.104586, queries/job__random_split_3/train/21b.sql, 148.769, 62.349, Bao
+18, 11, 2, 2026-11-13 10:21:15.758775, queries/job__random_split_3/train/21b.sql, 142.297, 54.986, Bao
+18, 12, 0, 2026-11-13 10:21:16.234947, queries/job__random_split_3/train/3a.sql, 110.129, 162.677, Bao
+18, 12, 1, 2026-11-13 10:21:16.713242, queries/job__random_split_3/train/3a.sql, 109.779, 163.582, Bao
+18, 12, 2, 2026-11-13 10:21:17.408027, queries/job__random_split_3/train/3a.sql, 103.838, 114.778, Bao
+18, 13, 0, 2026-11-13 10:21:22.446866, queries/job__random_split_3/train/26c.sql, 306.858, 4330.391, Bao
+18, 13, 1, 2026-11-13 10:21:27.594528, queries/job__random_split_3/train/26c.sql, 312.082, 4435.966, Bao
+18, 13, 2, 2026-11-13 10:21:37.199748, queries/job__random_split_3/train/26c.sql, 303.189, 4286.039, Bao
+18, 14, 0, 2026-11-13 10:21:38.240039, queries/job__random_split_3/train/29b.sql, 454.738, 21.152, Bao
+18, 14, 1, 2026-11-13 10:21:39.268236, queries/job__random_split_3/train/29b.sql, 458.901, 21.378, Bao
+18, 14, 2, 2026-11-13 10:21:40.751320, queries/job__random_split_3/train/29b.sql, 442.098, 13.962, Bao
+18, 15, 0, 2026-11-13 10:21:45.516628, queries/job__random_split_3/train/17b.sql, 118.69, 4430.677, Bao
+18, 15, 1, 2026-11-13 10:21:50.069882, queries/job__random_split_3/train/17b.sql, 118.472, 4219.812, Bao
+18, 15, 2, 2026-11-13 10:21:57.581396, queries/job__random_split_3/train/17b.sql, 116.078, 4137.039, Bao
+18, 16, 0, 2026-11-13 10:22:01.615455, queries/job__random_split_3/train/17a.sql, 122.18, 3697.18, Bao
+18, 16, 1, 2026-11-13 10:22:05.640275, queries/job__random_split_3/train/17a.sql, 120.513, 3688.274, Bao
+18, 16, 2, 2026-11-13 10:22:13.292167, queries/job__random_split_3/train/17a.sql, 112.421, 4404.062, Bao
+18, 17, 0, 2026-11-13 10:22:14.220298, queries/job__random_split_3/train/22b.sql, 228.685, 378.617, Bao
+18, 17, 1, 2026-11-13 10:22:15.169860, queries/job__random_split_3/train/22b.sql, 252.594, 369.761, Bao
+18, 17, 2, 2026-11-13 10:22:16.615674, queries/job__random_split_3/train/22b.sql, 214.914, 328.501, Bao
+18, 18, 0, 2026-11-13 10:22:17.027944, queries/job__random_split_3/train/11a.sql, 127.532, 65.461, Bao
+18, 18, 1, 2026-11-13 10:22:17.434458, queries/job__random_split_3/train/11a.sql, 126.162, 62.092, Bao
+18, 18, 2, 2026-11-13 10:22:18.014146, queries/job__random_split_3/train/11a.sql, 118.316, 54.209, Bao
+18, 19, 0, 2026-11-13 10:22:18.436710, queries/job__random_split_3/train/1a.sql, 111.391, 101.54, Bao
+18, 19, 1, 2026-11-13 10:22:18.843423, queries/job__random_split_3/train/1a.sql, 108.993, 95.382, Bao
+18, 19, 2, 2026-11-13 10:22:19.430625, queries/job__random_split_3/train/1a.sql, 103.088, 97.305, Bao
+18, 20, 0, 2026-11-13 10:22:20.343817, queries/job__random_split_3/train/31a.sql, 276.49, 264.9, Bao
+18, 20, 1, 2026-11-13 10:22:21.247706, queries/job__random_split_3/train/31a.sql, 271.527, 268.387, Bao
+18, 20, 2, 2026-11-13 10:22:22.624794, queries/job__random_split_3/train/31a.sql, 263.665, 209.544, Bao
+18, 21, 0, 2026-11-13 10:22:24.150760, queries/job__random_split_3/train/20c.sql, 155.216, 1121.901, Bao
+18, 21, 1, 2026-11-13 10:22:25.648719, queries/job__random_split_3/train/20c.sql, 167.8, 1064.912, Bao
+18, 21, 2, 2026-11-13 10:22:28.172993, queries/job__random_split_3/train/20c.sql, 148.936, 912.533, Bao
+18, 22, 0, 2026-11-13 10:22:29.312545, queries/job__random_split_3/train/15d.sql, 153.422, 743.757, Bao
+18, 22, 1, 2026-11-13 10:22:30.393375, queries/job__random_split_3/train/15d.sql, 150.997, 679.774, Bao
+18, 22, 2, 2026-11-13 10:22:32.185767, queries/job__random_split_3/train/15d.sql, 143.726, 583.225, Bao
+18, 23, 0, 2026-11-13 10:22:32.816574, queries/job__random_split_3/train/23b.sql, 230.08, 73.629, Bao
+18, 23, 1, 2026-11-13 10:22:33.440500, queries/job__random_split_3/train/23b.sql, 229.371, 64.593, Bao
+18, 23, 2, 2026-11-13 10:22:34.325679, queries/job__random_split_3/train/23b.sql, 217.278, 49.001, Bao
+18, 24, 0, 2026-11-13 10:22:35.397898, queries/job__random_split_3/train/14c.sql, 139.621, 715.76, Bao
+18, 24, 1, 2026-11-13 10:22:36.426137, queries/job__random_split_3/train/14c.sql, 124.247, 686.325, Bao
+18, 24, 2, 2026-11-13 10:22:38.112353, queries/job__random_split_3/train/14c.sql, 115.302, 578.55, Bao

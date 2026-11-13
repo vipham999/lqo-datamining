@@ -1,7 +1,9 @@
 """Lõi tính toán của ứng dụng: đọc dữ liệu, cross-validation theo 3 kiểu chia của bài báo, đánh giá, data mining.
 Dùng lại hàm của scripts/ (extract_features, c2_classify, c3_explain) để kết quả khớp với các script dòng lệnh."""
+import glob
 import json
 import os
+import re
 import sys
 
 import numpy as np
@@ -113,6 +115,34 @@ TABLE_GROUPS = ["Trung tâm", "Bảng nối", "Thông tin", "Tra cứu"]
 
 def load_imdb():
     return json.load(open(IMDB_DB)) if os.path.exists(IMDB_DB) else None
+
+
+JOB_DIR = os.path.join(ROOT, "lqo_ml_perspective/bao/queries/join-order-benchmark")
+# PostgreSQL mặc định trên Kaggle (ablation 8.4/8.5, cùng cấu hình với Bao/HybridQO), lần chạy thứ 3
+JOB_PG_LOG = os.path.join(ROOT, "bao_kaggle_log/ablation_8_4_8_5/ablation_logs/test__postgres__job__default__kaggle.txt")
+GEQO_THRESHOLD = 12
+
+
+def job_overview():
+    """113 câu JOB: họ, số bảng nối, số điều kiện, thời gian PostgreSQL (ms) nếu có log."""
+    rows = []
+    for f in sorted(glob.glob(os.path.join(JOB_DIR, "*.sql"))):
+        s = open(f).read()
+        q = os.path.basename(f)[:-4]
+        frm = re.search(r"FROM(.*?)WHERE", s, re.S | re.I).group(1)
+        where = s[s.upper().index("WHERE"):]
+        rows.append({"câu": q, "họ": int(re.match(r"\d+", q).group()), "số_bảng": frm.count(",") + 1,
+                     "số_điều_kiện": len(re.findall(r"\bAND\b", where, re.I)) + 1})
+    d = pd.DataFrame(rows)
+    if os.path.exists(JOB_PG_LOG):
+        t = {}
+        for line in open(JOB_PG_LOG):
+            a = [x.strip() for x in line.split(",")]
+            if len(a) >= 6 and a[1] == "2":
+                t[os.path.basename(a[3])[:-4]] = float(a[4]) + float(a[5])
+        d["pg_ms"] = d["câu"].map(t)
+    d["dùng_GEQO"] = d["số_bảng"] >= GEQO_THRESHOLD
+    return d
 
 
 def schema_dot(db, show_bridge=False):

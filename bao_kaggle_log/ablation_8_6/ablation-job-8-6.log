@@ -1,0 +1,178 @@
+[{"stream_name":"stderr","time":8.097718256,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.097842478,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.097850628,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.097855068,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stderr","time":8.830473533,"data":"0.00s - Debugger warning: It seems that frozen modules are being used, which may\n"}
+,{"stream_name":"stderr","time":8.830513935,"data":"0.00s - make the debugger miss breakpoints. Please pass -Xfrozen_modules=off\n"}
+,{"stream_name":"stderr","time":8.83052169,"data":"0.00s - to python to disable frozen modules.\n"}
+,{"stream_name":"stderr","time":8.830553516,"data":"0.00s - Note: Debugging will proceed. Set PYDEVD_DISABLE_FILE_VALIDATION=1 to disable this validation.\n"}
+,{"stream_name":"stdout","time":10.105205395,"data":"4\n"}
+,{"stream_name":"stdout","time":10.105237627,"data":"               total        used        free      shared  buff/cache   available\n"}
+,{"stream_name":"stdout","time":10.105243579,"data":"Mem:              31           1          26           0           4          30\n"}
+,{"stream_name":"stdout","time":10.105248288,"data":"Filesystem      Size  Used Avail Use% Mounted on\n"}
+,{"stream_name":"stdout","time":10.105252878,"data":"overlay         8.0T  7.1T  967G  89% /\n"}
+,{"stream_name":"stdout","time":10.105257347,"data":"/dev/loop2       20G  124K   20G   1% /kaggle/working\n"}
+,{"stream_name":"stdout","time":182.916757935,"data":"postgres (PostgreSQL) 12.5\n"}
+,{"stream_name":"stdout","time":182.916794786,"data":"pg_bao OK\n"}
+,{"stream_name":"stdout","time":189.583963587,"data":"waiting for server to start.... done\n"}
+,{"stream_name":"stdout","time":189.584034589,"data":"server started\n"}
+,{"stream_name":"stdout","time":189.584039643,"data":"geqo|on\n"}
+,{"stream_name":"stdout","time":189.584043106,"data":"shared_buffers|1048576\n"}
+,{"stream_name":"stdout","time":189.584046584,"data":"shared_preload_libraries|pg_bao\n"}
+,{"stream_name":"stdout","time":189.584049968,"data":"work_mem|524288\n"}
+,{"stream_name":"stdout","time":1199.596651807,"data":"Đang nạp, khoảng 30–45 phút; log ở /tmp/load.log ...\n"}
+,{"stream_name":"stdout","time":1199.598439463,"data":"10:41  đã nạp 12/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598445672,"data":"10:42  đã nạp 16/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598449412,"data":"10:43  đã nạp 19/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598452971,"data":"10:44  đã nạp 19/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598456535,"data":"10:45  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598460117,"data":"10:46  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598463475,"data":"10:47  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598467056,"data":"10:48  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598471138,"data":"10:49  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598474595,"data":"10:50  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598477979,"data":"10:51  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598481407,"data":"10:52  đã nạp 20/21 bảng, đang: nạp CSV\n"}
+,{"stream_name":"stdout","time":1199.598499583,"data":"10:53  đã nạp 21/21 bảng, đang: tạo khóa ngoại\n"}
+,{"stream_name":"stdout","time":1199.598502712,"data":"10:54  đã nạp 21/21 bảng, đang: tạo khóa ngoại\n"}
+,{"stream_name":"stdout","time":1199.598505526,"data":"10:55  đã nạp 21/21 bảng, đang: ANALYZE (bước cuối)\n"}
+,{"stream_name":"stdout","time":1199.598508284,"data":"Đủ 21 bảng, số dòng khớp.\n"}
+,{"stream_name":"stderr","time":1199.59949237,"data":"NOTICE:  database \"imdbload\" does not exist, skipping\n"}
+,{"stream_name":"stderr","time":1199.599535644,"data":"\n"}
+,{"stream_name":"stderr","time":1199.599542682,"data":"NOTICE:  database \"imdbload\" does not exist, skipping\n"}
+,{"stream_name":"stdout","time":1218.892159145,"data":"torch 1.13.1+cpu | sklearn 1.1.3\n"}
+,{"stream_name":"stdout","time":1218.908847879,"data":"Writing /tmp/run_8_6.py\n"}
+,{"stream_name":"stdout","time":11101.316154991,"data":"[1/113] 10a.sql: lần 1 1574 ms, lần 2 552 ms, trung vị 540 ms\n"}
+,{"stream_name":"stdout","time":11101.317540241,"data":"[2/113] 10b.sql: lần 1 498 ms, lần 2 412 ms, trung vị 398 ms\n"}
+,{"stream_name":"stdout","time":11101.317564141,"data":"[3/113] 10c.sql: lần 1 10029 ms, lần 2 9189 ms, trung vị 9407 ms\n"}
+,{"stream_name":"stdout","time":11101.317572275,"data":"[4/113] 11a.sql: lần 1 179 ms, lần 2 73 ms, trung vị 74 ms\n"}
+,{"stream_name":"stdout","time":11101.317579501,"data":"[5/113] 11b.sql: lần 1 46 ms, lần 2 35 ms, trung vị 35 ms\n"}
+,{"stream_name":"stdout","time":11101.317586538,"data":"[6/113] 11c.sql: lần 1 362 ms, lần 2 190 ms, trung vị 191 ms\n"}
+,{"stream_name":"stdout","time":11101.317593388,"data":"[7/113] 11d.sql: lần 1 231 ms, lần 2 164 ms, trung vị 162 ms\n"}
+,{"stream_name":"stdout","time":11101.317600236,"data":"[8/113] 12a.sql: lần 1 2210 ms, lần 2 277 ms, trung vị 267 ms\n"}
+,{"stream_name":"stdout","time":11101.317607298,"data":"[9/113] 12b.sql: lần 1 152 ms, lần 2 138 ms, trung vị 139 ms\n"}
+,{"stream_name":"stdout","time":11101.317634986,"data":"[10/113] 12c.sql: lần 1 5212 ms, lần 2 868 ms, trung vị 878 ms\n"}
+,{"stream_name":"stdout","time":11101.317688029,"data":"[11/113] 13a.sql: lần 1 3834 ms, lần 2 1878 ms, trung vị 1887 ms\n"}
+,{"stream_name":"stdout","time":11101.31769533,"data":"[12/113] 13b.sql: lần 1 872 ms, lần 2 832 ms, trung vị 830 ms\n"}
+,{"stream_name":"stdout","time":11101.317702118,"data":"[13/113] 13c.sql: lần 1 816 ms, lần 2 791 ms, trung vị 798 ms\n"}
+,{"stream_name":"stdout","time":11101.317777833,"data":"[14/113] 13d.sql: lần 1 4244 ms, lần 2 2924 ms, trung vị 2948 ms\n"}
+,{"stream_name":"stdout","time":11101.317808051,"data":"[15/113] 14a.sql: lần 1 1091 ms, lần 2 261 ms, trung vị 258 ms\n"}
+,{"stream_name":"stdout","time":11101.317815819,"data":"[16/113] 14b.sql: lần 1 141 ms, lần 2 101 ms, trung vị 101 ms\n"}
+,{"stream_name":"stdout","time":11101.317821326,"data":"[17/113] 14c.sql: lần 1 1334 ms, lần 2 529 ms, trung vị 531 ms\n"}
+,{"stream_name":"stdout","time":11101.317826464,"data":"[18/113] 15a.sql: lần 1 1075 ms, lần 2 491 ms, trung vị 462 ms\n"}
+,{"stream_name":"stdout","time":11101.317831518,"data":"[19/113] 15b.sql: lần 1 40 ms, lần 2 26 ms, trung vị 25 ms\n"}
+,{"stream_name":"stdout","time":11101.317836654,"data":"[20/113] 15c.sql: lần 1 2146 ms, lần 2 635 ms, trung vị 635 ms\n"}
+,{"stream_name":"stdout","time":11101.317841644,"data":"[21/113] 15d.sql: lần 1 2644 ms, lần 2 846 ms, trung vị 831 ms\n"}
+,{"stream_name":"stdout","time":11101.317846769,"data":"[22/113] 16a.sql: lần 1 633 ms, lần 2 163 ms, trung vị 162 ms\n"}
+,{"stream_name":"stdout","time":11101.317917543,"data":"[23/113] 16b.sql: lần 1 36293 ms, lần 2 21983 ms, trung vị 22180 ms\n"}
+,{"stream_name":"stdout","time":11101.317924288,"data":"[24/113] 16c.sql: lần 1 2105 ms, lần 2 1828 ms, trung vị 1820 ms\n"}
+,{"stream_name":"stdout","time":11101.317929078,"data":"[25/113] 16d.sql: lần 1 2374 ms, lần 2 1437 ms, trung vị 1427 ms\n"}
+,{"stream_name":"stdout","time":11101.317933658,"data":"[26/113] 17a.sql: lần 1 12617 ms, lần 2 12032 ms, trung vị 12201 ms\n"}
+,{"stream_name":"stdout","time":11101.317937772,"data":"[27/113] 17b.sql: lần 1 9767 ms, lần 2 6394 ms, trung vị 6388 ms\n"}
+,{"stream_name":"stdout","time":11101.317942165,"data":"[28/113] 17c.sql: lần 1 6456 ms, lần 2 6161 ms, trung vị 6056 ms\n"}
+,{"stream_name":"stdout","time":11101.317946119,"data":"[29/113] 17d.sql: lần 1 6572 ms, lần 2 6170 ms, trung vị 6201 ms\n"}
+,{"stream_name":"stdout","time":11101.317954315,"data":"[30/113] 17e.sql: lần 1 12821 ms, lần 2 11975 ms, trung vị 11983 ms\n"}
+,{"stream_name":"stdout","time":11101.317958372,"data":"[31/113] 17f.sql: lần 1 10124 ms, lần 2 9501 ms, trung vị 9549 ms\n"}
+,{"stream_name":"stdout","time":11101.317962436,"data":"[32/113] 18a.sql: lần 1 9785 ms, lần 2 4281 ms, trung vị 4164 ms\n"}
+,{"stream_name":"stdout","time":11101.317966404,"data":"[33/113] 18b.sql: lần 1 383 ms, lần 2 241 ms, trung vị 232 ms\n"}
+,{"stream_name":"stdout","time":11101.317970453,"data":"[34/113] 18c.sql: lần 1 6473 ms, lần 2 4935 ms, trung vị 4933 ms\n"}
+,{"stream_name":"stdout","time":11101.317974547,"data":"[35/113] 19a.sql: lần 1 853 ms, lần 2 460 ms, trung vị 444 ms\n"}
+,{"stream_name":"stdout","time":11101.317978501,"data":"[36/113] 19b.sql: lần 1 404 ms, lần 2 216 ms, trung vị 215 ms\n"}
+,{"stream_name":"stdout","time":11101.317982278,"data":"[37/113] 19c.sql: lần 1 2513 ms, lần 2 727 ms, trung vị 719 ms\n"}
+,{"stream_name":"stdout","time":11101.317986344,"data":"[38/113] 19d.sql: lần 1 14169 ms, lần 2 11149 ms, trung vị 11159 ms\n"}
+,{"stream_name":"stdout","time":11101.317990349,"data":"[39/113] 1a.sql: lần 1 189 ms, lần 2 146 ms, trung vị 145 ms\n"}
+,{"stream_name":"stdout","time":11101.31799639,"data":"[40/113] 1b.sql: lần 1 138 ms, lần 2 139 ms, trung vị 135 ms\n"}
+,{"stream_name":"stdout","time":11101.318000726,"data":"[41/113] 1c.sql: lần 1 145 ms, lần 2 142 ms, trung vị 142 ms\n"}
+,{"stream_name":"stdout","time":11101.318006795,"data":"[42/113] 1d.sql: lần 1 139 ms, lần 2 132 ms, trung vị 136 ms\n"}
+,{"stream_name":"stdout","time":11101.318010664,"data":"[43/113] 20a.sql: lần 1 4639 ms, lần 2 2250 ms, trung vị 2273 ms\n"}
+,{"stream_name":"stdout","time":11101.31801537,"data":"[44/113] 20b.sql: lần 1 2279 ms, lần 2 1821 ms, trung vị 1809 ms\n"}
+,{"stream_name":"stdout","time":11101.318019975,"data":"[45/113] 20c.sql: lần 1 1269 ms, lần 2 987 ms, trung vị 987 ms\n"}
+,{"stream_name":"stdout","time":11101.318024829,"data":"[46/113] 21a.sql: lần 1 97 ms, lần 2 84 ms, trung vị 82 ms\n"}
+,{"stream_name":"stdout","time":11101.318029721,"data":"[47/113] 21b.sql: lần 1 89 ms, lần 2 76 ms, trung vị 78 ms\n"}
+,{"stream_name":"stdout","time":11101.318034764,"data":"[48/113] 21c.sql: lần 1 104 ms, lần 2 83 ms, trung vị 83 ms\n"}
+,{"stream_name":"stdout","time":11101.318038837,"data":"[49/113] 22a.sql: lần 1 752 ms, lần 2 424 ms, trung vị 425 ms\n"}
+,{"stream_name":"stdout","time":11101.318042786,"data":"[50/113] 22b.sql: lần 1 276 ms, lần 2 227 ms, trung vị 225 ms\n"}
+,{"stream_name":"stdout","time":11101.318052986,"data":"[51/113] 22c.sql: lần 1 2601 ms, lần 2 2312 ms, trung vị 2348 ms\n"}
+,{"stream_name":"stdout","time":11101.318056995,"data":"[52/113] 22d.sql: lần 1 1082 ms, lần 2 871 ms, trung vị 871 ms\n"}
+,{"stream_name":"stdout","time":11101.318101769,"data":"[53/113] 23a.sql: lần 1 545 ms, lần 2 439 ms, trung vị 437 ms\n"}
+,{"stream_name":"stdout","time":11101.318123081,"data":"[54/113] 23b.sql: lần 1 92 ms, lần 2 56 ms, trung vị 56 ms\n"}
+,{"stream_name":"stdout","time":11101.318127946,"data":"[55/113] 23c.sql: lần 1 618 ms, lần 2 637 ms, trung vị 573 ms\n"}
+,{"stream_name":"stdout","time":11101.318132472,"data":"[56/113] 24a.sql: lần 1 479 ms, lần 2 206 ms, trung vị 202 ms\n"}
+,{"stream_name":"stdout","time":11101.318136615,"data":"[57/113] 24b.sql: lần 1 37 ms, lần 2 28 ms, trung vị 29 ms\n"}
+,{"stream_name":"stdout","time":11101.318141459,"data":"[58/113] 25a.sql: lần 1 4352 ms, lần 2 2490 ms, trung vị 2476 ms\n"}
+,{"stream_name":"stdout","time":11101.318152746,"data":"[59/113] 25b.sql: lần 1 367 ms, lần 2 293 ms, trung vị 291 ms\n"}
+,{"stream_name":"stdout","time":11101.318200544,"data":"[60/113] 25c.sql: lần 1 8341 ms, lần 2 6940 ms, trung vị 7013 ms\n"}
+,{"stream_name":"stdout","time":11101.31822345,"data":"[61/113] 26a.sql: lần 1 1964 ms, lần 2 1037 ms, trung vị 1029 ms\n"}
+,{"stream_name":"stdout","time":11101.318228264,"data":"[62/113] 26b.sql: lần 1 157 ms, lần 2 101 ms, trung vị 102 ms\n"}
+,{"stream_name":"stdout","time":11101.318233089,"data":"[63/113] 26c.sql: lần 1 4054 ms, lần 2 3444 ms, trung vị 3427 ms\n"}
+,{"stream_name":"stdout","time":11101.318237309,"data":"[64/113] 27a.sql: lần 1 101 ms, lần 2 27 ms, trung vị 27 ms\n"}
+,{"stream_name":"stdout","time":11101.318242721,"data":"[65/113] 27b.sql: lần 1 40 ms, lần 2 27 ms, trung vị 26 ms\n"}
+,{"stream_name":"stdout","time":11101.318247454,"data":"[66/113] 27c.sql: lần 1 52 ms, lần 2 28 ms, trung vị 28 ms\n"}
+,{"stream_name":"stdout","time":11101.318251468,"data":"[67/113] 28a.sql: lần 1 413 ms, lần 2 324 ms, trung vị 322 ms\n"}
+,{"stream_name":"stdout","time":11101.318255452,"data":"[68/113] 28b.sql: lần 1 324 ms, lần 2 269 ms, trung vị 272 ms\n"}
+,{"stream_name":"stdout","time":11101.318259454,"data":"[69/113] 28c.sql: lần 1 2934 ms, lần 2 2521 ms, trung vị 2534 ms\n"}
+,{"stream_name":"stdout","time":11101.318263443,"data":"[70/113] 29a.sql: lần 1 94 ms, lần 2 89 ms, trung vị 77 ms\n"}
+,{"stream_name":"stdout","time":11101.318267487,"data":"[71/113] 29b.sql: lần 1 126 ms, lần 2 114 ms, trung vị 115 ms\n"}
+,{"stream_name":"stdout","time":11101.318279346,"data":"[72/113] 29c.sql: lần 1 361 ms, lần 2 290 ms, trung vị 289 ms\n"}
+,{"stream_name":"stdout","time":11101.318283421,"data":"[73/113] 2a.sql: lần 1 782 ms, lần 2 569 ms, trung vị 565 ms\n"}
+,{"stream_name":"stdout","time":11101.318287454,"data":"[74/113] 2b.sql: lần 1 620 ms, lần 2 555 ms, trung vị 558 ms\n"}
+,{"stream_name":"stdout","time":11101.318295155,"data":"[75/113] 2c.sql: lần 1 592 ms, lần 2 534 ms, trung vị 536 ms\n"}
+,{"stream_name":"stdout","time":11101.3182991,"data":"[76/113] 2d.sql: lần 1 884 ms, lần 2 680 ms, trung vị 678 ms\n"}
+,{"stream_name":"stdout","time":11101.318304935,"data":"[77/113] 30a.sql: lần 1 1562 ms, lần 2 1147 ms, trung vị 1155 ms\n"}
+,{"stream_name":"stdout","time":11101.318324174,"data":"[78/113] 30b.sql: lần 1 459 ms, lần 2 402 ms, trung vị 396 ms\n"}
+,{"stream_name":"stdout","time":11101.318328972,"data":"[79/113] 30c.sql: lần 1 3718 ms, lần 2 2850 ms, trung vị 2818 ms\n"}
+,{"stream_name":"stdout","time":11101.318333942,"data":"[80/113] 31a.sql: lần 1 418 ms, lần 2 245 ms, trung vị 235 ms\n"}
+,{"stream_name":"stdout","time":11101.318338566,"data":"[81/113] 31b.sql: lần 1 173 ms, lần 2 164 ms, trung vị 162 ms\n"}
+,{"stream_name":"stdout","time":11101.318377897,"data":"[82/113] 31c.sql: lần 1 538 ms, lần 2 396 ms, trung vị 382 ms\n"}
+,{"stream_name":"stdout","time":11101.318382758,"data":"[83/113] 32a.sql: lần 1 16 ms, lần 2 13 ms, trung vị 13 ms\n"}
+,{"stream_name":"stdout","time":11101.318386876,"data":"[84/113] 32b.sql: lần 1 175 ms, lần 2 115 ms, trung vị 113 ms\n"}
+,{"stream_name":"stdout","time":11101.31839087,"data":"[85/113] 33a.sql: lần 1 52 ms, lần 2 38 ms, trung vị 38 ms\n"}
+,{"stream_name":"stdout","time":11101.318395038,"data":"[86/113] 33b.sql: lần 1 63 ms, lần 2 47 ms, trung vị 47 ms\n"}
+,{"stream_name":"stdout","time":11101.318400824,"data":"[87/113] 33c.sql: lần 1 58 ms, lần 2 48 ms, trung vị 48 ms\n"}
+,{"stream_name":"stdout","time":11101.318409395,"data":"[88/113] 3a.sql: lần 1 255 ms, lần 2 140 ms, trung vị 141 ms\n"}
+,{"stream_name":"stdout","time":11101.318428141,"data":"[89/113] 3b.sql: lần 1 127 ms, lần 2 87 ms, trung vị 89 ms\n"}
+,{"stream_name":"stdout","time":11101.318434831,"data":"[90/113] 3c.sql: lần 1 525 ms, lần 2 502 ms, trung vị 275 ms\n"}
+,{"stream_name":"stdout","time":11101.318439791,"data":"[91/113] 4a.sql: lần 1 132 ms, lần 2 97 ms, trung vị 96 ms\n"}
+,{"stream_name":"stdout","time":11101.318444498,"data":"[92/113] 4b.sql: lần 1 101 ms, lần 2 73 ms, trung vị 73 ms\n"}
+,{"stream_name":"stdout","time":11101.318449041,"data":"[93/113] 4c.sql: lần 1 142 ms, lần 2 106 ms, trung vị 106 ms\n"}
+,{"stream_name":"stdout","time":11101.318453461,"data":"[94/113] 5a.sql: lần 1 385 ms, lần 2 244 ms, trung vị 242 ms\n"}
+,{"stream_name":"stdout","time":11101.318457404,"data":"[95/113] 5b.sql: lần 1 231 ms, lần 2 228 ms, trung vị 227 ms\n"}
+,{"stream_name":"stdout","time":11101.318461383,"data":"[96/113] 5c.sql: lần 1 333 ms, lần 2 316 ms, trung vị 313 ms\n"}
+,{"stream_name":"stdout","time":11101.318465307,"data":"[97/113] 6a.sql: lần 1 58 ms, lần 2 20 ms, trung vị 20 ms\n"}
+,{"stream_name":"stdout","time":11101.318469404,"data":"[98/113] 6b.sql: lần 1 286 ms, lần 2 199 ms, trung vị 196 ms\n"}
+,{"stream_name":"stdout","time":11101.318473243,"data":"[99/113] 6c.sql: lần 1 16 ms, lần 2 14 ms, trung vị 13 ms\n"}
+,{"stream_name":"stdout","time":11101.318477245,"data":"[100/113] 6d.sql: lần 1 7437 ms, lần 2 4577 ms, trung vị 4660 ms\n"}
+,{"stream_name":"stdout","time":11101.318481162,"data":"[101/113] 6e.sql: lần 1 81 ms, lần 2 28 ms, trung vị 20 ms\n"}
+,{"stream_name":"stdout","time":11101.31848514,"data":"[102/113] 6f.sql: lần 1 5004 ms, lần 2 4708 ms, trung vị 4700 ms\n"}
+,{"stream_name":"stdout","time":11101.318489095,"data":"[103/113] 7a.sql: lần 1 2911 ms, lần 2 803 ms, trung vị 801 ms\n"}
+,{"stream_name":"stdout","time":11101.31849299,"data":"[104/113] 7b.sql: lần 1 320 ms, lần 2 216 ms, trung vị 216 ms\n"}
+,{"stream_name":"stdout","time":11101.318496882,"data":"[105/113] 7c.sql: lần 1 7543 ms, lần 2 3674 ms, trung vị 3648 ms\n"}
+,{"stream_name":"stdout","time":11101.318500831,"data":"[106/113] 8a.sql: lần 1 2166 ms, lần 2 1173 ms, trung vị 1166 ms\n"}
+,{"stream_name":"stdout","time":11101.318506705,"data":"[107/113] 8b.sql: lần 1 314 ms, lần 2 265 ms, trung vị 266 ms\n"}
+,{"stream_name":"stdout","time":11101.318515311,"data":"[108/113] 8c.sql: lần 1 8343 ms, lần 2 6597 ms, trung vị 6597 ms\n"}
+,{"stream_name":"stdout","time":11101.318556102,"data":"[109/113] 8d.sql: lần 1 3040 ms, lần 2 2873 ms, trung vị 2911 ms\n"}
+,{"stream_name":"stdout","time":11101.318561484,"data":"[110/113] 9a.sql: lần 1 488 ms, lần 2 456 ms, trung vị 442 ms\n"}
+,{"stream_name":"stdout","time":11101.318565453,"data":"[111/113] 9b.sql: lần 1 452 ms, lần 2 434 ms, trung vị 434 ms\n"}
+,{"stream_name":"stdout","time":11101.318602413,"data":"[112/113] 9c.sql: lần 1 792 ms, lần 2 721 ms, trung vị 693 ms\n"}
+,{"stream_name":"stdout","time":11101.318606678,"data":"[113/113] 9d.sql: lần 1 5272 ms, lần 2 4854 ms, trung vị 4846 ms\n"}
+,{"stream_name":"stdout","time":11103.39836537,"data":"giữa lần  trung bình (%)  trung vị (%)  độ lệch chuẩn\n"}
+,{"stream_name":"stdout","time":11103.398404421,"data":"  1 và 2          -29.06        -24.40          21.47\n"}
+,{"stream_name":"stdout","time":11103.398411037,"data":"  2 và 3           -0.12         -0.20           3.51\n"}
+,{"stream_name":"stdout","time":11103.398416265,"data":"  3 và 4           -0.33         -0.06           4.60\n"}
+,{"stream_name":"stdout","time":11103.398421519,"data":"  4 và 5           -0.07         -0.15           2.93\n"}
+,{"stream_name":"stderr","time":11103.44967241,"data":"/tmp/ipykernel_16/920932124.py:16: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.\n"}
+,{"stream_name":"stderr","time":11103.449718218,"data":"  plt.boxplot([100 * (norm[k] - norm[k - 1]) for k in range(1, 5)], labels=[f\"k = {k}\" for k in range(1, 5)])\n"}
+,{"stream_name":"stderr","time":11103.449724075,"data":"\n"}
+,{"stream_name":"stderr","time":11103.449728055,"data":"/tmp/ipykernel_16/920932124.py:16: MatplotlibDeprecationWarning: The 'labels' parameter of boxplot() has been renamed 'tick_labels' since Matplotlib 3.9; support for the old name will be dropped in 3.11.\n"}
+,{"stream_name":"stderr","time":11103.449732798,"data":"  plt.boxplot([100 * (norm[k] - norm[k - 1]) for k in range(1, 5)], labels=[f\"k = {k}\" for k in range(1, 5)])\n"}
+,{"stream_name":"stderr","time":11107.936982062,"data":"/usr/local/lib/python3.13/dist-packages/mistune.py:435: SyntaxWarning: invalid escape sequence '\\|'\n"}
+,{"stream_name":"stderr","time":11107.937037582,"data":"  cells[i][c] = re.sub('\\\\\\\\\\|', '|', cell)\n"}
+,{"stream_name":"stderr","time":11108.314468876,"data":"/usr/local/lib/python3.13/dist-packages/nbconvert/filters/filter_links.py:36: SyntaxWarning: invalid escape sequence '\\_'\n"}
+,{"stream_name":"stderr","time":11108.314498511,"data":"  text = re.sub(r'_', '\\_', text) # Escape underscores in display text\n"}
+,{"stream_name":"stderr","time":11110.030332402,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to notebook\n"}
+,{"stream_name":"stderr","time":11110.133950157,"data":"[NbConvertApp] Writing 58990 bytes to __notebook__.ipynb\n"}
+,{"stream_name":"stderr","time":11113.358828934,"data":"[NbConvertApp] Converting notebook __notebook__.ipynb to html\n"}
+,{"stream_name":"stderr","time":11114.385301977,"data":"[NbConvertApp] Support files will be in __results___files/\n"}
+,{"stream_name":"stderr","time":11114.385341955,"data":"[NbConvertApp] Making directory __results___files\n"}
+,{"stream_name":"stderr","time":11114.385878323,"data":"[NbConvertApp] Writing 329799 bytes to __results__.html\n"}
+]

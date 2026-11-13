@@ -185,6 +185,10 @@ s = re.sub(r"^ListenOn = .*$", "ListenOn = localhost", s, flags=re.M)
 s = re.sub(r"^PostgreSQLConnectString = .*$",
            "PostgreSQLConnectString = dbname='imdbload' user='postgres' password='postgres' host='localhost'", s, flags=re.M)
 cfg.write_text(s)
+# baoctl.py (run_queries gọi sau mỗi lần retrain để nạp model mới) nối tới host "bao_server" của Docker
+ctl = run / "bao_server/baoctl.py"
+ctl.write_text(ctl.read_text().replace('("bao_server", 9381)', '("localhost", 9381)'))
+assert '"bao_server"' not in ctl.read_text(), "chưa vá được baoctl.py"
 for f in ["run_queries.py", "run_test_queries.py"]:
     t = (run / f).read_text()
     assert "host=pg_bao" not in t and "10.5.0.6" not in t, f"chưa vá được {f}"
@@ -215,7 +219,7 @@ source /tmp/bao_vars.sh
 cd /tmp/bao_run
 start_server() {   # $1 = thư mục model (bỏ trống = chưa có model)
   pkill -f "python -u main.py" 2> /dev/null; sleep 2
-  (cd bao_server && nohup python -u main.py $1 >> $OUT/bao_server.log 2>&1 &)
+  (cd bao_server && exec setsid nohup python -u main.py $1) >> $OUT/bao_server.log 2>&1 < /dev/null &
   for _ in $(seq 120); do (exec 3<>/dev/tcp/localhost/9381) 2> /dev/null && return 0; sleep 1; done
   echo "Bao server không lên, xem $OUT/bao_server.log"; tail $OUT/bao_server.log; return 1
 }
@@ -233,6 +237,11 @@ echo "job__$SPLIT,train_seconds,$((T1 - T0))$NOTE" >> $OUT/bao_training_times.cs
 grep -o "\[[0-9]*/19\][[:space:]]*Retraining done" $OUT/train_console.log | tail -1
 [ -d bao_server/bao_default_model ] || { echo "Không có model sau khi train"; tail -20 $OUT/train_console.log; exit 1; }
 rm -rf $OUT/model__bao__job__$SPLIT && cp -r bao_server/bao_default_model $OUT/model__bao__job__$SPLIT
+pkill -f "python -u main.py" 2> /dev/null
+# mỗi lần retrain, baoctl.py phải nạp được model mới vào server; nếu không, Bao đã chọn plan mà không có model
+NLOAD=$(grep -c "Accepted new model" $OUT/bao_server.log)
+echo "== Server đã nạp model mới $NLOAD lần (mong đợi khoảng 19)"
+[ "$NLOAD" -ge 1 ] || { echo "Server chưa từng nạp model khi train: kết quả train không hợp lệ"; grep -m3 -A6 Traceback $OUT/train_console.log; exit 1; }
 echo "== Train xong sau $(( (T1 - T0) / 60 )) phút${NOTE:+ (bị dừng ở mốc giới hạn thời gian)}"''',
 
 # ---------------------------------------------------------------- 8. test: PostgreSQL rồi Bao, cùng trạng thái cache
@@ -247,13 +256,14 @@ python -u run_test_queries.py --use_postgres --database_name imdbload --query_di
 echo "== Nạp model vào Bao server"
 N=$(wc -l < $OUT/bao_server.log)
 pkill -f "python -u main.py" 2> /dev/null; sleep 2
-(cd bao_server && nohup python -u main.py $OUT/model__bao__job__$SPLIT >> $OUT/bao_server.log 2>&1 &)
+(cd bao_server && exec setsid nohup python -u main.py $OUT/model__bao__job__$SPLIT) >> $OUT/bao_server.log 2>&1 < /dev/null &
 for _ in $(seq 120); do tail -n +$((N + 1)) $OUT/bao_server.log | grep -q "Accepted new model" && break; sleep 1; done
 tail -n +$((N + 1)) $OUT/bao_server.log | grep -q "Accepted new model" || { echo "Bao server chưa nạp model"; exit 1; }
 echo "== Bao trên $Q (3 lần/câu)"
 rm -f $OUT/test__bao__job__$SPLIT.txt
 python -u run_test_queries.py --use_bao --database_name imdbload --query_dir $Q \
   --output_file $OUT/test__bao__job__$SPLIT.txt > /dev/null
+pkill -f "python -u main.py" 2> /dev/null
 echo "== Xong test"''',
 
 # ---------------------------------------------------------------- 9. tóm tắt
@@ -357,9 +367,10 @@ echo "Đã tạo và làm nóng imdbload50"''',
 source /tmp/bao_vars.sh
 cd /tmp/bao_run
 S=base_query_split_1
+sed -i "s/dbname='imdbload'/dbname='imdbload50'/" bao_server/bao.cfg
 (cd bao_server && python clear_experience.py && rm -rf bao_default_model bao_previous_model)
 pkill -f "python -u main.py" 2> /dev/null; sleep 2
-(cd bao_server && nohup python -u main.py >> $OUT/bao_server.log 2>&1 &)
+(cd bao_server && exec setsid nohup python -u main.py) >> $OUT/bao_server.log 2>&1 < /dev/null &
 for _ in $(seq 120); do (exec 3<>/dev/tcp/localhost/9381) 2> /dev/null && break; sleep 1; done
 T0=$(date +%s)
 timeout $TRAIN_LIMIT_S python -u run_queries.py --database_name imdbload50 --query_dir queries/job__$S/train \
@@ -368,6 +379,10 @@ RC=$?; T1=$(date +%s); NOTE=""; [ $RC -eq 124 ] && NOTE=",truncated"
 echo "job__${S}__imdb50,train_seconds,$((T1 - T0))$NOTE" >> $OUT/bao_training_times.csv
 [ -d bao_server/bao_default_model ] || { echo "Không có model sau khi train"; tail -20 $OUT/train_console.log; exit 1; }
 rm -rf $OUT/model__bao__job__${S}__imdb50 && cp -r bao_server/bao_default_model $OUT/model__bao__job__${S}__imdb50
+pkill -f "python -u main.py" 2> /dev/null
+NLOAD=$(grep -c "Accepted new model" $OUT/bao_server.log)
+echo "== Server đã nạp model mới $NLOAD lần (mong đợi khoảng 19)"
+[ "$NLOAD" -ge 1 ] || { echo "Server chưa từng nạp model khi train: kết quả train không hợp lệ"; grep -m3 -A6 Traceback $OUT/train_console.log; exit 1; }
 echo "== Bao-50 train xong sau $(( (T1 - T0) / 60 )) phút"''',
     r'''%%bash
 # Test trên imdbload50 (tập test của base_query_split_1): PostgreSQL, Bao-Full (model train trên IMDB đầy đủ ở notebook
@@ -375,7 +390,8 @@ echo "== Bao-50 train xong sau $(( (T1 - T0) / 60 )) phút"''',
 source /tmp/bao_vars.sh
 cd /tmp/bao_run
 S=base_query_split_1; Q=queries/job__$S/test
-FULL=$(ls -d /kaggle/input/*/bao_logs/model__bao__job__$S /kaggle/input/*/model__bao__job__$S 2>/dev/null | head -1)
+# Kaggle gắn output notebook ở /kaggle/input/notebooks/<user>/<slug>/... (độ sâu có thể thay đổi): tìm theo tên
+FULL=$(find /kaggle/input -type f -name nn_weights -path "*/model__bao__job__$S/*" 2>/dev/null | head -1 | xargs -r dirname)
 [ -n "$FULL" ] || { echo "Không thấy model Bao-Full trong /kaggle/input"; ls -R /kaggle/input | head -30; exit 1; }
 python -u run_test_queries.py --use_postgres --database_name imdbload50 --query_dir $Q \
   --output_file $OUT/test__postgres__job__${S}__imdb50.txt > /dev/null
@@ -383,13 +399,14 @@ for M in full:$FULL 50:$OUT/model__bao__job__${S}__imdb50; do
   NAME=${M%%:*}; DIR=${M#*:}
   N=$(wc -l < $OUT/bao_server.log)
   pkill -f "python -u main.py" 2> /dev/null; sleep 2
-  (cd bao_server && nohup python -u main.py $DIR >> $OUT/bao_server.log 2>&1 &)
+  (cd bao_server && exec setsid nohup python -u main.py $DIR) >> $OUT/bao_server.log 2>&1 < /dev/null &
   for _ in $(seq 120); do tail -n +$((N + 1)) $OUT/bao_server.log | grep -q "Accepted new model" && break; sleep 1; done
   tail -n +$((N + 1)) $OUT/bao_server.log | grep -q "Accepted new model" || { echo "Bao server chưa nạp model $DIR"; exit 1; }
   echo "== Test Bao-$NAME ($DIR)"
   python -u run_test_queries.py --use_bao --database_name imdbload50 --query_dir $Q \
     --output_file $OUT/test__bao_${NAME}__job__${S}__imdb50.txt > /dev/null
 done
+pkill -f "python -u main.py" 2> /dev/null
 echo "== Xong"''',
     r'''import pandas as pd, os, pathlib
 OUT = pathlib.Path("/kaggle/working/ablation83_logs"); S = "base_query_split_1"

@@ -1,0 +1,5 @@
+so_sánh,nguồn,chậm_hơn,nhanh_hơn,tổng_A_s,tổng_B_s,số_câu
+Bao-Full so với PostgreSQL,nhóm (Kaggle),16,0,22.546816999999997,18.621299,19
+Bao-50 so với PostgreSQL,nhóm (Kaggle),14,1,20.472377,18.621299,19
+Bao-Full so với Bao-50,nhóm (Kaggle),2,3,22.546816999999997,20.472377,19
+Bao-Full so với Bao-50,tác giả (log công bố),3,1,22.144427,19.483956,19
