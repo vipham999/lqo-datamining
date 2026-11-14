@@ -1,6 +1,31 @@
-.playwright-mcp/
-analysis/.venv/
+# Python
 __pycache__/
+*.py[cod]
+.venv/
+venv/
+analysis/.venv/
+.ipynb_checkpoints/
+
+# Hệ điều hành / editor
 .DS_Store
-kaggle/*.log
+.vscode/
+.idea/
+
+# Tài liệu văn phòng (báo cáo, slide, bài giảng) – không đưa lên git
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.pdf
+~$*
+
+# Video demo và script quay video
 demo_output/
+*.mp4
+*.webm
+*.mov
+scripts/record_demo.py
+.playwright-mcp/
+
+# Log tạm
+kaggle/*.log
