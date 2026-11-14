@@ -29,3 +29,6 @@ scripts/record_demo.py
 
 # Log tạm
 kaggle/*.log
+
+# Bản dịch bài báo (chỉ giữ trên máy)
+BAN_DICH_BAI_BAO.md

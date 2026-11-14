@@ -1,79 +1,64 @@
-# Tái lập bài báo "Is Your Learned Query Optimizer Behaving As You Expect?" + mở rộng Data Mining
+# Learned Query Optimizer – kiểm chứng bài báo và hướng phát triển của Nhóm 1
 
-Hướng dẫn chạy lại thực nghiệm của bài báo (Lehmann, Sulimov, Stockinger, PVLDB 2024) trên
-**MacBook Pro M1 Pro (8 core, 16 GB RAM, ARM64, không có GPU NVIDIA)**, rồi thêm phần **data mining**
-để so sánh plan cũ (PostgreSQL) với plan mới (LQO).
+Đồ án môn **Hệ cơ sở dữ liệu tiên tiến**. Nhóm tái lập bài báo
+*"Is Your Learned Query Optimizer Behaving As You Expect? A Machine Learning Perspective"*
+(Lehmann, Sulimov, Stockinger, PVLDB 2024) trên benchmark **JOB / IMDB**, rồi thử hướng riêng:
+một mô hình phân loại nhỏ chọn cách chạy cho PostgreSQL, và khai phá dữ liệu để hiểu vì sao mô hình thua.
 
-Repo của tác giả: [edualc/lqo_ml_perspective](https://github.com/edualc/lqo_ml_perspective), đã clone vào `lqo_ml_perspective/`.
-
----
-
-## Trạng thái hiện tại
-
-| Thành phần | Trạng thái |
-|---|---|
-| Image `pg_lqo_arm64` (PostgreSQL 12.5 + `pg_hint_plan` + `pg_bao`, ARM64) | ✅ Đã build và chạy thử: cấu hình nạp đúng, hint `MergeJoin`/`Leading` có tác dụng |
-| Image `bao_server_arm64` | ✅ Đã build (748 MB), PyTorch 1.13.0 import được |
-| Script Phần B, C và ablation 8.6/8.7 | ✅ Đã chạy thử trọn pipeline trên một CSDL nhỏ tự sinh |
-| C1 trên log của tác giả | ✅ Đã chạy, kết quả ở `analysis/output/c1_authors_*.csv` |
-| Dữ liệu IMDB | ✅ Đã nạp vào `imdbload` (12 GB), `pg_hint_plan` hoạt động, đã chạy thử JOB 1a |
-| Dữ liệu STACK | ❌ Không làm (dump quá lớn) |
+- Repo của tác giả: [edualc/lqo_ml_perspective](https://github.com/edualc/lqo_ml_perspective), clone vào `lqo_ml_perspective/`.
+- Kiến trúc hệ thống: [ARCHITECTURE.md](ARCHITECTURE.md).
+- Kịch bản demo: [DEMO_KICH_BAN.md](DEMO_KICH_BAN.md).
+- Ghi chú IMDB/JOB: [GHI_CHU_IMDB_JOB.md](GHI_CHU_IMDB_JOB.md), [GHI_CHU_113_TRUY_VAN_JOB.md](GHI_CHU_113_TRUY_VAN_JOB.md).
+- Chạy HybridQO trên Kaggle: [HUONG_DAN_KAGGLE_HYBRIDQO.md](HUONG_DAN_KAGGLE_HYBRIDQO.md).
 
 ---
 
-## Mục lục
+## 1. Kết quả chính
 
-0. [Phạm vi](#0-phạm-vi)
-1. [Chuẩn bị máy](#1-chuẩn-bị-máy)
-2. [Cấu trúc thư mục](#2-cấu-trúc-thư-mục)
-3. [Môi trường phân tích và dữ liệu](#3-môi-trường-phân-tích-và-dữ-liệu)
-4. [Khởi động PostgreSQL và Bao](#4-khởi-động-postgresql-và-bao)
-5. [Nạp CSDL IMDB](#5-nạp-csdl-imdb)
-6. [Phần A – Tái lập thực nghiệm](#6-phần-a--tái-lập-thực-nghiệm)
-7. [Phần B – Ghi log plan](#7-phần-b--ghi-log-plan)
-8. [Phần C – Data mining](#8-phần-c--data-mining)
-9. [Phần D – Thêm benchmark](#9-phần-d--thêm-benchmark)
-10. [Lỗi thường gặp](#10-lỗi-thường-gặp)
-11. [Checklist](#11-checklist)
+Quy ước chung: cache nóng, mỗi câu chạy 3 lần lấy lần thứ 3; **thắng/thua** khi nhanh/chậm hơn PostgreSQL quá **10%**;
+speedup = tổng thời gian PostgreSQL / tổng thời gian phương pháp (> 1 là nhanh hơn). 9 split của bài báo
+(Leave-one-out, Random, Base query × 3), tổng 233 câu test.
 
----
+### Thí nghiệm 1 – Bài báo nói đúng không?
 
-## 0. Phạm vi
-
-| Phần trong bài báo | Làm được? | Cách làm |
+| Phương pháp | Bài báo (log tác giả) | Nhóm |
 |---|---|---|
-| Baseline PostgreSQL trên JOB | ✅ | `scripts/run_baseline.sh` |
-| Bao trên JOB | 🟡 | `scripts/run_bao_split.sh`, train trên CPU, nên chạy 3 split: LOO-1, RND-1, BQ-1 |
-| HybridQO | ❌ | Không chạy (~20 giờ/split) → dùng log của tác giả |
-| Neo, Balsa, LEON | ❌ | Cần CUDA và 20–130 giờ/split → dùng log của tác giả `experiment_logs/*.csv` |
-| STACK | ❌ (tạm) | Dump rất lớn, chỉ làm khi đủ ổ đĩa |
-| Ablation 8.3–8.7 | ✅ | `make_imdb50.sh`, `run_and_log.py --tag`, `ablation_k_runs.py`, `join_orders.py` |
-| Data mining C1–C3 | ✅ | `c1_win_loss.py`, `c2_classify.py`, `c3_explain.py` |
-| Thêm benchmark CEB-IMDb | ✅ | Dùng lại CSDL IMDB |
+| Bao | 9 / 34 / 190 thắng/hòa/thua, **0,83×** | Mac: 28 / 28 / 177, **1,08×** · Kaggle: 8 / 46 / 179, **0,92×** |
+| HybridQO | 34 / 82 / 117, **1,00×** | Kaggle: 0 / 124 / 109, **0,97×** |
 
-Vì phần cứng và cấu hình khác bài báo, **số tuyệt đối sẽ khác**. Mục tiêu là kiểm tra **xu hướng**:
-PostgreSQL có còn thắng Bao không, Base Query split có khó nhất không. Ghi rõ khác biệt này trong báo cáo.
+- **Kết luận giống bài báo:** LQO chưa nhanh hơn PostgreSQL một cách ổn định; thua ở phần lớn câu.
+- Bao thua chủ yếu ở câu nhỏ (chi phí gọi mô hình ~0,15 s/câu) và chọn sai plan ở vài câu lớn.
+- **Ablation** (tắt từng thành phần, chạy xen kẽ, 8 lượt trên Kaggle):
+  - Tắt GEQO: phần lớn không đổi, vài câu nhiều bảng chậm đi rõ (24b, 28a).
+  - Tắt bitmap + TID scan: tác động **hai chiều** (có câu chậm đi, có câu nhanh lên) → một tham số không tốt cho mọi câu.
+  - Dữ liệu thay đổi (train trên IMDB 50%, test trên IMDB đầy đủ): Bao-50 chọn sai hint ở một số câu.
 
----
+Số liệu: `analysis/output/exp1/` (tổng hợp ở `exp1_tomtat.txt`).
 
-## 1. Chuẩn bị máy
+### Thí nghiệm 2 – Mô hình nhỏ có giúp PostgreSQL nhanh hơn?
 
-**Giải phóng ổ đĩa (bắt buộc):** máy hiện chỉ còn trống **~4 GB**. Cần **ít nhất 40–60 GB**:
+Mỗi câu chọn 1 trong **6 phương án**: `default`, `no_nestloop`, `no_hashjoin`, `no_mergejoin`, `no_seqscan`,
+`no_indexscan`. Đặc trưng: 34 đặc trưng lấy từ SQL + `EXPLAIN` (không dùng gì có sau khi chạy). Nhãn: phương án
+nhanh nhất, giữ `default` nếu không nhanh hơn ít nhất 5%.
 
-| Thành phần | Dung lượng ước tính |
+| Phương pháp | Speedup tổng (233 câu) |
 |---|---|
-| `imdb.tgz` + CSV giải nén | ~5 GB (xóa được sau khi nạp) |
-| CSDL IMDB trong PostgreSQL (kèm index) | ~10 GB |
-| Bản sao IMDB-50% (ablation 8.3) | ~10 GB |
-| Image `bao_server_arm64` (có PyTorch) | ~1.5 GB |
-| Log, mô hình, dự phòng | ~10 GB |
+| Oracle (biết trước phương án nhanh nhất) | **1,53×** – còn nhiều chỗ để cải thiện |
+| Decision Tree / Random Forest / LightGBM | 0,82× / 0,80× / 0,80× |
+| **Random Forest + bỏ phiếu trắng (ngưỡng 0,6)** | **1,06×** – chỉ đổi 6/233 lần |
 
-```bash
-df -h /System/Volumes/Data      # dung lượng trống
-docker system df                # Docker đang chiếm bao nhiêu
-```
+- Thua dồn vào vài câu: riêng 26a chiếm ~77% thời gian bị mất.
+- Khoảng 65 câu "thua" là câu rất nhỏ, chậm đi do chi phí gọi `EXPLAIN`.
 
-**RAM cho Docker:** vào Docker Desktop → Settings → Resources, đặt Memory **10–12 GB** (hiện là 8 GB) và CPUs **8**.
+Số liệu: `analysis/output/exp2/` (tổng hợp ở `exp2_tomtat.txt`).
+
+### Khai phá dữ liệu – Vì sao mô hình thua, và sửa thế nào?
+
+1. **Tìm luật kết hợp** trên 113 câu (695 luật thử, giữ 37 luật qua kiểm định Fisher + Benjamini–Hochberg).
+   Ví dụ: *"plan có ≥ 2 hash join → tắt hash join giúp"* đúng 13/28 câu (lift 2,8), nhưng khi sai thì sai rất nặng.
+2. **Rút ra nguyên nhân:** mô hình đổi cách chạy **cả khi không chắc**; lợi nhỏ khi đúng, mất lớn khi sai.
+3. **Sửa và đo lại:** chỉ đổi khi xác suất dự đoán ≥ ngưỡng (`exp2_abstain.py`) → Random Forest từ 0,80× lên 1,06×,
+   ổn định trong khoảng ngưỡng 0,5–0,7. Lưu ý: ngưỡng 0,6 được chọn sau khi thử nhiều ngưỡng.
 
 ---
 
@@ -81,384 +66,134 @@ docker system df                # Docker đang chiếm bao nhiêu
 
 ```
 lqo-datamining/
-├── README.md
-├── .dockerignore                 ← giới hạn build context của Docker
-├── lqo_ml_perspective/           ← repo tác giả (bao.cfg đã sửa CSDL: so → imdbload)
-├── infra/
-│   ├── Dockerfile.pg             ← PostgreSQL 12.5 + pg_hint_plan (PG12) + pg_bao, build từ source
-│   ├── Dockerfile.bao            ← Bao server + thư viện Python (ARM64)
-│   ├── requirements.bao.txt      ← torch==1.13.0 thay cho 1.13.0+cpu (chỉ có trên x86)
-│   ├── postgresql.lqo.conf       ← cấu hình đã thu nhỏ cho 16 GB RAM
-│   ├── start.sh                  ← initdb lần đầu, chép conf, chạy postgres
-│   └── docker-compose.yml        ← pg_bao (10.5.0.5) + bao_server (10.5.0.6), giống repo gốc
+├── app/                      ← dashboard Streamlit
+│   ├── streamlit_app.py      ← khung 6 tab
+│   ├── group_results.py      ← tab Thí nghiệm 1, Thí nghiệm 2, Khai phá dữ liệu
+│   ├── prototype.py          ← tab "5. Demo mô hình" (chạy thật trên PostgreSQL)
+│   ├── core.py, prepare_data.py
+├── infra/                    ← Dockerfile PostgreSQL 12.5 + pg_hint_plan + pg_bao (ARM64), Bao server, compose
 ├── scripts/
-│   ├── load_imdb.sh              ← nạp IMDB + index bổ sung + ANALYZE
-│   ├── make_imdb50.sh            ← ablation 8.3: tạo imdbload50
-│   ├── start_bao_server.sh       ← chạy Bao server trong tmux
-│   ├── run_baseline.sh           ← baseline PostgreSQL (113 câu × 3 lần)
-│   ├── run_bao_split.sh          ← train + test Bao trên 1 split, ghi thời gian train
-│   ├── run_and_log.py            ← Phần B: chạy truy vấn × hint set, ghi JSONL kèm plan
-│   ├── join_orders.py            ← ablation 8.7: bushy và left-deep
-│   ├── ablation_k_runs.py        ← ablation 8.6: số lần chạy k
-│   ├── extract_features.py       ← Phần C: đặc trưng SQL + plan
-│   ├── label.py                  ← Phần C: nhãn "plan tốt nhất"
-│   ├── c1_win_loss.py            ← C1: thắng/hòa/thua + Wilcoxon + sign test
-│   ├── c2_classify.py            ← C2: phân loại với 3 kiểu chia của bài báo
-│   ├── c3_explain.py             ← C3: K-means, Apriori, feature importance, cây quyết định, TED
-│   └── lqo_common.py             ← đọc các loại log về cùng một định dạng
-├── logs/                         ← log thô (mount vào cả hai container tại /app/logs)
-└── analysis/
-    ├── .venv/                    ← môi trường Python cho phân tích (đã tạo)
-    ├── requirements.txt
-    └── output/                   ← bảng CSV và hình PNG
+│   ├── load_imdb.sh, make_imdb50.sh, warmup_imdb.sh     ← nạp IMDB, tạo IMDB 50%, làm nóng cache
+│   ├── run_fair_comparison.sh, run_bao_split.sh, ...    ← Thí nghiệm 1 trên Mac
+│   ├── ablation_interleaved.py, ablation_k_runs.py      ← ablation
+│   ├── exp1_tables.py, c1_win_loss.py, lqo_common.py    ← phân tích Thí nghiệm 1
+│   ├── exp2_collect.sh, exp2_analyze.py                 ← Thí nghiệm 2
+│   ├── exp2_mining.py, exp2_abstain.py                  ← khai phá dữ liệu, chính sách bỏ phiếu trắng
+│   └── demo_start.sh, demo_26a.sh, demo_ablation.sh, demo_83.sh   ← demo trực tiếp trên terminal
+├── kaggle/                   ← sinh notebook Kaggle (Bao, HybridQO, ablation) và các lần chạy
+├── kaggle_runs/, bao_kaggle_log/, hybridqo_log/   ← log tải về từ Kaggle
+├── logs/                     ← log thô trên Mac (không sửa tay)
+├── analysis/output/          ← bảng kết quả (exp1/, exp2/, c1_*.csv, ablation_*.csv)
+└── lqo_ml_perspective/       ← repo tác giả (submodule)
 ```
-
-Trong container: `/app/lqo` = repo tác giả, `/app/bao` = `lqo_ml_perspective/bao`, `/app/scripts`, `/app/logs`.
 
 ---
 
-## 3. Môi trường phân tích và dữ liệu
+## 3. Cài đặt
 
-### 3.1 Python trên Mac
+**Máy của nhóm:** MacBook Pro M1 Pro, 8 core, 16 GB RAM, không GPU. Cần trống **≥ 40 GB** ổ đĩa;
+Docker (OrbStack/Docker Desktop) cấp **10–12 GB RAM, 8 CPU**.
 
-`analysis/.venv` đã được tạo sẵn. Python mặc định của conda trên máy đang lỗi scipy, nên luôn dùng môi trường này.
-Venv ghi cứng đường dẫn tuyệt đối, nên sau khi đổi tên hoặc chuyển thư mục project phải tạo lại:
-`rm -rf analysis/.venv && /opt/miniconda3/bin/python3 -m venv analysis/.venv && analysis/.venv/bin/pip install -r analysis/requirements.txt`.
-
-```bash
-cd ~/Desktop/lqo-datamining
-source analysis/.venv/bin/activate
-# cài lại nếu cần: pip install -r analysis/requirements.txt
-```
-
-### 3.2 Chạy ngay: C1 trên log của tác giả (không cần CSDL)
+### 3.1 PostgreSQL và Bao
 
 ```bash
-python scripts/c1_win_loss.py --authors lqo_ml_perspective/experiment_logs/20240103__combined.csv
-```
-
-Kết quả đã chạy (tất cả split JOB, tập test, ngưỡng hòa ±10%):
-
-| Phương pháp | Số câu | Thắng | Hòa | Thua | Workload PG (s) | Workload LQO (s) | Speedup |
-|---|---|---|---|---|---|---|---|
-| HybridQO | 233 | 34 | 82 | 117 | 264.2 | 263.9 | 1.00× |
-| Bao | 233 | 9 | 34 | 190 | 264.2 | 320.1 | 0.83× |
-| Balsa | 233 | 16 | 4 | 213 | 264.2 | 958.9 | 0.28× |
-| Neo | 233 | 21 | 12 | 200 | 264.2 | 1665.4 | 0.16× |
-| LEON | 233 | 0 | 0 | 233 | 264.2 | 265553.4 | 0.001× |
-
-→ Khớp với kết luận của bài báo: PostgreSQL ≥ HybridQO > Bao > Balsa/Neo > LEON.
-Chi tiết theo từng split và p-value nằm ở `analysis/output/c1_authors_summary.csv`.
-
-Notebook vẽ lại các hình của tác giả: `lqo_ml_perspective/notebooks/FullEvaluation_JOB_ResultAnalysis.ipynb`.
-
-### 3.3 Dữ liệu IMDB (sau khi đã giải phóng ổ đĩa)
-
-```bash
-cd ~/Desktop/lqo-datamining/lqo_ml_perspective/data
-mkdir -p imdb && cd imdb
-wget -c https://event.cwi.nl/da/job/imdb.tgz && tar -xvzf imdb.tgz   # link cũ homepages.cwi.nl/~boncz/job đã 404
-cd .. && python prepend_imdb_headers.py   # thêm header cho các file CSV; cần absl-py (pip install absl-py)
-```
-
-STACK (tùy chọn, rất lớn): `wget https://www.dropbox.com/s/98u5ec6yb365913/so_pg12` vào `data/stack/`.
-
----
-
-## 4. Khởi động PostgreSQL và Bao
-
-```bash
-cd ~/Desktop/lqo-datamining/infra
-docker compose build bao        # lần đầu: cài PyTorch ARM64 (~1.5 GB), CHƯA chạy thử
+cd infra
+docker compose build            # pg_bao (PostgreSQL 12.5 ARM64) + bao_server (PyTorch 1.13 ARM64)
 docker compose up -d
-docker exec pg_bao psql -c "SELECT version();"                 # PostgreSQL 12.5 ... aarch64
-docker exec pg_bao psql -c "SHOW shared_preload_libraries;"    # pg_bao
+docker exec pg_bao psql -c "SHOW shared_preload_libraries;"   # phải có pg_bao
 ```
 
-Image `pg_lqo_arm64` đã được build sẵn. Nếu cần build lại: `docker compose build postgres` (~5 phút).
+Cấu hình `infra/postgresql.lqo.conf` thu nhỏ so với bài báo: `shared_buffers` 4 GB (bài báo 32 GB),
+`work_mem` 256 MB (4 GB), `geqo` bật, `autovacuum` tắt. Vì vậy nhóm so **xu hướng**, không so số tuyệt đối.
 
-**Cấu hình** (`infra/postgresql.lqo.conf`, so với Bảng 2 của bài báo):
-
-| Tham số | Bài báo | Ở đây |
-|---|---|---|
-| `shared_buffers` | 32 GB | 4 GB |
-| `work_mem` | 4 GB | 256 MB |
-| `temp_buffers` | 32 GB | 32 GB |
-| `effective_cache_size` | 32 GB | 32 GB |
-| `max_worker_processes` | 8 | 8 |
-| `geqo` | on (Bao) / off | on, tắt theo phiên khi cần |
-| `autovacuum` | off | off |
-| bitmap/tid scan | on | on |
-| Phần cứng | x86, 16 core, 64 GB, T4 | Apple M1 Pro, 8 core, 16 GB |
-
-Sửa file conf rồi chạy `docker compose restart postgres` là áp dụng (start.sh chép lại conf mỗi lần khởi động).
-`pg_hint_plan` không preload, mà được nạp theo phiên bằng `LOAD 'pg_hint_plan'` (`join_orders.py` tự làm việc này).
-
----
-
-## 5. Nạp CSDL IMDB
+### 3.2 Dữ liệu IMDB
 
 ```bash
-docker exec -it pg_bao bash /app/scripts/load_imdb.sh     # ~15–30 phút
+cd lqo_ml_perspective/data && mkdir -p imdb && cd imdb
+wget -c https://event.cwi.nl/da/job/imdb.tgz && tar -xvzf imdb.tgz
+cd .. && python prepend_imdb_headers.py
+docker exec -it pg_bao bash /app/scripts/load_imdb.sh        # ~15–30 phút: 21 bảng, ~12 GB
+docker exec pg_bao bash /app/scripts/warmup_imdb.sh          # làm nóng cache trước khi đo
 ```
 
-Script nạp schema và dữ liệu bằng script của Balsa. Script này đã tạo sẵn index `complete_cast(subject_id)` và
-`(status_id)` (Mục 8.1.1) và chạy `ANALYZE` **một lần** ở cuối. Kết quả đã nạp: 21 bảng, CSDL 12 GB,
-`cast_info` 36.244.344 dòng, `title` 2.528.312 dòng.
+### 3.3 Môi trường Python
 
-Kiểm tra hint:
-
-```bash
-docker exec pg_bao psql -d imdbload -c "LOAD 'pg_hint_plan';" \
-  -c "/*+ MergeJoin(ml lt) */ EXPLAIN SELECT COUNT(*) FROM movie_link ml JOIN link_type lt ON ml.link_type_id = lt.id;"
-# phải thấy "Merge Join"
-```
-
----
-
-## 6. Phần A – Tái lập thực nghiệm
-
-Các lệnh dưới đây chạy **trong container `bao_server`**, nên dùng tmux vì có lệnh chạy hàng giờ:
-
-```bash
-docker exec -it bao_server bash
-tmux new -s run          # thoát mà vẫn chạy: Ctrl+B rồi D; quay lại: tmux attach -t run
-```
-
-### 6.1 Baseline PostgreSQL
-
-```bash
-bash /app/scripts/run_baseline.sh                      # 113 câu × 3 lần → /app/logs/test__postgres__job__*.txt
-bash /app/scripts/run_baseline.sh imdbload no_geqo     # ablation 8.5: tắt GEQO
-```
-
-### 6.2 Bao
-
-```bash
-bash /app/scripts/run_bao_split.sh job__random_split_1
-bash /app/scripts/run_bao_split.sh job__leave_one_out_split_1
-bash /app/scripts/run_bao_split.sh job__base_query_split_1
-```
-
-Mỗi lần chạy, script sẽ:
-1. Xóa kinh nghiệm và model cũ, rồi khởi động Bao server.
-2. Train trên `queries/<split>/train`; thời gian train ghi vào `logs/bao_training_times.csv`.
-3. Lưu model và test trên `queries/<split>/test`.
-
-### 6.3 So sánh với PostgreSQL (trên Mac)
-
-```bash
-python scripts/c1_win_loss.py --baseline txt:logs/test__postgres__job__<thời_gian>.txt \
-    --candidate txt:logs/test__bao__job__random_split_1__<thời_gian>.txt --name Bao_RND1
-```
-
-So số của bạn với `analysis/output/c1_authors_summary.csv` (dòng `Bao | random_split_1`) để đánh giá mức độ tái lập.
-
-### 6.4 Ablation
-
-| Mục | Lệnh |
-|---|---|
-| **8.3 Covariate shift** | `docker exec -it pg_bao bash /app/scripts/make_imdb50.sh`, rồi chạy lại baseline/Bao với `imdbload50` |
-| **8.4 Bitmap/Tid scan** | `python3 /app/scripts/run_and_log.py --query_dir /app/bao/queries/join-order-benchmark --hint_sets default --extra_set "SET enable_bitmapscan = off; SET enable_tidscan = off" --tag no_bitmap_tidscan --out /app/logs/job_ablation.jsonl` |
-| **8.5 GEQO** | `bash /app/scripts/run_baseline.sh imdbload no_geqo` |
-| **8.6 Số lần chạy k** | `python3 /app/scripts/run_and_log.py --query_dir /app/bao/queries/join-order-benchmark --hint_sets default --runs 10 --tag k_runs --out /app/logs/job_k_runs.jsonl`, rồi trên Mac: `python scripts/ablation_k_runs.py --log logs/job_k_runs.jsonl` |
-| **8.7 Bushy và left-deep** | `python3 /app/scripts/join_orders.py run --query_dir /app/bao/queries/join-order-benchmark --out /app/logs/job_join_orders.jsonl`, rồi trên Mac: `python scripts/join_orders.py analyze --log logs/job_join_orders.jsonl` |
-
-`join_orders.py` duyệt mọi cây join không có tích Descartes của các truy vấn ≤ 6 bảng (≤ 5 join). Mỗi truy vấn
-lấy mẫu tối đa `--max_plans` cây (mặc định 300). Mỗi cây được ép bằng `Leading(...)` và kiểm định bằng Mann-Whitney U.
-
----
-
-## 7. Phần B – Ghi log plan
-
-Script của repo chỉ lưu thời gian. `scripts/run_and_log.py` lưu thêm **plan JSON** của mỗi lần chạy, với 6 hint set
-kiểu Bao: `default`, `no_nestloop`, `no_hashjoin`, `no_mergejoin`, `no_seqscan`, `no_indexscan`.
-
-```bash
-# trong bao_server
-python3 /app/scripts/run_and_log.py --query_dir /app/bao/queries/join-order-benchmark \
-    --out /app/logs/job_hintsets.jsonl
-```
-
-- 113 câu × 6 hint set × 3 lần ≈ 2.000 lần chạy, mất vài giờ đến 1 ngày (timeout mặc định 3 phút).
-- Có thể **chạy tiếp** sau khi bị ngắt: script tự bỏ qua các (truy vấn, hint set, tag) đã có trong file log.
-
-Mỗi dòng log là một lần chạy:
-
-```json
-{"query_id": "1a", "benchmark": "JOB", "db": "imdbload", "hint_set": "no_nestloop", "tag": "",
- "run": 2, "planning_ms": 5.3, "execution_ms": 830.7, "timeout": false, "plan": {...}}
-```
-
-Quy ước:
-- Phân tích dùng `run = 2` (lần chạy thứ 3, hot cache) như bài báo.
-- **Plan cũ** = `default`. **Plan mới** = hint set nhanh nhất, hoặc plan Bao chọn (cột hint trong log của Bao).
-- Câu bị timeout vẫn được giữ lại, gán thời gian = timeout và đánh dấu `timeout: true`.
-
----
-
-## 8. Phần C – Data mining
-
-Chạy trên Mac với `source analysis/.venv/bin/activate`. Kết quả ghi vào `analysis/output/`.
-
-```bash
-python scripts/extract_features.py --log logs/job_hintsets.jsonl \
-    --query_dir lqo_ml_perspective/bao/queries/join-order-benchmark --out analysis/output/features.csv
-python scripts/label.py   --log logs/job_hintsets.jsonl --out analysis/output/labels.csv
-python scripts/c1_win_loss.py --baseline jsonl:logs/job_hintsets.jsonl:default \
-                              --candidate jsonl:logs/job_hintsets.jsonl:no_nestloop --name no_nestloop
-python scripts/c2_classify.py --features analysis/output/features.csv --labels analysis/output/labels.csv
-python scripts/c3_explain.py  --features analysis/output/features.csv --labels analysis/output/labels.csv \
-                              --log logs/job_hintsets.jsonl
-```
-
-### 8.1 Đặc trưng (`extract_features.py`)
-
-| Nhóm | Đặc trưng |
-|---|---|
-| SQL | số bảng, số điều kiện join, số filter, số `LIKE`/`NOT LIKE`/`IN`/`BETWEEN`/`OR`/`IS NULL`/so sánh khoảng |
-| Cấu trúc plan | số node, độ sâu, số join bushy, plan có bushy không |
-| Toán tử | số Hash/Merge/Nested Loop join; Seq/Index/Index Only/Bitmap scan; Hash, Sort, Materialize, Gather... |
-| Ước lượng | cost, số dòng ước lượng, **q-error** lớn nhất và trung bình (sai số cardinality) |
-
-### 8.2 Nhãn (`label.py`)
-
-- `best_hint_set` là hint set có thời gian end-to-end nhỏ nhất.
-- Chỉ được tính là tốt hơn `default` nếu nhanh hơn **≥ 5%** (`--min_gain`).
-- Hint set nào cho ra **cùng cây plan** với `default` thì được tính bằng thời gian của `default`, để nhiễu đo
-  không bị gán nhầm thành "plan tốt hơn". Khi chạy thử, có 54/120 cặp (truy vấn, hint set) như vậy.
-
-### 8.3 C1 – Thắng/hòa/thua (`c1_win_loss.py`)
-
-- `speedup = thời gian PostgreSQL / thời gian LQO`. Thắng nếu > 1.1, thua nếu < 0.9, còn lại là hòa.
-- Kiểm định **Wilcoxon signed-rank** (dữ liệu bắt cặp) và **sign test**.
-- Định dạng nguồn log: `txt:<file>` (log repo), `jsonl:<file>:<hint_set>[:<tag>]`,
-  `combined:<file>:<method>[:<experiment>]`.
-
-### 8.4 C2 – Phân loại "truy vấn này nên dùng plan nào" (`c2_classify.py`)
-
-- **X**: đặc trưng SQL + plan **mặc định**. Chỉ dùng thông tin có trước khi thử hint set khác, nên không rò rỉ nhãn.
-- **y**: `best_hint_set`.
-- **3 kiểu chia giống bài báo**: `leave_one_out` (mỗi fold lấy 1 biến thể của mỗi truy vấn gốc), `random` (KFold 5),
-  `base_query` (GroupKFold theo truy vấn gốc).
-- **Mô hình**: Decision Tree, Random Forest, Gradient Boosting, kNN, Naive Bayes, SVM, Logistic Regression,
-  cùng hai mốc so sánh: **Luôn_PostgreSQL** và **Oracle**.
-- **Chỉ số**: số câu đúng / tổng, accuracy, macro-F1, tổng thời gian workload so với PostgreSQL và Oracle,
-  regret, số câu bị chậm đi > 10%, McNemar so với Luôn_PostgreSQL.
-- Confusion matrix của mô hình tốt nhất ở mỗi kiểu chia: `c2_confusion__<kiểu_chia>__<mô_hình>.csv`.
-
-### 8.5 C3 – Giải thích (`c3_explain.py`)
-
-| Kĩ thuật | Đầu ra |
-|---|---|
-| K-means (k chọn theo silhouette) + PCA | `c3_clusters.csv`, `c3_clusters_pca.png` |
-| Apriori: `{đặc điểm} → best=<hint set>` | `c3_rules.csv` (support, confidence, lift) |
-| Permutation importance (Random Forest) | `c3_feature_importance.csv/.png` |
-| Cây quyết định độ sâu 3 | `c3_decision_tree.txt` |
-| Tree edit distance giữa plan cũ và plan tốt nhất, Spearman với speedup | `c3_tree_edit_distance.csv` |
-
-Để minh họa trong báo cáo, chọn 2–3 truy vấn có speedup lớn nhất từ `labels.csv`, rồi in plan cũ cạnh plan mới:
-
-```bash
-docker exec pg_bao psql -d imdbload -c "EXPLAIN (ANALYZE) $(cat lqo_ml_perspective/bao/queries/join-order-benchmark/1a.sql)"
-docker exec pg_bao psql -d imdbload -c "SET enable_nestloop = off;" -c "EXPLAIN (ANALYZE) $(cat ...)"
-```
-
----
-
-## 9. Phần D – Thêm benchmark
-
-**Khuyến nghị: CEB-IMDb** ([github.com/learned-systems/CEB](https://github.com/learned-systems/CEB)).
-Benchmark này chạy trên **cùng CSDL IMDB** và có hàng nghìn truy vấn sinh từ template, đủ để lấy mẫu **~1000 câu** cho C2.
-
-1. Tải bộ truy vấn theo README của CEB, rồi chuyển mỗi truy vấn thành một file `.sql` trong
-   `lqo_ml_perspective/data/ceb/`. Đặt tên dạng `<template><biến_thể>.sql` (ví dụ `1a.sql`, `1b.sql`) để
-   `template_of()` nhận ra truy vấn gốc.
-2. Chạy: `python3 /app/scripts/run_and_log.py --query_dir /app/data/ceb --benchmark CEB --timeout_ms 60000 --out /app/logs/ceb_hintsets.jsonl`
-3. Lặp lại mục 8 với `logs/ceb_hintsets.jsonl` và so sánh với JOB.
-
-Lựa chọn khác: **DSB** (dữ liệu lệch) ở scale factor nhỏ (SF 1–2).
-
----
-
-## 9b. Ứng dụng demo: phân loại plan
-
-Ứng dụng Streamlit trong `app/`: dự đoán mỗi câu nên dùng plan nào, đếm số câu đúng theo 3 kiểu chia của bài báo,
-giải thích bằng data mining, và hiển thị kết quả của bài báo.
-
-**Môi trường riêng ngoài Desktop.** Desktop đang được iCloud tối ưu dung lượng nên các file trong
-`analysis/.venv` có thể bị đẩy lên mây (dataless), làm Python treo khi import. Ứng dụng dùng `~/.venvs/lqo_app`:
+Desktop đồng bộ iCloud có thể đẩy file của venv lên mây làm Python treo, nên đặt venv ngoài Desktop:
 
 ```bash
 /opt/miniconda3/bin/python3 -m venv ~/.venvs/lqo_app
-~/.venvs/lqo_app/bin/pip install pandas numpy scipy scikit-learn mlxtend zss matplotlib psycopg2-binary streamlit
+~/.venvs/lqo_app/bin/pip install pandas numpy scipy scikit-learn lightgbm altair psycopg2-binary streamlit
 ```
-
-**Chuẩn bị dữ liệu (một lần, cần container `pg_bao`):**
-
-```bash
-~/.venvs/lqo_app/bin/python app/prepare_data.py            # EXPLAIN, vài giây
-~/.venvs/lqo_app/bin/python app/prepare_data.py --analyze  # EXPLAIN ANALYZE để có q-error, ~30 phút
-~/.venvs/lqo_app/bin/python app/prepare_data.py --db       # chỉ chụp thông tin CSDL IMDB cho tab "0. CSDL IMDB"
-```
-
-Kết quả nằm ở `analysis/output/app/` (`dataset_a.csv`, `default_plans.json`). Sau bước này ứng dụng chạy không cần Docker.
-
-**Chạy ứng dụng:**
-
-```bash
-cd ~/Desktop/lqo-datamining/app && ~/.venvs/lqo_app/bin/streamlit run streamlit_app.py
-```
-
-| Nguồn dữ liệu | Nhãn | Cần |
-|---|---|---|
-| A – log của tác giả | Phương pháp nhanh nhất cho mỗi câu (PostgreSQL, Bao, HybridQO, Neo, Balsa, LEON) | `prepare_data.py` |
-| B – 6 hint set | Hint set nhanh nhất | `analysis/output/features.csv` và `labels.csv` (mục 8) |
 
 ---
 
-## 10. Lỗi thường gặp
+## 4. Chạy lại các thí nghiệm
+
+```bash
+# Thí nghiệm 1 – PostgreSQL và Bao cùng phiên, 9 split (Mac, mất nhiều giờ)
+caffeinate -dis bash scripts/run_fair_comparison.sh
+python3 scripts/exp1_tables.py                              # → analysis/output/exp1/
+
+# HybridQO, Bao và ablation trên Kaggle: sinh notebook bằng kaggle/build_*_notebook.py,
+# tải log về kaggle_runs/ rồi chạy lại exp1_tables.py
+
+# Thí nghiệm 2 – 113 câu × 6 phương án × 3 lần, kèm EXPLAIN
+bash scripts/exp2_collect.sh
+~/.venvs/lqo_app/bin/python scripts/exp2_analyze.py         # → analysis/output/exp2/
+
+# Khai phá dữ liệu (chỉ đọc lại log, không chạy thêm truy vấn)
+~/.venvs/lqo_app/bin/python scripts/exp2_mining.py
+~/.venvs/lqo_app/bin/python scripts/exp2_abstain.py
+```
+
+Các script chạy dài đều chạy tiếp được từ chỗ dừng. Log thô không sửa tay; mọi con số trên dashboard tính lại được từ log.
+
+---
+
+## 5. Dashboard
+
+```bash
+cd app && ~/.venvs/lqo_app/bin/streamlit run streamlit_app.py
+# hoặc: bash scripts/demo_start.sh   (kiểm tra container, làm nóng cache, mở dashboard tại http://localhost:8501)
+```
+
+Chạy lệnh `streamlit run streamlit_app.py` **từ trong thư mục `app/`**. Sau khi sửa code nên tắt và mở lại server.
+
+| Tab | Nội dung |
+|---|---|
+| 0. Dữ liệu IMDB & JOB | CSDL IMDB (21 bảng), benchmark JOB 113 câu, vài câu đáng nhớ |
+| 1. Bài báo vs Nhóm | So kết quả bài báo với nhóm theo từng split |
+| 2. Nhóm: Thí nghiệm 1 | 3 phát hiện (Thấy gì / Vì sao / Rút ra), ablation, kết luận; bật "Hiện số liệu chi tiết" để xem bảng |
+| 3. Nhóm: Thí nghiệm 2 | Thắng/hòa/thua của mô hình, thua dồn vào vài câu, kết luận |
+| 4. Khai phá dữ liệu | Tìm luật → rút ra nguyên nhân → sửa bằng bỏ phiếu trắng và đo lại |
+| 5. Demo mô hình | Chọn 1 trong 113 câu JOB → mô hình chọn phương án → chạy thật cả 6 phương án trên PostgreSQL |
+
+Tab 0–4 chỉ đọc kết quả có sẵn trong `analysis/output/`, không cần Docker. Tab 5 cần container `pg_bao`
+(localhost:5432, CSDL `imdbload`); câu lệnh chạy ở chế độ chỉ đọc và có timeout.
+
+---
+
+## 6. Demo trên terminal
+
+| Lệnh | Nội dung | Thời gian |
+|---|---|---|
+| `bash scripts/demo_26a.sh` | Câu 26a với 3 cách chạy, chênh nhau hàng chục lần | ~1,5 phút |
+| `bash scripts/demo_ablation.sh` | Tắt GEQO / bitmap + TID scan trên vài câu JOB | ~1–2 phút |
+| `bash scripts/demo_83.sh` | Bao-Full và Bao-50 chọn hint khác nhau trên IMDB đầy đủ | ~1 phút |
+
+Nên chạy `warmup_imdb.sh` (hoặc `demo_start.sh`) trước để thời gian ổn định. Kịch bản đầy đủ: [DEMO_KICH_BAN.md](DEMO_KICH_BAN.md).
+
+---
+
+## 7. Lỗi thường gặp
 
 | Lỗi | Cách xử lý |
 |---|---|
-| `No space left on device` | Giải phóng ổ đĩa; `docker system prune`; xóa CSV sau khi nạp |
-| Container bị kill (OOM) | Tăng RAM Docker; giảm `work_mem` hoặc `shared_buffers` trong `infra/postgresql.lqo.conf` |
-| `pip install torch` lỗi khi build `bao` | Sửa `infra/requirements.bao.txt` thành `torch==2.0.1` |
-| Bao không kết nối được server | `tmux attach -t bao` trong `bao_server` để xem log; IP phải là `10.5.0.6`, port 9381 |
-| `FileExistsError` ở script của repo | Script không ghi đè log; đổi `--output_file` hoặc xóa file cũ |
-| Hint không có tác dụng | Chạy `LOAD 'pg_hint_plan';` trong cùng phiên trước câu truy vấn |
-| `python` trên Mac báo lỗi scipy | Dùng `analysis/.venv/bin/python`, không dùng Python của conda |
-| Thời gian dao động lớn | Cắm sạc, đóng ứng dụng nặng, không chạy song song nhiều thí nghiệm |
-
----
-
-## 11. Checklist
-
-**Tuần 1 – Môi trường**
-- [x] Clone repo, build image PostgreSQL ARM64, tạo `analysis/.venv`
-- [x] C1 trên log của tác giả
-- [x] Giải phóng ≥ 40 GB ổ đĩa, Docker RAM 10–12 GB (OrbStack: 11 GB, 8 CPU)
-- [x] `docker compose build bao`, tải IMDB, chạy `load_imdb.sh`
-
-**Tuần 2 – Tái lập**
-- [x] Baseline PostgreSQL (6.1), đo lại công bằng ngày 08/11 (cache nóng, cùng phiên với Bao):
-  `logs/test__postgres__job__fair_20261108_2004__20261108_1315.txt`, 113/113 câu, tổng 248 s.
-  Baseline cũ ngày 11/10 (cache lạnh, 25c timeout) không hợp lệ và đã xóa.
-- [x] Bao trên đủ 9 split JOB (6.2, 6.3): 28/28/177 thắng/hòa/thua, 467,9 s → 432,1 s (1,08×);
-  bài báo 9/34/190 (0,83×). Kết quả: `analysis/output/c1_Bao_job__*_fair*_summary.csv`
-
-**Tuần 3 – Ablation và log plan**
-- [x] 8.4, 8.5 (`analysis/output/ablation_interleaved_20261108_2319_tomtat.txt`), 8.3 (`analysis/output/c1_Bao_*_imdb50_*`); chưa làm 8.6, 8.7
-- [ ] `run_and_log.py` cho JOB × 6 hint set (Phần B)
-
-**Tuần 4 – Data mining trên JOB**
-- [ ] `extract_features.py`, `label.py`
-- [ ] C1, C2 (3 kiểu chia), C3
-
-**Tuần 5 – Thêm benchmark**
-- [ ] CEB-IMDb ~1000 câu, lặp lại C1–C3
-
-**Tuần 6 – Báo cáo**
-- [ ] Mục "Khác biệt môi trường so với bài báo" (bảng ở mục 4)
-- [ ] Bảng, hình, ví dụ plan cũ và plan mới
-- [ ] Kết luận: xu hướng có khớp bài báo không, data mining cho thấy thêm điều gì
+| `No space left on device` | Giải phóng ổ đĩa, `docker system prune`, xóa CSV IMDB sau khi nạp |
+| Container bị kill (OOM) | Tăng RAM cho Docker hoặc giảm `work_mem`/`shared_buffers` |
+| Bao không kết nối được server | `docker exec -it bao_server tmux attach -t bao`; IP `10.5.0.6`, port 9381 |
+| Hint không có tác dụng | Chạy `LOAD 'pg_hint_plan';` trong cùng phiên |
+| Streamlit báo `File does not exist` | Đang ở `app/` thì chạy `streamlit run streamlit_app.py` (không thêm `app/`) |
+| Dashboard lỗi `AttributeError` sau khi sửa code | Server cũ còn chạy: tắt rồi mở lại |
+| Tab 5 báo chưa kết nối | `docker compose -f infra/docker-compose.yml up -d` |
+| Thời gian dao động lớn | Cắm sạc, đóng ứng dụng nặng, làm nóng cache, không chạy song song |
