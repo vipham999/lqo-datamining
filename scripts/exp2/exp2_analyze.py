@@ -1,9 +1,9 @@
 """Thí nghiệm 2 (Mục 4.3 báo cáo): mô hình phân loại chọn 1 trong 6 phương án cho mỗi câu SQL.
 
 Dữ liệu vào (từ scripts/exp2/exp2_collect.sh và exp2_collect_ceb.sh):
-  logs/exp2_hintsets_job.jsonl   113 câu JOB × 6 phương án × 3 lần (run_and_log.py)
-  logs/exp2_explain_job.jsonl    plan mặc định từ EXPLAIN (không ANALYZE) + thời gian gọi EXPLAIN
-  logs/exp2_hintsets_ceb.jsonl, logs/exp2_explain_ceb.jsonl   (tùy chọn) khoảng 200 câu CEB-IMDb
+  logs/mac/exp2/exp2_hintsets_job.jsonl   113 câu JOB × 6 phương án × 3 lần (run_and_log.py)
+  logs/mac/exp2/exp2_explain_job.jsonl    plan mặc định từ EXPLAIN (không ANALYZE) + thời gian gọi EXPLAIN
+  logs/mac/exp2/exp2_hintsets_ceb.jsonl, logs/mac/exp2/exp2_explain_ceb.jsonl   (tùy chọn) khoảng 200 câu CEB-IMDb
 
 Quy trình:
   Nhãn     : phương án có thời gian end-to-end (lập kế hoạch + thực thi, lần chạy thứ 3) nhỏ nhất; giữ default
@@ -157,19 +157,19 @@ def main():
     a = p.parse_args()
     os.makedirs(a.out_dir, exist_ok=True)
 
-    t_job, same_job, to_job = load_times(os.path.join(R, "logs/exp2_hintsets_job.jsonl"), "JOB")
+    t_job, same_job, to_job = load_times(os.path.join(R, "logs/mac/exp2/exp2_hintsets_job.jsonl"), "JOB")
     y_job, best_job = labels(t_job)
-    f_job = load_features(os.path.join(R, "logs/exp2_explain_job.jsonl"),
+    f_job = load_features(os.path.join(R, "logs/mac/exp2/exp2_explain_job.jsonl"),
                           os.path.join(R, "lqo_ml_perspective/bao/queries/join-order-benchmark"), "JOB")
     data = {"JOB": (t_job, y_job, best_job, f_job)}
     info = [f"JOB: {len(t_job)} câu, {same_job} cặp (câu, phương án) trùng plan với default, timeout: {to_job}",
             f"Nhãn JOB: {y_job.value_counts().to_dict()}"]
 
-    ceb_log = os.path.join(R, "logs/exp2_hintsets_ceb.jsonl")
-    if os.path.exists(ceb_log) and os.path.exists(os.path.join(R, "logs/exp2_explain_ceb.jsonl")):
+    ceb_log = os.path.join(R, "logs/mac/exp2/exp2_hintsets_ceb.jsonl")
+    if os.path.exists(ceb_log) and os.path.exists(os.path.join(R, "logs/mac/exp2/exp2_explain_ceb.jsonl")):
         t_ceb, same_ceb, to_ceb = load_times(ceb_log, "CEB")
         y_ceb, best_ceb = labels(t_ceb)
-        f_ceb = load_features(os.path.join(R, "logs/exp2_explain_ceb.jsonl"),
+        f_ceb = load_features(os.path.join(R, "logs/mac/exp2/exp2_explain_ceb.jsonl"),
                               os.path.join(R, "lqo_ml_perspective/bao/queries/ceb_imdb"), "CEB")
         data["CEB"] = (t_ceb, y_ceb, best_ceb, f_ceb)
         info += [f"CEB: {len(t_ceb)} câu, {same_ceb} cặp trùng plan, timeout: {to_ceb}",

@@ -132,7 +132,7 @@ su postgres -c "/opt/pg12/bin/pg_ctl -D /tmp/pgdata status" > /dev/null \
 - `dynamic_shared_memory_type = mmap` tránh lỗi `could not resize shared memory segment`. Lỗi này hay gặp khi `/dev/shm` nhỏ, như trên Kaggle.
 - `work_mem` để 512 MB thay vì 4 GB như tác giả. Với 4 GB, một truy vấn nhiều phép nối chạy song song có thể dùng quá 30 GB RAM và làm notebook bị tắt.
 - `temp_buffers` và `effective_cache_size` để **32 GB như bài báo** (Bảng 2, cột "Khung của chúng tôi"), dù máy chỉ có khoảng 30 GB RAM. Hai tham số này không giữ RAM: `temp_buffers` chỉ cấp khi dùng bảng tạm (JOB không dùng), còn `effective_cache_size` chỉ là con số khai báo cho optimizer khi ước lượng cost. Đặt đúng như bài báo để optimizer chọn plan giống máy tác giả. Riêng `shared_buffers` và `work_mem` thì chiếm RAM thật nên phải giảm.
-- Split LOO-1 đầu tiên (`hybridqo_log/`) chạy với cấu hình cũ (`temp_buffers = 1GB`, `effective_cache_size = 20GB`). Các split chạy sau dùng cấu hình mới này; khi viết báo cáo cần ghi chú khác biệt đó.
+- Split LOO-1 đầu tiên (`logs/kaggle/hybridqo/leave_one_out_split_1/`) chạy với cấu hình cũ (`temp_buffers = 1GB`, `effective_cache_size = 20GB`). Các split chạy sau dùng cấu hình mới này; khi viết báo cáo cần ghi chú khác biệt đó.
 
 ---
 
@@ -289,7 +289,7 @@ Mọi siêu tham số khác (`max_time_out` 3 phút, `try_hint_num`, `mcts_v`, `
 ```python
 import pathlib, re, subprocess
 
-SPLIT = "leave_one_out_split_2"   # leave_one_out_split_1 đã chạy xong (hybridqo_log/)
+SPLIT = "leave_one_out_split_2"   # leave_one_out_split_1 đã chạy xong (logs/kaggle/hybridqo/leave_one_out_split_1/)
 REP = 0                           # lần chạy thứ mấy; tên file kết quả là hybrid_qo__JOB__<SPLIT>__<REP>.csv như tác giả
 N_EPOCHS = 11                     # epoch 0..10: test ở epoch 0 và 10, so được với mốc epoch 10 của tác giả (xem "Vì sao 11 epoch")
 
@@ -479,7 +479,7 @@ Tổng 8 split còn lại khoảng **64 giờ máy**. Số đo trên máy dùng 
 
 ### Vì sao 11 epoch mà không phải 50
 
-So log `wandb_export` của tác giả (3 lần chạy LOO-1, 50 epoch) với lần chạy Kaggle đầu tiên (`hybridqo_log/2026_11_07__065424__query_log.csv`).
+So log `wandb_export` của tác giả (3 lần chạy LOO-1, 50 epoch) với lần chạy Kaggle đầu tiên (`logs/kaggle/hybridqo/leave_one_out_split_1/hqo_logs/2026_11_07__065424__query_log.csv`).
 Speedup tính bằng tổng `pg_latency` / tổng `hinter_latency` trên 33 câu test. Thắng/hòa/thua dùng ngưỡng ±10%.
 
 | Epoch test | Tác giả (3 lần chạy) | Kaggle |
@@ -507,15 +507,15 @@ Không nên train trong phiên tương tác, vì phiên sẽ ngắt khi bạn đ
 1. Chạy thử các ô 1–6 trong phiên tương tác để chắc không có lỗi. Nếu muốn, chạy ô 7 vài phút để thấy các dòng log đầu tiên (vòng lặp chạy được), rồi bấm **Stop**. Không cần chạy hết ô 7 trong phiên tương tác.
 2. Bấm **Save Version → Save & Run All (Commit)**. Kaggle chạy toàn bộ notebook từ đầu đến cuối ở chế độ nền, tối đa 12 giờ, bạn tắt máy cũng không sao.
 3. Khi xong, vào tab **Output** của phiên bản đó và tải về:
-   - `wandb_export/hybrid_qo__JOB__<split>__<rep>.csv`: kết quả theo định dạng của tác giả, chép vào `hybridqo_log/wandb_export/`
-   - `hqo_logs/<thời_gian>__query_log.csv`: log gốc, có cột `query_ident`, chép vào `hybridqo_log/`
+   - `wandb_export/hybrid_qo__JOB__<split>__<rep>.csv`: kết quả theo định dạng của tác giả, chép vào `logs/kaggle/hybridqo/wandb_export/`
+   - `hqo_logs/<thời_gian>__query_log.csv`: log gốc, có cột `query_ident`, chép vào `logs/kaggle/hybridqo/<split>/hqo_logs/`
    - `run_mcts__<split>__<rep>.out`: toàn bộ output
 
 ---
 
 ## Chạy các split còn lại
 
-`leave_one_out_split_1` đã chạy xong: log ở [hybridqo_log/](hybridqo_log/), file theo định dạng tác giả ở `hybridqo_log/wandb_export/hybrid_qo__JOB__leave_one_out_split_1__0.csv` (tạo bằng `kaggle/to_wandb_export.py`).
+`leave_one_out_split_1` đã chạy xong: log ở [logs/kaggle/hybridqo/leave_one_out_split_1/](logs/kaggle/hybridqo/leave_one_out_split_1/), file theo định dạng tác giả ở `logs/kaggle/hybridqo/wandb_export/hybrid_qo__JOB__leave_one_out_split_1__0.csv` (tạo bằng `kaggle/to_wandb_export.py`).
 Còn 8 split, mỗi split là một notebook và một lần Commit:
 
 | Kiểu split | Tên trong `SPLIT` (ô 6) | Ý nghĩa |

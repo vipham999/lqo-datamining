@@ -7,7 +7,7 @@
 set -e
 cd "$(dirname "$0")/../.."
 DB=imdbload
-BASE=${1:-$(ls logs/test__postgres__job__fair_*.txt | tail -1)}
+BASE=${1:-$(ls logs/mac/postgres/test__postgres__job__fair_*.txt | tail -1)}
 echo "== Baseline dùng để so sánh: $BASE"
 
 # Đảm bảo luôn trả CSDL về cấu hình mặc định, kể cả khi script bị dừng giữa chừng
@@ -35,7 +35,7 @@ docker exec pg_bao psql -U postgres -d "$DB" -qAt -c "SHOW enable_bitmapscan;" -
 
 echo "== So sánh với baseline"
 for tag in no_geqo no_bitmap_tidscan; do
-  f=$(ls logs/test__postgres__job__${tag}__*.txt | tail -1)
+  f=$(ls logs/mac/postgres/test__postgres__job__${tag}__*.txt | tail -1)
   python3 scripts/exp1/c1_win_loss.py --baseline "txt:$BASE" --candidate "txt:$f" --name "PG_${tag}"
 done
 echo "== Xong"

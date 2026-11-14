@@ -1,8 +1,8 @@
 """Khai phá dữ liệu trên kết quả Thí nghiệm 2 (không chạy thêm truy vấn, chỉ đọc lại log).
 
 Dữ liệu vào:
-  logs/exp2_hintsets_job.jsonl   113 câu JOB × 6 phương án × 3 lần chạy (thời gian thật)
-  logs/exp2_explain_job.jsonl    plan mặc định (EXPLAIN) → 34 đặc trưng, như exp2_analyze.py
+  logs/mac/exp2/exp2_hintsets_job.jsonl   113 câu JOB × 6 phương án × 3 lần chạy (thời gian thật)
+  logs/mac/exp2/exp2_explain_job.jsonl    plan mặc định (EXPLAIN) → 34 đặc trưng, như exp2_analyze.py
 
 Kỹ thuật: luật kết hợp (dạng "điều kiện → kết quả"): đặc trưng rời rạc hoá thành điều kiện có/không; kết quả là
      "tắt X giúp ≥5%" hoặc "tắt X hại ≥2 lần", phải đúng ở CẢ lần chạy 2 và 3 (tránh nhiễu đo).
@@ -38,7 +38,7 @@ MIN_MATCH, MIN_HIT, MIN_FAM = 6, 4, 3
 def times(run):
     """Thời gian (ms) theo câu × phương án ở một lần chạy; plan trùng default → dùng thời gian default."""
     rows, plans = [], {}
-    with open(os.path.join(R, "logs/exp2_hintsets_job.jsonl")) as f:
+    with open(os.path.join(R, "logs/mac/exp2/exp2_hintsets_job.jsonl")) as f:
         for line in f:
             r = json.loads(line)
             if r["run"] != run:
@@ -123,7 +123,7 @@ def mine_rules(items, tg, fam, qs):
 
 def main():
     T1, T2 = times(1), times(2)
-    f = E.load_features(os.path.join(R, "logs/exp2_explain_job.jsonl"),
+    f = E.load_features(os.path.join(R, "logs/mac/exp2/exp2_explain_job.jsonl"),
                         os.path.join(R, "lqo_ml_perspective/bao/queries/join-order-benchmark"), "JOB")
     qs = sorted(set(T1.index) & set(T2.index) & set(f.index))
     T1, T2, f = T1.loc[qs], T2.loc[qs], f.loc[qs]

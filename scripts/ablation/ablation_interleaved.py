@@ -90,7 +90,7 @@ if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--db', default='imdbload')
     ap.add_argument('--query_dir', default='/app/bao/queries/join-order-benchmark')
-    ap.add_argument('--out_dir', default='/app/logs')
+    ap.add_argument('--out_dir', default='/app/logs/mac/postgres')
     ap.add_argument('--tag', required=True)
     ap.add_argument('--force', action='store_true')
     ap.add_argument('--offset', type=int, default=0, help='dịch thứ tự xoay vòng (đổi giữa các lượt lặp)')

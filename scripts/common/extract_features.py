@@ -1,6 +1,6 @@
 """Trích đặc trưng từ plan JSON và câu SQL (Phần C, bước 8.1).
 
-  python scripts/common/extract_features.py --log logs/job_hintsets.jsonl \
+  python scripts/common/extract_features.py --log logs/mac/job_hintsets.jsonl \
       --query_dir lqo_ml_perspective/bao/queries/join-order-benchmark --out analysis/output/features.csv
 
 Mỗi dòng của features.csv là một (query_id, hint_set, tag) với cột:

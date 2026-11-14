@@ -79,8 +79,9 @@ lqo-datamining/
 │   ├── demo/                 ← demo trực tiếp trên terminal
 │   └── common/               ← thư viện dùng chung (đọc log, trích đặc trưng, chạy câu × hint set)
 ├── kaggle/                   ← sinh notebook Kaggle (Bao, HybridQO, ablation) và các lần chạy
-├── kaggle_runs/, bao_kaggle_log/, hybridqo_log/   ← log tải về từ Kaggle
-├── logs/                     ← log thô trên Mac (không sửa tay)
+├── logs/                     ← toàn bộ log thô (không sửa tay), chi tiết: logs/README.md
+│   ├── mac/                  ← chạy trên Mac: postgres/, bao/, exp2/, demo_83/
+│   └── kaggle/               ← chạy trên Kaggle: bao/<split>/, hybridqo/<split>/, ablation/
 ├── analysis/output/          ← bảng kết quả (exp1/, exp2/, c1_*.csv, ablation_*.csv)
 └── lqo_ml_perspective/       ← repo tác giả (submodule)
 ```
@@ -133,7 +134,7 @@ caffeinate -dis bash scripts/exp1/run_fair_comparison.sh
 python3 scripts/exp1/exp1_tables.py                              # → analysis/output/exp1/
 
 # HybridQO, Bao và ablation trên Kaggle: sinh notebook bằng kaggle/build_*_notebook.py,
-# tải log về kaggle_runs/ rồi chạy lại exp1_tables.py
+# tải log về logs/kaggle/<phương pháp>/<split>/ rồi chạy lại exp1_tables.py
 
 # Thí nghiệm 2 – 113 câu × 6 phương án × 3 lần, kèm EXPLAIN
 bash scripts/exp2/exp2_collect.sh

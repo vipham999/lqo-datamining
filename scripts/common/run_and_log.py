@@ -2,16 +2,16 @@
 
 Ví dụ (trong container bao_server):
   python3 /app/scripts/common/run_and_log.py --query_dir /app/bao/queries/join-order-benchmark \
-      --out /app/logs/job_hintsets.jsonl
+      --out /app/logs/mac/job_hintsets.jsonl
 
   # Ablation 8.4: tắt bitmap/tid scan, chỉ chạy plan mặc định
   python3 /app/scripts/common/run_and_log.py --query_dir /app/bao/queries/join-order-benchmark \
       --hint_sets default --extra_set "SET enable_bitmapscan = off; SET enable_tidscan = off" \
-      --tag no_bitmap_tidscan --out /app/logs/job_ablation.jsonl
+      --tag no_bitmap_tidscan --out /app/logs/mac/job_ablation.jsonl
 
   # Ablation 8.6: chạy mỗi câu 10 lần liên tiếp
   python3 /app/scripts/common/run_and_log.py --query_dir ... --hint_sets default --runs 10 \
-      --tag k_runs --out /app/logs/job_k_runs.jsonl
+      --tag k_runs --out /app/logs/mac/job_k_runs.jsonl
 """
 import argparse
 import glob

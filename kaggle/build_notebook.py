@@ -14,7 +14,7 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ALL_SPLITS = [f"{k}_split_{i}" for k in ("leave_one_out", "random", "base_query") for i in (1, 2, 3)]
-DONE = {"leave_one_out_split_1"}  # đã chạy xong, log ở hybridqo_log/
+DONE = {"leave_one_out_split_1"}  # đã chạy xong, log ở logs/kaggle/hybridqo/leave_one_out_split_1/
 
 
 def cells_from_guide(split, rep):

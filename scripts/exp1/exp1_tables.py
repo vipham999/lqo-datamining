@@ -49,7 +49,7 @@ def ablation_8_3_kaggle():
     """8.3 trên Kaggle: Bao-Full (train trên IMDB đầy đủ, notebook bao-job-base-query-1) và Bao-50 (train trên IMDB-50%)
     cùng chạy tập test BQ-1 trên IMDB-50%. Đối chiếu log tác giả cùng hướng: imdb_trained/imdb2_trained × imdb2_tested
     (imdb2 = IMDB-50%, 4 model mỗi loại → lấy trung vị theo câu)."""
-    k = os.path.join(R, "bao_kaggle_log/ablation_8_3/ablation83_logs")
+    k = os.path.join(R, "logs/kaggle/ablation/8_3/lan_dau/ablation83_logs")
     s = "base_query_split_1"
     if not os.path.exists(os.path.join(k, f"test__bao_50__job__{s}__imdb50.txt")):
         return
@@ -78,7 +78,7 @@ def ablation_8_3_kaggle():
 
 
 # ================================================================ đợt lặp giống tác giả (kaggle/run_repeat_queue.sh)
-RUNS = os.environ.get("KAGGLE_RUNS", os.path.join(R, "kaggle_runs"))
+RUNS = os.environ.get("KAGGLE_RUNS", os.path.join(R, "logs", "kaggle"))
 AUTHORS_LOG = os.path.join(R, "lqo_ml_perspective/experiment_logs/20240103__combined.csv")
 PAPER_84 = {"28a": "nhanh 5,5×", "7c": "nhanh 2,0×", "30a": "nhanh 1,8×", "30c": "chậm 2,4×", "28b": "chậm 1,9×",
             "15c": "chậm 1,5×"}
@@ -117,7 +117,7 @@ def _sig_table(base, cand, thr):
 def ablation_845_repeat():
     """8.4 (tắt bitmap + tid scan, ngưỡng 250 ms) và 8.5 (tắt GEQO, ngưỡng 100 ms): nhóm (8 lượt xen kẽ trên Kaggle)
     cạnh tác giả (13 lượt default, 2 lượt no_bitmap_tidscan, 8 lượt no_geqo), cùng một công thức."""
-    k = os.path.join(RUNS, "ablation-job-8-4-8-5-r8", "ablation_logs")
+    k = os.path.join(RUNS, "ablation", "8_4_8_5", "lap_8_luot", "ablation_logs")
     if not glob.glob(os.path.join(k, "test__postgres__job__default__kaggle_p*.txt")):
         return None
 
@@ -156,10 +156,10 @@ def ablation_845_repeat():
 
 
 def ablation_8_3_repeat():
-    """8.3 đủ 4 hướng × 4 bản (kaggle_runs/ablation-job-8-3-rep*/), 113 câu, cạnh log tác giả cùng hướng.
+    """8.3 đủ 4 hướng × 4 bản (logs/kaggle/ablation/8_3/lap*/), 113 câu, cạnh log tác giả cùng hướng.
     Tên hướng theo log tác giả: <CSDL train>_trained__<CSDL test>_tested (imdb = đầy đủ, imdb50 = IMDB-50%)."""
     s = "base_query_split_1"
-    reps = sorted(glob.glob(os.path.join(RUNS, "ablation-job-8-3-rep*", "ablation83_logs")))
+    reps = sorted(glob.glob(os.path.join(RUNS, "ablation", "8_3", "lap*", "ablation83_logs")))
     reps = [k for k in reps if os.path.exists(os.path.join(k, f"test__bao_50__job__{s}__imdbload50.txt"))]
     if not reps:
         return None
@@ -253,11 +253,11 @@ def repeat_runs():
                      "hòa": int(h.hoa), "thua": int(h.thua), "PG_s": h.PG_s, "LQO_s": h.HQO_s, "speedup": h.speedup,
                      "trung_vị": h.trung_vi})
         for r in (1, 2):
-            b = os.path.join(RUNS, f"bao-job-{_slug(s)}-rep{r}", "bao_logs")
+            b = os.path.join(RUNS, "bao", s, f"lap{r}", "bao_logs")
             if os.path.exists(os.path.join(b, f"test__bao__job__{s}.txt")):
                 rows.append({"phương_pháp": "Bao", "split": short(s), "lần": r, **{k: v for k, v in bao_kaggle(s, b).items()
                              if k in ("n", "thắng", "hòa", "thua", "PG_s", "LQO_s", "speedup", "trung_vị")}})
-            f = sorted(glob.glob(os.path.join(RUNS, f"hybridqo-job-{_slug(s)}-rep{r}", "hqo_logs", "*query_log.csv")))
+            f = sorted(glob.glob(os.path.join(RUNS, "hybridqo", s, f"lap{r}", "hqo_logs", "*query_log.csv")))
             if f:
                 rows.append({"phương_pháp": "HybridQO", "split": short(s), "lần": r, **_hqo_run(f[-1], s)})
     d = pd.DataFrame(rows)
@@ -275,8 +275,8 @@ def repeat_runs():
 
 
 def bao_kaggle(s, b=None):
-    """Bao trên Kaggle (bao_kaggle_log/<split>): PG và Bao đo trong cùng notebook, cùng cấu hình với HybridQO."""
-    b = b or os.path.join(R, "bao_kaggle_log", s, "bao_logs")
+    """Bao trên Kaggle (logs/kaggle/bao/<split>): PG và Bao đo trong cùng notebook, cùng cấu hình với HybridQO."""
+    b = b or os.path.join(R, "logs/kaggle/bao", s, "bao_logs")
     d = _load_bao_log(os.path.join(b, f"test__postgres__job__{s}.txt")).join(
         _load_bao_log(os.path.join(b, f"test__bao__job__{s}.txt")), lsuffix="_pg", rsuffix="_b")
     t_pg, t_b = d.plan_pg + d.exe_pg, d.plan_b + d.exe_b
@@ -358,7 +358,7 @@ def main():
     r845, r83, rep = ablation_845_repeat(), ablation_8_3_repeat(), repeat_runs()
 
     with open(os.path.join(OUT, "exp1_tomtat.txt"), "w") as f:
-        f.write("===== Đợt lặp giống tác giả (kaggle_runs/)\n")
+        f.write("===== Đợt lặp giống tác giả (logs/kaggle/ablation/)\n")
         f.write("Bao/HybridQO: mọi lần train theo split (lần 0 = đợt đầu)\n")
         f.write(rep[1].round(3).to_string(index=False) + "\n\nTổng theo từng lần train\n")
         f.write(rep[2].round(3).to_string(index=False) + "\n\n")
@@ -366,14 +366,14 @@ def main():
             f.write("Ablation 8.4/8.5 (công thức của tác giả: trung bình qua các lượt, 1,96·SE)\n")
             f.write(r845.round(1).to_string(index=False) + "\n\n")
         else:
-            f.write("Ablation 8.4/8.5 nhiều lượt: chưa có log trong kaggle_runs/\n\n")
+            f.write("Ablation 8.4/8.5 nhiều lượt: chưa có log trong logs/kaggle/ablation/\n\n")
         if r83 is not None:
             f.write("Ablation 8.3 theo hướng (tổng workload, trung vị qua các bản)\n")
             f.write(r83[0].round(1).to_string(index=False) + "\n\nBao-50 so với Bao-Full khi test trên IMDB đầy đủ\n")
             f.write(r83[1].to_string(index=False) + "\n")
             f.write(r83[2][r83[2].bài_báo != ""].round(2).to_string() + "\n\n")
         else:
-            f.write("Ablation 8.3 bốn bản: chưa có log trong kaggle_runs/\n\n")
+            f.write("Ablation 8.3 bốn bản: chưa có log trong logs/kaggle/ablation/\n\n")
         f.write("===== Đợt đầu\n")
         f.write("Bao và HybridQO theo từng split (nhóm cạnh tác giả)\n")
         f.write(per.round(2).to_string(index=False) + "\n\nTổng 233 lần kiểm tra (9 split)\n")

@@ -50,9 +50,9 @@ def job_queries():
 
 @st.cache_data(show_spinner=False)
 def training_data():
-    t, _, _ = E.load_times(os.path.join(E.R, "logs/exp2_hintsets_job.jsonl"), "JOB")
+    t, _, _ = E.load_times(os.path.join(E.R, "logs/mac/exp2/exp2_hintsets_job.jsonl"), "JOB")
     y, best = E.labels(t)
-    f = E.load_features(os.path.join(E.R, "logs/exp2_explain_job.jsonl"), JOB_DIR, "JOB")
+    f = E.load_features(os.path.join(E.R, "logs/mac/exp2/exp2_explain_job.jsonl"), JOB_DIR, "JOB")
     qs = [q for q in y.index if q in f.index]
     xcols = [c for c in f.columns if c != "explain_ms"]
     return f.loc[qs, xcols].astype(float), y.loc[qs], t.loc[qs], best.loc[qs]

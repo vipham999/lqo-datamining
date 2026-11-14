@@ -8,12 +8,12 @@
 # Cần: container pg_bao và bao_server đang chạy; model đã chép vào logs/demo_83/ (xem cuối file).
 R=$(cd "$(dirname "$0")/../.." && pwd)
 QS=${*:-3c 11b 16c}
-M=/app/logs/demo_83
-[ -d "$R/logs/demo_83/full_rep4" ] || {
-  mkdir -p "$R/logs/demo_83"
-  K="$R/kaggle_runs/ablation-job-8-3-rep4/ablation83_logs"
-  cp -R "$K/model__bao__job__base_query_split_1" "$R/logs/demo_83/full_rep4" &&
-  cp -R "$K/model__bao__job__base_query_split_1__imdb50" "$R/logs/demo_83/50_rep4" || { echo "Thiếu model trong $K"; exit 1; }
+M=/app/logs/mac/demo_83
+[ -d "$R/logs/mac/demo_83/full_rep4" ] || {
+  mkdir -p "$R/logs/mac/demo_83"
+  K="$R/logs/kaggle/ablation/8_3/lap4/ablation83_logs"
+  cp -R "$K/model__bao__job__base_query_split_1" "$R/logs/mac/demo_83/full_rep4" &&
+  cp -R "$K/model__bao__job__base_query_split_1__imdb50" "$R/logs/mac/demo_83/50_rep4" || { echo "Thiếu model trong $K"; exit 1; }
 }
 BAO="SET bao_host TO '10.5.0.6'; SET enable_bao TO on; SET enable_bao_selection TO on; SET enable_bao_rewards TO off;"
 

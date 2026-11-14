@@ -472,7 +472,7 @@ def _bao_per_query():
     """233 lần kiểm tra của Bao trên Kaggle, ghép với đặc điểm của câu."""
     rows = []
     for s in FULL_SPLITS:
-        b = os.path.join(core.ROOT, "bao_kaggle_log", s, "bao_logs")
+        b = os.path.join(core.ROOT, "logs/kaggle/bao", s, "bao_logs")
         f_pg, f_b = (os.path.join(b, f"test__{m}__job__{s}.txt") for m in ("postgres", "bao"))
         if os.path.exists(f_pg) and os.path.exists(f_b):
             d = _bao_log(f_pg).join(_bao_log(f_b), lsuffix="_pg", rsuffix="_b").reset_index()
@@ -492,7 +492,7 @@ def _bao_per_query():
 def _exp1_mining():
     d = _bao_per_query()
     if d is None:
-        st.info("Chưa có log Bao trên Kaggle trong bao_kaggle_log/.")
+        st.info("Chưa có log Bao trên Kaggle trong logs/kaggle/bao/.")
         return
     st.markdown("Ghép 233 lần kiểm tra của Bao (Kaggle) với đặc điểm của từng câu: thời gian chạy trên PostgreSQL, "
                 "số bảng nối, Bao có đổi plan hay không.")
@@ -750,8 +750,8 @@ def _mining_rules():
 
 def _mining_method(s):
     st.markdown(
-        "**Input:** 2 file log Thí nghiệm 2 – `logs/exp2_hintsets_job.jsonl` (thời gian thật 113 câu × 6 phương án × "
-        "3 lần) và `logs/exp2_explain_job.jsonl` (plan mặc định → 34 đặc trưng).  \n"
+        "**Input:** 2 file log Thí nghiệm 2 – `logs/mac/exp2/exp2_hintsets_job.jsonl` (thời gian thật 113 câu × 6 phương án × "
+        "3 lần) và `logs/mac/exp2/exp2_explain_job.jsonl` (plan mặc định → 34 đặc trưng).  \n"
         "**Output:** bảng luật – các file `analysis/output/exp2/exp2_mining_*`.  \n"
         "**Môi trường:** Mac M1 Pro, Python (pandas, scikit-learn, scipy), chạy vài giây, không cần PostgreSQL.  \n"
         "**Lệnh:** `python3 scripts/exp2/exp2_mining.py`")

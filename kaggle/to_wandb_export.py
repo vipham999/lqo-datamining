@@ -1,7 +1,7 @@
 """Chuyển <run_name>__query_log.csv của HybridQO sang đúng định dạng file wandb_export của tác giả.
 
-    python kaggle/to_wandb_export.py hybridqo_log/2026_11_07__065424__query_log.csv \
-        --split leave_one_out_split_1 --rep 0 --out_dir hybridqo_log/wandb_export
+    python kaggle/to_wandb_export.py logs/kaggle/hybridqo/leave_one_out_split_1/hqo_logs/2026_11_07__065424__query_log.csv \
+        --split leave_one_out_split_1 --rep 0 --out_dir logs/kaggle/hybridqo/wandb_export
 
 Tạo hybrid_qo__JOB__<split>__<rep>.csv giống lqo_ml_perspective/hybrid_qo/logs/wandb_export/:
 cột "Step" rồi "<run_name> - <metric>", "__MIN", "__MAX" cho từng metric, giữ nguyên lỗi chính tả

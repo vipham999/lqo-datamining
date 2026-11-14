@@ -19,14 +19,14 @@ echo "== Baseline PostgreSQL"
 docker exec bao_server bash /app/scripts/exp1/run_baseline.sh imdbload "$TAG"
 
 for s in "${SPLITS[@]}"; do
-  model=$(ls -d logs/model__bao__${s}__* | tail -1)
+  model=$(ls -d logs/mac/bao/model__bao__${s}__* | tail -1)
   echo "== Bao $s với $model"
   docker exec bao_server bash /app/scripts/exp1/run_bao_test.sh "$s" "/app/$model" imdbload "$TAG"
 done
 
 echo "== So sánh"
-pg=$(ls logs/test__postgres__job__${TAG}__*.txt | tail -1)
+pg=$(ls logs/mac/postgres/test__postgres__job__${TAG}__*.txt | tail -1)
 for s in "${SPLITS[@]}"; do
   python3 scripts/exp1/c1_win_loss.py --baseline "txt:$pg" \
-    --candidate "txt:logs/test__bao__${s}__retest_${TAG}.txt" --name "Bao_${s}_${TAG}"
+    --candidate "txt:logs/mac/bao/test__bao__${s}__retest_${TAG}.txt" --name "Bao_${s}_${TAG}"
 done

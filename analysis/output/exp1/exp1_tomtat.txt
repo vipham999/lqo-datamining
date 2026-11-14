@@ -1,4 +1,4 @@
-===== Đợt lặp giống tác giả (kaggle_runs/)
+===== Đợt lặp giống tác giả (logs/kaggle/ablation/)
 Bao/HybridQO: mọi lần train theo split (lần 0 = đợt đầu)
 phương_pháp split  số_lần  speedup_trung_vị  speedup_min  speedup_max  thua_trung_vị  thua_min  thua_max
         Bao LOO-1       1             0.854        0.854        0.854           27.0        27        27

@@ -1,6 +1,7 @@
 #!/bin/bash
 # Đợt lặp giống tác giả: đẩy lần lượt 41 notebook lên Kaggle (tối đa 5 phiên CPU cùng lúc) và tự tải output về
-# kaggle_runs/<slug>/ khi notebook chạy xong.
+# logs/kaggle/tai_ve/<slug>/ khi notebook chạy xong; sau đó chuyển vào logs/kaggle/<bao|hybridqo>/<split>/lap<N>/
+# hoặc logs/kaggle/ablation/... để exp1_tables.py đọc được.
 #   1 × ablation 8.4+8.5 (8 lượt) · 4 × ablation 8.3 · 18 × HybridQO (rep1, rep2) · 18 × Bao (rep1, rep2)
 # HybridQO (~7 giờ/notebook) đẩy trước Bao (~2,5 giờ) để các notebook ngắn lấp chỗ trống cuối đợt.
 #   nohup caffeinate -is bash kaggle/run_repeat_queue.sh >> kaggle/run_repeat_queue.log 2>&1 &
@@ -27,9 +28,9 @@ check_done() {
     st=$(status "$s")
     case "$st" in
       COMPLETE|ERROR|CANCEL*)
-        mkdir -p "$R/kaggle_runs/$s"
-        if $K kernels output "$U/$s" -p "$R/kaggle_runs/$s" > /dev/null 2>&1; then
-          log "$s: $st, đã tải output về kaggle_runs/$s"
+        mkdir -p "$R/logs/kaggle/tai_ve/$s"
+        if $K kernels output "$U/$s" -p "$R/logs/kaggle/tai_ve/$s" > /dev/null 2>&1; then
+          log "$s: $st, đã tải output về logs/kaggle/tai_ve/$s"
         else
           log "$s: $st, tải output LỖI (thử lại lần sau)"; keep+=("$s"); continue
         fi

@@ -4,7 +4,7 @@
 set -e
 DB=${1:-imdbload}
 TAG=${2:-}
-OUT=/app/logs/test__postgres__job${TAG:+__$TAG}__$(date +%Y%m%d_%H%M).txt
+OUT=/app/logs/mac/postgres/test__postgres__job${TAG:+__$TAG}__$(date +%Y%m%d_%H%M).txt
 EXTRA=()
 [ "$TAG" = "no_geqo" ] && EXTRA=(--disable_geqo)
 cd /app/bao

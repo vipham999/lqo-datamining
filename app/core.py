@@ -53,7 +53,7 @@ def load_imdb():
 
 JOB_DIR = os.path.join(ROOT, "lqo_ml_perspective/bao/queries/join-order-benchmark")
 # PostgreSQL mặc định trên Kaggle (ablation 8.4/8.5, cùng cấu hình với Bao/HybridQO), lần chạy thứ 3
-JOB_PG_LOG = os.path.join(ROOT, "bao_kaggle_log/ablation_8_4_8_5/ablation_logs/test__postgres__job__default__kaggle.txt")
+JOB_PG_LOG = os.path.join(ROOT, "logs/kaggle/ablation/8_4_8_5/lan_dau/ablation_logs/test__postgres__job__default__kaggle.txt")
 GEQO_THRESHOLD = 12
 
 

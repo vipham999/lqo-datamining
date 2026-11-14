@@ -3,9 +3,9 @@ có ≤ 5 join, ép từng cây bằng pg_hint_plan Leading(...), đo thời gia
 
 Chạy (trong bao_server):
   python3 /app/scripts/ablation/join_orders.py run --query_dir /app/bao/queries/join-order-benchmark \
-      --max_tables 6 --max_plans 300 --timeout_ms 30000 --out /app/logs/job_join_orders.jsonl
+      --max_tables 6 --max_plans 300 --timeout_ms 30000 --out /app/logs/mac/job_join_orders.jsonl
 Phân tích (trên Mac):
-  python scripts/ablation/join_orders.py analyze --log logs/job_join_orders.jsonl
+  python scripts/ablation/join_orders.py analyze --log logs/mac/job_join_orders.jsonl
 
 Bài báo dùng cardinality ước lượng của PostgreSQL và cho phép mọi kiểu join → ở đây chỉ ép THỨ TỰ/HÌNH DẠNG cây,
 để PostgreSQL tự chọn thuật toán join.

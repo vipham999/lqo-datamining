@@ -27,9 +27,9 @@ MAIN = 0.6
 
 
 def main():
-    t, _, _ = E.load_times(os.path.join(E.R, "logs/exp2_hintsets_job.jsonl"), "JOB")
+    t, _, _ = E.load_times(os.path.join(E.R, "logs/mac/exp2/exp2_hintsets_job.jsonl"), "JOB")
     y, _ = E.labels(t)
-    f = E.load_features(os.path.join(E.R, "logs/exp2_explain_job.jsonl"),
+    f = E.load_features(os.path.join(E.R, "logs/mac/exp2/exp2_explain_job.jsonl"),
                         os.path.join(E.R, "lqo_ml_perspective/bao/queries/join-order-benchmark"), "JOB")
     xc = [c for c in f.columns if c != "explain_ms"]
     X = f[xc].astype(float)

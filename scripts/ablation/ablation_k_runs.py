@@ -2,9 +2,9 @@
 
 Thu số liệu (trong bao_server):
   python3 /app/scripts/common/run_and_log.py --query_dir /app/bao/queries/join-order-benchmark \
-      --hint_sets default --runs 10 --tag k_runs --out /app/logs/job_k_runs.jsonl
+      --hint_sets default --runs 10 --tag k_runs --out /app/logs/mac/job_k_runs.jsonl
 Phân tích (trên Mac):
-  python scripts/ablation/ablation_k_runs.py --log logs/job_k_runs.jsonl
+  python scripts/ablation/ablation_k_runs.py --log logs/mac/job_k_runs.jsonl
 
 Với mỗi truy vấn: chênh lệch chuẩn hóa giữa lần k và k+1 = (t_{k+1} - t_k) / t_1 × 100%  (giống Hình 7 bài báo).
 """

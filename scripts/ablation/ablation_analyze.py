@@ -40,7 +40,7 @@ def n_tables(q):
 
 
 def main(a):
-    log = lambda c: os.path.join(R, 'logs', f'test__postgres__job__{c}__{a.tag}.txt')
+    log = lambda c: os.path.join(R, a.log_dir, f'test__postgres__job__{c}__{a.tag}.txt')
     base = load(log('default'))
     out_dir = os.path.join(R, 'analysis/output')
     for cfg in ['no_geqo', 'no_bitmap_tidscan']:
@@ -74,4 +74,6 @@ def main(a):
 if __name__ == '__main__':
     ap = argparse.ArgumentParser()
     ap.add_argument('--tag', required=True)
+    ap.add_argument('--log_dir', default='logs/mac/postgres',
+                    help='Kaggle: logs/kaggle/ablation/8_4_8_5/lan_dau/ablation_logs (với --tag kaggle)')
     main(ap.parse_args())

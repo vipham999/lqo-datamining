@@ -33,3 +33,6 @@ kaggle/*.log
 # Tài liệu riêng (chỉ giữ trên máy)
 BAN_DICH_BAI_BAO.md
 DEMO_KICH_BAN.md
+
+# Log lúc chạy của Bao server (script chỉ đọc các dòng mới để biết model đã nạp xong)
+logs/bao_server.log

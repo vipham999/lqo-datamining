@@ -12,7 +12,7 @@ flowchart LR
         BS[bao_server<br/>Bao + PyTorch] -- SQL + hint --> PG[(pg_bao<br/>PostgreSQL 12.5<br/>pg_hint_plan, pg_bao)]
     end
     KG[Kaggle<br/>Bao · HybridQO · ablation]
-    MAC --> LOG[Log thô<br/>logs/ · bao_kaggle_log/ · hybridqo_log/]
+    MAC --> LOG[Log thô<br/>logs/mac · logs/kaggle]
     KG --> LOG
     LOG --> ANA[Phân tích<br/>scripts/exp1, exp2] --> OUT[analysis/output/] --> APP[Dashboard<br/>app/]
 ```
@@ -21,7 +21,7 @@ flowchart LR
 |---|---|---|
 | Hạ tầng | `infra/` | 2 container (`pg_bao` 10.5.0.5, `bao_server` 10.5.0.6), cấu hình PostgreSQL |
 | Thực thi | `scripts/`, `kaggle/` | Nạp dữ liệu, làm nóng cache, train/test, đo các phương án, ablation |
-| Dữ liệu | `logs/`, `bao_kaggle_log/`, `hybridqo_log/` | Log thô, không sửa, là đầu vào duy nhất của tầng phân tích |
+| Dữ liệu | `logs/mac/`, `logs/kaggle/` | Log thô, không sửa, là đầu vào duy nhất của tầng phân tích |
 | Phân tích | `scripts/exp1/`, `scripts/exp2/`, `scripts/ablation/`, `analysis/output/` | Thống kê, khai phá dữ liệu, mô hình phân loại |
 | Trình bày | `app/`, `scripts/demo/` | Dashboard Streamlit, demo trực tiếp |
 
@@ -39,9 +39,9 @@ flowchart LR
 |---|---|---|
 | Chuẩn bị | `load_imdb.sh` → `make_imdb50.sh` (cho ablation 8.3) → `warmup_imdb.sh` | `imdbload`, `imdbload50` |
 | TN1 – Mac | `run_fair_comparison.sh` (PostgreSQL + Bao cùng phiên), `run_bao_split.sh` (train + test từng split) | `logs/test__*.txt`, `model__bao__*` |
-| TN1 – Kaggle | `build_*_notebook.py` → `push_*_queue.sh` (tối đa 5 phiên) → tải log | `bao_kaggle_log/`, `hybridqo_log/` |
+| TN1 – Kaggle | `build_*_notebook.py` → `push_*_queue.sh` (tối đa 5 phiên) → tải log | `logs/kaggle/bao/`, `logs/kaggle/hybridqo/` |
 | Ablation | `ablation_interleaved.py` (8.4/8.5), `make_imdb50.sh` (8.3), `ablation_k_runs.py` (8.6) | `ablation_*.csv` |
-| TN2 | `exp2_collect.sh`: 113 câu × 6 phương án × 3 lần, kèm EXPLAIN plan mặc định | `logs/exp2_*.jsonl` |
+| TN2 | `exp2_collect.sh`: 113 câu × 6 phương án × 3 lần, kèm EXPLAIN plan mặc định | `logs/mac/exp2/exp2_*.jsonl` |
 
 **Quy tắc đo:**
 - Cache nóng; mỗi câu chạy 3 lần, lấy lần thứ 3.

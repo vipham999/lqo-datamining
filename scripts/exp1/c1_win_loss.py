@@ -6,10 +6,10 @@ Hai cách dùng:
    python scripts/exp1/c1_win_loss.py --authors lqo_ml_perspective/experiment_logs/20240103__combined.csv
 
 2) So sánh hai log bất kỳ (log bạn tự chạy):
-   python scripts/exp1/c1_win_loss.py --baseline txt:logs/test__postgres__job.txt \
-                                 --candidate txt:logs/test__bao__job__random_split_1.txt --name Bao_RND1
-   python scripts/exp1/c1_win_loss.py --baseline jsonl:logs/job_hintsets.jsonl:default \
-                                 --candidate jsonl:logs/job_hintsets.jsonl:no_nestloop --name no_nestloop
+   python scripts/exp1/c1_win_loss.py --baseline txt:logs/mac/postgres/test__postgres__job.txt \
+                                 --candidate txt:logs/mac/bao/test__bao__job__random_split_1.txt --name Bao_RND1
+   python scripts/exp1/c1_win_loss.py --baseline jsonl:logs/mac/job_hintsets.jsonl:default \
+                                 --candidate jsonl:logs/mac/job_hintsets.jsonl:no_nestloop --name no_nestloop
 
 Định nghĩa: speedup = thời gian end-to-end của PostgreSQL / thời gian end-to-end của LQO
   Thắng: speedup > 1 + eps   Hòa: |speedup - 1| <= eps   Thua: speedup < 1 - eps   (eps mặc định 0.1)

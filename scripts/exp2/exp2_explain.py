@@ -5,7 +5,7 @@ thời gian gọi EXPLAIN để cộng vào thời gian end-to-end của mô hì
 Mỗi câu gọi EXPLAIN 3 lần trên cùng kết nối, lấy lần thứ 3.
 
   python3 /app/scripts/exp2/exp2_explain.py --query_dir /app/bao/queries/join-order-benchmark \
-      --out /app/logs/exp2_explain_job.jsonl
+      --out /app/logs/mac/exp2/exp2_explain_job.jsonl
 """
 import argparse
 import glob

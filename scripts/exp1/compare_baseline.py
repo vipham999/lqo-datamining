@@ -1,7 +1,7 @@
 """So sánh baseline PostgreSQL của nhóm với PostgreSQL trong log của tác giả (mức độ tái lập),
 và đo hiệu ứng cache theo số lần chạy k như ablation 8.6 (Hình 7 của bài báo).
 
-    python scripts/exp1/compare_baseline.py --ours logs/test__postgres__job__<thời_gian>.txt \
+    python scripts/exp1/compare_baseline.py --ours logs/mac/postgres/test__postgres__job__<thời_gian>.txt \
         --authors lqo_ml_perspective/experiment_logs/20240103__combined.csv
 """
 import argparse

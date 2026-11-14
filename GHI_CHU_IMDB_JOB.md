@@ -58,7 +58,7 @@ Có. IMDB là dữ liệu của **Join Order Benchmark (JOB)** (Leis et al., VLD
 
 | Thực nghiệm | Trạng thái |
 |---|---|
-| Baseline PostgreSQL, 113 truy vấn × 3 lần ([test__postgres__job__20261011_1743.txt](logs/test__postgres__job__20261011_1743.txt)) | ✅ Xong |
+| Baseline PostgreSQL, 113 truy vấn × 3 lần ([test__postgres__job__20261011_1743.txt](logs/mac/postgres/test__postgres__job__20261011_1743.txt)) | ✅ Xong |
 | Bao, split Leave-One-Out 1: train khoảng 3,75 giờ, test 33 truy vấn | ✅ Xong |
 | Bao, split Random 1: train khoảng 2,8 giờ, test 22 truy vấn | ✅ Xong |
 | Bao, split Base Query 1 | ⚠️ Dừng ở vòng train 9/19, chưa có kết quả test |
@@ -214,10 +214,10 @@ Thắng/thua được tính với ngưỡng ±10%. Speedup lớn hơn 1 nghĩa l
 - Python trong `analysis/.venv` (trỏ tới `/opt/miniconda3/bin/python3`) bị treo ngay khi khởi động. Các script so sánh ở trên được chạy bằng `python3` của hệ thống (pandas 3.0.3, scipy 1.17.0).
 - Lệnh tái tạo kết quả:
   ```bash
-  python3 scripts/exp1/compare_baseline.py --ours logs/test__postgres__job__20261011_1743.txt \
+  python3 scripts/exp1/compare_baseline.py --ours logs/mac/postgres/test__postgres__job__20261011_1743.txt \
       --authors lqo_ml_perspective/experiment_logs/20240103__combined.csv --out_dir analysis/output
-  python3 scripts/exp1/c1_win_loss.py --baseline txt:logs/test__postgres__job__20261011_1743.txt \
-      --candidate txt:logs/test__bao__job__random_split_1__20261012_0602.txt --name Bao_RND1 --out_dir analysis/output
-  python3 scripts/exp1/c1_win_loss.py --baseline txt:logs/test__postgres__job__20261011_1743.txt \
-      --candidate txt:logs/test__bao__job__leave_one_out_split_1__20261012_0213.txt --name Bao_LOO1 --out_dir analysis/output
+  python3 scripts/exp1/c1_win_loss.py --baseline txt:logs/mac/postgres/test__postgres__job__20261011_1743.txt \
+      --candidate txt:logs/mac/bao/test__bao__job__random_split_1__20261012_0602.txt --name Bao_RND1 --out_dir analysis/output
+  python3 scripts/exp1/c1_win_loss.py --baseline txt:logs/mac/postgres/test__postgres__job__20261011_1743.txt \
+      --candidate txt:logs/mac/bao/test__bao__job__leave_one_out_split_1__20261012_0213.txt --name Bao_LOO1 --out_dir analysis/output
   ```
