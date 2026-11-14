@@ -262,11 +262,19 @@ def main():
                         for b in sources[src]])
     dt = models()["DecisionTree"].fit(X, Y)
     rf = models()["RandomForest"].fit(X, Y)
+    lgb = models()["LightGBM"].fit(X, Y)
     with open(os.path.join(a.out_dir, "exp2_rules_decision_tree.txt"), "w") as f:
         f.write(f"Cây quyết định (độ sâu ≤ 4) train trên toàn bộ {src} ({len(Y)} câu)\n\n")
         f.write(export_text(dt, feature_names=xcols))
     imp = pd.Series(rf.feature_importances_, index=xcols).sort_values(ascending=False)
     imp.to_csv(os.path.join(a.out_dir, "exp2_feature_importance_rf.csv"), header=["importance"])
+    # Độ quan trọng của cả 3 mô hình, chuẩn hóa về tổng = 1 để so được với nhau:
+    # DecisionTree, RandomForest: mức giảm impurity; LightGBM: tổng gain của các lần tách theo đặc trưng.
+    g = lgb.booster_.feature_importance(importance_type="gain")
+    imp_all = pd.DataFrame({"DecisionTree": dt.feature_importances_, "RandomForest": rf.feature_importances_,
+                            "LightGBM": g / g.sum()}, index=xcols)
+    imp_all.sort_values("RandomForest", ascending=False).to_csv(
+        os.path.join(a.out_dir, "exp2_feature_importance_all.csv"), index_label="đặc_trưng")
 
     with open(os.path.join(a.out_dir, "exp2_tomtat.txt"), "w") as f:
         f.write("\n".join(info) + "\n\n")

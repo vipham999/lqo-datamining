@@ -1,0 +1,29 @@
+{
+ "số_câu": 113,
+ "số_họ": 33,
+ "số_điều_kiện": 21,
+ "số_luật_đã_thử": 695,
+ "số_luật_giữ_lại": 37,
+ "k_tốt_nhất": 5,
+ "silhouette_tốt_nhất": 0.2955883759591827,
+ "ARI_nhãn_max": 0.07065814111113437,
+ "ARI_nhãn_lần2_vs_lần3": 0.46230014461939045,
+ "đặc_trưng_hằng_số": [
+  "plan_n_gathermerge",
+  "plan_n_memoize",
+  "plan_est_rows"
+ ],
+ "nhóm_ít_bảng_toàn_NL": {
+  "số_câu": 38,
+  "PG_s": 90.33449300000001,
+  "PG_tổng_s": 161.557862,
+  "oracle_gain_s": 39.990716,
+  "oracle_gain_tổng_s": 56.791918
+ },
+ "hashjoin_rule": {
+  "số_câu": 28,
+  "giúp": 13,
+  "hại_2x": 4,
+  "speedup_nếu_áp_hết": 0.3393259181487247
+ }
+}

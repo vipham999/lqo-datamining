@@ -1,0 +1,5 @@
+mục,cấu_hình,nguồn,ngưỡng_ms,số_lượt_default,số_lượt_ablation,vượt_ngưỡng,có_ý_nghĩa,nhanh_hơn,chậm_hơn,workload_default_s,workload_ablation_s
+8.4,no_bitmap_tidscan,nhóm (Kaggle),250,8,8,14,10,6,4,202.65234925000001,200.642506
+8.4,no_bitmap_tidscan,tác giả (log công bố),250,13,2,28,25,7,18,142.23796923076924,150.63452649999996
+8.5,no_geqo,nhóm (Kaggle),100,8,8,18,12,3,9,202.65234925000001,205.393129
+8.5,no_geqo,tác giả (log công bố),100,13,8,20,5,1,4,142.23796923076924,139.60413874999998

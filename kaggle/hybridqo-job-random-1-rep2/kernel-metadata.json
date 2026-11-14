@@ -1,0 +1,13 @@
+{
+  "id": "vipham999/hybridqo-job-random-1-rep2",
+  "title": "hybridqo-job-random-1-rep2",
+  "code_file": "hybridqo-job-random-1-rep2.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [],
+  "kernel_sources": []
+}

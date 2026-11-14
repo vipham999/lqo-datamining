@@ -70,7 +70,8 @@ def main(a):
     for qi, p in enumerate(paths):
         sql = open(p).read()
         rel = os.path.relpath(p, '/app/bao')
-        order = names[qi % 3:] + names[:qi % 3]
+        k = (qi + a.offset) % 3
+        order = names[k:] + names[:k]
         line = []
         for c in order:
             ms = run(sql, a.db, CONFIGS[c])
@@ -92,4 +93,5 @@ if __name__ == '__main__':
     ap.add_argument('--out_dir', default='/app/logs')
     ap.add_argument('--tag', required=True)
     ap.add_argument('--force', action='store_true')
+    ap.add_argument('--offset', type=int, default=0, help='dịch thứ tự xoay vòng (đổi giữa các lượt lặp)')
     main(ap.parse_args())

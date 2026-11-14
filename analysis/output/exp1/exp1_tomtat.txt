@@ -1,3 +1,78 @@
+===== Đợt lặp giống tác giả (kaggle_runs/)
+Bao/HybridQO: mọi lần train theo split (lần 0 = đợt đầu)
+phương_pháp split  số_lần  speedup_trung_vị  speedup_min  speedup_max  thua_trung_vị  thua_min  thua_max
+        Bao LOO-1       1             0.854        0.854        0.854           27.0        27        27
+   HybridQO LOO-1       1             0.943        0.943        0.943           19.0        19        19
+        Bao LOO-2       1             0.953        0.953        0.953           24.0        24        24
+   HybridQO LOO-2       1             0.989        0.989        0.989           16.0        16        16
+        Bao LOO-3       1             0.867        0.867        0.867           25.0        25        25
+   HybridQO LOO-3       1             0.980        0.980        0.980           17.0        17        17
+        Bao RND-1       1             0.753        0.753        0.753           19.0        19        19
+   HybridQO RND-1       1             0.998        0.998        0.998           11.0        11        11
+        Bao RND-2       1             0.827        0.827        0.827           17.0        17        17
+   HybridQO RND-2       1             0.966        0.966        0.966           12.0        12        12
+        Bao RND-3       1             1.608        1.608        1.608           15.0        15        15
+   HybridQO RND-3       1             0.976        0.976        0.976            9.0         9         9
+        Bao  BQ-1       1             0.663        0.663        0.663           15.0        15        15
+   HybridQO  BQ-1       1             0.970        0.970        0.970            6.0         6         6
+        Bao  BQ-2       1             0.796        0.796        0.796           19.0        19        19
+   HybridQO  BQ-2       1             0.946        0.946        0.946            9.0         9         9
+        Bao  BQ-3       1             0.850        0.850        0.850           18.0        18        18
+   HybridQO  BQ-3       1             0.967        0.967        0.967           10.0        10        10
+
+Tổng theo từng lần train
+phương_pháp  lần  số_split  thắng  hòa  thua    PG_s   LQO_s  speedup
+        Bao    0         9      8   46   179 397.991 434.219    0.917
+   HybridQO    0         9      0  124   109 415.884 426.908    0.974
+
+Ablation 8.4/8.5 (công thức của tác giả: trung bình qua các lượt, 1,96·SE)
+mục          cấu_hình                 nguồn  ngưỡng_ms  số_lượt_default  số_lượt_ablation  vượt_ngưỡng  có_ý_nghĩa  nhanh_hơn  chậm_hơn  workload_default_s  workload_ablation_s
+8.4 no_bitmap_tidscan         nhóm (Kaggle)        250                8                 8           14          10          6         4               202.7                200.6
+8.4 no_bitmap_tidscan tác giả (log công bố)        250               13                 2           28          25          7        18               142.2                150.6
+8.5           no_geqo         nhóm (Kaggle)        100                8                 8           18          12          3         9               202.7                205.4
+8.5           no_geqo tác giả (log công bố)        100               13                 8           20           5          1         4               142.2                139.6
+
+Ablation 8.3 theo hướng (tổng workload, trung vị qua các bản)
+                        hướng                 nguồn    tập  số_bản  số_câu  tổng_s_trung_vị  tổng_s_min  tổng_s_max
+             PostgreSQL__imdb         nhóm (Kaggle)   test       4      19             22.6        21.0        24.5
+             PostgreSQL__imdb tác giả (log công bố)   test      13      19             17.1        14.1        18.5
+             PostgreSQL__imdb         nhóm (Kaggle) tất cả       4     113            225.3       209.9       238.4
+             PostgreSQL__imdb tác giả (log công bố) tất cả      13     113            150.7       129.9       155.1
+           PostgreSQL__imdb50         nhóm (Kaggle)   test       4      19             19.9        19.2        21.5
+           PostgreSQL__imdb50 tác giả (log công bố)   test       4      19             13.9        13.7        14.2
+           PostgreSQL__imdb50         nhóm (Kaggle) tất cả       4     113            132.7       116.8       143.7
+           PostgreSQL__imdb50 tác giả (log công bố) tất cả       4     113             77.8        77.3        79.1
+imdb50_trained__imdb50_tested         nhóm (Kaggle)   test       4      19             23.7        21.7        24.9
+imdb50_trained__imdb50_tested tác giả (log công bố)   test       4      19             19.6        19.4        19.8
+imdb50_trained__imdb50_tested         nhóm (Kaggle) tất cả       4     113            133.4       125.8       166.5
+imdb50_trained__imdb50_tested tác giả (log công bố) tất cả       4     113            128.8       128.1       129.6
+  imdb50_trained__imdb_tested         nhóm (Kaggle)   test       4      19             26.4        23.7        49.5
+  imdb50_trained__imdb_tested tác giả (log công bố)   test       4      19             26.8        26.5        27.9
+  imdb50_trained__imdb_tested         nhóm (Kaggle) tất cả       4     113            240.8       220.8       257.0
+  imdb50_trained__imdb_tested tác giả (log công bố) tất cả       4     113            214.4       213.2      3797.0
+  imdb_trained__imdb50_tested         nhóm (Kaggle)   test       4      19             25.8        24.3        27.4
+  imdb_trained__imdb50_tested tác giả (log công bố)   test       4      19             22.2        21.8        24.2
+  imdb_trained__imdb50_tested         nhóm (Kaggle) tất cả       4     113            152.9       146.5       163.4
+  imdb_trained__imdb50_tested tác giả (log công bố) tất cả       4     113            104.5       103.2       108.2
+    imdb_trained__imdb_tested         nhóm (Kaggle)   test       4      19             31.3        29.0        36.6
+    imdb_trained__imdb_tested tác giả (log công bố)   test       3      19             22.0        21.5        24.6
+    imdb_trained__imdb_tested         nhóm (Kaggle) tất cả       4     113            227.9       221.8       273.2
+    imdb_trained__imdb_tested tác giả (log công bố) tất cả       3     113            133.1       128.8       153.0
+
+Bao-50 so với Bao-Full khi test trên IMDB đầy đủ
+  nguồn  số_câu  Bao50_chậm_hơn_>10%  Bao50_nhanh_hơn_>10%
+   nhóm     113                   20                     8
+tác_giả     113                   24                    62
+     nhóm_Full_ms  nhóm_50_ms  tác_giả_Full_ms  tác_giả_50_ms    tập  nhóm_50_chia_Full  tác_giả_50_chia_Full                                                  bài_báo
+q                                                                                                                                                                     
+10c       5859.67    10011.59          4263.58        3229.78  train               1.71                  0.76                                               nhanh 1,3×
+16b      10634.82    10732.40          4250.32       23267.01  train               1.01                  5.47  Bao-50 timeout 1/4 model, 3 model còn lại chậm hơn 19 s
+17a       6789.21     6903.97          2283.34       12333.82  train               1.02                  5.40                               chậm 4,5× (12,2 s / 2,7 s)
+26c       2383.58     3972.31          1964.50        1141.06  train               1.67                  0.58                                               nhanh 1,6×
+31c        770.07      759.83           691.88        8701.49   test               0.99                 12.58                                chậm 24× (8,4 s / 350 ms)
+7c        4146.19     4007.60          3040.18        1674.14   test               0.97                  0.55                                               nhanh 1,9×
+
+===== Đợt đầu
 Bao và HybridQO theo từng split (nhóm cạnh tác giả)
 split  số_câu Bao_kaggle_T/H/Th  Bao_kaggle_speedup  Bao_kaggle_trung_vị Bao_mac_T/H/Th  Bao_mac_speedup  Bao_mac_trung_vị Bao_tác_giả_T/H/Th  Bao_tác_giả_speedup  Bao_tác_giả_trung_vị HQO_nhóm_T/H/Th  HQO_nhóm_speedup  HQO_nhóm_trung_vị HQO_tác_giả_T/H/Th  HQO_tác_giả_speedup  HQO_tác_giả_trung_vị
 LOO-1      33            1/5/27                0.85                 0.67         5/3/25             1.10              0.64             2/3/28                 0.78                  0.43         0/14/19              0.94               0.85            7/13/13                 1.04                  0.93

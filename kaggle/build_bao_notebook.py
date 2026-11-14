@@ -488,6 +488,161 @@ plt.tight_layout(); plt.savefig("/kaggle/working/ablation86_logs/hinh7_8_6.png",
 ]
 
 
+# ================================================================ đợt lặp giống tác giả (8.4 + 8.5 nhiều lượt, 8.3 bốn bản)
+N_PASSES = 8          # tác giả: 13 lượt default, 8 lượt no_geqo, 2 lượt no_bitmap_tidscan
+
+ABL_845_R = ABL_845[:7] + [
+    r'''%%bash
+# Ablation 8.4 + 8.5, __N__ lượt ĐỘC LẬP (mỗi lượt: 113 câu × 3 cấu hình × 3 lần thực thi, xen kẽ theo câu).
+# Mỗi lượt dịch thứ tự xoay vòng (--offset) để không cấu hình nào luôn chạy trước. Log: ..._kaggle_p<lượt>.txt
+D=/kaggle/working/ablation_logs; mkdir -p $D
+for P in $(seq 1 __N__); do
+  echo "== Lượt $P/__N__ bắt đầu $(date +%H:%M)"
+  /tmp/bao_env/bin/python -u /tmp/ablation_interleaved.py --tag kaggle_p$P --offset $((P - 1)) \
+    --query_dir /tmp/lqo_ml_perspective/bao/queries/join-order-benchmark --out_dir $D > $D/console_p$P.log 2>&1 \
+    || { echo "Lượt $P lỗi:"; tail -5 $D/console_p$P.log; exit 1; }
+  grep -c "timeout/lỗi" $D/console_p$P.log | xargs echo "   số câu timeout/lỗi:"
+done
+echo "== Xong $(date +%H:%M)"'''.replace("__N__", str(N_PASSES)),
+    r'''# Phân tích ĐÚNG cách của tác giả (notebooks/FullEvaluation_JOB_ResultAnalysis.ipynb, create_df):
+# trung bình execution_time (lần thực thi thứ 3) qua các lượt; err = 1.96·sqrt(SE1² + SE2²);
+# có ý nghĩa khi |chênh lệch| > ngưỡng (8.4: 250 ms, 8.5: 100 ms) và |chênh lệch| > err.
+import glob, os, numpy as np, pandas as pd
+D = "/kaggle/working/ablation_logs"
+def load(c):
+    rows = []
+    for f in sorted(glob.glob(f"{D}/test__postgres__job__{c}__kaggle_p*.txt")):
+        p = f.rsplit("_p", 1)[1][:-4]
+        for l in open(f):
+            r = [x.strip() for x in l.split(",")]
+            if len(r) >= 7 and r[1] == "2":
+                rows.append({"q": os.path.basename(r[3])[:-4], "pass": int(p), "exec_ms": float(r[5])})
+    return pd.DataFrame(rows)
+base = load("default").groupby("q").exec_ms
+for c, thr in [("no_bitmap_tidscan", 250), ("no_geqo", 100)]:
+    x = load(c).groupby("q").exec_ms
+    d = pd.DataFrame({"default_ms": base.mean(), "ablation_ms": x.mean(),
+                      "err": 1.96 * np.sqrt((base.std() / np.sqrt(base.count())) ** 2 + (x.std() / np.sqrt(x.count())) ** 2),
+                      "n": x.count()})
+    d["diff"] = d.default_ms - d.ablation_ms           # > 0: ablation nhanh hơn
+    d = d[d["diff"].abs() > thr]
+    sig = d[d["diff"].abs() > d.err]
+    print(f"{c}: |Δ| > {thr} ms ở {len(d)} câu, có ý nghĩa {len(sig)} câu "
+          f"(nhanh hơn {(sig['diff'] > 0).sum()}, chậm hơn {(sig['diff'] < 0).sum()}); số lượt mỗi câu: {int(d.n.min()) if len(d) else '-'}")
+    print((sig.assign(ti_le=sig.ablation_ms / sig.default_ms).sort_values("ti_le")).round(1).to_string(), "\n")''',
+]
+
+S83 = "base_query_split_1"
+ABL_83_REP = CELLS[:5] + [
+    CELLS[5].replace("__SPLIT__", S83).replace("/kaggle/working/bao_logs", "/kaggle/working/ablation83_logs"),
+    # tạo imdbload50 (không làm nóng ở đây: mỗi bước train/test tự làm nóng CSDL nó dùng)
+    ABL_83[6].split("psql -d imdbload50 -qc \"CREATE EXTENSION")[0] + 'echo "Đã tạo imdbload50"',
+    CELLS[6],                                       # làm nóng imdbload
+    CELLS[7].replace("== Train xong", "== Bao-Full train xong"),     # Bao-Full: train trên imdbload
+    r'''%%bash
+# Bao-50: train trên imdbload50, cùng split base_query_split_1
+source /tmp/bao_vars.sh
+cd /tmp/bao_run
+S=$SPLIT
+psql -d imdbload50 -qc "CREATE EXTENSION IF NOT EXISTS pg_prewarm"
+psql -d imdbload50 -qAt -c "SELECT count(pg_prewarm(c.oid,'read')) FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='public' AND c.relkind IN ('r','i')" > /dev/null
+for f in queries/join-order-benchmark/*.sql; do
+  psql -d imdbload50 -q -o /dev/null -c "SET statement_timeout = 300000;" -f "$f" || echo "  $(basename $f): lỗi/timeout"
+done
+sed -i "s/dbname='[a-z0-9]*'/dbname='imdbload50'/" bao_server/bao.cfg
+(cd bao_server && python clear_experience.py && rm -rf bao_default_model bao_previous_model)
+N=$(wc -l < $OUT/bao_server.log)
+pkill -f "python -u main.py" 2> /dev/null; sleep 2
+(cd bao_server && exec setsid nohup python -u main.py) >> $OUT/bao_server.log 2>&1 < /dev/null &
+for _ in $(seq 120); do (exec 3<>/dev/tcp/localhost/9381) 2> /dev/null && break; sleep 1; done
+T0=$(date +%s)
+timeout $TRAIN_LIMIT_S python -u run_queries.py --database_name imdbload50 --query_dir queries/job__$S/train \
+  --output_file $OUT/train__bao__job__${S}__imdb50.txt > $OUT/train_console_imdb50.log 2>&1
+RC=$?; T1=$(date +%s); NOTE=""; [ $RC -eq 124 ] && NOTE=",truncated"
+echo "job__${S}__imdb50,train_seconds,$((T1 - T0))$NOTE" >> $OUT/bao_training_times.csv
+[ -d bao_server/bao_default_model ] || { echo "Không có model sau khi train"; tail -20 $OUT/train_console_imdb50.log; exit 1; }
+rm -rf $OUT/model__bao__job__${S}__imdb50 && cp -r bao_server/bao_default_model $OUT/model__bao__job__${S}__imdb50
+pkill -f "python -u main.py" 2> /dev/null
+NLOAD=$(tail -n +$((N + 1)) $OUT/bao_server.log | grep -c "Accepted new model")
+echo "== Server đã nạp model mới $NLOAD lần khi train Bao-50 (mong đợi khoảng 19)"
+[ "$NLOAD" -ge 1 ] || { echo "Server chưa từng nạp model khi train Bao-50"; grep -m3 -A6 Traceback $OUT/train_console_imdb50.log; exit 1; }
+echo "== Bao-50 train xong sau $(( (T1 - T0) / 60 )) phút"''',
+    r'''%%bash
+# Test 3 hướng của §8.3 (+ hướng thường) trên CẢ 113 câu (94 train + 19 test của BQ-1), giống log tác giả:
+#   imdbload  : PostgreSQL, Bao-Full (= BQ-1 thường), Bao-50 (imdb50_trained__imdb_tested: hướng bài báo dùng để kết luận)
+#   imdbload50: PostgreSQL, Bao-Full (imdb_trained__imdb50_tested), Bao-50 (imdb50_trained__imdb50_tested)
+source /tmp/bao_vars.sh
+cd /tmp/bao_run
+S=$SPLIT; Q=queries/job__$S
+for DB in imdbload imdbload50; do
+  echo "== $(date +%H:%M) Làm nóng $DB"
+  psql -d $DB -qAt -c "SELECT count(pg_prewarm(c.oid,'read')) FROM pg_class c JOIN pg_namespace n ON n.oid=c.relnamespace WHERE n.nspname='public' AND c.relkind IN ('r','i')" > /dev/null
+  for f in queries/join-order-benchmark/*.sql; do
+    psql -d $DB -q -o /dev/null -c "SET statement_timeout = 300000;" -f "$f" || echo "  $(basename $f): lỗi/timeout"
+  done
+  sed -i "s/dbname='[a-z0-9]*'/dbname='$DB'/" bao_server/bao.cfg
+  echo "== $(date +%H:%M) PostgreSQL trên $DB"
+  python -u run_test_queries.py --use_postgres --database_name $DB --query_dir $Q \
+    --output_file $OUT/test__postgres__job__${S}__$DB.txt > /dev/null
+  for M in full:$OUT/model__bao__job__$S 50:$OUT/model__bao__job__${S}__imdb50; do
+    NAME=${M%%:*}; DIR=${M#*:}
+    N=$(wc -l < $OUT/bao_server.log)
+    pkill -f "python -u main.py" 2> /dev/null; sleep 2
+    (cd bao_server && exec setsid nohup python -u main.py $DIR) >> $OUT/bao_server.log 2>&1 < /dev/null &
+    for _ in $(seq 120); do tail -n +$((N + 1)) $OUT/bao_server.log | grep -q "Accepted new model" && break; sleep 1; done
+    tail -n +$((N + 1)) $OUT/bao_server.log | grep -q "Accepted new model" || { echo "Bao server chưa nạp model $DIR"; exit 1; }
+    echo "== $(date +%H:%M) Bao-$NAME trên $DB"
+    python -u run_test_queries.py --use_bao --database_name $DB --query_dir $Q \
+      --output_file $OUT/test__bao_${NAME}__job__${S}__$DB.txt > /dev/null
+  done
+  pkill -f "python -u main.py" 2> /dev/null
+done
+echo "== $(date +%H:%M) Xong test"''',
+    r'''import pandas as pd, os, pathlib
+OUT = pathlib.Path("/kaggle/working/ablation83_logs"); S = "base_query_split_1"
+def load(path):
+    rows = [[x.strip() for x in l.split(",")] for l in open(path) if l.count(",") >= 6]
+    d = pd.DataFrame({"q": [os.path.basename(r[-4])[:-4] for r in rows], "tap": [r[-4].split("/")[-2] for r in rows],
+                      "run": [int(r[-6]) for r in rows], "ms": [float(r[-3]) + float(r[-2]) for r in rows]})
+    return d[d.run == 2].set_index("q")
+for db in ["imdbload", "imdbload50"]:
+    pg = load(OUT / f"test__postgres__job__{S}__{db}.txt")
+    d = pd.DataFrame({"tap": pg.tap, "PG": pg.ms,
+                      "Bao_Full": load(OUT / f"test__bao_full__job__{S}__{db}.txt").ms,
+                      "Bao_50": load(OUT / f"test__bao_50__job__{S}__{db}.txt").ms}).dropna()
+    print(f"===== test trên {db}: {len(d)} câu ({(d.tap == 'train').sum()} train, {(d.tap == 'test').sum()} test)")
+    for tap, g in [("tất cả", d), ("test", d[d.tap == "test"])]:
+        print(f"  [{tap}] tổng PG {g.PG.sum()/1000:.1f} s, Bao-Full {g.Bao_Full.sum()/1000:.1f} s, Bao-50 {g.Bao_50.sum()/1000:.1f} s")
+    r = (d.Bao_50 / d.Bao_Full).sort_values()
+    print(f"  Bao-50 chậm hơn Bao-Full >10% ở {(r > 1.1).sum()} câu, nhanh hơn ở {(r < 0.9).sum()} câu; chậm nhất: "
+          + ", ".join(f"{q} {v:.1f}×" for q, v in r.tail(5)[::-1].items()))''',
+]
+
+
+def _write_nb(slug, cells):
+    out = os.path.join(ROOT, "kaggle", slug)
+    os.makedirs(out, exist_ok=True)
+    nb = {"nbformat": 4, "nbformat_minor": 5,
+          "metadata": {"kernelspec": {"name": "python3", "display_name": "Python 3", "language": "python"},
+                       "language_info": {"name": "python"}},
+          "cells": [{"id": f"cell-{i}", "cell_type": "code", "metadata": {}, "execution_count": None,
+                     "outputs": [], "source": c.splitlines(keepends=True)} for i, c in enumerate(cells)]}
+    json.dump(nb, open(os.path.join(out, f"{slug}.ipynb"), "w"), ensure_ascii=False, indent=1)
+    return out
+
+
+def build_repeat(user):
+    """Notebook đợt lặp: 8.4+8.5 (N_PASSES lượt) và 8.3 × 4 bản (mỗi bản tự train Bao-Full + Bao-50)."""
+    jobs = [(f"ablation-job-8-4-8-5-r{N_PASSES}", ABL_845_R)] + [(f"ablation-job-8-3-rep{i}", ABL_83_REP) for i in range(1, 5)]
+    for slug, cells in jobs:
+        out = _write_nb(slug, cells)
+        meta = {"id": f"{user}/{slug}", "title": slug, "code_file": f"{slug}.ipynb", "language": "python",
+                "kernel_type": "notebook", "is_private": True, "enable_gpu": False, "enable_internet": True,
+                "dataset_sources": [], "competition_sources": [], "kernel_sources": []}
+        json.dump(meta, open(os.path.join(out, "kernel-metadata.json"), "w"), indent=2)
+        print(f"{len(cells)} ô → {os.path.relpath(out, ROOT)}")
+
+
 def build_ablation(user):
     for slug, cells, sources in (
             ("ablation-job-8-6", ABL_86, []),
@@ -508,8 +663,8 @@ def build_ablation(user):
         print(f"{len(cells)} ô → {os.path.relpath(out, ROOT)}")
 
 
-def build(user, split):
-    slug = "bao-job-" + split.replace("_split_", "-").replace("_", "-")
+def build(user, split, rep=0):
+    slug = "bao-job-" + split.replace("_split_", "-").replace("_", "-") + (f"-rep{rep}" if rep else "")
     out = os.path.join(ROOT, "kaggle", slug)
     os.makedirs(out, exist_ok=True)
     cells = [c.replace("__SPLIT__", split) for c in CELLS]
@@ -532,13 +687,17 @@ def main():
     ap.add_argument("--split", choices=ALL_SPLITS)
     ap.add_argument("--all", action="store_true")
     ap.add_argument("--ablation", action="store_true", help="2 notebook ablation 8.4+8.5 và 8.3")
+    ap.add_argument("--repeat", action="store_true", help="đợt lặp: 8.4+8.5 nhiều lượt, 8.3 × 4 bản")
+    ap.add_argument("--rep", type=int, default=0, help="lần train thứ mấy (0 = lần đầu, slug không hậu tố)")
     a = ap.parse_args()
     if a.ablation:
         return build_ablation(a.user)
+    if a.repeat:
+        return build_repeat(a.user)
     if not a.split and not a.all:
-        ap.error("cần --split, --all hoặc --ablation")
+        ap.error("cần --split, --all, --ablation hoặc --repeat")
     for s in (ALL_SPLITS if a.all else [a.split]):
-        build(a.user, s)
+        build(a.user, s, a.rep)
 
 
 if __name__ == "__main__":

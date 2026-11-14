@@ -1,0 +1,11 @@
+kết_quả,số_câu,tỉ_lệ
+tắt nestloop giúp,11,0.09734513274336283
+tắt nestloop hại ≥2×,85,0.7522123893805309
+tắt hashjoin giúp,19,0.168141592920354
+tắt hashjoin hại ≥2×,6,0.05309734513274336
+tắt mergejoin giúp,6,0.05309734513274336
+tắt mergejoin hại ≥2×,2,0.017699115044247787
+tắt seqscan giúp,20,0.17699115044247787
+tắt seqscan hại ≥2×,17,0.1504424778761062
+tắt indexscan giúp,17,0.1504424778761062
+tắt indexscan hại ≥2×,10,0.08849557522123894

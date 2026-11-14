@@ -1,0 +1,25 @@
+hướng,nguồn,tập,số_bản,số_câu,tổng_s_trung_vị,tổng_s_min,tổng_s_max
+PostgreSQL__imdb,nhóm (Kaggle),test,4,19,22.586554,20.990479999999998,24.492472999999997
+PostgreSQL__imdb,tác giả (log công bố),test,13,19,17.050991000000003,14.12231,18.486653999999998
+PostgreSQL__imdb,nhóm (Kaggle),tất cả,4,113,225.331832,209.90464300000002,238.384365
+PostgreSQL__imdb,tác giả (log công bố),tất cả,13,113,150.73493900000003,129.888107,155.108192
+PostgreSQL__imdb50,nhóm (Kaggle),test,4,19,19.9349805,19.152203,21.497619
+PostgreSQL__imdb50,tác giả (log công bố),test,4,19,13.887587,13.658401,14.244557
+PostgreSQL__imdb50,nhóm (Kaggle),tất cả,4,113,132.6902705,116.756839,143.662562
+PostgreSQL__imdb50,tác giả (log công bố),tất cả,4,113,77.756169,77.254834,79.1185
+imdb50_trained__imdb50_tested,nhóm (Kaggle),test,4,19,23.7457935,21.749176,24.877171999999998
+imdb50_trained__imdb50_tested,tác giả (log công bố),test,4,19,19.633205,19.392055,19.762148
+imdb50_trained__imdb50_tested,nhóm (Kaggle),tất cả,4,113,133.35445750000002,125.818546,166.464125
+imdb50_trained__imdb50_tested,tác giả (log công bố),tất cả,4,113,128.7868195,128.113252,129.608272
+imdb50_trained__imdb_tested,nhóm (Kaggle),test,4,19,26.433304,23.736887000000003,49.468419000000004
+imdb50_trained__imdb_tested,tác giả (log công bố),test,4,19,26.76892,26.45247,27.884461
+imdb50_trained__imdb_tested,nhóm (Kaggle),tất cả,4,113,240.8172955,220.754968,257.004305
+imdb50_trained__imdb_tested,tác giả (log công bố),tất cả,4,113,214.43447650000002,213.24499799999998,3797.0205319999995
+imdb_trained__imdb50_tested,nhóm (Kaggle),test,4,19,25.822475999999998,24.289822,27.429830000000003
+imdb_trained__imdb50_tested,tác giả (log công bố),test,4,19,22.196031499999997,21.791781,24.212974000000003
+imdb_trained__imdb50_tested,nhóm (Kaggle),tất cả,4,113,152.910706,146.545011,163.42736299999999
+imdb_trained__imdb50_tested,tác giả (log công bố),tất cả,4,113,104.45959200000001,103.23930800000001,108.17156
+imdb_trained__imdb_tested,nhóm (Kaggle),test,4,19,31.2980855,28.9587,36.62028299999999
+imdb_trained__imdb_tested,tác giả (log công bố),test,3,19,21.969252,21.532296,24.572391
+imdb_trained__imdb_tested,nhóm (Kaggle),tất cả,4,113,227.9212705,221.78723499999998,273.165834
+imdb_trained__imdb_tested,tác giả (log công bố),tất cả,3,113,133.122773,128.798768,152.96113200000002

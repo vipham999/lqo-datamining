@@ -1,0 +1,1779 @@
+Found 94 queries in queries/job__base_query_split_1/train and its subdirectories.
+Using Bao: True
+Running against DB: imdbload
+Executing queries using PG optimizer for initial training
+x, 0, 0, 2026-11-13 20:36:10.634171, queries/job__base_query_split_1/train/29a.sql, 120.168, 177.657, PG
+x, 0, 1, 2026-11-13 20:36:10.913479, queries/job__base_query_split_1/train/29a.sql, 124.208, 146.073, PG
+x, 0, 2, 2026-11-13 20:36:12.451557, queries/job__base_query_split_1/train/29a.sql, 254.234, 75.78, PG
+x, 1, 0, 2026-11-13 20:36:22.963079, queries/job__base_query_split_1/train/10c.sql, 4.917, 10497.728, PG
+x, 1, 1, 2026-11-13 20:36:33.143836, queries/job__base_query_split_1/train/10c.sql, 5.578, 10166.32, PG
+x, 1, 2, 2026-11-13 20:37:14.355233, queries/job__base_query_split_1/train/10c.sql, 143.204, 30824.127, PG
+x, 2, 0, 2026-11-13 20:37:29.535560, queries/job__base_query_split_1/train/17e.sql, 35.898, 15121.41, PG
+x, 2, 1, 2026-11-13 20:37:42.593991, queries/job__base_query_split_1/train/17e.sql, 10.358, 13038.407, PG
+x, 2, 2, 2026-11-13 20:38:09.211189, queries/job__base_query_split_1/train/17e.sql, 143.634, 13436.377, PG
+x, 3, 0, 2026-11-13 20:38:11.013418, queries/job__base_query_split_1/train/16d.sql, 9.082, 1785.396, PG
+x, 3, 1, 2026-11-13 20:38:12.745518, queries/job__base_query_split_1/train/16d.sql, 10.511, 1711.769, PG
+x, 3, 2, 2026-11-13 20:38:16.508163, queries/job__base_query_split_1/train/16d.sql, 145.041, 1528.567, PG
+x, 4, 0, 2026-11-13 20:38:16.670035, queries/job__base_query_split_1/train/33b.sql, 89.918, 61.192, PG
+x, 4, 1, 2026-11-13 20:38:16.828389, queries/job__base_query_split_1/train/33b.sql, 90.515, 59.206, PG
+x, 4, 2, 2026-11-13 20:38:18.243041, queries/job__base_query_split_1/train/33b.sql, 284.614, 49.013, PG
+x, 5, 0, 2026-11-13 20:38:21.325990, queries/job__base_query_split_1/train/30a.sql, 77.724, 2997.193, PG
+x, 5, 1, 2026-11-13 20:38:24.331073, queries/job__base_query_split_1/train/30a.sql, 79.493, 2916.61, PG
+x, 5, 2, 2026-11-13 20:38:30.714222, queries/job__base_query_split_1/train/30a.sql, 211.724, 2536.108, PG
+x, 6, 0, 2026-11-13 20:38:36.302331, queries/job__base_query_split_1/train/6d.sql, 3.222, 5577.988, PG
+x, 6, 1, 2026-11-13 20:38:41.814662, queries/job__base_query_split_1/train/6d.sql, 5.313, 5498.75, PG
+x, 6, 2, 2026-11-13 20:38:52.848338, queries/job__base_query_split_1/train/6d.sql, 138.392, 5119.743, PG
+x, 7, 0, 2026-11-13 20:38:53.072166, queries/job__base_query_split_1/train/12b.sql, 8.519, 206.772, PG
+x, 7, 1, 2026-11-13 20:38:53.237000, queries/job__base_query_split_1/train/12b.sql, 8.302, 147.407, PG
+x, 7, 2, 2026-11-13 20:38:54.087231, queries/job__base_query_split_1/train/12b.sql, 142.041, 144.247, PG
+x, 8, 0, 2026-11-13 20:38:56.443830, queries/job__base_query_split_1/train/20b.sql, 24.845, 2321.937, PG
+x, 8, 1, 2026-11-13 20:38:58.744502, queries/job__base_query_split_1/train/20b.sql, 19.169, 2273.774, PG
+x, 8, 2, 2026-11-13 20:39:03.543118, queries/job__base_query_split_1/train/20b.sql, 156.858, 1950.484, PG
+x, 9, 0, 2026-11-13 20:39:14.542876, queries/job__base_query_split_1/train/10c.sql, 4.998, 10985.561, PG
+x, 9, 1, 2026-11-13 20:39:24.773824, queries/job__base_query_split_1/train/10c.sql, 6.765, 10212.654, PG
+x, 9, 2, 2026-11-13 20:39:45.199919, queries/job__base_query_split_1/train/10c.sql, 143.184, 10043.772, PG
+x, 10, 0, 2026-11-13 20:39:46.987865, queries/job__base_query_split_1/train/16d.sql, 9.351, 1770.516, PG
+x, 10, 1, 2026-11-13 20:39:48.708980, queries/job__base_query_split_1/train/16d.sql, 9.185, 1703.783, PG
+x, 10, 2, 2026-11-13 20:39:52.431211, queries/job__base_query_split_1/train/16d.sql, 147.721, 1494.385, PG
+x, 11, 0, 2026-11-13 20:39:53.737972, queries/job__base_query_split_1/train/22d.sql, 47.695, 1250.081, PG
+x, 11, 1, 2026-11-13 20:39:54.902123, queries/job__base_query_split_1/train/22d.sql, 47.615, 1108.058, PG
+x, 11, 2, 2026-11-13 20:39:58.002619, queries/job__base_query_split_1/train/22d.sql, 187.626, 1166.164, PG
+x, 12, 0, 2026-11-13 20:40:09.902023, queries/job__base_query_split_1/train/10c.sql, 18.99, 11863.87, PG
+x, 12, 1, 2026-11-13 20:40:20.102602, queries/job__base_query_split_1/train/10c.sql, 8.587, 10179.923, PG
+x, 12, 2, 2026-11-13 20:40:40.599666, queries/job__base_query_split_1/train/10c.sql, 144.012, 10127.972, PG
+x, 13, 0, 2026-11-13 20:41:04.750011, queries/job__base_query_split_1/train/16b.sql, 11.83, 24128.671, PG
+x, 13, 1, 2026-11-13 20:41:28.614468, queries/job__base_query_split_1/train/16b.sql, 9.172, 23847.418, PG
+x, 13, 2, 2026-11-13 20:42:16.364638, queries/job__base_query_split_1/train/16b.sql, 150.178, 25119.872, PG
+x, 14, 0, 2026-11-13 20:42:16.647153, queries/job__base_query_split_1/train/29b.sql, 133.556, 138.1, PG
+x, 14, 1, 2026-11-13 20:42:16.917321, queries/job__base_query_split_1/train/29b.sql, 122.52, 138.197, PG
+x, 14, 2, 2026-11-13 20:42:18.422668, queries/job__base_query_split_1/train/29b.sql, 251.607, 62.462, PG
+x, 15, 0, 2026-11-13 20:42:20.688215, queries/job__base_query_split_1/train/26a.sql, 74.858, 2182.208, PG
+x, 15, 1, 2026-11-13 20:42:22.824140, queries/job__base_query_split_1/train/26a.sql, 76.189, 2051.231, PG
+x, 15, 2, 2026-11-13 20:42:27.627569, queries/job__base_query_split_1/train/26a.sql, 209.24, 1834.921, PG
+x, 16, 0, 2026-11-13 20:42:29.393418, queries/job__base_query_split_1/train/16d.sql, 8.976, 1749.227, PG
+x, 16, 1, 2026-11-13 20:42:31.191484, queries/job__base_query_split_1/train/16d.sql, 16.472, 1771.811, PG
+x, 16, 2, 2026-11-13 20:42:34.898105, queries/job__base_query_split_1/train/16d.sql, 149.321, 1495.724, PG
+x, 17, 0, 2026-11-13 20:42:35.052007, queries/job__base_query_split_1/train/27b.sql, 80.195, 63.935, PG
+x, 17, 1, 2026-11-13 20:42:35.194408, queries/job__base_query_split_1/train/27b.sql, 75.385, 58.592, PG
+x, 17, 2, 2026-11-13 20:42:36.371084, queries/job__base_query_split_1/train/27b.sql, 220.616, 51.358, PG
+x, 18, 0, 2026-11-13 20:42:36.547072, queries/job__base_query_split_1/train/4c.sql, 3.267, 164.893, PG
+x, 18, 1, 2026-11-13 20:42:36.713380, queries/job__base_query_split_1/train/4c.sql, 2.872, 156.009, PG
+x, 18, 2, 2026-11-13 20:42:37.553971, queries/job__base_query_split_1/train/4c.sql, 136.653, 111.138, PG
+x, 19, 0, 2026-11-13 20:42:38.163736, queries/job__base_query_split_1/train/10a.sql, 4.81, 597.164, PG
+x, 19, 1, 2026-11-13 20:42:38.783134, queries/job__base_query_split_1/train/10a.sql, 4.963, 605.612, PG
+x, 19, 2, 2026-11-13 20:42:40.440288, queries/job__base_query_split_1/train/10a.sql, 144.945, 556.29, PG
+x, 20, 0, 2026-11-13 20:42:40.552205, queries/job__base_query_split_1/train/4b.sql, 2.812, 101.156, PG
+x, 20, 1, 2026-11-13 20:42:40.659159, queries/job__base_query_split_1/train/4b.sql, 2.773, 96.814, PG
+x, 20, 2, 2026-11-13 20:42:41.399717, queries/job__base_query_split_1/train/4b.sql, 142.308, 74.894, PG
+x, 21, 0, 2026-11-13 20:42:45.182319, queries/job__base_query_split_1/train/30c.sql, 84.833, 3689.224, PG
+x, 21, 1, 2026-11-13 20:42:48.580453, queries/job__base_query_split_1/train/30c.sql, 79.021, 3310.616, PG
+x, 21, 2, 2026-11-13 20:42:55.737451, queries/job__base_query_split_1/train/30c.sql, 213.957, 2909.638, PG
+x, 22, 0, 2026-11-13 20:42:56.117511, queries/job__base_query_split_1/train/19b.sql, 31.767, 337.48, PG
+x, 22, 1, 2026-11-13 20:42:56.378475, queries/job__base_query_split_1/train/19b.sql, 28.782, 221.262, PG
+x, 22, 2, 2026-11-13 20:42:57.573427, queries/job__base_query_split_1/train/19b.sql, 162.759, 232.058, PG
+x, 23, 0, 2026-11-13 20:42:57.961115, queries/job__base_query_split_1/train/14a.sql, 7.42, 372.063, PG
+x, 23, 1, 2026-11-13 20:42:58.345749, queries/job__base_query_split_1/train/14a.sql, 7.748, 368.771, PG
+x, 23, 2, 2026-11-13 20:42:59.567954, queries/job__base_query_split_1/train/14a.sql, 141.901, 271.364, PG
+x, 24, 0, 2026-11-13 20:43:03.022393, queries/job__base_query_split_1/train/8d.sql, 5.289, 3440.075, PG
+x, 24, 1, 2026-11-13 20:43:06.415462, queries/job__base_query_split_1/train/8d.sql, 5.191, 3378.163, PG
+x, 24, 2, 2026-11-13 20:43:13.140568, queries/job__base_query_split_1/train/8d.sql, 141.764, 3345.237, PG
+==========================================================================================
+Iteration over chunk 1/19...
+[2026-11-13 20:43:13.140863]	[1/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.43059761822223663
+Epoch 15 training loss: 0.06437104009091854
+Epoch 30 training loss: 0.029833711683750153
+Epoch 45 training loss: 0.017225845716893673
+Epoch 60 training loss: 0.011810800060629845
+Stopped training from convergence condition at epoch 66
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 20:43:18.407360]	[1/19]	Retraining done.
+0, 0, 0, 2026-11-13 20:43:19.318017, queries/job__base_query_split_1/train/19b.sql, 259.753, 234.642, Bao
+0, 0, 1, 2026-11-13 20:43:20.239895, queries/job__base_query_split_1/train/19b.sql, 266.513, 239.083, Bao
+0, 0, 2, 2026-11-13 20:43:21.594072, queries/job__base_query_split_1/train/19b.sql, 244.775, 225.246, Bao
+0, 1, 0, 2026-11-13 20:43:22.247968, queries/job__base_query_split_1/train/12b.sql, 183.199, 146.019, Bao
+0, 1, 1, 2026-11-13 20:43:22.880574, queries/job__base_query_split_1/train/12b.sql, 174.863, 145.961, Bao
+0, 1, 2, 2026-11-13 20:43:23.797630, queries/job__base_query_split_1/train/12b.sql, 171.429, 144.776, Bao
+0, 2, 0, 2026-11-13 20:43:25.419253, queries/job__base_query_split_1/train/12c.sql, 177.301, 1127.528, Bao
+0, 2, 1, 2026-11-13 20:43:26.994636, queries/job__base_query_split_1/train/12c.sql, 203.528, 1014.947, Bao
+0, 2, 2, 2026-11-13 20:43:29.614396, queries/job__base_query_split_1/train/12c.sql, 165.332, 962.747, Bao
+0, 3, 0, 2026-11-13 20:43:30.430556, queries/job__base_query_split_1/train/5c.sql, 154.953, 365.151, Bao
+0, 3, 1, 2026-11-13 20:43:31.241607, queries/job__base_query_split_1/train/5c.sql, 157.417, 361.059, Bao
+0, 3, 2, 2026-11-13 20:43:32.539155, queries/job__base_query_split_1/train/5c.sql, 150.767, 346.084, Bao
+0, 4, 0, 2026-11-13 20:43:33.812417, queries/job__base_query_split_1/train/27c.sql, 444.338, 240.691, Bao
+0, 4, 1, 2026-11-13 20:43:35.098827, queries/job__base_query_split_1/train/27c.sql, 447.126, 253.468, Bao
+0, 4, 2, 2026-11-13 20:43:37.082960, queries/job__base_query_split_1/train/27c.sql, 476.971, 236.929, Bao
+0, 5, 0, 2026-11-13 20:43:37.629089, queries/job__base_query_split_1/train/4b.sql, 157.277, 97.039, Bao
+0, 5, 1, 2026-11-13 20:43:38.174561, queries/job__base_query_split_1/train/4b.sql, 154.381, 97.102, Bao
+0, 5, 2, 2026-11-13 20:43:38.960277, queries/job__base_query_split_1/train/4b.sql, 153.008, 75.082, Bao
+0, 6, 0, 2026-11-13 20:43:40.220429, queries/job__base_query_split_1/train/33a.sql, 518.817, 77.561, Bao
+0, 6, 1, 2026-11-13 20:43:41.480543, queries/job__base_query_split_1/train/33a.sql, 518.567, 75.126, Bao
+0, 6, 2, 2026-11-13 20:43:43.295574, queries/job__base_query_split_1/train/33a.sql, 509.147, 73.354, Bao
+0, 7, 0, 2026-11-13 20:43:44.741602, queries/job__base_query_split_1/train/23c.sql, 319.815, 667.529, Bao
+0, 7, 1, 2026-11-13 20:43:46.317597, queries/job__base_query_split_1/train/23c.sql, 324.348, 712.684, Bao
+0, 7, 2, 2026-11-13 20:43:48.612786, queries/job__base_query_split_1/train/23c.sql, 309.313, 634.673, Bao
+0, 8, 0, 2026-11-13 20:43:49.652563, queries/job__base_query_split_1/train/9b.sql, 182.284, 519.752, Bao
+0, 8, 1, 2026-11-13 20:43:50.681446, queries/job__base_query_split_1/train/9b.sql, 181.843, 522.082, Bao
+0, 8, 2, 2026-11-13 20:43:52.380016, queries/job__base_query_split_1/train/9b.sql, 170.997, 503.287, Bao
+0, 9, 0, 2026-11-13 20:43:52.970999, queries/job__base_query_split_1/train/1b.sql, 156.507, 140.361, Bao
+0, 9, 1, 2026-11-13 20:43:53.577953, queries/job__base_query_split_1/train/1b.sql, 161.255, 143.03, Bao
+0, 9, 2, 2026-11-13 20:43:54.427678, queries/job__base_query_split_1/train/1b.sql, 150.826, 142.883, Bao
+0, 10, 0, 2026-11-13 20:43:56.531355, queries/job__base_query_split_1/train/26a.sql, 452.703, 1062.366, Bao
+0, 10, 1, 2026-11-13 20:43:58.581619, queries/job__base_query_split_1/train/26a.sql, 450.517, 1007.926, Bao
+0, 10, 2, 2026-11-13 20:44:01.892685, queries/job__base_query_split_1/train/26a.sql, 440.218, 825.457, Bao
+0, 11, 0, 2026-11-13 20:44:02.638681, queries/job__base_query_split_1/train/5a.sql, 163.596, 286.7, Bao
+0, 11, 1, 2026-11-13 20:44:03.374999, queries/job__base_query_split_1/train/5a.sql, 155.381, 282.47, Bao
+0, 11, 2, 2026-11-13 20:44:04.760136, queries/job__base_query_split_1/train/5a.sql, 149.885, 473.354, Bao
+0, 12, 0, 2026-11-13 20:44:08.084360, queries/job__base_query_split_1/train/28b.sql, 993.097, 1074.702, Bao
+0, 12, 1, 2026-11-13 20:44:10.124488, queries/job__base_query_split_1/train/28b.sql, 531.08, 838.079, Bao
+0, 12, 2, 2026-11-13 20:44:13.471257, queries/job__base_query_split_1/train/28b.sql, 520.547, 769.026, Bao
+0, 13, 0, 2026-11-13 20:44:19.341194, queries/job__base_query_split_1/train/6b.sql, 158.167, 5416.083, Bao
+0, 13, 1, 2026-11-13 20:44:24.834134, queries/job__base_query_split_1/train/6b.sql, 165.238, 5030.57, Bao
+0, 13, 2, 2026-11-13 20:44:34.285657, queries/job__base_query_split_1/train/6b.sql, 151.834, 4987.139, Bao
+0, 14, 0, 2026-11-13 20:44:35.463557, queries/job__base_query_split_1/train/27a.sql, 455.56, 128.216, Bao
+0, 14, 1, 2026-11-13 20:44:36.675830, queries/job__base_query_split_1/train/27a.sql, 493.971, 126.459, Bao
+0, 14, 2, 2026-11-13 20:44:38.412292, queries/job__base_query_split_1/train/27a.sql, 446.872, 125.659, Bao
+0, 15, 0, 2026-11-13 20:44:39.315291, queries/job__base_query_split_1/train/32a.sql, 157.175, 440.179, Bao
+0, 15, 1, 2026-11-13 20:44:40.183162, queries/job__base_query_split_1/train/32a.sql, 157.695, 409.361, Bao
+0, 15, 2, 2026-11-13 20:44:41.559570, queries/job__base_query_split_1/train/32a.sql, 153.345, 404.76, Bao
+0, 16, 0, 2026-11-13 20:44:42.967177, queries/job__base_query_split_1/train/11b.sql, 180.812, 901.096, Bao
+0, 16, 1, 2026-11-13 20:44:43.979555, queries/job__base_query_split_1/train/11b.sql, 194.876, 488.797, Bao
+0, 16, 2, 2026-11-13 20:44:46.007836, queries/job__base_query_split_1/train/11b.sql, 176.022, 631.05, Bao
+0, 17, 0, 2026-11-13 20:45:06.687507, queries/job__base_query_split_1/train/17a.sql, 173.26, 20188.976, Bao
+0, 17, 1, 2026-11-13 20:45:27.257252, queries/job__base_query_split_1/train/17a.sql, 175.942, 20076.691, Bao
+0, 17, 2, 2026-11-13 20:46:06.556339, queries/job__base_query_split_1/train/17a.sql, 161.118, 19597.25, Bao
+0, 18, 0, 2026-11-13 20:46:13.859542, queries/job__base_query_split_1/train/18a.sql, 172.242, 6816.934, Bao
+0, 18, 1, 2026-11-13 20:46:19.103509, queries/job__base_query_split_1/train/18a.sql, 178.982, 4746.998, Bao
+0, 18, 2, 2026-11-13 20:46:28.488284, queries/job__base_query_split_1/train/18a.sql, 161.421, 4567.344, Bao
+0, 19, 0, 2026-11-13 20:46:29.320427, queries/job__base_query_split_1/train/12a.sql, 182.56, 318.075, Bao
+0, 19, 1, 2026-11-13 20:46:30.124197, queries/job__base_query_split_1/train/12a.sql, 175.455, 309.415, Bao
+0, 19, 2, 2026-11-13 20:46:31.413973, queries/job__base_query_split_1/train/12a.sql, 171.082, 305.102, Bao
+0, 20, 0, 2026-11-13 20:46:51.861295, queries/job__base_query_split_1/train/17a.sql, 170.304, 19954.91, Bao
+0, 20, 1, 2026-11-13 20:47:12.403883, queries/job__base_query_split_1/train/17a.sql, 183.819, 20042.032, Bao
+0, 20, 2, 2026-11-13 20:48:07.158354, queries/job__base_query_split_1/train/17a.sql, 170.742, 19611.541, Bao
+0, 21, 0, 2026-11-13 20:48:08.860031, queries/job__base_query_split_1/train/12c.sql, 203.924, 1080.194, Bao
+0, 21, 1, 2026-11-13 20:48:10.483684, queries/job__base_query_split_1/train/12c.sql, 189.727, 1062.695, Bao
+0, 21, 2, 2026-11-13 20:48:13.197308, queries/job__base_query_split_1/train/12c.sql, 170.954, 1029.476, Bao
+0, 22, 0, 2026-11-13 20:48:29.282657, queries/job__base_query_split_1/train/17f.sql, 181.385, 15561.367, Bao
+0, 22, 1, 2026-11-13 20:48:45.182472, queries/job__base_query_split_1/train/17f.sql, 182.205, 15405.684, Bao
+0, 22, 2, 2026-11-13 20:49:15.459836, queries/job__base_query_split_1/train/17f.sql, 164.163, 14923.958, Bao
+0, 23, 0, 2026-11-13 20:49:17.730654, queries/job__base_query_split_1/train/28c.sql, 584.985, 994.438, Bao
+0, 23, 1, 2026-11-13 20:49:19.903424, queries/job__base_query_split_1/train/28c.sql, 532.583, 963.632, Bao
+0, 23, 2, 2026-11-13 20:49:23.432334, queries/job__base_query_split_1/train/28c.sql, 518.214, 799.494, Bao
+0, 24, 0, 2026-11-13 20:49:24.054212, queries/job__base_query_split_1/train/1a.sql, 157.363, 160.403, Bao
+0, 24, 1, 2026-11-13 20:49:24.666662, queries/job__base_query_split_1/train/1a.sql, 155.855, 154.703, Bao
+0, 24, 2, 2026-11-13 20:49:25.652885, queries/job__base_query_split_1/train/1a.sql, 149.491, 173.191, Bao
+==========================================================================================
+Iteration over chunk 2/19...
+[2026-11-13 20:49:25.653200]	[2/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.19636496109887958
+Epoch 15 training loss: 0.03765570838004351
+Epoch 30 training loss: 0.035002511693164706
+Stopped training from convergence condition at epoch 31
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 20:49:31.199002]	[2/19]	Retraining done.
+1, 0, 0, 2026-11-13 20:49:31.842049, queries/job__base_query_split_1/train/1a.sql, 170.89, 156.282, Bao
+1, 0, 1, 2026-11-13 20:49:32.552485, queries/job__base_query_split_1/train/1a.sql, 223.156, 155.5, Bao
+1, 0, 2, 2026-11-13 20:49:33.500948, queries/job__base_query_split_1/train/1a.sql, 156.771, 157.873, Bao
+1, 1, 0, 2026-11-13 20:49:40.818146, queries/job__base_query_split_1/train/16c.sql, 200.188, 6683.494, Bao
+1, 1, 1, 2026-11-13 20:49:47.824547, queries/job__base_query_split_1/train/16c.sql, 186.651, 6491.902, Bao
+1, 1, 2, 2026-11-13 20:49:59.864464, queries/job__base_query_split_1/train/16c.sql, 176.092, 6459.453, Bao
+1, 2, 0, 2026-11-13 20:50:08.148504, queries/job__base_query_split_1/train/17e.sql, 171.02, 7790.47, Bao
+1, 2, 1, 2026-11-13 20:50:17.908691, queries/job__base_query_split_1/train/17e.sql, 173.995, 9269.035, Bao
+1, 2, 2, 2026-11-13 20:50:32.264810, queries/job__base_query_split_1/train/17e.sql, 159.108, 7748.649, Bao
+1, 3, 0, 2026-11-13 20:50:41.105010, queries/job__base_query_split_1/train/8c.sql, 192.837, 8323.69, Bao
+1, 3, 1, 2026-11-13 20:50:49.205671, queries/job__base_query_split_1/train/8c.sql, 188.065, 7589.676, Bao
+1, 3, 2, 2026-11-13 20:51:03.473494, queries/job__base_query_split_1/train/8c.sql, 155.229, 7397.818, Bao
+1, 4, 0, 2026-11-13 20:51:05.090427, queries/job__base_query_split_1/train/29a.sql, 665.007, 157.809, Bao
+1, 4, 1, 2026-11-13 20:51:06.752607, queries/job__base_query_split_1/train/29a.sql, 665.941, 144.2, Bao
+1, 4, 2, 2026-11-13 20:51:09.081472, queries/job__base_query_split_1/train/29a.sql, 649.949, 77.511, Bao
+1, 5, 0, 2026-11-13 20:51:13.469191, queries/job__base_query_split_1/train/28a.sql, 537.576, 3173.649, Bao
+1, 5, 1, 2026-11-13 20:51:17.713247, queries/job__base_query_split_1/train/28a.sql, 545.399, 3024.715, Bao
+1, 5, 2, 2026-11-13 20:51:25.191103, queries/job__base_query_split_1/train/28a.sql, 527.596, 2833.336, Bao
+1, 6, 0, 2026-11-13 20:51:29.738254, queries/job__base_query_split_1/train/14c.sql, 195.569, 4016.134, Bao
+1, 6, 1, 2026-11-13 20:51:34.039992, queries/job__base_query_split_1/train/14c.sql, 181.423, 3792.041, Bao
+1, 6, 2, 2026-11-13 20:51:42.031862, queries/job__base_query_split_1/train/14c.sql, 172.597, 3732.444, Bao
+1, 7, 0, 2026-11-13 20:51:43.308390, queries/job__base_query_split_1/train/33a.sql, 528.192, 78.499, Bao
+1, 7, 1, 2026-11-13 20:51:44.565513, queries/job__base_query_split_1/train/33a.sql, 516.413, 76.492, Bao
+1, 7, 2, 2026-11-13 20:51:46.443907, queries/job__base_query_split_1/train/33a.sql, 517.447, 70.704, Bao
+1, 8, 0, 2026-11-13 20:51:50.366360, queries/job__base_query_split_1/train/14b.sql, 171.583, 3436.324, Bao
+1, 8, 1, 2026-11-13 20:51:54.307120, queries/job__base_query_split_1/train/14b.sql, 178.941, 3441.474, Bao
+1, 8, 2, 2026-11-13 20:52:01.718175, queries/job__base_query_split_1/train/14b.sql, 169.884, 3402.679, Bao
+1, 9, 0, 2026-11-13 20:52:02.342104, queries/job__base_query_split_1/train/1b.sql, 177.692, 142.313, Bao
+1, 9, 1, 2026-11-13 20:52:02.950880, queries/job__base_query_split_1/train/1b.sql, 164.055, 142.234, Bao
+1, 9, 2, 2026-11-13 20:52:03.803093, queries/job__base_query_split_1/train/1b.sql, 153.148, 141.826, Bao
+1, 10, 0, 2026-11-13 20:52:09.858155, queries/job__base_query_split_1/train/9d.sql, 185.568, 5542.159, Bao
+1, 10, 1, 2026-11-13 20:52:16.810743, queries/job__base_query_split_1/train/9d.sql, 182.026, 6433.732, Bao
+1, 10, 2, 2026-11-13 20:52:27.956491, queries/job__base_query_split_1/train/9d.sql, 174.924, 5355.539, Bao
+1, 11, 0, 2026-11-13 20:52:29.583470, queries/job__base_query_split_1/train/29a.sql, 673.968, 147.163, Bao
+1, 11, 1, 2026-11-13 20:52:31.245966, queries/job__base_query_split_1/train/29a.sql, 710.138, 145.652, Bao
+1, 11, 2, 2026-11-13 20:52:33.585825, queries/job__base_query_split_1/train/29a.sql, 649.823, 74.251, Bao
+1, 12, 0, 2026-11-13 20:52:34.802557, queries/job__base_query_split_1/train/26b.sql, 453.234, 166.293, Bao
+1, 12, 1, 2026-11-13 20:52:36.082303, queries/job__base_query_split_1/train/26b.sql, 463.073, 160.063, Bao
+1, 12, 2, 2026-11-13 20:52:37.856037, queries/job__base_query_split_1/train/26b.sql, 448.682, 106.14, Bao
+1, 13, 0, 2026-11-13 20:52:39.600485, queries/job__base_query_split_1/train/30b.sql, 462.622, 673.438, Bao
+1, 13, 1, 2026-11-13 20:52:41.395577, queries/job__base_query_split_1/train/30b.sql, 460.458, 668.357, Bao
+1, 13, 2, 2026-11-13 20:52:44.140631, queries/job__base_query_split_1/train/30b.sql, 451.256, 593.397, Bao
+1, 14, 0, 2026-11-13 20:52:44.972962, queries/job__base_query_split_1/train/5c.sql, 173.265, 359.07, Bao
+1, 14, 1, 2026-11-13 20:52:45.811022, queries/job__base_query_split_1/train/5c.sql, 161.806, 368.485, Bao
+1, 14, 2, 2026-11-13 20:52:47.148936, queries/job__base_query_split_1/train/5c.sql, 154.389, 345.497, Bao
+1, 15, 0, 2026-11-13 20:52:49.433252, queries/job__base_query_split_1/train/3b.sql, 154.611, 1828.112, Bao
+1, 15, 1, 2026-11-13 20:52:51.715617, queries/job__base_query_split_1/train/3b.sql, 158.83, 1821.242, Bao
+1, 15, 2, 2026-11-13 20:52:55.811380, queries/job__base_query_split_1/train/3b.sql, 166.362, 1799.158, Bao
+1, 16, 0, 2026-11-13 20:53:02.606580, queries/job__base_query_split_1/train/17a.sql, 212.775, 6258.86, Bao
+1, 16, 1, 2026-11-13 20:53:09.531238, queries/job__base_query_split_1/train/17a.sql, 236.719, 6362.972, Bao
+1, 16, 2, 2026-11-13 20:53:21.154377, queries/job__base_query_split_1/train/17a.sql, 166.905, 6218.323, Bao
+1, 17, 0, 2026-11-13 20:53:21.949657, queries/job__base_query_split_1/train/11a.sql, 246.053, 224.334, Bao
+1, 17, 1, 2026-11-13 20:53:22.662355, queries/job__base_query_split_1/train/11a.sql, 178.232, 215.095, Bao
+1, 17, 2, 2026-11-13 20:53:23.756800, queries/job__base_query_split_1/train/11a.sql, 172.596, 205.057, Bao
+1, 18, 0, 2026-11-13 20:53:30.069487, queries/job__base_query_split_1/train/18c.sql, 166.2, 5828.217, Bao
+1, 18, 1, 2026-11-13 20:53:36.076548, queries/job__base_query_split_1/train/18c.sql, 173.328, 5516.759, Bao
+1, 18, 2, 2026-11-13 20:53:53.753543, queries/job__base_query_split_1/train/18c.sql, 346.817, 9749.823, Bao
+1, 19, 0, 2026-11-13 20:54:02.222638, queries/job__base_query_split_1/train/17e.sql, 188.859, 7959.701, Bao
+1, 19, 1, 2026-11-13 20:54:10.570376, queries/job__base_query_split_1/train/17e.sql, 239.816, 7794.151, Bao
+1, 19, 2, 2026-11-13 20:54:26.246638, queries/job__base_query_split_1/train/17e.sql, 180.701, 7705.268, Bao
+1, 20, 0, 2026-11-13 20:54:33.313426, queries/job__base_query_split_1/train/16c.sql, 185.158, 6549.046, Bao
+1, 20, 1, 2026-11-13 20:54:40.329955, queries/job__base_query_split_1/train/16c.sql, 183.499, 6508.001, Bao
+1, 20, 2, 2026-11-13 20:54:52.282614, queries/job__base_query_split_1/train/16c.sql, 174.77, 6395.964, Bao
+1, 21, 0, 2026-11-13 20:55:00.408651, queries/job__base_query_split_1/train/8c.sql, 190.333, 7604.194, Bao
+1, 21, 1, 2026-11-13 20:55:08.424865, queries/job__base_query_split_1/train/8c.sql, 172.409, 7523.453, Bao
+1, 21, 2, 2026-11-13 20:55:22.575677, queries/job__base_query_split_1/train/8c.sql, 153.73, 7390.614, Bao
+1, 22, 0, 2026-11-13 20:55:28.069427, queries/job__base_query_split_1/train/6c.sql, 161.063, 5033.133, Bao
+1, 22, 1, 2026-11-13 20:55:33.545151, queries/job__base_query_split_1/train/6c.sql, 162.573, 5012.88, Bao
+1, 22, 2, 2026-11-13 20:55:42.860105, queries/job__base_query_split_1/train/6c.sql, 150.852, 4908.978, Bao
+1, 23, 0, 2026-11-13 20:55:49.045327, queries/job__base_query_split_1/train/18c.sql, 213.863, 5653.852, Bao
+1, 23, 1, 2026-11-13 20:55:55.099909, queries/job__base_query_split_1/train/18c.sql, 182.691, 5552.629, Bao
+1, 23, 2, 2026-11-13 20:56:06.675913, queries/job__base_query_split_1/train/18c.sql, 173.087, 5422.17, Bao
+1, 24, 0, 2026-11-13 20:56:08.185055, queries/job__base_query_split_1/train/29b.sql, 665.861, 34.148, Bao
+1, 24, 1, 2026-11-13 20:56:09.699964, queries/job__base_query_split_1/train/29b.sql, 676.459, 33.948, Bao
+1, 24, 2, 2026-11-13 20:56:11.880417, queries/job__base_query_split_1/train/29b.sql, 651.117, 23.773, Bao
+==========================================================================================
+Iteration over chunk 3/19...
+[2026-11-13 20:56:11.880623]	[3/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.13670584708452224
+Epoch 15 training loss: 0.02210706826299429
+Stopped training from convergence condition at epoch 27
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 20:56:17.204431]	[3/19]	Retraining done.
+2, 0, 0, 2026-11-13 20:56:18.069582, queries/job__base_query_split_1/train/1d.sql, 154.985, 272.378, Bao
+2, 0, 1, 2026-11-13 20:56:19.291055, queries/job__base_query_split_1/train/1d.sql, 322.832, 280.219, Bao
+2, 0, 2, 2026-11-13 20:56:20.147678, queries/job__base_query_split_1/train/1d.sql, 151.797, 142.575, Bao
+2, 1, 0, 2026-11-13 20:56:27.211009, queries/job__base_query_split_1/train/6f.sql, 157.068, 6601.863, Bao
+2, 1, 1, 2026-11-13 20:56:34.172087, queries/job__base_query_split_1/train/6f.sql, 160.574, 6501.446, Bao
+2, 1, 2, 2026-11-13 20:56:46.229916, queries/job__base_query_split_1/train/6f.sql, 153.127, 6455.568, Bao
+2, 2, 0, 2026-11-13 20:56:47.305116, queries/job__base_query_split_1/train/21c.sql, 220.328, 490.554, Bao
+2, 2, 1, 2026-11-13 20:56:48.378526, queries/job__base_query_split_1/train/21c.sql, 217.382, 488.47, Bao
+2, 2, 2, 2026-11-13 20:56:50.046630, queries/job__base_query_split_1/train/21c.sql, 205.606, 449.165, Bao
+2, 3, 0, 2026-11-13 20:56:57.798392, queries/job__base_query_split_1/train/17d.sql, 167.847, 7273.662, Bao
+2, 3, 1, 2026-11-13 20:57:05.347478, queries/job__base_query_split_1/train/17d.sql, 169.003, 7068.748, Bao
+2, 3, 2, 2026-11-13 20:57:19.408679, queries/job__base_query_split_1/train/17d.sql, 161.979, 6632.378, Bao
+2, 4, 0, 2026-11-13 20:57:25.488778, queries/job__base_query_split_1/train/17c.sql, 240.222, 5526.281, Bao
+2, 4, 1, 2026-11-13 20:57:31.357107, queries/job__base_query_split_1/train/17c.sql, 188.837, 5313.964, Bao
+2, 4, 2, 2026-11-13 20:57:41.356071, queries/job__base_query_split_1/train/17c.sql, 166.314, 5414.736, Bao
+2, 5, 0, 2026-11-13 20:57:42.663905, queries/job__base_query_split_1/train/26b.sql, 528.668, 181.434, Bao
+2, 5, 1, 2026-11-13 20:57:43.880638, queries/job__base_query_split_1/train/26b.sql, 455.593, 165.019, Bao
+2, 5, 2, 2026-11-13 20:57:47.668262, queries/job__base_query_split_1/train/26b.sql, 1340.803, 111.334, Bao
+2, 6, 0, 2026-11-13 20:57:55.753719, queries/job__base_query_split_1/train/17d.sql, 366.677, 7287.187, Bao
+2, 6, 1, 2026-11-13 20:58:08.250827, queries/job__base_query_split_1/train/17d.sql, 480.658, 11304.065, Bao
+2, 6, 2, 2026-11-13 20:58:22.739275, queries/job__base_query_split_1/train/17d.sql, 187.255, 6618.056, Bao
+2, 7, 0, 2026-11-13 20:58:23.875105, queries/job__base_query_split_1/train/27a.sql, 467.98, 37.212, Bao
+2, 7, 1, 2026-11-13 20:58:25.041175, queries/job__base_query_split_1/train/27a.sql, 531.286, 33.966, Bao
+2, 7, 2, 2026-11-13 20:58:26.796534, queries/job__base_query_split_1/train/27a.sql, 487.773, 29.14, Bao
+2, 8, 0, 2026-11-13 20:58:32.296675, queries/job__base_query_split_1/train/6e.sql, 166.359, 5028.756, Bao
+2, 8, 1, 2026-11-13 20:58:37.688081, queries/job__base_query_split_1/train/6e.sql, 172.987, 4913.795, Bao
+2, 8, 2, 2026-11-13 20:58:46.832615, queries/job__base_query_split_1/train/6e.sql, 150.224, 4882.177, Bao
+2, 9, 0, 2026-11-13 20:58:47.456289, queries/job__base_query_split_1/train/1d.sql, 171.432, 143.692, Bao
+2, 9, 1, 2026-11-13 20:58:48.075186, queries/job__base_query_split_1/train/1d.sql, 163.878, 145.775, Bao
+2, 9, 2, 2026-11-13 20:58:48.939235, queries/job__base_query_split_1/train/1d.sql, 157.148, 140.382, Bao
+2, 10, 0, 2026-11-13 20:58:55.682912, queries/job__base_query_split_1/train/16d.sql, 184.726, 6235.543, Bao
+2, 10, 1, 2026-11-13 20:59:02.475276, queries/job__base_query_split_1/train/16d.sql, 233.837, 6229.703, Bao
+2, 10, 2, 2026-11-13 20:59:13.945697, queries/job__base_query_split_1/train/16d.sql, 175.582, 6131.378, Bao
+2, 11, 0, 2026-11-13 20:59:20.682379, queries/job__base_query_split_1/train/9d.sql, 195.523, 6215.874, Bao
+2, 11, 1, 2026-11-13 20:59:27.220107, queries/job__base_query_split_1/train/9d.sql, 182.851, 6017.959, Bao
+2, 11, 2, 2026-11-13 20:59:39.617241, queries/job__base_query_split_1/train/9d.sql, 178.224, 5984.921, Bao
+2, 12, 0, 2026-11-13 20:59:41.970035, queries/job__base_query_split_1/train/22d.sql, 326.697, 1536.444, Bao
+2, 12, 1, 2026-11-13 20:59:44.305049, queries/job__base_query_split_1/train/22d.sql, 346.889, 1519.904, Bao
+2, 12, 2, 2026-11-13 20:59:48.240898, queries/job__base_query_split_1/train/22d.sql, 316.229, 1335.528, Bao
+2, 13, 0, 2026-11-13 20:59:48.890224, queries/job__base_query_split_1/train/12b.sql, 180.109, 148.476, Bao
+2, 13, 1, 2026-11-13 20:59:49.551824, queries/job__base_query_split_1/train/12b.sql, 191.271, 149.687, Bao
+2, 13, 2, 2026-11-13 20:59:50.500623, queries/job__base_query_split_1/train/12b.sql, 173.071, 150.467, Bao
+2, 14, 0, 2026-11-13 20:59:51.574791, queries/job__base_query_split_1/train/11b.sql, 202.286, 537.382, Bao
+2, 14, 1, 2026-11-13 20:59:52.686840, queries/job__base_query_split_1/train/11b.sql, 177.678, 609.975, Bao
+2, 14, 2, 2026-11-13 20:59:54.561440, queries/job__base_query_split_1/train/11b.sql, 168.48, 602.093, Bao
+2, 15, 0, 2026-11-13 20:59:57.328977, queries/job__base_query_split_1/train/13a.sql, 192.437, 2234.038, Bao
+2, 15, 1, 2026-11-13 21:00:00.044653, queries/job__base_query_split_1/train/13a.sql, 192.565, 2186.538, Bao
+2, 15, 2, 2026-11-13 21:00:04.903641, queries/job__base_query_split_1/train/13a.sql, 192.17, 2162.678, Bao
+2, 16, 0, 2026-11-13 21:00:07.598502, queries/job__base_query_split_1/train/28b.sql, 543.574, 1412.023, Bao
+2, 16, 1, 2026-11-13 21:00:10.242983, queries/job__base_query_split_1/train/28b.sql, 537.471, 1421.792, Bao
+2, 16, 2, 2026-11-13 21:00:14.756654, queries/job__base_query_split_1/train/28b.sql, 574.554, 1306.438, Bao
+2, 17, 0, 2026-11-13 21:00:15.403422, queries/job__base_query_split_1/train/4a.sql, 161.863, 177.749, Bao
+2, 17, 1, 2026-11-13 21:00:16.125157, queries/job__base_query_split_1/train/4a.sql, 190.01, 186.747, Bao
+2, 17, 2, 2026-11-13 21:00:17.058724, queries/job__base_query_split_1/train/4a.sql, 153.446, 137.287, Bao
+2, 18, 0, 2026-11-13 21:00:21.383015, queries/job__base_query_split_1/train/20b.sql, 222.433, 3731.32, Bao
+2, 18, 1, 2026-11-13 21:00:24.969688, queries/job__base_query_split_1/train/20b.sql, 233.069, 2982.682, Bao
+2, 18, 2, 2026-11-13 21:00:31.400910, queries/job__base_query_split_1/train/20b.sql, 231.113, 2706.732, Bao
+2, 19, 0, 2026-11-13 21:00:32.427013, queries/job__base_query_split_1/train/11c.sql, 200.64, 502.215, Bao
+2, 19, 1, 2026-11-13 21:00:33.439978, queries/job__base_query_split_1/train/11c.sql, 178.98, 509.757, Bao
+2, 19, 2, 2026-11-13 21:00:35.026226, queries/job__base_query_split_1/train/11c.sql, 167.791, 489.56, Bao
+2, 20, 0, 2026-11-13 21:00:35.630753, queries/job__base_query_split_1/train/1b.sql, 154.344, 149.167, Bao
+2, 20, 1, 2026-11-13 21:00:36.286664, queries/job__base_query_split_1/train/1b.sql, 166.335, 144.527, Bao
+2, 20, 2, 2026-11-13 21:00:37.154148, queries/job__base_query_split_1/train/1b.sql, 163.291, 142.801, Bao
+2, 21, 0, 2026-11-13 21:00:43.656976, queries/job__base_query_split_1/train/9d.sql, 186.842, 5970.689, Bao
+2, 21, 1, 2026-11-13 21:00:50.258274, queries/job__base_query_split_1/train/9d.sql, 182.243, 6091.866, Bao
+2, 21, 2, 2026-11-13 21:01:02.667467, queries/job__base_query_split_1/train/9d.sql, 176.966, 5822.75, Bao
+2, 22, 0, 2026-11-13 21:01:03.574201, queries/job__base_query_split_1/train/23b.sql, 339.791, 97.407, Bao
+2, 22, 1, 2026-11-13 21:01:04.460196, queries/job__base_query_split_1/train/23b.sql, 321.109, 88.166, Bao
+2, 22, 2, 2026-11-13 21:01:05.730735, queries/job__base_query_split_1/train/23b.sql, 315.845, 52.345, Bao
+2, 23, 0, 2026-11-13 21:01:06.814578, queries/job__base_query_split_1/train/9b.sql, 221.425, 542.772, Bao
+2, 23, 1, 2026-11-13 21:01:07.835036, queries/job__base_query_split_1/train/9b.sql, 181.775, 517.942, Bao
+2, 23, 2, 2026-11-13 21:01:09.544545, queries/job__base_query_split_1/train/9b.sql, 174.85, 508.368, Bao
+2, 24, 0, 2026-11-13 21:01:14.866186, queries/job__base_query_split_1/train/6a.sql, 167.658, 4836.582, Bao
+2, 24, 1, 2026-11-13 21:01:20.199717, queries/job__base_query_split_1/train/6a.sql, 160.508, 4875.579, Bao
+2, 24, 2, 2026-11-13 21:01:29.254618, queries/job__base_query_split_1/train/6a.sql, 154.139, 4789.055, Bao
+==========================================================================================
+Iteration over chunk 4/19...
+[2026-11-13 21:01:29.254889]	[4/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.4401869364082813
+Epoch 15 training loss: 0.022968967578240802
+Stopped training from convergence condition at epoch 25
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:01:35.639202]	[4/19]	Retraining done.
+3, 0, 0, 2026-11-13 21:01:36.606836, queries/job__base_query_split_1/train/10b.sql, 188.259, 442.833, Bao
+3, 0, 1, 2026-11-13 21:01:37.525718, queries/job__base_query_split_1/train/10b.sql, 168.617, 441.546, Bao
+3, 0, 2, 2026-11-13 21:01:38.969885, queries/job__base_query_split_1/train/10b.sql, 155.524, 441.908, Bao
+3, 1, 0, 2026-11-13 21:01:40.194077, queries/job__base_query_split_1/train/32b.sql, 161.522, 764.514, Bao
+3, 1, 1, 2026-11-13 21:01:41.445465, queries/job__base_query_split_1/train/32b.sql, 157.087, 794.923, Bao
+3, 1, 2, 2026-11-13 21:01:43.486592, queries/job__base_query_split_1/train/32b.sql, 151.094, 775.921, Bao
+3, 2, 0, 2026-11-13 21:01:45.206903, queries/job__base_query_split_1/train/30b.sql, 463.665, 646.932, Bao
+3, 2, 1, 2026-11-13 21:01:47.045340, queries/job__base_query_split_1/train/30b.sql, 467.867, 690.75, Bao
+3, 2, 2, 2026-11-13 21:01:49.781752, queries/job__base_query_split_1/train/30b.sql, 450.98, 569.494, Bao
+3, 3, 0, 2026-11-13 21:01:51.279725, queries/job__base_query_split_1/train/23c.sql, 322.704, 700.652, Bao
+3, 3, 1, 2026-11-13 21:01:52.767104, queries/job__base_query_split_1/train/23c.sql, 320.894, 679.731, Bao
+3, 3, 2, 2026-11-13 21:01:55.141464, queries/job__base_query_split_1/train/23c.sql, 318.132, 643.156, Bao
+3, 4, 0, 2026-11-13 21:02:03.647553, queries/job__base_query_split_1/train/17e.sql, 192.01, 7997.511, Bao
+3, 4, 1, 2026-11-13 21:02:11.963486, queries/job__base_query_split_1/train/17e.sql, 186.246, 7811.362, Bao
+3, 4, 2, 2026-11-13 21:02:27.182473, queries/job__base_query_split_1/train/17e.sql, 162.719, 8617.865, Bao
+3, 5, 0, 2026-11-13 21:02:28.857342, queries/job__base_query_split_1/train/29a.sql, 709.26, 150.74, Bao
+3, 5, 1, 2026-11-13 21:02:30.487281, queries/job__base_query_split_1/train/29a.sql, 666.892, 147.814, Bao
+3, 5, 2, 2026-11-13 21:02:32.830244, queries/job__base_query_split_1/train/29a.sql, 648.808, 75.123, Bao
+3, 6, 0, 2026-11-13 21:02:35.593650, queries/job__base_query_split_1/train/13a.sql, 208.452, 2218.496, Bao
+3, 6, 1, 2026-11-13 21:02:38.354159, queries/job__base_query_split_1/train/13a.sql, 206.739, 2184.552, Bao
+3, 6, 2, 2026-11-13 21:02:43.196950, queries/job__base_query_split_1/train/13a.sql, 183.392, 2167.592, Bao
+3, 7, 0, 2026-11-13 21:02:45.241408, queries/job__base_query_split_1/train/20c.sql, 224.565, 1452.539, Bao
+3, 7, 1, 2026-11-13 21:02:47.233657, queries/job__base_query_split_1/train/20c.sql, 221.186, 1373.356, Bao
+3, 7, 2, 2026-11-13 21:02:50.422734, queries/job__base_query_split_1/train/20c.sql, 213.456, 1079.14, Bao
+3, 8, 0, 2026-11-13 21:02:51.126640, queries/job__base_query_split_1/train/21b.sql, 210.347, 132.091, Bao
+3, 8, 1, 2026-11-13 21:02:51.832403, queries/job__base_query_split_1/train/21b.sql, 210.05, 131.746, Bao
+3, 8, 2, 2026-11-13 21:02:52.843447, queries/job__base_query_split_1/train/21b.sql, 202.305, 115.947, Bao
+3, 9, 0, 2026-11-13 21:03:01.233499, queries/job__base_query_split_1/train/8d.sql, 171.91, 7896.905, Bao
+3, 9, 1, 2026-11-13 21:03:08.985264, queries/job__base_query_split_1/train/8d.sql, 173.444, 7261.636, Bao
+3, 9, 2, 2026-11-13 21:03:22.432607, queries/job__base_query_split_1/train/8d.sql, 159.186, 7163.044, Bao
+3, 10, 0, 2026-11-13 21:03:27.999011, queries/job__base_query_split_1/train/6c.sql, 168.571, 5092.041, Bao
+3, 10, 1, 2026-11-13 21:03:33.459002, queries/job__base_query_split_1/train/6c.sql, 166.062, 4986.817, Bao
+3, 10, 2, 2026-11-13 21:03:42.835670, queries/job__base_query_split_1/train/6c.sql, 157.494, 4892.243, Bao
+3, 11, 0, 2026-11-13 21:03:51.227208, queries/job__base_query_split_1/train/17d.sql, 171.177, 7900.077, Bao
+3, 11, 1, 2026-11-13 21:03:59.341707, queries/job__base_query_split_1/train/17d.sql, 170.612, 7627.969, Bao
+3, 11, 2, 2026-11-13 21:04:12.660613, queries/job__base_query_split_1/train/17d.sql, 164.809, 7533.35, Bao
+3, 12, 0, 2026-11-13 21:04:15.047991, queries/job__base_query_split_1/train/22d.sql, 326.694, 1581.86, Bao
+3, 12, 1, 2026-11-13 21:04:17.485626, queries/job__base_query_split_1/train/22d.sql, 335.044, 1583.76, Bao
+3, 12, 2, 2026-11-13 21:04:21.396876, queries/job__base_query_split_1/train/22d.sql, 318.116, 1339.835, Bao
+3, 13, 0, 2026-11-13 21:04:23.516576, queries/job__base_query_split_1/train/14c.sql, 176.892, 1626.074, Bao
+3, 13, 1, 2026-11-13 21:04:25.057546, queries/job__base_query_split_1/train/14c.sql, 227.143, 979.251, Bao
+3, 13, 2, 2026-11-13 21:04:27.546316, queries/job__base_query_split_1/train/14c.sql, 167.961, 840.015, Bao
+3, 14, 0, 2026-11-13 21:04:34.604099, queries/job__base_query_split_1/train/6f.sql, 158.74, 6586.871, Bao
+3, 14, 1, 2026-11-13 21:04:41.637396, queries/job__base_query_split_1/train/6f.sql, 166.211, 6551.935, Bao
+3, 14, 2, 2026-11-13 21:04:53.784482, queries/job__base_query_split_1/train/6f.sql, 154.101, 6477.311, Bao
+3, 15, 0, 2026-11-13 21:04:59.398243, queries/job__base_query_split_1/train/6b.sql, 161.398, 5148.523, Bao
+3, 15, 1, 2026-11-13 21:05:04.987278, queries/job__base_query_split_1/train/6b.sql, 164.331, 5113.434, Bao
+3, 15, 2, 2026-11-13 21:05:14.481390, queries/job__base_query_split_1/train/6b.sql, 154.734, 5002.832, Bao
+3, 16, 0, 2026-11-13 21:05:15.304692, queries/job__base_query_split_1/train/18b.sql, 174.256, 337.836, Bao
+3, 16, 1, 2026-11-13 21:05:16.129546, queries/job__base_query_split_1/train/18b.sql, 167.91, 324.591, Bao
+3, 16, 2, 2026-11-13 21:05:17.323597, queries/job__base_query_split_1/train/18b.sql, 161.071, 257.884, Bao
+3, 17, 0, 2026-11-13 21:05:18.977407, queries/job__base_query_split_1/train/29a.sql, 707.266, 145.303, Bao
+3, 17, 1, 2026-11-13 21:05:20.592062, queries/job__base_query_split_1/train/29a.sql, 660.273, 150.554, Bao
+3, 17, 2, 2026-11-13 21:05:22.928609, queries/job__base_query_split_1/train/29a.sql, 653.556, 74.077, Bao
+3, 18, 0, 2026-11-13 21:05:32.688315, queries/job__base_query_split_1/train/28a.sql, 542.365, 8533.701, Bao
+3, 18, 1, 2026-11-13 21:05:42.225501, queries/job__base_query_split_1/train/28a.sql, 551.005, 8309.944, Bao
+3, 18, 2, 2026-11-13 21:06:00.365976, queries/job__base_query_split_1/train/28a.sql, 523.834, 8195.242, Bao
+3, 19, 0, 2026-11-13 21:06:01.313066, queries/job__base_query_split_1/train/14a.sql, 175.578, 446.227, Bao
+3, 19, 1, 2026-11-13 21:06:02.274253, queries/job__base_query_split_1/train/14a.sql, 181.036, 447.478, Bao
+3, 19, 2, 2026-11-13 21:06:03.720587, queries/job__base_query_split_1/train/14a.sql, 168.671, 349.055, Bao
+3, 20, 0, 2026-11-13 21:06:07.650512, queries/job__base_query_split_1/train/3a.sql, 171.47, 3455.861, Bao
+3, 20, 1, 2026-11-13 21:06:11.260957, queries/job__base_query_split_1/train/3a.sql, 166.364, 3140.554, Bao
+3, 20, 2, 2026-11-13 21:06:18.075186, queries/job__base_query_split_1/train/3a.sql, 153.362, 3224.554, Bao
+3, 21, 0, 2026-11-13 21:06:19.540368, queries/job__base_query_split_1/train/23c.sql, 325.122, 660.739, Bao
+3, 21, 1, 2026-11-13 21:06:21.002025, queries/job__base_query_split_1/train/23c.sql, 336.62, 649.177, Bao
+3, 21, 2, 2026-11-13 21:06:23.336230, queries/job__base_query_split_1/train/23c.sql, 314.833, 645.167, Bao
+3, 22, 0, 2026-11-13 21:06:27.809222, queries/job__base_query_split_1/train/3c.sql, 156.025, 3965.6, Bao
+3, 22, 1, 2026-11-13 21:06:32.087694, queries/job__base_query_split_1/train/3c.sql, 175.54, 3798.782, Bao
+3, 22, 2, 2026-11-13 21:06:40.145697, queries/job__base_query_split_1/train/3c.sql, 155.334, 3770.029, Bao
+3, 23, 0, 2026-11-13 21:06:41.063966, queries/job__base_query_split_1/train/23b.sql, 344.467, 91.888, Bao
+3, 23, 1, 2026-11-13 21:06:41.956396, queries/job__base_query_split_1/train/23b.sql, 325.719, 91.784, Bao
+3, 23, 2, 2026-11-13 21:06:43.225493, queries/job__base_query_split_1/train/23b.sql, 318.023, 54.226, Bao
+3, 24, 0, 2026-11-13 21:06:44.298319, queries/job__base_query_split_1/train/10a.sql, 163.525, 597.012, Bao
+3, 24, 1, 2026-11-13 21:06:45.363122, queries/job__base_query_split_1/train/10a.sql, 165.383, 584.069, Bao
+3, 24, 2, 2026-11-13 21:06:47.131594, queries/job__base_query_split_1/train/10a.sql, 161.948, 557.871, Bao
+==========================================================================================
+Iteration over chunk 5/19...
+[2026-11-13 21:06:47.131881]	[5/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.1987586417235434
+Epoch 15 training loss: 0.020068198791705072
+Epoch 30 training loss: 0.006884195565362461
+Stopped training from convergence condition at epoch 44
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:06:57.518047]	[5/19]	Retraining done.
+4, 0, 0, 2026-11-13 21:06:58.731867, queries/job__base_query_split_1/train/19a.sql, 253.999, 549.203, Bao
+4, 0, 1, 2026-11-13 21:06:59.936729, queries/job__base_query_split_1/train/19a.sql, 262.354, 540.689, Bao
+4, 0, 2, 2026-11-13 21:07:01.912668, queries/job__base_query_split_1/train/19a.sql, 252.16, 519.613, Bao
+4, 1, 0, 2026-11-13 21:07:02.853793, queries/job__base_query_split_1/train/10b.sql, 182.665, 444.936, Bao
+4, 1, 1, 2026-11-13 21:07:03.804649, queries/job__base_query_split_1/train/10b.sql, 176.769, 452.051, Bao
+4, 1, 2, 2026-11-13 21:07:05.245164, queries/job__base_query_split_1/train/10b.sql, 157.409, 436.858, Bao
+4, 2, 0, 2026-11-13 21:07:06.096299, queries/job__base_query_split_1/train/8b.sql, 168.964, 363.659, Bao
+4, 2, 1, 2026-11-13 21:07:06.903452, queries/job__base_query_split_1/train/8b.sql, 169.556, 317.622, Bao
+4, 2, 2, 2026-11-13 21:07:08.187888, queries/job__base_query_split_1/train/8b.sql, 161.655, 313.459, Bao
+4, 3, 0, 2026-11-13 21:07:13.592280, queries/job__base_query_split_1/train/6c.sql, 156.93, 4946.453, Bao
+4, 3, 1, 2026-11-13 21:07:19.023668, queries/job__base_query_split_1/train/6c.sql, 158.762, 4972.197, Bao
+4, 3, 2, 2026-11-13 21:07:28.362530, queries/job__base_query_split_1/train/6c.sql, 157.659, 4965.737, Bao
+4, 4, 0, 2026-11-13 21:07:29.099368, queries/job__base_query_split_1/train/5b.sql, 161.112, 267.199, Bao
+4, 4, 1, 2026-11-13 21:07:29.834713, queries/job__base_query_split_1/train/5b.sql, 161.604, 266.881, Bao
+4, 4, 2, 2026-11-13 21:07:30.985478, queries/job__base_query_split_1/train/5b.sql, 150.587, 262.016, Bao
+4, 5, 0, 2026-11-13 21:07:31.775645, queries/job__base_query_split_1/train/18b.sql, 170.863, 300.988, Bao
+4, 5, 1, 2026-11-13 21:07:32.563578, queries/job__base_query_split_1/train/18b.sql, 167.285, 293.125, Bao
+4, 5, 2, 2026-11-13 21:07:33.760574, queries/job__base_query_split_1/train/18b.sql, 163.838, 264.869, Bao
+4, 6, 0, 2026-11-13 21:07:34.821027, queries/job__base_query_split_1/train/11c.sql, 223.214, 512.299, Bao
+4, 6, 1, 2026-11-13 21:07:35.878097, queries/job__base_query_split_1/train/11c.sql, 175.539, 550.581, Bao
+4, 6, 2, 2026-11-13 21:07:37.418986, queries/job__base_query_split_1/train/11c.sql, 167.607, 488.865, Bao
+4, 7, 0, 2026-11-13 21:07:42.884045, queries/job__base_query_split_1/train/6c.sql, 155.613, 5006.251, Bao
+4, 7, 1, 2026-11-13 21:07:48.393659, queries/job__base_query_split_1/train/6c.sql, 158.542, 5044.244, Bao
+4, 7, 2, 2026-11-13 21:07:57.837155, queries/job__base_query_split_1/train/6c.sql, 154.929, 4989.021, Bao
+4, 8, 0, 2026-11-13 21:08:01.677826, queries/job__base_query_split_1/train/8d.sql, 185.147, 3333.353, Bao
+4, 8, 1, 2026-11-13 21:08:05.453037, queries/job__base_query_split_1/train/8d.sql, 167.371, 3285.337, Bao
+4, 8, 2, 2026-11-13 21:08:12.247522, queries/job__base_query_split_1/train/8d.sql, 159.102, 3307.912, Bao
+4, 9, 0, 2026-11-13 21:08:12.901506, queries/job__base_query_split_1/train/12b.sql, 181.952, 148.817, Bao
+4, 9, 1, 2026-11-13 21:08:13.558268, queries/job__base_query_split_1/train/12b.sql, 180.227, 146.468, Bao
+4, 9, 2, 2026-11-13 21:08:14.490577, queries/job__base_query_split_1/train/12b.sql, 175.511, 145.73, Bao
+4, 10, 0, 2026-11-13 21:08:15.851790, queries/job__base_query_split_1/train/22b.sql, 316.412, 567.507, Bao
+4, 10, 1, 2026-11-13 21:08:17.230567, queries/job__base_query_split_1/train/22b.sql, 361.674, 535.932, Bao
+4, 10, 2, 2026-11-13 21:08:19.352561, queries/job__base_query_split_1/train/22b.sql, 321.479, 478.795, Bao
+4, 11, 0, 2026-11-13 21:08:20.241018, queries/job__base_query_split_1/train/11d.sql, 173.571, 390.016, Bao
+4, 11, 1, 2026-11-13 21:08:21.129936, queries/job__base_query_split_1/train/11d.sql, 189.829, 382.334, Bao
+4, 11, 2, 2026-11-13 21:08:22.510931, queries/job__base_query_split_1/train/11d.sql, 168.163, 365.081, Bao
+4, 12, 0, 2026-11-13 21:08:26.763683, queries/job__base_query_split_1/train/3a.sql, 155.886, 3775.857, Bao
+4, 12, 1, 2026-11-13 21:08:30.375620, queries/job__base_query_split_1/train/3a.sql, 174.896, 3129.092, Bao
+4, 12, 2, 2026-11-13 21:08:37.093450, queries/job__base_query_split_1/train/3a.sql, 152.779, 3149.311, Bao
+4, 13, 0, 2026-11-13 21:08:40.671624, queries/job__base_query_split_1/train/3a.sql, 160.853, 3116.772, Bao
+4, 13, 1, 2026-11-13 21:08:44.277418, queries/job__base_query_split_1/train/3a.sql, 155.604, 3148.22, Bao
+4, 13, 2, 2026-11-13 21:08:50.989657, queries/job__base_query_split_1/train/3a.sql, 154.357, 3087.149, Bao
+4, 14, 0, 2026-11-13 21:08:52.411351, queries/job__base_query_split_1/train/13c.sql, 195.222, 885.449, Bao
+4, 14, 1, 2026-11-13 21:08:53.830794, queries/job__base_query_split_1/train/13c.sql, 195.81, 877.941, Bao
+4, 14, 2, 2026-11-13 21:08:56.297024, queries/job__base_query_split_1/train/13c.sql, 193.672, 918.109, Bao
+4, 15, 0, 2026-11-13 21:08:57.874145, queries/job__base_query_split_1/train/22a.sql, 321.536, 782.74, Bao
+4, 15, 1, 2026-11-13 21:08:59.438176, queries/job__base_query_split_1/train/22a.sql, 322.935, 770.28, Bao
+4, 15, 2, 2026-11-13 21:09:02.008012, queries/job__base_query_split_1/train/22a.sql, 307.224, 700.582, Bao
+4, 16, 0, 2026-11-13 21:09:04.187886, queries/job__base_query_split_1/train/26a.sql, 446.77, 1135.326, Bao
+4, 16, 1, 2026-11-13 21:09:06.298882, queries/job__base_query_split_1/train/26a.sql, 449.519, 1064.04, Bao
+4, 16, 2, 2026-11-13 21:09:09.584941, queries/job__base_query_split_1/train/26a.sql, 441.899, 822.16, Bao
+4, 17, 0, 2026-11-13 21:09:17.742543, queries/job__base_query_split_1/train/17d.sql, 169.895, 7675.043, Bao
+4, 17, 1, 2026-11-13 21:09:26.013973, queries/job__base_query_split_1/train/17d.sql, 169.6, 7786.858, Bao
+4, 17, 2, 2026-11-13 21:09:39.401298, queries/job__base_query_split_1/train/17d.sql, 163.34, 7634.684, Bao
+4, 18, 0, 2026-11-13 21:09:44.804052, queries/job__base_query_split_1/train/6c.sql, 159.177, 4937.605, Bao
+4, 18, 1, 2026-11-13 21:09:50.279234, queries/job__base_query_split_1/train/6c.sql, 163.555, 5009.262, Bao
+4, 18, 2, 2026-11-13 21:09:59.573067, queries/job__base_query_split_1/train/6c.sql, 155.828, 4932.698, Bao
+4, 19, 0, 2026-11-13 21:10:03.250061, queries/job__base_query_split_1/train/20b.sql, 236.496, 3042.839, Bao
+4, 19, 1, 2026-11-13 21:10:06.857502, queries/job__base_query_split_1/train/20b.sql, 226.978, 3005.442, Bao
+4, 19, 2, 2026-11-13 21:10:13.243140, queries/job__base_query_split_1/train/20b.sql, 213.319, 2672.471, Bao
+4, 20, 0, 2026-11-13 21:10:16.023146, queries/job__base_query_split_1/train/16c.sql, 186.222, 2252.634, Bao
+4, 20, 1, 2026-11-13 21:10:18.671950, queries/job__base_query_split_1/train/16c.sql, 189.374, 2129.487, Bao
+4, 20, 2, 2026-11-13 21:10:23.306284, queries/job__base_query_split_1/train/16c.sql, 194.194, 1907.69, Bao
+4, 21, 0, 2026-11-13 21:10:24.790832, queries/job__base_query_split_1/train/23c.sql, 331.704, 667.959, Bao
+4, 21, 1, 2026-11-13 21:10:26.611528, queries/job__base_query_split_1/train/23c.sql, 325.949, 992.3, Bao
+4, 21, 2, 2026-11-13 21:10:28.946795, queries/job__base_query_split_1/train/23c.sql, 314.938, 648.448, Bao
+4, 22, 0, 2026-11-13 21:10:30.217024, queries/job__base_query_split_1/train/33a.sql, 524.281, 77.978, Bao
+4, 22, 1, 2026-11-13 21:10:31.473154, queries/job__base_query_split_1/train/33a.sql, 513.168, 78.224, Bao
+4, 22, 2, 2026-11-13 21:10:33.343888, queries/job__base_query_split_1/train/33a.sql, 512.029, 72.915, Bao
+4, 23, 0, 2026-11-13 21:10:58.262146, queries/job__base_query_split_1/train/16b.sql, 180.438, 24398.82, Bao
+4, 23, 1, 2026-11-13 21:11:22.808425, queries/job__base_query_split_1/train/16b.sql, 182.945, 24032.084, Bao
+4, 23, 2, 2026-11-13 21:12:09.181450, queries/job__base_query_split_1/train/16b.sql, 172.97, 23495.537, Bao
+4, 24, 0, 2026-11-13 21:12:16.282185, queries/job__base_query_split_1/train/18c.sql, 178.039, 6608.462, Bao
+4, 24, 1, 2026-11-13 21:12:23.292411, queries/job__base_query_split_1/train/18c.sql, 173.503, 6526.295, Bao
+4, 24, 2, 2026-11-13 21:12:37.041816, queries/job__base_query_split_1/train/18c.sql, 166.068, 6506.144, Bao
+==========================================================================================
+Iteration over chunk 6/19...
+[2026-11-13 21:12:37.042084]	[6/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.14806460700929164
+Epoch 15 training loss: 0.015240873582661152
+Epoch 30 training loss: 0.009319514594972133
+Stopped training from convergence condition at epoch 38
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:12:47.378404]	[6/19]	Retraining done.
+5, 0, 0, 2026-11-13 21:12:53.943305, queries/job__base_query_split_1/train/9d.sql, 187.053, 6046.906, Bao
+5, 0, 1, 2026-11-13 21:13:00.485448, queries/job__base_query_split_1/train/9d.sql, 194.834, 6021.344, Bao
+5, 0, 2, 2026-11-13 21:13:12.798913, queries/job__base_query_split_1/train/9d.sql, 177.531, 5818.342, Bao
+5, 1, 0, 2026-11-13 21:13:14.336391, queries/job__base_query_split_1/train/29b.sql, 702.019, 33.969, Bao
+5, 1, 1, 2026-11-13 21:13:15.867017, queries/job__base_query_split_1/train/29b.sql, 658.983, 40.881, Bao
+5, 1, 2, 2026-11-13 21:13:18.045009, queries/job__base_query_split_1/train/29b.sql, 650.324, 23.323, Bao
+5, 2, 0, 2026-11-13 21:13:18.756474, queries/job__base_query_split_1/train/21a.sql, 213.288, 138.483, Bao
+5, 2, 1, 2026-11-13 21:13:19.463487, queries/job__base_query_split_1/train/21a.sql, 215.89, 140.299, Bao
+5, 2, 2, 2026-11-13 21:13:20.508927, queries/job__base_query_split_1/train/21a.sql, 204.134, 131.741, Bao
+5, 3, 0, 2026-11-13 21:13:21.802938, queries/job__base_query_split_1/train/23a.sql, 335.713, 483.391, Bao
+5, 3, 1, 2026-11-13 21:13:23.087921, queries/job__base_query_split_1/train/23a.sql, 324.608, 480.203, Bao
+5, 3, 2, 2026-11-13 21:13:25.100348, queries/job__base_query_split_1/train/23a.sql, 318.331, 469.998, Bao
+5, 4, 0, 2026-11-13 21:13:26.602329, queries/job__base_query_split_1/train/13b.sql, 195.728, 953.624, Bao
+5, 4, 1, 2026-11-13 21:13:28.095388, queries/job__base_query_split_1/train/13b.sql, 191.607, 950.37, Bao
+5, 4, 2, 2026-11-13 21:13:30.572393, queries/job__base_query_split_1/train/13b.sql, 186.258, 908.932, Bao
+5, 5, 0, 2026-11-13 21:13:37.424813, queries/job__base_query_split_1/train/17a.sql, 178.924, 6351.792, Bao
+5, 5, 1, 2026-11-13 21:13:44.222661, queries/job__base_query_split_1/train/17a.sql, 173.222, 6306.059, Bao
+5, 5, 2, 2026-11-13 21:13:55.829931, queries/job__base_query_split_1/train/17a.sql, 161.434, 6212.236, Bao
+5, 6, 0, 2026-11-13 21:13:56.758655, queries/job__base_query_split_1/train/19b.sql, 297.824, 225.348, Bao
+5, 6, 1, 2026-11-13 21:13:57.666650, queries/job__base_query_split_1/train/19b.sql, 255.473, 240.206, Bao
+5, 6, 2, 2026-11-13 21:13:59.055594, queries/job__base_query_split_1/train/19b.sql, 262.01, 222.266, Bao
+5, 7, 0, 2026-11-13 21:14:00.234628, queries/job__base_query_split_1/train/27b.sql, 474.138, 66.008, Bao
+5, 7, 1, 2026-11-13 21:14:01.385996, queries/job__base_query_split_1/train/27b.sql, 456.749, 61.091, Bao
+5, 7, 2, 2026-11-13 21:14:02.987828, queries/job__base_query_split_1/train/27b.sql, 449.789, 50.615, Bao
+5, 8, 0, 2026-11-13 21:14:09.829925, queries/job__base_query_split_1/train/17a.sql, 166.746, 6359.21, Bao
+5, 8, 1, 2026-11-13 21:14:16.658203, queries/job__base_query_split_1/train/17a.sql, 170.181, 6342.534, Bao
+5, 8, 2, 2026-11-13 21:14:29.014766, queries/job__base_query_split_1/train/17a.sql, 167.284, 7003.414, Bao
+5, 9, 0, 2026-11-13 21:14:31.297386, queries/job__base_query_split_1/train/16d.sql, 185.836, 1773.375, Bao
+5, 9, 1, 2026-11-13 21:14:33.627111, queries/job__base_query_split_1/train/16d.sql, 187.716, 1803.145, Bao
+5, 9, 2, 2026-11-13 21:14:37.474573, queries/job__base_query_split_1/train/16d.sql, 195.925, 1474.485, Bao
+5, 10, 0, 2026-11-13 21:14:38.364310, queries/job__base_query_split_1/train/11d.sql, 178.999, 387.991, Bao
+5, 10, 1, 2026-11-13 21:14:39.251273, queries/job__base_query_split_1/train/11d.sql, 174.286, 387.454, Bao
+5, 10, 2, 2026-11-13 21:14:40.631293, queries/job__base_query_split_1/train/11d.sql, 170.79, 369.861, Bao
+5, 11, 0, 2026-11-13 21:14:42.897525, queries/job__base_query_split_1/train/28c.sql, 541.526, 1032.72, Bao
+5, 11, 1, 2026-11-13 21:14:45.099936, queries/job__base_query_split_1/train/28c.sql, 565.49, 954.568, Bao
+5, 11, 2, 2026-11-13 21:14:48.620860, queries/job__base_query_split_1/train/28c.sql, 530.521, 795.183, Bao
+5, 12, 0, 2026-11-13 21:14:55.404404, queries/job__base_query_split_1/train/17a.sql, 194.529, 6268.26, Bao
+5, 12, 1, 2026-11-13 21:15:02.183803, queries/job__base_query_split_1/train/17a.sql, 178.337, 6241.857, Bao
+5, 12, 2, 2026-11-13 21:15:13.787526, queries/job__base_query_split_1/train/17a.sql, 161.886, 6187.687, Bao
+5, 13, 0, 2026-11-13 21:15:19.986417, queries/job__base_query_split_1/train/6f.sql, 166.885, 5729.502, Bao
+5, 13, 1, 2026-11-13 21:15:26.009068, queries/job__base_query_split_1/train/6f.sql, 162.646, 5558.73, Bao
+5, 13, 2, 2026-11-13 21:15:37.035635, queries/job__base_query_split_1/train/6f.sql, 149.762, 5165.592, Bao
+5, 14, 0, 2026-11-13 21:15:42.298916, queries/job__base_query_split_1/train/6a.sql, 162.762, 4794.317, Bao
+5, 14, 1, 2026-11-13 21:15:47.628026, queries/job__base_query_split_1/train/6a.sql, 160.326, 4862.183, Bao
+5, 14, 2, 2026-11-13 21:15:56.600509, queries/job__base_query_split_1/train/6a.sql, 156.816, 4768.657, Bao
+5, 15, 0, 2026-11-13 21:15:57.504261, queries/job__base_query_split_1/train/11d.sql, 181.149, 402.692, Bao
+5, 15, 1, 2026-11-13 21:15:58.398979, queries/job__base_query_split_1/train/11d.sql, 191.476, 381.79, Bao
+5, 15, 2, 2026-11-13 21:15:59.764017, queries/job__base_query_split_1/train/11d.sql, 172.964, 364.749, Bao
+5, 16, 0, 2026-11-13 21:16:06.727831, queries/job__base_query_split_1/train/17b.sql, 167.081, 6475.298, Bao
+5, 16, 1, 2026-11-13 21:16:13.508423, queries/job__base_query_split_1/train/17b.sql, 169.08, 6293.273, Bao
+5, 16, 2, 2026-11-13 21:16:24.793857, queries/job__base_query_split_1/train/17b.sql, 163.258, 6217.474, Bao
+5, 17, 0, 2026-11-13 21:16:26.589852, queries/job__base_query_split_1/train/29c.sql, 670.861, 262.919, Bao
+5, 17, 1, 2026-11-13 21:16:28.317546, queries/job__base_query_split_1/train/29c.sql, 668.626, 252.457, Bao
+5, 17, 2, 2026-11-13 21:16:31.680114, queries/job__base_query_split_1/train/29c.sql, 749.836, 169.269, Bao
+5, 18, 0, 2026-11-13 21:16:33.904068, queries/job__base_query_split_1/train/16d.sql, 180.546, 1718.06, Bao
+5, 18, 1, 2026-11-13 21:16:36.195994, queries/job__base_query_split_1/train/16d.sql, 182.279, 1781.9, Bao
+5, 18, 2, 2026-11-13 21:16:39.960464, queries/job__base_query_split_1/train/16d.sql, 175.216, 1477.436, Bao
+5, 19, 0, 2026-11-13 21:16:41.423119, queries/job__base_query_split_1/train/13c.sql, 203.484, 906.312, Bao
+5, 19, 1, 2026-11-13 21:16:42.858275, queries/job__base_query_split_1/train/13c.sql, 194.925, 900.231, Bao
+5, 19, 2, 2026-11-13 21:16:45.305616, queries/job__base_query_split_1/train/13c.sql, 185.599, 879.174, Bao
+5, 20, 0, 2026-11-13 21:16:46.178450, queries/job__base_query_split_1/train/8b.sql, 176.559, 352.533, Bao
+5, 20, 1, 2026-11-13 21:16:46.977408, queries/job__base_query_split_1/train/8b.sql, 171.183, 314.01, Bao
+5, 20, 2, 2026-11-13 21:16:48.257861, queries/job__base_query_split_1/train/8b.sql, 164.545, 307.844, Bao
+5, 21, 0, 2026-11-13 21:16:50.741947, queries/job__base_query_split_1/train/26c.sql, 447.484, 1442.34, Bao
+5, 21, 1, 2026-11-13 21:16:53.175247, queries/job__base_query_split_1/train/26c.sql, 456.104, 1379.784, Bao
+5, 21, 2, 2026-11-13 21:16:57.139478, queries/job__base_query_split_1/train/26c.sql, 441.084, 1099.174, Bao
+5, 22, 0, 2026-11-13 21:16:58.709467, queries/job__base_query_split_1/train/22a.sql, 318.222, 783.918, Bao
+5, 22, 1, 2026-11-13 21:17:00.308035, queries/job__base_query_split_1/train/22a.sql, 337.383, 788.321, Bao
+5, 22, 2, 2026-11-13 21:17:02.880024, queries/job__base_query_split_1/train/22a.sql, 311.441, 698.742, Bao
+5, 23, 0, 2026-11-13 21:17:07.120476, queries/job__base_query_split_1/train/3c.sql, 164.274, 3771.462, Bao
+5, 23, 1, 2026-11-13 21:17:11.175098, queries/job__base_query_split_1/train/3c.sql, 157.433, 3598.818, Bao
+5, 23, 2, 2026-11-13 21:17:18.648138, queries/job__base_query_split_1/train/3c.sql, 151.616, 3544.098, Bao
+5, 24, 0, 2026-11-13 21:17:19.219361, queries/job__base_query_split_1/train/4b.sql, 163.116, 97.278, Bao
+5, 24, 1, 2026-11-13 21:17:19.783213, queries/job__base_query_split_1/train/4b.sql, 160.725, 99.726, Bao
+5, 24, 2, 2026-11-13 21:17:20.576467, queries/job__base_query_split_1/train/4b.sql, 150.18, 79.09, Bao
+==========================================================================================
+Iteration over chunk 7/19...
+[2026-11-13 21:17:20.576743]	[7/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.20804844932122665
+Epoch 15 training loss: 0.016195778269320726
+Epoch 30 training loss: 0.01563212927430868
+Stopped training from convergence condition at epoch 31
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:17:30.679431]	[7/19]	Retraining done.
+6, 0, 0, 2026-11-13 21:17:31.417838, queries/job__base_query_split_1/train/16a.sql, 179.629, 238.592, Bao
+6, 0, 1, 2026-11-13 21:17:32.177522, queries/job__base_query_split_1/train/16a.sql, 198.262, 232.945, Bao
+6, 0, 2, 2026-11-13 21:17:33.260354, queries/job__base_query_split_1/train/16a.sql, 168.697, 173.213, Bao
+6, 1, 0, 2026-11-13 21:17:34.848452, queries/job__base_query_split_1/train/12c.sql, 185.873, 1082.989, Bao
+6, 1, 1, 2026-11-13 21:17:36.448193, queries/job__base_query_split_1/train/12c.sql, 186.364, 1086.705, Bao
+6, 1, 2, 2026-11-13 21:17:39.097467, queries/job__base_query_split_1/train/12c.sql, 170.481, 986.8, Bao
+6, 2, 0, 2026-11-13 21:17:41.039492, queries/job__base_query_split_1/train/20c.sql, 226.206, 1346.364, Bao
+6, 2, 1, 2026-11-13 21:17:42.962938, queries/job__base_query_split_1/train/20c.sql, 220.501, 1336.497, Bao
+6, 2, 2, 2026-11-13 21:17:46.169840, queries/job__base_query_split_1/train/20c.sql, 215.861, 1112.565, Bao
+6, 3, 0, 2026-11-13 21:17:49.029517, queries/job__base_query_split_1/train/20b.sql, 222.827, 2270.87, Bao
+6, 3, 1, 2026-11-13 21:17:51.870404, queries/job__base_query_split_1/train/20b.sql, 223.605, 2252.485, Bao
+6, 3, 2, 2026-11-13 21:17:56.884206, queries/job__base_query_split_1/train/20b.sql, 224.46, 2017.378, Bao
+6, 4, 0, 2026-11-13 21:17:57.946980, queries/job__base_query_split_1/train/21c.sql, 223.587, 485.762, Bao
+6, 4, 1, 2026-11-13 21:17:58.976289, queries/job__base_query_split_1/train/21c.sql, 210.238, 462.506, Bao
+6, 4, 2, 2026-11-13 21:18:00.650775, queries/job__base_query_split_1/train/21c.sql, 209.08, 465.868, Bao
+6, 5, 0, 2026-11-13 21:18:01.910522, queries/job__base_query_split_1/train/33a.sql, 518.943, 75.121, Bao
+6, 5, 1, 2026-11-13 21:18:03.165369, queries/job__base_query_split_1/train/33a.sql, 517.188, 74.755, Bao
+6, 5, 2, 2026-11-13 21:18:05.005181, queries/job__base_query_split_1/train/33a.sql, 515.083, 73.799, Bao
+6, 6, 0, 2026-11-13 21:18:10.057114, queries/job__base_query_split_1/train/30a.sql, 464.564, 3936.314, Bao
+6, 6, 1, 2026-11-13 21:18:14.935544, queries/job__base_query_split_1/train/30a.sql, 467.092, 3802.512, Bao
+6, 6, 2, 2026-11-13 21:18:23.825196, queries/job__base_query_split_1/train/30a.sql, 456.008, 3586.643, Bao
+6, 7, 0, 2026-11-13 21:18:25.214435, queries/job__base_query_split_1/train/9c.sql, 186.004, 873.086, Bao
+6, 7, 1, 2026-11-13 21:18:26.633120, queries/job__base_query_split_1/train/9c.sql, 179.226, 897.808, Bao
+6, 7, 2, 2026-11-13 21:18:28.920632, queries/job__base_query_split_1/train/9c.sql, 172.608, 805.52, Bao
+6, 8, 0, 2026-11-13 21:18:30.892716, queries/job__base_query_split_1/train/12c.sql, 180.362, 1427.896, Bao
+6, 8, 1, 2026-11-13 21:18:32.542549, queries/job__base_query_split_1/train/12c.sql, 247.018, 1064.327, Bao
+6, 8, 2, 2026-11-13 21:18:35.287728, queries/job__base_query_split_1/train/12c.sql, 174.17, 990.514, Bao
+6, 9, 0, 2026-11-13 21:18:35.972273, queries/job__base_query_split_1/train/1d.sql, 158.319, 188.847, Bao
+6, 9, 1, 2026-11-13 21:18:36.593175, queries/job__base_query_split_1/train/1d.sql, 166.685, 144.878, Bao
+6, 9, 2, 2026-11-13 21:18:37.459016, queries/job__base_query_split_1/train/1d.sql, 158.906, 143.457, Bao
+6, 10, 0, 2026-11-13 21:18:38.360295, queries/job__base_query_split_1/train/19b.sql, 263.826, 234.879, Bao
+6, 10, 1, 2026-11-13 21:18:39.274240, queries/job__base_query_split_1/train/19b.sql, 261.423, 238.658, Bao
+6, 10, 2, 2026-11-13 21:18:40.651250, queries/job__base_query_split_1/train/19b.sql, 250.929, 231.028, Bao
+6, 11, 0, 2026-11-13 21:18:46.028603, queries/job__base_query_split_1/train/6a.sql, 156.907, 4913.551, Bao
+6, 11, 1, 2026-11-13 21:18:51.317074, queries/job__base_query_split_1/train/6a.sql, 175.386, 4806.555, Bao
+6, 11, 2, 2026-11-13 21:19:00.357455, queries/job__base_query_split_1/train/6a.sql, 153.314, 4810.558, Bao
+6, 12, 0, 2026-11-13 21:19:06.236051, queries/job__base_query_split_1/train/17c.sql, 171.749, 5385.324, Bao
+6, 12, 1, 2026-11-13 21:19:12.229650, queries/job__base_query_split_1/train/17c.sql, 170.585, 5503.594, Bao
+6, 12, 2, 2026-11-13 21:19:22.067265, queries/job__base_query_split_1/train/17c.sql, 162.559, 5202.834, Bao
+6, 13, 0, 2026-11-13 21:19:22.808062, queries/job__base_query_split_1/train/16a.sql, 182.062, 232.958, Bao
+6, 13, 1, 2026-11-13 21:19:23.553275, queries/job__base_query_split_1/train/16a.sql, 180.473, 233.231, Bao
+6, 13, 2, 2026-11-13 21:19:24.657863, queries/job__base_query_split_1/train/16a.sql, 173.55, 173.388, Bao
+6, 14, 0, 2026-11-13 21:19:25.377697, queries/job__base_query_split_1/train/21b.sql, 230.475, 129.737, Bao
+6, 14, 1, 2026-11-13 21:19:26.140103, queries/job__base_query_split_1/train/21b.sql, 214.398, 134.113, Bao
+6, 14, 2, 2026-11-13 21:19:27.166281, queries/job__base_query_split_1/train/21b.sql, 204.402, 121.113, Bao
+6, 15, 0, 2026-11-13 21:19:30.040110, queries/job__base_query_split_1/train/20b.sql, 222.41, 2282.471, Bao
+6, 15, 1, 2026-11-13 21:19:32.930011, queries/job__base_query_split_1/train/20b.sql, 225.47, 2288.091, Bao
+6, 15, 2, 2026-11-13 21:19:38.021373, queries/job__base_query_split_1/train/20b.sql, 226.477, 1987.627, Bao
+6, 16, 0, 2026-11-13 21:19:49.273636, queries/job__base_query_split_1/train/17f.sql, 188.971, 10749.481, Bao
+6, 16, 1, 2026-11-13 21:20:00.433934, queries/job__base_query_split_1/train/17f.sql, 182.04, 10666.872, Bao
+6, 16, 2, 2026-11-13 21:20:21.386900, queries/job__base_query_split_1/train/17f.sql, 162.559, 10210.842, Bao
+6, 17, 0, 2026-11-13 21:20:27.264044, queries/job__base_query_split_1/train/17c.sql, 173.217, 5379.49, Bao
+6, 17, 1, 2026-11-13 21:20:34.239699, queries/job__base_query_split_1/train/17c.sql, 171.887, 6479.02, Bao
+6, 17, 2, 2026-11-13 21:20:44.299838, queries/job__base_query_split_1/train/17c.sql, 164.868, 5426.123, Bao
+6, 18, 0, 2026-11-13 21:20:46.481473, queries/job__base_query_split_1/train/8a.sql, 294.502, 1570.788, Bao
+6, 18, 1, 2026-11-13 21:20:48.394680, queries/job__base_query_split_1/train/8a.sql, 171.715, 1419.007, Bao
+6, 18, 2, 2026-11-13 21:20:51.852602, queries/job__base_query_split_1/train/8a.sql, 164.512, 1342.654, Bao
+6, 19, 0, 2026-11-13 21:20:52.570942, queries/job__base_query_split_1/train/21a.sql, 222.786, 136.94, Bao
+6, 19, 1, 2026-11-13 21:20:53.293293, queries/job__base_query_split_1/train/21a.sql, 214.141, 139.249, Bao
+6, 19, 2, 2026-11-13 21:20:54.335408, queries/job__base_query_split_1/train/21a.sql, 200.77, 124.63, Bao
+6, 20, 0, 2026-11-13 21:20:59.660558, queries/job__base_query_split_1/train/6a.sql, 173.762, 4851.722, Bao
+6, 20, 1, 2026-11-13 21:21:04.919884, queries/job__base_query_split_1/train/6a.sql, 167.4, 4789.872, Bao
+6, 20, 2, 2026-11-13 21:21:13.932279, queries/job__base_query_split_1/train/6a.sql, 152.332, 4719.019, Bao
+6, 21, 0, 2026-11-13 21:21:17.252799, queries/job__base_query_split_1/train/26a.sql, 453.873, 2276.585, Bao
+6, 21, 1, 2026-11-13 21:21:20.319956, queries/job__base_query_split_1/train/26a.sql, 449.845, 2024.295, Bao
+6, 21, 2, 2026-11-13 21:21:25.528635, queries/job__base_query_split_1/train/26a.sql, 468.493, 1813.919, Bao
+6, 22, 0, 2026-11-13 21:21:26.159501, queries/job__base_query_split_1/train/11b.sql, 194.494, 66.35, Bao
+6, 22, 1, 2026-11-13 21:21:26.727935, queries/job__base_query_split_1/train/11b.sql, 180.373, 66.387, Bao
+6, 22, 2, 2026-11-13 21:21:27.527354, queries/job__base_query_split_1/train/11b.sql, 169.69, 56.036, Bao
+6, 23, 0, 2026-11-13 21:21:33.627236, queries/job__base_query_split_1/train/9d.sql, 182.502, 5587.162, Bao
+6, 23, 1, 2026-11-13 21:21:39.652554, queries/job__base_query_split_1/train/9d.sql, 191.836, 5502.664, Bao
+6, 23, 2, 2026-11-13 21:21:50.839533, queries/job__base_query_split_1/train/9d.sql, 176.072, 5361.116, Bao
+6, 24, 0, 2026-11-13 21:21:51.576344, queries/job__base_query_split_1/train/5b.sql, 160.32, 267.372, Bao
+6, 24, 1, 2026-11-13 21:21:52.305219, queries/job__base_query_split_1/train/5b.sql, 158.925, 267.061, Bao
+6, 24, 2, 2026-11-13 21:21:53.449353, queries/job__base_query_split_1/train/5b.sql, 151.688, 262.054, Bao
+==========================================================================================
+Iteration over chunk 8/19...
+[2026-11-13 21:21:53.449553]	[8/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.11926758461273633
+Epoch 15 training loss: 0.014557080128445076
+Epoch 30 training loss: 0.007403086799268539
+Epoch 45 training loss: 0.002135523277012488
+Stopped training from convergence condition at epoch 49
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:22:09.549697]	[8/19]	Retraining done.
+7, 0, 0, 2026-11-13 21:22:10.575993, queries/job__base_query_split_1/train/9b.sql, 180.74, 523.777, Bao
+7, 0, 1, 2026-11-13 21:22:11.613113, queries/job__base_query_split_1/train/9b.sql, 182.823, 525.417, Bao
+7, 0, 2, 2026-11-13 21:22:13.351160, queries/job__base_query_split_1/train/9b.sql, 195.358, 507.663, Bao
+7, 1, 0, 2026-11-13 21:22:14.175555, queries/job__base_query_split_1/train/8b.sql, 187.724, 318.076, Bao
+7, 1, 1, 2026-11-13 21:22:14.985521, queries/job__base_query_split_1/train/8b.sql, 170.657, 315.275, Bao
+7, 1, 2, 2026-11-13 21:22:16.311783, queries/job__base_query_split_1/train/8b.sql, 171.896, 304.384, Bao
+7, 2, 0, 2026-11-13 21:22:17.148505, queries/job__base_query_split_1/train/5c.sql, 157.475, 374.197, Bao
+7, 2, 1, 2026-11-13 21:22:17.985044, queries/job__base_query_split_1/train/5c.sql, 157.054, 373.561, Bao
+7, 2, 2, 2026-11-13 21:22:19.329049, queries/job__base_query_split_1/train/5c.sql, 156.425, 353.773, Bao
+7, 3, 0, 2026-11-13 21:22:19.980396, queries/job__base_query_split_1/train/14b.sql, 178.352, 157.495, Bao
+7, 3, 1, 2026-11-13 21:22:20.629007, queries/job__base_query_split_1/train/14b.sql, 173.696, 154.368, Bao
+7, 3, 2, 2026-11-13 21:22:21.554115, queries/job__base_query_split_1/train/14b.sql, 167.48, 109.01, Bao
+7, 4, 0, 2026-11-13 21:22:22.885421, queries/job__base_query_split_1/train/22b.sql, 322.639, 532.216, Bao
+7, 4, 1, 2026-11-13 21:22:24.213396, queries/job__base_query_split_1/train/22b.sql, 322.554, 524.309, Bao
+7, 4, 2, 2026-11-13 21:22:26.344128, queries/job__base_query_split_1/train/22b.sql, 313.471, 460.054, Bao
+7, 5, 0, 2026-11-13 21:22:28.606042, queries/job__base_query_split_1/train/16d.sql, 181.942, 1759.986, Bao
+7, 5, 1, 2026-11-13 21:22:30.865497, queries/job__base_query_split_1/train/16d.sql, 199.486, 1722.789, Bao
+7, 5, 2, 2026-11-13 21:22:35.664819, queries/job__base_query_split_1/train/16d.sql, 174.551, 2325.03, Bao
+7, 6, 0, 2026-11-13 21:22:36.324265, queries/job__base_query_split_1/train/1d.sql, 193.451, 144.461, Bao
+7, 6, 1, 2026-11-13 21:22:36.949019, queries/job__base_query_split_1/train/1d.sql, 158.148, 144.153, Bao
+7, 6, 2, 2026-11-13 21:22:37.809129, queries/job__base_query_split_1/train/1d.sql, 149.631, 140.267, Bao
+7, 7, 0, 2026-11-13 21:22:38.812938, queries/job__base_query_split_1/train/11c.sql, 187.143, 497.813, Bao
+7, 7, 1, 2026-11-13 21:22:39.841371, queries/job__base_query_split_1/train/11c.sql, 191.752, 507.518, Bao
+7, 7, 2, 2026-11-13 21:22:41.405365, queries/job__base_query_split_1/train/11c.sql, 171.513, 512.099, Bao
+7, 8, 0, 2026-11-13 21:22:42.006438, queries/job__base_query_split_1/train/1b.sql, 157.213, 142.494, Bao
+7, 8, 1, 2026-11-13 21:22:42.611926, queries/job__base_query_split_1/train/1b.sql, 156.573, 146.005, Bao
+7, 8, 2, 2026-11-13 21:22:43.466631, queries/job__base_query_split_1/train/1b.sql, 152.885, 138.271, Bao
+7, 9, 0, 2026-11-13 21:22:44.856397, queries/job__base_query_split_1/train/9c.sql, 178.144, 880.849, Bao
+7, 9, 1, 2026-11-13 21:22:46.273019, queries/job__base_query_split_1/train/9c.sql, 189.024, 889.655, Bao
+7, 9, 2, 2026-11-13 21:22:48.530896, queries/job__base_query_split_1/train/9c.sql, 173.652, 795.197, Bao
+7, 10, 0, 2026-11-13 21:22:56.238230, queries/job__base_query_split_1/train/17d.sql, 169.53, 7219.488, Bao
+7, 10, 1, 2026-11-13 21:23:03.782632, queries/job__base_query_split_1/train/17d.sql, 173.912, 7053.967, Bao
+7, 10, 2, 2026-11-13 21:23:17.850950, queries/job__base_query_split_1/train/17d.sql, 160.453, 6637.874, Bao
+7, 11, 0, 2026-11-13 21:23:18.741982, queries/job__base_query_split_1/train/3c.sql, 157.804, 426.612, Bao
+7, 11, 1, 2026-11-13 21:23:19.599028, queries/job__base_query_split_1/train/3c.sql, 160.699, 388.68, Bao
+7, 11, 2, 2026-11-13 21:23:20.877312, queries/job__base_query_split_1/train/3c.sql, 151.617, 281.638, Bao
+7, 12, 0, 2026-11-13 21:23:21.579679, queries/job__base_query_split_1/train/21b.sql, 211.997, 131.449, Bao
+7, 12, 1, 2026-11-13 21:23:22.290608, queries/job__base_query_split_1/train/21b.sql, 220.461, 130.263, Bao
+7, 12, 2, 2026-11-13 21:23:23.328445, queries/job__base_query_split_1/train/21b.sql, 207.049, 120.04, Bao
+7, 13, 0, 2026-11-13 21:23:26.225387, queries/job__base_query_split_1/train/20b.sql, 222.32, 2295.061, Bao
+7, 13, 1, 2026-11-13 21:23:29.046474, queries/job__base_query_split_1/train/20b.sql, 217.826, 2229.521, Bao
+7, 13, 2, 2026-11-13 21:23:33.960975, queries/job__base_query_split_1/train/20b.sql, 218.603, 1921.046, Bao
+7, 14, 0, 2026-11-13 21:23:37.835852, queries/job__base_query_split_1/train/8d.sql, 177.089, 3379.872, Bao
+7, 14, 1, 2026-11-13 21:23:41.615492, queries/job__base_query_split_1/train/8d.sql, 169.486, 3291.347, Bao
+7, 14, 2, 2026-11-13 21:23:48.381028, queries/job__base_query_split_1/train/8d.sql, 156.114, 3332.971, Bao
+7, 15, 0, 2026-11-13 21:23:54.895614, queries/job__base_query_split_1/train/9d.sql, 180.4, 6000.243, Bao
+7, 15, 1, 2026-11-13 21:24:01.408474, queries/job__base_query_split_1/train/9d.sql, 187.002, 5996.944, Bao
+7, 15, 2, 2026-11-13 21:24:13.657377, queries/job__base_query_split_1/train/9d.sql, 175.52, 5803.104, Bao
+7, 16, 0, 2026-11-13 21:24:14.867602, queries/job__base_query_split_1/train/26b.sql, 459.583, 154.09, Bao
+7, 16, 1, 2026-11-13 21:24:16.130089, queries/job__base_query_split_1/train/26b.sql, 465.813, 157.478, Bao
+7, 16, 2, 2026-11-13 21:24:17.896315, queries/job__base_query_split_1/train/26b.sql, 448.262, 111.992, Bao
+7, 17, 0, 2026-11-13 21:24:19.119931, queries/job__base_query_split_1/train/32b.sql, 158.839, 756.157, Bao
+7, 17, 1, 2026-11-13 21:24:20.346693, queries/job__base_query_split_1/train/32b.sql, 163.107, 764.26, Bao
+7, 17, 2, 2026-11-13 21:24:22.316264, queries/job__base_query_split_1/train/32b.sql, 151.14, 720.731, Bao
+7, 18, 0, 2026-11-13 21:24:23.188679, queries/job__base_query_split_1/train/14a.sql, 175.349, 374.754, Bao
+7, 18, 1, 2026-11-13 21:24:24.049068, queries/job__base_query_split_1/train/14a.sql, 178.592, 355.092, Bao
+7, 18, 2, 2026-11-13 21:24:25.340099, queries/job__base_query_split_1/train/14a.sql, 170.491, 267.861, Bao
+7, 19, 0, 2026-11-13 21:24:30.803761, queries/job__base_query_split_1/train/18a.sql, 167.982, 4959.76, Bao
+7, 19, 1, 2026-11-13 21:24:35.967477, queries/job__base_query_split_1/train/18a.sql, 178.359, 4665.004, Bao
+7, 19, 2, 2026-11-13 21:24:45.149973, queries/job__base_query_split_1/train/18a.sql, 163.263, 4449.274, Bao
+7, 20, 0, 2026-11-13 21:24:46.243676, queries/job__base_query_split_1/train/9b.sql, 189.088, 567.187, Bao
+7, 20, 1, 2026-11-13 21:24:47.255643, queries/job__base_query_split_1/train/9b.sql, 181.637, 508.313, Bao
+7, 20, 2, 2026-11-13 21:24:48.972837, queries/job__base_query_split_1/train/9b.sql, 178.607, 493.878, Bao
+7, 21, 0, 2026-11-13 21:24:50.056822, queries/job__base_query_split_1/train/27a.sql, 449.51, 34.322, Bao
+7, 21, 1, 2026-11-13 21:24:51.173620, queries/job__base_query_split_1/train/27a.sql, 446.977, 32.572, Bao
+7, 21, 2, 2026-11-13 21:24:52.732143, queries/job__base_query_split_1/train/27a.sql, 445.764, 30.99, Bao
+7, 22, 0, 2026-11-13 21:24:54.178059, queries/job__base_query_split_1/train/23c.sql, 325.972, 646.717, Bao
+7, 22, 1, 2026-11-13 21:24:55.665292, queries/job__base_query_split_1/train/23c.sql, 355.245, 660.844, Bao
+7, 22, 2, 2026-11-13 21:24:58.016336, queries/job__base_query_split_1/train/23c.sql, 320.481, 627.154, Bao
+7, 23, 0, 2026-11-13 21:24:59.405502, queries/job__base_query_split_1/train/33c.sql, 509.829, 219.034, Bao
+7, 23, 1, 2026-11-13 21:25:00.765076, queries/job__base_query_split_1/train/33c.sql, 509.08, 197.602, Bao
+7, 23, 2, 2026-11-13 21:25:02.864715, queries/job__base_query_split_1/train/33c.sql, 504.192, 213.071, Bao
+7, 24, 0, 2026-11-13 21:25:03.873279, queries/job__base_query_split_1/train/11c.sql, 176.837, 510.331, Bao
+7, 24, 1, 2026-11-13 21:25:04.868752, queries/job__base_query_split_1/train/11c.sql, 177.412, 498.032, Bao
+7, 24, 2, 2026-11-13 21:25:06.458600, queries/job__base_query_split_1/train/11c.sql, 177.635, 493.24, Bao
+==========================================================================================
+Iteration over chunk 9/19...
+[2026-11-13 21:25:06.458907]	[9/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.22419135123491288
+Epoch 15 training loss: 0.021873670785377424
+Epoch 30 training loss: 0.009267077734693884
+Epoch 45 training loss: 0.005182264007938405
+Stopped training from convergence condition at epoch 55
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:25:26.013881]	[9/19]	Retraining done.
+8, 0, 0, 2026-11-13 21:25:27.098104, queries/job__base_query_split_1/train/27a.sql, 446.376, 32.895, Bao
+8, 0, 1, 2026-11-13 21:25:28.253854, queries/job__base_query_split_1/train/27a.sql, 503.174, 32.474, Bao
+8, 0, 2, 2026-11-13 21:25:29.815722, queries/job__base_query_split_1/train/27a.sql, 455.503, 28.853, Bao
+8, 1, 0, 2026-11-13 21:25:32.173163, queries/job__base_query_split_1/train/22d.sql, 330.743, 1544.4, Bao
+8, 1, 1, 2026-11-13 21:25:34.453298, queries/job__base_query_split_1/train/22d.sql, 320.455, 1494.456, Bao
+8, 1, 2, 2026-11-13 21:25:38.407573, queries/job__base_query_split_1/train/22d.sql, 314.616, 1343.179, Bao
+8, 2, 0, 2026-11-13 21:25:38.909759, queries/job__base_query_split_1/train/6a.sql, 160.189, 39.129, Bao
+8, 2, 1, 2026-11-13 21:25:39.410582, queries/job__base_query_split_1/train/6a.sql, 158.036, 38.29, Bao
+8, 2, 2, 2026-11-13 21:25:40.091454, queries/job__base_query_split_1/train/6a.sql, 152.971, 22.557, Bao
+8, 3, 0, 2026-11-13 21:25:41.026816, queries/job__base_query_split_1/train/14a.sql, 185.223, 432.075, Bao
+8, 3, 1, 2026-11-13 21:25:41.958032, queries/job__base_query_split_1/train/14a.sql, 178.798, 434.162, Bao
+8, 3, 2, 2026-11-13 21:25:43.392823, queries/job__base_query_split_1/train/14a.sql, 164.162, 348.14, Bao
+8, 4, 0, 2026-11-13 21:25:44.431565, queries/job__base_query_split_1/train/9a.sql, 181.701, 525.076, Bao
+8, 4, 1, 2026-11-13 21:25:45.455949, queries/job__base_query_split_1/train/9a.sql, 178.059, 522.707, Bao
+8, 4, 2, 2026-11-13 21:25:47.263850, queries/job__base_query_split_1/train/9a.sql, 182.105, 513.868, Bao
+8, 5, 0, 2026-11-13 21:25:48.068922, queries/job__base_query_split_1/train/12a.sql, 175.622, 306.224, Bao
+8, 5, 1, 2026-11-13 21:25:48.917547, queries/job__base_query_split_1/train/12a.sql, 215.435, 311.116, Bao
+8, 5, 2, 2026-11-13 21:25:50.174240, queries/job__base_query_split_1/train/12a.sql, 168.307, 293.722, Bao
+8, 6, 0, 2026-11-13 21:25:50.935424, queries/job__base_query_split_1/train/16a.sql, 196.27, 235.293, Bao
+8, 6, 1, 2026-11-13 21:25:51.671129, queries/job__base_query_split_1/train/16a.sql, 180.539, 231.186, Bao
+8, 6, 2, 2026-11-13 21:25:52.737335, queries/job__base_query_split_1/train/16a.sql, 175.346, 167.962, Bao
+8, 7, 0, 2026-11-13 21:25:53.851997, queries/job__base_query_split_1/train/27b.sql, 450.24, 60.542, Bao
+8, 7, 1, 2026-11-13 21:25:54.964829, queries/job__base_query_split_1/train/27b.sql, 457.98, 58.375, Bao
+8, 7, 2, 2026-11-13 21:25:56.634617, queries/job__base_query_split_1/train/27b.sql, 511.326, 50.637, Bao
+8, 8, 0, 2026-11-13 21:26:01.517229, queries/job__base_query_split_1/train/30a.sql, 467.28, 3806.832, Bao
+8, 8, 1, 2026-11-13 21:26:06.392025, queries/job__base_query_split_1/train/30a.sql, 470.219, 3792.909, Bao
+8, 8, 2, 2026-11-13 21:26:15.212992, queries/job__base_query_split_1/train/30a.sql, 457.634, 3534.089, Bao
+8, 9, 0, 2026-11-13 21:26:22.960960, queries/job__base_query_split_1/train/17b.sql, 175.961, 7243.871, Bao
+8, 9, 1, 2026-11-13 21:26:30.776025, queries/job__base_query_split_1/train/17b.sql, 195.072, 7298.367, Bao
+8, 9, 2, 2026-11-13 21:26:45.833331, queries/job__base_query_split_1/train/17b.sql, 167.855, 6806.364, Bao
+8, 10, 0, 2026-11-13 21:26:47.310490, queries/job__base_query_split_1/train/13b.sql, 221.373, 910.393, Bao
+8, 10, 1, 2026-11-13 21:26:48.753846, queries/job__base_query_split_1/train/13b.sql, 195.154, 901.79, Bao
+8, 10, 2, 2026-11-13 21:26:51.246451, queries/job__base_query_split_1/train/13b.sql, 187.368, 902.177, Bao
+8, 11, 0, 2026-11-13 21:26:57.172875, queries/job__base_query_split_1/train/6d.sql, 155.588, 5463.88, Bao
+8, 11, 1, 2026-11-13 21:27:03.082950, queries/job__base_query_split_1/train/6d.sql, 161.699, 5444.699, Bao
+8, 11, 2, 2026-11-13 21:27:14.034777, queries/job__base_query_split_1/train/6d.sql, 161.97, 5107.152, Bao
+8, 12, 0, 2026-11-13 21:27:21.391127, queries/job__base_query_split_1/train/17c.sql, 176.536, 6861.156, Bao
+8, 12, 1, 2026-11-13 21:27:28.813134, queries/job__base_query_split_1/train/17c.sql, 185.484, 6920.192, Bao
+8, 12, 2, 2026-11-13 21:27:42.869162, queries/job__base_query_split_1/train/17c.sql, 190.657, 6576.932, Bao
+8, 13, 0, 2026-11-13 21:27:44.025901, queries/job__base_query_split_1/train/27b.sql, 484.388, 59.585, Bao
+8, 13, 1, 2026-11-13 21:27:45.182201, queries/job__base_query_split_1/train/27b.sql, 459.969, 58.097, Bao
+8, 13, 2, 2026-11-13 21:27:46.882943, queries/job__base_query_split_1/train/27b.sql, 510.188, 53.77, Bao
+8, 14, 0, 2026-11-13 21:27:49.588573, queries/job__base_query_split_1/train/28b.sql, 539.846, 1469.724, Bao
+8, 14, 1, 2026-11-13 21:27:52.388117, queries/job__base_query_split_1/train/28b.sql, 574.811, 1504.421, Bao
+8, 14, 2, 2026-11-13 21:27:57.026498, queries/job__base_query_split_1/train/28b.sql, 542.617, 1387.079, Bao
+8, 15, 0, 2026-11-13 21:27:59.848911, queries/job__base_query_split_1/train/20b.sql, 227.295, 2227.828, Bao
+8, 15, 1, 2026-11-13 21:28:02.737702, queries/job__base_query_split_1/train/20b.sql, 240.706, 2272.46, Bao
+8, 15, 2, 2026-11-13 21:28:07.754048, queries/job__base_query_split_1/train/20b.sql, 219.18, 1996.003, Bao
+8, 16, 0, 2026-11-13 21:28:08.860145, queries/job__base_query_split_1/train/27a.sql, 456.854, 33.96, Bao
+8, 16, 1, 2026-11-13 21:28:09.969854, queries/job__base_query_split_1/train/27a.sql, 463.381, 34.727, Bao
+8, 16, 2, 2026-11-13 21:28:11.553983, queries/job__base_query_split_1/train/27a.sql, 447.896, 31.799, Bao
+8, 17, 0, 2026-11-13 21:28:12.454228, queries/job__base_query_split_1/train/23b.sql, 328.495, 90.806, Bao
+8, 17, 1, 2026-11-13 21:28:13.360218, queries/job__base_query_split_1/train/23b.sql, 331.64, 92.466, Bao
+8, 17, 2, 2026-11-13 21:28:14.652369, queries/job__base_query_split_1/train/23b.sql, 332.337, 53.975, Bao
+8, 18, 0, 2026-11-13 21:28:15.484481, queries/job__base_query_split_1/train/8b.sql, 196.202, 315.97, Bao
+8, 18, 1, 2026-11-13 21:28:16.348059, queries/job__base_query_split_1/train/8b.sql, 180.39, 324.008, Bao
+8, 18, 2, 2026-11-13 21:28:17.617268, queries/job__base_query_split_1/train/8b.sql, 162.628, 304.259, Bao
+8, 19, 0, 2026-11-13 21:28:20.281516, queries/job__base_query_split_1/train/16c.sql, 182.695, 2156.858, Bao
+8, 19, 1, 2026-11-13 21:28:22.913642, queries/job__base_query_split_1/train/16c.sql, 178.346, 2123.472, Bao
+8, 19, 2, 2026-11-13 21:28:27.586711, queries/job__base_query_split_1/train/16c.sql, 172.576, 1921.641, Bao
+8, 20, 0, 2026-11-13 21:28:28.214049, queries/job__base_query_split_1/train/32b.sql, 161.423, 163.172, Bao
+8, 20, 1, 2026-11-13 21:28:28.831123, queries/job__base_query_split_1/train/32b.sql, 159.111, 159.184, Bao
+8, 20, 2, 2026-11-13 21:28:29.705616, queries/job__base_query_split_1/train/32b.sql, 153.749, 118.554, Bao
+8, 21, 0, 2026-11-13 21:28:38.196389, queries/job__base_query_split_1/train/17b.sql, 177.733, 7994.137, Bao
+8, 21, 1, 2026-11-13 21:28:45.875875, queries/job__base_query_split_1/train/17b.sql, 212.622, 7145.232, Bao
+8, 21, 2, 2026-11-13 21:29:00.167222, queries/job__base_query_split_1/train/17b.sql, 163.331, 6743.293, Bao
+8, 22, 0, 2026-11-13 21:29:00.782101, queries/job__base_query_split_1/train/1d.sql, 168.8, 141.989, Bao
+8, 22, 1, 2026-11-13 21:29:01.401702, queries/job__base_query_split_1/train/1d.sql, 158.798, 143.332, Bao
+8, 22, 2, 2026-11-13 21:29:02.255229, queries/job__base_query_split_1/train/1d.sql, 152.008, 140.071, Bao
+8, 23, 0, 2026-11-13 21:29:07.197298, queries/job__base_query_split_1/train/30a.sql, 461.217, 3861.148, Bao
+8, 23, 1, 2026-11-13 21:29:12.056885, queries/job__base_query_split_1/train/30a.sql, 480.49, 3762.926, Bao
+8, 23, 2, 2026-11-13 21:29:20.884418, queries/job__base_query_split_1/train/30a.sql, 474.582, 3535.34, Bao
+8, 24, 0, 2026-11-13 21:29:21.691296, queries/job__base_query_split_1/train/18b.sql, 179.976, 303.11, Bao
+8, 24, 1, 2026-11-13 21:29:22.466597, queries/job__base_query_split_1/train/18b.sql, 169.089, 289.135, Bao
+8, 24, 2, 2026-11-13 21:29:23.658606, queries/job__base_query_split_1/train/18b.sql, 167.624, 254.364, Bao
+==========================================================================================
+Iteration over chunk 10/19...
+[2026-11-13 21:29:23.658903]	[10/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.07879390835296363
+Epoch 15 training loss: 0.012650581891648471
+Epoch 30 training loss: 0.003486422421701718
+Epoch 45 training loss: 0.001636140968912514
+Stopped training from convergence condition at epoch 48
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:29:42.189338]	[10/19]	Retraining done.
+9, 0, 0, 2026-11-13 21:29:48.308802, queries/job__base_query_split_1/train/18c.sql, 166.201, 5639.432, Bao
+9, 0, 1, 2026-11-13 21:29:54.334136, queries/job__base_query_split_1/train/18c.sql, 170.152, 5541.306, Bao
+9, 0, 2, 2026-11-13 21:30:07.058492, queries/job__base_query_split_1/train/18c.sql, 168.84, 6486.79, Bao
+9, 1, 0, 2026-11-13 21:30:09.108145, queries/job__base_query_split_1/train/33c.sql, 779.503, 302.058, Bao
+9, 1, 1, 2026-11-13 21:30:10.905860, queries/job__base_query_split_1/train/33c.sql, 786.995, 221.713, Bao
+9, 1, 2, 2026-11-13 21:30:13.047017, queries/job__base_query_split_1/train/33c.sql, 538.431, 215.482, Bao
+9, 2, 0, 2026-11-13 21:30:13.768581, queries/job__base_query_split_1/train/11d.sql, 178.84, 211.131, Bao
+9, 2, 1, 2026-11-13 21:30:14.486097, queries/job__base_query_split_1/train/11d.sql, 188.47, 186.1, Bao
+9, 2, 2, 2026-11-13 21:30:15.502383, queries/job__base_query_split_1/train/11d.sql, 169.979, 165.59, Bao
+9, 3, 0, 2026-11-13 21:30:16.267091, queries/job__base_query_split_1/train/21c.sql, 221.976, 140.154, Bao
+9, 3, 1, 2026-11-13 21:30:16.970662, queries/job__base_query_split_1/train/21c.sql, 210.64, 138.278, Bao
+9, 3, 2, 2026-11-13 21:30:18.022976, queries/job__base_query_split_1/train/21c.sql, 207.798, 128.32, Bao
+9, 4, 0, 2026-11-13 21:30:24.219379, queries/job__base_query_split_1/train/9d.sql, 184.976, 5668.37, Bao
+9, 4, 1, 2026-11-13 21:30:30.314955, queries/job__base_query_split_1/train/9d.sql, 201.469, 5559.683, Bao
+9, 4, 2, 2026-11-13 21:30:42.049569, queries/job__base_query_split_1/train/9d.sql, 215.608, 5824.924, Bao
+9, 5, 0, 2026-11-13 21:30:48.058067, queries/job__base_query_split_1/train/9d.sql, 188.172, 5490.676, Bao
+9, 5, 1, 2026-11-13 21:30:54.044223, queries/job__base_query_split_1/train/9d.sql, 186.312, 5472.979, Bao
+9, 5, 2, 2026-11-13 21:31:05.272344, queries/job__base_query_split_1/train/9d.sql, 174.225, 5303.756, Bao
+9, 6, 0, 2026-11-13 21:31:06.024666, queries/job__base_query_split_1/train/11d.sql, 181.135, 227.884, Bao
+9, 6, 1, 2026-11-13 21:31:06.720980, queries/job__base_query_split_1/train/11d.sql, 188.327, 184.487, Bao
+9, 6, 2, 2026-11-13 21:31:07.733591, queries/job__base_query_split_1/train/11d.sql, 167.791, 166.291, Bao
+9, 7, 0, 2026-11-13 21:31:10.052437, queries/job__base_query_split_1/train/16d.sql, 185.547, 1810.767, Bao
+9, 7, 1, 2026-11-13 21:31:12.283352, queries/job__base_query_split_1/train/16d.sql, 191.114, 1705.409, Bao
+9, 7, 2, 2026-11-13 21:31:16.088464, queries/job__base_query_split_1/train/16d.sql, 173.156, 1520.932, Bao
+9, 8, 0, 2026-11-13 21:31:24.649806, queries/job__base_query_split_1/train/17d.sql, 176.933, 8063.688, Bao
+9, 8, 1, 2026-11-13 21:31:32.939799, queries/job__base_query_split_1/train/17d.sql, 172.596, 7792.856, Bao
+9, 8, 2, 2026-11-13 21:31:46.115616, queries/job__base_query_split_1/train/17d.sql, 162.363, 7428.727, Bao
+9, 9, 0, 2026-11-13 21:31:46.938385, queries/job__base_query_split_1/train/8b.sql, 182.847, 319.079, Bao
+9, 9, 1, 2026-11-13 21:31:47.750464, queries/job__base_query_split_1/train/8b.sql, 176.945, 317.999, Bao
+9, 9, 2, 2026-11-13 21:31:49.042642, queries/job__base_query_split_1/train/8b.sql, 166.396, 320.133, Bao
+9, 10, 0, 2026-11-13 21:31:49.517375, queries/job__base_query_split_1/train/6c.sql, 161.727, 16.74, Bao
+9, 10, 1, 2026-11-13 21:31:49.998467, queries/job__base_query_split_1/train/6c.sql, 155.378, 17.088, Bao
+9, 10, 2, 2026-11-13 21:31:50.657035, queries/job__base_query_split_1/train/6c.sql, 157.14, 14.011, Bao
+9, 11, 0, 2026-11-13 21:31:51.137208, queries/job__base_query_split_1/train/6c.sql, 160.512, 17.41, Bao
+9, 11, 1, 2026-11-13 21:31:51.621803, queries/job__base_query_split_1/train/6c.sql, 159.511, 18.845, Bao
+9, 11, 2, 2026-11-13 21:31:52.270508, queries/job__base_query_split_1/train/6c.sql, 156.558, 13.825, Bao
+9, 12, 0, 2026-11-13 21:31:52.902437, queries/job__base_query_split_1/train/1a.sql, 168.407, 157.711, Bao
+9, 12, 1, 2026-11-13 21:31:53.519390, queries/job__base_query_split_1/train/1a.sql, 161.85, 154.843, Bao
+9, 12, 2, 2026-11-13 21:31:54.400147, queries/job__base_query_split_1/train/1a.sql, 155.806, 154.866, Bao
+9, 13, 0, 2026-11-13 21:31:55.382168, queries/job__base_query_split_1/train/14a.sql, 196.442, 457.448, Bao
+9, 13, 1, 2026-11-13 21:31:56.367158, queries/job__base_query_split_1/train/14a.sql, 183.549, 436.903, Bao
+9, 13, 2, 2026-11-13 21:31:57.819354, queries/job__base_query_split_1/train/14a.sql, 169.133, 349.81, Bao
+9, 14, 0, 2026-11-13 21:31:58.600902, queries/job__base_query_split_1/train/5b.sql, 210.334, 266.92, Bao
+9, 14, 1, 2026-11-13 21:31:59.325793, queries/job__base_query_split_1/train/5b.sql, 156.536, 266.873, Bao
+9, 14, 2, 2026-11-13 21:32:00.495097, queries/job__base_query_split_1/train/5b.sql, 149.793, 262.236, Bao
+9, 15, 0, 2026-11-13 21:32:00.972046, queries/job__base_query_split_1/train/32a.sql, 158.937, 15.624, Bao
+9, 15, 1, 2026-11-13 21:32:01.459826, queries/job__base_query_split_1/train/32a.sql, 157.484, 19.591, Bao
+9, 15, 2, 2026-11-13 21:32:02.119713, queries/job__base_query_split_1/train/32a.sql, 157.034, 14.56, Bao
+9, 16, 0, 2026-11-13 21:32:03.796952, queries/job__base_query_split_1/train/28a.sql, 580.132, 405.979, Bao
+9, 16, 1, 2026-11-13 21:32:05.418815, queries/job__base_query_split_1/train/28a.sql, 534.395, 395.712, Bao
+9, 16, 2, 2026-11-13 21:32:07.933290, queries/job__base_query_split_1/train/28a.sql, 554.184, 317.386, Bao
+9, 17, 0, 2026-11-13 21:32:09.293443, queries/job__base_query_split_1/train/9c.sql, 184.63, 837.191, Bao
+9, 17, 1, 2026-11-13 21:32:10.631308, queries/job__base_query_split_1/train/9c.sql, 181.535, 823.562, Bao
+9, 17, 2, 2026-11-13 21:32:12.952519, queries/job__base_query_split_1/train/9c.sql, 178.184, 840.645, Bao
+9, 18, 0, 2026-11-13 21:32:14.459375, queries/job__base_query_split_1/train/29b.sql, 654.523, 35.547, Bao
+9, 18, 1, 2026-11-13 21:32:16.012965, queries/job__base_query_split_1/train/29b.sql, 664.719, 33.082, Bao
+9, 18, 2, 2026-11-13 21:32:18.204282, queries/job__base_query_split_1/train/29b.sql, 667.354, 22.937, Bao
+9, 19, 0, 2026-11-13 21:32:19.285439, queries/job__base_query_split_1/train/10a.sql, 181.094, 592.12, Bao
+9, 19, 1, 2026-11-13 21:32:20.364034, queries/job__base_query_split_1/train/10a.sql, 168.897, 593.511, Bao
+9, 19, 2, 2026-11-13 21:32:22.068760, queries/job__base_query_split_1/train/10a.sql, 158.189, 555.622, Bao
+9, 20, 0, 2026-11-13 21:32:22.696468, queries/job__base_query_split_1/train/4c.sql, 162.157, 160.775, Bao
+9, 20, 1, 2026-11-13 21:32:23.315667, queries/job__base_query_split_1/train/4c.sql, 157.385, 154.61, Bao
+9, 20, 2, 2026-11-13 21:32:24.195941, queries/job__base_query_split_1/train/4c.sql, 155.103, 116.606, Bao
+9, 21, 0, 2026-11-13 21:32:24.991880, queries/job__base_query_split_1/train/18b.sql, 165.164, 306.879, Bao
+9, 21, 1, 2026-11-13 21:32:25.779431, queries/job__base_query_split_1/train/18b.sql, 169.092, 294.643, Bao
+9, 21, 2, 2026-11-13 21:32:27.032321, queries/job__base_query_split_1/train/18b.sql, 164.853, 259.571, Bao
+9, 22, 0, 2026-11-13 21:32:28.757672, queries/job__base_query_split_1/train/29c.sql, 660.476, 250.36, Bao
+9, 22, 1, 2026-11-13 21:32:30.489598, queries/job__base_query_split_1/train/29c.sql, 670.299, 242.8, Bao
+9, 22, 2, 2026-11-13 21:32:33.048297, queries/job__base_query_split_1/train/29c.sql, 657.195, 179.528, Bao
+9, 23, 0, 2026-11-13 21:32:42.389216, queries/job__base_query_split_1/train/8c.sql, 172.127, 8834.378, Bao
+9, 23, 1, 2026-11-13 21:32:50.449521, queries/job__base_query_split_1/train/8c.sql, 231.606, 7473.291, Bao
+9, 23, 2, 2026-11-13 21:33:04.839883, queries/job__base_query_split_1/train/8c.sql, 160.126, 7428.228, Bao
+9, 24, 0, 2026-11-13 21:33:06.321506, queries/job__base_query_split_1/train/13c.sql, 194.72, 932.05, Bao
+9, 24, 1, 2026-11-13 21:33:07.747559, queries/job__base_query_split_1/train/13c.sql, 191.843, 888.738, Bao
+9, 24, 2, 2026-11-13 21:33:10.183650, queries/job__base_query_split_1/train/13c.sql, 189.418, 910.597, Bao
+==========================================================================================
+Iteration over chunk 11/19...
+[2026-11-13 21:33:10.184204]	[11/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.2418458035422696
+Epoch 15 training loss: 0.01648426190432575
+Epoch 30 training loss: 0.0049818989096416365
+Epoch 45 training loss: 0.002304405271489587
+Stopped training from convergence condition at epoch 51
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:33:32.217799]	[11/19]	Retraining done.
+10, 0, 0, 2026-11-13 21:33:34.946260, queries/job__base_query_split_1/train/13a.sql, 189.892, 2202.252, Bao
+10, 0, 1, 2026-11-13 21:33:37.742131, queries/job__base_query_split_1/train/13a.sql, 198.908, 2242.729, Bao
+10, 0, 2, 2026-11-13 21:33:42.612227, queries/job__base_query_split_1/train/13a.sql, 196.606, 2190.621, Bao
+10, 1, 0, 2026-11-13 21:33:45.358841, queries/job__base_query_split_1/train/13a.sql, 205.691, 2192.498, Bao
+10, 1, 1, 2026-11-13 21:33:48.123419, queries/job__base_query_split_1/train/13a.sql, 207.657, 2168.9, Bao
+10, 1, 2, 2026-11-13 21:33:52.882726, queries/job__base_query_split_1/train/13a.sql, 182.627, 2104.415, Bao
+10, 2, 0, 2026-11-13 21:33:54.127149, queries/job__base_query_split_1/train/26b.sql, 461.667, 160.526, Bao
+10, 2, 1, 2026-11-13 21:33:55.339857, queries/job__base_query_split_1/train/26b.sql, 456.014, 153.674, Bao
+10, 2, 2, 2026-11-13 21:33:57.151370, queries/job__base_query_split_1/train/26b.sql, 447.189, 113.789, Bao
+10, 3, 0, 2026-11-13 21:34:05.318937, queries/job__base_query_split_1/train/17e.sql, 167.049, 7691.362, Bao
+10, 3, 1, 2026-11-13 21:34:13.638166, queries/job__base_query_split_1/train/17e.sql, 188.033, 7782.195, Bao
+10, 3, 2, 2026-11-13 21:34:27.923927, queries/job__base_query_split_1/train/17e.sql, 167.3, 7683.904, Bao
+10, 4, 0, 2026-11-13 21:34:29.045687, queries/job__base_query_split_1/train/27c.sql, 467.228, 52.628, Bao
+10, 4, 1, 2026-11-13 21:34:30.148570, queries/job__base_query_split_1/train/27c.sql, 448.519, 50.261, Bao
+10, 4, 2, 2026-11-13 21:34:31.774106, queries/job__base_query_split_1/train/27c.sql, 454.462, 42.467, Bao
+10, 5, 0, 2026-11-13 21:34:32.405800, queries/job__base_query_split_1/train/32b.sql, 164.599, 162.411, Bao
+10, 5, 1, 2026-11-13 21:34:33.021922, queries/job__base_query_split_1/train/32b.sql, 157.598, 161.996, Bao
+10, 5, 2, 2026-11-13 21:34:33.932386, queries/job__base_query_split_1/train/32b.sql, 165.991, 120.676, Bao
+10, 6, 0, 2026-11-13 21:34:36.651611, queries/job__base_query_split_1/train/16c.sql, 179.061, 2217.171, Bao
+10, 6, 1, 2026-11-13 21:34:39.316045, queries/job__base_query_split_1/train/16c.sql, 196.59, 2129.16, Bao
+10, 6, 2, 2026-11-13 21:34:43.922323, queries/job__base_query_split_1/train/16c.sql, 176.756, 1902.982, Bao
+10, 7, 0, 2026-11-13 21:34:46.175276, queries/job__base_query_split_1/train/28c.sql, 530.974, 1042.944, Bao
+10, 7, 1, 2026-11-13 21:34:48.376083, queries/job__base_query_split_1/train/28c.sql, 529.601, 986.36, Bao
+10, 7, 2, 2026-11-13 21:34:51.856425, queries/job__base_query_split_1/train/28c.sql, 528.807, 802.188, Bao
+10, 8, 0, 2026-11-13 21:35:00.079967, queries/job__base_query_split_1/train/17d.sql, 170.421, 7706.508, Bao
+10, 8, 1, 2026-11-13 21:35:08.469621, queries/job__base_query_split_1/train/17d.sql, 172.986, 7894.3, Bao
+10, 8, 2, 2026-11-13 21:35:21.644581, queries/job__base_query_split_1/train/17d.sql, 162.075, 7511.466, Bao
+10, 9, 0, 2026-11-13 21:35:22.993205, queries/job__base_query_split_1/train/22b.sql, 323.958, 540.232, Bao
+10, 9, 1, 2026-11-13 21:35:24.327269, queries/job__base_query_split_1/train/22b.sql, 328.113, 528.936, Bao
+10, 9, 2, 2026-11-13 21:35:26.452596, queries/job__base_query_split_1/train/22b.sql, 312.824, 467.344, Bao
+10, 10, 0, 2026-11-13 21:35:33.442347, queries/job__base_query_split_1/train/6f.sql, 158.338, 6529.459, Bao
+10, 10, 1, 2026-11-13 21:35:40.529669, queries/job__base_query_split_1/train/6f.sql, 172.151, 6604.86, Bao
+10, 10, 2, 2026-11-13 21:35:52.737947, queries/job__base_query_split_1/train/6f.sql, 200.715, 6466.051, Bao
+10, 11, 0, 2026-11-13 21:35:53.569297, queries/job__base_query_split_1/train/5c.sql, 159.047, 365.342, Bao
+10, 11, 1, 2026-11-13 21:35:54.393519, queries/job__base_query_split_1/train/5c.sql, 159.869, 361.687, Bao
+10, 11, 2, 2026-11-13 21:35:55.743115, queries/job__base_query_split_1/train/5c.sql, 152.164, 363.234, Bao
+10, 12, 0, 2026-11-13 21:35:56.446039, queries/job__base_query_split_1/train/12b.sql, 224.945, 150.537, Bao
+10, 12, 1, 2026-11-13 21:35:57.120000, queries/job__base_query_split_1/train/12b.sql, 181.885, 148.261, Bao
+10, 12, 2, 2026-11-13 21:35:58.052246, queries/job__base_query_split_1/train/12b.sql, 176.335, 144.968, Bao
+10, 13, 0, 2026-11-13 21:36:00.917855, queries/job__base_query_split_1/train/20b.sql, 221.346, 2276.491, Bao
+10, 13, 1, 2026-11-13 21:36:03.811559, queries/job__base_query_split_1/train/20b.sql, 232.858, 2290.14, Bao
+10, 13, 2, 2026-11-13 21:36:08.811211, queries/job__base_query_split_1/train/20b.sql, 216.477, 1963.316, Bao
+10, 14, 0, 2026-11-13 21:36:16.370375, queries/job__base_query_split_1/train/17f.sql, 175.285, 7069.441, Bao
+10, 14, 1, 2026-11-13 21:36:23.857820, queries/job__base_query_split_1/train/17f.sql, 174.776, 6987.696, Bao
+10, 14, 2, 2026-11-13 21:36:36.769164, queries/job__base_query_split_1/train/17f.sql, 164.346, 6905.471, Bao
+10, 15, 0, 2026-11-13 21:36:37.868142, queries/job__base_query_split_1/train/10a.sql, 188.228, 594.8, Bao
+10, 15, 1, 2026-11-13 21:36:38.954197, queries/job__base_query_split_1/train/10a.sql, 183.226, 588.808, Bao
+10, 15, 2, 2026-11-13 21:36:40.668778, queries/job__base_query_split_1/train/10a.sql, 163.482, 547.448, Bao
+10, 16, 0, 2026-11-13 21:36:41.293873, queries/job__base_query_split_1/train/3b.sql, 160.065, 164.737, Bao
+10, 16, 1, 2026-11-13 21:36:42.421571, queries/job__base_query_split_1/train/3b.sql, 215.055, 323.65, Bao
+10, 16, 2, 2026-11-13 21:36:43.451981, queries/job__base_query_split_1/train/3b.sql, 150.07, 94.203, Bao
+10, 17, 0, 2026-11-13 21:36:45.698231, queries/job__base_query_split_1/train/28c.sql, 539.378, 1030.513, Bao
+10, 17, 1, 2026-11-13 21:36:47.924799, queries/job__base_query_split_1/train/28c.sql, 580.925, 972.006, Bao
+10, 17, 2, 2026-11-13 21:36:51.397087, queries/job__base_query_split_1/train/28c.sql, 522.039, 803.166, Bao
+10, 18, 0, 2026-11-13 21:36:59.617933, queries/job__base_query_split_1/train/17d.sql, 162.981, 7737.786, Bao
+10, 18, 1, 2026-11-13 21:37:07.770962, queries/job__base_query_split_1/train/17d.sql, 190.34, 7642.235, Bao
+10, 18, 2, 2026-11-13 21:37:21.218892, queries/job__base_query_split_1/train/17d.sql, 162.96, 7679.453, Bao
+10, 19, 0, 2026-11-13 21:37:22.499144, queries/job__base_query_split_1/train/33b.sql, 548.905, 57.646, Bao
+10, 19, 1, 2026-11-13 21:37:23.752608, queries/job__base_query_split_1/train/33b.sql, 528.174, 58.614, Bao
+10, 19, 2, 2026-11-13 21:37:25.554731, queries/job__base_query_split_1/train/33b.sql, 511.263, 51.695, Bao
+10, 20, 0, 2026-11-13 21:37:27.689620, queries/job__base_query_split_1/train/26a.sql, 485.68, 1055.237, Bao
+10, 20, 1, 2026-11-13 21:37:29.751249, queries/job__base_query_split_1/train/26a.sql, 457.966, 1009.631, Bao
+10, 20, 2, 2026-11-13 21:37:33.160223, queries/job__base_query_split_1/train/26a.sql, 444.265, 847.242, Bao
+10, 21, 0, 2026-11-13 21:37:35.165206, queries/job__base_query_split_1/train/20c.sql, 222.557, 1404.564, Bao
+10, 21, 1, 2026-11-13 21:37:37.142133, queries/job__base_query_split_1/train/20c.sql, 226.025, 1371.248, Bao
+10, 21, 2, 2026-11-13 21:37:40.337981, queries/job__base_query_split_1/train/20c.sql, 223.534, 1082.808, Bao
+10, 22, 0, 2026-11-13 21:37:41.405224, queries/job__base_query_split_1/train/10a.sql, 166.72, 590.731, Bao
+10, 22, 1, 2026-11-13 21:37:42.493019, queries/job__base_query_split_1/train/10a.sql, 164.085, 611.617, Bao
+10, 22, 2, 2026-11-13 21:37:44.186907, queries/job__base_query_split_1/train/10a.sql, 158.335, 554.418, Bao
+10, 23, 0, 2026-11-13 21:37:45.003271, queries/job__base_query_split_1/train/12a.sql, 178.871, 316.443, Bao
+10, 23, 1, 2026-11-13 21:37:45.841097, queries/job__base_query_split_1/train/12a.sql, 186.974, 327.407, Bao
+10, 23, 2, 2026-11-13 21:37:47.143339, queries/job__base_query_split_1/train/12a.sql, 171.991, 295.572, Bao
+10, 24, 0, 2026-11-13 21:37:52.554822, queries/job__base_query_split_1/train/6d.sql, 158.77, 4945.4, Bao
+10, 24, 1, 2026-11-13 21:37:58.035977, queries/job__base_query_split_1/train/6d.sql, 160.928, 5010.817, Bao
+10, 24, 2, 2026-11-13 21:38:07.387231, queries/job__base_query_split_1/train/6d.sql, 157.491, 4967.755, Bao
+==========================================================================================
+Iteration over chunk 12/19...
+[2026-11-13 21:38:07.387487]	[12/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.07320611276908924
+Epoch 15 training loss: 0.014385820979154423
+Epoch 30 training loss: 0.005376811678472318
+Epoch 45 training loss: 0.0015905799105224248
+Stopped training from convergence condition at epoch 52
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:38:30.006651]	[12/19]	Retraining done.
+11, 0, 0, 2026-11-13 21:38:30.513901, queries/job__base_query_split_1/train/6e.sql, 169.477, 40.959, Bao
+11, 0, 1, 2026-11-13 21:38:31.012027, queries/job__base_query_split_1/train/6e.sql, 156.479, 39.638, Bao
+11, 0, 2, 2026-11-13 21:38:31.694325, queries/job__base_query_split_1/train/6e.sql, 152.979, 21.791, Bao
+11, 1, 0, 2026-11-13 21:38:33.801498, queries/job__base_query_split_1/train/26a.sql, 455.059, 1056.785, Bao
+11, 1, 1, 2026-11-13 21:38:35.903712, queries/job__base_query_split_1/train/26a.sql, 455.522, 1060.239, Bao
+11, 1, 2, 2026-11-13 21:38:39.239063, queries/job__base_query_split_1/train/26a.sql, 442.675, 853.383, Bao
+11, 2, 0, 2026-11-13 21:38:39.975489, queries/job__base_query_split_1/train/5b.sql, 162.014, 270.509, Bao
+11, 2, 1, 2026-11-13 21:38:40.705489, queries/job__base_query_split_1/train/5b.sql, 162.162, 264.719, Bao
+11, 2, 2, 2026-11-13 21:38:41.857715, queries/job__base_query_split_1/train/5b.sql, 152.54, 263.243, Bao
+11, 3, 0, 2026-11-13 21:38:42.977137, queries/job__base_query_split_1/train/27a.sql, 453.973, 62.279, Bao
+11, 3, 1, 2026-11-13 21:38:44.404196, queries/job__base_query_split_1/train/27a.sql, 753.249, 33.086, Bao
+11, 3, 2, 2026-11-13 21:38:46.044589, queries/job__base_query_split_1/train/27a.sql, 454.166, 29.125, Bao
+11, 4, 0, 2026-11-13 21:38:49.945034, queries/job__base_query_split_1/train/13d.sql, 198.16, 3364.595, Bao
+11, 4, 1, 2026-11-13 21:38:53.819862, queries/job__base_query_split_1/train/13d.sql, 199.697, 3335.42, Bao
+11, 4, 2, 2026-11-13 21:39:00.701193, queries/job__base_query_split_1/train/13d.sql, 186.827, 3234.038, Bao
+11, 5, 0, 2026-11-13 21:39:02.170516, queries/job__base_query_split_1/train/13b.sql, 204.439, 920.537, Bao
+11, 5, 1, 2026-11-13 21:39:03.651008, queries/job__base_query_split_1/train/13b.sql, 200.863, 917.081, Bao
+11, 5, 2, 2026-11-13 21:39:06.169273, queries/job__base_query_split_1/train/13b.sql, 188.456, 956.786, Bao
+11, 6, 0, 2026-11-13 21:39:06.995458, queries/job__base_query_split_1/train/18b.sql, 199.779, 298.205, Bao
+11, 6, 1, 2026-11-13 21:39:07.778445, queries/job__base_query_split_1/train/18b.sql, 170.067, 292.894, Bao
+11, 6, 2, 2026-11-13 21:39:08.987236, queries/job__base_query_split_1/train/18b.sql, 163.768, 263.081, Bao
+11, 7, 0, 2026-11-13 21:39:09.490633, queries/job__base_query_split_1/train/6e.sql, 166.703, 38.689, Bao
+11, 7, 1, 2026-11-13 21:39:09.988065, queries/job__base_query_split_1/train/6e.sql, 158.541, 39.434, Bao
+11, 7, 2, 2026-11-13 21:39:10.685914, queries/job__base_query_split_1/train/6e.sql, 159.22, 21.448, Bao
+11, 8, 0, 2026-11-13 21:39:11.294950, queries/job__base_query_split_1/train/4a.sql, 159.959, 143.826, Bao
+11, 8, 1, 2026-11-13 21:39:11.901626, queries/job__base_query_split_1/train/4a.sql, 159.978, 142.587, Bao
+11, 8, 2, 2026-11-13 21:39:12.759263, queries/job__base_query_split_1/train/4a.sql, 158.538, 100.93, Bao
+11, 9, 0, 2026-11-13 21:39:13.259429, queries/job__base_query_split_1/train/6a.sql, 157.314, 42.592, Bao
+11, 9, 1, 2026-11-13 21:39:13.765929, queries/job__base_query_split_1/train/6a.sql, 169.463, 39.663, Bao
+11, 9, 2, 2026-11-13 21:39:14.440951, queries/job__base_query_split_1/train/6a.sql, 152.707, 21.372, Bao
+11, 10, 0, 2026-11-13 21:39:14.964263, queries/job__base_query_split_1/train/6e.sql, 156.316, 42.557, Bao
+11, 10, 1, 2026-11-13 21:39:15.461198, queries/job__base_query_split_1/train/6e.sql, 157.327, 38.676, Bao
+11, 10, 2, 2026-11-13 21:39:16.178395, queries/job__base_query_split_1/train/6e.sql, 170.387, 21.909, Bao
+11, 11, 0, 2026-11-13 21:39:18.849689, queries/job__base_query_split_1/train/16c.sql, 181.464, 2166.967, Bao
+11, 11, 1, 2026-11-13 21:39:21.482782, queries/job__base_query_split_1/train/16c.sql, 177.163, 2129.038, Bao
+11, 11, 2, 2026-11-13 21:39:26.132348, queries/job__base_query_split_1/train/16c.sql, 175.01, 1948.183, Bao
+11, 12, 0, 2026-11-13 21:39:32.164432, queries/job__base_query_split_1/train/17c.sql, 171.955, 5547.768, Bao
+11, 12, 1, 2026-11-13 21:39:38.011358, queries/job__base_query_split_1/train/17c.sql, 175.293, 5361.694, Bao
+11, 12, 2, 2026-11-13 21:39:47.817300, queries/job__base_query_split_1/train/17c.sql, 160.477, 5279.529, Bao
+11, 13, 0, 2026-11-13 21:39:49.391631, queries/job__base_query_split_1/train/12c.sql, 189.715, 1056.085, Bao
+11, 13, 1, 2026-11-13 21:39:50.925680, queries/job__base_query_split_1/train/12c.sql, 178.902, 1029.998, Bao
+11, 13, 2, 2026-11-13 21:39:53.610275, queries/job__base_query_split_1/train/12c.sql, 170.519, 992.158, Bao
+11, 14, 0, 2026-11-13 21:39:54.484226, queries/job__base_query_split_1/train/3c.sql, 163.974, 402.12, Bao
+11, 14, 1, 2026-11-13 21:39:55.340991, queries/job__base_query_split_1/train/3c.sql, 161.935, 387.506, Bao
+11, 14, 2, 2026-11-13 21:39:56.677481, queries/job__base_query_split_1/train/3c.sql, 148.202, 285.468, Bao
+11, 15, 0, 2026-11-13 21:40:02.128538, queries/job__base_query_split_1/train/6d.sql, 159.607, 4987.285, Bao
+11, 15, 1, 2026-11-13 21:40:07.671419, queries/job__base_query_split_1/train/6d.sql, 158.233, 5079.603, Bao
+11, 15, 2, 2026-11-13 21:40:17.015238, queries/job__base_query_split_1/train/6d.sql, 149.903, 4956.12, Bao
+11, 16, 0, 2026-11-13 21:40:23.253322, queries/job__base_query_split_1/train/20a.sql, 227.635, 5639.987, Bao
+11, 16, 1, 2026-11-13 21:40:29.506713, queries/job__base_query_split_1/train/20a.sql, 225.493, 5654.199, Bao
+11, 16, 2, 2026-11-13 21:40:40.048289, queries/job__base_query_split_1/train/20a.sql, 224.537, 5593.689, Bao
+11, 17, 0, 2026-11-13 21:40:42.123346, queries/job__base_query_split_1/train/28b.sql, 544.873, 845.2, Bao
+11, 17, 1, 2026-11-13 21:40:44.426396, queries/job__base_query_split_1/train/28b.sql, 540.879, 1083.868, Bao
+11, 17, 2, 2026-11-13 21:40:48.153739, queries/job__base_query_split_1/train/28b.sql, 523.836, 773.225, Bao
+11, 18, 0, 2026-11-13 21:40:49.008156, queries/job__base_query_split_1/train/14a.sql, 176.413, 358.883, Bao
+11, 18, 1, 2026-11-13 21:40:49.870336, queries/job__base_query_split_1/train/14a.sql, 175.377, 359.546, Bao
+11, 18, 2, 2026-11-13 21:40:51.167327, queries/job__base_query_split_1/train/14a.sql, 172.666, 273.418, Bao
+11, 19, 0, 2026-11-13 21:40:51.975566, queries/job__base_query_split_1/train/8b.sql, 171.305, 317.882, Bao
+11, 19, 1, 2026-11-13 21:40:52.784851, queries/job__base_query_split_1/train/8b.sql, 171.936, 320.758, Bao
+11, 19, 2, 2026-11-13 21:40:54.054801, queries/job__base_query_split_1/train/8b.sql, 165.056, 308.444, Bao
+11, 20, 0, 2026-11-13 21:40:54.786916, queries/job__base_query_split_1/train/6b.sql, 157.335, 269.318, Bao
+11, 20, 1, 2026-11-13 21:40:55.522056, queries/job__base_query_split_1/train/6b.sql, 158.565, 271.701, Bao
+11, 20, 2, 2026-11-13 21:40:56.664447, queries/job__base_query_split_1/train/6b.sql, 151.231, 210.852, Bao
+11, 21, 0, 2026-11-13 21:40:57.723980, queries/job__base_query_split_1/train/9b.sql, 194.654, 523.612, Bao
+11, 21, 1, 2026-11-13 21:40:58.761524, queries/job__base_query_split_1/train/9b.sql, 188.108, 522.546, Bao
+11, 21, 2, 2026-11-13 21:41:00.530263, queries/job__base_query_split_1/train/9b.sql, 176.311, 516.272, Bao
+11, 22, 0, 2026-11-13 21:41:01.158079, queries/job__base_query_split_1/train/4c.sql, 164.779, 155.106, Bao
+11, 22, 1, 2026-11-13 21:41:01.784120, queries/job__base_query_split_1/train/4c.sql, 163.588, 155.605, Bao
+11, 22, 2, 2026-11-13 21:41:02.673469, queries/job__base_query_split_1/train/4c.sql, 153.356, 116.271, Bao
+11, 23, 0, 2026-11-13 21:41:03.159958, queries/job__base_query_split_1/train/6c.sql, 159.536, 20.496, Bao
+11, 23, 1, 2026-11-13 21:41:03.631091, queries/job__base_query_split_1/train/6c.sql, 155.336, 17.147, Bao
+11, 23, 2, 2026-11-13 21:41:04.279615, queries/job__base_query_split_1/train/6c.sql, 153.436, 13.827, Bao
+11, 24, 0, 2026-11-13 21:41:15.606738, queries/job__base_query_split_1/train/10c.sql, 163.219, 10844.488, Bao
+11, 24, 1, 2026-11-13 21:41:26.391278, queries/job__base_query_split_1/train/10c.sql, 181.795, 10253.154, Bao
+11, 24, 2, 2026-11-13 21:41:46.976421, queries/job__base_query_split_1/train/10c.sql, 159.242, 10161.265, Bao
+==========================================================================================
+Iteration over chunk 13/19...
+[2026-11-13 21:41:46.976624]	[13/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.10716974398209936
+Epoch 15 training loss: 0.012425178506722053
+Epoch 30 training loss: 0.005357969358252983
+Epoch 45 training loss: 0.0016352930272530233
+Stopped training from convergence condition at epoch 49
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:42:10.759289]	[13/19]	Retraining done.
+12, 0, 0, 2026-11-13 21:42:12.005356, queries/job__base_query_split_1/train/33b.sql, 519.483, 60.867, Bao
+12, 0, 1, 2026-11-13 21:42:13.281253, queries/job__base_query_split_1/train/33b.sql, 538.191, 59.022, Bao
+12, 0, 2, 2026-11-13 21:42:15.102577, queries/job__base_query_split_1/train/33b.sql, 528.428, 51.284, Bao
+12, 1, 0, 2026-11-13 21:42:16.054163, queries/job__base_query_split_1/train/19b.sql, 255.306, 289.392, Bao
+12, 1, 1, 2026-11-13 21:42:16.940677, queries/job__base_query_split_1/train/19b.sql, 251.512, 232.973, Bao
+12, 1, 2, 2026-11-13 21:42:18.316253, queries/job__base_query_split_1/train/19b.sql, 248.319, 225.321, Bao
+12, 2, 0, 2026-11-13 21:42:19.122212, queries/job__base_query_split_1/train/8b.sql, 169.617, 316.466, Bao
+12, 2, 1, 2026-11-13 21:42:19.911199, queries/job__base_query_split_1/train/8b.sql, 168.519, 312.065, Bao
+12, 2, 2, 2026-11-13 21:42:21.187169, queries/job__base_query_split_1/train/8b.sql, 164.385, 306.004, Bao
+12, 3, 0, 2026-11-13 21:42:21.769004, queries/job__base_query_split_1/train/4b.sql, 173.09, 98.83, Bao
+12, 3, 1, 2026-11-13 21:42:22.343525, queries/job__base_query_split_1/train/4b.sql, 158.542, 99.094, Bao
+12, 3, 2, 2026-11-13 21:42:23.131459, queries/job__base_query_split_1/train/4b.sql, 153.166, 75.52, Bao
+12, 4, 0, 2026-11-13 21:42:23.861085, queries/job__base_query_split_1/train/6b.sql, 156.159, 271.909, Bao
+12, 4, 1, 2026-11-13 21:42:24.593262, queries/job__base_query_split_1/train/6b.sql, 162.356, 270.277, Bao
+12, 4, 2, 2026-11-13 21:42:25.690496, queries/job__base_query_split_1/train/6b.sql, 148.794, 216.391, Bao
+12, 5, 0, 2026-11-13 21:42:26.351555, queries/job__base_query_split_1/train/4c.sql, 200.644, 149.842, Bao
+12, 5, 1, 2026-11-13 21:42:26.963978, queries/job__base_query_split_1/train/4c.sql, 159.09, 150.825, Bao
+12, 5, 2, 2026-11-13 21:42:27.859249, queries/job__base_query_split_1/train/4c.sql, 167.319, 111.506, Bao
+12, 6, 0, 2026-11-13 21:42:36.218963, queries/job__base_query_split_1/train/17e.sql, 167.511, 7875.148, Bao
+12, 6, 1, 2026-11-13 21:42:44.539554, queries/job__base_query_split_1/train/17e.sql, 176.288, 7827.686, Bao
+12, 6, 2, 2026-11-13 21:42:59.862288, queries/job__base_query_split_1/train/17e.sql, 166.177, 7797.975, Bao
+12, 7, 0, 2026-11-13 21:43:00.476151, queries/job__base_query_split_1/train/4a.sql, 165.12, 143.018, Bao
+12, 7, 1, 2026-11-13 21:43:01.076888, queries/job__base_query_split_1/train/4a.sql, 158.502, 141.124, Bao
+12, 7, 2, 2026-11-13 21:43:01.925291, queries/job__base_query_split_1/train/4a.sql, 152.359, 99.96, Bao
+12, 8, 0, 2026-11-13 21:43:04.740174, queries/job__base_query_split_1/train/13a.sql, 196.077, 2273.593, Bao
+12, 8, 1, 2026-11-13 21:43:07.490385, queries/job__base_query_split_1/train/13a.sql, 194.449, 2218.274, Bao
+12, 8, 2, 2026-11-13 21:43:12.288663, queries/job__base_query_split_1/train/13a.sql, 182.877, 2112.493, Bao
+12, 9, 0, 2026-11-13 21:43:13.069158, queries/job__base_query_split_1/train/6b.sql, 206.313, 270.684, Bao
+12, 9, 1, 2026-11-13 21:43:13.808979, queries/job__base_query_split_1/train/6b.sql, 169.546, 270.373, Bao
+12, 9, 2, 2026-11-13 21:43:14.892259, queries/job__base_query_split_1/train/6b.sql, 150.968, 205.918, Bao
+12, 10, 0, 2026-11-13 21:43:15.390080, queries/job__base_query_split_1/train/6a.sql, 156.785, 41.142, Bao
+12, 10, 1, 2026-11-13 21:43:15.935584, queries/job__base_query_split_1/train/6a.sql, 156.924, 40.866, Bao
+12, 10, 2, 2026-11-13 21:43:16.607063, queries/job__base_query_split_1/train/6a.sql, 152.878, 21.879, Bao
+12, 11, 0, 2026-11-13 21:43:18.827112, queries/job__base_query_split_1/train/16d.sql, 176.841, 1717.559, Bao
+12, 11, 1, 2026-11-13 21:43:21.048379, queries/job__base_query_split_1/train/16d.sql, 184.178, 1709.964, Bao
+12, 11, 2, 2026-11-13 21:43:24.848669, queries/job__base_query_split_1/train/16d.sql, 181.178, 1483.418, Bao
+12, 12, 0, 2026-11-13 21:43:25.467745, queries/job__base_query_split_1/train/4c.sql, 163.205, 152.431, Bao
+12, 12, 1, 2026-11-13 21:43:26.142292, queries/job__base_query_split_1/train/4c.sql, 172.683, 156.136, Bao
+12, 12, 2, 2026-11-13 21:43:27.018053, queries/job__base_query_split_1/train/4c.sql, 150.011, 112.41, Bao
+12, 13, 0, 2026-11-13 21:43:27.730406, queries/job__base_query_split_1/train/21c.sql, 209.993, 138.671, Bao
+12, 13, 1, 2026-11-13 21:43:28.437567, queries/job__base_query_split_1/train/21c.sql, 211.7, 137.32, Bao
+12, 13, 2, 2026-11-13 21:43:29.471181, queries/job__base_query_split_1/train/21c.sql, 205.51, 124.477, Bao
+12, 14, 0, 2026-11-13 21:43:30.257198, queries/job__base_query_split_1/train/18b.sql, 166.763, 304.124, Bao
+12, 14, 1, 2026-11-13 21:43:31.062590, queries/job__base_query_split_1/train/18b.sql, 193.03, 291.338, Bao
+12, 14, 2, 2026-11-13 21:43:32.283852, queries/job__base_query_split_1/train/18b.sql, 162.009, 279.934, Bao
+12, 15, 0, 2026-11-13 21:43:32.883151, queries/job__base_query_split_1/train/4a.sql, 159.883, 139.681, Bao
+12, 15, 1, 2026-11-13 21:43:33.492986, queries/job__base_query_split_1/train/4a.sql, 161.464, 137.642, Bao
+12, 15, 2, 2026-11-13 21:43:34.353223, queries/job__base_query_split_1/train/4a.sql, 154.261, 102.106, Bao
+12, 16, 0, 2026-11-13 21:43:41.204501, queries/job__base_query_split_1/train/17a.sql, 167.972, 6373.863, Bao
+12, 16, 1, 2026-11-13 21:43:48.114371, queries/job__base_query_split_1/train/17a.sql, 172.833, 6422.711, Bao
+12, 16, 2, 2026-11-13 21:43:59.815212, queries/job__base_query_split_1/train/17a.sql, 164.211, 6316.556, Bao
+12, 17, 0, 2026-11-13 21:44:05.739790, queries/job__base_query_split_1/train/10c.sql, 174.725, 5437.356, Bao
+12, 17, 1, 2026-11-13 21:44:11.713415, queries/job__base_query_split_1/train/10c.sql, 224.097, 5438.373, Bao
+12, 17, 2, 2026-11-13 21:44:22.891693, queries/job__base_query_split_1/train/10c.sql, 161.057, 5419.951, Bao
+12, 18, 0, 2026-11-13 21:44:33.439236, queries/job__base_query_split_1/train/16b.sql, 187.908, 10029.081, Bao
+12, 18, 1, 2026-11-13 21:44:43.805695, queries/job__base_query_split_1/train/16b.sql, 186.29, 9851.045, Bao
+12, 18, 2, 2026-11-13 21:45:02.993189, queries/job__base_query_split_1/train/16b.sql, 172.228, 9830.453, Bao
+12, 19, 0, 2026-11-13 21:45:04.223137, queries/job__base_query_split_1/train/19a.sql, 283.388, 531.681, Bao
+12, 19, 1, 2026-11-13 21:45:05.422274, queries/job__base_query_split_1/train/19a.sql, 262.607, 527.815, Bao
+12, 19, 2, 2026-11-13 21:45:07.440465, queries/job__base_query_split_1/train/19a.sql, 248.376, 519.185, Bao
+12, 20, 0, 2026-11-13 21:45:08.198203, queries/job__base_query_split_1/train/6b.sql, 156.63, 286.205, Bao
+12, 20, 1, 2026-11-13 21:45:08.928065, queries/job__base_query_split_1/train/6b.sql, 158.619, 272.206, Bao
+12, 20, 2, 2026-11-13 21:45:10.004485, queries/job__base_query_split_1/train/6b.sql, 146.415, 210.577, Bao
+12, 21, 0, 2026-11-13 21:45:11.046208, queries/job__base_query_split_1/train/9a.sql, 179.372, 529.3, Bao
+12, 21, 1, 2026-11-13 21:45:12.084207, queries/job__base_query_split_1/train/9a.sql, 184.735, 526.717, Bao
+12, 21, 2, 2026-11-13 21:45:13.859082, queries/job__base_query_split_1/train/9a.sql, 173.272, 510.041, Bao
+12, 22, 0, 2026-11-13 21:45:30.062198, queries/job__base_query_split_1/train/17f.sql, 172.141, 15719.767, Bao
+12, 22, 1, 2026-11-13 21:45:45.844391, queries/job__base_query_split_1/train/17f.sql, 168.72, 15299.978, Bao
+12, 22, 2, 2026-11-13 21:46:16.141506, queries/job__base_query_split_1/train/17f.sql, 158.434, 15086.964, Bao
+12, 23, 0, 2026-11-13 21:46:17.770093, queries/job__base_query_split_1/train/29a.sql, 661.509, 146.877, Bao
+12, 23, 1, 2026-11-13 21:46:19.404008, queries/job__base_query_split_1/train/29a.sql, 669.509, 144.689, Bao
+12, 23, 2, 2026-11-13 21:46:21.744015, queries/job__base_query_split_1/train/29a.sql, 645.895, 76.23, Bao
+12, 24, 0, 2026-11-13 21:46:22.356511, queries/job__base_query_split_1/train/1d.sql, 160.084, 142.718, Bao
+12, 24, 1, 2026-11-13 21:46:22.966145, queries/job__base_query_split_1/train/1d.sql, 163.13, 144.385, Bao
+12, 24, 2, 2026-11-13 21:46:23.837041, queries/job__base_query_split_1/train/1d.sql, 152.915, 139.814, Bao
+==========================================================================================
+Iteration over chunk 14/19...
+[2026-11-13 21:46:23.837284]	[14/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.07599622536111962
+Epoch 15 training loss: 0.00890043184203519
+Epoch 30 training loss: 0.0034019714168442242
+Stopped training from convergence condition at epoch 42
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:46:45.685205]	[14/19]	Retraining done.
+13, 0, 0, 2026-11-13 21:46:47.077670, queries/job__base_query_split_1/train/9c.sql, 223.753, 830.302, Bao
+13, 0, 1, 2026-11-13 21:46:48.419212, queries/job__base_query_split_1/train/9c.sql, 181.524, 822.63, Bao
+13, 0, 2, 2026-11-13 21:46:51.484834, queries/job__base_query_split_1/train/9c.sql, 172.822, 812.349, Bao
+13, 1, 0, 2026-11-13 21:46:52.982148, queries/job__base_query_split_1/train/23c.sql, 325.731, 689.286, Bao
+13, 1, 1, 2026-11-13 21:46:54.452651, queries/job__base_query_split_1/train/23c.sql, 334.648, 652.817, Bao
+13, 1, 2, 2026-11-13 21:46:56.868439, queries/job__base_query_split_1/train/23c.sql, 320.902, 632.182, Bao
+13, 2, 0, 2026-11-13 21:47:04.890949, queries/job__base_query_split_1/train/8c.sql, 176.928, 7516.069, Bao
+13, 2, 1, 2026-11-13 21:47:12.904236, queries/job__base_query_split_1/train/8c.sql, 173.391, 7505.017, Bao
+13, 2, 2, 2026-11-13 21:47:27.059404, queries/job__base_query_split_1/train/8c.sql, 154.673, 7339.284, Bao
+13, 3, 0, 2026-11-13 21:47:29.740177, queries/job__base_query_split_1/train/13a.sql, 198.538, 2148.608, Bao
+13, 3, 1, 2026-11-13 21:47:32.434082, queries/job__base_query_split_1/train/13a.sql, 196.517, 2159.059, Bao
+13, 3, 2, 2026-11-13 21:47:37.255912, queries/job__base_query_split_1/train/13a.sql, 183.41, 2138.482, Bao
+13, 4, 0, 2026-11-13 21:47:38.285021, queries/job__base_query_split_1/train/9b.sql, 180.666, 523.251, Bao
+13, 4, 1, 2026-11-13 21:47:39.327316, queries/job__base_query_split_1/train/9b.sql, 184.865, 524.278, Bao
+13, 4, 2, 2026-11-13 21:47:41.059902, queries/job__base_query_split_1/train/9b.sql, 190.981, 503.499, Bao
+13, 5, 0, 2026-11-13 21:47:42.286911, queries/job__base_query_split_1/train/14c.sql, 174.535, 732.892, Bao
+13, 5, 1, 2026-11-13 21:47:43.491122, queries/job__base_query_split_1/train/14c.sql, 176.834, 705.959, Bao
+13, 5, 2, 2026-11-13 21:47:45.386991, queries/job__base_query_split_1/train/14c.sql, 165.047, 553.723, Bao
+13, 6, 0, 2026-11-13 21:47:46.458941, queries/job__base_query_split_1/train/9a.sql, 185.185, 522.974, Bao
+13, 6, 1, 2026-11-13 21:47:47.483498, queries/job__base_query_split_1/train/9a.sql, 178.749, 520.284, Bao
+13, 6, 2, 2026-11-13 21:47:49.235886, queries/job__base_query_split_1/train/9a.sql, 193.287, 509.131, Bao
+13, 7, 0, 2026-11-13 21:47:57.532284, queries/job__base_query_split_1/train/17d.sql, 169.201, 7808.34, Bao
+13, 7, 1, 2026-11-13 21:48:05.641242, queries/job__base_query_split_1/train/17d.sql, 170.78, 7623.541, Bao
+13, 7, 2, 2026-11-13 21:48:18.818594, queries/job__base_query_split_1/train/17d.sql, 165.871, 7404.347, Bao
+13, 8, 0, 2026-11-13 21:48:21.500793, queries/job__base_query_split_1/train/13a.sql, 199.776, 2144.656, Bao
+13, 8, 1, 2026-11-13 21:48:24.231803, queries/job__base_query_split_1/train/13a.sql, 205.3, 2180.284, Bao
+13, 8, 2, 2026-11-13 21:48:29.015092, queries/job__base_query_split_1/train/13a.sql, 184.651, 2085.067, Bao
+13, 9, 0, 2026-11-13 21:48:31.030007, queries/job__base_query_split_1/train/20c.sql, 223.957, 1420.321, Bao
+13, 9, 1, 2026-11-13 21:48:32.987246, queries/job__base_query_split_1/train/20c.sql, 223.752, 1362.774, Bao
+13, 9, 2, 2026-11-13 21:48:36.201444, queries/job__base_query_split_1/train/20c.sql, 213.621, 1113.821, Bao
+13, 10, 0, 2026-11-13 21:48:37.460900, queries/job__base_query_split_1/train/33a.sql, 515.527, 78.252, Bao
+13, 10, 1, 2026-11-13 21:48:38.723884, queries/job__base_query_split_1/train/33a.sql, 517.045, 77.678, Bao
+13, 10, 2, 2026-11-13 21:48:40.569831, queries/job__base_query_split_1/train/33a.sql, 518.476, 72.207, Bao
+13, 11, 0, 2026-11-13 21:48:46.900965, queries/job__base_query_split_1/train/18c.sql, 185.032, 5836.058, Bao
+13, 11, 1, 2026-11-13 21:48:53.937625, queries/job__base_query_split_1/train/18c.sql, 175.077, 6535.501, Bao
+13, 11, 2, 2026-11-13 21:49:05.266417, queries/job__base_query_split_1/train/18c.sql, 160.671, 5278.335, Bao
+13, 12, 0, 2026-11-13 21:49:06.456114, queries/job__base_query_split_1/train/27c.sql, 462.776, 56.47, Bao
+13, 12, 1, 2026-11-13 21:49:07.592161, queries/job__base_query_split_1/train/27c.sql, 475.791, 51.872, Bao
+13, 12, 2, 2026-11-13 21:49:09.165052, queries/job__base_query_split_1/train/27c.sql, 440.464, 42.323, Bao
+13, 13, 0, 2026-11-13 21:49:10.453877, queries/job__base_query_split_1/train/23a.sql, 323.175, 493.671, Bao
+13, 13, 1, 2026-11-13 21:49:11.749996, queries/job__base_query_split_1/train/23a.sql, 326.357, 480.879, Bao
+13, 13, 2, 2026-11-13 21:49:13.757486, queries/job__base_query_split_1/train/23a.sql, 313.965, 476.264, Bao
+13, 14, 0, 2026-11-13 21:49:14.362874, queries/job__base_query_split_1/train/1c.sql, 157.575, 150.907, Bao
+13, 14, 1, 2026-11-13 21:49:14.975438, queries/job__base_query_split_1/train/1c.sql, 156.629, 154.261, Bao
+13, 14, 2, 2026-11-13 21:49:15.878433, queries/job__base_query_split_1/train/1c.sql, 153.334, 174.804, Bao
+13, 15, 0, 2026-11-13 21:49:16.973381, queries/job__base_query_split_1/train/27a.sql, 462.394, 33.084, Bao
+13, 15, 1, 2026-11-13 21:49:18.064219, queries/job__base_query_split_1/train/27a.sql, 451.366, 34.955, Bao
+13, 15, 2, 2026-11-13 21:49:19.608248, queries/job__base_query_split_1/train/27a.sql, 442.811, 28.939, Bao
+13, 16, 0, 2026-11-13 21:49:26.952628, queries/job__base_query_split_1/train/17c.sql, 171.262, 6861.42, Bao
+13, 16, 1, 2026-11-13 21:49:34.273273, queries/job__base_query_split_1/train/17c.sql, 175.577, 6833.048, Bao
+13, 16, 2, 2026-11-13 21:49:48.109928, queries/job__base_query_split_1/train/17c.sql, 158.429, 6503.03, Bao
+13, 17, 0, 2026-11-13 21:49:48.592812, queries/job__base_query_split_1/train/32a.sql, 164.589, 15.727, Bao
+13, 17, 1, 2026-11-13 21:49:49.066432, queries/job__base_query_split_1/train/32a.sql, 158.194, 15.607, Bao
+13, 17, 2, 2026-11-13 21:49:49.718896, queries/job__base_query_split_1/train/32a.sql, 152.092, 17.722, Bao
+13, 18, 0, 2026-11-13 21:49:50.778967, queries/job__base_query_split_1/train/10a.sql, 163.906, 583.947, Bao
+13, 18, 1, 2026-11-13 21:49:51.851888, queries/job__base_query_split_1/train/10a.sql, 166.015, 590.451, Bao
+13, 18, 2, 2026-11-13 21:49:53.606105, queries/job__base_query_split_1/train/10a.sql, 162.738, 567.716, Bao
+13, 19, 0, 2026-11-13 21:49:54.424594, queries/job__base_query_split_1/train/8b.sql, 180.825, 320.814, Bao
+13, 19, 1, 2026-11-13 21:49:55.222226, queries/job__base_query_split_1/train/8b.sql, 169.447, 315.569, Bao
+13, 19, 2, 2026-11-13 21:49:56.544361, queries/job__base_query_split_1/train/8b.sql, 206.966, 307.81, Bao
+13, 20, 0, 2026-11-13 21:49:58.004889, queries/job__base_query_split_1/train/23c.sql, 327.281, 653.814, Bao
+13, 20, 1, 2026-11-13 21:49:59.476530, queries/job__base_query_split_1/train/23c.sql, 332.113, 664.748, Bao
+13, 20, 2, 2026-11-13 21:50:01.829704, queries/job__base_query_split_1/train/23c.sql, 317.202, 647.192, Bao
+13, 21, 0, 2026-11-13 21:50:02.465466, queries/job__base_query_split_1/train/32b.sql, 172.159, 162.963, Bao
+13, 21, 1, 2026-11-13 21:50:03.108248, queries/job__base_query_split_1/train/32b.sql, 155.366, 172.644, Bao
+13, 21, 2, 2026-11-13 21:50:03.994154, queries/job__base_query_split_1/train/32b.sql, 154.418, 117.811, Bao
+13, 22, 0, 2026-11-13 21:50:05.234420, queries/job__base_query_split_1/train/33b.sql, 516.026, 57.793, Bao
+13, 22, 1, 2026-11-13 21:50:06.547376, queries/job__base_query_split_1/train/33b.sql, 558.798, 59.895, Bao
+13, 22, 2, 2026-11-13 21:50:08.353569, queries/job__base_query_split_1/train/33b.sql, 507.968, 48.887, Bao
+13, 23, 0, 2026-11-13 21:50:12.411145, queries/job__base_query_split_1/train/30a.sql, 460.659, 2976.618, Bao
+13, 23, 1, 2026-11-13 21:50:16.392339, queries/job__base_query_split_1/train/30a.sql, 467.753, 2890.245, Bao
+13, 23, 2, 2026-11-13 21:50:23.293747, queries/job__base_query_split_1/train/30a.sql, 469.797, 2537.479, Bao
+13, 24, 0, 2026-11-13 21:50:23.915631, queries/job__base_query_split_1/train/1a.sql, 160.342, 157.123, Bao
+13, 24, 1, 2026-11-13 21:50:24.532231, queries/job__base_query_split_1/train/1a.sql, 158.602, 152.953, Bao
+13, 24, 2, 2026-11-13 21:50:25.425415, queries/job__base_query_split_1/train/1a.sql, 154.243, 153.368, Bao
+==========================================================================================
+Iteration over chunk 15/19...
+[2026-11-13 21:50:25.425682]	[15/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.11820544698275626
+Epoch 15 training loss: 0.01298263797070831
+Epoch 30 training loss: 0.0031984457333843843
+Epoch 45 training loss: 0.002122518705922024
+Stopped training from convergence condition at epoch 50
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:50:53.791428]	[15/19]	Retraining done.
+14, 0, 0, 2026-11-13 21:50:54.679476, queries/job__base_query_split_1/train/11d.sql, 177.857, 394.113, Bao
+14, 0, 1, 2026-11-13 21:50:55.570166, queries/job__base_query_split_1/train/11d.sql, 174.255, 392.19, Bao
+14, 0, 2, 2026-11-13 21:50:56.995200, queries/job__base_query_split_1/train/11d.sql, 166.115, 367.271, Bao
+14, 1, 0, 2026-11-13 21:50:58.792901, queries/job__base_query_split_1/train/29c.sql, 658.731, 266.907, Bao
+14, 1, 1, 2026-11-13 21:51:00.517720, queries/job__base_query_split_1/train/29c.sql, 671.039, 240.696, Bao
+14, 1, 2, 2026-11-13 21:51:03.058596, queries/job__base_query_split_1/train/29c.sql, 666.893, 172.98, Bao
+14, 2, 0, 2026-11-13 21:51:03.962498, queries/job__base_query_split_1/train/19b.sql, 262.506, 238.544, Bao
+14, 2, 1, 2026-11-13 21:51:04.846746, queries/job__base_query_split_1/train/19b.sql, 255.86, 225.279, Bao
+14, 2, 2, 2026-11-13 21:51:06.271697, queries/job__base_query_split_1/train/19b.sql, 254.491, 225.724, Bao
+14, 3, 0, 2026-11-13 21:51:13.332481, queries/job__base_query_split_1/train/18c.sql, 177.15, 6565.301, Bao
+14, 3, 1, 2026-11-13 21:51:20.268540, queries/job__base_query_split_1/train/18c.sql, 171.18, 6446.493, Bao
+14, 3, 2, 2026-11-13 21:51:33.575159, queries/job__base_query_split_1/train/18c.sql, 163.221, 6370.999, Bao
+14, 4, 0, 2026-11-13 21:51:34.399733, queries/job__base_query_split_1/train/5c.sql, 162.505, 355.341, Bao
+14, 4, 1, 2026-11-13 21:51:35.218998, queries/job__base_query_split_1/train/5c.sql, 156.218, 359.881, Bao
+14, 4, 2, 2026-11-13 21:51:36.598549, queries/job__base_query_split_1/train/5c.sql, 201.304, 350.499, Bao
+14, 5, 0, 2026-11-13 21:51:37.236530, queries/job__base_query_split_1/train/32b.sql, 157.378, 170.497, Bao
+14, 5, 1, 2026-11-13 21:51:37.857461, queries/job__base_query_split_1/train/32b.sql, 160.564, 159.324, Bao
+14, 5, 2, 2026-11-13 21:51:38.738633, queries/job__base_query_split_1/train/32b.sql, 153.524, 120.407, Bao
+14, 6, 0, 2026-11-13 21:51:39.518952, queries/job__base_query_split_1/train/18b.sql, 164.738, 295.197, Bao
+14, 6, 1, 2026-11-13 21:51:40.300184, queries/job__base_query_split_1/train/18b.sql, 168.644, 295.679, Bao
+14, 6, 2, 2026-11-13 21:51:41.500868, queries/job__base_query_split_1/train/18b.sql, 165.32, 253.167, Bao
+14, 7, 0, 2026-11-13 21:51:48.575298, queries/job__base_query_split_1/train/18c.sql, 168.398, 6586.49, Bao
+14, 7, 1, 2026-11-13 21:51:55.563227, queries/job__base_query_split_1/train/18c.sql, 178.117, 6490.889, Bao
+14, 7, 2, 2026-11-13 21:52:08.980021, queries/job__base_query_split_1/train/18c.sql, 158.218, 6484.442, Bao
+14, 8, 0, 2026-11-13 21:52:12.540972, queries/job__base_query_split_1/train/20a.sql, 240.44, 2947.924, Bao
+14, 8, 1, 2026-11-13 21:52:16.034885, queries/job__base_query_split_1/train/20a.sql, 244.923, 2880.999, Bao
+14, 8, 2, 2026-11-13 21:52:22.022985, queries/job__base_query_split_1/train/20a.sql, 214.977, 2494.94, Bao
+14, 9, 0, 2026-11-13 21:52:22.630396, queries/job__base_query_split_1/train/1d.sql, 158.747, 145.027, Bao
+14, 9, 1, 2026-11-13 21:52:23.246697, queries/job__base_query_split_1/train/1d.sql, 158.464, 146.254, Bao
+14, 9, 2, 2026-11-13 21:52:24.110676, queries/job__base_query_split_1/train/1d.sql, 150.253, 143.3, Bao
+14, 10, 0, 2026-11-13 21:52:30.182532, queries/job__base_query_split_1/train/18a.sql, 168.41, 5582.215, Bao
+14, 10, 1, 2026-11-13 21:52:36.325956, queries/job__base_query_split_1/train/18a.sql, 172.609, 5647.458, Bao
+14, 10, 2, 2026-11-13 21:52:47.331554, queries/job__base_query_split_1/train/18a.sql, 165.943, 5522.854, Bao
+14, 11, 0, 2026-11-13 21:52:48.800993, queries/job__base_query_split_1/train/13b.sql, 200.63, 922.118, Bao
+14, 11, 1, 2026-11-13 21:52:50.275845, queries/job__base_query_split_1/train/13b.sql, 192.238, 912.162, Bao
+14, 11, 2, 2026-11-13 21:52:52.739522, queries/job__base_query_split_1/train/13b.sql, 191.663, 906.936, Bao
+14, 12, 0, 2026-11-13 21:52:55.616721, queries/job__base_query_split_1/train/20b.sql, 222.095, 2282.216, Bao
+14, 12, 1, 2026-11-13 21:52:58.594029, queries/job__base_query_split_1/train/20b.sql, 268.259, 2335.047, Bao
+14, 12, 2, 2026-11-13 21:53:03.561546, queries/job__base_query_split_1/train/20b.sql, 216.773, 1968.042, Bao
+14, 13, 0, 2026-11-13 21:53:11.616854, queries/job__base_query_split_1/train/8c.sql, 174.421, 7553.135, Bao
+14, 13, 1, 2026-11-13 21:53:19.585335, queries/job__base_query_split_1/train/8c.sql, 172.737, 7465.704, Bao
+14, 13, 2, 2026-11-13 21:53:33.745278, queries/job__base_query_split_1/train/8c.sql, 155.217, 7347.913, Bao
+14, 14, 0, 2026-11-13 21:53:41.136403, queries/job__base_query_split_1/train/30a.sql, 490.704, 6288.419, Bao
+14, 14, 1, 2026-11-13 21:53:48.449126, queries/job__base_query_split_1/train/30a.sql, 465.685, 6244.577, Bao
+14, 14, 2, 2026-11-13 21:54:01.793118, queries/job__base_query_split_1/train/30a.sql, 455.274, 6065.541, Bao
+14, 15, 0, 2026-11-13 21:54:02.324109, queries/job__base_query_split_1/train/6e.sql, 170.652, 38.997, Bao
+14, 15, 1, 2026-11-13 21:54:02.820602, queries/job__base_query_split_1/train/6e.sql, 158.485, 38.767, Bao
+14, 15, 2, 2026-11-13 21:54:03.507047, queries/job__base_query_split_1/train/6e.sql, 152.49, 22.015, Bao
+14, 16, 0, 2026-11-13 21:54:05.124218, queries/job__base_query_split_1/train/28a.sql, 541.261, 398.718, Bao
+14, 16, 1, 2026-11-13 21:54:06.790882, queries/job__base_query_split_1/train/28a.sql, 550.517, 396.801, Bao
+14, 16, 2, 2026-11-13 21:54:09.229350, queries/job__base_query_split_1/train/28a.sql, 525.455, 320.16, Bao
+14, 17, 0, 2026-11-13 21:54:10.012600, queries/job__base_query_split_1/train/18b.sql, 168.673, 294.444, Bao
+14, 17, 1, 2026-11-13 21:54:10.790356, queries/job__base_query_split_1/train/18b.sql, 167.951, 292.879, Bao
+14, 17, 2, 2026-11-13 21:54:11.972767, queries/job__base_query_split_1/train/18b.sql, 161.398, 245.477, Bao
+14, 18, 0, 2026-11-13 21:54:14.030388, queries/job__base_query_split_1/train/26a.sql, 446.122, 1018.063, Bao
+14, 18, 1, 2026-11-13 21:54:16.112028, queries/job__base_query_split_1/train/26a.sql, 446.154, 1040.605, Bao
+14, 18, 2, 2026-11-13 21:54:19.444622, queries/job__base_query_split_1/train/26a.sql, 444.095, 845.951, Bao
+14, 19, 0, 2026-11-13 21:54:20.515674, queries/job__base_query_split_1/train/10a.sql, 165.995, 592.119, Bao
+14, 19, 1, 2026-11-13 21:54:21.586546, queries/job__base_query_split_1/train/10a.sql, 165.847, 585.469, Bao
+14, 19, 2, 2026-11-13 21:54:23.288502, queries/job__base_query_split_1/train/10a.sql, 158.027, 564.593, Bao
+14, 20, 0, 2026-11-13 21:54:34.394006, queries/job__base_query_split_1/train/17f.sql, 165.973, 10625.093, Bao
+14, 20, 1, 2026-11-13 21:54:45.434682, queries/job__base_query_split_1/train/17f.sql, 170.822, 10553.208, Bao
+14, 20, 2, 2026-11-13 21:55:06.607656, queries/job__base_query_split_1/train/17f.sql, 162.643, 10123.438, Bao
+14, 21, 0, 2026-11-13 21:55:08.559258, queries/job__base_query_split_1/train/20c.sql, 230.472, 1350.482, Bao
+14, 21, 1, 2026-11-13 21:55:10.499052, queries/job__base_query_split_1/train/20c.sql, 220.355, 1351.139, Bao
+14, 21, 2, 2026-11-13 21:55:13.680965, queries/job__base_query_split_1/train/20c.sql, 214.87, 1083.052, Bao
+14, 22, 0, 2026-11-13 21:55:14.763652, queries/job__base_query_split_1/train/27a.sql, 455.175, 32.995, Bao
+14, 22, 1, 2026-11-13 21:55:15.893736, queries/job__base_query_split_1/train/27a.sql, 454.945, 57.904, Bao
+14, 22, 2, 2026-11-13 21:55:17.459995, queries/job__base_query_split_1/train/27a.sql, 443.413, 28.742, Bao
+14, 23, 0, 2026-11-13 21:55:18.965591, queries/job__base_query_split_1/train/29b.sql, 659.199, 39.842, Bao
+14, 23, 1, 2026-11-13 21:55:20.469520, queries/job__base_query_split_1/train/29b.sql, 658.231, 35.745, Bao
+14, 23, 2, 2026-11-13 21:55:22.706282, queries/job__base_query_split_1/train/29b.sql, 694.581, 24.53, Bao
+14, 24, 0, 2026-11-13 21:55:23.418481, queries/job__base_query_split_1/train/21c.sql, 210.212, 141.221, Bao
+14, 24, 1, 2026-11-13 21:55:24.130682, queries/job__base_query_split_1/train/21c.sql, 212.318, 138.561, Bao
+14, 24, 2, 2026-11-13 21:55:25.173947, queries/job__base_query_split_1/train/21c.sql, 205.577, 134.532, Bao
+==========================================================================================
+Iteration over chunk 16/19...
+[2026-11-13 21:55:25.174177]	[16/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.1541827469319105
+Epoch 15 training loss: 0.013064328581094742
+Epoch 30 training loss: 0.003926339836325497
+Epoch 45 training loss: 0.002412394031416625
+Stopped training from convergence condition at epoch 48
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 21:55:54.129132]	[16/19]	Retraining done.
+15, 0, 0, 2026-11-13 21:55:54.830991, queries/job__base_query_split_1/train/21a.sql, 212.029, 135.781, Bao
+15, 0, 1, 2026-11-13 21:55:55.547985, queries/job__base_query_split_1/train/21a.sql, 216.473, 137.408, Bao
+15, 0, 2, 2026-11-13 21:55:56.619903, queries/job__base_query_split_1/train/21a.sql, 206.478, 123.178, Bao
+15, 1, 0, 2026-11-13 21:55:58.859562, queries/job__base_query_split_1/train/16d.sql, 185.072, 1717.843, Bao
+15, 1, 1, 2026-11-13 21:56:01.091406, queries/job__base_query_split_1/train/16d.sql, 183.161, 1709.615, Bao
+15, 1, 2, 2026-11-13 21:56:04.859281, queries/job__base_query_split_1/train/16d.sql, 174.425, 1485.606, Bao
+15, 2, 0, 2026-11-13 21:56:06.485722, queries/job__base_query_split_1/train/22a.sql, 327.149, 824.256, Bao
+15, 2, 1, 2026-11-13 21:56:08.064677, queries/job__base_query_split_1/train/22a.sql, 323.342, 779.355, Bao
+15, 2, 2, 2026-11-13 21:56:10.623332, queries/job__base_query_split_1/train/22a.sql, 310.878, 689.67, Bao
+15, 3, 0, 2026-11-13 21:56:11.133674, queries/job__base_query_split_1/train/6e.sql, 156.17, 45.144, Bao
+15, 3, 1, 2026-11-13 21:56:11.634550, queries/job__base_query_split_1/train/6e.sql, 159.258, 41.239, Bao
+15, 3, 2, 2026-11-13 21:56:12.317524, queries/job__base_query_split_1/train/6e.sql, 155.703, 22.08, Bao
+15, 4, 0, 2026-11-13 21:56:12.927776, queries/job__base_query_split_1/train/4a.sql, 158.591, 141.659, Bao
+15, 4, 1, 2026-11-13 21:56:13.532451, queries/job__base_query_split_1/train/4a.sql, 157.062, 141.833, Bao
+15, 4, 2, 2026-11-13 21:56:14.397498, queries/job__base_query_split_1/train/4a.sql, 152.472, 100.195, Bao
+15, 5, 0, 2026-11-13 21:56:15.108665, queries/job__base_query_split_1/train/14b.sql, 179.815, 208.676, Bao
+15, 5, 1, 2026-11-13 21:56:15.821442, queries/job__base_query_split_1/train/14b.sql, 175.458, 208.11, Bao
+15, 5, 2, 2026-11-13 21:56:16.857126, queries/job__base_query_split_1/train/14b.sql, 167.439, 142.074, Bao
+15, 6, 0, 2026-11-13 21:56:17.678375, queries/job__base_query_split_1/train/12a.sql, 185.682, 308.75, Bao
+15, 6, 1, 2026-11-13 21:56:18.503976, queries/job__base_query_split_1/train/12a.sql, 185.752, 313.095, Bao
+15, 6, 2, 2026-11-13 21:56:19.780345, queries/job__base_query_split_1/train/12a.sql, 171.699, 292.692, Bao
+15, 7, 0, 2026-11-13 21:56:21.084221, queries/job__base_query_split_1/train/23a.sql, 332.695, 488.272, Bao
+15, 7, 1, 2026-11-13 21:56:22.394894, queries/job__base_query_split_1/train/23a.sql, 326.609, 508.857, Bao
+15, 7, 2, 2026-11-13 21:56:24.418789, queries/job__base_query_split_1/train/23a.sql, 318.096, 484.642, Bao
+15, 8, 0, 2026-11-13 21:56:26.659518, queries/job__base_query_split_1/train/28c.sql, 533.834, 1004.264, Bao
+15, 8, 1, 2026-11-13 21:56:28.872218, queries/job__base_query_split_1/train/28c.sql, 533.404, 979.746, Bao
+15, 8, 2, 2026-11-13 21:56:32.391071, queries/job__base_query_split_1/train/28c.sql, 520.66, 798.159, Bao
+15, 9, 0, 2026-11-13 21:56:33.303437, queries/job__base_query_split_1/train/19b.sql, 264.363, 246.254, Bao
+15, 9, 1, 2026-11-13 21:56:34.205426, queries/job__base_query_split_1/train/19b.sql, 256.652, 241.783, Bao
+15, 9, 2, 2026-11-13 21:56:35.597287, queries/job__base_query_split_1/train/19b.sql, 254.859, 237.623, Bao
+15, 10, 0, 2026-11-13 21:56:36.258064, queries/job__base_query_split_1/train/4c.sql, 164.558, 154.492, Bao
+15, 10, 1, 2026-11-13 21:56:36.879794, queries/job__base_query_split_1/train/4c.sql, 161.14, 155.281, Bao
+15, 10, 2, 2026-11-13 21:56:37.754683, queries/job__base_query_split_1/train/4c.sql, 155.019, 113.352, Bao
+15, 11, 0, 2026-11-13 21:56:39.135321, queries/job__base_query_split_1/train/33c.sql, 507.592, 214.082, Bao
+15, 11, 1, 2026-11-13 21:56:40.549107, queries/job__base_query_split_1/train/33c.sql, 533.595, 218.611, Bao
+15, 11, 2, 2026-11-13 21:56:42.634446, queries/job__base_query_split_1/train/33c.sql, 499.464, 201.383, Bao
+15, 12, 0, 2026-11-13 21:56:46.653242, queries/job__base_query_split_1/train/30a.sql, 461.724, 2946.39, Bao
+15, 12, 1, 2026-11-13 21:56:50.560793, queries/job__base_query_split_1/train/30a.sql, 468.271, 2824.641, Bao
+15, 12, 2, 2026-11-13 21:56:58.043385, queries/job__base_query_split_1/train/30a.sql, 694.987, 2534.724, Bao
+15, 13, 0, 2026-11-13 21:57:04.847567, queries/job__base_query_split_1/train/17a.sql, 189.867, 6296.546, Bao
+15, 13, 1, 2026-11-13 21:57:11.746675, queries/job__base_query_split_1/train/17a.sql, 197.366, 6387.914, Bao
+15, 13, 2, 2026-11-13 21:57:23.400367, queries/job__base_query_split_1/train/17a.sql, 164.255, 6216.412, Bao
+15, 14, 0, 2026-11-13 21:57:34.875517, queries/job__base_query_split_1/train/16b.sql, 184.242, 10964.488, Bao
+15, 14, 1, 2026-11-13 21:57:45.262348, queries/job__base_query_split_1/train/16b.sql, 186.192, 9872.808, Bao
+15, 14, 2, 2026-11-13 21:58:03.610197, queries/job__base_query_split_1/train/16b.sql, 180.302, 9765.008, Bao
+15, 15, 0, 2026-11-13 21:58:09.564887, queries/job__base_query_split_1/train/10c.sql, 175.511, 5464.759, Bao
+15, 15, 1, 2026-11-13 21:58:15.472036, queries/job__base_query_split_1/train/10c.sql, 170.773, 5415.947, Bao
+15, 15, 2, 2026-11-13 21:58:26.753430, queries/job__base_query_split_1/train/10c.sql, 159.464, 5492.994, Bao
+15, 16, 0, 2026-11-13 21:58:36.588828, queries/job__base_query_split_1/train/17c.sql, 170.424, 9349.757, Bao
+15, 16, 1, 2026-11-13 21:58:46.427430, queries/job__base_query_split_1/train/17c.sql, 173.446, 9343.073, Bao
+15, 16, 2, 2026-11-13 21:59:05.266013, queries/job__base_query_split_1/train/17c.sql, 212.731, 8969.028, Bao
+15, 17, 0, 2026-11-13 21:59:06.912844, queries/job__base_query_split_1/train/22a.sql, 342.988, 788.255, Bao
+15, 17, 1, 2026-11-13 21:59:08.476089, queries/job__base_query_split_1/train/22a.sql, 320.528, 775.821, Bao
+15, 17, 2, 2026-11-13 21:59:11.014313, queries/job__base_query_split_1/train/22a.sql, 313.439, 687.005, Bao
+15, 18, 0, 2026-11-13 21:59:11.838066, queries/job__base_query_split_1/train/5c.sql, 159.75, 362.803, Bao
+15, 18, 1, 2026-11-13 21:59:12.658850, queries/job__base_query_split_1/train/5c.sql, 155.603, 362.254, Bao
+15, 18, 2, 2026-11-13 21:59:13.979655, queries/job__base_query_split_1/train/5c.sql, 152.597, 348.665, Bao
+15, 19, 0, 2026-11-13 21:59:14.659666, queries/job__base_query_split_1/train/11d.sql, 176.098, 188.65, Bao
+15, 19, 1, 2026-11-13 21:59:15.351457, queries/job__base_query_split_1/train/11d.sql, 188.354, 184.356, Bao
+15, 19, 2, 2026-11-13 21:59:16.428141, queries/job__base_query_split_1/train/11d.sql, 209.788, 165.602, Bao
+15, 20, 0, 2026-11-13 21:59:19.842448, queries/job__base_query_split_1/train/20a.sql, 224.199, 2821.241, Bao
+15, 20, 1, 2026-11-13 21:59:23.281666, queries/job__base_query_split_1/train/20a.sql, 228.836, 2846.982, Bao
+15, 20, 2, 2026-11-13 21:59:29.271355, queries/job__base_query_split_1/train/20a.sql, 212.54, 2487.203, Bao
+15, 21, 0, 2026-11-13 21:59:31.494918, queries/job__base_query_split_1/train/28c.sql, 537.085, 1003.37, Bao
+15, 21, 1, 2026-11-13 21:59:33.714182, queries/job__base_query_split_1/train/28c.sql, 577.969, 965.67, Bao
+15, 21, 2, 2026-11-13 21:59:37.308084, queries/job__base_query_split_1/train/28c.sql, 572.33, 810.454, Bao
+15, 22, 0, 2026-11-13 21:59:47.681292, queries/job__base_query_split_1/train/16b.sql, 180.868, 9864.353, Bao
+15, 22, 1, 2026-11-13 21:59:58.044889, queries/job__base_query_split_1/train/16b.sql, 179.861, 9857.048, Bao
+15, 22, 2, 2026-11-13 22:00:16.259991, queries/job__base_query_split_1/train/16b.sql, 174.906, 9701.519, Bao
+15, 23, 0, 2026-11-13 22:00:21.886956, queries/job__base_query_split_1/train/30c.sql, 463.075, 4557.27, Bao
+15, 23, 1, 2026-11-13 22:00:27.600643, queries/job__base_query_split_1/train/30c.sql, 470.152, 4630.972, Bao
+15, 23, 2, 2026-11-13 22:00:37.870968, queries/job__base_query_split_1/train/30c.sql, 455.045, 4261.45, Bao
+15, 24, 0, 2026-11-13 22:00:41.748662, queries/job__base_query_split_1/train/22c.sql, 344.71, 3047.647, Bao
+15, 24, 1, 2026-11-13 22:00:45.667275, queries/job__base_query_split_1/train/22c.sql, 326.97, 3111.127, Bao
+15, 24, 2, 2026-11-13 22:00:52.696259, queries/job__base_query_split_1/train/22c.sql, 317.827, 2883.134, Bao
+==========================================================================================
+Iteration over chunk 17/19...
+[2026-11-13 22:00:52.696585]	[17/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.09099560175780896
+Epoch 15 training loss: 0.010086202787028419
+Epoch 30 training loss: 0.0026081391519659925
+Epoch 45 training loss: 0.0014002745673577818
+Stopped training from convergence condition at epoch 49
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 22:01:24.139160]	[17/19]	Retraining done.
+16, 0, 0, 2026-11-13 22:01:31.243147, queries/job__base_query_split_1/train/17b.sql, 167.044, 6623.97, Bao
+16, 0, 1, 2026-11-13 22:01:38.210818, queries/job__base_query_split_1/train/17b.sql, 172.168, 6477.589, Bao
+16, 0, 2, 2026-11-13 22:01:49.632905, queries/job__base_query_split_1/train/17b.sql, 161.615, 6379.287, Bao
+16, 1, 0, 2026-11-13 22:01:51.131984, queries/job__base_query_split_1/train/29b.sql, 659.169, 33.58, Bao
+16, 1, 1, 2026-11-13 22:01:52.653482, queries/job__base_query_split_1/train/29b.sql, 664.59, 34.442, Bao
+16, 1, 2, 2026-11-13 22:01:54.825332, queries/job__base_query_split_1/train/29b.sql, 650.08, 25.614, Bao
+16, 2, 0, 2026-11-13 22:01:55.942522, queries/job__base_query_split_1/train/10a.sql, 177.818, 624.906, Bao
+16, 2, 1, 2026-11-13 22:01:57.010414, queries/job__base_query_split_1/train/10a.sql, 169.321, 590.7, Bao
+16, 2, 2, 2026-11-13 22:01:58.737506, queries/job__base_query_split_1/train/10a.sql, 158.578, 555.074, Bao
+16, 3, 0, 2026-11-13 22:02:00.103627, queries/job__base_query_split_1/train/33c.sql, 511.785, 201.115, Bao
+16, 3, 1, 2026-11-13 22:02:01.476072, queries/job__base_query_split_1/train/33c.sql, 509.965, 203.316, Bao
+16, 3, 2, 2026-11-13 22:02:03.571313, queries/job__base_query_split_1/train/33c.sql, 503.379, 216.083, Bao
+16, 4, 0, 2026-11-13 22:02:04.171131, queries/job__base_query_split_1/train/3b.sql, 156.63, 141.355, Bao
+16, 4, 1, 2026-11-13 22:02:04.773088, queries/job__base_query_split_1/train/3b.sql, 154.616, 143.353, Bao
+16, 4, 2, 2026-11-13 22:02:05.629173, queries/job__base_query_split_1/train/3b.sql, 149.675, 103.679, Bao
+16, 5, 0, 2026-11-13 22:02:17.319484, queries/job__base_query_split_1/train/13a.sql, 233.47, 11110.203, Bao
+16, 5, 1, 2026-11-13 22:02:28.983055, queries/job__base_query_split_1/train/13a.sql, 271.821, 11049.143, Bao
+16, 5, 2, 2026-11-13 22:02:50.536813, queries/job__base_query_split_1/train/13a.sql, 188.319, 10955.533, Bao
+16, 6, 0, 2026-11-13 22:02:53.443218, queries/job__base_query_split_1/train/20b.sql, 226.336, 2306.45, Bao
+16, 6, 1, 2026-11-13 22:02:56.402554, queries/job__base_query_split_1/train/20b.sql, 227.872, 2340.808, Bao
+16, 6, 2, 2026-11-13 22:03:01.911637, queries/job__base_query_split_1/train/20b.sql, 220.565, 1931.023, Bao
+16, 7, 0, 2026-11-13 22:03:03.107111, queries/job__base_query_split_1/train/14c.sql, 177.934, 695.989, Bao
+16, 7, 1, 2026-11-13 22:03:04.308947, queries/job__base_query_split_1/train/14c.sql, 174.042, 701.902, Bao
+16, 7, 2, 2026-11-13 22:03:06.261033, queries/job__base_query_split_1/train/14c.sql, 163.948, 585.75, Bao
+16, 8, 0, 2026-11-13 22:03:07.302076, queries/job__base_query_split_1/train/9a.sql, 181.294, 531.824, Bao
+16, 8, 1, 2026-11-13 22:03:08.343609, queries/job__base_query_split_1/train/9a.sql, 181.498, 529.317, Bao
+16, 8, 2, 2026-11-13 22:03:10.094450, queries/job__base_query_split_1/train/9a.sql, 172.595, 511.85, Bao
+16, 9, 0, 2026-11-13 22:03:11.388962, queries/job__base_query_split_1/train/23a.sql, 327.524, 488.477, Bao
+16, 9, 1, 2026-11-13 22:03:12.669454, queries/job__base_query_split_1/train/23a.sql, 324.947, 483.226, Bao
+16, 9, 2, 2026-11-13 22:03:14.732275, queries/job__base_query_split_1/train/23a.sql, 324.597, 474.702, Bao
+16, 10, 0, 2026-11-13 22:03:15.314468, queries/job__base_query_split_1/train/11b.sql, 183.747, 73.139, Bao
+16, 10, 1, 2026-11-13 22:03:15.940876, queries/job__base_query_split_1/train/11b.sql, 183.141, 75.534, Bao
+16, 10, 2, 2026-11-13 22:03:16.728997, queries/job__base_query_split_1/train/11b.sql, 171.372, 53.945, Bao
+16, 11, 0, 2026-11-13 22:03:24.078965, queries/job__base_query_split_1/train/17c.sql, 164.728, 6866.113, Bao
+16, 11, 1, 2026-11-13 22:03:31.375807, queries/job__base_query_split_1/train/17c.sql, 167.83, 6820.142, Bao
+16, 11, 2, 2026-11-13 22:03:45.023527, queries/job__base_query_split_1/train/17c.sql, 160.689, 6402.429, Bao
+16, 12, 0, 2026-11-13 22:03:45.880491, queries/job__base_query_split_1/train/5c.sql, 158.874, 390.128, Bao
+16, 12, 1, 2026-11-13 22:03:46.721148, queries/job__base_query_split_1/train/5c.sql, 177.053, 355.564, Bao
+16, 12, 2, 2026-11-13 22:03:48.050915, queries/job__base_query_split_1/train/5c.sql, 152.241, 351.788, Bao
+16, 13, 0, 2026-11-13 22:03:48.749616, queries/job__base_query_split_1/train/21b.sql, 210.416, 130.443, Bao
+16, 13, 1, 2026-11-13 22:03:49.453582, queries/job__base_query_split_1/train/21b.sql, 212.709, 129.983, Bao
+16, 13, 2, 2026-11-13 22:03:50.488180, queries/job__base_query_split_1/train/21b.sql, 207.479, 120.09, Bao
+16, 14, 0, 2026-11-13 22:03:51.055096, queries/job__base_query_split_1/train/4b.sql, 160.292, 96.872, Bao
+16, 14, 1, 2026-11-13 22:03:51.617739, queries/job__base_query_split_1/train/4b.sql, 157.372, 97.449, Bao
+16, 14, 2, 2026-11-13 22:03:52.428102, queries/job__base_query_split_1/train/4b.sql, 151.502, 73.68, Bao
+16, 15, 0, 2026-11-13 22:03:54.143487, queries/job__base_query_split_1/train/29c.sql, 667.904, 242.031, Bao
+16, 15, 1, 2026-11-13 22:03:55.905385, queries/job__base_query_split_1/train/29c.sql, 658.21, 289.672, Bao
+16, 15, 2, 2026-11-13 22:03:58.435629, queries/job__base_query_split_1/train/29c.sql, 655.416, 169.03, Bao
+16, 16, 0, 2026-11-13 22:03:59.761996, queries/job__base_query_split_1/train/9c.sql, 178.866, 816.649, Bao
+16, 16, 1, 2026-11-13 22:04:01.094940, queries/job__base_query_split_1/train/9c.sql, 183.7, 819.497, Bao
+16, 16, 2, 2026-11-13 22:04:03.367196, queries/job__base_query_split_1/train/9c.sql, 172.406, 793.89, Bao
+16, 17, 0, 2026-11-13 22:04:04.483205, queries/job__base_query_split_1/train/27b.sql, 454.042, 57.2, Bao
+16, 17, 1, 2026-11-13 22:04:05.600577, queries/job__base_query_split_1/train/27b.sql, 454.045, 66.378, Bao
+16, 17, 2, 2026-11-13 22:04:07.250314, queries/job__base_query_split_1/train/27b.sql, 447.936, 50.748, Bao
+16, 18, 0, 2026-11-13 22:04:11.064269, queries/job__base_query_split_1/train/8d.sql, 173.801, 3327.203, Bao
+16, 18, 1, 2026-11-13 22:04:14.852371, queries/job__base_query_split_1/train/8d.sql, 186.414, 3284.061, Bao
+16, 18, 2, 2026-11-13 22:04:21.573547, queries/job__base_query_split_1/train/8d.sql, 173.9, 3240.35, Bao
+16, 19, 0, 2026-11-13 22:04:27.106279, queries/job__base_query_split_1/train/6d.sql, 163.482, 5059.299, Bao
+16, 19, 1, 2026-11-13 22:04:32.603074, queries/job__base_query_split_1/train/6d.sql, 162.164, 5029.169, Bao
+16, 19, 2, 2026-11-13 22:04:41.900996, queries/job__base_query_split_1/train/6d.sql, 151.468, 4879.253, Bao
+16, 20, 0, 2026-11-13 22:04:43.513678, queries/job__base_query_split_1/train/28a.sql, 539.217, 394.83, Bao
+16, 20, 1, 2026-11-13 22:04:45.176401, queries/job__base_query_split_1/train/28a.sql, 583.73, 402.648, Bao
+16, 20, 2, 2026-11-13 22:04:47.643020, queries/job__base_query_split_1/train/28a.sql, 524.664, 312.269, Bao
+16, 21, 0, 2026-11-13 22:04:48.269404, queries/job__base_query_split_1/train/32b.sql, 158.41, 162.492, Bao
+16, 21, 1, 2026-11-13 22:04:48.906317, queries/job__base_query_split_1/train/32b.sql, 174.51, 160.339, Bao
+16, 21, 2, 2026-11-13 22:04:49.792724, queries/job__base_query_split_1/train/32b.sql, 151.063, 119.823, Bao
+16, 22, 0, 2026-11-13 22:04:51.743918, queries/job__base_query_split_1/train/22d.sql, 342.894, 1125.078, Bao
+16, 22, 1, 2026-11-13 22:04:53.687155, queries/job__base_query_split_1/train/22d.sql, 331.404, 1136.642, Bao
+16, 22, 2, 2026-11-13 22:04:56.871011, queries/job__base_query_split_1/train/22d.sql, 316.558, 930.419, Bao
+16, 23, 0, 2026-11-13 22:04:57.617420, queries/job__base_query_split_1/train/5b.sql, 172.361, 268.973, Bao
+16, 23, 1, 2026-11-13 22:04:59.048539, queries/job__base_query_split_1/train/5b.sql, 258.35, 554.225, Bao
+16, 23, 2, 2026-11-13 22:05:00.298244, queries/job__base_query_split_1/train/5b.sql, 151.62, 262.672, Bao
+16, 24, 0, 2026-11-13 22:05:02.385202, queries/job__base_query_split_1/train/26a.sql, 465.555, 1021.992, Bao
+16, 24, 1, 2026-11-13 22:05:04.473639, queries/job__base_query_split_1/train/26a.sql, 450.646, 1043.335, Bao
+16, 24, 2, 2026-11-13 22:05:07.874710, queries/job__base_query_split_1/train/26a.sql, 445.07, 842.473, Bao
+==========================================================================================
+Iteration over chunk 18/19...
+[2026-11-13 22:05:07.875081]	[18/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.06471447299780517
+Epoch 15 training loss: 0.004645152675822891
+Epoch 30 training loss: 0.006021224604598407
+Stopped training from convergence condition at epoch 31
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 22:05:30.142919]	[18/19]	Retraining done.
+17, 0, 0, 2026-11-13 22:05:30.638100, queries/job__base_query_split_1/train/6e.sql, 157.655, 39.908, Bao
+17, 0, 1, 2026-11-13 22:05:31.133210, queries/job__base_query_split_1/train/6e.sql, 155.48, 39.821, Bao
+17, 0, 2, 2026-11-13 22:05:31.810915, queries/job__base_query_split_1/train/6e.sql, 151.52, 22.698, Bao
+17, 1, 0, 2026-11-13 22:05:33.056534, queries/job__base_query_split_1/train/33b.sql, 523.252, 60.209, Bao
+17, 1, 1, 2026-11-13 22:05:34.295588, queries/job__base_query_split_1/train/33b.sql, 513.747, 58.359, Bao
+17, 1, 2, 2026-11-13 22:05:36.199368, queries/job__base_query_split_1/train/33b.sql, 517.665, 48.046, Bao
+17, 2, 0, 2026-11-13 22:05:37.757895, queries/job__base_query_split_1/train/22a.sql, 322.961, 774.781, Bao
+17, 2, 1, 2026-11-13 22:05:39.330856, queries/job__base_query_split_1/train/22a.sql, 326.494, 777.58, Bao
+17, 2, 2, 2026-11-13 22:05:41.885710, queries/job__base_query_split_1/train/22a.sql, 327.317, 684.022, Bao
+17, 3, 0, 2026-11-13 22:05:49.461165, queries/job__base_query_split_1/train/17d.sql, 173.063, 7091.444, Bao
+17, 3, 1, 2026-11-13 22:05:57.016332, queries/job__base_query_split_1/train/17d.sql, 167.873, 7071.113, Bao
+17, 3, 2, 2026-11-13 22:06:11.101686, queries/job__base_query_split_1/train/17d.sql, 165.188, 6625.548, Bao
+17, 4, 0, 2026-11-13 22:06:18.511664, queries/job__base_query_split_1/train/17c.sql, 167.17, 6931.145, Bao
+17, 4, 1, 2026-11-13 22:06:25.875315, queries/job__base_query_split_1/train/17c.sql, 166.005, 6884.241, Bao
+17, 4, 2, 2026-11-13 22:06:39.677464, queries/job__base_query_split_1/train/17c.sql, 167.879, 6471.896, Bao
+17, 5, 0, 2026-11-13 22:06:41.875098, queries/job__base_query_split_1/train/28c.sql, 535.851, 975.729, Bao
+17, 5, 1, 2026-11-13 22:06:44.055144, queries/job__base_query_split_1/train/28c.sql, 531.169, 968.085, Bao
+17, 5, 2, 2026-11-13 22:06:47.557929, queries/job__base_query_split_1/train/28c.sql, 574.323, 789.865, Bao
+17, 6, 0, 2026-11-13 22:06:48.255607, queries/job__base_query_split_1/train/3a.sql, 172.04, 219.588, Bao
+17, 6, 1, 2026-11-13 22:06:48.925810, queries/job__base_query_split_1/train/3a.sql, 157.935, 213.769, Bao
+17, 6, 2, 2026-11-13 22:06:49.915542, queries/job__base_query_split_1/train/3a.sql, 149.043, 148.002, Bao
+17, 7, 0, 2026-11-13 22:06:50.817903, queries/job__base_query_split_1/train/23b.sql, 323.274, 90.258, Bao
+17, 7, 1, 2026-11-13 22:06:51.716371, queries/job__base_query_split_1/train/23b.sql, 333.976, 89.334, Bao
+17, 7, 2, 2026-11-13 22:06:52.981920, queries/job__base_query_split_1/train/23b.sql, 317.535, 53.637, Bao
+17, 8, 0, 2026-11-13 22:06:55.082452, queries/job__base_query_split_1/train/28b.sql, 544.963, 865.207, Bao
+17, 8, 1, 2026-11-13 22:06:57.204982, queries/job__base_query_split_1/train/28b.sql, 542.432, 847.969, Bao
+17, 8, 2, 2026-11-13 22:07:01.416835, queries/job__base_query_split_1/train/28b.sql, 526.463, 1192.846, Bao
+17, 9, 0, 2026-11-13 22:07:15.077909, queries/job__base_query_split_1/train/17e.sql, 168.556, 13177.02, Bao
+17, 9, 1, 2026-11-13 22:07:28.562068, queries/job__base_query_split_1/train/17e.sql, 168.979, 12981.811, Bao
+17, 9, 2, 2026-11-13 22:07:53.670726, queries/job__base_query_split_1/train/17e.sql, 159.684, 12455.016, Bao
+17, 10, 0, 2026-11-13 22:07:54.528340, queries/job__base_query_split_1/train/12a.sql, 187.387, 343.624, Bao
+17, 10, 1, 2026-11-13 22:07:55.354553, queries/job__base_query_split_1/train/12a.sql, 189.247, 306.754, Bao
+17, 10, 2, 2026-11-13 22:07:56.658981, queries/job__base_query_split_1/train/12a.sql, 180.337, 290.902, Bao
+17, 11, 0, 2026-11-13 22:08:04.241539, queries/job__base_query_split_1/train/17f.sql, 169.264, 7100.825, Bao
+17, 11, 1, 2026-11-13 22:08:11.733253, queries/job__base_query_split_1/train/17f.sql, 171.61, 7004.011, Bao
+17, 11, 2, 2026-11-13 22:08:24.491896, queries/job__base_query_split_1/train/17f.sql, 166.685, 6763.602, Bao
+17, 12, 0, 2026-11-13 22:08:38.017321, queries/job__base_query_split_1/train/17e.sql, 186.542, 13008.414, Bao
+17, 12, 1, 2026-11-13 22:08:51.499101, queries/job__base_query_split_1/train/17e.sql, 172.918, 12992.37, Bao
+17, 12, 2, 2026-11-13 22:09:16.732709, queries/job__base_query_split_1/train/17e.sql, 174.775, 12528.434, Bao
+17, 13, 0, 2026-11-13 22:09:17.937450, queries/job__base_query_split_1/train/19a.sql, 257.772, 527.565, Bao
+17, 13, 1, 2026-11-13 22:09:19.131151, queries/job__base_query_split_1/train/19a.sql, 259.012, 522.788, Bao
+17, 13, 2, 2026-11-13 22:09:21.092630, queries/job__base_query_split_1/train/19a.sql, 252.84, 513.098, Bao
+17, 14, 0, 2026-11-13 22:09:22.672596, queries/job__base_query_split_1/train/23c.sql, 362.483, 740.224, Bao
+17, 14, 1, 2026-11-13 22:09:24.131896, queries/job__base_query_split_1/train/23c.sql, 335.928, 649.807, Bao
+17, 14, 2, 2026-11-13 22:09:26.491453, queries/job__base_query_split_1/train/23c.sql, 313.178, 653.942, Bao
+17, 15, 0, 2026-11-13 22:09:30.407913, queries/job__base_query_split_1/train/13d.sql, 192.549, 3389.355, Bao
+17, 15, 1, 2026-11-13 22:09:34.297129, queries/job__base_query_split_1/train/13d.sql, 197.0, 3359.068, Bao
+17, 15, 2, 2026-11-13 22:09:41.041995, queries/job__base_query_split_1/train/13d.sql, 189.005, 3174.147, Bao
+17, 16, 0, 2026-11-13 22:09:54.593091, queries/job__base_query_split_1/train/17a.sql, 196.387, 13043.073, Bao
+17, 16, 1, 2026-11-13 22:10:08.139633, queries/job__base_query_split_1/train/17a.sql, 172.491, 13061.574, Bao
+17, 16, 2, 2026-11-13 22:10:33.634604, queries/job__base_query_split_1/train/17a.sql, 165.359, 12578.6, Bao
+17, 17, 0, 2026-11-13 22:10:38.172984, queries/job__base_query_split_1/train/30c.sql, 484.788, 3444.426, Bao
+17, 17, 1, 2026-11-13 22:10:42.478149, queries/job__base_query_split_1/train/30c.sql, 468.571, 3228.236, Bao
+17, 17, 2, 2026-11-13 22:10:50.125727, queries/job__base_query_split_1/train/30c.sql, 455.694, 2861.24, Bao
+17, 18, 0, 2026-11-13 22:10:50.610635, queries/job__base_query_split_1/train/32a.sql, 160.666, 15.835, Bao
+17, 18, 1, 2026-11-13 22:10:51.093801, queries/job__base_query_split_1/train/32a.sql, 158.394, 15.978, Bao
+17, 18, 2, 2026-11-13 22:10:51.752542, queries/job__base_query_split_1/train/32a.sql, 159.403, 13.996, Bao
+17, 19, 0, 2026-11-13 22:10:52.436523, queries/job__base_query_split_1/train/11d.sql, 177.872, 188.052, Bao
+17, 19, 1, 2026-11-13 22:10:53.130392, queries/job__base_query_split_1/train/11d.sql, 177.797, 187.961, Bao
+17, 19, 2, 2026-11-13 22:10:54.150644, queries/job__base_query_split_1/train/11d.sql, 167.918, 167.802, Bao
+17, 20, 0, 2026-11-13 22:10:57.641736, queries/job__base_query_split_1/train/20a.sql, 224.399, 2900.974, Bao
+17, 20, 1, 2026-11-13 22:11:01.015549, queries/job__base_query_split_1/train/20a.sql, 230.53, 2771.47, Bao
+17, 20, 2, 2026-11-13 22:11:07.390279, queries/job__base_query_split_1/train/20a.sql, 217.099, 2487.68, Bao
+17, 21, 0, 2026-11-13 22:11:09.452743, queries/job__base_query_split_1/train/26a.sql, 461.696, 1012.219, Bao
+17, 21, 1, 2026-11-13 22:11:11.534220, queries/job__base_query_split_1/train/26a.sql, 460.771, 1020.421, Bao
+17, 21, 2, 2026-11-13 22:11:14.819614, queries/job__base_query_split_1/train/26a.sql, 443.755, 832.272, Bao
+17, 22, 0, 2026-11-13 22:11:17.714027, queries/job__base_query_split_1/train/20b.sql, 235.868, 2290.996, Bao
+17, 22, 1, 2026-11-13 22:11:20.559627, queries/job__base_query_split_1/train/20b.sql, 222.604, 2251.137, Bao
+17, 22, 2, 2026-11-13 22:11:25.514999, queries/job__base_query_split_1/train/20b.sql, 217.361, 1959.622, Bao
+17, 23, 0, 2026-11-13 22:11:28.275226, queries/job__base_query_split_1/train/16c.sql, 195.397, 2175.889, Bao
+17, 23, 1, 2026-11-13 22:11:30.902250, queries/job__base_query_split_1/train/16c.sql, 181.056, 2123.452, Bao
+17, 23, 2, 2026-11-13 22:11:35.463353, queries/job__base_query_split_1/train/16c.sql, 173.082, 1864.486, Bao
+17, 24, 0, 2026-11-13 22:11:38.402554, queries/job__base_query_split_1/train/20b.sql, 237.767, 2281.878, Bao
+17, 24, 1, 2026-11-13 22:11:41.253635, queries/job__base_query_split_1/train/20b.sql, 228.747, 2256.276, Bao
+17, 24, 2, 2026-11-13 22:11:46.291248, queries/job__base_query_split_1/train/20b.sql, 243.233, 1974.903, Bao
+==========================================================================================
+Iteration over chunk 19/19...
+[2026-11-13 22:11:46.291668]	[19/19]	Retraining Bao...
+/tmp/bao_run/bao_server/model.py:55: UserWarning: Creating a tensor from a list of numpy.ndarrays is extremely slow. Please consider converting the list to a single numpy.ndarray with numpy.array() before converting to a tensor. (Triggered internally at ../torch/csrc/utils/tensor_new.cpp:230.)
+  targets = torch.tensor(targets)
+Initial input channels: 10
+Epoch 0 training loss: 0.047405687533318995
+Epoch 15 training loss: 0.0058896058064419774
+Epoch 30 training loss: 0.0017873020706853518
+Stopped training from convergence condition at epoch 41
+Old model # regressions: 0 regression amount: 0
+New model # regressions: 0 regression amount: 0
+New model had no regressions.
+[2026-11-13 22:12:16.058654]	[19/19]	Retraining done.
+18, 0, 0, 2026-11-13 22:12:22.197844, queries/job__base_query_split_1/train/6f.sql, 168.311, 5669.131, Bao
+18, 0, 1, 2026-11-13 22:12:28.194934, queries/job__base_query_split_1/train/6f.sql, 158.312, 5532.255, Bao
+18, 0, 2, 2026-11-13 22:12:39.119196, queries/job__base_query_split_1/train/6f.sql, 153.551, 5119.013, Bao
+18, 1, 0, 2026-11-13 22:12:40.234348, queries/job__base_query_split_1/train/27a.sql, 460.739, 33.34, Bao
+18, 1, 1, 2026-11-13 22:12:41.313379, queries/job__base_query_split_1/train/27a.sql, 446.549, 32.947, Bao
+18, 1, 2, 2026-11-13 22:12:42.862781, queries/job__base_query_split_1/train/27a.sql, 441.59, 28.692, Bao
+18, 2, 0, 2026-11-13 22:12:48.577418, queries/job__base_query_split_1/train/30c.sql, 464.108, 4640.619, Bao
+18, 2, 1, 2026-11-13 22:12:54.179677, queries/job__base_query_split_1/train/30c.sql, 463.154, 4543.318, Bao
+18, 2, 2, 2026-11-13 22:13:04.924264, queries/job__base_query_split_1/train/30c.sql, 453.471, 4785.882, Bao
+18, 3, 0, 2026-11-13 22:13:05.432653, queries/job__base_query_split_1/train/6a.sql, 166.35, 38.757, Bao
+18, 3, 1, 2026-11-13 22:13:05.984110, queries/job__base_query_split_1/train/6a.sql, 167.906, 39.363, Bao
+18, 3, 2, 2026-11-13 22:13:06.675978, queries/job__base_query_split_1/train/6a.sql, 151.886, 24.475, Bao
+18, 4, 0, 2026-11-13 22:13:07.421334, queries/job__base_query_split_1/train/3a.sql, 187.377, 255.185, Bao
+18, 4, 1, 2026-11-13 22:13:08.098043, queries/job__base_query_split_1/train/3a.sql, 157.18, 214.264, Bao
+18, 4, 2, 2026-11-13 22:13:09.071830, queries/job__base_query_split_1/train/3a.sql, 148.273, 149.727, Bao
+18, 5, 0, 2026-11-13 22:13:09.674697, queries/job__base_query_split_1/train/1b.sql, 156.227, 146.354, Bao
+18, 5, 1, 2026-11-13 22:13:10.280524, queries/job__base_query_split_1/train/1b.sql, 157.093, 140.769, Bao
+18, 5, 2, 2026-11-13 22:13:11.143631, queries/job__base_query_split_1/train/1b.sql, 152.043, 142.784, Bao
+18, 6, 0, 2026-11-13 22:13:12.215192, queries/job__base_query_split_1/train/10a.sql, 163.635, 598.832, Bao
+18, 6, 1, 2026-11-13 22:13:13.277052, queries/job__base_query_split_1/train/10a.sql, 166.072, 580.39, Bao
+18, 6, 2, 2026-11-13 22:13:14.988465, queries/job__base_query_split_1/train/10a.sql, 158.667, 555.111, Bao
+18, 7, 0, 2026-11-13 22:13:24.825504, queries/job__base_query_split_1/train/19d.sql, 258.941, 9166.591, Bao
+18, 7, 1, 2026-11-13 22:13:34.085737, queries/job__base_query_split_1/train/19d.sql, 272.706, 8581.606, Bao
+18, 7, 2, 2026-11-13 22:13:50.903114, queries/job__base_query_split_1/train/19d.sql, 258.123, 8404.619, Bao
+18, 8, 0, 2026-11-13 22:13:52.331604, queries/job__base_query_split_1/train/33c.sql, 539.087, 222.563, Bao
+18, 8, 1, 2026-11-13 22:13:53.740008, queries/job__base_query_split_1/train/33c.sql, 521.758, 217.44, Bao
+18, 8, 2, 2026-11-13 22:13:55.899824, queries/job__base_query_split_1/train/33c.sql, 503.247, 243.128, Bao
+18, 9, 0, 2026-11-13 22:13:56.398577, queries/job__base_query_split_1/train/6a.sql, 156.165, 39.107, Bao
+18, 9, 1, 2026-11-13 22:13:56.914706, queries/job__base_query_split_1/train/6a.sql, 155.59, 39.557, Bao
+18, 9, 2, 2026-11-13 22:13:57.595154, queries/job__base_query_split_1/train/6a.sql, 150.48, 24.259, Bao
+18, 10, 0, 2026-11-13 22:14:01.338335, queries/job__base_query_split_1/train/8d.sql, 165.42, 3264.614, Bao
+18, 10, 1, 2026-11-13 22:14:05.133823, queries/job__base_query_split_1/train/8d.sql, 180.416, 3298.835, Bao
+18, 10, 2, 2026-11-13 22:14:11.878001, queries/job__base_query_split_1/train/8d.sql, 156.184, 3261.014, Bao
+18, 11, 0, 2026-11-13 22:14:14.707387, queries/job__base_query_split_1/train/20b.sql, 227.451, 2234.174, Bao
+18, 11, 1, 2026-11-13 22:14:17.573154, queries/job__base_query_split_1/train/20b.sql, 226.234, 2270.292, Bao
+18, 11, 2, 2026-11-13 22:14:22.513940, queries/job__base_query_split_1/train/20b.sql, 238.813, 1927.861, Bao
+18, 12, 0, 2026-11-13 22:14:23.924438, queries/job__base_query_split_1/train/33c.sql, 517.502, 217.431, Bao
+18, 12, 1, 2026-11-13 22:14:25.319501, queries/job__base_query_split_1/train/33c.sql, 516.572, 219.36, Bao
+18, 12, 2, 2026-11-13 22:14:27.469662, queries/job__base_query_split_1/train/33c.sql, 503.68, 217.167, Bao
+18, 13, 0, 2026-11-13 22:14:29.527113, queries/job__base_query_split_1/train/26a.sql, 447.743, 1015.581, Bao
+18, 13, 1, 2026-11-13 22:14:31.598873, queries/job__base_query_split_1/train/26a.sql, 459.936, 1016.881, Bao
+18, 13, 2, 2026-11-13 22:14:34.915518, queries/job__base_query_split_1/train/26a.sql, 447.219, 845.871, Bao
+18, 14, 0, 2026-11-13 22:14:36.071415, queries/job__base_query_split_1/train/27c.sql, 451.57, 53.466, Bao
+18, 14, 1, 2026-11-13 22:14:37.176371, queries/job__base_query_split_1/train/27c.sql, 457.145, 50.161, Bao
+18, 14, 2, 2026-11-13 22:14:38.814725, queries/job__base_query_split_1/train/27c.sql, 457.361, 41.998, Bao
+18, 15, 0, 2026-11-13 22:14:41.026185, queries/job__base_query_split_1/train/16d.sql, 188.051, 1694.398, Bao
+18, 15, 1, 2026-11-13 22:14:43.223828, queries/job__base_query_split_1/train/16d.sql, 178.152, 1693.606, Bao
+18, 15, 2, 2026-11-13 22:14:47.018730, queries/job__base_query_split_1/train/16d.sql, 173.48, 1513.318, Bao
+18, 16, 0, 2026-11-13 22:14:49.227854, queries/job__base_query_split_1/train/16d.sql, 196.027, 1685.957, Bao
+18, 16, 1, 2026-11-13 22:14:51.454474, queries/job__base_query_split_1/train/16d.sql, 184.203, 1712.277, Bao
+18, 16, 2, 2026-11-13 22:14:55.233682, queries/job__base_query_split_1/train/16d.sql, 179.1, 1478.264, Bao
+18, 17, 0, 2026-11-13 22:14:57.219407, queries/job__base_query_split_1/train/20c.sql, 238.424, 1347.815, Bao
+18, 17, 1, 2026-11-13 22:14:59.154217, queries/job__base_query_split_1/train/20c.sql, 225.306, 1346.383, Bao
+18, 17, 2, 2026-11-13 22:15:02.338113, queries/job__base_query_split_1/train/20c.sql, 212.932, 1095.283, Bao
+18, 18, 0, 2026-11-13 22:15:08.452340, queries/job__base_query_split_1/train/10c.sql, 166.981, 5629.656, Bao
+18, 18, 1, 2026-11-13 22:15:14.324986, queries/job__base_query_split_1/train/10c.sql, 184.914, 5371.177, Bao
+18, 18, 2, 2026-11-13 22:15:25.401334, queries/job__base_query_split_1/train/10c.sql, 172.75, 5346.484, Bao
+18, 19, 0, 2026-11-13 22:15:26.350204, queries/job__base_query_split_1/train/19b.sql, 277.194, 220.314, Bao
+18, 19, 1, 2026-11-13 22:15:27.237859, queries/job__base_query_split_1/train/19b.sql, 257.537, 226.138, Bao
+18, 19, 2, 2026-11-13 22:15:28.608720, queries/job__base_query_split_1/train/19b.sql, 252.405, 231.724, Bao
+18, 20, 0, 2026-11-13 22:15:32.585013, queries/job__base_query_split_1/train/30a.sql, 498.303, 2867.677, Bao
+18, 20, 1, 2026-11-13 22:15:36.529584, queries/job__base_query_split_1/train/30a.sql, 498.888, 2839.718, Bao
+18, 20, 2, 2026-11-13 22:15:43.335871, queries/job__base_query_split_1/train/30a.sql, 457.209, 2502.321, Bao
+18, 21, 0, 2026-11-13 22:15:46.786174, queries/job__base_query_split_1/train/20a.sql, 223.422, 2857.89, Bao
+18, 21, 1, 2026-11-13 22:15:50.200581, queries/job__base_query_split_1/train/20a.sql, 225.499, 2819.878, Bao
+18, 21, 2, 2026-11-13 22:15:56.184226, queries/job__base_query_split_1/train/20a.sql, 215.358, 2486.196, Bao
+18, 22, 0, 2026-11-13 22:15:56.844923, queries/job__base_query_split_1/train/14b.sql, 178.408, 156.009, Bao
+18, 22, 1, 2026-11-13 22:15:57.497668, queries/job__base_query_split_1/train/14b.sql, 176.463, 157.616, Bao
+18, 22, 2, 2026-11-13 22:15:58.415431, queries/job__base_query_split_1/train/14b.sql, 167.099, 105.873, Bao
+18, 23, 0, 2026-11-13 22:15:59.168641, queries/job__base_query_split_1/train/21c.sql, 248.201, 139.034, Bao
+18, 23, 1, 2026-11-13 22:15:59.886597, queries/job__base_query_split_1/train/21c.sql, 219.291, 138.437, Bao
+18, 23, 2, 2026-11-13 22:16:00.920923, queries/job__base_query_split_1/train/21c.sql, 203.286, 127.105, Bao
+18, 24, 0, 2026-11-13 22:16:02.372957, queries/job__base_query_split_1/train/13b.sql, 193.272, 916.227, Bao
+18, 24, 1, 2026-11-13 22:16:03.809883, queries/job__base_query_split_1/train/13b.sql, 194.13, 903.163, Bao
+18, 24, 2, 2026-11-13 22:16:06.340100, queries/job__base_query_split_1/train/13b.sql, 193.505, 953.281, Bao
