@@ -52,7 +52,7 @@ with tab0:
                 "thật thì phân bố lệch, các cột liên quan nhau → PostgreSQL **hay đoán sai số dòng**, nên dễ chọn sai "
                 "cách chạy. Vì vậy bài báo dùng IMDB để thử các bộ tối ưu.")
     if db is None:
-        st.warning("Chưa có analysis/output/app/imdb_db.json. Chạy `python app/prepare_data.py --db` "
+        st.warning("Chưa có analysis/output/app/imdb_db.json. Chạy `python app/prepare_data.py` "
                    "(cần container pg_bao).")
     else:
         tables = pd.DataFrame([{"bảng": t["name"], "nhóm": core.TABLE_INFO.get(t["name"], ("", ""))[0],

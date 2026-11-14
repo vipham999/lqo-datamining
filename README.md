@@ -7,7 +7,6 @@ một mô hình phân loại nhỏ chọn cách chạy cho PostgreSQL, và khai 
 
 - Repo của tác giả: [edualc/lqo_ml_perspective](https://github.com/edualc/lqo_ml_perspective), clone vào `lqo_ml_perspective/`.
 - Kiến trúc hệ thống: [ARCHITECTURE.md](ARCHITECTURE.md).
-- Kịch bản demo: [DEMO_KICH_BAN.md](DEMO_KICH_BAN.md).
 - Ghi chú IMDB/JOB: [GHI_CHU_IMDB_JOB.md](GHI_CHU_IMDB_JOB.md), [GHI_CHU_113_TRUY_VAN_JOB.md](GHI_CHU_113_TRUY_VAN_JOB.md).
 - Chạy HybridQO trên Kaggle: [HUONG_DAN_KAGGLE_HYBRIDQO.md](HUONG_DAN_KAGGLE_HYBRIDQO.md).
 
@@ -72,14 +71,13 @@ lqo-datamining/
 │   ├── prototype.py          ← tab "5. Demo mô hình" (chạy thật trên PostgreSQL)
 │   ├── core.py, prepare_data.py
 ├── infra/                    ← Dockerfile PostgreSQL 12.5 + pg_hint_plan + pg_bao (ARM64), Bao server, compose
-├── scripts/
-│   ├── load_imdb.sh, make_imdb50.sh, warmup_imdb.sh     ← nạp IMDB, tạo IMDB 50%, làm nóng cache
-│   ├── run_fair_comparison.sh, run_bao_split.sh, ...    ← Thí nghiệm 1 trên Mac
-│   ├── ablation_interleaved.py, ablation_k_runs.py      ← ablation
-│   ├── exp1_tables.py, c1_win_loss.py, lqo_common.py    ← phân tích Thí nghiệm 1
-│   ├── exp2_collect.sh, exp2_analyze.py                 ← Thí nghiệm 2
-│   ├── exp2_mining.py, exp2_abstain.py                  ← khai phá dữ liệu, chính sách bỏ phiếu trắng
-│   └── demo_start.sh, demo_26a.sh, demo_ablation.sh, demo_83.sh   ← demo trực tiếp trên terminal
+├── scripts/                  ← chi tiết: scripts/README.md
+│   ├── setup/                ← nạp IMDB, tạo IMDB 50%, làm nóng cache, khởi động Bao server
+│   ├── exp1/                 ← Thí nghiệm 1: đo PostgreSQL vs Bao, thắng/hòa/thua, bảng tổng hợp
+│   ├── ablation/             ← tắt GEQO, bitmap/TID scan, số lần chạy, thứ tự join
+│   ├── exp2/                 ← Thí nghiệm 2: đo 6 phương án, huấn luyện mô hình, khai phá dữ liệu, bỏ phiếu trắng
+│   ├── demo/                 ← demo trực tiếp trên terminal
+│   └── common/               ← thư viện dùng chung (đọc log, trích đặc trưng, chạy câu × hint set)
 ├── kaggle/                   ← sinh notebook Kaggle (Bao, HybridQO, ablation) và các lần chạy
 ├── kaggle_runs/, bao_kaggle_log/, hybridqo_log/   ← log tải về từ Kaggle
 ├── logs/                     ← log thô trên Mac (không sửa tay)
@@ -112,8 +110,8 @@ Cấu hình `infra/postgresql.lqo.conf` thu nhỏ so với bài báo: `shared_bu
 cd lqo_ml_perspective/data && mkdir -p imdb && cd imdb
 wget -c https://event.cwi.nl/da/job/imdb.tgz && tar -xvzf imdb.tgz
 cd .. && python prepend_imdb_headers.py
-docker exec -it pg_bao bash /app/scripts/load_imdb.sh        # ~15–30 phút: 21 bảng, ~12 GB
-docker exec pg_bao bash /app/scripts/warmup_imdb.sh          # làm nóng cache trước khi đo
+docker exec -it pg_bao bash /app/scripts/setup/load_imdb.sh        # ~15–30 phút: 21 bảng, ~12 GB
+docker exec pg_bao bash /app/scripts/setup/warmup_imdb.sh          # làm nóng cache trước khi đo
 ```
 
 ### 3.3 Môi trường Python
@@ -131,19 +129,19 @@ Desktop đồng bộ iCloud có thể đẩy file của venv lên mây làm Pyth
 
 ```bash
 # Thí nghiệm 1 – PostgreSQL và Bao cùng phiên, 9 split (Mac, mất nhiều giờ)
-caffeinate -dis bash scripts/run_fair_comparison.sh
-python3 scripts/exp1_tables.py                              # → analysis/output/exp1/
+caffeinate -dis bash scripts/exp1/run_fair_comparison.sh
+python3 scripts/exp1/exp1_tables.py                              # → analysis/output/exp1/
 
 # HybridQO, Bao và ablation trên Kaggle: sinh notebook bằng kaggle/build_*_notebook.py,
 # tải log về kaggle_runs/ rồi chạy lại exp1_tables.py
 
 # Thí nghiệm 2 – 113 câu × 6 phương án × 3 lần, kèm EXPLAIN
-bash scripts/exp2_collect.sh
-~/.venvs/lqo_app/bin/python scripts/exp2_analyze.py         # → analysis/output/exp2/
+bash scripts/exp2/exp2_collect.sh
+~/.venvs/lqo_app/bin/python scripts/exp2/exp2_analyze.py         # → analysis/output/exp2/
 
 # Khai phá dữ liệu (chỉ đọc lại log, không chạy thêm truy vấn)
-~/.venvs/lqo_app/bin/python scripts/exp2_mining.py
-~/.venvs/lqo_app/bin/python scripts/exp2_abstain.py
+~/.venvs/lqo_app/bin/python scripts/exp2/exp2_mining.py
+~/.venvs/lqo_app/bin/python scripts/exp2/exp2_abstain.py
 ```
 
 Các script chạy dài đều chạy tiếp được từ chỗ dừng. Log thô không sửa tay; mọi con số trên dashboard tính lại được từ log.
@@ -154,7 +152,7 @@ Các script chạy dài đều chạy tiếp được từ chỗ dừng. Log th�
 
 ```bash
 cd app && ~/.venvs/lqo_app/bin/streamlit run streamlit_app.py
-# hoặc: bash scripts/demo_start.sh   (kiểm tra container, làm nóng cache, mở dashboard tại http://localhost:8501)
+# hoặc: bash scripts/demo/demo_start.sh   (kiểm tra container, làm nóng cache, mở dashboard tại http://localhost:8501)
 ```
 
 Chạy lệnh `streamlit run streamlit_app.py` **từ trong thư mục `app/`**. Sau khi sửa code nên tắt và mở lại server.
@@ -177,11 +175,11 @@ Tab 0–4 chỉ đọc kết quả có sẵn trong `analysis/output/`, không c�
 
 | Lệnh | Nội dung | Thời gian |
 |---|---|---|
-| `bash scripts/demo_26a.sh` | Câu 26a với 3 cách chạy, chênh nhau hàng chục lần | ~1,5 phút |
-| `bash scripts/demo_ablation.sh` | Tắt GEQO / bitmap + TID scan trên vài câu JOB | ~1–2 phút |
-| `bash scripts/demo_83.sh` | Bao-Full và Bao-50 chọn hint khác nhau trên IMDB đầy đủ | ~1 phút |
+| `bash scripts/demo/demo_26a.sh` | Câu 26a với 3 cách chạy, chênh nhau hàng chục lần | ~1,5 phút |
+| `bash scripts/demo/demo_ablation.sh` | Tắt GEQO / bitmap + TID scan trên vài câu JOB | ~1–2 phút |
+| `bash scripts/demo/demo_83.sh` | Bao-Full và Bao-50 chọn hint khác nhau trên IMDB đầy đủ | ~1 phút |
 
-Nên chạy `warmup_imdb.sh` (hoặc `demo_start.sh`) trước để thời gian ổn định. Kịch bản đầy đủ: [DEMO_KICH_BAN.md](DEMO_KICH_BAN.md).
+Nên chạy `warmup_imdb.sh` (hoặc `demo_start.sh`) trước để thời gian ổn định.
 
 ---
 

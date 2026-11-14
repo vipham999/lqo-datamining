@@ -4,9 +4,6 @@
  "số_điều_kiện": 21,
  "số_luật_đã_thử": 695,
  "số_luật_giữ_lại": 37,
- "k_tốt_nhất": 5,
- "silhouette_tốt_nhất": 0.2955883759591827,
- "ARI_nhãn_max": 0.07065814111113437,
  "ARI_nhãn_lần2_vs_lần3": 0.46230014461939045,
  "đặc_trưng_hằng_số": [
   "plan_n_gathermerge",

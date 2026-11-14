@@ -1,6 +1,0 @@
-cụm,số_câu,số_họ,số_bảng_TB,nested_loop_TB,hash_join_TB,cost_trung_vị,PG_s,oracle_s,nhãn_phổ_biến,tỉ_lệ_nhãn_phổ_biến,nhãn,phương_án_chung_tốt_nhất,speedup_phương_án_chung,ví_dụ
-Cụm 1,28,7,5.821428571428571,4.821428571428571,0.0,4429.96,88.64755300000002,48.71789400000001,default,0.5357142857142857,"default 15, no_nestloop 8, no_indexscan 3, no_seqscan 2",no_seqscan,1.0204471012384106,"16a, 16b, 16c, 16d, 17a, 17b"
-Cụm 2,44,16,10.659090909090908,9.522727272727273,0.13636363636363635,7463.58,37.657019999999996,23.702721,default,0.6136363636363636,"default 27, no_indexscan 7, no_seqscan 4, no_hashjoin 4, no_mergejoin 1, no_nestloop 1",default,1.0,"11a, 11b, 11c, 11d, 14a, 14b"
-Cụm 3,31,11,7.580645161290323,4.516129032258065,2.064516129032258,38870.6,26.574897,23.988381999999998,default,0.4838709677419355,"default 15, no_hashjoin 9, no_seqscan 5, no_nestloop 1, no_indexscan 1",default,1.0,"10a, 10b, 10c, 12a, 12b, 12c"
-Cụm 4,4,3,8.0,3.25,3.75,317544.665,8.364227000000001,8.133546,default,0.75,"default 3, no_indexscan 1",default,1.0,"19d, 8c, 8d, 9d"
-Cụm 5,6,2,13.0,10.0,1.0,3020.1850000000004,0.314165,0.22340100000000004,no_mergejoin,0.6666666666666666,"no_mergejoin 4, no_hashjoin 1, no_indexscan 1",no_mergejoin,1.2347117636886704,"27a, 27b, 27c, 33a, 33b, 33c"

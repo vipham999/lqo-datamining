@@ -14,7 +14,7 @@ flowchart LR
     KG[Kaggle<br/>Bao · HybridQO · ablation]
     MAC --> LOG[Log thô<br/>logs/ · bao_kaggle_log/ · hybridqo_log/]
     KG --> LOG
-    LOG --> ANA[Phân tích<br/>scripts/*.py] --> OUT[analysis/output/] --> APP[Dashboard<br/>app/]
+    LOG --> ANA[Phân tích<br/>scripts/exp1, exp2] --> OUT[analysis/output/] --> APP[Dashboard<br/>app/]
 ```
 
 | Tầng | Thư mục | Vai trò |
@@ -22,8 +22,8 @@ flowchart LR
 | Hạ tầng | `infra/` | 2 container (`pg_bao` 10.5.0.5, `bao_server` 10.5.0.6), cấu hình PostgreSQL |
 | Thực thi | `scripts/`, `kaggle/` | Nạp dữ liệu, làm nóng cache, train/test, đo các phương án, ablation |
 | Dữ liệu | `logs/`, `bao_kaggle_log/`, `hybridqo_log/` | Log thô, không sửa, là đầu vào duy nhất của tầng phân tích |
-| Phân tích | `scripts/*.py`, `analysis/output/` | Thống kê, khai phá dữ liệu, mô hình phân loại |
-| Trình bày | `app/`, `scripts/demo_*` | Dashboard Streamlit, demo trực tiếp |
+| Phân tích | `scripts/exp1/`, `scripts/exp2/`, `scripts/ablation/`, `analysis/output/` | Thống kê, khai phá dữ liệu, mô hình phân loại |
+| Trình bày | `app/`, `scripts/demo/` | Dashboard Streamlit, demo trực tiếp |
 
 ## 2. Hạ tầng
 
@@ -88,9 +88,9 @@ flowchart LR
 
 ```bash
 docker compose -f infra/docker-compose.yml up -d
-docker exec pg_bao bash /app/scripts/warmup_imdb.sh
-caffeinate -dis bash scripts/run_fair_comparison.sh          # TN1
-bash scripts/exp2_collect.sh && ~/.venvs/lqo-exp2/bin/python scripts/exp2_analyze.py   # TN2
-python3 scripts/exp1_tables.py
-bash scripts/demo_start.sh                                   # dashboard
+docker exec pg_bao bash /app/scripts/setup/warmup_imdb.sh
+caffeinate -dis bash scripts/exp1/run_fair_comparison.sh          # TN1
+bash scripts/exp2/exp2_collect.sh && ~/.venvs/lqo-exp2/bin/python scripts/exp2/exp2_analyze.py   # TN2
+python3 scripts/exp1/exp1_tables.py
+bash scripts/demo/demo_start.sh                                   # dashboard
 ```

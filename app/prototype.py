@@ -1,6 +1,6 @@
 """Tab 5 – Prototype: người dùng chọn một câu JOB, mô hình của nhóm chọn phương án, rồi chạy thật trên PostgreSQL.
 
-Quy trình giống hệt Thí nghiệm 2 (scripts/exp2_analyze.py), chỉ khác là làm trực tiếp cho MỘT câu:
+Quy trình giống hệt Thí nghiệm 2 (scripts/exp2/exp2_analyze.py), chỉ khác là làm trực tiếp cho MỘT câu:
   1. EXPLAIN (FORMAT JSON, không ANALYZE) câu SQL  → plan mặc định của PostgreSQL
   2. 34 đặc trưng (extract_features.sql_features + plan_features, bỏ q-error)
   3. Mô hình (DT / RF / LightGBM) học trên 113 câu JOB đã đo → chọn 1 trong 6 phương án

@@ -155,7 +155,7 @@ Hệ quả là PostgreSQL ước lượng sai số dòng, chọn sai thứ tự 
 
 ## 5. Kết quả tái lập có giống tác giả không?
 
-So sánh bằng [scripts/compare_baseline.py](scripts/compare_baseline.py) và [scripts/c1_win_loss.py](scripts/c1_win_loss.py), dùng lần chạy thứ 3 (cache đã nóng), thời gian end-to-end, với log tác giả trong `lqo_ml_perspective/experiment_logs/20240103__combined.csv`.
+So sánh bằng [scripts/exp1/compare_baseline.py](scripts/exp1/compare_baseline.py) và [scripts/exp1/c1_win_loss.py](scripts/exp1/c1_win_loss.py), dùng lần chạy thứ 3 (cache đã nóng), thời gian end-to-end, với log tác giả trong `lqo_ml_perspective/experiment_logs/20240103__combined.csv`.
 
 **Kết luận ngắn:** kết luận chính của bài báo được tái lập được, tức là Bao thua PostgreSQL ở đa số truy vấn. Các con số tổng thời gian thì không khớp, vì baseline PostgreSQL của nhóm có vài truy vấn chạy chậm bất thường.
 
@@ -207,17 +207,17 @@ Thắng/thua được tính với ngưỡng ±10%. Speedup lớn hơn 1 nghĩa l
 
 ### 5.4 Việc nên làm tiếp
 1. Chạy `ANALYZE;` trên `imdbload`, rồi chạy lại baseline PostgreSQL. Kiểm tra 25c, 18a, 18c bằng `EXPLAIN` để xem plan có thay đổi không.
-2. Chạy lại cho xong split Base Query 1 (`scripts/run_bao_split.sh`).
+2. Chạy lại cho xong split Base Query 1 (`scripts/exp1/run_bao_split.sh`).
 3. Trong báo cáo, dùng **số thắng/thua và speedup trung vị** làm thước đo chính. Tổng thời gian thì ghi kèm chú thích về 25c.
 
 ### Ghi chú kỹ thuật
 - Python trong `analysis/.venv` (trỏ tới `/opt/miniconda3/bin/python3`) bị treo ngay khi khởi động. Các script so sánh ở trên được chạy bằng `python3` của hệ thống (pandas 3.0.3, scipy 1.17.0).
 - Lệnh tái tạo kết quả:
   ```bash
-  python3 scripts/compare_baseline.py --ours logs/test__postgres__job__20261011_1743.txt \
+  python3 scripts/exp1/compare_baseline.py --ours logs/test__postgres__job__20261011_1743.txt \
       --authors lqo_ml_perspective/experiment_logs/20240103__combined.csv --out_dir analysis/output
-  python3 scripts/c1_win_loss.py --baseline txt:logs/test__postgres__job__20261011_1743.txt \
+  python3 scripts/exp1/c1_win_loss.py --baseline txt:logs/test__postgres__job__20261011_1743.txt \
       --candidate txt:logs/test__bao__job__random_split_1__20261012_0602.txt --name Bao_RND1 --out_dir analysis/output
-  python3 scripts/c1_win_loss.py --baseline txt:logs/test__postgres__job__20261011_1743.txt \
+  python3 scripts/exp1/c1_win_loss.py --baseline txt:logs/test__postgres__job__20261011_1743.txt \
       --candidate txt:logs/test__bao__job__leave_one_out_split_1__20261012_0213.txt --name Bao_LOO1 --out_dir analysis/output
   ```

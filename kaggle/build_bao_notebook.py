@@ -307,13 +307,13 @@ def _script_cell(path, local, repl):
 
 
 ABL_845 = CELLS[:5] + [
-    _script_cell("/tmp/ablation_interleaved.py", "scripts/ablation_interleaved.py",
+    _script_cell("/tmp/ablation_interleaved.py", "scripts/ablation/ablation_interleaved.py",
                  [("host=pg_bao", "host=localhost"), ("os.path.relpath(p, '/app/bao')", "'queries/join-order-benchmark/' + os.path.basename(p)")]),
     CELLS[6].replace("source /tmp/bao_vars.sh", "export PATH=/opt/pg12/bin:$PATH PGHOST=localhost PGUSER=postgres")
             .replace("/tmp/bao_run/queries", "/tmp/lqo_ml_perspective/bao/queries"),
     r'''%%bash
 # Ablation 8.4 + 8.5: mỗi câu chạy liền 3 cấu hình (default / no_geqo / no_bitmap_tidscan), thứ tự xoay vòng, 3 lần mỗi
-# cấu hình, timeout 180 s — giống hệt lần chạy trên Mac (scripts/ablation_interleaved.py).
+# cấu hình, timeout 180 s — giống hệt lần chạy trên Mac (scripts/ablation/ablation_interleaved.py).
 mkdir -p /kaggle/working/ablation_logs
 /tmp/bao_env/bin/python -u /tmp/ablation_interleaved.py --tag kaggle \
   --query_dir /tmp/lqo_ml_perspective/bao/queries/join-order-benchmark --out_dir /kaggle/working/ablation_logs''',
@@ -334,7 +334,7 @@ for c in ["no_geqo", "no_bitmap_tidscan"]:
 ABL_83 = CELLS[:5] + [
     CELLS[5].replace("__SPLIT__", "base_query_split_1").replace("/kaggle/working/bao_logs", "/kaggle/working/ablation83_logs"),
     r'''%%bash
-# Ablation 8.3: imdbload50 giữ ~50% bảng title (Bernoulli, REPEATABLE 42) + xóa dòng phụ thuộc (giống scripts/make_imdb50.sh)
+# Ablation 8.3: imdbload50 giữ ~50% bảng title (Bernoulli, REPEATABLE 42) + xóa dòng phụ thuộc (giống scripts/setup/make_imdb50.sh)
 set -e
 source /tmp/bao_vars.sh
 psql -d postgres -qc "DROP DATABASE IF EXISTS imdbload50;"

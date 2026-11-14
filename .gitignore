@@ -24,11 +24,12 @@ demo_output/
 *.mp4
 *.webm
 *.mov
-scripts/record_demo.py
+scripts/demo/record_demo.py
 .playwright-mcp/
 
 # Log tạm
 kaggle/*.log
 
-# Bản dịch bài báo (chỉ giữ trên máy)
+# Tài liệu riêng (chỉ giữ trên máy)
 BAN_DICH_BAI_BAO.md
+DEMO_KICH_BAN.md

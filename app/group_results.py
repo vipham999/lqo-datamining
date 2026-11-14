@@ -1,9 +1,9 @@
 """Hai tab kết quả của nhóm (Mục 4 báo cáo): Thí nghiệm 1 – kiểm chứng bài báo, Thí nghiệm 2 – mô hình phân loại.
 
 Chỉ đọc các file kết quả đã tính sẵn, không chạy lại thí nghiệm:
-  analysis/output/exp1/            ← scripts/exp1_tables.py
-  analysis/output/ablation_*       ← scripts/ablation_analyze.py
-  analysis/output/exp2/            ← scripts/exp2_analyze.py
+  analysis/output/exp1/            ← scripts/exp1/exp1_tables.py
+  analysis/output/ablation_*       ← scripts/ablation/ablation_analyze.py
+  analysis/output/exp2/            ← scripts/exp2/exp2_analyze.py
 """
 import glob
 import os
@@ -137,7 +137,7 @@ def render_exp1():
     f_tot, f_split, f_83, f_why = (os.path.join(E1, f) for f in
                                    ("exp1_total_233.csv", "exp1_bao_hybridqo_per_split.csv",
                                     "exp1_ablation_8_3.csv", "exp1_nguyen_nhan.csv"))
-    if _missing([f_tot, f_split], "python3 scripts/exp1_tables.py"):
+    if _missing([f_tot, f_split], "python3 scripts/exp1/exp1_tables.py"):
         return
     tot = pd.read_csv(f_tot)
     tot["nguồn_ngắn"] = tot.nguồn.map(_src_short)
@@ -312,7 +312,7 @@ def render_exp2():
     st.header("Thí nghiệm 2 – Một mô hình nhỏ có giúp PostgreSQL chạy nhanh hơn?")
     need = [os.path.join(E2, f) for f in ("exp2_summary_per_split.csv", "exp2_per_query.csv", "exp2_labels.csv",
                                           "exp2_feature_importance_rf.csv", "exp2_rules_decision_tree.txt")]
-    if _missing(need, "~/.venvs/lqo-exp2/bin/python scripts/exp2_analyze.py"):
+    if _missing(need, "~/.venvs/lqo-exp2/bin/python scripts/exp2/exp2_analyze.py"):
         return
     split, pq, lab, imp, rules = _load_exp2()
     agg = split.groupby("phương_pháp")[["số_câu", "thắng", "hòa", "thua", "PG_s", "phương_pháp_s"]].sum()
@@ -390,7 +390,7 @@ def render_exp2():
                 "- Cách đo: Decision Tree, Random Forest = mức giảm impurity; LightGBM = tổng gain. Đây là "
                 "“mô hình dựa vào gì”, chưa phải quy luật chắc chắn (accuracy chỉ khoảng 52–55%).")
         else:
-            st.info("Chưa có exp2_feature_importance_all.csv – chạy lại scripts/exp2_analyze.py.")
+            st.info("Chưa có exp2_feature_importance_all.csv – chạy lại scripts/exp2/exp2_analyze.py.")
         st.markdown("**Luật chọn phương án của Decision Tree** (độ sâu 4, train trên cả 113 câu)")
         st.code(rules.split("\n\n", 1)[-1], language="text")
         dist = lab.nhãn.value_counts()
@@ -593,10 +593,10 @@ MINING_FILES = ["exp2_mining_summary.json", "exp2_mining_rules.csv", "exp2_minin
 
 def render_mining():
     st.header("Khai phá dữ liệu – Vì sao mô hình thua, và sửa thế nào?")
-    if _missing([os.path.join(E2, f) for f in MINING_FILES], "python3 scripts/exp2_mining.py"):
+    if _missing([os.path.join(E2, f) for f in MINING_FILES], "python3 scripts/exp2/exp2_mining.py"):
         return
     f_ab = os.path.join(E2, "exp2_abstain.csv")
-    if _missing([f_ab], "~/.venvs/lqo_app/bin/python scripts/exp2_abstain.py"):
+    if _missing([f_ab], "~/.venvs/lqo_app/bin/python scripts/exp2/exp2_abstain.py"):
         return
     import json
     with open(os.path.join(E2, "exp2_mining_summary.json")) as fi:
@@ -705,7 +705,7 @@ def render_mining():
     st.dataframe(t.pivot(index="ngưỡng", columns="mô_hình", values="speedup")[MODELS].style.format("{:.2f}×"),
                  width="stretch")
     st.caption("Cùng mô hình, cùng 9 cách chia train/test như Thí nghiệm 2; thời gian = EXPLAIN + phương án được chọn. "
-               "`python scripts/exp2_abstain.py`. Ngưỡng 60% được chọn sau khi thử nhiều ngưỡng; với Random Forest các "
+               "`python scripts/exp2/exp2_abstain.py`. Ngưỡng 60% được chọn sau khi thử nhiều ngưỡng; với Random Forest các "
                "ngưỡng 50–70% cho cùng kết quả nên không phải nhờ chọn may một ngưỡng.")
     st.divider()
     st.markdown("### Tắt từng cách nối / đọc bảng: số câu có lợi và bị hại")
@@ -754,7 +754,7 @@ def _mining_method(s):
         "3 lần) và `logs/exp2_explain_job.jsonl` (plan mặc định → 34 đặc trưng).  \n"
         "**Output:** bảng luật – các file `analysis/output/exp2/exp2_mining_*`.  \n"
         "**Môi trường:** Mac M1 Pro, Python (pandas, scikit-learn, scipy), chạy vài giây, không cần PostgreSQL.  \n"
-        "**Lệnh:** `python3 scripts/exp2_mining.py`")
+        "**Lệnh:** `python3 scripts/exp2/exp2_mining.py`")
     st.table(pd.DataFrame([
         ("“Tắt X giúp”", "nhanh hơn ≥5% ở **cả** lần chạy 2 và 3", "giống luật gán nhãn; đòi 2 lần để tránh nhiễu đo"),
         ("“Tắt X hại”", "chậm hơn ≥2 lần ở cả lần chạy 2 và 3", "chỉ quan tâm trường hợp hại nặng"),
@@ -780,7 +780,7 @@ def render_paper_vs_group():
     st.header("Kết quả bài báo và kết quả nhóm")
     by_m, summ = core.paper_results()
     f_tot, f_split = os.path.join(E1, "exp1_total_233.csv"), os.path.join(E1, "exp1_bao_hybridqo_per_split.csv")
-    if by_m is None or _missing([f_tot, f_split], "python3 scripts/exp1_tables.py"):
+    if by_m is None or _missing([f_tot, f_split], "python3 scripts/exp1/exp1_tables.py"):
         return
     st.markdown(
         "Bài báo (Lehmann và cộng sự, PVLDB 2024) so 5 learned query optimizer (LQO) với PostgreSQL trên "
