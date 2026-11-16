@@ -38,7 +38,7 @@ flowchart LR
 | Pipeline | Luồng chính | Đầu ra |
 |---|---|---|
 | Chuẩn bị | `load_imdb.sh` → `make_imdb50.sh` (cho ablation 8.3) → `warmup_imdb.sh` | `imdbload`, `imdbload50` |
-| TN1 – Mac | `run_fair_comparison.sh` (PostgreSQL + Bao cùng phiên), `run_bao_split.sh` (train + test từng split) | `logs/test__*.txt`, `model__bao__*` |
+| TN1 – Mac | `run_fair_comparison.sh` (PostgreSQL + Bao cùng phiên), `run_bao_split.sh` (train + test từng split) | `logs/mac/postgres/test__*.txt`, `logs/mac/bao/` (log + `model__bao__*`) |
 | TN1 – Kaggle | `build_*_notebook.py` → `push_*_queue.sh` (tối đa 5 phiên) → tải log | `logs/kaggle/bao/`, `logs/kaggle/hybridqo/` |
 | Ablation | `ablation_interleaved.py` (8.4/8.5), `make_imdb50.sh` (8.3), `ablation_k_runs.py` (8.6) | `ablation_*.csv` |
 | TN2 | `exp2_collect.sh`: 113 câu × 6 phương án × 3 lần, kèm EXPLAIN plan mặc định | `logs/mac/exp2/exp2_*.jsonl` |

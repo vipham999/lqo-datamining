@@ -309,7 +309,7 @@ def _load_exp2():
 
 
 def render_exp2():
-    st.header("Thí nghiệm 2 – Một mô hình nhỏ có giúp PostgreSQL chạy nhanh hơn?")
+    st.header("Thí nghiệm 2 – Mô hình phân loại của nhóm có giúp PostgreSQL chạy nhanh hơn?")
     need = [os.path.join(E2, f) for f in ("exp2_summary_per_split.csv", "exp2_per_query.csv", "exp2_labels.csv",
                                           "exp2_feature_importance_rf.csv", "exp2_rules_decision_tree.txt")]
     if _missing(need, "~/.venvs/lqo-exp2/bin/python scripts/exp2/exp2_analyze.py"):
@@ -638,7 +638,7 @@ def render_mining():
             tooltip=["nhóm", alt.Tooltip("giây:Q", format="+.1f")])
         txt = alt.Chart(d2).mark_text(align="left", dx=6, color=MUTED).encode(y=y, x=alt.datum(0), text="nhãn:N")
         st.altair_chart((bars + txt).properties(height=alt.Step(44)), width="stretch")
-    _finding(1, "Luật “thường đúng” vẫn làm lỗ – vì sai một lần rất đắt", c1,
+    _finding(1, "Luật “thường đúng” vẫn làm chậm tổng thể – vì sai một lần rất đắt", c1,
              f"Máy thử **{s['số_luật_đã_thử']} luật**, giữ lại **{s['số_luật_giữ_lại']}** luật đáng tin. Luật nổi bật "
              f"nhất đúng {int(base.số_câu_đúng)}/{int(base.số_câu_khớp)} câu – gấp **{_vn(base.lift, 1)} lần** đoán bừa. "
              f"Nhưng áp vào thì {len(up)} câu nhanh hơn chỉ được tổng **{up.chênh_s.sum():.0f} giây**, còn {len(down)} "
@@ -904,7 +904,7 @@ def _exp1_story(tot, f_why):
     hk, hp = g.loc[("HybridQO", "Nhóm (Kaggle)")].speedup, g.loc[("HybridQO", "Bài báo")].speedup
     d = _bao_per_query()
 
-    st.info("**Bài báo nói:** các mô hình AI tự chọn cách chạy câu truy vấn (gọi là *LQO*, ví dụ Bao, HybridQO) "
+    st.info("**Bài báo nói:** các bộ tối ưu học máy tự chọn cách chạy câu truy vấn (gọi là *LQO*, ví dụ Bao, HybridQO) "
             "**chưa nhanh hơn PostgreSQL**.  \n**Nhóm làm:** chạy lại Bao và HybridQO trên 113 câu truy vấn của "
             "benchmark JOB, rồi **tắt từng thành phần** để xem cái gì thật sự ảnh hưởng tới tốc độ.")
 
@@ -915,10 +915,10 @@ def _exp1_story(tot, f_why):
         rows["dòng"] = rows.phương_pháp + " · " + rows.nguồn_ngắn
         rows = rows.sort_values(["phương_pháp", "nguồn_ngắn"], ascending=[True, False])
         st.altair_chart(_speedup_bars(rows, "dòng", "nguồn_ngắn", CMP_SCALE), width="stretch")
-    _finding(1, "Bài báo nói đúng – AI chưa nhanh hơn PostgreSQL", c1,
+    _finding(1, "Bài báo nói đúng – LQO chưa nhanh hơn PostgreSQL", c1,
              f"Bao chỉ bằng **{_vn(bk)}** lần tốc độ PostgreSQL, HybridQO **{_vn(hk)}** lần (bài báo: {_vn(bp)} và "
              f"{_vn(hp)}). Dưới 1 nghĩa là chậm hơn.",
-             "Trước khi chạy, AI phải “suy nghĩ” thêm cho mỗi câu, mà cái lợi chưa bù được – xem phát hiện 2.",
+             "Trước khi chạy, LQO phải tốn thêm thời gian cho mỗi câu, mà cái lợi chưa bù được – xem phát hiện 2.",
              "Kết luận của bài báo lặp lại được trên máy khác.")
 
     # ---- 2. vì sao
@@ -943,14 +943,14 @@ def _exp1_story(tot, f_why):
         over = (d.plan_b - d.plan_pg).median()
         chg = d[d.đổi_plan]
         ex = chg.exe_pg / chg.exe_b
-        _finding(2, "Vì sao AI thua: tốn “phí” cho mỗi câu, và đổi cách chạy thì hay đổi sai", c2,
+        _finding(2, "Vì sao Bao thua: tốn thêm thời gian cho mỗi câu, và đổi cách chạy thì hay đổi sai", c2,
                  f"Với câu chạy dưới 0,5 giây, Bao chậm hơn **{(short['kết quả'] == 'Thua').sum()}/{len(short)}** lần. "
                  f"Với câu chạy trên 2 giây, Bao lại nhanh hơn ({_vn(long_.pg.sum() / long_.bao.sum())} lần).",
                  f"Trước khi chạy, Bao phải tốn thêm khoảng **{over / 1000:.2f} giây**".replace(".", ",")
-                 + " cho mỗi câu để suy nghĩ – với câu ngắn, “phí” này còn lâu hơn cả chạy câu đó. Khi Bao quyết định "
+                 + " cho mỗi câu để gọi mô hình – với câu ngắn, phần thời gian này còn lâu hơn cả chạy câu đó. Khi Bao quyết định "
                  f"đổi cách chạy ({len(chg)} lần), có **{(ex < 0.9).sum()}** lần chậm hơn, chỉ "
                  f"{(ex > 1.1).sum()} lần nhanh hơn.",
-                 "Muốn thắng PostgreSQL, AI phải **rất rẻ** và **biết khi nào nên để nguyên**.")
+                 "Muốn thắng PostgreSQL, LQO phải **ra quyết định rất nhanh** và **biết khi nào nên để nguyên**.")
 
     # ---- 3. ablation
     f845 = os.path.join(E1, "exp1_ablation_8_4_8_5.csv")
@@ -1030,21 +1030,21 @@ def _exp1_story(tot, f_why):
                 "mạnh theo cả hai chiều – câu nhanh lên bù cho câu chậm đi. → Phải xét **từng câu**, không chỉ nhìn tổng.\n"
                 "2. **Không có thành phần nào luôn tốt hay luôn xấu.** Cùng một lần tắt, câu này lợi mà câu kia hại. "
                 "→ Nếu **chọn đúng cái để tắt cho từng câu** thì sẽ nhanh hơn – đây chính là ý tưởng của Thí nghiệm 2.\n"
-                "3. **Dữ liệu đổi thì AI chọn sai.** AI học thuộc dữ liệu cũ; khi dữ liệu đổi phải cho học lại, "
+                "3. **Dữ liệu đổi thì LQO chọn sai.** LQO học thuộc dữ liệu cũ; khi dữ liệu đổi phải cho học lại, "
                 "còn PostgreSQL thì tự cập nhật.")
 
     st.success(
-        f"**Kết luận:** Bài báo nói đúng – AI chưa nhanh hơn PostgreSQL (Bao {_vn(bk)}, HybridQO {_vn(hk)} lần), vì "
-        "tốn phí cho mỗi câu và hay đổi sai. Nhưng tắt đúng thành phần cho từng câu thì có thể nhanh hơn "
-        "→ **Thí nghiệm 2** thử một mô hình rẻ chỉ làm đúng việc đó.")
+        f"**Kết luận:** Bài báo nói đúng – LQO chưa nhanh hơn PostgreSQL (Bao {_vn(bk)}, HybridQO {_vn(hk)} lần), vì "
+        "tốn thêm thời gian cho mỗi câu và hay đổi sai. Nhưng tắt đúng thành phần cho từng câu thì có thể nhanh hơn "
+        "→ **Thí nghiệm 2** thử một mô hình phân loại ra quyết định chỉ trong vài mili giây để làm đúng việc đó.")
 
 
 # ================================================================ câu chuyện Thí nghiệm 2
 def _exp2_story(agg, pq, lab):
     best_m = agg.loc[MODELS].speedup.idxmax()
     orc = agg.loc["Oracle", "speedup"]
-    st.info("**Ý tưởng (từ Thí nghiệm 1):** tắt đúng thành phần cho từng câu thì PostgreSQL nhanh hơn, nhưng AI phải rẻ.  \n"
-            "**Nhóm làm:** một mô hình nhỏ đọc kế hoạch của PostgreSQL (lệnh `EXPLAIN`, mất vài phần nghìn giây) rồi "
+    st.info("**Ý tưởng (từ Thí nghiệm 1):** tắt đúng thành phần cho từng câu thì PostgreSQL nhanh hơn, nhưng mô hình phải ra quyết định thật nhanh.  \n"
+            "**Nhóm làm:** một mô hình phân loại đọc kế hoạch của PostgreSQL (lệnh `EXPLAIN`, mất vài phần nghìn giây) rồi "
             "chọn 1 trong 6: **giữ nguyên**, hoặc **tắt 1 trong 5 cách nối / đọc bảng**. "
             f"Nếu lần nào cũng chọn đúng, PostgreSQL sẽ nhanh hơn **{_vn(orc)} lần**.")
 
@@ -1056,12 +1056,12 @@ def _exp2_story(agg, pq, lab):
     def c1():
         st.altair_chart(_wtl_bars(w, "phương_pháp", None, list(w.phương_pháp)), width="stretch")
         st.caption("Xanh = nhanh hơn PostgreSQL, xám = ngang nhau, đỏ = chậm hơn (lệch quá 10% mới tính).")
-    _finding(1, "Mô hình rẻ nên ít khi làm chậm hơn PostgreSQL", c1,
+    _finding(1, "Mô hình của nhóm ra quyết định nhanh nên ít khi làm chậm hơn PostgreSQL", c1,
              f"Mô hình chậm hơn PostgreSQL ở **{agg.loc[MODELS, 'tỉ_lệ_thua'].min():.0%}–"
              f"{agg.loc[MODELS, 'tỉ_lệ_thua'].max():.0%}** số lần, Bao **{agg.loc['Bao', 'tỉ_lệ_thua']:.0%}**.",
-             f"“Phí” của mô hình chỉ khoảng **{pq.explain_ms.median():.0f} phần nghìn giây** mỗi câu, Bao tốn khoảng "
+             f"Thời gian ra quyết định của mô hình chỉ khoảng **{pq.explain_ms.median():.0f} phần nghìn giây** mỗi câu, Bao tốn khoảng "
              "0,15 giây. Khi không chắc, mô hình hay chọn giữ nguyên nên kết quả ngang PostgreSQL.",
-             "Đã giải quyết được vấn đề “phí cao” của Thí nghiệm 1.")
+             "Đã giải quyết được vấn đề tốn thêm thời gian cho mỗi câu của Thí nghiệm 1.")
 
     # ---- 2
     p = pq[pq.mô_hình == best_m]
@@ -1094,7 +1094,7 @@ def _exp2_story(agg, pq, lab):
 
     a = pq.assign(đúng=pq.nhãn_thật == pq.dự_đoán).groupby("kiểu").đúng.mean()
     st.success(
-        f"**Kết luận:** Mô hình nhỏ **chưa** làm PostgreSQL nhanh hơn về tổng ({_vn(agg.loc[best_m, 'speedup'])} lần; "
+        f"**Kết luận:** Mô hình của nhóm **chưa** làm PostgreSQL nhanh hơn về tổng ({_vn(agg.loc[best_m, 'speedup'])} lần; "
         f"Bao {_vn(agg.loc['Bao', 'speedup'])} lần), nhưng **ít khi làm chậm hơn PostgreSQL** so với Bao. "
         "Điểm yếu là vài lần chọn sai rất đắt, nhất là với loại câu chưa từng gặp (chỉ đoán đúng "
         f"{a.get('BQ', float('nan')):.0%}).  \n"

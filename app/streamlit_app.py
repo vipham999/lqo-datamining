@@ -121,7 +121,7 @@ with tab0:
         ("17a–17f", "Ít bảng mà vẫn chậm", f"chỉ 7 bảng nhưng chạy {ms(f17.min() if has_t else None)}–"
          f"{ms(f17.max() if has_t else None)}"),
         ("6c, 32a", "Nhanh nhất", f"chỉ {ms(t['6c'] if has_t else None)} và {ms(t['32a'] if has_t else None)} – "
-         "AI tốn thời gian “suy nghĩ” còn lâu hơn chạy câu"),
+         "LQO tốn thời gian ra quyết định còn lâu hơn chạy câu"),
         ("26a", "Chọn cách chạy khác thì chênh 35 lần", "giữ nguyên 5,2 giây; tắt index scan còn 0,75 giây; "
          "tắt hash join lên 26,8 giây"),
     ], columns=["câu", "đặc điểm", "vì sao đáng nhớ"])

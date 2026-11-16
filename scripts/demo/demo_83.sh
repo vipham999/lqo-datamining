@@ -18,9 +18,11 @@ M=/app/logs/mac/demo_83
 BAO="SET bao_host TO '10.5.0.6'; SET enable_bao TO on; SET enable_bao_selection TO on; SET enable_bao_rewards TO off;"
 
 load_model() {   # nạp model vào Bao server, chờ "Accepted new model"
+  local n; n=$(docker exec bao_server sh -c 'wc -l < /app/logs/bao_server.log' 2>/dev/null | tr -dc 0-9)
   docker exec bao_server bash /app/scripts/setup/start_bao_server.sh "$M/$1" > /dev/null 2>&1
-  for _ in $(seq 30); do
-    docker exec bao_server tail -1 /app/logs/bao_server.log 2>/dev/null | grep -q "Accepted new model" && return 0
+  for _ in $(seq 120); do   # lần đầu sau khi máy nghỉ lâu có thể mất > 30 s (nạp PyTorch)
+    docker exec bao_server sh -c "tail -n +$((${n:-0} + 1)) /app/logs/bao_server.log" 2>/dev/null |
+      grep -q "Accepted new model" && return 0
     sleep 1
   done
   echo "  Bao server chưa nạp được model $1"; exit 1
@@ -53,4 +55,4 @@ for q in $QS; do
     r=b/a; if (r>=1.1) s=sprintf("Bao-50 chậm hơn %.1f×", r); else if (r<=0.91) s=sprintf("Bao-50 nhanh hơn %.1f×", 1/r); else s="như nhau";
     printf "  %-4s %s\n", q, s } }'
 done
-docker exec bao_server tmux kill-session -t bao 2> /dev/null   # tắt Bao server như trước khi demo
+docker exec bao_server tmux kill-session -t bao 2> /dev/null || true   # tắt Bao server như trước khi demo
