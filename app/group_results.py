@@ -125,11 +125,9 @@ def _repeat_limit():
         n = d.groupby("phương_pháp")["số_lần"].min().to_dict()
     b, h = int(n.get("Bao", 1)), int(n.get("HybridQO", 1))
     if b >= 3 and h >= 3:
-        return ("- **Bao và HybridQO đã train 3 lần mỗi split** như tác giả; kết quả từng split dao động giữa các lần "
-                "kết luận dựa trên trung vị.")
-    return (f"- **Số lần train mỗi split:** Bao {b} lần, HybridQO {h} lần (tác giả: 3 lần) do giới hạn thời gian "
-            "(mỗi lần train lại cả 9 split mất khoảng 30 giờ trên Kaggle); kết quả từng split có thể dao động giữa các "
-            "lần train. Phần ablation đã lặp lại đủ như tác giả.")
+        return "- **Bao và HybridQO train 3 lần mỗi split** như tác giả; kết luận dựa trên trung vị."
+    return (f"- **Số lần train mỗi split:** Bao {b}, HybridQO {h} (tác giả 3) vì mỗi lần train đủ 9 split mất khoảng "
+            "30 giờ trên Kaggle; kết quả từng split có thể dao động. Phần ablation đã lặp đủ như tác giả.")
 
 
 def render_exp1():
@@ -162,7 +160,7 @@ def render_exp1():
         long = pd.DataFrame(rows)
         base = alt.Chart(long).encode(
             x=alt.X("split:N", sort=SPLITS, title=None, axis=alt.Axis(labelAngle=0)),
-            y=alt.Y("trung_vị:Q", title="Speedup trung vị", scale=alt.Scale(domain=[0, 1.2])),
+            y=alt.Y("trung_vị:Q", title="Tốc độ trung vị (theo từng câu)", scale=alt.Scale(domain=[0, 1.2])),
             color=alt.Color("phương_pháp:N", scale=_scale(["Bao", "HybridQO"]), title=None),
             shape=alt.Shape("nguồn:N", scale=alt.Scale(domain=["Nhóm (Kaggle)", "Bài báo"], range=["circle", "triangle"]),
                             title=None),
@@ -171,8 +169,8 @@ def render_exp1():
         one = alt.Chart(pd.DataFrame({"y": [1]})).mark_rule(color=MUTED, strokeDash=[4, 4]).encode(y="y:Q")
         st.altair_chart((one + base.mark_point(size=110, filled=True, opacity=0.9)).properties(height=320),
                         width="stretch")
-        st.caption("HybridQO nằm sát đường 1 ở mọi split (trung vị 0,85–0,94), Bao thấp hơn hẳn (0,51–0,68): "
-                   "HybridQO thắng Bao về trung vị ở cả 9/9 split, giống bài báo.")
+        st.caption("HybridQO sát đường 1 ở mọi split (0,85–0,94), Bao thấp hơn hẳn (0,51–0,68): HybridQO hơn Bao "
+                   "ở cả 9/9 split, giống bài báo.")
         st.dataframe(ps.style.format({c: "{:.2f}" for c in ps.columns if "speedup" in c or "trung_vị" in c}),
                      hide_index=True, width="stretch")
     with t_why:
@@ -182,20 +180,20 @@ def render_exp1():
                                                cp=("chi_phí_thêm_s", "sum"))
             k = st.columns(4)
             k[0].metric("Bao – câu chọn plan khác PostgreSQL", f"{int(s.loc['Bao', 'doi'])}/{int(s.loc['Bao', 'n'])}")
-            k[1].metric("Bao – chi phí lập kế hoạch thêm", f"{s.loc['Bao', 'cp']:.1f} s")
+            k[1].metric("Bao – thời gian thêm để chọn plan", f"{s.loc['Bao', 'cp']:.1f} s")
             k[2].metric("HybridQO – câu chọn plan khác PostgreSQL",
                         f"{int(s.loc['HybridQO', 'doi'])}/{int(s.loc['HybridQO', 'n'])}")
-            k[3].metric("HybridQO – thời gian suy luận", f"{s.loc['HybridQO', 'cp']:.1f} s")
+            k[3].metric("HybridQO – thời gian chạy mô hình", f"{s.loc['HybridQO', 'cp']:.1f} s")
+            cach = ["chỉ tính lúc chạy câu", "tính cả thời gian chọn plan"]
             sp = why.melt(id_vars=["split", "phương_pháp"], value_vars=["speedup_chỉ_thực_thi", "speedup_end_to_end"],
                           var_name="cách_tính", value_name="speedup")
-            sp["cách_tính"] = sp.cách_tính.map({"speedup_chỉ_thực_thi": "chỉ thực thi",
-                                                 "speedup_end_to_end": "end-to-end"})
+            sp["cách_tính"] = sp.cách_tính.map({"speedup_chỉ_thực_thi": cach[0], "speedup_end_to_end": cach[1]})
             # data đặt ở lớp ngoài cùng (facet không cho lớp con có data riêng) → kiểu dữ liệu phải ghi rõ
             ch = alt.Chart().mark_bar().encode(
                 x=alt.X("split:N", sort=SPLITS, title=None, axis=alt.Axis(labelAngle=0)),
-                xOffset=alt.XOffset("cách_tính:N", sort=["chỉ thực thi", "end-to-end"]),
-                y=alt.Y("speedup:Q", title="Speedup tổng so với PostgreSQL"),
-                color=alt.Color("cách_tính:N", scale=alt.Scale(domain=["chỉ thực thi", "end-to-end"],
+                xOffset=alt.XOffset("cách_tính:N", sort=cach),
+                y=alt.Y("speedup:Q", title="Tốc độ so với PostgreSQL"),
+                color=alt.Color("cách_tính:N", scale=alt.Scale(domain=cach,
                                                                range=[GREY, core.PALETTE[1]]), title=None,
                                 legend=alt.Legend(orient="top")),
                 tooltip=["split:N", "phương_pháp:N", "cách_tính:N", alt.Tooltip("speedup:Q", format=".2f")])
@@ -203,17 +201,15 @@ def render_exp1():
             st.altair_chart(alt.layer(ch, rule, data=sp).properties(height=220).facet(
                 row=alt.Row("phương_pháp:N", title=None)), width="stretch")
             st.markdown(
-                "- **Bao:** mỗi câu phải lập kế hoạch cho 5 tập hint rồi chạy model để chọn → thêm khoảng 100–190 ms mỗi câu, "
-                "trong khi một nửa số câu JOB chạy dưới 0,5 s (với câu trung vị, phần cộng thêm này đã bằng 20–40% thời gian chạy). Model có đổi plan ở 66 câu nhưng chọn sai nhiều hơn chọn đúng, "
-                "nên tính cả chi phí thì Bao thua 77% số câu.\n"
-                "- **HybridQO:** sau 10 epoch gần như luôn giữ plan của PostgreSQL (225/233 câu) → phần thực thi bằng "
-                "PostgreSQL (≈1,00×), chỉ thua phần thời gian suy luận. Không đổi plan thì không thể thắng; tác giả train "
-                "40–49 epoch nên HybridQO mới dám đổi plan và thắng 34 câu.")
+                "- **Bao:** mỗi câu lập plan cho 5 bộ hint rồi hỏi mô hình → thêm khoảng 100–190 ms, trong khi nửa số "
+                "câu JOB chạy dưới 0,5 s. Bao đổi plan ở 66 câu nhưng sai nhiều hơn đúng → thua 77% số câu.\n"
+                "- **HybridQO:** sau 10 epoch gần như luôn giữ plan PostgreSQL (225/233 câu) → lúc chạy câu bằng "
+                "PostgreSQL, chỉ thua phần thời gian mô hình. Không đổi plan thì không thể thắng; tác giả train 40–49 "
+                "epoch nên HybridQO mới thắng được 34 câu.")
     with t_abl:
         a1, a2 = st.columns(2)
         with a1:
-            st.markdown("**8.4 Tắt bitmap/tid scan và 8.5 tắt GEQO** (PostgreSQL, 113 câu JOB, chạy xen kẽ 3 cấu hình, "
-                        "3 lần mỗi câu)")
+            st.markdown("**8.4 Tắt bitmap/TID scan, 8.5 tắt GEQO** (113 câu JOB, chạy xen kẽ, 3 lần mỗi câu)")
             abl = []
             for env, pat in (("Kaggle", "ablation_{}_kaggle.csv"), ("Mac", "ablation_{}_interleaved_*.csv")):
                 for name, label in (("no_geqo", "Tắt GEQO (8.5)"), ("no_bitmap_tidscan", "Tắt bitmap/tid scan (8.4)")):
@@ -229,9 +225,9 @@ def render_exp1():
             if abl:
                 st.dataframe(pd.DataFrame(abl).style.format({"tỉ lệ trung vị, câu ≥ 12 bảng": "{:.2f}×"}),
                              hide_index=True, width="stretch")
-                st.caption("Tỉ lệ > 1 = chậm đi khi áp dụng ablation. Giống bài báo: tổng thời gian gần như không đổi "
-                           "nhưng một số câu lẻ thay đổi mạnh theo cả hai hướng (vd. trên Kaggle tắt bitmap scan làm 28b "
-                           "chậm 7,5× nhưng 28a nhanh 6×); tắt GEQO chỉ ảnh hưởng câu từ 12 bảng trở lên.")
+                st.caption("Tỉ lệ > 1 = chậm đi. Giống bài báo: tổng gần như không đổi, nhưng vài câu đổi mạnh theo cả "
+                           "hai chiều (Kaggle: tắt bitmap scan làm 28b chậm 7,5×, 28a nhanh 6×). Tắt GEQO chỉ ảnh hưởng "
+                           "câu từ 12 bảng.")
             cmp_rows = []
             for name, label in (("no_bitmap_tidscan", "8.4 tắt bitmap/tid"), ("no_geqo", "8.5 tắt GEQO")):
                 f = os.path.join(core.OUT, f"ablation_{name}_kaggle.csv")
@@ -251,13 +247,12 @@ def render_exp1():
                 st.markdown("**Đối chiếu các câu bài báo nêu tên** – cùng chiều: "
                             + ", ".join(f"{k}: {v}" for k, v in ok.items()))
                 st.table(cmp.set_index(["ablation", "câu"]))
-                st.caption("Các câu lệch chiều (28a, 30a, 30c) đều nối ≥ 12 bảng: plan phụ thuộc cấu hình bộ nhớ (Kaggle "
-                           "8 GB / 512 MB so với 32 GB / 4 GB của tác giả) và tính ngẫu nhiên của GEQO. Riêng 28a trên "
-                           "Kaggle chạy chậm ở cấu hình mặc định (5,6 s) nên mọi ablation đều làm nó nhanh lên.")
+                st.caption("Các câu lệch chiều (28a, 30a, 30c) đều nối ≥ 12 bảng: plan phụ thuộc bộ nhớ (Kaggle 8 GB / "
+                           "512 MB, tác giả 32 GB / 4 GB) và tính ngẫu nhiên của GEQO. 28a trên Kaggle chậm sẵn ở cấu "
+                           "hình mặc định (5,6 s) nên ablation nào cũng làm nó nhanh lên.")
         with a2:
-            st.markdown("**8.3 Dữ liệu thay đổi (covariate shift):** Bao-Full (train trên IMDB đầy đủ) và Bao-50 (train "
-                        "trên IMDB-50%, giữ 50% bảng `title` bằng lấy mẫu Bernoulli) cùng chạy tập test BQ-1 trên IMDB-50% "
-                        "(Kaggle)")
+            st.markdown("**8.3 Dữ liệu thay đổi:** Bao-Full (học trên IMDB đầy đủ) và Bao-50 (học trên IMDB 50%) cùng "
+                        "chạy 19 câu test BQ-1 trên IMDB 50% (Kaggle)")
             f83k = os.path.join(E1, "exp1_ablation_8_3_kaggle.csv")
             if os.path.exists(f83k):
                 d = pd.read_csv(f83k)
@@ -265,11 +260,9 @@ def render_exp1():
                 d["kết quả theo câu"] = d.apply(
                     lambda r: f"chậm hơn {r.chậm_hơn} câu, nhanh hơn {r.nhanh_hơn} câu (trên {r.số_câu})", axis=1)
                 st.dataframe(d[["so_sánh", "nguồn", "kết quả theo câu", "tổng"]], hide_index=True, width="stretch")
-                st.caption("Ngưỡng ±10%. Log tác giả: 4 model mỗi loại (lấy trung vị), cùng hướng thử "
-                           "(`test__bao__imdb*_trained__imdb2_tested`), lọc đúng 19 câu test BQ-1. Kết quả của nhóm sát "
-                           "tác giả: model train trên dữ liệu khác (Bao-Full) chậm hơn model train đúng dữ liệu (Bao-50) "
-                           "khoảng 10–14% tổng thời gian; riêng 7c Bao-Full chậm 1,9× (tác giả 1,6×). Cả hai đều vẫn "
-                           "thua PostgreSQL ở đa số câu.")
+                st.caption("Ngưỡng ±10%. Log tác giả: 4 mô hình mỗi loại, lấy trung vị, cùng 19 câu test BQ-1. Kết quả "
+                           "nhóm sát tác giả: Bao-Full chậm hơn Bao-50 khoảng 10–14% tổng thời gian; riêng 7c Bao-Full "
+                           "chậm 1,9× (tác giả 1,6×). Cả hai vẫn thua PostgreSQL ở đa số câu.")
     with t_design:
         st.table(pd.DataFrame([
             ("Câu hỏi nghiên cứu", "Kết luận của bài báo có còn đúng trên môi trường của nhóm không?"),
@@ -285,13 +278,11 @@ def render_exp1():
         ], columns=["mục", "mô tả"]).set_index("mục"))
         st.markdown("**Hạn chế**")
         st.markdown(
-            "- **Bộ nhớ thấp hơn bài báo** (Kaggle 8 GB / 512 MB so với 32 GB / 4 GB) → so sánh xu hướng và thứ hạng, "
-            "không so số giây tuyệt đối.\n"
-            "- **HybridQO chỉ train 10 epoch** (tác giả 50, lấy kết quả ở epoch 40–49) do giới hạn 12 giờ mỗi phiên Kaggle; "
-            "mô hình gần như giữ plan của PostgreSQL (đổi plan 8/233 câu) nên không có câu thắng.\n"
+            "- **Ít bộ nhớ hơn bài báo** (Kaggle 8 GB / 512 MB, bài báo 32 GB / 4 GB) → so xu hướng, không so số giây.\n"
+            "- **HybridQO chỉ train 10 epoch** (tác giả 50) vì Kaggle giới hạn 12 giờ mỗi phiên → gần như giữ plan "
+            "PostgreSQL (đổi 8/233 câu), không có câu thắng.\n"
             f"{_repeat_limit()}\n"
-            "- **8.3 chỉ chạy trên split BQ-1** như tác giả, 4 bản mỗi model; các câu bài báo nêu tên không lặp lại, "
-            "hiệu ứng có nhưng nhỏ hơn bài báo.")
+            "- **8.3 chỉ chạy trên BQ-1** như tác giả, 4 bản mỗi mô hình; hiệu ứng có nhưng nhỏ hơn bài báo.")
 
 
 # ================================================================ Thí nghiệm 2
@@ -309,7 +300,7 @@ def _load_exp2():
 
 
 def render_exp2():
-    st.header("Thí nghiệm 2 – Mô hình phân loại của nhóm có giúp PostgreSQL chạy nhanh hơn?")
+    st.header("Thí nghiệm 2 – Mô hình của nhóm có giúp PostgreSQL nhanh hơn?")
     need = [os.path.join(E2, f) for f in ("exp2_summary_per_split.csv", "exp2_per_query.csv", "exp2_labels.csv",
                                           "exp2_feature_importance_rf.csv", "exp2_rules_decision_tree.txt")]
     if _missing(need, "~/.venvs/lqo-exp2/bin/python scripts/exp2/exp2_analyze.py"):
@@ -332,30 +323,30 @@ def render_exp2():
             fewer = [mm for mm in MODELS if agg.loc[mm, "tỉ_lệ_thua"] < agg.loc["Bao", "tỉ_lệ_thua"]]
             st.markdown("**H1: mô hình nhanh hơn PostgreSQL và không thua Bao**")
             st.markdown(
-                f"- H1a – nhanh hơn PostgreSQL: **{'chấp nhận' if faster else 'bác bỏ'}**. Speedup tổng "
+                f"- H1a – nhanh hơn PostgreSQL: **{'chấp nhận' if faster else 'bác bỏ'}**. Tốc độ tổng: "
                 + ", ".join(f"{mm} {agg.loc[mm, 'speedup']:.2f}×" for mm in MODELS)
-                + f"; Oracle cho thấy còn {agg.loc['Oracle', 'speedup']:.2f}× để khai thác.\n"
+                + f"; Oracle cho thấy có thể đạt {agg.loc['Oracle', 'speedup']:.2f}×.\n"
                 f"- H1b – không thua Bao: **đúng một nửa**. Theo từng câu, mô hình thua "
                 f"{agg.loc[MODELS, 'tỉ_lệ_thua'].min():.0%}–{agg.loc[MODELS, 'tỉ_lệ_thua'].max():.0%} số câu, "
                 f"ít hơn Bao ({agg.loc['Bao', 'tỉ_lệ_thua']:.0%}){' ✔' if len(fewer) == 3 else ''}; theo tổng thời gian "
                 f"Bao vẫn hơn ({agg.loc['Bao', 'speedup']:.2f}×).")
             loss = pq[(pq.PG_ms / pq.e2e_ms) < 0.9]
             wrong = loss[loss.dự_đoán != "default"]
-            st.caption(f"Vì sao thua: chọn sai phương án đắt đỏ (vd 26a + no_hashjoin: 5,7 s → 32 s) và chi phí EXPLAIN "
-                       f"khoảng {pq.explain_ms.mean():.0f} ms mỗi câu. Trong {len(loss)} lần thua của 3 mô hình, "
-                       f"{len(wrong)} lần do chọn sai phương án, {len(loss) - len(wrong)} lần chỉ do chi phí cộng thêm.")
+            st.caption(f"Vì sao thua: chọn sai phương án đắt (26a + no_hashjoin: 5,7 s → 32 s) và EXPLAIN tốn khoảng "
+                       f"{pq.explain_ms.mean():.0f} ms mỗi câu. Trong {len(loss)} lần thua của 3 mô hình: {len(wrong)} "
+                       f"lần do chọn sai, {len(loss) - len(wrong)} lần chỉ do thời gian cộng thêm.")
         with h2:
             st.markdown("**H2: mô hình kém nhất với loại câu chưa từng học (Base Query)**")
             a = (pq.assign(đúng=pq.nhãn_thật == pq.dự_đoán).groupby(["mô_hình", "kiểu"]).đúng.mean()
                  .rename("accuracy").reset_index())
             lowest_bq = all(a[a.mô_hình == mm].set_index("kiểu").accuracy.idxmin() == "BQ" for mm in MODELS)
-            st.markdown(f"- Theo độ chính xác: **{'chấp nhận' if lowest_bq else 'chưa rõ'}** – accuracy thấp nhất ở "
-                        "Base Query với cả 3 mô hình.\n- Theo thời gian: chưa rõ, vì vài câu chọn sai rất đắt rơi vào LOO.")
+            st.markdown(f"- Theo độ chính xác: **{'chấp nhận' if lowest_bq else 'chưa rõ'}** – cả 3 mô hình đều thấp "
+                        "nhất ở Base Query.\n- Theo thời gian: chưa rõ, vì vài câu sai đắt nằm ở LOO.")
             st.altair_chart(alt.Chart(a).mark_bar(cornerRadiusEnd=3).encode(
                 x=alt.X("kiểu:N", sort=TYPES, title=None, axis=alt.Axis(labelAngle=0, labelExpr=
                         "datum.value == 'LOO' ? 'LOO (dễ)' : datum.value == 'BQ' ? 'BQ (khó)' : 'RND'")),
                 xOffset=alt.XOffset("mô_hình:N", sort=MODELS),
-                y=alt.Y("accuracy:Q", title="Accuracy", axis=alt.Axis(format="%"), scale=alt.Scale(domain=[0, 1])),
+                y=alt.Y("accuracy:Q", title="Độ chính xác", axis=alt.Axis(format="%"), scale=alt.Scale(domain=[0, 1])),
                 color=alt.Color("mô_hình:N", scale=_scale(MODELS), sort=MODELS, title=None,
                                 legend=alt.Legend(orient="top")),
                 tooltip=["mô_hình", "kiểu", alt.Tooltip("accuracy:Q", format=".0%")]).properties(height=260),
@@ -366,12 +357,11 @@ def render_exp2():
             ia = pd.read_csv(f_all).set_index("đặc_trưng")[MODELS]
             top = ia.mean(axis=1).sort_values(ascending=False).head(10).index
             long = ia.loc[top].reset_index().melt(id_vars="đặc_trưng", var_name="mô_hình", value_name="importance")
-            st.markdown("**10 đặc trưng quan trọng nhất – cả 3 mô hình** (train trên cả 113 câu; mỗi mô hình chuẩn "
-                        "hóa về tổng = 1; xếp theo trung bình 3 mô hình)")
+            st.markdown("**10 đặc trưng quan trọng nhất** (cả 3 mô hình, train trên 113 câu)")
             st.altair_chart(alt.Chart(long).mark_bar(cornerRadiusEnd=3).encode(
                 y=alt.Y("đặc_trưng:N", sort=list(top), title=None, axis=alt.Axis(labelLimit=220)),
                 yOffset=alt.YOffset("mô_hình:N", sort=MODELS),
-                x=alt.X("importance:Q", title="Mức quan trọng (tỉ lệ)", axis=alt.Axis(format="%")),
+                x=alt.X("importance:Q", title="Mức quan trọng", axis=alt.Axis(format="%")),
                 color=alt.Color("mô_hình:N", scale=_scale(MODELS), sort=MODELS, title=None,
                                 legend=alt.Legend(orient="top")),
                 tooltip=["đặc_trưng", "mô_hình", alt.Tooltip("importance:Q", format=".1%")]
@@ -380,18 +370,15 @@ def render_exp2():
             common = [c for c in top if (ia.loc[c] > 0).all()]
             st.markdown(
                 f"- **Cả 3 mô hình cùng dựa vào** {', '.join(f'`{c}`' for c in common[:5])}: độ phức tạp của plan "
-                "(số node, cost) và của câu SQL (độ dài, số điều kiện lọc) → câu càng phức tạp, plan mặc định càng "
-                "dễ chưa tốt.\n"
-                f"- **Decision Tree** chỉ dùng {used['DecisionTree']}/{len(ia)} đặc trưng (một cây, độ sâu 4) nên dồn "
-                f"độ quan trọng vào vài đặc trưng; **Random Forest** ({used['RandomForest']} đặc trưng) và "
-                f"**LightGBM** ({used['LightGBM']} đặc trưng) rải đều hơn.\n"
-                "- Đặc trưng gần trùng thông tin (vd `plan_startup_cost` và `plan_total_cost`) thì mô hình chỉ cần "
-                "chọn một → cùng đặc trưng có thể quan trọng với mô hình này nhưng bằng 0 với mô hình khác.\n"
-                "- Cách đo: Decision Tree, Random Forest = mức giảm impurity; LightGBM = tổng gain. Đây là "
-                "“mô hình dựa vào gì”, chưa phải quy luật chắc chắn (accuracy chỉ khoảng 52–55%).")
+                "và câu SQL → câu càng phức tạp, plan mặc định càng dễ chưa tốt.\n"
+                f"- **Decision Tree** chỉ dùng {used['DecisionTree']}/{len(ia)} đặc trưng (1 cây, sâu 4); "
+                f"**Random Forest** ({used['RandomForest']}) và **LightGBM** ({used['LightGBM']}) dùng rộng hơn.\n"
+                "- Hai đặc trưng gần giống nhau (như `plan_startup_cost`, `plan_total_cost`) thì mô hình chỉ cần một → "
+                "có thể quan trọng ở mô hình này, bằng 0 ở mô hình khác.\n"
+                "- Đây là “mô hình dựa vào gì”, chưa phải quy luật (độ chính xác chỉ khoảng 52–55%).")
         else:
             st.info("Chưa có exp2_feature_importance_all.csv – chạy lại scripts/exp2/exp2_analyze.py.")
-        st.markdown("**Luật chọn phương án của Decision Tree** (độ sâu 4, train trên cả 113 câu)")
+        st.markdown("**Luật chọn phương án của Decision Tree** (sâu 4, train trên 113 câu)")
         st.code(rules.split("\n\n", 1)[-1], language="text")
         dist = lab.nhãn.value_counts()
         st.caption("Phân bố nhãn (113 câu): " + ", ".join(f"{k} {v}" for k, v in dist.items()) + ".")
@@ -426,29 +413,24 @@ def render_exp2():
                     lambda v: "color: #e34948" if isinstance(v, float) and v < 0.9 else
                     ("color: #1baf7a" if isinstance(v, float) and v > 1.1 else ""), subset=["speedup"]),
                     hide_index=True, width="stretch", height=260)
-                st.caption("Mỗi dòng: một split có câu này trong tập test. Speedup tính cả EXPLAIN và suy luận.")
+                st.caption("Mỗi dòng là một split có câu này trong tập test. Đã tính cả EXPLAIN và suy luận.")
     with t_design:
         st.table(pd.DataFrame([
             ("Câu hỏi nghiên cứu", "Mô hình phân loại đơn giản có giúp PostgreSQL nhanh hơn không?"),
-            ("Dữ liệu", "113 câu JOB × 6 phương án × 3 lần chạy (MacBook M1, PostgreSQL 12.5)"),
+            ("Bài toán", "Mỗi câu chọn 1 trong 6: `default`, `no_nestloop`, `no_hashjoin`, `no_mergejoin`, "
+                         "`no_seqscan`, `no_indexscan`"),
+            ("Dữ liệu", "113 câu JOB × 6 phương án × 3 lần chạy, lấy lần thứ 3 (MacBook M1, PostgreSQL 12.5)"),
             ("Nhãn", "Phương án nhanh nhất; giữ default nếu không nhanh hơn ít nhất 5%"),
             ("Đặc trưng", "Câu SQL và plan mặc định từ EXPLAIN (có trước khi chạy, không dùng q-error)"),
             ("Mô hình", "Decision Tree, Random Forest, LightGBM (siêu tham số cố định)"),
             ("Mốc so sánh", "PostgreSQL mặc định; Bao (cùng máy Mac, cùng câu test); Oracle (biết trước phương án "
                             "nhanh nhất – giới hạn trên)"),
             ("Cách chia dữ liệu", "Đúng 9 split của bài báo: Leave One Out, Random, Base Query [§7.2]"),
+            ("Thời gian của mô hình", "EXPLAIN + suy luận + thời gian của phương án được chọn"),
             ("Kết quả trình bày", "Tổng thời gian; số câu nhanh lên / chậm đi; luật chọn phương án"),
             ("Giả thuyết", "H1: mô hình nhanh hơn PostgreSQL và không thua Bao. "
                            "H2: mô hình kém nhất với loại câu chưa từng học (Base Query)"),
         ], columns=["mục", "mô tả"]).set_index("mục"))
-        st.markdown(
-            "- **Bài toán:** với mỗi câu SQL, chọn 1 trong 6 phương án: `default` hoặc tắt một toán tử "
-            "(`no_nestloop`, `no_hashjoin`, `no_mergejoin`, `no_seqscan`, `no_indexscan`).\n"
-            "- **Dữ liệu:** 113 câu JOB × 6 phương án × 3 lần (lấy lần thứ 3). Nhãn = phương án nhanh nhất, "
-            "giữ `default` nếu không nhanh hơn ít nhất 5%.\n"
-            "- **Đặc trưng:** câu SQL + plan mặc định từ `EXPLAIN` (không ANALYZE) – chỉ thông tin có trước khi chạy.\n"
-            "- **Đánh giá:** train/test trên đúng 9 split của bài báo; thời gian của mô hình = EXPLAIN + suy luận + "
-            "thời gian của phương án được chọn.")
 
 # ================================================================ khai phá trên dữ liệu đã chạy
 FULL_SPLITS = [f"{k}_split_{i}" for k in ("leave_one_out", "random", "base_query") for i in (1, 2, 3)]
@@ -573,17 +555,15 @@ def _exp2_mining(lab):
     safest = min(hints, key=tot.get)
     st.markdown(
         "**Phát hiện:**\n"
-        f"1. **Rủi ro không đối xứng.** Tắt nested loop chỉ có lợi ở {(nl > 1.1).sum()} câu nhưng làm chậm "
-        f"{(nl < 0.9).sum()} câu, tổng thời gian gấp {tot['no_nestloop']:.1f}× → chọn sai một lần có thể mất nhiều "
-        f"hơn cả chục lần chọn đúng. `{safest}` an toàn nhất (tổng {tot[safest]:.2f}×).\n"
-        f"2. **Lợi ích tập trung ở vài câu chạy lâu.** 10 câu ({', '.join(t10.query_id.head(5))}…) chiếm "
-        f"{share10:.0%} tổng thời gian có thể tiết kiệm ({top.gain_s.sum():.0f} s) → chọn đúng vài câu lớn quan "
-        "trọng hơn accuracy trên toàn bộ.\n"
-        f"3. **Câu cùng họ chưa chắc cùng phương án tốt nhất.** Trung bình chỉ {fam.mean():.0%} số câu trong một họ "
-        f"có cùng nhãn; chỉ {(fam == 1).sum()}/{len(fam)} họ nhất quán hoàn toàn → giải thích vì sao split Base Query "
-        "(test trên họ chưa thấy) khó nhất.\n\n"
-        "**Gợi ý:** mô hình nên có “quyền từ chối” – chỉ đổi phương án khi rất chắc và với câu có cost lớn, "
-        "tránh các phương án rủi ro cao như `no_nestloop`.")
+        f"1. **Lợi ít, hại nhiều.** Tắt nested loop chỉ lợi ở {(nl > 1.1).sum()} câu nhưng làm chậm "
+        f"{(nl < 0.9).sum()} câu, tổng gấp {tot['no_nestloop']:.1f}× → sai một lần có thể mất hơn cả chục lần đúng. "
+        f"`{safest}` an toàn nhất (tổng {tot[safest]:.2f}×).\n"
+        f"2. **Lợi tập trung ở vài câu chạy lâu.** 10 câu ({', '.join(t10.query_id.head(5))}…) chiếm "
+        f"{share10:.0%} thời gian có thể tiết kiệm ({top.gain_s.sum():.0f} s) → chọn đúng vài câu lớn quan trọng hơn "
+        "độ chính xác chung.\n"
+        f"3. **Câu cùng họ chưa chắc cùng phương án tốt nhất.** Trung bình chỉ {fam.mean():.0%} câu trong họ cùng "
+        f"nhãn; {(fam == 1).sum()}/{len(fam)} họ nhất quán hoàn toàn → vì vậy Base Query khó nhất.\n\n"
+        "**Gợi ý:** chỉ đổi khi rất chắc, ở câu có cost lớn, và cẩn thận với phương án rủi ro như `no_nestloop`.")
 
 
 # ================================================================ Khai phá dữ liệu
@@ -607,15 +587,15 @@ def render_mining():
     sw = pd.read_csv(os.path.join(E2, "exp2_abstain_switches.csv"))
     TH = 0.6
 
-    st.info("**Vấn đề:** ở Thí nghiệm 2, mô hình đoán đúng khoảng một nửa nhưng tổng thời gian vẫn **chậm hơn** "
-            "PostgreSQL.  \n**Khai phá dữ liệu để làm gì:** đọc lại dữ liệu đã đo (113 câu × 6 cách chạy) để tìm "
-            "**quy luật** giải thích vì sao – rồi dùng quy luật đó **sửa mô hình** và đo lại.")
+    st.info("**Vấn đề:** ở Thí nghiệm 2, mô hình đoán đúng khoảng một nửa mà tổng vẫn **chậm hơn** PostgreSQL.  \n"
+            "**Cách làm:** khai phá dữ liệu đã đo (113 câu × 6 cách chạy) để tìm **nguyên nhân**, rồi **sửa mô hình** "
+            "và đo lại.")
     steps = st.columns(3)
     for c, (t, b_) in zip(steps, [
-            ("① Tìm luật", "Máy tự thử hàng trăm luật dạng “NẾU câu có đặc điểm A THÌ tắt X có lợi”, chỉ giữ luật "
-                           "đúng thật (kỹ thuật **luật kết hợp**)."),
-            ("② Rút ra nguyên nhân", "Xem luật tốt nhất khi đem áp dụng thì được gì, mất gì."),
-            ("③ Sửa và đo lại", "Sửa mô hình theo bài học vừa rút ra, đo lại đúng như Thí nghiệm 2.")]):
+            ("① Tìm luật", "Máy thử hàng trăm luật “NẾU câu có đặc điểm A THÌ tắt X có lợi”, chỉ giữ luật đáng tin "
+                           "(**luật kết hợp**)."),
+            ("② Rút ra nguyên nhân", "Xem luật tốt nhất khi áp dụng thì được gì, mất gì."),
+            ("③ Sửa và đo lại", "Sửa mô hình theo bài học đó, đo lại như Thí nghiệm 2.")]):
         with c.container(border=True):
             st.markdown(f"**{t}**  \n{b_}")
 
@@ -629,7 +609,7 @@ def render_mining():
     d2["nhãn"] = d2.giây.map(lambda v: f"{v:+.0f} giây")
 
     def c1():
-        st.markdown(f"Áp luật **“NẾU kế hoạch có ≥ 2 hash join THÌ tắt hash join”** cho cả {len(risk)} câu khớp:")
+        st.markdown(f"Áp luật **“NẾU plan có ≥ 2 hash join THÌ tắt hash join”** cho cả {len(risk)} câu khớp:")
         y = alt.Y("nhóm:N", title=None, sort=None)
         bars = alt.Chart(d2).mark_bar(cornerRadiusEnd=3).encode(
             y=y, x=alt.X("giây:Q", title="← mất thêm (giây)        tiết kiệm được (giây) →"),
@@ -638,14 +618,14 @@ def render_mining():
             tooltip=["nhóm", alt.Tooltip("giây:Q", format="+.1f")])
         txt = alt.Chart(d2).mark_text(align="left", dx=6, color=MUTED).encode(y=y, x=alt.datum(0), text="nhãn:N")
         st.altair_chart((bars + txt).properties(height=alt.Step(44)), width="stretch")
-    _finding(1, "Luật “thường đúng” vẫn làm chậm tổng thể – vì sai một lần rất đắt", c1,
-             f"Máy thử **{s['số_luật_đã_thử']} luật**, giữ lại **{s['số_luật_giữ_lại']}** luật đáng tin. Luật nổi bật "
+    _finding(1, "Luật tốt nhất vẫn làm chậm tổng thể – đúng thì lợi ít, sai thì mất nhiều", c1,
+             f"Máy thử **{s['số_luật_đã_thử']} luật**, giữ **{s['số_luật_giữ_lại']}** luật đáng tin. Luật nổi bật "
              f"nhất đúng {int(base.số_câu_đúng)}/{int(base.số_câu_khớp)} câu – gấp **{_vn(base.lift, 1)} lần** đoán bừa. "
-             f"Nhưng áp vào thì {len(up)} câu nhanh hơn chỉ được tổng **{up.chênh_s.sum():.0f} giây**, còn {len(down)} "
-             f"câu chậm hơn mất **{-down.chênh_s.sum():.0f} giây**.",
-             "Đúng thì chỉ lợi chút ít, sai thì có câu chậm gấp nhiều lần (26a: 5,7 → 32 giây). Mô hình ở Thí nghiệm 2 "
-             "cũng vậy: nó đổi cách chạy cả khi **không chắc**, và vài lần sai đắt xóa hết phần lợi.",
-             "Bài học: **chỉ đổi khi thật chắc chắn, còn không thì giữ nguyên PostgreSQL**.")
+             f"Nhưng áp vào thì {len(up)} câu nhanh hơn chỉ được **{up.chênh_s.sum():.0f} giây**, {len(down)} câu "
+             f"chậm hơn mất **{-down.chênh_s.sum():.0f} giây**.",
+             "Đúng thì lợi ít, sai thì có câu chậm gấp nhiều lần (26a: 5,7 → 32 giây). Mô hình ở Thí nghiệm 2 cũng "
+             "vậy: đổi cách chạy cả khi **không chắc**, vài lần sai xóa hết phần lợi.",
+             "Bài học: **chỉ đổi khi thật chắc, không thì giữ nguyên PostgreSQL**.")
 
     # ---- ③
     rf = ab[ab.mô_hình == "RandomForest"].set_index("ngưỡng")
@@ -675,22 +655,21 @@ def render_mining():
     fams = sorted(s_rf.query_id.unique())
     gain = (s_rf.PG_ms / s_rf.phương_án_ms)
     stable = [th for th in rf.index if th > 0 and rf.loc[th, "speedup"] >= 1.05]
-    _finding(2, "Sửa theo bài học: “không chắc thì giữ nguyên” – mô hình chuyển từ chậm hơn sang nhanh hơn", c2,
+    _finding(2, "Sửa: “không chắc thì giữ nguyên” – mô hình từ chậm hơn thành nhanh hơn", c2,
              f"Random Forest từ **{_vn(rf.loc[0.0, 'speedup'])}** lên **{_vn(rf.loc[TH, 'speedup'])} lần** – nhanh hơn "
-             f"PostgreSQL. Kết quả giữ nguyên khi đổi ngưỡng từ {min(stable):.0%} đến {max(stable):.0%}. Decision Tree "
-             "và LightGBM cũng tốt lên nhưng chưa vượt 1.",
-             f"Mô hình bỏ được các lần đổi “nửa tin nửa ngờ” – đúng những lần sai đắt. Random Forest chỉ còn đổi "
+             f"PostgreSQL, và giữ nguyên khi đổi ngưỡng từ {min(stable):.0%} đến {max(stable):.0%}. Decision Tree và "
+             "LightGBM cũng tốt lên nhưng chưa vượt 1.",
+             f"Mô hình bỏ các lần đổi “nửa tin nửa ngờ” – chính là các lần sai đắt. Random Forest chỉ đổi "
              f"**{int(rf.loc[TH, 'số_lần_đổi'])}/{int(rf.loc[TH, 'số_lần_kiểm_tra'])}** lần, đều là tắt nested loop ở "
-             f"các câu họ 17 ({', '.join(fams)}) và lần nào cũng nhanh hơn ({_vn(gain.min(), 1)}–{_vn(gain.max(), 1)} lần).",
-             "Khai phá dữ liệu đã **chỉ đúng nguyên nhân**, và một sửa đổi rất đơn giản đã giúp mô hình thắng "
-             "PostgreSQL. Phần lợi còn nhỏ vì mô hình hiếm khi đủ chắc – muốn lợi nhiều hơn cần mô hình tự tin đúng "
-             "ở nhiều câu hơn.")
+             f"họ 17 ({', '.join(fams)}), lần nào cũng nhanh hơn ({_vn(gain.min(), 1)}–{_vn(gain.max(), 1)} lần).",
+             "Khai phá dữ liệu **chỉ đúng nguyên nhân**, và một sửa đổi đơn giản đã giúp mô hình thắng PostgreSQL. "
+             "Lợi còn nhỏ vì mô hình hiếm khi đủ chắc.")
 
-    st.success(f"**Kết luận:** Khai phá dữ liệu cho thấy mô hình thua vì **đổi cách chạy cả khi không chắc**, và một lần "
-               f"sai có thể mất bằng nhiều lần đúng. Sửa bằng luật “chỉ đổi khi tin ≥ {TH:.0%}” thì Random Forest đạt "
+    st.success(f"**Kết luận:** mô hình thua vì **đổi cách chạy cả khi không chắc**, và một lần sai mất bằng nhiều lần "
+               f"đúng. Thêm luật “chỉ đổi khi tin ≥ {TH:.0%}” thì Random Forest đạt "
                f"**{_vn(rf.loc[TH, 'speedup'])} lần** PostgreSQL (trước đó {_vn(rf.loc[0.0, 'speedup'])}).")
-    st.caption("Lưu ý: kết quả “chậm hơn” vẫn còn ở khoảng 65 lần kiểm tra – đó là các câu rất ngắn (vài chục ms), chỉ "
-               "riêng thời gian EXPLAIN (~5 ms) đã vượt ngưỡng 10%. Tự giữ nguyên PostgreSQL ở mọi câu cũng bị y như vậy.")
+    st.caption("Lưu ý: còn khoảng 65 lần “chậm hơn” – đều là câu rất ngắn (vài chục ms), riêng EXPLAIN (~5 ms) đã vượt "
+               "10%. Luôn giữ nguyên PostgreSQL mà vẫn gọi EXPLAIN cũng bị y như vậy.")
 
     st.divider()
     if not st.toggle("Hiện chi tiết kỹ thuật (thiết lập, bảng luật, các ngưỡng)", key="mine_detail"):
@@ -704,9 +683,8 @@ def render_mining():
     t = ab.assign(ngưỡng=ab.ngưỡng.map(lambda v: "không lọc" if v == 0 else f"≥ {v:.0%}"))
     st.dataframe(t.pivot(index="ngưỡng", columns="mô_hình", values="speedup")[MODELS].style.format("{:.2f}×"),
                  width="stretch")
-    st.caption("Cùng mô hình, cùng 9 cách chia train/test như Thí nghiệm 2; thời gian = EXPLAIN + phương án được chọn. "
-               "`python scripts/exp2/exp2_abstain.py`. Ngưỡng 60% được chọn sau khi thử nhiều ngưỡng; với Random Forest các "
-               "ngưỡng 50–70% cho cùng kết quả nên không phải nhờ chọn may một ngưỡng.")
+    st.caption("Cùng mô hình và 9 split như Thí nghiệm 2; thời gian = EXPLAIN + phương án được chọn. Ngưỡng 60% chọn sau "
+               "khi thử nhiều ngưỡng, nhưng với Random Forest 50–70% đều cho kết quả gần như nhau.")
     st.divider()
     st.markdown("### Tắt từng cách nối / đọc bảng: số câu có lợi và bị hại")
     _exp2_mining(pd.read_csv(os.path.join(E2, "exp2_labels.csv")))
@@ -714,11 +692,10 @@ def render_mining():
 
 def _mining_rules():
     ru = pd.read_csv(os.path.join(E2, "exp2_mining_rules.csv"))
-    st.markdown("Một luật có dạng **NẾU plan có đặc điểm A THÌ tắt toán tử X có lợi / có hại**. "
-                "Đọc luật bằng 3 con số:\n"
-                "- **Confidence:** trong các câu khớp điều kiện, bao nhiêu % đúng kết quả.\n"
-                "- **Lift:** confidence gấp mấy lần tỉ lệ chung (lift 3 = khả năng cao gấp 3 so với chọn bừa).\n"
-                "- **Số họ:** luật đúng trên bao nhiêu họ câu khác nhau (càng nhiều càng không phải học thuộc).")
+    st.markdown("Luật dạng **NẾU plan có đặc điểm A THÌ tắt X có lợi / có hại**, đọc bằng 3 số:\n"
+                "- **Confidence:** % câu khớp điều kiện mà đúng kết quả.\n"
+                "- **Lift:** confidence gấp mấy lần tỉ lệ chung (lift 3 = gấp 3 lần đoán bừa).\n"
+                "- **Số họ:** luật đúng trên bao nhiêu họ câu (càng nhiều càng không phải học thuộc).")
     top = ru.sort_values("p").groupby("kết_quả").head(2).sort_values(["kết_quả", "lift"], ascending=[True, False])
     show = top.assign(
         luật=top.điều_kiện + "  →  " + top.kết_quả,
@@ -726,12 +703,11 @@ def _mining_rules():
         ["luật", "khớp", "confidence", "lift", "số_họ", "ví_dụ"]].rename(
         columns={"luật": "luật (NẾU → THÌ)", "khớp": "số câu", "số_họ": "số họ", "ví_dụ": "ví dụ câu đúng luật"})
     st.dataframe(show.style.format({"confidence": "{:.0%}", "lift": "{:.1f}"}), hide_index=True, width="stretch")
-    st.caption(f"Hiển thị 2 luật mạnh nhất cho mỗi kết quả; đủ {len(ru)} luật trong "
-               "`analysis/output/exp2/exp2_mining_rules.csv`.")
+    st.caption(f"2 luật mạnh nhất cho mỗi kết quả; đủ {len(ru)} luật trong `exp2_mining_rules.csv`.")
 
     risk = pd.read_csv(os.path.join(E2, "exp2_mining_hashjoin_risk.csv"))
     risk["kết quả"] = np.where(risk.chênh_s >= 0, "Nhanh hơn", "Chậm hơn")
-    st.subheader("Ví dụ: áp luật “có ≥2 hash join → tắt hash join” cho cả 28 câu")
+    st.subheader(f"Ví dụ: áp luật “≥2 hash join → tắt hash join” cho {len(risk)} câu")
     ch = alt.Chart(risk).mark_bar(cornerRadiusEnd=2).encode(
         y=alt.Y("query_id:N", sort=list(risk.query_id), title=None, axis=alt.Axis(labelOverlap=False)),
         x=alt.X("chênh_s:Q", title="← chậm đi (giây)        nhanh lên (giây) →"),
@@ -743,18 +719,15 @@ def _mining_rules():
                  alt.Tooltip("chênh_s:Q", title="chênh (s)", format="+.1f")]).properties(height=alt.Step(20))
     st.altair_chart(ch, width="stretch")
     win, lose = risk[risk.chênh_s > 0].chênh_s.sum(), -risk[risk.chênh_s < 0].chênh_s.sum()
-    st.markdown(f"Luật **đúng ở nhiều câu** (thanh xanh) nhưng mỗi câu chỉ lợi một ít – tổng **{win:.0f} s**. "
-                f"Vài câu sai (thanh đỏ) mất tới **{lose:.0f} s**. → Đúng nhiều lần chưa chắc có lợi; "
-                "**một lần sai trên câu chạy lâu đủ xoá hết phần lợi**.")
+    st.markdown(f"Luật **đúng nhiều câu** (xanh) nhưng mỗi câu lợi ít – tổng **{win:.0f} s**. Vài câu sai (đỏ) mất "
+                f"tới **{lose:.0f} s**. → **Một lần sai ở câu chạy lâu đủ xóa hết phần lợi.**")
 
 
 def _mining_method(s):
     st.markdown(
-        "**Input:** 2 file log Thí nghiệm 2 – `logs/mac/exp2/exp2_hintsets_job.jsonl` (thời gian thật 113 câu × 6 phương án × "
-        "3 lần) và `logs/mac/exp2/exp2_explain_job.jsonl` (plan mặc định → 34 đặc trưng).  \n"
-        "**Output:** bảng luật – các file `analysis/output/exp2/exp2_mining_*`.  \n"
-        "**Môi trường:** Mac M1 Pro, Python (pandas, scikit-learn, scipy), chạy vài giây, không cần PostgreSQL.  \n"
-        "**Lệnh:** `python3 scripts/exp2/exp2_mining.py`")
+        "**Dữ liệu vào:** log Thí nghiệm 2 – thời gian 113 câu × 6 phương án × 3 lần, và plan mặc định (34 đặc trưng).  \n"
+        "**Kết quả:** `analysis/output/exp2/exp2_mining_*`. Chạy vài giây bằng Python, không cần PostgreSQL: "
+        "`python3 scripts/exp2/exp2_mining.py`")
     st.table(pd.DataFrame([
         ("“Tắt X giúp”", "nhanh hơn ≥5% ở **cả** lần chạy 2 và 3", "giống luật gán nhãn; đòi 2 lần để tránh nhiễu đo"),
         ("“Tắt X hại”", "chậm hơn ≥2 lần ở cả lần chạy 2 và 3", "chỉ quan tâm trường hợp hại nặng"),
@@ -765,10 +738,10 @@ def _mining_method(s):
          "tránh luật dựa trên 1–2 câu hoặc học thuộc một họ"),
     ], columns=["thiết lập", "giá trị", "lý do"]).set_index("thiết lập"))
     st.warning(
-        "**Hạn chế:** chỉ 113 câu trên một máy, nhãn có nhiễu → luật là **phát hiện cần kiểm chứng**, chưa phải "
-        f"quy luật chắc chắn.  \n**Phát hiện phụ:** {len(s['đặc_trưng_hằng_số'])} đặc trưng luôn cùng một giá trị "
-        f"({', '.join(s['đặc_trưng_hằng_số'])}) nên vô dụng. `plan_est_rows` lấy số dòng ở node gốc (luôn là "
-        "Aggregate = 1 dòng); nên đổi thành số dòng ước lượng của phép nối trên cùng.")
+        "**Hạn chế:** chỉ 113 câu trên một máy, nhãn có nhiễu → luật là **phát hiện cần kiểm chứng**.  \n"
+        f"**Phát hiện phụ:** {len(s['đặc_trưng_hằng_số'])} đặc trưng luôn cùng giá trị "
+        f"({', '.join(s['đặc_trưng_hằng_số'])}) nên vô dụng. `plan_est_rows` lấy ở node gốc (luôn 1 dòng); nên lấy ở "
+        "phép nối trên cùng.")
 
 
 # ================================================================ Bài báo vs nhóm
@@ -783,10 +756,9 @@ def render_paper_vs_group():
     if by_m is None or _missing([f_tot, f_split], "python3 scripts/exp1/exp1_tables.py"):
         return
     st.markdown(
-        "Bài báo (Lehmann và cộng sự, PVLDB 2024) so 5 learned query optimizer (LQO) với PostgreSQL trên "
-        "**113 câu JOB, 9 split** (Leave One Out / Random / Base Query × 3 = **233 lần kiểm tra**). "
-        "Nhóm chạy lại **Bao** và **HybridQO** trên Kaggle với cùng cách đo; Neo, Balsa, LEON cần GPU nên chỉ có số "
-        "của bài báo. *Speedup = thời gian PostgreSQL / thời gian LQO: lớn hơn 1 là LQO nhanh hơn.*")
+        "Bài báo so 5 bộ tối ưu học máy (LQO) với PostgreSQL trên **113 câu JOB, 9 cách chia train/test, tổng 233 lần "
+        "kiểm tra**. Nhóm chạy lại **Bao** và **HybridQO** trên Kaggle; Neo, Balsa, LEON cần GPU nên chỉ dùng số của "
+        "bài báo.  \n*Tốc độ = thời gian PostgreSQL / thời gian LQO. Lớn hơn 1 là LQO nhanh hơn.*")
 
     tot = pd.read_csv(f_tot)
     tot = tot[~tot.nguồn.str.contains("Mac")].copy()
@@ -796,9 +768,9 @@ def render_paper_vs_group():
     m = st.columns(4)
     for i, meth in enumerate(["Bao", "HybridQO"]):
         a, b = g.loc[(meth, "Nhóm (Kaggle)")], g.loc[(meth, "Bài báo")]
-        m[2 * i].metric(f"{meth} – speedup (nhóm)", f"{a.speedup:.2f}×", f"bài báo {b.speedup:.2f}×",
+        m[2 * i].metric(f"{meth} – tốc độ (nhóm)", f"{a.speedup:.2f}×", f"bài báo {b.speedup:.2f}×",
                         delta_color="off", delta_arrow="off")
-        m[2 * i + 1].metric(f"{meth} – tỉ lệ câu thua (nhóm)", f"{a.tỉ_lệ_thua:.0%}", f"bài báo {b.tỉ_lệ_thua:.0%}",
+        m[2 * i + 1].metric(f"{meth} – tỉ lệ thua (nhóm)", f"{a.tỉ_lệ_thua:.0%}", f"bài báo {b.tỉ_lệ_thua:.0%}",
                             delta_color="off", delta_arrow="off")
 
     left, right = st.columns(2)
@@ -810,7 +782,7 @@ def render_paper_vs_group():
         yo = alt.YOffset("nguồn_ngắn:N", sort=list(SRC_COLOR))
         bars = alt.Chart(sp).mark_bar(cornerRadiusEnd=3).encode(
             y=y, yOffset=yo, x2="gốc:Q",
-            x=alt.X("speedup:Q", title="Speedup tổng (thang log)",
+            x=alt.X("speedup:Q", title="Tốc độ so với PostgreSQL (thang log)",
                     scale=alt.Scale(type="log", domain=[0.0005, 2]),
                     axis=alt.Axis(values=[0.001, 0.01, 0.1, 1], format="~g")),
             color=alt.Color("nguồn_ngắn:N", title=None, legend=alt.Legend(orient="top"),
@@ -829,7 +801,7 @@ def render_paper_vs_group():
         order = [o for o in order if o in set(w.dòng)]
         long = w[["dòng", "Thắng", "Hòa", "Thua"]].melt(id_vars="dòng", var_name="kết quả", value_name="số_câu")
         long["thứ_tự"] = long["kết quả"].map({"Thắng": 0, "Hòa": 1, "Thua": 2})
-        ch = alt.Chart(long, title="Số câu thắng / hòa / thua so với PostgreSQL (±10%)").mark_bar().encode(
+        ch = alt.Chart(long, title="Thắng / hòa / thua so với PostgreSQL (lệch quá 10%)").mark_bar().encode(
             y=alt.Y("dòng:N", sort=order, title=None, scale=alt.Scale(paddingInner=0.25),
                     axis=alt.Axis(labelLimit=200)),
             x=alt.X("số_câu:Q", stack="zero", title="Số lần kiểm tra (tổng 233)", scale=alt.Scale(domain=[0, 233])),
@@ -840,7 +812,7 @@ def render_paper_vs_group():
         st.altair_chart(ch, width="stretch")
 
     # ---- heatmap theo split: 5 phương pháp của bài báo + 2 phương pháp nhóm chạy lại
-    st.subheader("Speedup theo từng split")
+    st.subheader("Tốc độ theo từng cách chia (split)")
     s = summ.copy()
     s["kiểu"] = s.split.str.replace(r"_split_\d", "", regex=True).map(
         {"leave_one_out": "LOO", "random": "RND", "base_query": "BQ"})
@@ -861,7 +833,7 @@ def render_paper_vs_group():
     enc = dict(x=alt.X("split:N", sort=SPLITS, title=None, axis=alt.Axis(labelAngle=0, orient="top")),
                y=alt.Y("dòng:N", sort=rows, title=None))
     heat = alt.Chart(s).mark_rect(stroke="white", strokeWidth=2, cornerRadius=3).encode(
-        **enc, color=alt.Color("log_speedup:Q", title="Speedup",
+        **enc, color=alt.Color("log_speedup:Q", title="Tốc độ",
                                scale=alt.Scale(domain=[-1, 0, 1], range=["#eb6834", "#f0efec", "#2a78d6"]),
                                legend=alt.Legend(values=[-1, 0, 1], labelExpr=
                                                  "datum.value == -1 ? '≤0,1× (chậm hơn PG)' : "
@@ -872,8 +844,8 @@ def render_paper_vs_group():
         **enc, text="nhãn:N",
         color=alt.condition("abs(datum.log_speedup) > 0.6", alt.value("white"), alt.value("#0b0b0b")))
     st.altair_chart(heat + text, height=330, width="stretch")
-    st.caption("Màu xanh = nhanh hơn PostgreSQL, cam = chậm hơn. Hai dòng “Nhóm” nằm ngay dưới dòng bài báo "
-               "tương ứng để so trực tiếp. Bao chỉ vượt PostgreSQL ở một split (bài báo: RND-1, nhóm: RND-3).")
+    st.caption("Xanh = nhanh hơn PostgreSQL, cam = chậm hơn. Bao chỉ nhanh hơn PostgreSQL ở 1 split "
+               "(bài báo: RND-1, nhóm: RND-3).")
 
     st.subheader("Kết luận của bài báo có đúng với nhóm không?")
     bk, bp = g.loc[("Bao", "Nhóm (Kaggle)")], g.loc[("Bao", "Bài báo")]
@@ -887,11 +859,11 @@ def render_paper_vs_group():
          f"thua {hk.tỉ_lệ_thua:.0%} so với {bk.tỉ_lệ_thua:.0%}", "✅ Khớp"),
         ("HybridQO vẫn thắng được một số câu",
          f"thắng {int(hp.thắng)} câu", f"thắng {int(hk.thắng)} câu",
-         "❌ Khác – nhóm chỉ train 10 epoch (tác giả 40–49) nên HybridQO gần như luôn giữ plan PostgreSQL"),
-        ("Neo, Balsa, LEON chậm hơn nhiều do thời gian suy luận",
-         "0,001–0,28×", "không chạy lại (cần GPU, 20–130 giờ/split)", "– Chưa kiểm chứng"),
+         "❌ Khác – nhóm chỉ train 10 epoch (tác giả 40–49) nên HybridQO gần như không đổi plan"),
+        ("Neo, Balsa, LEON chậm hơn nhiều vì chạy mô hình lâu",
+         "0,001–0,28×", "không chạy lại (cần GPU)", "– Chưa kiểm chứng"),
     ], columns=["Kết luận", "Bài báo", "Nhóm (Kaggle)", "Đánh giá"]).set_index("Kết luận"))
-    st.caption("Chi tiết cách đo, nguyên nhân và ablation ở tab “Nhóm: Thí nghiệm 1”.")
+    st.caption("Nguyên nhân và ablation: xem tab “Nhóm: Thí nghiệm 1”.")
 
 
 # ================================================================ câu chuyện Thí nghiệm 1
@@ -904,9 +876,9 @@ def _exp1_story(tot, f_why):
     hk, hp = g.loc[("HybridQO", "Nhóm (Kaggle)")].speedup, g.loc[("HybridQO", "Bài báo")].speedup
     d = _bao_per_query()
 
-    st.info("**Bài báo nói:** các bộ tối ưu học máy tự chọn cách chạy câu truy vấn (gọi là *LQO*, ví dụ Bao, HybridQO) "
-            "**chưa nhanh hơn PostgreSQL**.  \n**Nhóm làm:** chạy lại Bao và HybridQO trên 113 câu truy vấn của "
-            "benchmark JOB, rồi **tắt từng thành phần** để xem cái gì thật sự ảnh hưởng tới tốc độ.")
+    st.info("**Bài báo nói:** bộ tối ưu học máy (*LQO*, như Bao, HybridQO) **chưa nhanh hơn PostgreSQL**.  \n"
+            "**Nhóm làm:** chạy lại Bao và HybridQO trên 113 câu JOB, rồi **tắt từng thành phần** xem cái gì ảnh hưởng "
+            "tốc độ.")
 
     # ---- 1. kết quả chính
     def c1():
@@ -917,9 +889,9 @@ def _exp1_story(tot, f_why):
         st.altair_chart(_speedup_bars(rows, "dòng", "nguồn_ngắn", CMP_SCALE), width="stretch")
     _finding(1, "Bài báo nói đúng – LQO chưa nhanh hơn PostgreSQL", c1,
              f"Bao chỉ bằng **{_vn(bk)}** lần tốc độ PostgreSQL, HybridQO **{_vn(hk)}** lần (bài báo: {_vn(bp)} và "
-             f"{_vn(hp)}). Dưới 1 nghĩa là chậm hơn.",
-             "Trước khi chạy, LQO phải tốn thêm thời gian cho mỗi câu, mà cái lợi chưa bù được – xem phát hiện 2.",
-             "Kết luận của bài báo lặp lại được trên máy khác.")
+             f"{_vn(hp)}). Dưới 1 là chậm hơn.",
+             "LQO tốn thêm thời gian ở mỗi câu, mà phần lợi chưa bù được (xem phát hiện 2).",
+             "Kết luận của bài báo đúng trên máy khác.")
 
     # ---- 2. vì sao
     if d is not None:
@@ -934,7 +906,7 @@ def _exp1_story(tot, f_why):
         def c2():
             st.altair_chart(alt.Chart(cnt).mark_bar().encode(
                 y=alt.Y("nhóm:N", sort=[lab2[k] for k in TIME_BINS if k in lab2], title=None),
-                x=alt.X("số_câu:Q", title="Số lần chạy thử"),
+                x=alt.X("số_câu:Q", title="Số lần kiểm tra"),
                 color=alt.Color("kết quả:N", title=None, legend=alt.Legend(orient="top"), sort=dom,
                                 scale=alt.Scale(domain=dom, range=list(OUTCOME_COLOR.values()))),
                 order=alt.Order("thứ_tự:Q"), tooltip=["nhóm", "kết quả", "số_câu"]).properties(height=alt.Step(36)),
@@ -943,14 +915,13 @@ def _exp1_story(tot, f_why):
         over = (d.plan_b - d.plan_pg).median()
         chg = d[d.đổi_plan]
         ex = chg.exe_pg / chg.exe_b
-        _finding(2, "Vì sao Bao thua: tốn thêm thời gian cho mỗi câu, và đổi cách chạy thì hay đổi sai", c2,
-                 f"Với câu chạy dưới 0,5 giây, Bao chậm hơn **{(short['kết quả'] == 'Thua').sum()}/{len(short)}** lần. "
-                 f"Với câu chạy trên 2 giây, Bao lại nhanh hơn ({_vn(long_.pg.sum() / long_.bao.sum())} lần).",
-                 f"Trước khi chạy, Bao phải tốn thêm khoảng **{over / 1000:.2f} giây**".replace(".", ",")
-                 + " cho mỗi câu để gọi mô hình – với câu ngắn, phần thời gian này còn lâu hơn cả chạy câu đó. Khi Bao quyết định "
-                 f"đổi cách chạy ({len(chg)} lần), có **{(ex < 0.9).sum()}** lần chậm hơn, chỉ "
-                 f"{(ex > 1.1).sum()} lần nhanh hơn.",
-                 "Muốn thắng PostgreSQL, LQO phải **ra quyết định rất nhanh** và **biết khi nào nên để nguyên**.")
+        _finding(2, "Vì sao Bao thua: tốn thêm thời gian ở mỗi câu, và hay đổi sai", c2,
+                 f"Câu dưới 0,5 giây: Bao chậm hơn **{(short['kết quả'] == 'Thua').sum()}/{len(short)}** lần. "
+                 f"Câu trên 2 giây: Bao nhanh hơn ({_vn(long_.pg.sum() / long_.bao.sum())} lần).",
+                 f"Bao tốn thêm khoảng **{over / 1000:.2f} giây**".replace(".", ",")
+                 + " mỗi câu để hỏi mô hình – với câu ngắn, còn lâu hơn chạy câu. Bao đổi cách chạy "
+                 f"{len(chg)} lần: **{(ex < 0.9).sum()}** lần chậm hơn, chỉ {(ex > 1.1).sum()} lần nhanh hơn.",
+                 "Muốn thắng, LQO phải **quyết định rất nhanh** và **biết lúc nào nên giữ nguyên**.")
 
     # ---- 3. ablation
     f845 = os.path.join(E1, "exp1_ablation_8_4_8_5.csv")
@@ -995,14 +966,12 @@ def _exp1_story(tot, f_why):
                                                 range=[OUTCOME_COLOR["Thắng"], OUTCOME_COLOR["Thua"]])),
                 tooltip=["thử nghiệm", "kết quả", alt.Tooltip("số_câu:Q", title="số câu (âm = chậm đi)")]
             ).properties(height=alt.Step(40)), width="stretch")
-            st.caption("Chỉ đếm câu thay đổi rõ ràng (lặp lại nhiều lần, khác biệt có ý nghĩa thống kê). "
-                       "Trong ngoặc: tổng thời gian của 113 câu thay đổi bao nhiêu.")
+            st.caption("Chỉ đếm câu thay đổi rõ (có ý nghĩa thống kê). Trong ngoặc: tổng thời gian 113 câu đổi bao nhiêu.")
 
         with st.container(border=True):
             st.markdown("#### Phát hiện 3: Tắt từng thành phần (ablation) – cái gì thật sự ảnh hưởng?")
-            st.markdown("**Ablation là gì?** Giống tháo từng bộ phận của máy ra xem máy còn chạy tốt không: "
-                        "**chỉ tắt hoặc đổi đúng một thứ**, giữ nguyên mọi thứ khác, rồi đo lại. Nếu kết quả thay đổi "
-                        "nhiều thì thứ đó quan trọng. Nhóm làm 3 lần thử giống bài báo:")
+            st.markdown("**Ablation:** chỉ tắt hoặc đổi **đúng một thứ**, giữ nguyên phần còn lại, rồi đo lại. Kết quả "
+                        "đổi nhiều thì thứ đó quan trọng. Nhóm làm 3 thử nghiệm như bài báo:")
             left, right = st.columns([1.1, 1])
             with left:
                 c3()
@@ -1017,36 +986,33 @@ def _exp1_story(tot, f_why):
                 top83 = q83.sort_values("nhóm_50_chia_Full", ascending=False).head(2)
                 ex_d = ", ".join(f"{r.câu} chậm {_vn(r.nhóm_50_chia_Full, 1)} lần" for r in top83.itertuples())
                 st.markdown(
-                    f"**{names['geqo']}** – GEQO là “đường tắt” PostgreSQL dùng để lập kế hoạch nhanh cho câu nối từ "
-                    f"12 bảng trở lên. Tắt đi thì PostgreSQL tìm kỹ hơn: vài câu nhanh hơn ({ex_gf}) nhưng nhiều câu "
-                    f"chậm hẳn vì mất công tìm ({ex_g}).  \n"
-                    f"**{names['bit']}** – hai trong các cách PostgreSQL đọc dữ liệu từ bảng. Tắt đi thì có câu nhanh "
-                    f"hơn hẳn ({ex_b}), có câu chậm đi ({ex_bs}).  \n"
-                    f"**{names['data']}** – cho Bao học trên bản IMDB chỉ còn một nửa dữ liệu, rồi dùng trên bản "
-                    f"đầy đủ. Bao chọn sai ở nhiều câu ({ex_d}).")
+                    f"**{names['geqo']}** – GEQO là “đường tắt” để lập plan nhanh cho câu từ 12 bảng. Tắt đi thì vài "
+                    f"câu nhanh hơn ({ex_gf}), nhiều câu chậm hẳn ({ex_g}).  \n"
+                    f"**{names['bit']}** – hai cách đọc bảng. Có câu nhanh hơn hẳn ({ex_b}), có câu chậm đi ({ex_bs}).  \n"
+                    f"**{names['data']}** – Bao học trên IMDB một nửa, chạy trên IMDB đầy đủ: chọn sai ở nhiều câu "
+                    f"({ex_d}).")
             st.markdown(
-                "**Rút ra (insight):**  \n"
-                "1. **Tổng thời gian che giấu sự thật.** Tổng chỉ đổi vài phần trăm, nhưng hàng chục câu thay đổi "
-                "mạnh theo cả hai chiều – câu nhanh lên bù cho câu chậm đi. → Phải xét **từng câu**, không chỉ nhìn tổng.\n"
-                "2. **Không có thành phần nào luôn tốt hay luôn xấu.** Cùng một lần tắt, câu này lợi mà câu kia hại. "
-                "→ Nếu **chọn đúng cái để tắt cho từng câu** thì sẽ nhanh hơn – đây chính là ý tưởng của Thí nghiệm 2.\n"
-                "3. **Dữ liệu đổi thì LQO chọn sai.** LQO học thuộc dữ liệu cũ; khi dữ liệu đổi phải cho học lại, "
-                "còn PostgreSQL thì tự cập nhật.")
+                "**Rút ra:**  \n"
+                "1. **Nhìn tổng dễ bỏ sót.** Tổng chỉ đổi vài %, nhưng nhiều câu đổi mạnh theo cả hai chiều. "
+                "→ Phải xét **từng câu**.\n"
+                "2. **Không thành phần nào luôn tốt hay luôn xấu.** → **Chọn đúng cái để tắt cho từng câu** thì sẽ "
+                "nhanh hơn – ý tưởng của Thí nghiệm 2.\n"
+                "3. **Dữ liệu đổi thì LQO chọn sai**, phải cho học lại. PostgreSQL thì tự cập nhật.")
 
     st.success(
-        f"**Kết luận:** Bài báo nói đúng – LQO chưa nhanh hơn PostgreSQL (Bao {_vn(bk)}, HybridQO {_vn(hk)} lần), vì "
-        "tốn thêm thời gian cho mỗi câu và hay đổi sai. Nhưng tắt đúng thành phần cho từng câu thì có thể nhanh hơn "
-        "→ **Thí nghiệm 2** thử một mô hình phân loại ra quyết định chỉ trong vài mili giây để làm đúng việc đó.")
+        f"**Kết luận:** Bài báo nói đúng – LQO chưa nhanh hơn PostgreSQL (Bao {_vn(bk)}, HybridQO {_vn(hk)} lần) vì "
+        "tốn thêm thời gian và hay đổi sai. Nhưng tắt đúng thành phần cho từng câu thì có thể nhanh hơn "
+        "→ **Thí nghiệm 2** thử một mô hình quyết định chỉ trong vài mili giây.")
 
 
 # ================================================================ câu chuyện Thí nghiệm 2
 def _exp2_story(agg, pq, lab):
     best_m = agg.loc[MODELS].speedup.idxmax()
     orc = agg.loc["Oracle", "speedup"]
-    st.info("**Ý tưởng (từ Thí nghiệm 1):** tắt đúng thành phần cho từng câu thì PostgreSQL nhanh hơn, nhưng mô hình phải ra quyết định thật nhanh.  \n"
-            "**Nhóm làm:** một mô hình phân loại đọc kế hoạch của PostgreSQL (lệnh `EXPLAIN`, mất vài phần nghìn giây) rồi "
-            "chọn 1 trong 6: **giữ nguyên**, hoặc **tắt 1 trong 5 cách nối / đọc bảng**. "
-            f"Nếu lần nào cũng chọn đúng, PostgreSQL sẽ nhanh hơn **{_vn(orc)} lần**.")
+    st.info("**Ý tưởng (từ Thí nghiệm 1):** tắt đúng thành phần cho từng câu thì nhanh hơn, nhưng phải quyết định thật "
+            "nhanh.  \n**Nhóm làm:** mô hình đọc plan của PostgreSQL (`EXPLAIN`, vài mili giây) rồi chọn 1 trong 6: "
+            "**giữ nguyên**, hoặc **tắt 1 trong 5 cách nối / đọc bảng**. "
+            f"Nếu lần nào cũng chọn đúng, sẽ nhanh hơn PostgreSQL **{_vn(orc)} lần**.")
 
     # ---- 1
     order = MODELS + ["Bao"]
@@ -1055,13 +1021,13 @@ def _exp2_story(agg, pq, lab):
 
     def c1():
         st.altair_chart(_wtl_bars(w, "phương_pháp", None, list(w.phương_pháp)), width="stretch")
-        st.caption("Xanh = nhanh hơn PostgreSQL, xám = ngang nhau, đỏ = chậm hơn (lệch quá 10% mới tính).")
-    _finding(1, "Mô hình của nhóm ra quyết định nhanh nên ít khi làm chậm hơn PostgreSQL", c1,
+        st.caption("Xanh = nhanh hơn PostgreSQL, xám = ngang, đỏ = chậm hơn (lệch quá 10%).")
+    _finding(1, "Mô hình nhóm quyết định nhanh nên ít khi làm chậm PostgreSQL", c1,
              f"Mô hình chậm hơn PostgreSQL ở **{agg.loc[MODELS, 'tỉ_lệ_thua'].min():.0%}–"
              f"{agg.loc[MODELS, 'tỉ_lệ_thua'].max():.0%}** số lần, Bao **{agg.loc['Bao', 'tỉ_lệ_thua']:.0%}**.",
-             f"Thời gian ra quyết định của mô hình chỉ khoảng **{pq.explain_ms.median():.0f} phần nghìn giây** mỗi câu, Bao tốn khoảng "
-             "0,15 giây. Khi không chắc, mô hình hay chọn giữ nguyên nên kết quả ngang PostgreSQL.",
-             "Đã giải quyết được vấn đề tốn thêm thời gian cho mỗi câu của Thí nghiệm 1.")
+             f"Mô hình quyết định trong khoảng **{pq.explain_ms.median():.0f} mili giây** mỗi câu, Bao khoảng "
+             "0,15 giây. Khi không chắc, mô hình hay giữ nguyên nên kết quả ngang PostgreSQL.",
+             "Đã giải quyết vấn đề tốn thêm thời gian ở Thí nghiệm 1.")
 
     # ---- 2
     p = pq[pq.mô_hình == best_m]
@@ -1078,25 +1044,25 @@ def _exp2_story(agg, pq, lab):
         top["màu"] = np.where(top.query_id == q0, "a", "b")
         st.altair_chart(alt.Chart(top).mark_bar(cornerRadiusEnd=3).encode(
             y=alt.Y("query_id:N", sort=list(top.query_id), title="Câu truy vấn"),
-            x=alt.X("giây_mất:Q", title="Số giây bị chậm hơn PostgreSQL vì chọn sai"),
+            x=alt.X("giây_mất:Q", title="Số giây chậm hơn PostgreSQL"),
             color=alt.Color("màu:N", legend=None, scale=alt.Scale(domain=["a", "b"], range=[OUTCOME_COLOR["Thua"],
                                                                                           "#c8c6c0"])),
             tooltip=["query_id", alt.Tooltip("giây_mất:Q", format=".1f")]).properties(height=alt.Step(26)),
             width="stretch")
-    _finding(2, "Nhưng tổng thời gian vẫn chậm hơn – vì vài lần chọn sai rất đắt", c2,
+    _finding(2, "Nhưng tổng vẫn chậm hơn PostgreSQL – vì vài câu chọn sai bị chậm rất nhiều", c2,
              f"Tính tổng, mô hình tốt nhất ({best_m}) chỉ bằng **{_vn(agg.loc[best_m, 'speedup'])}** lần PostgreSQL. "
              f"Riêng câu **{q0}** gây ra **{lost.iloc[0] / lost.sum():.0%}** phần bị chậm.",
-             f"Ở {q0}, PostgreSQL chạy {_vn(L.t_default_ms / 1000, 1)} giây. Chọn đúng (`{L.nhãn}`) thì còn "
+             f"{q0}: PostgreSQL {_vn(L.t_default_ms / 1000, 1)} giây, chọn đúng (`{L.nhãn}`) còn "
              f"{_vn(L[f't_{L.nhãn}_ms'] / 1000, 1)} giây, nhưng mô hình chọn `{pick}` nên mất "
              f"**{L[f't_{pick}_ms'] / 1000:.0f} giây**.",
-             f"Bỏ 3 câu chọn sai nặng nhất ({', '.join(top3)}) thì mô hình đã nhanh hơn PostgreSQL "
+             f"Bỏ 3 câu sai nặng nhất ({', '.join(top3)}) thì mô hình đã nhanh hơn PostgreSQL "
              f"(**{_vn(sp_rest)}** lần). → Đúng nhiều lần chưa đủ, phải **tránh được lần sai đắt**.")
 
     a = pq.assign(đúng=pq.nhãn_thật == pq.dự_đoán).groupby("kiểu").đúng.mean()
     st.success(
-        f"**Kết luận:** Mô hình của nhóm **chưa** làm PostgreSQL nhanh hơn về tổng ({_vn(agg.loc[best_m, 'speedup'])} lần; "
-        f"Bao {_vn(agg.loc['Bao', 'speedup'])} lần), nhưng **ít khi làm chậm hơn PostgreSQL** so với Bao. "
-        "Điểm yếu là vài lần chọn sai rất đắt, nhất là với loại câu chưa từng gặp (chỉ đoán đúng "
+        f"**Kết luận:** Mô hình nhóm **chưa** nhanh hơn PostgreSQL về tổng ({_vn(agg.loc[best_m, 'speedup'])} lần; "
+        f"Bao {_vn(agg.loc['Bao', 'speedup'])} lần), nhưng **ít khi làm chậm hơn** so với Bao. Điểm yếu: vài câu chọn "
+        "sai bị chậm rất nhiều, nhất là loại câu chưa gặp (chỉ đoán đúng "
         f"{a.get('BQ', float('nan')):.0%}).  \n"
-        "**Bước tiếp theo:** khi không chắc thì giữ nguyên PostgreSQL – tab **4. Khai phá dữ liệu** cho thấy làm vậy "
-        "giúp Random Forest nhanh hơn PostgreSQL. Tự thử mô hình ở tab **5. Demo mô hình**.")
+        "**Tiếp theo:** không chắc thì giữ nguyên PostgreSQL – xem tab **4. Khai phá dữ liệu**. Tự thử mô hình ở tab "
+        "**5. Demo mô hình**.")

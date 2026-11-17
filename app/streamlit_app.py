@@ -48,9 +48,8 @@ with tab0:
 
     # ---- IMDB
     st.subheader("Cơ sở dữ liệu IMDB")
-    st.markdown("Dữ liệu **phim thật** của IMDB (phim, diễn viên, công ty, từ khóa…) nạp vào PostgreSQL. Dữ liệu "
-                "thật thì phân bố lệch, các cột liên quan nhau → PostgreSQL **hay đoán sai số dòng**, nên dễ chọn sai "
-                "cách chạy. Vì vậy bài báo dùng IMDB để thử các bộ tối ưu.")
+    st.markdown("Dữ liệu **phim thật** của IMDB (phim, diễn viên, công ty, từ khóa…). Dữ liệu thật phân bố lệch nên "
+                "PostgreSQL **hay đoán sai số dòng** và dễ chọn sai cách chạy. Vì vậy bài báo dùng IMDB.")
     if db is None:
         st.warning("Chưa có analysis/output/app/imdb_db.json. Chạy `python app/prepare_data.py` "
                    "(cần container pg_bao).")
@@ -72,7 +71,7 @@ with tab0:
                                  f'margin-right:6px">{g}</span>'
                                  for g, c in zip(core.TABLE_GROUPS, core.PALETTE)), unsafe_allow_html=True)
             st.graphviz_chart(core.schema_dot(db, False), width="stretch")
-            st.caption("Mỗi đường là một khóa ngoại; nhãn ghi cột nối và số câu JOB dùng phép nối đó.")
+            st.caption("Mỗi đường là một khóa ngoại, ghi cột nối và số câu JOB dùng.")
 
     # ---- JOB
     st.subheader("Benchmark JOB")
@@ -84,10 +83,10 @@ with tab0:
     if has_t:
         k[3].metric("Tổng thời gian PostgreSQL", f"{job.pg_ms.sum() / 1000:,.0f} giây", delta_color="off")
     st.markdown(
-        "- **113 câu SELECT** viết tay, mỗi câu nối nhiều bảng – để kiểm tra bộ tối ưu có chọn đúng **thứ tự nối** không.\n"
-        f"- Chia thành **{job['họ'].nunique()} họ**: các câu cùng họ (16a, 16b, …) giống nhau, chỉ khác điều kiện lọc.\n"
-        "- Bài báo chia train/test theo 3 cách, khó dần: lấy 1 câu mỗi họ làm test (*Leave One Out*), chọn ngẫu "
-        "nhiên (*Random*), và để nguyên cả họ ra test (*Base Query* – mô hình gặp loại câu chưa từng thấy).")
+        "- **113 câu SELECT**, mỗi câu nối nhiều bảng.\n"
+        f"- Chia thành **{job['họ'].nunique()} họ**: câu cùng họ (16a, 16b, …) chỉ khác điều kiện lọc.\n"
+        "- 3 cách chia train/test, khó dần: *Leave One Out* (mỗi họ 1 câu làm test), *Random* (ngẫu nhiên), "
+        "*Base Query* (cả họ làm test – loại câu chưa từng gặp).")
 
     if has_t:
         top10 = job.pg_ms.nlargest(10).sum() / job.pg_ms.sum()
@@ -101,10 +100,9 @@ with tab0:
             width="stretch", height=300)
         with c2:
             st.markdown(
-                f"**Thấy gì:** thời gian chạy trải từ **{job.pg_ms.min():.0f} ms** tới **{job.pg_ms.max() / 1000:.0f} "
-                f"giây**, và không phụ thuộc số bảng. 10 câu chậm nhất chiếm **{top10:.0%}** tổng thời gian.\n\n"
-                "**Rút ra:** chỉ nhìn tổng thời gian thì vài câu chậm quyết định hết → nhóm xét thêm **từng câu** "
-                "(nhanh hơn / ngang / chậm hơn).")
+                f"**Thấy gì:** từ **{job.pg_ms.min():.0f} ms** tới **{job.pg_ms.max() / 1000:.0f} giây**, không "
+                f"phụ thuộc số bảng. 10 câu chậm nhất chiếm **{top10:.0%}** tổng thời gian.\n\n"
+                "**Rút ra:** vài câu chậm quyết định tổng → nhóm xét thêm **từng câu**.")
 
     t = job.set_index("câu").pg_ms if has_t else None
 
@@ -116,15 +114,14 @@ with tab0:
     st.subheader("Vài câu đáng nhớ")
     f17 = t[[q for q in t.index if q.startswith("17")]] if has_t else None
     special = pd.DataFrame([
-        ("16b", "Chậm nhất", f"{ms(t['16b'] if has_t else None)} – một mình chiếm "
-         + (f"{t['16b'] / t.sum():.0%}" if has_t else "–") + " thời gian của cả 113 câu"),
-        ("17a–17f", "Ít bảng mà vẫn chậm", f"chỉ 7 bảng nhưng chạy {ms(f17.min() if has_t else None)}–"
+        ("16b", "Chậm nhất", f"{ms(t['16b'] if has_t else None)}, chiếm "
+         + (f"{t['16b'] / t.sum():.0%}" if has_t else "–") + " tổng thời gian 113 câu"),
+        ("17a–17f", "Ít bảng mà chậm", f"7 bảng, chạy {ms(f17.min() if has_t else None)}–"
          f"{ms(f17.max() if has_t else None)}"),
-        ("6c, 32a", "Nhanh nhất", f"chỉ {ms(t['6c'] if has_t else None)} và {ms(t['32a'] if has_t else None)} – "
-         "LQO tốn thời gian ra quyết định còn lâu hơn chạy câu"),
-        ("26a", "Chọn cách chạy khác thì chênh 35 lần", "giữ nguyên 5,2 giây; tắt index scan còn 0,75 giây; "
-         "tắt hash join lên 26,8 giây"),
-    ], columns=["câu", "đặc điểm", "vì sao đáng nhớ"])
+        ("6c, 32a", "Nhanh nhất", f"{ms(t['6c'] if has_t else None)} và {ms(t['32a'] if has_t else None)} – "
+         "LQO ra quyết định còn lâu hơn chạy câu"),
+        ("26a", "Đổi cách chạy, chênh 35 lần", "mặc định 5,2 s; tắt index scan 0,75 s; tắt hash join 26,8 s"),
+    ], columns=["câu", "đặc điểm", "ghi chú"])
     st.table(special.set_index("câu"))
     with st.expander("Xem toàn bộ 113 câu"):
         q = st.selectbox("Câu truy vấn", list(job["câu"]), index=list(job["câu"]).index("26a"))

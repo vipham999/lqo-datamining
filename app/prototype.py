@@ -181,9 +181,9 @@ def _fmt_ms(ms):
 
 # ---------------------------------------------------------------- giao diện
 def render():
-    st.header("Demo mô hình – chọn một câu truy vấn, xem mô hình chọn cách chạy nào rồi chạy thật")
-    st.info("Đây là bản chạy thử (prototype) đúng quy trình của nhóm: **EXPLAIN → 34 đặc trưng → mô hình chọn "
-            "phương án → SET enable_x = off → chạy**. Khác các tab trước, tab này **chạy trực tiếp trên PostgreSQL**.")
+    st.header("Demo mô hình – chọn câu, xem mô hình chọn gì, rồi chạy thật")
+    st.info("Chạy đúng quy trình của nhóm: **EXPLAIN → 34 đặc trưng → mô hình chọn → SET enable_x = off → chạy**. "
+            "Khác các tab trước, tab này **chạy trực tiếp trên PostgreSQL**.")
 
     with st.expander("Kết nối PostgreSQL", expanded=False):
         c1, c2, c3 = st.columns(3)
@@ -194,16 +194,16 @@ def render():
                "password": c2.text_input("Password", "postgres", type="password", key="pg_pw")}
     ok, msg = check_connection(cfg)
     (st.caption if ok else st.error)(("✅ " if ok else "") + msg +
-                                     ("" if ok else " Hãy bật container pg_bao (docker start pg_bao) hoặc sửa thông tin "
-                                      "trong mục 'Kết nối PostgreSQL'."))
+                                     ("" if ok else " Bật container: `docker start pg_bao`, hoặc sửa mục "
+                                      "'Kết nối PostgreSQL'."))
 
     # ---- Bước 1: input
     st.subheader("Bước 1 – Chọn câu truy vấn")
     qs = job_queries()
     qid = st.selectbox("Chọn một câu trong 113 câu JOB", list(qs),
                        index=list(qs).index("23a") if "23a" in qs else 0, key="proto_qid")
-    st.caption("Gợi ý để demo: **23a** – mô hình chọn đúng, chạy nhanh (< 1 s) · **16b** – mô hình thắng lớn "
-               "(PostgreSQL ~25 s) · **26a** – mô hình chọn sai, chậm hơn nhiều (cần giới hạn thời gian ≥ 40 s).")
+    st.caption("Gợi ý: **23a** – chọn đúng, chạy nhanh (< 1 s) · **16b** – thắng lớn (PostgreSQL ~25 s) · "
+               "**26a** – chọn sai, chậm hơn nhiều (cần giới hạn thời gian ≥ 40 s).")
     sql_in = qs[qid]
     with st.expander("Xem câu SQL", expanded=False):
         st.code(sql_in, language="sql")
@@ -212,13 +212,13 @@ def render():
     c1, c2, c3 = st.columns([1.4, 1, 1])
     model_name = c1.radio("Mô hình", list(MODEL_VI), index=1, format_func=MODEL_VI.get, horizontal=True,
                           key="proto_model")
-    timeout_s = c2.number_input("Giới hạn thời gian mỗi lần chạy (giây)", 5, 180, 60, step=5, key="proto_to")
-    runs = c3.number_input("Số lần chạy mỗi phương án (lấy lần cuối)", 1, 3, 3, key="proto_runs",
-                           help="Lần đầu thường chậm vì dữ liệu chưa nằm trong bộ nhớ đệm; Thí nghiệm 2 lấy lần thứ 3.")
+    timeout_s = c2.number_input("Giới hạn thời gian mỗi lần (giây)", 5, 180, 60, step=5, key="proto_to")
+    runs = c3.number_input("Số lần chạy mỗi phương án", 1, 3, 3, key="proto_runs",
+                           help="Lần đầu thường chậm vì dữ liệu chưa vào bộ nhớ đệm; lấy lần cuối, như Thí nghiệm 2.")
     fair = True
     if family is not None:
-        fair = st.checkbox(f"Không cho mô hình học các câu cùng họ {family} (họ {family}a, {family}b, …) – để thử "
-                           "công bằng như khi gặp câu mới", value=True, key="proto_fair")
+        fair = st.checkbox(f"Không cho mô hình học các câu cùng họ {family} ({family}a, {family}b, …) – để mô hình "
+                           "gặp câu này như câu mới", value=True, key="proto_fair")
     exclude = family if (family is not None and fair) else None
 
     if st.button("Hỏi mô hình", type="primary", disabled=not ok, key="proto_ask"):
@@ -247,12 +247,12 @@ def render():
         st.caption("Bấm **Hỏi mô hình** để bắt đầu.")
         return
     if p["sql"] != clean_sql_safe(sql_in) or p["model"] != model_name or p["exclude"] != exclude:
-        st.warning("Câu SQL hoặc thiết lập đã đổi – bấm **Hỏi mô hình** lại để cập nhật kết quả bên dưới.")
+        st.warning("Câu hoặc thiết lập đã đổi – bấm **Hỏi mô hình** lại để cập nhật.")
 
     # ---- Bước 2: plan + đặc trưng
-    st.subheader("Bước 2 – PostgreSQL lập kế hoạch (EXPLAIN) và nhóm trích đặc trưng")
-    st.markdown(f"Kế hoạch mặc định: **{plan_summary(p['plan'])}**. EXPLAIN mất **{p['explain_ms']:.1f} ms** "
-                "(chưa chạy câu truy vấn).")
+    st.subheader("Bước 2 – PostgreSQL lập plan (EXPLAIN), nhóm trích đặc trưng")
+    st.markdown(f"Plan mặc định: **{plan_summary(p['plan'])}**. EXPLAIN mất **{p['explain_ms']:.1f} ms** "
+                "(chưa chạy câu).")
     f = p["feat"]
     key_feats = [("Số bảng", f["sql_n_tables"]), ("Số nested loop", f["plan_n_nestloop"]),
                  ("Số hash join", f["plan_n_hashjoin"]), ("Số merge join", f["plan_n_mergejoin"]),
@@ -261,7 +261,7 @@ def render():
     cols = st.columns(len(key_feats))
     for c, (k, v) in zip(cols, key_feats):
         c.metric(k, v)
-    with st.expander("Xem cây kế hoạch và đủ 34 đặc trưng"):
+    with st.expander("Xem cây plan và đủ 34 đặc trưng"):
         st.code(plan_text(p["plan"]), language=None)
         st.dataframe(pd.DataFrame({"đặc trưng": list(f), "giá trị": [round(float(v), 2) for v in f.values()]}),
                      hide_index=True, use_container_width=True, height=300)
@@ -277,8 +277,8 @@ def render():
         st.markdown(f"### {HINT_VI[pred]}")
         st.code(";\n".join(setup) + ";" if setup else "-- không SET gì, chạy như PostgreSQL bình thường",
                 language="sql")
-        st.caption(f"Mô hình suy luận mất {p['inf_ms']:.1f} ms. Chi phí thêm so với PostgreSQL ≈ "
-                   f"{p['explain_ms'] + p['inf_ms']:.1f} ms (EXPLAIN + suy luận).")
+        st.caption(f"Mô hình mất {p['inf_ms']:.1f} ms. Tổng thời gian thêm ≈ "
+                   f"{p['explain_ms'] + p['inf_ms']:.1f} ms (EXPLAIN + mô hình).")
     with c2:
         pr = pd.DataFrame({"phương án": [HINT_VI[h] for h in E.HINTS],
                            "độ tin": [float(p["proba"].get(h, 0.0)) for h in E.HINTS],
@@ -293,8 +293,8 @@ def render():
     # ---- Bước 4: chạy thật
     st.subheader("Bước 4 – Chạy thật để kiểm tra mô hình đúng hay sai")
     todo = list(E.HINTS)
-    st.caption(f"Chạy cả 6 phương án để biết phương án nào thật sự nhanh nhất – mỗi phương án {runs} lần, tối đa "
-               f"{timeout_s} s/lần. Câu chạy lâu (như 16b, 26a) có thể mất vài phút.")
+    st.caption(f"Chạy cả 6 phương án để biết cái nào thật sự nhanh nhất – mỗi phương án {runs} lần, tối đa "
+               f"{timeout_s} s/lần. Câu chạy lâu (16b, 26a) có thể mất vài phút.")
     if st.button("Chạy trên PostgreSQL", type="primary", disabled=not ok, key="proto_run"):
         res = {}
         bar = st.progress(0.0)
@@ -331,16 +331,15 @@ def _show_runs(p, timeout_s):
               help="Đã cộng thời gian EXPLAIN và suy luận của mô hình.")
     c3.metric("Nhanh hơn", f"{sp:.2f}×")
     if pred == "default":
-        st.info("Mô hình chọn **giữ nguyên PostgreSQL** → kết quả bằng PostgreSQL, chỉ tốn thêm vài ms để EXPLAIN và "
-                "suy luận. Đây là lựa chọn an toàn.")
+        st.info("Mô hình chọn **giữ nguyên PostgreSQL** → bằng PostgreSQL, chỉ tốn thêm vài ms. Lựa chọn an toàn.")
     elif sp > 1 + E.EPS:
         st.success(f"**Thắng:** nhanh hơn **{sp:.2f}×** so với để PostgreSQL tự chọn.")
     elif sp < 1 - E.EPS:
         st.error(f"**Thua:** chậm hơn **{1 / sp:.2f}×** so với để PostgreSQL tự chọn.")
     else:
-        st.info("**Hòa:** chênh dưới 10% – coi như bằng PostgreSQL (nằm trong mức dao động khi đo).")
-    st.caption("Quy ước giống bảng Thắng/Hòa/Thua của Thí nghiệm 2: nhanh hơn > 10% là thắng, chậm hơn > 10% là thua, còn lại là hòa. "
-               "Thời gian của mô hình đã cộng EXPLAIN + suy luận.")
+        st.info("**Hòa:** chênh dưới 10%, coi như bằng PostgreSQL.")
+    st.caption("Nhanh hơn quá 10% là thắng, chậm hơn quá 10% là thua, còn lại hòa. Thời gian mô hình đã cộng "
+               "EXPLAIN + suy luận.")
 
     rows = [{"phương án": HINT_VI[h], "thời gian (ms)": r["ms"], "quá giờ": r["timeout"], "mô hình chọn": h == pred}
             for h, r in res.items()]
@@ -352,7 +351,7 @@ def _show_runs(p, timeout_s):
     df["màu"] = np.where(df["mô hình chọn"], "Mô hình chọn",
                          np.where(df["phương án"] == HINT_VI["default"], "PostgreSQL mặc định", "Phương án khác"))
     ch = alt.Chart(df).mark_bar().encode(
-        x=alt.X("thời gian (ms):Q", title="Thời gian lập kế hoạch + chạy (ms, càng ngắn càng tốt)"),
+        x=alt.X("thời gian (ms):Q", title="Thời gian lập plan + chạy (ms, càng ngắn càng tốt)"),
         y=alt.Y("phương án:N", sort="x", title=None, axis=alt.Axis(labelLimit=200)),
         color=alt.Color("màu:N", scale=alt.Scale(domain=["PostgreSQL mặc định", "Mô hình chọn", "Phương án khác"],
                                                   range=[GREY, BLUE, "#c8c6c0"]), title=None,
@@ -361,7 +360,7 @@ def _show_runs(p, timeout_s):
     st.altair_chart(ch.properties(height=alt.Step(34)), use_container_width=True)
     if any(r["timeout"] for r in res.values()):
         st.caption(f"'Quá giờ' = bị dừng sau {timeout_s} s; thời gian thật còn lâu hơn.")
-    with st.expander("So sánh cây kế hoạch thực tế"):
+    with st.expander("So sánh cây plan thực tế"):
         cols = st.columns(2)
         for c, h in zip(cols, list(dict.fromkeys(["default", pred]))):
             c.markdown(f"**{HINT_VI[h]}**")
@@ -381,5 +380,5 @@ def _show_recorded(p):
         st.dataframe(pd.DataFrame({"phương án": [HINT_VI[h] for h in E.HINTS],
                                    "thời gian đã đo (ms)": [round(row[h], 1) for h in E.HINTS]}),
                      hide_index=True, use_container_width=True)
-        st.caption(f"Nhãn đúng (phương án nhanh nhất, phải nhanh hơn PostgreSQL ≥ 5%): **{HINT_VI[y.loc[qid]]}**. "
-                   "Số đo hôm nay có thể lệch một chút do máy và bộ nhớ đệm.")
+        st.caption(f"Nhãn đúng (nhanh nhất, phải hơn PostgreSQL ≥ 5%): **{HINT_VI[y.loc[qid]]}**. "
+                   "Số đo hôm nay có thể lệch chút do máy và bộ nhớ đệm.")
