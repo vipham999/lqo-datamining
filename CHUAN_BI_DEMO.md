@@ -1,9 +1,12 @@
 # Chuẩn bị demo
 
-Thời lượng khoảng **12 phút demo** và **5–7 phút đi qua code** (khi cô yêu cầu).
+Thời lượng **10 phút demo** và **5–7 phút đi qua code** (khi cô yêu cầu).
 Giải thích chi tiết từng khái niệm nằm trong [HOI_DAP_DEMO.md](HOI_DAP_DEMO.md).
 
-**Mạch trình bày:** chọn plan quan trọng đến mức nào (26a) → TN1: LQO có thắng PostgreSQL không → TN2: mô hình của nhóm
+**Máy demo:** máy WSL (Linux trên Windows). Số trên dashboard đều đo trên máy Mac của nhóm; phần chạy trực tiếp
+(`demo_6cach.sh`, tab 5) đo trên máy demo nên số giây khác. Cần nói rõ điều này với cô (xem màn hình 1).
+
+**Mạch trình bày:** chọn plan quan trọng đến mức nào (7c) → TN1: LQO có thắng PostgreSQL không → TN2: mô hình của nhóm
 → Khai phá dữ liệu: vì sao thua, sửa thế nào → Demo chạy thật → Hạn chế, kết luận.
 
 **Câu chốt cần nhớ:** *"Đúng nhiều lần chưa đủ, phải tránh được lần sai đắt."*
@@ -16,13 +19,13 @@ Giải thích chi tiết từng khái niệm nằm trong [HOI_DAP_DEMO.md](HOI_D
 - [ ] Tập nói 1–2 lần theo mục 3, bấm giờ.
 - [ ] Thuộc các con số ở mục 2.
 - [ ] Đọc phần **"câu gọn để nói với cô"** trong [HOI_DAP_DEMO.md](HOI_DAP_DEMO.md).
-- [ ] Chụp màn hình kết quả `demo_26a.sh`, `demo_83.sh` và tab 5 (câu 23a) để dự phòng.
+- [ ] Chụp màn hình kết quả `demo_6cach.sh`, `demo_83.sh` và tab 5 (câu 23a, 16c) để dự phòng.
 
 ### 1.2. Trước giờ demo 30 phút
 ```bash
-cd ~/Desktop/lqo-datamining
+cd ~/workspace/personal/lqo-datamining
 
-# 1. Mở Docker Desktop, kiểm tra 2 container
+# 1. Kiểm tra 2 container
 docker ps                                   # phải thấy pg_bao và bao_server
 # nếu thiếu: docker compose -f infra/docker-compose.yml up -d
 
@@ -33,20 +36,20 @@ docker exec pg_bao bash /app/scripts/setup/warmup_imdb.sh
 bash scripts/demo/demo_start.sh --no-warm
 
 # 4. Chạy thử mỗi script 1 lần (vừa kiểm tra, vừa làm nóng các câu sẽ demo)
-bash scripts/demo/demo_26a.sh               # ~5,7 s / ~1 s / ~32 s, khoảng 1,5 phút
-bash scripts/demo/demo_83.sh                # Bao-50 chọn tắt nested loop ở 3c, 11b, khoảng 1,5 phút
+bash scripts/demo/demo_6cach.sh             # câu 7c, 6 cách: ~1,5 s / tắt index scan ~0,8 s / tắt nested loop ~11 s; ~45 giây
+bash scripts/demo/demo_83.sh                # dự phòng khi cô hỏi; Bao-50 chọn tắt nested loop ở 3c, 11b
 ```
 `demo_83.sh` nạp PyTorch lần đầu có thể mất hơn 30 giây. Script đã được sửa để chờ tối đa 2 phút. Chạy thử trước một lần thì lúc demo nạp model chỉ mất khoảng 4 giây.
 
 ### 1.3. Chuẩn bị màn hình
 - [ ] **Dashboard** (zoom 125%):
-  - Tab 5: chọn **23a**, bấm *Hỏi mô hình* rồi *Chạy trên PostgreSQL* một lần.
+  - Tab 5: chạy thử đủ 4 bước một lần với **16c** (để làm nóng), rồi chọn lại **23a**, bấm *Hỏi mô hình* rồi *Chạy trên PostgreSQL* một lần.
   - Tab 3: bật *Hiện số liệu chi tiết*, vào *Xem một câu*, chọn **26a**.
-  - Tab 2: bật *Hiện số liệu chi tiết* sẵn.
+  - Tab 2: cuộn sẵn tới biểu đồ ablation (phát hiện 3).
   - Quay lại tab 0.
-- [ ] **Terminal**: đã `cd` vào thư mục dự án, chữ to (`Cmd +`).
+- [ ] **Terminal**: đã `cd` vào thư mục dự án, chữ to (`Ctrl +`).
 - [ ] **VS Code**: mở sẵn các file ở mục 5, đúng thứ tự, mỗi file một tab.
-- [ ] Bật *Không làm phiền*, tắt Zalo/Messenger, cắm sạc. Chạy `caffeinate -d` trong một terminal riêng để máy không ngủ.
+- [ ] Bật *Không làm phiền*, tắt Zalo/Messenger, cắm sạc. Trong cài đặt nguồn của Windows, tắt chế độ ngủ và tắt màn hình tự động.
 
 ---
 
@@ -60,7 +63,9 @@ bash scripts/demo/demo_83.sh                # Bao-50 chọn tắt nested loop �
 | Oracle (luôn chọn đúng trong 6 phương án) | **1,53×** |
 | Mô hình của nhóm (DT, RF, LightGBM) | **0,80–0,82×** |
 | Thời gian mô hình nhóm ra quyết định | khoảng **25 ms** (EXPLAIN + suy luận) |
-| Câu 26a | PostgreSQL 5,7 s; tắt index scan 0,95 s; **mô hình chọn tắt hash join 32 s** |
+| Câu 26a (đo trên Mac, có trên dashboard) | PostgreSQL 5,7 s; tắt index scan 0,95 s; **mô hình chọn tắt hash join 32 s** |
+| Câu 7c (live, máy demo) | mặc định ~1,5 s; tắt index scan ~0,8 s; tắt nested loop ~11 s (chênh ~14 lần) |
+| Tab 5 live, máy demo | 23a: chọn tắt hash join (37%), 0,22 → 0,13 s, đúng. 16c: chọn tắt nested loop (48%), 1,3 → 2,9 s, **sai** |
 | Luật kết hợp | thử 695, giữ 37; luật "≥2 hash join" đúng 13/28, lift 2,8; được 1 s, mất 77 s |
 | RF với ngưỡng tin 60% | **1,06×**, đổi 6/233 lần, đều ở họ 17 |
 | Độ chính xác Base query (H2) | 0,44 (các split khác 0,54–0,64) |
@@ -68,125 +73,142 @@ bash scripts/demo/demo_83.sh                # Bao-50 chọn tắt nested loop �
 
 ---
 
-## 3. Kịch bản demo (khoảng 12 phút)
+## 3. Kịch bản demo (10 phút)
 
-| # | Phần | Màn hình | Thời gian |
-|---|---|---|---|
-| 1 | Mở đầu và môi trường | `docker ps` → tab 0 | 1' |
-| 2 | Chọn plan quan trọng đến mức nào | `demo_26a.sh` | 1' |
-| 3 | TN1: LQO có thắng PostgreSQL không | Tab 1 → tab 2 → `demo_83.sh` | 3' |
-| 4 | TN2: mô hình của nhóm | Tab 3 (câu 26a) | 2' |
-| 5 | Khai phá dữ liệu | Tab 4 | 2' |
-| 6 | Demo chạy thật | Tab 5 | 1,5' |
-| 7 | Hạn chế và kết luận | Tab 2 → Thiết kế & hạn chế | 1' |
+Bản lời thoại đầy đủ để tập nói, kèm bảng trả lời nhanh: [KICH_BAN_DEMO.md](KICH_BAN_DEMO.md).
 
-### Kịch bản 1: Mở đầu và môi trường (1')
-**Màn hình:** Terminal `docker ps` → tab **0. Dữ liệu IMDB & JOB**
-```bash
-docker ps
-docker exec pg_bao psql -U postgres -d imdbload -c "select version();"
-```
+| # | Màn hình | Nội dung | Thời gian | Mốc giờ |
+|---|---|---|---|---|
+| 1 | Terminal `demo_6cach.sh` + tab 0 | Mở đầu: chọn plan quan trọng đến mức nào | 1,5' | 0:00–1:30 |
+| 2 | Tab 1. Bài báo vs Nhóm | TN1: kết quả tái lập | 0,75' | 1:30–2:15 |
+| 3 | Tab 2. Nhóm: Thí nghiệm 1 | TN1: vì sao Bao thua | 1,25' | 2:15–3:30 |
+| 4 | Tab 3. Nhóm: Thí nghiệm 2 | TN2: mô hình của nhóm, câu 26a | 1,5' | 3:30–5:00 |
+| 5 | **Tab 4. Khai phá dữ liệu** | Vì sao thua, sửa thế nào | **2,5'** | 5:00–7:30 |
+| 6 | Tab 5. Demo mô hình | Chạy thật 23a (đúng) và 16c (sai) | 1,5' | 7:30–9:00 |
+| 7 | Giữ tab 5 (hoặc quay về tab 4) | Hạn chế và kết luận | 1' | 9:00–10:00 |
+
+Không chạy `demo_83.sh` và không mở tab "Thiết kế & hạn chế". Ablation và hạn chế chỉ nói bằng lời.
+
+### Màn hình 1: Terminal `demo_6cach.sh` → tab 0 → Terminal (1,5')
+**Thao tác:** gõ `bash scripts/demo/demo_6cach.sh`, Enter. Trong lúc chờ (khoảng 45 giây) chuyển sang dashboard **tab 0** để giới thiệu.
+Script chạy xong thì quay lại Terminal đọc 3 dòng: mặc định, tắt index scan, tắt nested loop.
+
+*Vừa bấm chạy:*
 > "Em xin demo phần cài đặt và thực nghiệm cho bài báo *Is Your Learned Query Optimizer Behaving As You Expect?*
-> Nhóm dựng 2 container Docker: pg_bao là PostgreSQL 12.5 đúng phiên bản bài báo, gắn extension Bao và pg_hint_plan;
-> bao_server chứa mô hình của Bao. HybridQO và các lần chạy chính của Bao chạy trên Kaggle.
-> Dữ liệu giống bài báo: CSDL IMDB, 113 câu JOB thuộc 33 họ, 9 cách chia train/test. Base query khó nhất vì câu test
-> thuộc họ mô hình chưa từng học. Máy nhóm ít bộ nhớ hơn bài báo nên nhóm so xu hướng, không so số giây."
+> Trong lúc script chạy, em giới thiệu môi trường."
 
-### Kịch bản 2: Chọn plan quan trọng đến mức nào (1')
-**Màn hình:** Terminal `bash scripts/demo/demo_26a.sh`. Bấm chạy rồi nói trong lúc chờ (khoảng 1,5 phút).
-> "Cùng một câu 26a, em ép PostgreSQL chạy theo 3 cách. Tắt index scan nhanh gấp khoảng 5 lần, tắt hash join chậm gấp
-> khoảng 6 lần. Hai cách chênh nhau hơn 30 lần. LQO học cách chọn như vậy. Vậy nó có thắng PostgreSQL không?"
+*Tab 0:*
+> "Nhóm dựng 2 container Docker: PostgreSQL 12.5 đúng phiên bản bài báo, có extension Bao, và một server chứa mô hình
+> của Bao. Các lần chạy lớn của Bao và HybridQO chạy trên Kaggle. Dữ liệu giống bài báo: CSDL IMDB, 113 câu JOB
+> thuộc 33 họ, 9 cách chia train/test. Máy nhóm ít bộ nhớ hơn bài báo nên nhóm so xu hướng, không so số giây.
+> Số trên dashboard đo trên máy Mac của nhóm; phần chạy trực tiếp hôm nay chạy trên máy này nên số giây sẽ khác."
 
-### Kịch bản 3: Thí nghiệm 1 (3')
-**Tab 1. Bài báo vs Nhóm**
-> "Nhóm chạy lại Bao và HybridQO trên 9 split, 233 lần kiểm tra. Neo, Balsa, LEON cần GPU nên dùng log tác giả.
-> Bao đạt 0,92 lần tốc độ PostgreSQL (bài báo 0,83), HybridQO 0,97 (bài báo 1,00). Dưới 1 là chậm hơn.
-> Kết luận của bài báo lặp lại được trên máy nhóm."
+*Quay lại Terminal, chỉ vào 3 dòng kết quả:*
+> "Cùng một câu 7c, em ép PostgreSQL chạy theo 6 cách: giữ nguyên, hoặc tắt 1 trong 5 toán tử. Mặc định khoảng 1,5 giây.
+> Tắt index scan còn khoảng 0,8 giây, nhanh gấp gần 2 lần. Nhưng tắt nested loop lên khoảng 11 giây, chậm gấp 8 lần.
+> Cùng một câu SQL mà chênh nhau khoảng 14 lần. Learned query optimizer học cách chọn như vậy.
+> Vậy nó có thắng PostgreSQL không?"
 
-**Tab 2. Nhóm: Thí nghiệm 1** (2 phát hiện ở đầu tab)
-> "Bao thua vì hai lý do. Thứ nhất, mỗi câu Bao tốn thêm khoảng 0,15 giây để lập 5 plan và hỏi mô hình; với câu ngắn,
-> phần này còn lâu hơn cả chạy câu. Thứ hai, khi Bao đổi plan thì đổi sai nhiều hơn đúng."
+Số giây mỗi lần chạy hơi khác nhau. Đọc số đang hiện trên màn hình.
 
-**Biểu đồ ablation ở tab 2, rồi Terminal `bash scripts/demo/demo_83.sh`** (khoảng 1,5 phút)
-> "Nhóm lặp lại ablation như tác giả. Tắt GEQO hay bitmap scan thì tổng gần như không đổi, nhưng 10–12 câu thay đổi mạnh.
-> Với 8.3, em nạp hai model Bao: một train trên IMDB đầy đủ, một train trên IMDB 50%, rồi chạy cả hai trên dữ liệu đầy đủ.
-> Bao-50 chọn tắt nested loop ở 3c và 11b nên chậm hơn [đọc số trên màn hình]; Bao-Full giữ plan mặc định.
-> Dữ liệu thay đổi thì mô hình chọn sai."
+### Màn hình 2: Tab 1. Bài báo vs Nhóm (0,75')
+**Thao tác:** chỉ vào bảng/biểu đồ tổng.
+> "Nhóm chạy lại Bao và HybridQO trên 9 split, tổng 233 lần kiểm tra. Neo, Balsa, LEON cần GPU nên dùng log của tác giả.
+> Kết quả: Bao chỉ đạt 0,92 lần tốc độ PostgreSQL, bài báo là 0,83. HybridQO 0,97, bài báo 1,00. Dưới 1 nghĩa là
+> chậm hơn PostgreSQL. Vậy kết luận của bài báo lặp lại được trên máy nhóm: LQO chưa thắng PostgreSQL."
 
-Số mili giây mỗi lần chạy sẽ hơi khác nhau. Đọc số đang hiện trên màn hình.
+### Màn hình 3: Tab 2. Nhóm: Thí nghiệm 1 (1,25')
+**Thao tác:** chỉ vào 2 phát hiện ở đầu tab, rồi cuộn tới biểu đồ ablation (phát hiện 3).
 
-### Kịch bản 4: Thí nghiệm 2 (2')
-**Tab 3. Nhóm: Thí nghiệm 2**
-> "Từ TN1, nhóm thử một mô hình phân loại nhẹ hơn: chỉ đọc plan EXPLAIN (vài mili giây), rút 34 đặc trưng, rồi chọn
-> 1 trong 6 phương án: giữ nguyên hoặc tắt 1 trong 5 toán tử. Nhóm thử Decision Tree, Random Forest và LightGBM.
-> Nếu luôn chọn đúng (Oracle) thì nhanh hơn 1,53 lần, nên dư địa có thật. Nhưng mô hình chỉ đạt 0,80–0,82 lần.
-> Mô hình ít khi làm chậm hơn PostgreSQL so với Bao, nhưng vài lần chọn sai rất đắt."
+*Phát hiện 1 và 2:*
+> "Nhóm tìm ra hai lý do Bao thua. Thứ nhất, mỗi câu Bao tốn thêm khoảng 0,15 giây để lập 5 plan và hỏi mô hình.
+> Với câu ngắn, phần này còn lâu hơn chạy câu. Bao thắng 8, hòa 46, thua 179 lần.
+> Thứ hai, khi Bao đổi plan thì đổi sai nhiều hơn đổi đúng."
 
-**Mục Xem một câu → 26a**
-> "Câu 26a: tốt nhất là tắt index scan, khoảng 1 giây, nhưng mô hình chọn tắt hash join, 32 giây, trong khi PostgreSQL
-> chỉ 5,7 giây. Một lần sai như vậy xoá hết phần lợi ở các câu khác.
-> H1 (mô hình nhanh hơn PostgreSQL) bị bác bỏ. H2 (kém nhất với câu chưa từng học) được chấp nhận: độ chính xác ở
-> Base query 0,44, các split khác 0,54–0,64."
+*Biểu đồ ablation:*
+> "Nhóm cũng lặp lại ablation như tác giả. Tắt GEQO hay bitmap scan thì tổng gần như không đổi, nhưng 10–12 câu
+> thay đổi mạnh. Mô hình Bao train trên IMDB 50% khi chạy trên dữ liệu đầy đủ thì chọn sai ở câu 3c và 11b.
+> Tức là dữ liệu thay đổi một chút là mô hình chọn sai."
 
-### Kịch bản 5: Khai phá dữ liệu (2')
-**Tab 4. Khai phá dữ liệu.** Đây là phần riêng của nhóm, không có trong bài báo, nên cần nhấn mạnh.
+### Màn hình 4: Tab 3. Nhóm: Thí nghiệm 2 (1,5')
+**Thao tác:** nói phần đầu tab, rồi cuộn xuống mục **Xem một câu** (đã chọn sẵn 26a). Số ở đây đo trên máy Mac.
+
+*Phần đầu tab:*
+> "Từ TN1, nhóm thử một hướng nhẹ hơn: chỉ đọc plan EXPLAIN của PostgreSQL, mất vài mili giây, rút 34 đặc trưng,
+> rồi dùng mô hình phân loại chọn 1 trong 6 phương án: giữ nguyên, hoặc tắt 1 trong 5 toán tử. Nhóm thử Decision Tree,
+> Random Forest và LightGBM. Nếu lần nào cũng chọn đúng, gọi là Oracle, thì nhanh hơn PostgreSQL 1,53 lần, nên dư địa
+> là có thật. Nhưng mô hình chỉ đạt 0,80 đến 0,82 lần."
+
+*Xem một câu → 26a:*
+> "Vì sao? Ví dụ câu 26a, đo trên máy Mac của nhóm: tốt nhất là tắt index scan, khoảng 1 giây. Nhưng mô hình lại chọn tắt hash join,
+> đúng phương án tệ nhất, 32 giây, trong khi PostgreSQL chỉ 5,7 giây. Một lần sai như vậy xoá hết phần lợi ở các câu khác.
+> Nên giả thuyết H1, mô hình nhanh hơn PostgreSQL, bị bác bỏ. H2, mô hình kém nhất với câu chưa từng học, được chấp nhận:
+> độ chính xác ở Base query 0,44, các split khác 0,54 đến 0,64."
+
+### Màn hình 5: Tab 4. Khai phá dữ liệu (2,5', phần quan trọng nhất)
+Đây là phần riêng của nhóm, không có trong bài báo. Nói chậm, nhấn mạnh.
 
 *Ô "Vấn đề" và 3 bước:*
-> "Mô hình đoán đúng khoảng một nửa nhưng tổng vẫn chậm hơn. Nhóm khai phá chính dữ liệu đã đo để tìm nguyên nhân,
-> rồi sửa và đo lại."
+> "Đây là phần riêng của nhóm, không có trong bài báo. Mô hình đoán đúng khoảng một nửa mà tổng vẫn chậm hơn.
+> Nhóm khai phá chính dữ liệu đã đo để tìm nguyên nhân, rồi sửa và đo lại."
 
 *Phát hiện 1 (biểu đồ 2 thanh):*
-> "Dùng luật kết hợp dạng 'NẾU câu có đặc điểm A THÌ tắt X có lợi'. Máy thử 695 luật, giữ lại 37 luật đáng tin.
-> Luật nổi bật: có từ 2 hash join trở lên thì tắt hash join. Luật đúng 13/28 câu, gấp 2,8 lần đoán bừa.
-> Nhưng áp cho cả 28 câu thì 13 câu nhanh hơn chỉ được khoảng 1 giây, còn 15 câu chậm hơn mất 77 giây.
-> Bài học: chỉ đổi khi thật chắc chắn, còn không thì giữ nguyên PostgreSQL."
+> "Nhóm dùng luật kết hợp, dạng 'NẾU câu có đặc điểm A THÌ tắt X có lợi'. Máy thử 695 luật, giữ lại 37 luật đáng tin
+> sau kiểm định thống kê. Luật nổi bật nhất: câu có từ 2 hash join trở lên thì tắt hash join. Luật này đúng 13 trên
+> 28 câu, gấp 2,8 lần đoán bừa, nghe rất tốt.
+> Nhưng nhìn biểu đồ: áp cho cả 28 câu thì 13 câu nhanh hơn chỉ được tổng khoảng 1 giây, còn 15 câu chậm hơn mất
+> 77 giây. Bài học: đúng nhiều lần chưa đủ, phải tránh được lần sai đắt. Không chắc thì nên giữ nguyên PostgreSQL."
 
 *Phát hiện 2 (biểu đồ cột xám và xanh):*
-> "Nhóm sửa đúng theo bài học: mô hình chỉ đổi cách chạy khi độ tin từ 60% trở lên. Random Forest từ 0,80 lên 1,06 lần,
-> nhanh hơn PostgreSQL. Kết quả giữ ổn định khi ngưỡng từ 50% đến 70%. Lúc này mô hình chỉ đổi 6/233 lần, đều là tắt
-> nested loop ở họ 17, và lần nào cũng nhanh hơn."
+> "Nhóm sửa đúng theo bài học đó: mô hình chỉ đổi cách chạy khi độ tin từ 60% trở lên, còn lại giữ nguyên PostgreSQL.
+> Random Forest từ 0,80 lên 1,06 lần, tức là đã nhanh hơn PostgreSQL. Kết quả ổn định khi ngưỡng từ 50% đến 70%.
+> Lúc này mô hình chỉ đổi 6 trên 233 lần, đều là tắt nested loop ở họ 17, và lần nào cũng nhanh hơn."
 
-*Kết luận:*
-> "Khai phá dữ liệu chỉ ra đúng nguyên nhân: mô hình đổi cách chạy cả khi không chắc. Một sửa đổi đơn giản đã giúp mô hình
-> thắng PostgreSQL. Phần lợi còn nhỏ vì mô hình hiếm khi đủ tự tin."
+*Kết luận tab:*
+> "Khai phá dữ liệu chỉ ra đúng nguyên nhân: mô hình đổi cách chạy cả khi không chắc. Chỉ một sửa đổi đơn giản đã giúp
+> mô hình thắng PostgreSQL."
 
 Nếu cô hỏi sâu thì bật *Hiện chi tiết kỹ thuật* để xem bảng luật, các ngưỡng và 28 câu cụ thể.
 
-### Kịch bản 6: Demo chạy thật (1,5')
-**Tab 5. Demo mô hình**
+### Màn hình 6: Tab 5. Demo mô hình (1,5')
+**Thao tác:** chọn **23a**, mô hình **Random Forest**, giữ ô *"Không cho mô hình học các câu cùng họ"*.
 
-| Câu | Mô hình chọn | Độ tin | Kết quả đã đo | Làm gì |
-|---|---|---|---|---|
-| **23a** | Tắt hash join | 37% | 0,17 → 0,12 s, đúng | **Chạy đủ 4 bước** (khoảng 10 s) |
-| **26a** | Tắt hash join | 35% | 5,7 → 32 s, sai | **Chỉ bấm Hỏi mô hình**, không chạy (mất khoảng 4 phút) |
-| 16b | Tắt nested loop | 54% | 24 → 9,4 s, thắng 2,5× | Chỉ khi cô hỏi về một lần thắng; không chạy (mất khoảng 6 phút) |
+*Bước 1 – chọn câu:*
+> "Cuối cùng là prototype chạy thật. Ô này bỏ cả họ 23 khỏi dữ liệu huấn luyện, để mô hình gặp câu này như câu mới."
 
-1. Chọn **23a**, mô hình **Random Forest**, giữ ô *"Không cho mô hình học các câu cùng họ"*.
-   > "Ô này bỏ cả họ 23 khỏi dữ liệu huấn luyện, để mô hình gặp câu này như câu hoàn toàn mới."
-2. Bấm **Hỏi mô hình**. Bước 2:
-   > "Mô hình chưa chạy câu. Nó chỉ hỏi PostgreSQL định chạy thế nào (EXPLAIN), rồi nhóm trích 34 đặc trưng."
-3. Bước 3:
-   > "Mô hình chọn tắt hash join, tin 37%. Toàn bộ ra quyết định chỉ khoảng 25 ms, Bao cần khoảng 150 ms."
-4. Bấm **Chạy trên PostgreSQL**. Bước 4:
-   > "Chạy thật cả 6 phương án để kiểm tra: phương án nhanh nhất đúng là tắt hash join."
-5. Đổi sang **26a**, chỉ bấm *Hỏi mô hình*:
-   > "Câu 26a, mô hình cũng chọn tắt hash join nhưng chỉ tin 35%, ngang với giữ nguyên. Kết quả đã đo là 32 giây so với 5,7.
-   > Áp luật ở tab 4 (dưới 60% thì giữ nguyên) thì tránh được lần sai này."
+*Bấm **Hỏi mô hình** – bước 2 và 3:*
+> "Mô hình chưa chạy câu, chỉ hỏi PostgreSQL định chạy thế nào bằng EXPLAIN rồi trích 34 đặc trưng. Mô hình chọn tắt
+> hash join, tin 37%. Toàn bộ ra quyết định khoảng 25 mili giây, Bao cần khoảng 150."
 
-> Chốt: "Hướng của nhóm chạy được trong thực tế và ra quyết định rất nhanh. Điểm yếu là đổi cách chạy khi không chắc,
-> nên nhóm thêm luật 'không chắc thì giữ nguyên'."
+*Bấm **Chạy trên PostgreSQL** – bước 4 (khoảng 10 giây):*
+> "Chạy thật cả 6 phương án để kiểm tra: phương án nhanh nhất đúng là tắt hash join."
 
-Nếu cô hỏi về 16b thì nói thật: mô hình chỉ tin 54%, dưới 60%. Áp ngưỡng thì mất lần thắng này, và đó là cái giá của
-việc chơi an toàn.
+*Đổi sang **16c**, bấm **Hỏi mô hình** rồi **Chạy trên PostgreSQL** (khoảng 30 giây):*
+> "Còn câu 16c, mô hình chọn tắt nested loop, chỉ tin 48%. Chạy thật thì PostgreSQL mặc định khoảng 1,3 giây,
+> còn theo mô hình lên khoảng 2,9 giây, chậm hơn gấp đôi. Đây đúng là kiểu đổi khi không chắc mà tab 4 đã chỉ ra.
+> Áp luật dưới 60% thì giữ nguyên là tránh được lần sai này."
 
-### Kịch bản 7: Hạn chế và kết luận (1')
-**Tab 2 → bật chi tiết → Thiết kế & hạn chế**
-> "Hạn chế: máy ít bộ nhớ hơn bài báo nên chỉ so xu hướng. HybridQO chỉ train 11 epoch so với 50 của tác giả, do giới
-> hạn 12 giờ của Kaggle, nên gần như giữ plan PostgreSQL. Oracle chỉ là tốt nhất trong 6 cách thử. Ngưỡng tin 60% mới
-> giúp ở 6/233 lần, đều thuộc họ 17.
-> Tóm lại, nhóm tái lập được kết luận của bài báo: LQO chưa thắng PostgreSQL ổn định. Khai phá dữ liệu cho thấy
-> nguyên nhân là đổi plan cả khi không chắc, và với luật đơn giản 'không chắc thì giữ nguyên' thì mô hình đã nhanh hơn
+Trong lúc chờ 16c chạy, nói câu chốt bên dưới. Số mỗi lần chạy hơi khác nhau, đọc số đang hiện trên màn hình.
+
+### Màn hình 7: Hạn chế và kết luận (1')
+**Thao tác:** giữ nguyên màn hình (hoặc quay về tab 4 nếu muốn chỉ lại con số 1,06×).
+> "Về hạn chế: máy nhóm ít bộ nhớ hơn bài báo nên chỉ so xu hướng. HybridQO chỉ train được 11 epoch so với 50 của
+> tác giả vì giới hạn 12 giờ của Kaggle. Oracle chỉ là tốt nhất trong 6 cách thử. Và ngưỡng 60% mới giúp ở 6 trên
+> 233 lần, đều thuộc họ 17.
+> Tóm lại, nhóm tái lập được kết luận của bài báo: LQO chưa thắng PostgreSQL ổn định. Khai phá dữ liệu cho thấy nguyên
+> nhân là đổi plan cả khi không chắc. Với luật đơn giản 'không chắc thì giữ nguyên', mô hình của nhóm đã nhanh hơn
 > PostgreSQL 1,06 lần. Em cảm ơn cô."
+
+### Nếu bị lố giờ
+Cắt theo thứ tự: (1) bỏ bấm *Chạy trên PostgreSQL* ở tab 5, chỉ hỏi mô hình; (2) bỏ tab 1, nói số bằng lời ở đầu tab 2;
+(3) bỏ biểu đồ ablation. **Không cắt** `demo_6cach.sh` và tab 4.
+
+### Nếu cô hỏi thêm
+- *Về 16b (một lần mô hình thắng):* mô hình chọn tắt nested loop, tin 54%. Trên máy demo: 15 s → 4,3 s, nhanh 3,5 lần.
+  Nhưng 54% dưới 60%, áp ngưỡng thì mất lần thắng này, đó là cái giá của việc chơi an toàn. Không chạy (mất khoảng 4–5 phút).
+- *Muốn xem lại 26a như trên Mac:* trên máy demo, plan của 26a khác Mac (thống kê ANALYZE lấy mẫu ngẫu nhiên), mặc định
+  chỉ khoảng 1,3 s và mô hình chọn giữ nguyên. Đây cũng là ví dụ cho việc dữ liệu/thống kê đổi một chút là plan đổi.
+- *Muốn xem Bao chọn sai chạy thật:* chạy `bash scripts/demo/demo_83.sh` (khoảng 1,5 phút).
 
 ---
 
@@ -199,7 +221,7 @@ việc chơi an toàn.
 | Dashboard không mở được | `bash scripts/demo/demo_start.sh --no-warm` |
 | Tab 5 báo không kết nối được PostgreSQL | `docker start pg_bao` |
 | Máy chạy chậm, số lệch nhiều | Mở ảnh chụp màn hình đã chuẩn bị |
-| Hết giờ | Bỏ `demo_83.sh` và tab 5, chỉ nói số trên dashboard |
+| Lố giờ | Xem mục "Nếu bị lố giờ" ở cuối mục 3 |
 | Dư giờ | `bash scripts/demo/demo_ablation.sh` (tắt GEQO và bitmap scan, khoảng 1–2 phút) |
 
 ---

@@ -47,11 +47,47 @@ pg_bao: gửi thời gian thật ─────────► bao_server: lưu
 > "Hạ tầng gồm 2 container Docker cùng một mạng. pg_bao là PostgreSQL 12.5 chứa dữ liệu IMDB và extension Bao, nơi chạy thật câu truy vấn. bao_server chứa mạng nơ-ron của Bao. Khi bật Bao, PostgreSQL lập 5 plan, gửi sang bao_server dự đoán plan nào nhanh nhất, chạy plan đó rồi gửi thời gian thật về để Bao học. Nhóm tách đúng như tác giả, cùng IP, để chạy được nguyên script của tác giả."
 
 ### Bao là gì?
-- Bao là một bộ tối ưu học máy (LQO). Bao **không tự viết plan mới**. Nó **chọn 1 trong 5 cấu hình** (gọi là arm, hay bộ gợi ý) của bộ tối ưu sẵn có, ví dụ giữ nguyên, tắt nested loop, tắt hash join.
+- Bao là một bộ tối ưu học máy (LQO). Bao **không tự viết plan mới**. Nó **chọn 1 trong 5 cấu hình** (gọi là arm, hay bộ gợi ý) của bộ tối ưu sẵn có, ví dụ giữ nguyên, tắt nested loop, tắt merge join. Chi tiết 5 arm ở mục [Arm của Bao là gì](#arm-của-bao-là-gì-vì-sao-chỉ-5-arm).
 - Việc lập 5 plan và hỏi mô hình mất khoảng **0,1–0,2 giây mỗi câu**. Đây là lý do Bao hay thua ở câu ngắn.
 - Khi bật học (`enable_bao_rewards`), Bao ghi lại thời gian thật để train lại.
 
 > "pg_bao là PostgreSQL 12.5 gắn extension Bao. Khi bật Bao, PostgreSQL lập 5 plan theo 5 bộ gợi ý, gửi sang bao_server để mạng nơ-ron dự đoán thời gian, rồi chạy plan nhanh nhất."
+
+### Bao có chạy thật cả 5 arm rồi chọn cái nhanh nhất không?
+**Không.** Bao chỉ **lập plan** cho 5 arm, **dự đoán** thời gian, rồi **chạy thật đúng 1 plan**.
+
+| Bước | Ở đâu | Làm gì | Chạy câu? |
+|---|---|---|---|
+| 1 | pg_bao, [bao_planner.h:390-393](lqo_ml_perspective/bao/pg_extension/bao_planner.h#L390-L393) | Lặp 5 arm: bật/tắt cờ rồi gọi bộ tối ưu PostgreSQL lập plan | Không |
+| 2 | bao_server, [main.py:36-37](lqo_ml_perspective/bao/bao_server/main.py#L36-L37) | Mô hình dự đoán thời gian 5 plan, chọn `argmin` | Không |
+| 3 | pg_bao | Chạy plan được chọn, gửi thời gian thật về để train | **Có, 1 lần** |
+
+- Chưa có mô hình thì chọn luôn plan mặc định của PostgreSQL ([main.py:31-32](lqo_ml_perspective/bao/bao_server/main.py#L31-L32)).
+- Bao chỉ biết thời gian thật của arm đã chạy. Nó dùng Thompson sampling để thỉnh thoảng thử arm khác.
+- Khác mô hình nhóm: nhóm chỉ `EXPLAIN` 1 lần (plan mặc định), mô hình đoán thẳng phương án (khoảng 25 ms so với 150 ms của Bao). Nhóm đã chạy thật đủ 6 phương án **một lần lúc thu thập dữ liệu** để làm nhãn và tính Oracle, không chạy lúc dùng mô hình.
+
+> "Bao không chạy thử cả 5 cách. Nó lập 5 plan, mạng nơ-ron dự đoán thời gian từng plan, rồi chỉ chạy plan có dự đoán nhỏ nhất. Phần lập 5 plan và dự đoán là khoảng 0,15 giây mỗi câu."
+
+### Arm của Bao là gì? Vì sao chỉ 5 arm?
+- Một **arm** là một **tổ hợp bật/tắt** 6 cờ `enable_*` của PostgreSQL. Arm **không phải** "mỗi cờ một arm": có arm tắt 3 cờ cùng lúc.
+- 6 cờ có 2⁶ = **64 tổ hợp** (mỗi cờ có 2 trạng thái on/off). Code pg_bao định nghĩa **26 arm** (`BAO_MAX_ARMS = 26`, [bao_configs.h:6](lqo_ml_perspective/bao/pg_extension/bao_configs.h#L6); `case 0`–`case 25` trong [bao_planner.h](lqo_ml_perspective/bao/pg_extension/bao_planner.h)). Cả 26 khác nhau, không arm nào tắt cả 3 loại join, không arm nào tắt quá 4 cờ.
+- Tham số `bao_num_arms` mặc định là **5** (cho phép 1–26, [main.c:119-128](lqo_ml_perspective/bao/pg_extension/main.c#L119-L128)). Tác giả ghi: *"Higher values give better plans, but higher optimization times."* Tác giả bài báo giữ nguyên 5 ([run_queries.py:35](lqo_ml_perspective/bao/run_queries.py#L35)).
+- Vì sao chỉ 5: mỗi arm thêm là thêm 1 lần lập plan và 1 plan đưa qua mô hình, **cho mọi câu**. Với 5 arm đã tốn khoảng 0,15 s mỗi câu.
+- Chi phí tăng theo **số arm**, không theo **số cờ**. Thêm cờ mà vẫn giữ 5 arm thì tốc độ không đổi, chỉ là chọn 5 arm từ tập lớn hơn.
+
+5 arm mặc định:
+
+| Arm | Tắt |
+|---|---|
+| 0 | không tắt gì (default) |
+| 1 | nested loop |
+| 2 | merge join + index scan |
+| 3 | nested loop + merge join + index scan |
+| 4 | merge join |
+
+5 arm này **không bao giờ tắt hash join, seq scan hay index-only scan**.
+
+> "Bao có sẵn 26 arm, mỗi arm là một tổ hợp bật/tắt 6 cờ của PostgreSQL, nhưng mặc định chỉ xét 5 và tác giả bài báo giữ nguyên. Mỗi arm thêm là thêm một lần lập plan cho mọi câu; với 5 arm đã tốn khoảng 0,15 giây mỗi câu. Đây là đánh đổi giữa plan tốt hơn và thời gian tối ưu."
 
 ### Chạy baseline PostgreSQL thì có phải gỡ extension Bao không?
 - **Không gỡ, chỉ tắt trong phiên.** Extension luôn được nạp (`shared_preload_libraries = pg_bao`) và mặc định `enable_bao = off`.
@@ -246,6 +282,198 @@ Gồm 11 đặc trưng SQL và 23 đặc trưng plan. **Tất cả đều có tr
 - Nếu Oracle chỉ khoảng 1,0× thì ý tưởng sai từ đầu. Oracle đạt 1,53× nghĩa là cơ hội có thật, và vấn đề nằm ở chỗ **mô hình chọn sai**.
 - Khi nói với cô có thể dùng "mức tối đa có thể đạt" hoặc "tiềm năng cải thiện".
 
+### 6 phương án là gì? Có lấy từ bài báo hay Bao không?
+Mỗi phương án tắt **đúng 1 loại toán tử** bằng lệnh `SET` trước khi chạy ([app/prototype.py:25-31](app/prototype.py#L25-L31)):
+
+| Phương án | Lệnh | Ý nghĩa |
+|---|---|---|
+| `default` | (không có) | Giữ plan PostgreSQL tự chọn |
+| `no_nestloop` | `SET enable_nestloop = off` | Không nối bằng nested loop |
+| `no_hashjoin` | `SET enable_hashjoin = off` | Không nối bằng hash join |
+| `no_mergejoin` | `SET enable_mergejoin = off` | Không nối bằng merge join |
+| `no_seqscan` | `SET enable_seqscan = off` | Hạn chế quét toàn bảng |
+| `no_indexscan` | `SET enable_indexscan = off` + `enable_indexonlyscan = off` | Không đọc qua index |
+
+Ý nghĩa 6 cờ:
+
+| Cờ | Cách làm | Tốt khi |
+|---|---|---|
+| nested loop | Mỗi dòng bảng ngoài tìm dòng khớp ở bảng trong (thường qua index) | Bảng ngoài rất ít dòng |
+| hash join | Dựng bảng băm từ bảng nhỏ, duyệt bảng lớn một lượt để dò | Hai bảng lớn, điều kiện `=` |
+| merge join | Sắp xếp 2 bảng theo khóa rồi đi song song | Dữ liệu đã có thứ tự |
+| seq scan | Đọc toàn bộ bảng | Lấy nhiều dòng |
+| index scan | Tra index rồi nhảy tới bảng | Lấy ít dòng |
+| index-only scan | Lấy dữ liệu ngay trong index | Mọi cột cần đều có trong index |
+
+- `off` **không cấm hẳn**, chỉ cộng chi phí rất lớn. Không còn cách khác thì PostgreSQL vẫn dùng.
+- **Cả 6 cờ là tham số có sẵn của PostgreSQL**, không phải của pg_bao. pg_bao chỉ bật/tắt chúng theo arm. Tham số riêng của pg_bao là `enable_bao`, `bao_num_arms`, `bao_host`…
+- **Nguồn gốc:** nhóm lấy đúng 6 cờ mà Bao dùng ([reg_blocker.py:17-20](lqo_ml_perspective/bao/bao_server/reg_blocker.py#L17-L20)), nhưng **cách chia 6 phương án là nhóm tự thiết kế**:
+
+| Phương án nhóm | Trong 5 arm mặc định của Bao? | Trong 26 arm của Bao? |
+|---|---|---|
+| `default` | Có (arm 0) | Có |
+| `no_nestloop` | Có (arm 1) | Có |
+| `no_mergejoin` | Có (arm 4) | Có |
+| `no_seqscan` | Không | Có (arm 17) |
+| `no_hashjoin` | **Không** | **Không** (Bao chỉ tắt hash join kèm cờ khác) |
+| `no_indexscan` | **Không** | **Không** (Bao chỉ tắt riêng indexscan hoặc indexonlyscan) |
+
+- `no_hashjoin` lại là nhãn phổ biến thứ hai (14/113 câu) và là lựa chọn sai đắt nhất ở 26a.
+
+> "6 phương án dùng đúng 6 cờ enable_* có sẵn của PostgreSQL mà Bao cũng dùng. Nhưng cách chia là của nhóm: mỗi phương án tắt đúng 1 loại toán tử. Bao mặc định chỉ chọn 5 tổ hợp và không bao giờ tắt hash join hay seq scan; 'tắt hash join' và 'tắt index scan' của nhóm không có trong cả 26 arm của Bao."
+
+### Sao không thêm bitmap scan, TID scan, GEQO vào 6 phương án?
+- Ba tham số này **cũng là cấu hình có sẵn của PostgreSQL**, mặc định `on` ([infra/postgresql.lqo.conf:24-26](infra/postgresql.lqo.conf#L24-L26)). Nhóm chỉ tắt chúng **cho cả workload** trong ablation 8.4 và 8.5, không chọn theo từng câu.
+- **TID scan:** chỉ dùng khi SQL có `WHERE ctid = ...`. JOB có 0/113 câu như vậy, plan mặc định có 0/113 `Tid Scan`, nên tắt cũng không đổi gì.
+- **GEQO:** không phải toán tử mà là **cách tìm thứ tự join**, chỉ có tác dụng với câu ≥ 12 bảng. Tắt thì lập plan lâu hơn.
+- **Bitmap scan:** có tác dụng thật, xuất hiện trong **69/113** plan mặc định. Ablation 8.4 cho thấy tắt nó làm 10 câu đổi rõ (6 nhanh hơn, 4 chậm hơn). Nhóm không thêm vì giữ cùng 6 cờ với Bao để so sánh, và mỗi phương án thêm là đo thêm 113 câu × 3 lần. Đây là **hướng mở rộng**: `no_bitmapscan` làm phương án thứ 7. Thêm phương án không làm mô hình nhóm chậm hơn lúc ra quyết định (vẫn 1 lần EXPLAIN).
+
+> "Nhóm giữ đúng 6 cờ của Bao để so sánh được. TID scan không câu JOB nào dùng, GEQO là chiến lược tìm thứ tự join chứ không phải toán tử. Bitmap scan có trong 69/113 plan và tắt nó làm khoảng 10 câu thay đổi theo cả hai chiều, nên thêm 'tắt bitmap scan' là hướng mở rộng nhóm chưa làm."
+
+### "Giữ nguyên PostgreSQL" có phải là bật hết nested loop, hash join, merge join, seq scan, index scan?
+- **Đúng.** Phương án `default` không `SET` gì ([app/prototype.py:26](app/prototype.py#L26)), nên mọi cờ `enable_*` giữ giá trị mặc định là `on`. Đã kiểm tra trực tiếp trên `pg_bao`: `enable_nestloop`, `enable_hashjoin`, `enable_mergejoin`, `enable_seqscan`, `enable_indexscan`, `enable_indexonlyscan` đều `on`.
+- Các cờ khác cũng `on`: `enable_bitmapscan`, `enable_tidscan`, `enable_material`, `enable_sort`…, và `geqo = on`. Mỗi phương án "Tắt …" chỉ tắt đúng 1 loại, các cờ còn lại giữ như mặc định.
+- Khi kết nối, dashboard chỉ đặt thêm chế độ chỉ đọc, `statement_timeout` và `enable_bao = off` (để Bao không can thiệp) ([app/prototype.py:82-96](app/prototype.py#L82-L96)).
+- **Bật hết không có nghĩa là dùng hết.** Planner vẫn chọn plan có cost ước lượng thấp nhất, nên một plan có thể chỉ có hash join và seq scan.
+
+> "Giữ nguyên PostgreSQL là không SET gì, mọi cờ enable_* đều bật, PostgreSQL tự chọn plan rẻ nhất theo ước lượng. 5 phương án còn lại mỗi cái chỉ tắt đúng 1 loại toán tử."
+
+### Ba mô hình train thế nào? Input và output là gì?
+Ba mô hình là **Decision Tree, Random Forest và LightGBM** (không có Logistic Regression). Đây là bài toán **phân loại có giám sát 6 lớp**: mỗi câu SQL là 1 mẫu.
+
+| | Nội dung |
+|---|---|
+| **Input (X)** | 34 đặc trưng (11 từ SQL + 23 từ plan EXPLAIN mặc định), xem mục "34 đặc trưng là gì?". Có trước khi chạy câu, mất vài ms |
+| **Output (y)** | 1 trong 6 nhãn: `default`, `no_nestloop`, `no_hashjoin`, `no_mergejoin`, `no_seqscan`, `no_indexscan`. Mô hình trả thêm xác suất từng lớp (biểu đồ "độ tin" ở Bước 3 tab Demo) |
+
+**Cách tạo nhãn** ([exp2_analyze.py:75-109](scripts/exp2/exp2_analyze.py#L75-L109)):
+1. Chạy thật mỗi câu × 6 phương án × 3 lần, lấy **lần thứ 3** (cache đã ấm). Thời gian = planning + execution. Timeout hoặc thiếu số đo tính là 180 s.
+2. Phương án nào cho plan giống hệt `default` thì gán cùng thời gian với `default`, để nhiễu đo không tạo "người thắng" giả.
+3. Nhãn là phương án nhanh nhất. **Nếu nhanh hơn `default` dưới 5% thì nhãn vẫn là `default`**, vì không đáng đổi.
+
+Phân bố nhãn 113 câu JOB: `default` 60, `no_hashjoin` 14, `no_indexscan` 13, `no_seqscan` 11, `no_nestloop` 10, `no_mergejoin` 5. Dữ liệu lệch: hơn nửa là "giữ nguyên".
+
+**Siêu tham số** ([exp2_analyze.py:56-64](scripts/exp2/exp2_analyze.py#L56-L64)): không chuẩn hoá đặc trưng (mô hình cây không cần), không đặt trọng số lớp, seed cố định.
+
+| Mô hình | Tham số |
+|---|---|
+| Decision Tree | `max_depth=4`, `min_samples_leaf=3` (cây nông để đọc được luật) |
+| Random Forest | 300 cây, `min_samples_leaf=2` |
+| LightGBM | 200 cây, `learning_rate=0.05`, `num_leaves=15`, `min_child_samples=5` |
+
+**Train và đánh giá:**
+- **Thí nghiệm 2:** train trên đúng **9 split của bài báo** (LOO/RND/BQ × 3). Không chấm bằng accuracy mà bằng **thời gian**: EXPLAIN + suy luận + thời gian thật của phương án được chọn, so với PostgreSQL (thắng/hòa/thua ±10%), Oracle và Bao.
+- **Tab Demo:** train trên cả 113 câu JOB. Nếu tick "không cho học các câu cùng họ" thì bỏ cả họ của câu đang demo (chọn 23a thì bỏ 23a, 23b, 23c) để mô hình gặp câu như câu mới ([app/prototype.py:61-67](app/prototype.py#L61-L67)).
+
+**Khác Bao thế nào:** Bao lập plan cho cả 5 arm, dùng mạng cây (TCNN) đoán thời gian từ cây plan và học kiểu bandit, **chỉ chạy thật arm nó chọn**. Nhóm thì **chạy thật đủ 6 phương án** để có nhãn đúng, rồi dùng mô hình cây nhỏ phân loại trên 34 con số.
+
+> "Input là 34 con số lấy từ câu SQL và plan EXPLAIN. Output là 1 trong 6 cấu hình hint. Nhãn có được bằng cách chạy thật cả 6 cấu hình và lấy cái nhanh nhất; nếu không nhanh hơn mặc định ít nhất 5% thì giữ mặc định. Ba mô hình cây train có giám sát trên 9 split giống bài báo và được chấm bằng thời gian chạy thật, không chỉ accuracy."
+
+### HybridQO hoạt động thế nào? Input, output và cách train?
+HybridQO (còn gọi là HyperQO, bài "Cost-based or Learning-based? A Hybrid Query Optimizer for Query Plan Selection", VLDB 2022) là một LQO bài báo đánh giá. Code nằm ở [lqo_ml_perspective/hybrid_qo/](lqo_ml_perspective/hybrid_qo/). "Hybrid" nghĩa là **kết hợp**: mô hình chỉ đề xuất vài plan ứng viên, còn PostgreSQL (dựa trên cost) vẫn tự lập phần còn lại của plan.
+
+**Khác nhóm và Bao ở chỗ chọn cái gì:** HybridQO không bật/tắt toán tử mà **chọn thứ tự nối của 2 bảng đầu tiên** (`leading_length = 2`), áp vào câu bằng hint `/*+ Leading(t mk) */` của pg_hint_plan ([Hinter.py:63](lqo_ml_perspective/hybrid_qo/Hinter.py#L63)).
+
+**Các bước cho mỗi câu** (`hinterRun`, [Hinter.py:74](lqo_ml_perspective/hybrid_qo/Hinter.py#L74)):
+1. EXPLAIN lấy plan mặc định của PostgreSQL.
+2. **MCTS** (tìm kiếm cây Monte Carlo, [mcts.py](lqo_ml_perspective/hybrid_qo/mcts.py)) dùng một mạng nhỏ để đề xuất các cặp bảng nối đầu tiên đáng thử.
+3. Với mỗi ứng viên: gắn `Leading(...)` rồi EXPLAIN để PostgreSQL lập plan đầy đủ.
+4. **Mạng giá trị** (TreeLSTM, 10 "đầu" như một ensemble nhỏ) dự đoán thời gian của từng plan, kèm độ bất định (mean và độ lệch giữa 10 đầu). Plan mặc định cũng được chấm cùng lúc.
+5. **Chỉ đổi plan khi đủ 3 điều kiện** ([Hinter.py:87](lqo_ml_perspective/hybrid_qo/Hinter.py#L87)):
+   - plan ứng viên được dự đoán nhanh hơn plan mặc định;
+   - **KNN** trên các lần dự đoán sai trước đó cho thấy mô hình đủ tin cậy (sai số ước lượng dưới khoảng 3 lần, `threshold = log 3 / log 180 000`);
+   - plan mặc định dự đoán chạy **lâu hơn 100 ms** (câu ngắn thì không đáng đổi).
+   Không đủ điều kiện thì **giữ nguyên PostgreSQL**. Ý tưởng này giống ngưỡng tin 60% của nhóm.
+6. Chạy thật plan được chọn. Nếu bị timeout thì chạy lại plan PostgreSQL.
+
+| | HybridQO |
+|---|---|
+| **Input** | (a) **Véc-tơ câu SQL**: ma trận bảng nào nối với bảng nào (40 × 40 alias) và độ chọn lọc của các điều kiện lọc theo cột (100 cột), lấy bằng EXPLAIN từng điều kiện trên một bảng ([sql2fea.py:25-82](lqo_ml_perspective/hybrid_qo/sql2fea.py#L25-L82)). (b) **Cây plan**: mỗi nút gồm 9 số: loại nút (3 loại join + 4 loại scan, one-hot), total cost và số dòng ước lượng |
+| **Output** | Thời gian chạy dự đoán (thang log) + độ bất định cho mỗi plan. Quyết định cuối: một hint `Leading(...)` hoặc giữ plan PostgreSQL |
+| **Nhãn** | Thời gian chạy thật của plan đã chọn (và plan PostgreSQL khi cần), mã hoá theo log |
+| **Kiểu học** | **Học trực tuyến**: chạy câu nào thì học câu đó ngay, cập nhật mạng giá trị, mạng của MCTS và bộ nhớ KNN. Không có tập nhãn đo sẵn như nhóm |
+
+**Cách train trong bài báo và trong nhóm:**
+- Cùng 9 split như Bao và nhóm. Train bằng cách chạy lặp tập train nhiều epoch (tác giả 50 epoch), test ở epoch 0, 10, 20…, 49 ([run_mcts.py](lqo_ml_perspective/hybrid_qo/run_mcts.py)).
+- Lưu ý: code gốc gọi **cùng hàm `hinterRun`** cho câu test, mà hàm này cũng cập nhật mô hình sau mỗi câu. Tức là trong lúc test, mô hình vẫn học tiếp.
+- Nhóm chạy trên **Kaggle, 11 epoch (0–10), so ở epoch 10**, vì giới hạn 12 giờ mỗi phiên. Log tác giả cho thấy từ epoch 10 tới 49 kết quả gần như đứng yên khoảng 1,00× (xem [HUONG_DAN_KAGGLE_HYBRIDQO.md](HUONG_DAN_KAGGLE_HYBRIDQO.md) mục "Vì sao 11 epoch"). Siêu tham số giữ nguyên như tác giả. Nhóm chỉ vá để dừng đúng giờ và để chạy được khi không có GPU.
+
+**Kết quả của nhóm** (9 split, epoch 10, [c1_HybridQO_kaggle_9split_summary.csv](analysis/output/c1_HybridQO_kaggle_9split_summary.csv)):
+- **0 thắng / 124 hòa / 109 thua, 0,97×**. Bài báo (log tác giả): 34 / 82 / 117, 1,00×.
+- HybridQO **chỉ đổi plan 8/233 lần**, còn lại giữ plan PostgreSQL. Nếu chỉ tính thời gian thực thi thì speedup khoảng **1,00×** ở mọi split.
+- **Vì sao thua dù gần như giữ nguyên plan:** chi phí ra quyết định (MCTS + nhiều lần EXPLAIN + mạng TreeLSTM) khoảng **0,5–2,5 s mỗi split**. Với câu chạy nhanh, phần chi phí này vượt ngưỡng 10% nên bị tính là thua.
+
+**So sánh ba cách:**
+
+| | Bao | HybridQO | Mô hình nhóm |
+|---|---|---|---|
+| Chọn cái gì | 1 trong 5 tổ hợp bật/tắt toán tử | Thứ tự nối 2 bảng đầu (`Leading`) | 1 trong 6 phương án tắt 1 toán tử |
+| Cần pg_hint_plan | Không (extension pg_bao) | **Có** | Không |
+| Mô hình | Mạng cây TCNN đoán thời gian | MCTS + TreeLSTM 10 đầu + KNN | Cây quyết định / RF / LightGBM phân loại |
+| Input | Cây plan của từng arm | Véc-tơ SQL + cây plan của từng ứng viên | 34 con số từ SQL + plan mặc định |
+| Học | Trực tuyến, bandit | Trực tuyến, nhiều epoch | Có giám sát, nhãn đo sẵn đủ 6 phương án |
+| Cơ chế an toàn | Không có | KNN + ngưỡng 100 ms → giữ PostgreSQL | Ngưỡng tin 60% → giữ PostgreSQL |
+| Kết quả nhóm đo | 1,08× (Mac), 0,92× (Kaggle) | 0,97×, đổi 8/233 lần | 0,80×; 1,06× với ngưỡng tin |
+
+> "HybridQO không tắt toán tử mà chọn 2 bảng nối đầu tiên rồi để PostgreSQL lập phần còn lại, ép bằng hint Leading của pg_hint_plan. Nó dùng MCTS tìm ứng viên, mạng TreeLSTM đoán thời gian và KNN để biết khi nào không nên tin mô hình. Nhờ cẩn thận nên nó gần như luôn giữ plan PostgreSQL, chỉ đổi 8 trên 233 lần, nhưng tốn thời gian suy nghĩ nên tổng chậm hơn một chút: 0,97 lần."
+
+### Feature importance: mô hình dựa vào đặc trưng nào? Ví dụ câu 23a
+**Ví dụ câu 23a** (train 110 câu, đã bỏ 3 câu cùng họ 23, giống tab Demo):
+
+| Phương án | default | no_nestloop | **no_hashjoin** | no_mergejoin | no_seqscan | no_indexscan |
+|---|---|---|---|---|---|---|
+| ms (lần 3) | 171,7 | 778,6 | **115,2** | 171,7 | 172,6 | 178,3 |
+
+Nhãn đúng là `no_hashjoin`, nhanh hơn mặc định khoảng 1,49×.
+
+| Mô hình | Chọn | Độ tin | Kết quả |
+|---|---|---|---|
+| Decision Tree | `no_indexscan` | 75% | Sai, nhưng chỉ chậm ~4% → **hòa** |
+| Random Forest | `no_hashjoin` | 37% (default 28%) | Đúng, nhưng không chắc lắm |
+| LightGBM | `no_hashjoin` | ~100% | Đúng |
+
+**Top 10 đặc trưng quan trọng** (xếp theo RF, mỗi cột chuẩn hoá tổng = 1). DT và RF dùng mức giảm impurity, LightGBM dùng tổng gain:
+
+| Đặc trưng | DT | RF | LightGBM | Câu 23a | Trung vị 113 câu |
+|---|---|---|---|---|---|
+| plan_total_cost | 0,095 | **0,104** | **0,174** | 57 936 | 11 197 |
+| plan_startup_cost | 0 | 0,083 | 0 | 57 936 | 11 197 |
+| sql_len | 0,149 | 0,075 | 0,099 | 990 | 776 |
+| plan_nodes | **0,217** | 0,073 | 0,075 | 26 | 19 |
+| sql_n_filter_preds | **0,230** | 0,058 | 0,089 | 8 | 7 |
+| plan_depth | 0 | 0,055 | 0,020 | 15 | 11 |
+| plan_n_indexonlyscan | 0,118 | 0,046 | 0,027 | 2 | 0 |
+| plan_n_nestloop | 0,073 | 0,046 | 0,048 | 7 | 7 |
+| sql_n_join_preds | 0 | 0,045 | 0,059 | 16 | 11 |
+| plan_n_indexscan | 0 | 0,045 | 0,086 | 5 | 5 |
+
+- **Quan trọng nhất là cost ước lượng và độ lớn của câu** (cost, số node, độ dài SQL, số điều kiện lọc), chứ không phải số lượng từng loại toán tử. Câu 23a có cost gấp khoảng 5 lần trung vị.
+- **Decision Tree chỉ dùng vài đặc trưng** (sâu tối đa 4) nên nhiều ô bằng 0. RF trải đều hơn, LightGBM dồn vào `plan_total_cost`.
+- `plan_startup_cost` gần như trùng `plan_total_cost`, nên RF chia đôi importance cho hai cột. Nên nói hai cột này là cùng một thông tin.
+
+**Vì sao Decision Tree chọn sai 23a?** Đường đi của câu trong cây:
+```
+plan_nodes = 26 > 25.5
+plan_n_mergejoin = 0 <= 0.5
+plan_n_seqscan = 4 <= 5.5
+→ lá: no_indexscan (chỉ 4 câu train rơi vào lá này)
+```
+Cây hỏi 3 câu rồi đưa 23a vào một lá chỉ có 4 câu train, nên dễ sai. RF và LightGBM gộp nhiều cây nên ổn định hơn.
+
+**Lưu ý:**
+- **Feature importance là toàn cục**: cho biết mô hình hay dựa vào đặc trưng nào trên cả tập train, không giải thích riêng một câu. Muốn giải thích một câu thì xem đường đi trong cây (như trên) hoặc dùng SHAP.
+- Bảng trên train trên 110 câu JOB nên hơi khác bản ở tab "3. Nhóm: Thí nghiệm 2" ([exp2_feature_importance_all.csv](analysis/output/exp2/exp2_feature_importance_all.csv), train trên toàn bộ dữ liệu). Thứ tự top đầu gần giống nhau.
+
+> "Feature importance cho thấy mô hình dựa nhiều nhất vào cost ước lượng và độ phức tạp của câu: số node, độ dài SQL, số điều kiện lọc. Ví dụ 23a: RF và LightGBM chọn đúng 'tắt hash join', nhanh hơn 1,5 lần; Decision Tree chọn 'tắt index scan' vì câu rơi vào một lá chỉ có 4 câu train, nhưng cũng chỉ chậm 4%, tính là hòa."
+
+### Bước 4 tab Demo ("Chạy thật để kiểm tra mô hình đúng hay sai") có phải ablation không?
+- **Không.** Bước 4 chạy thật câu đang chọn với **cả 6 phương án** để biết phương án nào thật sự nhanh nhất, rồi đối chiếu với phương án mô hình chọn ở Bước 3 ([app/prototype.py:293-311](app/prototype.py#L293-L311)).
+- Mỗi phương án: mở kết nối, `SET` cờ tương ứng, chạy `EXPLAIN (ANALYZE, FORMAT JSON)` N lần, lấy lần cuối (`run_hint`, [app/prototype.py:124](app/prototype.py#L124)). Thời gian theo mô hình đã cộng EXPLAIN + suy luận. Kết luận thắng/hòa/thua theo ngưỡng ±10%.
+- Đây chính là cách Thí nghiệm 2 **tạo nhãn**, chỉ làm lại cho 1 câu.
+- Tắt từng toán tử ở đây là **6 lựa chọn để mô hình chọn 1**, không phải ablation. **Ablation** trong project là phần khác (mục 6): tắt GEQO, bitmap/TID scan **cho cả workload** để xem kết quả Bao/HybridQO có bị ảnh hưởng không.
+
+> "Bước 4 chạy thật cả 6 cấu hình hint trên PostgreSQL để có đáp án đúng, rồi đối chiếu với lựa chọn của mô hình. Đây là cách nhóm tạo nhãn, không phải ablation; ablation là tắt GEQO, bitmap scan cho cả workload ở Thí nghiệm 1."
+
 ### "Câu 26a chọn sai rất đắt" nghĩa là gì?
 
 | Phương án | Thời gian |
@@ -307,6 +535,23 @@ Mạch của tab: **① Tìm luật → ② Rút ra nguyên nhân → ③ Sửa 
   - *Khác Apriori thế nào?* Cùng ý tưởng: mỗi câu là một giao dịch gồm các đặc điểm và kết quả, tính support, confidence, lift, rồi thêm kiểm định thống kê để loại luật ngẫu nhiên.
   - *Sao chỉ Random Forest vượt 1?* Random Forest lấy trung bình nhiều cây nên độ tin đáng tin hơn.
   - *Còn 65 lần chậm hơn?* Đó là các câu rất ngắn. Riêng EXPLAIN (khoảng 5 ms) đã vượt 10%, và luôn giữ nguyên PostgreSQL cũng bị y như vậy.
+
+### So với Bao và HybridQO thì mô hình nhóm thế nào?
+Mỗi phương pháp so với PostgreSQL đo cùng phiên, 9 split, 233 lần kiểm tra.
+
+| Phương pháp | Thắng / hòa / thua | Speedup | Thấp nhất – cao nhất theo split |
+|---|---|---|---|
+| Bao (Mac) | 28 / 28 / 177 | 1,08× | 0,62 – 1,90 |
+| Bao (Kaggle) | 8 / 46 / 179 | 0,92× | 0,66 – 1,61 |
+| HybridQO (Kaggle) | 0 / 124 / 109 | 0,97× | 0,94 – 1,00 |
+| Random Forest, không ngưỡng | 12 / 112 / 109 | 0,80× | 0,45 – 1,28 |
+| **Random Forest, ngưỡng 60%** | **6 / 162 / 65** | **1,06×** | **0,97 – 1,31** |
+| Oracle | 93 / 140 / 0 | 1,53× | 1,22 – 1,88 |
+
+- Bao dao động mạnh nhất, kết quả còn đổi theo máy. HybridQO ổn định nhưng không thắng câu nào. Mô hình nhóm có ngưỡng **an toàn nhất**: không split nào dưới 0,97×.
+- **Lưu ý khi so:** môi trường khác nhau (Mac và Kaggle), nên chỉ so tỉ lệ, không so giây. Mô hình nhóm được tính lại từ log đã đo đủ 6 phương án (thời gian phương án được chọn + EXPLAIN), không chạy trực tiếp như Bao và HybridQO. Ngưỡng 60% chọn sau khi thử.
+
+> "Bao lúc nhanh gấp đôi, lúc chậm còn 0,6 lần; HybridQO gần như luôn chậm hơn PostgreSQL một chút. Mô hình nhóm có ngưỡng tin không split nào dưới 0,97 và tổng 1,06 lần. Nó thắng không phải nhờ đoán giỏi hơn mà nhờ biết lúc nào nên giữ nguyên PostgreSQL."
 
 ---
 
